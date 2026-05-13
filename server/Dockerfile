@@ -1,17 +1,23 @@
-FROM node:22-alpine
+# Express contact API (sofort-server) — yalnızca production bağımlılıkları
+FROM node:22-alpine AS deps
 WORKDIR /app
+COPY server/package.json server/package-lock.json ./server/
+RUN cd server && npm ci --omit=dev
 
-COPY server/package.json ./server/
-RUN cd server && npm install
-
-COPY shared/contact ./shared/contact
-COPY server/tsconfig.json ./server/
-COPY server/src ./server/src
-
+FROM node:22-alpine AS runner
 WORKDIR /app/server
 
 ENV NODE_ENV=production
-ENV PORT=4000
-EXPOSE 4000
+RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nodejs
 
-CMD ["npx", "tsx", "src/index.ts"]
+COPY --from=deps --chown=nodejs:nodejs /app/server/node_modules ./node_modules
+COPY --chown=nodejs:nodejs server/tsconfig.json ./
+COPY --chown=nodejs:nodejs server/src ./src
+COPY --chown=nodejs:nodejs shared/contact ../shared/contact
+
+USER nodejs
+EXPOSE 4000
+ENV PORT=4000
+ENV HOST=0.0.0.0
+
+CMD ["node", "--import", "tsx", "src/index.ts"]

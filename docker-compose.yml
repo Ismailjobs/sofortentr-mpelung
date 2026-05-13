@@ -1,6 +1,10 @@
-# Lokal: Browser ruft den API-Port auf dem Host auf → localhost:4000
+# Kullanım: docker compose up --build
+# Site: http://localhost:3002  |  API (Host): http://localhost:4000
+name: sofort
+
 services:
-  api:
+  sofort-server:
+    container_name: sofort-server
     build:
       context: .
       dockerfile: server/Dockerfile
@@ -8,21 +12,29 @@ services:
       - "4000:4000"
     environment:
       PORT: "4000"
-      # Vom Browser: gleiche Maschine wie das Frontend
-      CORS_ORIGIN: "http://localhost:3000,http://127.0.0.1:3000"
-      # Brevo/Sender/Inbox: shared/contact/mail-config.ts
+      HOST: "0.0.0.0"
+      CORS_ORIGIN: "http://localhost:3002,http://127.0.0.1:3002,http://localhost:3000,http://127.0.0.1:3000"
+    env_file:
+      - path: .env.local
+        required: false
+      - path: .env
+        required: false
 
-  web:
+  sofort-client:
+    container_name: sofort-client
     build:
       context: .
       dockerfile: Dockerfile
       args:
-        # Öffentliche URL, die der Browser zum API-Container/Host nutzt
-        NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-http://localhost:4000/api/contact}
+        # Boş bırakılırsa tarayıcı /api/contact (Next proxy) kullanır — önerilen Compose kurulumu.
+        NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-}
     ports:
-      - "3000:3000"
+      - "3002:3000"
     environment:
       NODE_ENV: production
-      NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-http://localhost:4000/api/contact}
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
+      CONTACT_API_INTERNAL_URL: http://sofort-server:4000/api/contact
+      NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-}
     depends_on:
-      - api
+      - sofort-server
