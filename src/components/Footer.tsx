@@ -1,0 +1,159 @@
+import Link from "next/link";
+import Image from "next/image";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import {
+  CONTACT_BLOCK,
+  FOOTER_EINSATZGEBIETE,
+  FOOTER_LEISTUNGEN,
+  FOOTER_SERVICE,
+  NAV_LINKS,
+  PHONE_DISPLAY,
+  PHONE_TEL_HREF,
+  SOCIAL_LINKS,
+} from "@/data/site-content";
+
+function LogoMark() {
+  return (
+    <Link href="/#start" className="flex w-fit max-w-full justify-start">
+      <Image
+        src="/sofort-logo.webp"
+        alt="SofortEntrümpelung Logo"
+        width={620}
+        height={150}
+        sizes="(max-width: 640px) min(100vw - 2rem, 320px), (max-width: 1024px) 340px, 390px"
+        className="h-[3.35rem] w-auto max-w-full object-contain object-left sm:h-[3.6rem] md:h-[3.8rem] lg:h-[4.05rem] xl:h-[4.25rem]"
+      />
+    </Link>
+  );
+}
+
+export default function Footer() {
+  return (
+    <footer className="bg-brand-dark text-white">
+      <div className="mx-auto max-w-[min(100%,88rem)] px-3 py-16 sm:px-5 lg:px-6 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-5">
+          <div className="flex flex-col items-start lg:col-span-1">
+            <LogoMark />
+            <p className="mt-5 max-w-prose text-sm leading-relaxed text-white/65 sm:max-w-none">
+              Ihr lokaler Partner für professionelle Entrümpelung in Wien und Umgebung —
+              schnell, transparent und mit Entsorgung aus einer Hand.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {SOCIAL_LINKS.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-xs font-semibold uppercase text-white/90 transition hover:border-brand-orange hover:text-brand-orange"
+                >
+                  {s.label.slice(0, 1)}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-brand-orange">Leistungen</h3>
+            <ul className="mt-5 space-y-2">
+              {FOOTER_LEISTUNGEN.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-brand-orange">Service</h3>
+            <ul className="mt-5 space-y-2">
+              {FOOTER_SERVICE.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-10 text-sm font-bold uppercase tracking-wide text-brand-orange">
+              Schnellzugriff
+            </h3>
+            <ul className="mt-4 space-y-2">
+              {NAV_LINKS.slice(0, 3).map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-brand-orange">
+              Einsatzgebiete
+            </h3>
+            <ul className="mt-5 space-y-2">
+              {FOOTER_EINSATZGEBIETE.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide text-brand-orange">Kontakt</h3>
+            <ul className="mt-5 space-y-4 text-sm text-white/75">
+              <li className="flex gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                <a href={PHONE_TEL_HREF} className="hover:text-white">
+                  {PHONE_DISPLAY}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                <a href={`mailto:${CONTACT_BLOCK.email}`} className="hover:text-white">
+                  {CONTACT_BLOCK.email}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                <span>{CONTACT_BLOCK.address}</span>
+              </li>
+              <li className="flex gap-3">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                <span className="leading-relaxed">
+                  {CONTACT_BLOCK.hoursMoFr}
+                  <br />
+                  {CONTACT_BLOCK.hoursSa}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-[min(100%,88rem)] flex-col gap-4 px-3 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:px-5 lg:px-6">
+          <p>&copy; {new Date().getFullYear()} SofortEntrumpelung.at. Alle Rechte vorbehalten.</p>
+          <div className="flex flex-wrap gap-4">
+            <Link href="/datenschutz" className="hover:text-brand-orange">
+              Datenschutz
+            </Link>
+            <Link href="/#kontakt" className="hover:text-brand-orange">
+              Impressum
+            </Link>
+            <Link href="/#kontakt" className="hover:text-brand-orange">
+              AGB
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

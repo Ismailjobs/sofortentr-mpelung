@@ -1,0 +1,28 @@
+# Lokal: Browser ruft den API-Port auf dem Host auf → localhost:4000
+services:
+  api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: "4000"
+      # Vom Browser: gleiche Maschine wie das Frontend
+      CORS_ORIGIN: "http://localhost:3000,http://127.0.0.1:3000"
+      # Brevo/Sender/Inbox: shared/contact/mail-config.ts
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Öffentliche URL, die der Browser zum API-Container/Host nutzt
+        NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-http://localhost:4000/api/contact}
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_CONTACT_API_URL: ${NEXT_PUBLIC_CONTACT_API_URL:-http://localhost:4000/api/contact}
+    depends_on:
+      - api

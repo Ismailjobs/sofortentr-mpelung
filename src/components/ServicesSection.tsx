@@ -1,0 +1,38 @@
+import ServiceCard from "@/components/ServiceCard";
+import type { ServiceCardData } from "@/data/site-content";
+import Link from "next/link";
+
+type Props = { services: ServiceCardData[]; showAllLink?: boolean };
+
+export default function ServicesSection({ services, showAllLink = false }: Props) {
+  return (
+    <section id="leistungen" className="bg-brand-muted py-20 sm:py-24">
+      <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">
+            Unsere Entrümpelung
+          </p>
+          <h2 className="mt-3 text-balance text-[clamp(1.45rem,6.2vw,2.25rem)] font-extrabold uppercase leading-tight tracking-tight text-brand-dark">
+            {showAllLink ? "Ausgewählte Entrümpelungsservices" : "Alle Entrümpelungsservices im Überblick"}
+          </h2>
+        </div>
+
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+          {services.map((svc) => (
+            <ServiceCard key={svc.id} {...svc} />
+          ))}
+        </div>
+        {showAllLink ? (
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/leistungen"
+              className="inline-flex items-center justify-center rounded-lg bg-brand-dark px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-black"
+            >
+              Alle Leistungen ansehen
+            </Link>
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
