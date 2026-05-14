@@ -18,6 +18,10 @@ import {
   PHONE_AT_NSN_MAX_DIGITS,
   toAtE164FromLocal,
 } from "@shared-contact/phone-at";
+import {
+  CONTACT_FORM_ERROR_NETWORK,
+  formatContactSubmitError,
+} from "@/lib/contact-form-errors";
 import { getContactFormRecaptchaToken, isRecaptchaSiteKeyConfigured } from "@/lib/recaptcha-v3-client";
 
 type FormState = {
@@ -245,27 +249,28 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
         }),
       });
       const raw = await res.text();
-      let data: { error?: string } = {};
-      try {
-        data = raw ? (JSON.parse(raw) as { error?: string }) : {};
-      } catch {
-        /* nicht JSON */
+      const ct = res.headers.get("content-type") || "";
+      const looksJson = ct.includes("application/json");
+
+      let jsonError: string | undefined;
+      if (looksJson && raw.trim()) {
+        try {
+          const data = JSON.parse(raw) as { error?: string };
+          if (typeof data.error === "string") jsonError = data.error;
+        } catch {
+          /* ignorieren — niemals Rohtext anzeigen */
+        }
       }
+
       if (!res.ok) {
-        const fromJson =
-          typeof data.error === "string" && data.error.trim() !== "" ? data.error.trim() : "";
-        const fallback =
-          raw.trim() !== "" ? raw.trim() : `Anfrage fehlgeschlagen (HTTP ${res.status}).`;
-        setError(fromJson || fallback);
+        setError(formatContactSubmitError(res.status, jsonError));
         return;
       }
       setSent(true);
       setForm(emptyFormState(defaultServiceTypeId));
     } catch (err) {
       console.error("[Kontaktformular]", err);
-      setError(
-        "Netzwerkfehler. Lokal beides starten: `npm run dev:all` — oder ein Terminal `npm run dev`, ein zweites `npm run api`.",
-      );
+      setError(CONTACT_FORM_ERROR_NETWORK);
     } finally {
       setSubmitting(false);
     }
@@ -455,9 +460,13 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 </label>
 
                 {error ? (
-                  <p className="text-sm font-medium text-red-600" role="alert" aria-live="polite">
+                  <div
+                    className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium leading-relaxed text-red-800"
+                    role="alert"
+                    aria-live="polite"
+                  >
                     {error}
-                  </p>
+                  </div>
                 ) : null}
 
                 <button

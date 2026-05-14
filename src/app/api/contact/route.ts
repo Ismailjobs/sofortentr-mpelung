@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { CONTACT_FORM_ERROR_UPSTREAM } from "@/lib/contact-form-errors";
 
 /** Server-seitig: Container/Compose z. B. http://api:4000/api/contact */
 const UPSTREAM =
@@ -24,18 +25,30 @@ export async function POST(req: Request) {
       cache: "no-store",
     });
     const text = await res.text();
-    return new NextResponse(text, {
-      status: res.status,
-      headers: { "Content-Type": res.headers.get("content-type") || "application/json" },
-    });
+    const upstreamCt = res.headers.get("content-type") || "";
+    const upstreamJson = upstreamCt.includes("application/json");
+
+    if (res.ok) {
+      if (upstreamJson) {
+        return new NextResponse(text, {
+          status: res.status,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+      return NextResponse.json({ ok: true }, { status: 200 });
+    }
+
+    if (upstreamJson && text.trim()) {
+      return new NextResponse(text, {
+        status: res.status,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    const status = res.status >= 400 && res.status < 600 ? res.status : 502;
+    return NextResponse.json({ error: CONTACT_FORM_ERROR_UPSTREAM }, { status });
   } catch (e) {
     console.error("[proxy /api/contact →]", UPSTREAM, e);
-    return NextResponse.json(
-      {
-        error:
-          "Nachrichten-Dienst nicht erreichbar. Lokal: `npm run dev:all` oder `npm run api` (Port 4000).",
-      },
-      { status: 502 },
-    );
+    return NextResponse.json({ error: CONTACT_FORM_ERROR_UPSTREAM }, { status: 502 });
   }
 }

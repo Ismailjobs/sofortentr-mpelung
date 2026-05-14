@@ -1,6 +1,6 @@
 # Kullanım: docker compose up --build
-# Site (Host): http://localhost:3002 — API yalnızca Docker içi ağda (sofort-client → sofort-server:4000).
-# API’yi host’tan da açmak istersen aşağıdaki ports satırlarının yorumunu kaldır; çakışırsa örn. "4001:4000" kullan.
+# Site (Host): http://localhost:3002 — Next proxy içeriden sofort-server:4000’e gider.
+# API ayrıca host’ta http://localhost:3331 (→ konteyner 4000); CORS_ORIGIN’e yeni origin eklemen gerekebilir.
 name: sofort
 
 services:
@@ -9,9 +9,9 @@ services:
     build:
       context: .
       dockerfile: server/Dockerfile
-    # Host’ta 4000 meşgulse bu servis yine çalışır; tarayıcı zaten 3002 üzerinden Next proxy kullanır.
-    # ports:
-    #   - "4000:4000"
+    # Host:3331 → konteyner:4000 (API doğrudan erişim; site yine 3002 + Next proxy).
+    ports:
+      - "3331:4000"
     environment:
       PORT: "4000"
       HOST: "0.0.0.0"
