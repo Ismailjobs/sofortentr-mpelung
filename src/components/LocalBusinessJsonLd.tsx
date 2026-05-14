@@ -164,7 +164,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
         priceRange: "$$",
         currenciesAccepted: "EUR",
         paymentAccepted: "Barzahlung, Banküberweisung, Debitkarte, Kreditkarte",
-        inLanguage: "de-AT",
+        knowsLanguage: "de-AT",
         address: {
           "@type": "PostalAddress" as const,
           streetAddress: CONTACT_BLOCK.streetAddress,
@@ -199,7 +199,6 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
         "@id": catalogId,
         name: "Entrümpelungsleistungen",
         description: "Festpreis-Entrümpelung und Haushaltsauflösung — alle Leistungen mit verbindlichem Angebot nach Besichtigung.",
-        provider: { "@id": businessId },
         itemListElement,
       },
       {
