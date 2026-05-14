@@ -6,18 +6,7 @@ import { fileURLToPath } from "node:url";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import type { ContactPayload } from "../../shared/contact/submit-contact.js";
-import type { SubmitContactOptions, ContactResult } from "../../shared/contact/submit-contact.js";
-import * as submitNs from "../../shared/contact/submit-contact.js";
-
-type SubmitModule = typeof import("../../shared/contact/submit-contact.js");
-/** Mit `tsx`/Node sieht dieser Import wie CJS-Re-Export nur unter `.default` aus. */
-const submitContactRequest = (
-  submitNs as typeof submitNs & { default: Pick<SubmitModule, "submitContactRequest"> }
-).default.submitContactRequest satisfies (
-  body: ContactPayload,
-  options?: SubmitContactOptions,
-) => Promise<ContactResult>;
+import { submitContactRequest, type ContactPayload } from "../../shared/contact/submit-contact.js";
 
 /** Projektwurzel: server/src → ../.. (.env.local neu laden ohne kompletten API-Neustart) */
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
