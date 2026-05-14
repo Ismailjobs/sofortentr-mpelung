@@ -1,14 +1,20 @@
 import { Calendar, Phone, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroBackdrop from "@/components/HeroBackdrop";
 import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 
-const HERO_IMG = "/hero.webp";
+export type HeroDistrict = {
+  zip: number;
+  name: string;
+};
 
-const HERO_OBJECT =
-  "object-cover object-[58%_64%] sm:object-[64%_64%] md:object-[54%_65%] lg:object-[42%_65%] xl:object-[24%_66%] 2xl:object-[8%_66%]";
+type HeroProps = {
+  /** Bezirks-Landing: PLZ + Bezirksname im Hero */
+  district?: HeroDistrict | null;
+};
 
-export default function Hero() {
+export default function Hero({ district = null }: HeroProps) {
   const ratingBadge = (
     <div className="flex w-[272px] items-center gap-3 rounded-xl bg-white px-4 py-2.5 text-brand-dark shadow-xl ring-1 ring-black/10">
       <Image src="/google-logo.svg" alt="Google" width={40} height={40} className="h-10 w-10 shrink-0" />
@@ -32,35 +38,54 @@ export default function Hero() {
 
   return (
     <section id="start" className="relative isolate min-h-[min(72svh,40rem)] overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src={HERO_IMG}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className={HERO_OBJECT}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/92 via-brand-dark/70 to-brand-dark/30" />
-      </div>
+      <HeroBackdrop priority />
 
       <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 pb-8 pt-24 sm:px-5 sm:pb-9 sm:pt-14 lg:px-6 lg:pb-10 lg:pt-16">
         <div className="max-w-2xl space-y-6 text-white">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/85 sm:text-sm">
-            Sofort zur Leerung · Wien & Umgebung
+            {district ? (
+              <>
+                Entrümpelung · <span className="text-brand-orange">{district.zip} Wien</span> · {district.name}
+              </>
+            ) : (
+              <>Sofort zur Leerung · Wien & Umgebung</>
+            )}
           </p>
           <h1 className="text-balance font-extrabold uppercase leading-none tracking-tight">
-            <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">
-              ENTRÜMPELUNG
-            </span>
-            <span className="mt-2 block text-4xl text-brand-orange sm:text-5xl lg:text-6xl xl:text-[3.65rem]">
-              IN WIEN
-            </span>
+            {district ? (
+              <>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">ENTRÜMPELUNG</span>
+                <span className="mt-2 block text-3xl text-brand-orange sm:text-4xl lg:text-5xl xl:text-[3.1rem]">
+                  {district.zip} WIEN
+                </span>
+                <span className="mt-2 block text-2xl font-bold uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
+                  {district.name}
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">ENTRÜMPELUNG</span>
+                <span className="mt-2 block text-4xl text-brand-orange sm:text-5xl lg:text-6xl xl:text-[3.65rem]">
+                  IN WIEN
+                </span>
+              </>
+            )}
           </h1>
-          <p className="text-lg font-medium text-white">Schnell. Zuverlässig. Günstig.</p>
+          <p className="text-lg font-medium text-white">
+            {district ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})` : "Schnell. Zuverlässig. Günstig."}
+          </p>
           <p className="text-sm leading-relaxed text-white/90 sm:text-base">
-            Wir räumen Apartments, Reihenhäuser, Keller und Büroflächen — inklusive
-            fachgerechter Entsorgung und klar kommuniziertem Festpreis.
+            {district ? (
+              <>
+                Wir entrümpeln in {district.name} (PLZ {district.zip}) und im gesamten Stadtgebiet — inklusive
+                fachgerechter Entsorgung und verbindlichem Festpreis nach Besichtigung.
+              </>
+            ) : (
+              <>
+                Wir räumen Apartments, Reihenhäuser, Keller und Büroflächen — inklusive fachgerechter Entsorgung und
+                klar kommuniziertem Festpreis.
+              </>
+            )}
           </p>
           <div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -80,7 +105,7 @@ export default function Hero() {
               </a>
             </div>
             <div className="mt-3 flex w-full justify-center lg:hidden">
-              <div className="w-[min(272px,calc(100vw-1.5rem))] scale-[0.9] sm:scale-95">
+              <div className="w-[min(272px,calc(100dvw_-_1.5rem))] max-w-full scale-[0.9] sm:scale-95">
                 {ratingBadge}
               </div>
             </div>

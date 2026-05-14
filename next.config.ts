@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
     ...extraDevOrigins,
   ],
   images: {
+    /** Dev: /public-WebP ohne _next/image-Zwischencache (nach Bildtausch sofort sichtbar). */
+    unoptimized: process.env.NODE_ENV === "development",
+    minimumCacheTTL: process.env.NODE_ENV === "development" ? 0 : 60,
     remotePatterns: [
       {
         protocol: "https",

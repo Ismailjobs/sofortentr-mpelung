@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
+      <LocalBusinessJsonLd />
       <Header />
       <main className="bg-brand-muted pb-24 pt-28 sm:pt-32">
         <div className="mx-auto max-w-3xl px-3 text-center sm:px-5 lg:px-6">

@@ -31,17 +31,23 @@ export default function ServiceFaqSection({
             {items.map((item, index) => (
               <details
                 key={`${item.question}-${index}`}
-                className="group rounded-2xl border border-black/[0.07] bg-white shadow-sm ring-black/[0.02] transition-[box-shadow] open:shadow-md open:ring-1 open:ring-brand-orange/25"
+                className="group rounded-2xl border border-black/[0.07] bg-white shadow-sm ring-black/[0.02] transition-[box-shadow] duration-300 open:shadow-md open:ring-1 open:ring-brand-orange/25 motion-reduce:transition-none"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold text-brand-dark sm:text-base [&::-webkit-details-marker]:hidden">
                   <span className="min-w-0 text-pretty pr-2">{item.question}</span>
                   <ChevronDown
-                    className="h-5 w-5 shrink-0 text-brand-orange transition-transform duration-200 group-open:rotate-180"
+                    className="h-5 w-5 shrink-0 text-brand-orange transition-transform duration-300 ease-out motion-reduce:duration-0 group-open:rotate-180"
                     aria-hidden
                   />
                 </summary>
-                <div className="border-t border-black/[0.06] px-5 pb-5 pt-0">
-                  <p className="pt-4 text-sm leading-relaxed text-neutral-600 sm:text-[15px]">{item.answer}</p>
+                <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none group-open:grid-rows-[1fr]">
+                  <div className="min-h-0 overflow-hidden">
+                    <div className="-translate-y-1 border-t border-black/[0.06] px-5 pb-5 opacity-0 transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none group-open:translate-y-0 group-open:opacity-100">
+                      <p className="pt-4 text-sm leading-relaxed text-neutral-600 sm:text-[15px]">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </details>
             ))}

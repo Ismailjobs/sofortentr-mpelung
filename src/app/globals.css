@@ -16,6 +16,8 @@
 html {
   scroll-behavior: smooth;
   margin: 0;
+  max-width: 100%;
+  overflow-x: clip;
   /* Oben keine Haarlinie / Spalt zwischen Viewport und Inhalt */
   background-color: #ffffff;
 }

@@ -1,0 +1,223 @@
+import { getSiteOrigin } from "@/config/site-url";
+import { SITE_BRAND } from "@/config/site-brand";
+import { CONTACT_BLOCK, CONTACT_LEGAL_NAME, OPENING_HOURS_SCHEMA_SPEC, OPENING_HOURS_TEXT_LINE, PHONE_DISPLAY } from "@/data/site-content";
+import { getDistrictBySlug, type ViennaDistrict } from "@/data/vienna-districts";
+
+const SERVICE_ENTRIES = [
+  {
+    slug: "hausentruempelung",
+    name: "Hausentrümpelung",
+    image: "hausentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Professionelle Hausentrümpelung in Wien und Umgebung — von der Besichtigung bis zur besenreinen Übergabe, Festpreis und Entsorgung inklusive.",
+  },
+  {
+    slug: "wohnungsentruempelung",
+    name: "Wohnungsentrümpelung",
+    image: "wohnungsentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Wohnungsräumung und Entrümpelung in Wien — diskret, termintreu, mit verbindlichem Festpreis nach Objektbesichtigung.",
+  },
+  {
+    slug: "messie-entruempelung",
+    name: "Messie-Entrümpelung",
+    image: "messie-entruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Sensible Messie-Situationen respektvoll entrümpeln — strukturierter Ablauf, vertrauliche Abwicklung in Wien und Umgebung.",
+  },
+  {
+    slug: "kellerentruempelung",
+    name: "Kellerentrümpelung",
+    image: "kellerentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Keller und Abteile entrümpeln — klare Logistik, fachgerechte Entsorgung, Festpreisangebot nach Besichtigung.",
+  },
+  {
+    slug: "lagerentruempelung",
+    name: "Lagerentrümpelung",
+    image: "lagerentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Lagerflächen und Depots in Wien entrümpeln — sortieren, abtransportieren, dokumentieren nach Vereinbarung.",
+  },
+  {
+    slug: "garagenentruempelung",
+    name: "Garagenentrümpelung",
+    image: "garagenentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Garagen und Stellplätze schnell freimachen — Entsorgung inklusive, transparenter Festpreis.",
+  },
+  {
+    slug: "dachbodenentruempelung",
+    name: "Dachbodenentrümpelung",
+    image: "dachbodenentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Dachböden sicher und effizient entrümpeln — Zugänge und Aufwand fließen in das Angebot ein.",
+  },
+  {
+    slug: "bueroentruempelung",
+    name: "Büroentrümpelung",
+    image: "bueroentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Büro- und Gewerbeflächen diskret räumen — Datenvertraulichkeit, Entsorgung und Festpreis nach Besichtigung.",
+  },
+  {
+    slug: "gartenentruempelung",
+    name: "Gartenentrümpelung",
+    image: "gartenentruempelung.webp",
+    description:
+      "[Beschreibung ergänzen] Gartenhäuser, Außenbereiche und Gerätezonen entrümpeln — Wien und Umgebung, Festpreis nach Aufmaß.",
+  },
+] as const;
+
+function telephoneE164(): string {
+  return PHONE_DISPLAY.replace(/\s+/g, "").replace(/^\+/, "+");
+}
+
+/** Platzhalter aus Service-Beschreibungen entfernen (Rich Results / Lesbarkeit). */
+function serviceDescriptionForSchema(raw: string): string {
+  return raw.replace(/^\[Beschreibung ergänzen\]\s*/i, "").trim();
+}
+
+function areaServedForSchema(district: ViennaDistrict | undefined, areaWienId: string) {
+  const tail = [
+    { "@id": areaWienId },
+    { "@type": "AdministrativeArea" as const, name: "Niederösterreich" },
+    { "@type": "AdministrativeArea" as const, name: "Burgenland" },
+  ] as const;
+  if (!district) return [...tail];
+  const priorityPlace = {
+    "@type": "Place" as const,
+    name: `${district.name} (PLZ ${district.zip}, Wien)`,
+    containedInPlace: { "@id": areaWienId },
+    address: {
+      "@type": "PostalAddress" as const,
+      postalCode: String(district.zip),
+      addressLocality: "Wien",
+      addressRegion: "Wien",
+      addressCountry: "AT",
+    },
+  };
+  return [priorityPlace, ...tail];
+}
+
+export type LocalBusinessJsonLdProps = {
+  /** Middleware + Root-Layout: Bezirks-Landing → PLZ/Ort zuerst in `areaServed`. */
+  priorityDistrictSlug?: string | null;
+};
+
+/**
+ * JSON-LD: LocalBusiness + OfferCatalog + WebSite (@graph).
+ * Auf Bezirksseiten priorisiert `areaServed` den jeweiligen Bezirk (Header `x-vienna-district-slug`).
+ */
+export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: LocalBusinessJsonLdProps) {
+  const origin = getSiteOrigin();
+  const priorityDistrict = priorityDistrictSlug ? getDistrictBySlug(priorityDistrictSlug) : undefined;
+
+  const businessId = `${origin}/#localbusiness`;
+  const catalogId = `${origin}/#offer-catalog`;
+  const areaWienId = `${origin}/#area-wien`;
+  const websiteId = `${origin}/#website`;
+  const logoUrl = `${origin}/sofort-logo.webp`;
+  const logoId = `${origin}/#logo`;
+
+  const areaServed = areaServedForSchema(priorityDistrict, areaWienId);
+
+  const itemListElement = SERVICE_ENTRIES.map((s, index) => ({
+    "@type": "ListItem" as const,
+    position: index + 1,
+    item: {
+      "@type": "Service" as const,
+      "@id": `${origin}/leistungen/${s.slug}#service`,
+      name: s.name,
+      description: serviceDescriptionForSchema(s.description),
+      url: `${origin}/leistungen/${s.slug}`,
+      image: `${origin}/${s.image}`,
+      serviceType: "Entrümpelung & Haushaltsauflösung",
+      provider: { "@id": businessId },
+      areaServed,
+    },
+  }));
+
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"] as const,
+        "@id": businessId,
+        name: SITE_BRAND,
+        legalName: CONTACT_LEGAL_NAME,
+        description:
+          "Entrümpelung und Haushaltsauflösung in Wien und Umgebung — Festpreis nach Besichtigung, fachgerechte Entsorgung, schnelle Termine.",
+        url: `${origin}/`,
+        image: [logoUrl],
+        logo: {
+          "@type": "ImageObject" as const,
+          "@id": logoId,
+          url: logoUrl,
+          contentUrl: logoUrl,
+          width: 620,
+          height: 150,
+          caption: SITE_BRAND,
+        },
+        telephone: telephoneE164(),
+        email: CONTACT_BLOCK.email,
+        priceRange: "$$",
+        currenciesAccepted: "EUR",
+        paymentAccepted: "Barzahlung, Banküberweisung, Debitkarte, Kreditkarte",
+        inLanguage: "de-AT",
+        address: {
+          "@type": "PostalAddress" as const,
+          streetAddress: CONTACT_BLOCK.streetAddress,
+          postalCode: CONTACT_BLOCK.postalCode,
+          addressLocality: CONTACT_BLOCK.addressLocality,
+          addressRegion: CONTACT_BLOCK.addressRegion,
+          addressCountry: CONTACT_BLOCK.addressCountry,
+        },
+        geo: {
+          "@type": "GeoCoordinates" as const,
+          latitude: CONTACT_BLOCK.geo.latitude,
+          longitude: CONTACT_BLOCK.geo.longitude,
+        },
+        areaServed,
+        openingHours: OPENING_HOURS_TEXT_LINE,
+        openingHoursSpecification: OPENING_HOURS_SCHEMA_SPEC.map((row) => ({
+          "@type": "OpeningHoursSpecification" as const,
+          dayOfWeek: row.dayOfWeek.length === 1 ? row.dayOfWeek[0] : [...row.dayOfWeek],
+          opens: row.opens,
+          closes: row.closes,
+        })),
+        hasOfferCatalog: { "@id": catalogId },
+      },
+      {
+        "@type": "City" as const,
+        "@id": areaWienId,
+        name: "Wien",
+        containedInPlace: { "@type": "Country" as const, name: "Österreich" },
+      },
+      {
+        "@type": "OfferCatalog" as const,
+        "@id": catalogId,
+        name: "Entrümpelungsleistungen",
+        description: "Festpreis-Entrümpelung und Haushaltsauflösung — alle Leistungen mit verbindlichem Angebot nach Besichtigung.",
+        provider: { "@id": businessId },
+        itemListElement,
+      },
+      {
+        "@type": "WebSite" as const,
+        "@id": websiteId,
+        url: origin,
+        name: SITE_BRAND,
+        inLanguage: "de-AT",
+        publisher: { "@id": businessId },
+        about: { "@id": businessId },
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph, null, 2) }}
+    />
+  );
+}

@@ -1,4 +1,4 @@
-import "./load-env.js";
+import "./src/load-env.js";
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,12 +6,10 @@ import { fileURLToPath } from "node:url";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import type { ContactPayload } from "../../shared/contact/submit-contact.ts";
+import { submitContactRequest, type ContactPayload } from "../shared/contact/submit-contact.ts";
 
-const { submitContactRequest } = await import("../../shared/contact/submit-contact.ts");
-
-/** Projektwurzel: server/src → ../.. (.env.local neu laden ohne kompletten API-Neustart) */
-const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
+/** Projektwurzel: server/ → .. (.env.local neu laden ohne kompletten API-Neustart) */
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const app = express();
 app.use(express.json({ limit: "128kb" }));

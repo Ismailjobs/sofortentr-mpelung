@@ -6,6 +6,8 @@ import ContactFormSection from "@/components/ContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
+import HeroBackdrop from "@/components/HeroBackdrop";
 import PriceEstimator from "@/components/PriceEstimator";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
@@ -41,10 +43,12 @@ const PRICE_NOTES: {
 export default function PreisePage() {
   return (
     <>
+      <LocalBusinessJsonLd />
       <Header />
       <main className="bg-brand-muted">
-        <section className="bg-brand-dark py-20 text-white sm:py-24">
-          <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
+        <section className="relative isolate min-h-[min(72svh,40rem)] overflow-hidden pt-20 pb-8 text-white sm:pt-24 sm:pb-10">
+          <HeroBackdrop />
+          <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">
               Transparente Preise
             </p>
@@ -64,7 +68,7 @@ export default function PreisePage() {
           </div>
         </section>
 
-        <section id="preis-kalkulator" className="scroll-mt-28 py-16 sm:py-20 lg:py-24">
+        <section id="preis-kalkulator" className="scroll-mt-28 pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24">
           <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
             <div className="mx-auto max-w-2xl lg:max-w-3xl">
               <PriceEstimator />

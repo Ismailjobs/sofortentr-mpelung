@@ -4,6 +4,7 @@ import { sitePageTitle } from "@/config/site-brand";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import Hero from "@/components/Hero";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
@@ -27,6 +28,7 @@ const PAGE = {
 export default function Home() {
   return (
     <>
+      <LocalBusinessJsonLd />
       <Header />
       <main>
         <Hero />

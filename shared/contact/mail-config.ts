@@ -25,8 +25,8 @@ export const MAIL_CONFIG = {
   phoneDisplay: "+43 681 81130962",
   phoneTelHref: "tel:+4368181130962",
 
-  addressLine: "Wien & Umgebung",
-  officeHours: "Mo–Fr 07:30–18:00 · Sa nach Vereinbarung",
+  addressLine: "Brunner Straße 75, Objekt D/Büro 3, 1230 Wien",
+  officeHours: "Mo–Fr: 07:30 – 18:00 · Sa: 09:00 – 14:00 (nach Vereinbarung)",
 
   colors: {
     orange: "#ff7a00",

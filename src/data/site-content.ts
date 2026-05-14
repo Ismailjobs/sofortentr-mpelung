@@ -23,6 +23,8 @@ export const PHONE_TEL_HREF = "tel:+4368181130962";
 /** Rechtliche Seiten — z. B. Formular „Hinweis zum Datenschutz“ */
 export const DATENSCHUTZ_PATH = "/datenschutz";
 
+export const IMPRESSUM_PATH = "/impressum";
+
 export const NAV_LINKS: NavLink[] = [
   { label: "Startseite", href: "/#start" },
   { label: "Leistungen", href: "/leistungen" },
@@ -74,12 +76,39 @@ export type ServiceCardData = {
   icon: LucideIcon;
 };
 
+/**
+ * Leistungs-Bilder unter /public — je Service genau eine Datei, kein Bild wird zwischen Seiten geteilt.
+ * Namensschema: URL-Slug + ".webp" (ASCII, wie in der Adresszeile).
+ *
+ * Erwartete Dateien (bitte selbst ablegen, keine automatischen Kopien im Projekt):
+ * - hausentruempelung.webp
+ * - wohnungsentruempelung.webp
+ * - kellerentruempelung.webp
+ * - lagerentruempelung.webp
+ * - bueroentruempelung.webp
+ * - garagenentruempelung.webp
+ * - dachbodenentruempelung.webp
+ * - messie-entruempelung.webp
+ * - gartenentruempelung.webp
+ */
+export const SERVICE_LEISTUNG_IMAGE = {
+  hausentruempelung: "/hausentruempelung.webp",
+  wohnungsentruempelung: "/wohnungsentruempelung.webp",
+  kellerentruempelung: "/kellerentruempelung.webp",
+  lagerentruempelung: "/lagerentruempelung.webp",
+  bueroentruempelung: "/bueroentruempelung.webp",
+  garagenentruempelung: "/garagenentruempelung.webp",
+  dachbodenentruempelung: "/dachbodenentruempelung.webp",
+  "messie-entruempelung": "/messie-entruempelung.webp",
+  gartenentruempelung: "/gartenentruempelung.webp",
+} as const;
+
 export const SERVICES: ServiceCardData[] = [
   {
     id: "hausentruempelung",
     title: "Hausentrümpelung",
     description: "Komplette Entrümpelung von Einfamilienhäusern und Mehrparteienhäusern.",
-    imageSrc: "/hero.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.hausentruempelung,
     imageAlt: "Hausentrümpelung durch ein professionelles Team",
     icon: Building2,
   },
@@ -87,7 +116,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "wohnungsentruempelung",
     title: "Wohnungs​entrümpelung",
     description: "Schnelle und besenreine Entrümpelung von Wohnungen jeder Größe.",
-    imageSrc: "/wohnungsraumung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.wohnungsentruempelung,
     imageAlt:
       "Team bei der Wohnungsentrümpelung — Möbel und Kartons zum Transport",
     icon: Home,
@@ -96,7 +125,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "kellerentruempelung",
     title: "Kellerentrümpelung",
     description: "Keller, Abteile und Nebenräume werden fachgerecht entrümpelt und entsorgt.",
-    imageSrc: "/entrümpelung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.kellerentruempelung,
     imageAlt: "Entrümpelter Kellerraum",
     icon: Boxes,
   },
@@ -104,7 +133,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "lagerentruempelung",
     title: "Lagerentrümpelung",
     description: "Lagerflächen und Depots frei machen, sortieren und sauber übergeben.",
-    imageSrc: "/entrümpelung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.lagerentruempelung,
     imageAlt: "Entrümpelung einer Lagerfläche",
     icon: Truck,
   },
@@ -112,7 +141,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "bueroentruempelung",
     title: "Büroentrümpelung",
     description: "Diskrete Entrümpelung von Büroflächen inklusive geordneter Entsorgung.",
-    imageSrc: "/hero.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.bueroentruempelung,
     imageAlt: "Entrümpelung einer Bürofläche",
     icon: Shield,
   },
@@ -120,7 +149,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "garagenentruempelung",
     title: "Garagenentrümpelung",
     description: "Garagen und Stellflächen schnell räumen und wieder nutzbar machen.",
-    imageSrc: "/entrümpelung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.garagenentruempelung,
     imageAlt: "Entrümpelte Garage",
     icon: BadgeCheck,
   },
@@ -128,7 +157,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "dachbodenentruempelung",
     title: "Dachbodenentrümpelung",
     description: "Dachböden sicher, sorgfältig und effizient entrümpeln lassen.",
-    imageSrc: "/entrümpelung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.dachbodenentruempelung,
     imageAlt: "Entrümpelter Dachboden",
     icon: Clock,
   },
@@ -136,7 +165,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "messie-entruempelung",
     title: "Messie-Entrümpelung",
     description: "Diskrete und respektvolle Entrümpelung in sensiblen Situationen.",
-    imageSrc: "/messie-entrümpelung.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE["messie-entruempelung"],
     imageAlt: "Diskrete Messie-Entrümpelung",
     icon: HeartHandshake,
   },
@@ -144,7 +173,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "gartenentruempelung",
     title: "Gartenentrümpelung",
     description: "Entrümpelung von Gartenhäusern, Gerätezonen und Außenbereichen.",
-    imageSrc: "/hero.webp",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.gartenentruempelung,
     imageAlt: "Entrümpelung im Gartenbereich",
     icon: Users,
   },
@@ -223,25 +252,39 @@ export const FOOTER_SERVICE: FooterLink[] = [
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
-export const FOOTER_EINSATZGEBIETE: FooterLink[] = [
-  { label: "Wien Innenstadt", href: "#kontakt" },
-  { label: "Wien Umgebung", href: "#kontakt" },
-  { label: "Niederösterreich", href: "#kontakt" },
-  { label: "Burgenland", href: "#kontakt" },
-];
-
-export const SOCIAL_LINKS: { label: string; href: string }[] = [
-  { label: "Facebook", href: "https://facebook.com" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "Google", href: "https://google.com/maps" },
-];
+/** Eintrag im Firmenbuch / Rechtsform e.U. — für JSON-LD `legalName` und Impressum-relevante Texte. */
+export const CONTACT_LEGAL_NAME = "Mesut Duman e.U.";
 
 export const CONTACT_BLOCK = {
   email: "office@sofortentrumpelung.at",
-  address: "Musterstraße 1, 1010 Wien",
+  /** Anzeige (Footer, Datenschutz, E-Mails) */
+  address: "Brunner Straße 75, Objekt D/Büro 3, 1230 Wien",
+  streetAddress: "Brunner Straße 75, Objekt D/Büro 3",
+  postalCode: "1230",
+  addressLocality: "Wien",
+  addressRegion: "Wien",
+  addressCountry: "AT",
+  geo: { latitude: 48.1367, longitude: 16.2970 } as const,
   hoursMoFr: "Mo–Fr: 07:30 – 18:00",
   hoursSa: "Sa: 09:00 – 14:00 (nach Vereinbarung)",
 } as const;
+
+/** Schema.org `OpeningHoursSpecification` — gleiche Zeiten wie `CONTACT_BLOCK` (JSON-LD). */
+export const OPENING_HOURS_SCHEMA_SPEC = [
+  {
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const,
+    opens: "07:30",
+    closes: "18:00",
+  },
+  {
+    dayOfWeek: ["Saturday"] as const,
+    opens: "09:00",
+    closes: "14:00",
+  },
+] as const;
+
+/** Einzeiler für JSON-LD `openingHours` (Text) und ggf. andere Ausgaben. */
+export const OPENING_HOURS_TEXT_LINE = `${CONTACT_BLOCK.hoursMoFr} · ${CONTACT_BLOCK.hoursSa}`;
 
 export const WHY_US_CTA = {
   calculatorIcon: Calculator,

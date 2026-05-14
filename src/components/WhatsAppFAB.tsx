@@ -58,7 +58,7 @@ export default function WhatsAppFAB() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed bottom-6 right-6 z-[60] flex max-w-[min(18rem,calc(100vw-2rem))] flex-col items-end gap-2">
+    <div className="pointer-events-none fixed bottom-6 right-6 z-[60] flex max-w-[min(18rem,calc(100dvw_-_2rem))] flex-col items-end gap-2">
       <div
         id={BUBBLE_ID}
         role="tooltip"
