@@ -16,10 +16,8 @@ export const MAIL_CONFIG = {
   inboxEmail: "office@sofortentrumpelung.at",
 
   siteUrl: "https://sofortentrumpelung.at",
-  /** Wie Navbar (`Header.tsx`) — für E-Mail absolut unter `siteUrl` gebunden */
-  logoPublicPath: "/sofort-logo.webp",
   siteName: "SofortEntrümpelung",
-  /** Kleine Headline unter dem Logo-Bereich */
+  /** Kleine Headline im dunklen Kopfbereich */
   tagline: "Professionelle Entrümpelung · Wien & Umgebung",
 
   phoneDisplay: "+43 681 81130962",

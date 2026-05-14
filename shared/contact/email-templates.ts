@@ -10,11 +10,6 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function absoluteLogoUrl(): string {
-  const base = MAIL_CONFIG.siteUrl.replace(/\/$/, "");
-  return `${base}${MAIL_CONFIG.logoPublicPath}`;
-}
-
 function wrapEmail(params: {
   preheader: string;
   title: string;
@@ -29,8 +24,6 @@ function wrapEmail(params: {
   const phone = escapeHtml(MAIL_CONFIG.phoneDisplay);
   const siteHost = escapeHtml(MAIL_CONFIG.siteUrl.replace(/^https?:\/\//, ""));
   const hours = escapeHtml(MAIL_CONFIG.officeHours);
-  const logoSrc = escapeHtml(absoluteLogoUrl());
-  const homeHref = escapeHtml(MAIL_CONFIG.siteUrl);
 
   return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
@@ -47,15 +40,6 @@ function wrapEmail(params: {
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;width:100%;background:${C.white};border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
           <tr>
             <td style="background:${C.dark};padding:24px 32px 28px;border-bottom:4px solid ${C.orange};">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                <tr>
-                  <td align="center" style="padding:0 0 18px;">
-                    <a href="${homeHref}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:0;outline:none;">
-                      <img src="${logoSrc}" alt="${brand}" width="240" border="0" style="display:block;margin:0 auto;width:240px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;" />
-                    </a>
-                  </td>
-                </tr>
-              </table>
               <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.72);">${sub}</p>
               <p style="margin:8px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#ffffff;line-height:1.2;">${brand}</p>
             </td>
