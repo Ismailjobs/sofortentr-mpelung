@@ -17,7 +17,8 @@ export default function HeroBackdrop({ priority = false, className = "" }: Props
     <div className={`absolute inset-0 ${className}`.trim()}>
       <Image
         src={HERO_BG_SRC}
-        alt="Professionelle Entrümpelung in Wien — Hintergrundbild"
+        alt=""
+        aria-hidden
         fill
         sizes="(max-width: 640px) 640px, 100vw"
         quality={50}

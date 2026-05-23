@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   output: "standalone",
   experimental: {
     optimizePackageImports: ["lucide-react"],
+    /** Tailwind-CSS inline → kein render-blocking <link rel="stylesheet"> (LCP/FCP). */
+    inlineCss: true,
   },
   turbopack: {
     resolveAlias: {

@@ -21,16 +21,16 @@ export default function Header() {
         <div className="min-w-0 flex-1 min-[1148px]:flex-none min-[1148px]:min-w-0">
           <Link
             href="/"
+            aria-label="SofortEntrümpelung Startseite"
             className="block h-[clamp(3.75rem,14vw,5.1rem)] w-[clamp(10rem,min(72vw,calc(100dvw_-_7.5rem)),19rem)] max-w-full min-w-0 shrink-0 sm:h-[4.25rem] sm:w-[280px] md:h-[4.8rem] md:w-[320px] min-[1148px]:h-[5.2rem] min-[1148px]:w-[360px]"
           >
             <Image
               src="/sofort-logo.webp"
-              alt="SofortEntrümpelung Logo"
+              alt=""
               width={360}
               height={87}
               sizes={SITE_LOGO_SIZES}
               quality={75}
-              priority
               className="h-full w-full object-contain object-left"
             />
           </Link>

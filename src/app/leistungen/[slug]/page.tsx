@@ -64,7 +64,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">
           <Image
             src={service.imageSrc}
-            alt={service.imageAlt}
+            alt=""
+            aria-hidden
             fill
             priority
             fetchPriority="high"

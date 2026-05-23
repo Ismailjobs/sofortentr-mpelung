@@ -38,10 +38,10 @@ function HashOrLink({
 
 function LogoMark() {
   return (
-    <Link href="/" className="flex w-fit max-w-full justify-start">
+    <Link href="/" aria-label="SofortEntrümpelung Startseite" className="flex w-fit max-w-full justify-start">
       <Image
         src="/sofort-logo.webp"
-        alt="SofortEntrümpelung Logo"
+        alt=""
         width={360}
         height={87}
         sizes={SITE_LOGO_SIZES}

@@ -87,7 +87,8 @@ export default function TestimonialSlider({ testimonials }: Props) {
                 <div className="flex items-center justify-between gap-3">
                   <Image
                     src="/google-logo.svg"
-                    alt="Google"
+                    alt=""
+                    aria-hidden
                     width={32}
                     height={32}
                     className="h-8 w-8"

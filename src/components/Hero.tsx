@@ -19,7 +19,7 @@ export default function Hero({ district = null }: HeroProps) {
 
   const ratingBadge = (
     <div className="flex w-[272px] items-center gap-3 rounded-xl bg-white px-4 py-2.5 text-brand-dark shadow-xl ring-1 ring-black/10">
-      <Image src="/google-logo.svg" alt="Google" width={40} height={40} className="h-10 w-10 shrink-0" />
+      <Image src="/google-logo.svg" alt="" aria-hidden width={40} height={40} className="h-10 w-10 shrink-0" />
       <div>
         <div className="flex items-center gap-2">
           <span className="text-lg font-bold leading-none">5.0</span>

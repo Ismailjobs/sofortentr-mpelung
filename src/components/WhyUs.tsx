@@ -36,7 +36,7 @@ export default function WhyUs() {
           <div className="flex w-full self-start justify-center px-[3px] py-1 sm:px-1 lg:px-0 lg:py-0">
             <Image
               src="/truck.webp"
-              alt="Transporter"
+              alt="Entrümpelungstransporter von SofortEntrümpelung in Wien"
               width={880}
               height={546}
               sizes={TRUCK_IMAGE_SIZES}

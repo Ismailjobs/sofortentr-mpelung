@@ -25,7 +25,8 @@ export default function LeistungenPage() {
         <section className="relative isolate min-h-[min(52svh,26rem)] overflow-hidden sm:min-h-[min(56svh,30rem)]">
           <Image
             src={LEISTUNGEN_COVER.imageSrc}
-            alt={LEISTUNGEN_COVER.imageAlt}
+            alt=""
+            aria-hidden
             fill
             priority
             sizes="100vw"
