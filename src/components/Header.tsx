@@ -1,6 +1,6 @@
 import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { HomeHashLink } from "@/components/HomeHashLink";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
@@ -18,7 +18,7 @@ export default function Header() {
 
       <div className="relative z-[120] mx-auto flex min-w-0 max-w-[min(100%,88rem)] items-center justify-between gap-3 bg-brand-dark py-2.5 pl-1 pr-3 pb-3 sm:gap-6 sm:py-2 sm:pb-2.5 sm:pl-3 sm:pr-5 min-[1148px]:grid min-[1148px]:grid-cols-[auto_1fr_auto] min-[1148px]:items-center min-[1148px]:gap-10 min-[1148px]:px-6 min-[1148px]:py-1">
         <div className="min-w-0 flex-1 min-[1148px]:flex-none min-[1148px]:min-w-0">
-          <Link
+          <HomeHashLink
             href="/#start"
             className="block h-[clamp(3.75rem,14vw,5.1rem)] w-[clamp(10rem,min(72vw,calc(100dvw_-_7.5rem)),19rem)] max-w-full min-w-0 shrink-0 sm:h-[4.25rem] sm:w-[280px] md:h-[4.8rem] md:w-[320px] min-[1148px]:h-[5.2rem] min-[1148px]:w-[360px]"
           >
@@ -32,7 +32,7 @@ export default function Header() {
               priority
               className="h-full w-full object-contain object-left"
             />
-          </Link>
+          </HomeHashLink>
         </div>
 
         <nav
@@ -40,13 +40,13 @@ export default function Header() {
           aria-label="Hauptnavigation"
         >
           {NAV_LINKS.map(({ label, href }) => (
-            <Link
+            <HomeHashLink
               key={href}
               href={href}
               className="text-sm font-medium text-white/95 transition-colors hover:text-brand-orange"
             >
               {label}
-            </Link>
+            </HomeHashLink>
           ))}
         </nav>
 
@@ -90,12 +90,12 @@ export default function Header() {
           >
             {NAV_LINKS.map(({ label, href }) => (
               <label key={href} htmlFor={MOBILE_NAV_ID} className="cursor-pointer">
-                <Link
+                <HomeHashLink
                   href={href}
                   className="block text-base font-medium text-white/95 transition-colors hover:text-brand-orange"
                 >
                   {label}
-                </Link>
+                </HomeHashLink>
               </label>
             ))}
             <label htmlFor={MOBILE_NAV_ID} className="cursor-pointer">
