@@ -15,6 +15,8 @@ type HeroProps = {
 };
 
 export default function Hero({ district = null }: HeroProps) {
+  const isHome = !district;
+
   const ratingBadge = (
     <div className="flex w-[272px] items-center gap-3 rounded-xl bg-white px-4 py-2.5 text-brand-dark shadow-xl ring-1 ring-black/10">
       <Image src="/google-logo.svg" alt="Google" width={40} height={40} className="h-10 w-10 shrink-0" />
@@ -42,16 +44,28 @@ export default function Hero({ district = null }: HeroProps) {
 
       <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 pb-8 pt-24 sm:px-5 sm:pb-9 sm:pt-14 lg:px-6 lg:pb-10 lg:pt-16">
         <div className="max-w-2xl space-y-6 text-white">
-          <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/85 sm:text-sm">
+          <p
+            className={
+              isHome
+                ? "text-sm font-medium text-white/90 sm:text-base"
+                : "text-xs font-bold uppercase tracking-[0.35em] text-white/85 sm:text-sm"
+            }
+          >
             {district ? (
               <>
                 Entrümpelung · <span className="text-brand-orange">{district.zip} Wien</span> · {district.name}
               </>
             ) : (
-              <>Sofort zur Leerung · Wien & Umgebung</>
+              <>Sofort zur Leerung in Wien & Umgebung</>
             )}
           </p>
-          <h1 className="text-balance font-extrabold uppercase leading-none tracking-tight">
+          <h1
+            className={
+              isHome
+                ? "text-balance text-[2rem] font-bold leading-[1.15] tracking-tight sm:text-5xl sm:leading-[1.12] lg:text-[3.25rem]"
+                : "text-balance font-extrabold uppercase leading-none tracking-tight"
+            }
+          >
             {district ? (
               <>
                 <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">ENTRÜMPELUNG</span>
@@ -64,17 +78,23 @@ export default function Hero({ district = null }: HeroProps) {
               </>
             ) : (
               <>
-                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">ENTRÜMPELUNG</span>
-                <span className="mt-2 block text-4xl text-brand-orange sm:text-5xl lg:text-6xl xl:text-[3.65rem]">
-                  IN WIEN
-                </span>
+                Entrümpelung in{" "}
+                <span className="text-brand-orange">Wien</span>
               </>
             )}
           </h1>
-          <p className="text-lg font-medium text-white">
-            {district ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})` : "Schnell. Zuverlässig. Günstig."}
+          <p className={isHome ? "text-lg font-medium text-white sm:text-xl" : "text-lg font-medium text-white"}>
+            {district
+              ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})`
+              : "Schnell, zuverlässig — und fair im Preis."}
           </p>
-          <p className="text-sm leading-relaxed text-white/90 sm:text-base">
+          <p
+            className={
+              isHome
+                ? "max-w-xl text-base leading-relaxed text-white/90"
+                : "text-sm leading-relaxed text-white/90 sm:text-base"
+            }
+          >
             {district ? (
               <>
                 Wir entrümpeln in {district.name} (PLZ {district.zip}) und im gesamten Stadtgebiet — inklusive
@@ -82,8 +102,8 @@ export default function Hero({ district = null }: HeroProps) {
               </>
             ) : (
               <>
-                Wir räumen Apartments, Reihenhäuser, Keller und Büroflächen — inklusive fachgerechter Entsorgung und
-                klar kommuniziertem Festpreis.
+                Wir räumen Wohnungen, Keller und Büros in Wien — ordentlich, mit fachgerechter Entsorgung und einem
+                Festpreis, den Sie vorher kennen. Einfach anrufen oder eine Besichtigung vereinbaren.
               </>
             )}
           </p>
@@ -91,14 +111,22 @@ export default function Hero({ district = null }: HeroProps) {
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 href="#kontakt"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
+                className={
+                  isHome
+                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
+                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
+                }
               >
                 <Calendar className="h-5 w-5" aria-hidden />
-                Gratis Besichtigung
+                {isHome ? "Besichtigung vereinbaren" : "Gratis Besichtigung"}
               </Link>
               <a
                 href={PHONE_TEL_HREF}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-black px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white ring-1 ring-white/15 transition hover:bg-white/10"
+                className={
+                  isHome
+                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
+                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white ring-1 ring-white/15 transition hover:bg-white/10"
+                }
               >
                 <Phone className="h-5 w-5 text-white" strokeWidth={2.5} aria-hidden />
                 Jetzt anrufen

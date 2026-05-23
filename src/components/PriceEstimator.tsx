@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
+import { HomeHashLink } from "@/components/HomeHashLink";
 
 type Category = {
   id: string;
@@ -460,12 +461,12 @@ export default function PriceEstimator() {
       </p>
 
       <div className="mt-6 flex justify-center">
-        <Link
+        <HomeHashLink
           href="/#kontakt"
-          className="inline-flex items-center justify-center rounded-lg bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
+          className="inline-flex items-center justify-center rounded-btn bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
         >
           Jetzt Besichtigung anfragen
-        </Link>
+        </HomeHashLink>
       </div>
     </div>
   );

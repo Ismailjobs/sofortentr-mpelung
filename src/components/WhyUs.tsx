@@ -9,7 +9,7 @@ export default function WhyUs() {
 
   return (
     <section
-      id="ueber-uns"
+      id="warum-wir"
       className="scroll-mt-28 bg-brand-dark pt-6 pb-4 text-white sm:pt-7 sm:pb-4 lg:pt-8 lg:pb-5"
     >
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
@@ -68,7 +68,7 @@ export default function WhyUs() {
               </ul>
               <Link
                 href="#kontakt"
-                className="mt-5 flex w-full items-center justify-center rounded-xl bg-brand-orange px-4 py-3.5 text-center text-sm font-extrabold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
+                className="mt-5 flex w-full items-center justify-center rounded-btn bg-brand-orange px-4 py-3.5 text-center text-sm font-extrabold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
               >
                 Jetzt anfragen
               </Link>

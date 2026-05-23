@@ -5,8 +5,14 @@ import {
   Building2,
   Calculator,
   Clock,
+  Gem,
+  HandCoins,
   HeartHandshake,
   Home,
+  Landmark,
+  MapPin,
+  Scale,
+  ScrollText,
   Shield,
   Truck,
   Users,
@@ -76,31 +82,30 @@ export type ServiceCardData = {
   icon: LucideIcon;
 };
 
+/** Öffentlicher Pfad zu Leistungs-Bildern: /public/services/<slug>.webp */
+export const SERVICE_IMAGE_DIR = "/services";
+
 /**
- * Leistungs-Bilder unter /public — je Service genau eine Datei, kein Bild wird zwischen Seiten geteilt.
+ * Je Service genau eine Datei unter public/services — kein Bild wird zwischen Seiten geteilt.
  * Namensschema: URL-Slug + ".webp" (ASCII, wie in der Adresszeile).
- *
- * Erwartete Dateien (bitte selbst ablegen, keine automatischen Kopien im Projekt):
- * - hausentruempelung.webp
- * - wohnungsentruempelung.webp
- * - kellerentruempelung.webp
- * - lagerentruempelung.webp
- * - bueroentruempelung.webp
- * - garagenentruempelung.webp
- * - dachbodenentruempelung.webp
- * - messie-entruempelung.webp
- * - gartenentruempelung.webp
  */
 export const SERVICE_LEISTUNG_IMAGE = {
-  hausentruempelung: "/hausentruempelung.webp",
-  wohnungsentruempelung: "/wohnungsentruempelung.webp",
-  kellerentruempelung: "/kellerentruempelung.webp",
-  lagerentruempelung: "/lagerentruempelung.webp",
-  bueroentruempelung: "/bueroentruempelung.webp",
-  garagenentruempelung: "/garagenentruempelung.webp",
-  dachbodenentruempelung: "/dachbodenentruempelung.webp",
-  "messie-entruempelung": "/messie-entruempelung.webp",
-  gartenentruempelung: "/gartenentruempelung.webp",
+  hausentruempelung: `${SERVICE_IMAGE_DIR}/hausentruempelung.webp`,
+  wohnungsentruempelung: `${SERVICE_IMAGE_DIR}/wohnungsentruempelung.webp`,
+  kellerentruempelung: `${SERVICE_IMAGE_DIR}/kellerentruempelung.webp`,
+  lagerentruempelung: `${SERVICE_IMAGE_DIR}/lagerentruempelung.webp`,
+  bueroentruempelung: `${SERVICE_IMAGE_DIR}/bueroentruempelung.webp`,
+  garagenentruempelung: `${SERVICE_IMAGE_DIR}/garagenentruempelung.webp`,
+  dachbodenentruempelung: `${SERVICE_IMAGE_DIR}/dachbodenentruempelung.webp`,
+  "messie-entruempelung": `${SERVICE_IMAGE_DIR}/messie-entruempelung.webp`,
+  gartenentruempelung: `${SERVICE_IMAGE_DIR}/gartenentruempelung.webp`,
+  verlassenschaft: `${SERVICE_IMAGE_DIR}/verlassenschaft.webp`,
+  nachlass: `${SERVICE_IMAGE_DIR}/nachlass.webp`,
+  haushaltsaufloesung: `${SERVICE_IMAGE_DIR}/haushaltsaufloesung.webp`,
+  wohnungsaufloesung: `${SERVICE_IMAGE_DIR}/wohnungsaufloesung.webp`,
+  erbschaftshaus: `${SERVICE_IMAGE_DIR}/erbschaftshaus.webp`,
+  wertausgleich: `${SERVICE_IMAGE_DIR}/wertausgleich.webp`,
+  ankauf: `${SERVICE_IMAGE_DIR}/ankauf.webp`,
 } as const;
 
 export const SERVICES: ServiceCardData[] = [
@@ -164,7 +169,8 @@ export const SERVICES: ServiceCardData[] = [
   {
     id: "messie-entruempelung",
     title: "Messie-Entrümpelung",
-    description: "Diskrete und respektvolle Entrümpelung in sensiblen Situationen.",
+    description:
+      "Messie-Wohnung entrümpeln in Wien — diskrete Messie Entrümpelung und Messie-Wohnung Räumung mit Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE["messie-entruempelung"],
     imageAlt: "Diskrete Messie-Entrümpelung",
     icon: HeartHandshake,
@@ -177,9 +183,125 @@ export const SERVICES: ServiceCardData[] = [
     imageAlt: "Entrümpelung im Gartenbereich",
     icon: Users,
   },
+  {
+    id: "verlassenschaft",
+    title: "Verlassenschaft entrümpeln",
+    description:
+      "Verlassenschaft entrümpeln und Verlassenschaftsentrümpelung in Wien — diskret, termintreu, Festpreis nach Besichtigung.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.verlassenschaft,
+    imageAlt: "Verlassenschaftsentrümpelung in Wien",
+    icon: ScrollText,
+  },
+  {
+    id: "nachlass",
+    title: "Nachlass entrümpeln",
+    description:
+      "Nachlass entrümpeln und Nachlassentrümpelung in Wien — für Erben und Verwaltungen, Festpreis nach Besichtigung.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.nachlass,
+    imageAlt: "Nachlass entrümpeln — professionelle Unterstützung",
+    icon: Scale,
+  },
+  {
+    id: "haushaltsaufloesung",
+    title: "Haushaltsauflösung",
+    description:
+      "Haushaltsauflösung und Entrümpelung in Wien — komplett, besenrein und zum Festpreis.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.haushaltsaufloesung,
+    imageAlt: "Haushaltsauflösung durch erfahrenes Team",
+    icon: Home,
+  },
+  {
+    id: "wohnungsaufloesung",
+    title: "Wohnungsauflösung",
+    description:
+      "Wohnungsauflösung und Entrümpelung — schnell, zuverlässig und für Wien & Umgebung.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.wohnungsaufloesung,
+    imageAlt: "Wohnungsauflösung in Wien",
+    icon: Building2,
+  },
+  {
+    id: "erbschaftshaus",
+    title: "Erbschaftshaus entrümpeln",
+    description:
+      "Erbschaftshaus entrümpeln, geerbtes Haus und Wohnung nach Todesfall — Haus entrümpeln nach Erbschaft in Wien.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.erbschaftshaus,
+    imageAlt: "Erbschaftshaus entrümpeln in Wien",
+    icon: Landmark,
+  },
+  {
+    id: "wertausgleich",
+    title: "Entrümpelung mit Wertausgleich",
+    description:
+      "Entrümpelung mit Wertausgleich — verwertbare Gegenstände rechnen wir transparent gegen den Preis.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.wertausgleich,
+    imageAlt: "Entrümpelung mit Wertausgleich",
+    icon: HandCoins,
+  },
+  {
+    id: "ankauf",
+    title: "Entrümpelung mit Ankauf",
+    description:
+      "Entrümpelung mit Ankauf — Antiquitäten, Schmuck, Kameras, Antik und Altwaren Ankauf in Wien, Festpreis nach Besichtigung.",
+    imageSrc: SERVICE_LEISTUNG_IMAGE.ankauf,
+    imageAlt: "Entrümpelung mit Altwaren- und Antiquitäten-Ankauf",
+    icon: Gem,
+  },
 ];
 
 export const HOME_SERVICES: ServiceCardData[] = SERVICES.slice(0, 4);
+
+export type AboutUsHighlight = {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+};
+
+export const ABOUT_US_EYEBROW = "Über uns";
+
+export const ABOUT_US_HEADLINE = "Lokal, fair und zuverlässig";
+
+export const ABOUT_US_SUBHEADLINE =
+  "Ihr regionaler Entrümpelungsservice in Wien – persönlich erklärt, ohne leere Versprechen.";
+
+export const ABOUT_US_PARAGRAPHS: string[] = [
+  "Sofort Entrümpelung ist ein lokales Entrümpelungsunternehmen aus Wien und unterstützt Privatpersonen, Familien, Hausverwaltungen und Betriebe bei Entrümpelungen jeder Größe. Im Mittelpunkt steht ein einfacher Ablauf: Sie senden eine Anfrage, wir klären den Umfang, besichtigen bei Bedarf kostenlos vor Ort und erstellen ein transparentes Festpreis-Angebot. Danach kümmert sich unser Team um die Entrümpelung, den Abtransport und die fachgerechte Entsorgung.",
+  "Viele Kunden melden sich bei uns, wenn eine Wohnung geräumt werden muss, ein Keller über Jahre voll geworden ist oder eine Haushaltsauflösung bevorsteht. Auch bei Nachlässen, Verlassenschaften, Dachböden, Büroräumen, Lagern oder einzelnen Möbelstücken helfen wir schnell und diskret weiter. Dabei geht es nicht nur darum, Gegenstände aus einem Objekt zu tragen: Wichtig sind eine saubere Planung, geschützte Transportwege, ein respektvoller Umgang mit persönlichen Dingen und eine besenreine Übergabe.",
+  "Als Entrümpelungsfirma in Wien kennen wir die typischen Herausforderungen in der Stadt: enge Stiegenhäuser, Altbauwohnungen, Innenhöfe, Kurzparkzonen, kleine Aufzüge und klare Vorgaben von Hausverwaltungen. Diese Erfahrung hilft, jeden Einsatz realistisch einzuschätzen und unnötige Verzögerungen zu vermeiden. Sind Möbel, Hausrat oder verwertbare Stücke vorhanden, prüfen wir, ob Entrümpelung mit Wertausgleich oder Ankauf sinnvoll ist – fair bewertet statt pauschal entsorgt.",
+  "Unser Ziel ist eine Entrümpelung, die für Sie nachvollziehbar, planbar und stressfrei bleibt. Deshalb arbeiten wir mit Fixpreis-Angeboten, direkter Kommunikation und einem Team, das vom ersten Kontakt bis zur besenreinen Übergabe Verantwortung übernimmt.",
+];
+
+export const ABOUT_US_HIGHLIGHTS: AboutUsHighlight[] = [
+  {
+    icon: Shield,
+    title: "Fixpreis-Garantie",
+    text: "Nach Besichtigung ein verbindliches Angebot – ohne versteckte Zusatzposten.",
+  },
+  {
+    icon: MapPin,
+    title: "Wien & Umgebung",
+    text: "Lokales Team mit Erfahrung in Altbauten, Verwaltungen und engen Zugängen.",
+  },
+  {
+    icon: HandCoins,
+    title: "Wertausgleich & Ankauf",
+    text: "Verwertbare Gegenstände fair anrechnen oder direkt ankaufen.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Besenrein & diskret",
+    text: "Saubere Übergabe, rücksichtsvoller Umgang mit Nachbarn und Hausverwaltung.",
+  },
+];
+
+export const ABOUT_US_PROFESSIONAL_TITLE = "Was uns professionell macht";
+
+export const ABOUT_US_PROFESSIONAL: string[] = [
+  "Erfahrenes Team mit klaren Abläufen vom Erstkontakt bis zur Übergabe",
+  "Fachgerechte Entsorgung und sortierter Abtransport inklusive",
+  "Respektvoller Umgang bei Nachlass, Verlassenschaft und sensiblen Situationen",
+  "Direkte Erreichbarkeit – eine Ansprechperson statt anonyme Hotline",
+  "Realistische Terminplanung statt leerer Versprechen",
+];
 
 export const WHY_US_EYEBROW = "WARUM SOFORTENTRÜMPELUNG.AT?";
 
@@ -232,6 +354,54 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
+export type GeneralFaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const GENERAL_FAQ: GeneralFaqItem[] = [
+  {
+    question: "Was kostet eine Entrümpelung in Wien?",
+    answer:
+      "Die Kosten hängen von Objektgröße, Menge, Zugängen und Entsorgungsmix ab. Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis — auf unserer Preisseite finden Sie transparente Richtwerte inklusive möglicher Wertanrechnung.",
+  },
+  {
+    question: "Wie läuft die kostenlose Besichtigung ab?",
+    answer:
+      "Sie melden sich per Formular, Telefon oder WhatsApp. Wir vereinbaren einen Termin vor Ort, schätzen Volumen und Aufwand ein und senden Ihnen ein schriftliches Festpreis-Angebot — unverbindlich, bevor Sie buchen.",
+  },
+  {
+    question: "Was bedeutet Fixpreis-Garantie?",
+    answer:
+      "Der nach der Besichtigung vereinbarte Preis gilt für den beschriebenen Leistungsumfang. Keine versteckten Stundenzuschläge — An- und Abfahrt sowie fachgerechte Entsorgung sind bei uns standardmäßig einkalkuliert.",
+  },
+  {
+    question: "Kann ich verwertbare Möbel oder Geräte anrechnen lassen?",
+    answer:
+      "Ja. Bei brauchbarem Hausrat prüfen wir Entrümpelung mit Wertausgleich oder Ankauf — der realistische Wert mindert Ihre Rechnung. Das klären wir transparent in der Besichtigung.",
+  },
+  {
+    question: "Wie schnell bekomme ich einen Termin?",
+    answer:
+      "Je nach Auslastung oft innerhalb weniger Werktage — bei dringenden Fällen (z. B. Wohnungsübergabe) sind Express-Termine nach Absprache möglich. Wir nennen Ihnen realistische Fenster statt leerer Versprechen.",
+  },
+  {
+    question: "Was ist in der Entrümpelung enthalten?",
+    answer:
+      "Typisch Sortierung im vereinbarten Umfang, Verladung, Abtransport und fachgerechte Entsorgung sowie besenreine Übergabe. Demontage von Einbauten oder Sonderabfälle nur nach vorheriger Vereinbarung.",
+  },
+  {
+    question: "Arbeiten Sie in allen Wiener Bezirken?",
+    answer:
+      "Ja — wir entrümpeln in ganz Wien und auf Anfrage in der Umgebung. Enge Stiegenhäuser, Altbauten ohne Aufzug und Kurzparkzonen kennen wir aus der täglichen Praxis.",
+  },
+  {
+    question: "Übernehmen Sie auch Nachlass, Verlassenschaft oder Messie-Wohnungen?",
+    answer:
+      "Ja. Dazu gibt es eigene Leistungsseiten mit Details — grundsätzlich gilt: diskreter Ablauf, respektvoller Umgang und Festpreis nach Besichtigung auch in sensiblen Situationen.",
+  },
+];
+
 export type FooterLink = { label: string; href: string };
 
 export const FOOTER_LEISTUNGEN: FooterLink[] = [
@@ -244,11 +414,18 @@ export const FOOTER_LEISTUNGEN: FooterLink[] = [
   { label: "Dachbodenentrümpelung", href: "/leistungen/dachbodenentruempelung" },
   { label: "Messie-Entrümpelung", href: "/leistungen/messie-entruempelung" },
   { label: "Gartenentrümpelung", href: "/leistungen/gartenentruempelung" },
+  { label: "Verlassenschaft", href: "/leistungen/verlassenschaft" },
+  { label: "Nachlass", href: "/leistungen/nachlass" },
+  { label: "Haushaltsauflösung", href: "/leistungen/haushaltsaufloesung" },
+  { label: "Wohnungsauflösung", href: "/leistungen/wohnungsaufloesung" },
+  { label: "Erbschaftshaus", href: "/leistungen/erbschaftshaus" },
+  { label: "Wertausgleich", href: "/leistungen/wertausgleich" },
+  { label: "Entrümpelung mit Ankauf", href: "/leistungen/ankauf" },
 ];
 
 export const FOOTER_SERVICE: FooterLink[] = [
   { label: "Preise", href: "/preise" },
-  { label: "FAQ", href: "/#kontakt" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 

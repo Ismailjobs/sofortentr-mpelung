@@ -5,29 +5,71 @@ type Props = {
   id?: string;
   eyebrow?: string;
   heading?: string;
+  intro?: string;
   items: ServiceFaqItem[];
+  className?: string;
+  /** Verzierter Kopfbereich (Startseiten-FAQ) */
+  headerVariant?: "simple" | "rich";
 };
 
 export default function ServiceFaqSection({
   id = "faq",
   eyebrow = "Fragen & Antworten",
   heading = "Häufige Fragen",
+  intro = "Antworten auf typische Fragen zu Ablauf, Kosten und Organisation — bei Bedarf klären wir alles Weitere persönlich in einem kurzen Gespräch.",
   items,
+  className = "",
+  headerVariant = "simple",
 }: Props) {
+  const isRichHeader = headerVariant === "rich";
+
   return (
-    <section className="py-16 sm:py-20" aria-labelledby={`${id}-heading`}>
+    <section
+      className={`py-16 sm:py-20 ${className}`.trim()}
+      aria-labelledby={`${id}-heading`}
+    >
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-brand-orange">{eyebrow}</p>
-          <h2 id={`${id}-heading`} className="mt-3 text-2xl font-extrabold text-brand-dark sm:text-3xl">
-            {heading}
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-600 sm:text-base">
-            Antworten auf typische Fragen zu Ablauf, Kosten und Organisation — bei Bedarf klären wir alles
-            Weitere persönlich in einem kurzen Gespräch.
-          </p>
+          {isRichHeader ? (
+            <div className="relative mb-10 text-center sm:mb-12">
+              <div
+                className="pointer-events-none absolute inset-x-8 -top-4 h-16 rounded-full bg-brand-orange/[0.06] blur-2xl sm:inset-x-16"
+                aria-hidden
+              />
+              <div className="relative flex items-center justify-center gap-3 sm:gap-4">
+                <span
+                  className="h-px w-12 bg-gradient-to-r from-transparent to-brand-orange/50 sm:w-16"
+                  aria-hidden
+                />
+                <p className="text-sm font-bold uppercase tracking-[0.28em] text-brand-orange sm:text-base sm:tracking-[0.32em]">
+                  {eyebrow}
+                </p>
+                <span
+                  className="h-px w-12 bg-gradient-to-l from-transparent to-brand-orange/50 sm:w-16"
+                  aria-hidden
+                />
+              </div>
+              <h2
+                id={`${id}-heading`}
+                className="mt-4 text-balance text-2xl font-extrabold tracking-tight text-brand-dark sm:text-3xl"
+              >
+                {heading}
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-neutral-600 sm:text-base">
+                {intro}
+              </p>
+            </div>
+          ) : (
+            <>
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-brand-orange">{eyebrow}</p>
+              <h2 id={`${id}-heading`} className="mt-3 text-2xl font-extrabold text-brand-dark sm:text-3xl">
+                {heading}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600 sm:text-base">{intro}</p>
+            </>
+          )}
 
-          <div className="mt-10 space-y-3">
+          <div className={`space-y-3 ${isRichHeader ? "" : "mt-10"}`}>
             {items.map((item, index) => (
               <details
                 key={`${item.question}-${index}`}

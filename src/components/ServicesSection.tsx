@@ -7,20 +7,24 @@ type Props = {
   showAllLink?: boolean;
   /** false: kein Eyebrow/Überschrift (z. B. wenn die Seite darüber schon ein Hero hat). */
   showSectionHeader?: boolean;
+  /** z. B. bg-zinc-50 direkt unter dem Hero */
+  sectionSurfaceClass?: string;
 };
 
 export default function ServicesSection({
   services,
   showAllLink = false,
   showSectionHeader = true,
+  sectionSurfaceClass = "bg-brand-muted",
 }: Props) {
+  const surface = sectionSurfaceClass.trim() || "bg-brand-muted";
   return (
     <section
       id="leistungen"
       className={
         showSectionHeader
-          ? "bg-brand-muted py-20 sm:py-24"
-          : "bg-brand-muted pb-20 pt-12 sm:pb-24 sm:pt-14"
+          ? `${surface} py-20 sm:py-24`
+          : `${surface} pb-20 pt-12 sm:pb-24 sm:pt-14`
       }
     >
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
@@ -44,7 +48,7 @@ export default function ServicesSection({
           <div className="mt-10 flex justify-center">
             <Link
               href="/leistungen"
-              className="inline-flex items-center justify-center rounded-lg bg-brand-dark px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-black"
+              className="inline-flex items-center justify-center rounded-btn bg-brand-dark px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-black"
             >
               Alle Leistungen ansehen
             </Link>

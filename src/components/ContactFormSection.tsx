@@ -1,10 +1,9 @@
 "use client";
 
 import { CheckCircle2, ChevronDown, Loader2, Mail, Phone, Send } from "lucide-react";
-import Link from "next/link";
 import Script from "next/script";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CONTACT_BLOCK, DATENSCHUTZ_PATH, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import { CONTACT_BLOCK, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 import { RECAPTCHA_V3_SITE_KEY } from "@/config/recaptcha";
 import {
   CONTACT_MAX_MESSAGE_CHARS,
@@ -32,7 +31,6 @@ type FormState = {
   /** Leistungs-ID aus CONTACT_SERVICE_OPTIONS — leer bis zur Auswahl */
   serviceType: string;
   message: string;
-  privacy: boolean;
 };
 
 function resolveDefaultServiceType(id: string | undefined): string {
@@ -47,7 +45,6 @@ function emptyFormState(defaultServiceTypeId?: string): FormState {
     phone: "",
     serviceType: resolveDefaultServiceType(defaultServiceTypeId),
     message: "",
-    privacy: false,
   };
 }
 
@@ -102,7 +99,7 @@ function ServiceTypeSelect({
         onClick={() => {
           if (!disabled) setOpen((o) => !o);
         }}
-        className="flex w-full items-center justify-between gap-2 rounded-xl border border-black/[0.08] bg-white px-4 py-3 text-left text-sm text-brand-dark shadow-sm outline-none transition focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:cursor-not-allowed disabled:opacity-60"
+        className="flex w-full items-center justify-between gap-2 rounded-btn border border-black/[0.08] bg-white px-4 py-3 text-left text-sm text-brand-dark shadow-sm outline-none transition focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:cursor-not-allowed disabled:opacity-60"
       >
         <span className={selectedLabel ? "text-brand-dark" : "text-neutral-400"}>
           {selectedLabel ?? "Bitte wählen …"}
@@ -204,10 +201,6 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
       );
       return;
     }
-    if (!form.privacy) {
-      setError("Bitte bestätigen Sie den Hinweis zum Datenschutz.");
-      return;
-    }
     if (!form.serviceType || !isAllowedContactServiceType(form.serviceType)) {
       setError("Bitte wählen Sie eine Leistung aus.");
       return;
@@ -244,7 +237,6 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
           phone: phoneE164,
           serviceType: form.serviceType,
           message: form.message.trim(),
-          privacy: form.privacy,
           ...(recaptchaToken ? { recaptchaToken } : {}),
         }),
       });
@@ -337,7 +329,7 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 </p>
                 <button
                   type="button"
-                  className="mt-8 rounded-xl bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
+                  className="mt-8 rounded-btn bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
                   onClick={() => setSent(false)}
                 >
                   Weitere Nachricht
@@ -438,27 +430,6 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                   />
                 </label>
 
-                <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-black/[0.06] bg-brand-muted/40 px-4 py-3 text-sm text-neutral-700 transition hover:bg-brand-muted/60">
-                  <input
-                    type="checkbox"
-                    checked={form.privacy}
-                    onChange={(e) => update("privacy", e.target.checked)}
-                    disabled={submitting}
-                    className="mt-1 h-4 w-4 shrink-0 rounded border-neutral-300 text-brand-orange focus:ring-brand-orange disabled:opacity-60"
-                  />
-                  <span>
-                    Ich habe den Hinweis zum{" "}
-                    <Link
-                      href={DATENSCHUTZ_PATH}
-                      className="font-semibold text-brand-orange underline decoration-brand-orange/60 underline-offset-2 transition hover:text-brand-dark hover:decoration-brand-dark"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Datenschutz
-                    </Link>{" "}
-                    zur Kenntnis genommen. <span className="text-brand-orange">*</span>
-                  </span>
-                </label>
-
                 {error ? (
                   <div
                     className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium leading-relaxed text-red-800"
@@ -472,7 +443,7 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
                 >
                   {submitting ? (
                     <>

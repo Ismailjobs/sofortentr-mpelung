@@ -6,11 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import { resolveHomeHashHref } from "@/lib/nav-href";
 
-function Logo() {
+function Logo({ homeStartHref }: { homeStartHref: string }) {
   return (
     <Link
-      href="/#start"
+      href={homeStartHref}
       className="block h-[clamp(3.75rem,14vw,5.1rem)] w-[clamp(10rem,min(72vw,calc(100dvw_-_7.5rem)),19rem)] max-w-full min-w-0 shrink-0 sm:h-[4.25rem] sm:w-[280px] md:h-[4.8rem] md:w-[320px] min-[1148px]:h-[5.2rem] min-[1148px]:w-[360px]"
     >
       <Image
@@ -55,7 +56,7 @@ export default function Header() {
     <header className="sticky top-0 z-[100] border-b border-white/10 bg-brand-dark shadow-md">
       <div className="mx-auto flex min-w-0 max-w-[min(100%,88rem)] items-center justify-between gap-3 py-2.5 pl-1 pr-3 pb-3 sm:gap-6 sm:py-2 sm:pb-2.5 sm:pl-3 sm:pr-5 min-[1148px]:grid min-[1148px]:grid-cols-[auto_1fr_auto] min-[1148px]:items-center min-[1148px]:gap-10 min-[1148px]:px-6 min-[1148px]:py-1">
         <div className="min-w-0 flex-1 min-[1148px]:flex-none min-[1148px]:min-w-0">
-          <Logo />
+          <Logo homeStartHref={resolveHomeHashHref(pathname, "/#start")} />
         </div>
 
         <nav
@@ -65,7 +66,7 @@ export default function Header() {
           {NAV_LINKS.map(({ label, href }) => (
             <Link
               key={href}
-              href={href}
+              href={resolveHomeHashHref(pathname, href)}
               className={
                 isActiveLink(href)
                   ? "text-sm font-semibold text-brand-orange"
@@ -80,7 +81,7 @@ export default function Header() {
         <div className="relative z-10 flex shrink-0 items-center gap-2 sm:gap-3">
           <a
             href={PHONE_TEL_HREF}
-            className="hidden min-w-[9rem] items-center gap-3 rounded-xl border border-brand-orange/70 bg-transparent px-4 py-2 text-brand-orange shadow-sm transition-colors hover:bg-brand-orange/10 sm:flex"
+            className="hidden min-w-[9rem] items-center gap-3 rounded-btn border border-brand-orange/70 bg-transparent px-4 py-2 text-brand-orange shadow-sm transition-colors hover:bg-brand-orange/10 sm:flex"
           >
             <Phone className="h-6 w-6 shrink-0" strokeWidth={2.25} aria-hidden />
             <span className="flex flex-col text-left leading-tight">
@@ -91,7 +92,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="inline-flex min-[1148px]:hidden items-center justify-center rounded-lg border border-white/15 p-2 text-white transition-colors hover:bg-white/5"
+            className="inline-flex min-[1148px]:hidden items-center justify-center rounded-btn border border-white/15 p-2 text-white transition-colors hover:bg-white/5"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -136,7 +137,7 @@ export default function Header() {
               {NAV_LINKS.map(({ label, href }) => (
                 <Link
                   key={href}
-                  href={href}
+                  href={resolveHomeHashHref(pathname, href)}
                   onClick={() => setOpen(false)}
                   className={
                     isActiveLink(href)
@@ -149,7 +150,7 @@ export default function Header() {
               ))}
               <a
                 href={PHONE_TEL_HREF}
-                className="mt-2 inline-flex items-center gap-2 rounded-xl border border-brand-orange px-4 py-3 text-brand-orange"
+                className="mt-2 inline-flex items-center gap-2 rounded-btn border border-brand-orange px-4 py-3 text-brand-orange"
               >
                 <Phone className="h-5 w-5" />
                 <span className="font-semibold">{PHONE_DISPLAY}</span>

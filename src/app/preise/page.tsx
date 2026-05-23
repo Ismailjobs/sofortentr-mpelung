@@ -8,14 +8,14 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import HeroBackdrop from "@/components/HeroBackdrop";
-import PriceEstimator from "@/components/PriceEstimator";
+import PricingOverview from "@/components/PricingOverview";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 
 export const metadata: Metadata = {
   title: sitePageTitle("Preise & Fixpreis"),
   description:
-    "Transparente Festpreise nach Besichtigung — Richtwerte mit Preis-Rechner für Entrümpelung in Wien.",
+    "Transparente Richtpreise für Haushaltsauflösung und Entrümpelung in Wien — mit Wertanrechnung und Festpreis nach Besichtigung.",
 };
 
 const PRICE_NOTES: {
@@ -56,23 +56,21 @@ export default function PreisePage() {
               Entrümpelung mit Fixpreis-Garantie
             </h1>
             <p className="mt-5 max-w-3xl text-base text-white/85 sm:text-lg">
-              Jede Entrümpelung wird vorab besichtigt. Danach erhalten Sie einen verbindlichen Festpreis
-              ohne versteckte Zusatzkosten. Unten können Sie einen Richtwert zusammenstellen.
+              Klare Richtpreise nach Objektgröße — mit möglicher Wertanrechnung oft deutlich günstiger. Verbindlich
+              wird der Festpreis nach kostenloser Besichtigung.
             </p>
             <Link
-              href="#preis-kalkulator"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
+              href="#preise-uebersicht"
+              className="mt-8 inline-flex items-center justify-center rounded-btn bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
             >
-              Zum Preis-Rechner
+              Zu den Richtpreisen
             </Link>
           </div>
         </section>
 
-        <section id="preis-kalkulator" className="scroll-mt-28 pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24">
+        <section id="preise-uebersicht" className="scroll-mt-28 pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24">
           <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
-            <div className="mx-auto max-w-2xl lg:max-w-3xl">
-              <PriceEstimator />
-            </div>
+            <PricingOverview />
 
             <ul className="mx-auto mt-14 grid max-w-2xl gap-4 text-sm text-neutral-600 sm:mt-16 sm:grid-cols-3 lg:max-w-none">
               {PRICE_NOTES.map(({ icon: Icon, title, text }) => (

@@ -5,6 +5,7 @@ import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
+import AboutUsSection from "@/components/AboutUsSection";
 import Hero from "@/components/Hero";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
@@ -34,6 +35,7 @@ export default function Home() {
         <Hero />
         <TrustBar items={PAGE.trust} />
         <ServicesSection services={PAGE.services} showAllLink />
+        <AboutUsSection />
         <WhyUs />
         <ProcedureSections />
         <TestimonialSlider testimonials={PAGE.testimonials} />

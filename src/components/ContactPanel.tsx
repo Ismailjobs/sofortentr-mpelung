@@ -1,6 +1,7 @@
 import { Calendar, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
-import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import ServiceFaqSection from "@/components/ServiceFaqSection";
+import { GENERAL_FAQ, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 
 const WHATSAPP_HREF = "https://wa.me/4368181130962";
 
@@ -19,7 +20,7 @@ const CHANNELS = [
         href={WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-xl bg-[#25d366] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1ebe5b] hover:shadow-md"
+        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-[#25d366] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1ebe5b] hover:shadow-md"
       >
         Jetzt schreiben
       </a>
@@ -37,7 +38,7 @@ const CHANNELS = [
     cta: (
       <a
         href={PHONE_TEL_HREF}
-        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-xl bg-[#2563eb] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1d4ed8] hover:shadow-md"
+        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-[#2563eb] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1d4ed8] hover:shadow-md"
       >
         {PHONE_DISPLAY}
       </a>
@@ -55,7 +56,7 @@ const CHANNELS = [
     cta: (
       <Link
         href="#kontakt-formular"
-        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-xl bg-brand-orange px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] hover:shadow-md"
+        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-brand-orange px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] hover:shadow-md"
       >
         Anfrage stellen
       </Link>
@@ -65,6 +66,7 @@ const CHANNELS = [
 
 export default function ContactPanel() {
   return (
+    <>
     <section id="kontakt" className="scroll-mt-28 border-t border-neutral-100 bg-gradient-to-b from-white via-brand-muted/25 to-white py-20 sm:py-24">
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
         <div className="mx-auto max-w-3xl text-center">
@@ -111,5 +113,16 @@ export default function ContactPanel() {
         </div>
       </div>
     </section>
+
+    <ServiceFaqSection
+      id="faq"
+      eyebrow="FAQ"
+      heading="Häufig gestellte Fragen"
+      intro="Alles Wichtige zu Kosten, Ablauf und Leistungsumfang auf einen Blick — für Entrümpelungen in Wien und Umgebung."
+      items={GENERAL_FAQ}
+      headerVariant="rich"
+      className="scroll-mt-28 border-t border-neutral-200/80 bg-gradient-to-b from-brand-muted/40 via-white to-white"
+    />
+    </>
   );
 }

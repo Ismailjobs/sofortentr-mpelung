@@ -11,6 +11,13 @@ export const CONTACT_SERVICE_OPTIONS = [
   { id: "dachbodenentruempelung", label: "Dachbodenentrümpelung" },
   { id: "messie-entruempelung", label: "Messie-Entrümpelung" },
   { id: "gartenentruempelung", label: "Gartenentrümpelung" },
+  { id: "verlassenschaft", label: "Verlassenschaft entrümpeln" },
+  { id: "nachlass", label: "Nachlass entrümpeln" },
+  { id: "haushaltsaufloesung", label: "Haushaltsauflösung" },
+  { id: "wohnungsaufloesung", label: "Wohnungsauflösung" },
+  { id: "erbschaftshaus", label: "Erbschaftshaus entrümpeln" },
+  { id: "wertausgleich", label: "Entrümpelung mit Wertausgleich" },
+  { id: "ankauf", label: "Entrümpelung mit Ankauf" },
 ] as const;
 
 export type ContactServiceTypeId = (typeof CONTACT_SERVICE_OPTIONS)[number]["id"];

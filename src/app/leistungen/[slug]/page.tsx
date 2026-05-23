@@ -7,9 +7,14 @@ import ContactFormSection from "@/components/ContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { HomeHashLink } from "@/components/HomeHashLink";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
+import ServiceIntroText from "@/components/ServiceIntroText";
+import ServicePageReveal from "@/components/ServicePageReveal";
+import SimilarServicesSection from "@/components/SimilarServicesSection";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
+import { getRelatedServicesForSlug } from "@/data/related-services";
 import { getServiceDetailPageData } from "@/data/service-page-details";
 import { SERVICES } from "@/data/site-content";
 
@@ -48,6 +53,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const hasSplit = splitIndex > 0;
   const splitTop = hasSplit ? normalizedTitle.slice(0, splitIndex).replace(/[-\s]+$/, "") : normalizedTitle;
   const splitBottom = splitMatch?.[0] ?? "";
+  const relatedServices = getRelatedServicesForSlug(slug);
 
   return (
     <>
@@ -85,19 +91,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="#kontakt"
-                className="inline-flex items-center justify-center rounded-lg bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
+                className="inline-flex items-center justify-center rounded-btn bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
               >
                 Jetzt Termin anfragen
               </Link>
-              <Link
+              <HomeHashLink
                 href="/#leistungen"
-                className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-btn border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
               >
                 Alle Services ansehen
-              </Link>
+              </HomeHashLink>
               <Link
                 href="/preise"
-                className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-btn border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
               >
                 Preise & Richtwerte
               </Link>
@@ -120,55 +126,32 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           />
           <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
             <div className="mx-auto max-w-3xl">
-              <div className="mb-8 flex items-center gap-3 sm:mb-10" aria-hidden>
-                <span className="inline-flex h-2 w-14 rounded-full bg-brand-orange shadow-[0_0_24px_-2px_rgba(255,122,0,0.55)]" />
-                <span className="h-px min-w-[4rem] flex-1 bg-gradient-to-r from-brand-orange/45 via-brand-orange/15 to-transparent sm:min-w-[7rem]" />
-              </div>
-              <div className="space-y-6 sm:space-y-8">
-                {service.introParagraphs.map((paragraph, index) => (
-                  <div key={index}>
-                    {index > 0 ? (
-                      <div className="mb-6 flex justify-center sm:mb-8" aria-hidden>
-                        <span className="inline-flex items-center gap-2">
-                          <span className="h-1 w-1 rounded-full bg-brand-orange/35" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-brand-orange/75" />
-                          <span className="h-1 w-1 rounded-full bg-brand-orange/35" />
-                        </span>
-                      </div>
-                    ) : null}
-                    <p
-                      className={`text-pretty ${
-                        index === 0
-                          ? "text-[1.0625rem] font-semibold leading-[1.58] tracking-tight text-brand-dark sm:text-lg sm:leading-snug"
-                          : "border-l-[3px] border-brand-orange/40 pl-5 text-sm font-normal leading-relaxed text-neutral-700 sm:border-l-4 sm:pl-6 sm:text-base"
-                      }`}
-                    >
-                      {paragraph}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <ServiceIntroText paragraphs={service.introParagraphs} />
             </div>
           </div>
         </section>
 
         <section className="pb-16 pt-10 sm:pb-20 sm:pt-14 lg:pt-16">
           <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/[0.06] sm:p-8 lg:p-10">
-              <h2 className="text-2xl font-extrabold text-brand-dark sm:text-3xl">Was ist inklusive?</h2>
-              <ul className="mt-6 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base">
-                {service.includedBullets.map((line) => (
-                  <li key={line} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-orange" aria-hidden />
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ServicePageReveal>
+              <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/[0.06] sm:p-8 lg:p-10">
+                <h2 className="text-2xl font-extrabold text-brand-dark sm:text-3xl">Was ist inklusive?</h2>
+                <ul className="mt-6 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base">
+                  {service.includedBullets.map((line) => (
+                    <li key={line} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-orange" aria-hidden />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ServicePageReveal>
           </div>
         </section>
 
-        <ServiceFaqSection id="faq" items={service.faq} />
+        <ServiceFaqSection id="leistung-faq" items={service.faq} />
+
+        <SimilarServicesSection services={relatedServices} />
 
         <ContactPanel />
       </main>

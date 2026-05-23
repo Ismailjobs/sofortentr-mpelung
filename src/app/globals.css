@@ -10,7 +10,14 @@
   --color-brand-orange: #ff7a00;
   --color-brand-dark: #111111;
   --color-brand-muted: #f3f4f6;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --radius-btn: 1rem;
+}
+
+@layer components {
+  .rounded-btn {
+    border-radius: var(--radius-btn);
+  }
 }
 
 html {

@@ -297,40 +297,48 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   "messie-entruempelung": {
     introParagraphs: [
-      "Messie-Situationen erfordern Sensibilität, Geduld und einen strukturierten Plan. Wir gehen respektvoll vor, minimieren Stress für Betroffene und Angehörige und arbeiten in überschaubaren Schritten.",
-      "Ein persönliches Gespräch und Besichtigung helfen, Erwartungen und Tempo abzustimmen — danach ein klares Angebot.",
+      "Eine Messie-Wohnung entrümpeln ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und einen respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
+      "Als Team für Messie Entrümpelung planen wir vor Ort: Welche Räume zuerst, welche Etappen sinnvoll sind und wie die Messie-Wohnung Räumung termingerecht abgeschlossen werden kann — ohne zusätzlichen Stress.",
+      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Messie Entrümpelung inklusive Abtransport, fachgerechter Entsorgung und besenreiner Übergabe — transparent und ohne Überraschungen.",
     ],
     includedBullets: [
-      "Respektvolle Kommunikation und diskrete Ausführung",
-      "Schrittweise Räumung möglich — nicht „alles an einem Tag“, wenn das nicht gewünscht ist",
-      "Koordination mit Sozialdienst oder Angehörigen nach Absprache",
-      "Fachgerechte Entsorgung und besenreine Übergabe bei vollem Umfang",
+      "Messie-Wohnung entrümpeln mit diskreter Logistik und abgestimmten Zeitfenstern",
+      "Messie Entrümpelung in Etappen — Tempo und Umfang nach Ihrer Situation",
+      "Messie-Wohnung Räumung inkl. Sortierung, Verladung und Entsorgung",
+      "Schutz von Treppenhaus und Nachbarn — wichtig in Wiener Wohnanlagen",
+      "Koordination mit Angehörigen, Betreuung, Verwaltung oder Sanierung",
+      "Festpreis nach Besichtigung — kein offenes Stundenmodell",
     ],
     faq: [
       {
-        question: "Wie läuft der erste Kontakt ab?",
+        question: "Was umfasst die Messie Entrümpelung bei Ihnen?",
         answer:
-          "Unverbindliches Gespräch und Besichtigung — wir hören zu, klären Grenzen (was bleibt, was weg muss) und schlagen ein realistisches Vorgehen vor.",
+          "Die Messie-Wohnung Räumung umfasst im vereinbarten Umfang Sortierung, Verladung, Abtransport und fachgerechte Entsorgung. Messie-Wohnung entrümpeln heißt bei uns: strukturiert, respektvoll und mit klarem Festpreis nach Besichtigung — inklusive besenreiner Übergabe.",
       },
       {
-        question: "Wird diskret gearbeitet?",
+        question: "Wie unterscheidet sich Messie-Wohnung entrümpeln von einer normalen Entrümpelung?",
         answer:
-          "Ja. Unauffällige Fahrzeuge und terminliche Fenster sind möglich — bitte im Vorfeld ansprechen.",
+          "Bei Messie Entrümpelung sind oft höhere Mengen, enge Zugänge und sensible Situationen im Spiel. Wir planen Etappen, Hygiene und Logistik gezielt — die Messie-Wohnung Räumung soll für alle Beteiligten beherrschbar bleiben.",
       },
       {
-        question: "Können Angehörige dabei sein?",
+        question: "Wie schnell kann eine Messie-Wohnung entrümpelt werden?",
         answer:
-          "In der Regel ja, soweit es für alle Beteiligten tragbar ist. Wir passen Tempo und Kommunikation an.",
+          "Je nach Umfang und Zustand oft über mehrere Tage in Etappen. Nach der Besichtigung nennen wir einen realistischen Zeitplan für die Messie Entrümpelung — mit klarem Ziel, aber ohne unnötigen Druck.",
       },
       {
-        question: "Wie werden Hygiene und Schutz gearbeitet?",
+        question: "Arbeiten Sie diskret bei Messie-Wohnung Räumung?",
         answer:
-          "Je nach Situation mit angepasster Schutzausrüstung und klaren Abläufen — das wird vor Ort bewertet, nie aus der Ferne „geraten“.",
+          "Ja. Unauffällige Fahrzeuge, abgestimmte Zeitfenster und zurückhaltende Kommunikation im Treppenhaus sind Standard — besonders wichtig bei Messie Entrümpelung in belebten Wohnhauslagen.",
       },
       {
-        question: "Ist der Preis auch bei großem Aufwand kalkulierbar?",
+        question: "Können Angehörige bei der Messie-Wohnung entrümpeln dabei sein?",
         answer:
-          "Ja — über Besichtigung und definierte Etappen. So bleibt der Finanzrahmen beherrschbar.",
+          "In der Regel ja. Wir passen Tempo und Ablauf an — die Messie-Wohnung Räumung soll für Betroffene und Familie so weit wie möglich mitgestaltbar sein.",
+      },
+      {
+        question: "Wie wird der Preis für Messie Entrümpelung berechnet?",
+        answer:
+          "Über kostenlose Besichtigung: Volumen, Zugang, Hygieneaufwand und geplante Etappen. Danach ein verbindlicher Festpreis für die Messie Entrümpelung — transparent, schriftlich und ohne versteckte Posten.",
       },
     ],
   },
@@ -371,6 +379,342 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
         question: "Wie schnell nach Anfrage können Sie kommen?",
         answer:
           "Je nach Saison und Auslastung — nach Besichtigung mit konkretem Terminvorschlag.",
+      },
+    ],
+  },
+
+  verlassenschaft: {
+    introParagraphs: [
+      "Verlassenschaft entrümpeln steht oft unter Zeitdruck: Übergabe an Erben, Neuvermietung, Verkauf oder Abwicklung durch die Verwaltung muss termingerecht klappen — in Wien und Umgebung.",
+      "Wir übernehmen die Verlassenschaftsentrümpelung strukturiert und diskret: von der kostenlosen Besichtigung über Sortierung und Abtransport bis zur besenreinen Übergabe — alles aus einer Hand.",
+      "Ob Wohnung, Reihenhaus oder größeres Objekt: Verlassenschaft entrümpeln planen wir mit verbindlichem Festpreis, damit Sie Kosten und Ablauf von Anfang an kennen.",
+    ],
+    includedBullets: [
+      "Verlassenschaft entrümpeln mit klarer Abstimmung von Umfang und Terminen",
+      "Verlassenschaftsentrümpelung inkl. Abtransport und fachgerechter Entsorgung",
+      "Koordination mit Notar, Verwaltung, Erben oder Hausverwaltung",
+      "Trennung von Dokumenten und offensichtlichen Wertsachen zur Übergabe",
+      "Besenreine Übergabe zum vereinbarten Datum — auch kurzfristig nach Absprache",
+      "Festpreis nach Besichtigung — keine nachträglichen Überraschungen",
+    ],
+    faq: [
+      {
+        question: "Was bedeutet Verlassenschaft entrümpeln konkret?",
+        answer:
+          "Die Verlassenschaftsentrümpelung umfasst die Leerung des Hausrats im vereinbarten Umfang — Möbel, Kartons, Geräte, Textilien und Sperrmüll. Verlassenschaft entrümpeln heißt bei uns: vollständig, termintreu und zum Festpreis nach Besichtigung.",
+      },
+      {
+        question: "Für wen ist eine Verlassenschaftsentrümpelung gedacht?",
+        answer:
+          "Für Erben, Verwaltungen, Vermieter und Käufer, die eine hinterlassene Wohnung oder ein Objekt rasch nutzbar brauchen. Verlassenschaft entrümpeln koordinieren wir mit der jeweils berechtigten Person — inklusive Schlüsselübergabe.",
+      },
+      {
+        question: "Wie schnell ist eine Verlassenschaftsentrümpelung möglich?",
+        answer:
+          "Je nach Größe und Zustand oft innerhalb weniger Tage bis Wochen nach Besichtigung. Kurzfristige Termine für Verlassenschaft entrümpeln sind nach Absprache möglich — wir nennen Ihnen realistische Fenster.",
+      },
+      {
+        question: "Finden Sie Dokumente oder Wertsachen?",
+        answer:
+          "Wir trennen offensichtliche Wertsachen und Unterlagen zur Übergabe. Verlassenschaft entrümpeln soll nichts Wichtiges verlieren — markieren Sie sensible Bereiche oder Schubladen vorab.",
+      },
+      {
+        question: "Ist die Entsorgung bei Verlassenschaft entrümpeln enthalten?",
+        answer:
+          "Ja. Transport, Verladung und fachgerechte Entsorgung sind im Festpreis der Verlassenschaftsentrümpelung enthalten — inklusive üblicher Sperr- und Wertstofffraktionen im vereinbarten Umfang.",
+      },
+      {
+        question: "Unterscheidet sich Verlassenschaft entrümpeln von Nachlass entrümpeln?",
+        answer:
+          "Die Begriffe überschneiden sich oft. Verlassenschaftsentrümpelung betont häufig die hinterlassene Wohnung nach Auszug oder Tod; Nachlass entrümpeln den Erbnachlass. Umfang und Preis legen wir in der Besichtigung fest.",
+      },
+    ],
+  },
+
+  nachlass: {
+    introParagraphs: [
+      "Nachlass entrümpeln verlangt Übersicht, Diskretion und einen Partner, der Termine und Erwartungen der Beteiligten ernst nimmt — ob als Erbe, Testamentsvollstrecker oder Verwaltung in Wien.",
+      "Wir begleiten die Nachlassentrümpelung von der Besichtigung bis zur besenreinen Übergabe: Sortierung, Abtransport, fachgerechte Entsorgung und klare Kommunikation mit allen Beteiligten.",
+      "Ob komplette Wohnung, Haus oder einzelne Räume: Nachlass entrümpeln erhalten Sie zum verbindlichen Festpreis — transparent geplant, ohne versteckte Zusatzposten.",
+    ],
+    includedBullets: [
+      "Nachlassentrümpelung mit respektvollem und strukturiertem Vorgehen",
+      "Nachlass entrümpeln inkl. Sortierung, Verladung und Entsorgung",
+      "Abstimmung mit Erbengemeinschaft, Notar oder Hausverwaltung",
+      "Separierung von Dokumenten, Fotos und offensichtlichen Wertsachen",
+      "Etappenplanung bei großen Nachlässen — auf Wunsch",
+      "Festpreis nach kostenloser Besichtigung vor Ort",
+    ],
+    faq: [
+      {
+        question: "Wer beauftragt die Nachlassentrümpelung?",
+        answer:
+          "Häufig Erben, Testamentsvollstrecker, Verwalter oder Hausverwaltungen. Nachlass entrümpeln koordinieren wir mit der berechtigten Person — inklusive Schlüsselübergabe und Terminabstimmung.",
+      },
+      {
+        question: "Was passiert mit persönlichen Unterlagen beim Nachlass entrümpeln?",
+        answer:
+          "Dokumente, Urkunden und Wertsachen werden separiert und übergeben. Nachlassentrümpelung bedeutet nicht „alles entsorgen“, sondern geordnetes Vorgehen nach Ihrer schriftlichen oder mündlichen Vorgabe.",
+      },
+      {
+        question: "Kann die Nachlassentrümpelung in Etappen erfolgen?",
+        answer:
+          "Ja — sinnvoll bei großen Objekten oder wenn Erben mitentscheiden möchten. Nachlass entrümpeln teilen wir auf Wunsch in überschaubare Schritte mit Zwischenübergaben.",
+      },
+      {
+        question: "Wie lange dauert Nachlass entrümpeln typischerweise?",
+        answer:
+          "Das hängt von Volumen, Zugängen und Entscheidungswegen in der Erbengemeinschaft ab. Nach Besichtigung nennen wir eine realistische Dauer für die Nachlassentrümpelung — oft ein bis mehrere Tage.",
+      },
+      {
+        question: "Wie wird der Preis für Nachlass entrümpeln ermittelt?",
+        answer:
+          "Über Besichtigung von Volumen, Zugängen (Aufzug, Treppenhaus) und Entsorgungsmix. Danach ein verbindliches Angebot für die Nachlassentrümpelung — Festpreis, schriftlich fixiert.",
+      },
+      {
+        question: "Können Verwertungen den Preis der Nachlassentrümpelung senken?",
+        answer:
+          "Verwertbare Gegenstände können angerechnet werden — z. B. über Entrümpelung mit Wertausgleich oder Ankauf. Das besprechen wir transparent in der Besichtigung.",
+      },
+    ],
+  },
+
+  haushaltsaufloesung: {
+    introParagraphs: [
+      "Eine Haushaltsauflösung und Entrümpelung bündelt alles, was bei einer kompletten Haushaltsauflösung anfällt: Sortieren, Verladen, Abtransport und fachgerechte Entsorgung — in Wien und Umgebung.",
+      "Typische Anlässe: Umzug ins Pflegeheim, Erbschaft, Neuvermietung, Verkauf oder Entrümpelung vor Renovierung. Wir übernehmen die Haushaltsauflösung termingerecht und besenrein.",
+      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Haushaltsauflösung und Entrümpelung — inklusive Anfahrt und Entsorgung im vereinbarten Umfang.",
+    ],
+    includedBullets: [
+      "Haushaltsauflösung und Entrümpelung aus einer Hand — ein Ansprechpartner",
+      "Leerung von Wohnung, Keller, Abstell- und Nebenräumen nach Vereinbarung",
+      "Demontage leichter Einbauten und Möbel auf Wunsch",
+      "Abtransport, Entsorgung und Trennung üblicher Fraktionen inklusive",
+      "Besenreine Übergabe für Vermieter, Käufer oder Erben",
+      "Festpreis nach Besichtigung — planbar für Nachlass und Mietende",
+    ],
+    faq: [
+      {
+        question: "Was umfasst eine Haushaltsauflösung in Wien?",
+        answer:
+          "Typisch die vollständige oder teilweise Leerung von Möbeln, Hausrat, Kartons, Geräten und Sperrmüll im vereinbarten Umfang. Haushaltsauflösung und Entrümpelung inklusive Transport, Verladung und fachgerechter Entsorgung.",
+      },
+      {
+        question: "Unterscheidet sich Haushaltsauflösung von Wohnungsauflösung?",
+        answer:
+          "Haushaltsauflösung meint oft den gesamten Haushalt inklusive Nebenräume; Wohnungsauflösung fokussiert die Wohnung selbst. Umfang und Preis legen wir in der Besichtigung für Ihre Haushaltsauflösung und Entrümpelung fest.",
+      },
+      {
+        question: "Kann ich Gegenstände vor der Haushaltsauflösung aussortieren?",
+        answer:
+          "Ja — was Sie vorab entnehmen oder verschenken, wird nicht mitentsorgt. Der verbleibende Bestand wird gemäß Auftrag bei der Haushaltsauflösung abtransportiert.",
+      },
+      {
+        question: "Sind Keller und Abstellräume in der Haushaltsauflösung dabei?",
+        answer:
+          "Auf Wunsch ja — Keller, Garage oder Abstellräume planen wir in der Besichtigung mit ein. Haushaltsauflösung und Entrümpelung sollen den kompletten benötigten Umfang abdecken.",
+      },
+      {
+        question: "Wie kurzfristig ist eine Haushaltsauflösung möglich?",
+        answer:
+          "Je nach Auslastung oft innerhalb weniger Werktage nach Besichtigung. Express-Termine für die Haushaltsauflösung sind nach Absprache möglich — wir nennen realistische Fenster.",
+      },
+      {
+        question: "Wie wird der Preis für Haushaltsauflösung und Entrümpelung berechnet?",
+        answer:
+          "Über Besichtigung von Volumen, Zugängen und Entsorgungsmix. Danach ein verbindlicher Festpreis — Haushaltsauflösung ohne nachträgliche Stundenzuschläge.",
+      },
+    ],
+  },
+
+  wohnungsaufloesung: {
+    introParagraphs: [
+      "Eine Wohnungsauflösung und Entrümpelung ist in Wien meist streng terminiert — Mietende, Käufertermin, Verkauf oder Erbschaft lassen wenig Spielraum.",
+      "Wir räumen Wohnungen effizient, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
+      "Nach Objektbesichtigung erhalten Sie einen verbindlichen Festpreis für die Wohnungsauflösung — Wohnungsauflösung und Entrümpelung transparent, ohne versteckte Zusatzkosten.",
+    ],
+    includedBullets: [
+      "Wohnungsauflösung und Entrümpelung mit verbindlichem Festpreis",
+      "Schonender Umgang mit Treppenhaus, Aufzug und Nachbarn",
+      "Übergabe termingerecht — auch an Übergabetagen nach Absprache",
+      "Abtransport und fachgerechte Entsorgung aller vereinbarten Fraktionen",
+      "Teilräumungen oder komplette Wohnungsauflösung möglich",
+      "Koordination mit Erbengemeinschaft, Verwaltung oder Makler",
+    ],
+    faq: [
+      {
+        question: "Was beinhaltet eine Wohnungsauflösung?",
+        answer:
+          "Die vollständige oder teilweise Leerung der Wohnung im vereinbarten Umfang — Möbel, Hausrat, Kartons und Geräte. Wohnungsauflösung und Entrümpelung inklusive Abtransport, Entsorgung und besenreiner Übergabe.",
+      },
+      {
+        question: "Kann die Wohnungsauflösung am Übergabetag fertig sein?",
+        answer:
+          "Oft ja — abhängig von Größe, Stockwerk und Zustand. Nach Besichtigung sagen wir, ob Wohnungsauflösung und Entrümpelung an einem Tag realistisch ist oder mehr Zeit braucht.",
+      },
+      {
+        question: "Was passiert mit Einbauküchen bei der Wohnungsauflösung?",
+        answer:
+          "Standard sind lose Möbel und Hausrat. Demontage von Einbauküchen nur nach gesonderter Vereinbarung — klären wir bei der Wohnungsauflösung vor Ort und kalkulieren fair ein.",
+      },
+      {
+        question: "Ist die Wohnungsauflösung auch für Erbengemeinschaften möglich?",
+        answer:
+          "Ja. Wir koordinieren Termine und Umfang mit allen Beteiligten — Wohnungsauflösung und Entrümpelung nachvollziehbar und mit einem Festpreis für alle Seiten.",
+      },
+      {
+        question: "Was kostet eine Wohnungsauflösung in Wien?",
+        answer:
+          "Der Preis ergibt sich aus Volumen, Zugang und Entsorgungsmix in der Besichtigung. Danach Festpreis für die Wohnungsauflösung — keine offene Stundenabrechnung.",
+      },
+      {
+        question: "Unterscheidet sich Wohnungsauflösung von Haushaltsauflösung?",
+        answer:
+          "Die Wohnungsauflösung fokussiert die Wohnung; Haushaltsauflösung oft den gesamten Haushalt inklusive Nebenräume. Beides bieten wir an — Umfang definieren wir gemeinsam vor Ort.",
+      },
+    ],
+  },
+
+  erbschaftshaus: {
+    introParagraphs: [
+      "Erbschaftshaus entrümpeln oder ein geerbtes Haus entrümpeln bedeutet oft mehr als eine Wohnung: Keller, Dachboden, Garage und jahrzehntelanger Hausrat — in Wien und Umgebung ein großes Organisationsprojekt für Erben.",
+      "Wir unterstützen Sie beim Haus entrümpeln nach Erbschaft ebenso wie bei der Wohnung entrümpeln nach Todesfall — strukturiert, diskret und mit einem verbindlichen Festpreis nach Besichtigung.",
+      "Ob Einfamilienhaus, Reihenhaus oder Mehrparteien-Objekt: Das Erbschaftshaus planen wir mit klarer Zeitleiste, Abstimmung aller Erben und besenreiner Übergabe für Verkauf, Vermietung oder Neuverteilung.",
+    ],
+    includedBullets: [
+      "Erbschaftshaus entrümpeln inkl. Keller, Garage und Dachboden nach Vereinbarung",
+      "Geerbtes Haus entrümpeln mit Abstimmung aller Erben und Verwaltung",
+      "Haus entrümpeln nach Erbschaft — termintreu und dokumentierbar",
+      "Wohnung entrümpeln nach Todesfall im selben oder separaten Auftrag",
+      "Trennung von Dokumenten, Fotos und Wertsachen zur Übergabe",
+      "Festpreis nach Besichtigung — Verwertung optional über Wertausgleich oder Ankauf",
+    ],
+    faq: [
+      {
+        question: "Was umfasst Erbschaftshaus entrümpeln?",
+        answer:
+          "Die Leerung des geerbten Objekts im vereinbarten Umfang — Hausrat, Möbel, Nebenräume und Sperrgut. Erbschaftshaus entrümpeln planen wir nach Besichtigung mit Festpreis, Abtransport und fachgerechter Entsorgung.",
+      },
+      {
+        question: "Können Sie auch nur eine Wohnung entrümpeln nach Todesfall?",
+        answer:
+          "Ja — Teilaufträge sind möglich. Wohnung entrümpeln nach Todesfall in einer Eigentumswohnung oder geerbtes Haus entrümpeln im Gesamtauftrag: Umfang legen wir gemeinsam in der Besichtigung fest.",
+      },
+      {
+        question: "Wie läuft Haus entrümpeln nach Erbschaft ab?",
+        answer:
+          "Besichtigung, schriftliches Angebot, Termin mit Erben oder Verwaltung, dann Sortierung, Verladung und Entsorgung. Haus entrümpeln nach Erbschaft soll Übergabetermine für Verkauf oder Neuvermietung zuverlässig einhalten.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Erbschaftshaus und Verlassenschaft?",
+        answer:
+          "Erbschaftshaus betont das geerbte Objekt nach Erbfall; Verlassenschaft oft die hinterlassene Nutzungseinheit. Beides decken wir ab — Erbschaftshaus entrümpeln mit dem Umfang, den Sie benötigen.",
+      },
+      {
+        question: "Werden Wertgegenstände beim Erbschaftshaus berücksichtigt?",
+        answer:
+          "Verwertbare Stücke können angerechnet werden — über Entrümpelung mit Wertausgleich oder Entrümpelung mit Ankauf. So kann geerbtes Haus entrümpeln für Erben deutlich günstiger werden.",
+      },
+      {
+        question: "Wie lange dauert Erbschaftshaus entrümpeln?",
+        answer:
+          "Je nach Größe und Bestand oft ein bis mehrere Tage. Nach Besichtigung nennen wir eine realistische Dauer — Erbschaftshaus entrümpeln mit klarem Endtermin für alle Beteiligten.",
+      },
+    ],
+  },
+
+  wertausgleich: {
+    introParagraphs: [
+      "Entrümpelung mit Wertausgleich ist die faire Alternative zum „alles entsorgen“: Verwertbare Möbel, Geräte, Werkzeuge oder Sammlungen rechnen wir realistisch gegen den Festpreis — in Wien und Umgebung.",
+      "Besonders nach Erbschaft oder bei großen Haushalten steht noch brauchbarer Hausrat im Weg. Entrümpelung mit Wertausgleich senkt Ihre Kosten, ohne dass Sie selbst Verkaufskanäle organisieren müssen.",
+      "Nach Besichtigung sehen Sie schriftlich, welcher Wertausgleich möglich ist — danach der verbindliche Endpreis für die komplette Entrümpelung inklusive Abtransport und besenreiner Übergabe.",
+    ],
+    includedBullets: [
+      "Entrümpelung mit Wertausgleich nach fairer, nachvollziehbarer Bewertung",
+      "Transparente Gegenrechnung im Festpreis-Angebot vor Start",
+      "Sortierung: Verwertbares vs. Entsorgung — Sie behalten die Übersicht",
+      "Restentsorgung, Abtransport und besenreine Übergabe inklusive",
+      "Kombinierbar mit Teilräumung, Erbschaft oder Haushaltsauflösung",
+      "Kein versteckter „Wertausgleich“ nachträglich — alles fix im Angebot",
+    ],
+    faq: [
+      {
+        question: "Wie funktioniert Entrümpelung mit Wertausgleich?",
+        answer:
+          "Wir schätzen verwertbare Gegenstände bei der Besichtigung und rechnen den realistischen Marktwert gegen die Entrümpelung. Entrümpelung mit Wertausgleich macht große Haushalte und Erbschaften oft deutlich günstiger — der Rest wird fachgerecht entsorgt.",
+      },
+      {
+        question: "Welche Gegenstände eignen sich für Wertausgleich?",
+        answer:
+          "Gut erhaltene Möbel, Elektrogeräte, Werkzeuge, Fahrräder, Sammlungen oder komplette Einrichtungen — keine starre Mindestliste. Entrümpelung mit Wertausgleich hängt vom konkreten Bestand ab, den wir vor Ort bewerten.",
+      },
+      {
+        question: "Erhalte ich eine schriftliche Aufstellung zum Wertausgleich?",
+        answer:
+          "Ja. Der Wertausgleich ist im Festpreis-Angebot nachvollziehbar beschrieben — Position für Position, bevor die Entrümpelung mit Wertausgleich startet.",
+      },
+      {
+        question: "Muss ich verwertbare Stücke selbst verkaufen?",
+        answer:
+          "Nein. Entrümpelung mit Wertausgleich bedeutet: Wir übernehmen Räumung und Verwertungslogistik; der Gegenwert mindert Ihren Festpreis. Sie sparen Zeit und Koordinationsaufwand.",
+      },
+      {
+        question: "Kombinieren Sie Wertausgleich mit Ankauf?",
+        answer:
+          "Bei hochwertigen Einzelstücken — Antiquitäten, Schmuck, Kameras — kann zusätzlich Entrümpelung mit Ankauf sinnvoll sein. Wir beraten in der Besichtigung, was sich für Wertausgleich und was für direkten Ankauf eignet.",
+      },
+      {
+        question: "Wann lohnt sich Entrümpelung mit Wertausgleich besonders?",
+        answer:
+          "Bei vollständigen Haushalten, Erbschaften und älteren Einrichtungen mit gut erhaltenen Möbeln und Geräten. Entrümpelung mit Wertausgleich ist dann oft günstiger als reine Entsorgung zum Festpreis ohne Anrechnung.",
+      },
+    ],
+  },
+
+  ankauf: {
+    introParagraphs: [
+      "Entrümpelung mit Ankauf vereint Räumung und Verwertung in einem Auftrag: Wir räumen den Haushalt und kaufen auf Wunsch Antiquitäten, Antik, Schmuck, Modeschmuck, Kameras und ausgewählte Altwaren direkt an — in Wien und Umgebung.",
+      "Ob Entrümpelung und Altwaren Ankauf nach Erbschaft oder gezielter Schmuck Ankauf in einer Wohnung: Nach Besichtigung erhalten Sie ein Gesamtangebot — Festpreis für die Räumung minus realistischer Ankaufswert.",
+      "Sie sparen Zeit, mehrere Kontakte und Abstimmungsaufwand. Entrümpelung mit Ankauf heißt bei uns: ein Team, ein Termin, besenreine Übergabe — transparent vor Start fixiert.",
+    ],
+    includedBullets: [
+      "Entrümpelung mit Ankauf von Antiquitäten, Antik und Altwaren",
+      "Entrümpelung mit Schmuck Ankauf und Entrümpelung mit Modeschmuck Ankauf",
+      "Entrümpelung mit Kamera Ankauf und Entrümpelung mit Antiquitäten Ankauf",
+      "Entrümpelung mit Antik Ankauf — Antik einkauf durch erfahrene Einschätzung",
+      "Restliche Entrümpelung, Abtransport und Entsorgung inklusive",
+      "Schriftliches Gesamtangebot vor Beginn — keine Nachverhandlung vor der Tür",
+    ],
+    faq: [
+      {
+        question: "Was bedeutet Entrümpelung mit Ankauf?",
+        answer:
+          "Wir räumen den Haushalt besenrein und kaufen vereinbarte Wertgegenstände an — z. B. Entrümpelung mit Antiquitäten Ankauf, Entrümpelung mit Schmuck Ankauf oder Entrümpelung mit Kamera Ankauf. Der Ankaufspreis mindert den Festpreis der Entrümpelung.",
+      },
+      {
+        question: "Welche Kategorien deckt Entrümpelung mit Ankauf ab?",
+        answer:
+          "Antik einkauf und Antiquitäten, Schmuck Ankauf und Modeschmuck, Kameras, Porzellan, Möbel, Sammlungen und ausgewählte Altwaren. Entrümpelung mit Antik Ankauf und Entrümpelung und Altwaren Ankauf klären wir konkret in der Besichtigung.",
+      },
+      {
+        question: "Muss ich einen separaten Antikhändler beauftragen?",
+        answer:
+          "Nein. Entrümpelung und Altwaren Ankauf aus einer Hand sparen Zeit — besonders für Erben, die Erbschaftshaus entrümpeln und gleichzeitig Wertsachen verwerten möchten.",
+      },
+      {
+        question: "Wie wird der Preis bei Entrümpelung mit Ankauf berechnet?",
+        answer:
+          "Festpreis für die komplette Räumung minus realistischer Ankaufswert der vereinbarten Stücke — schriftlich im Angebot, bevor wir starten. Entrümpelung mit Ankauf bleibt so planbar.",
+      },
+      {
+        question: "Bieten Sie auch nur Schmuck Ankauf ohne volle Entrümpelung?",
+        answer:
+          "Schwerpunkt ist Entrümpelung mit Ankauf im Gesamtpaket. Kleinere Bestände oder reiner Schmuck Ankauf besprechen wir in der Besichtigung — Entrümpelung mit Schmuck Ankauf ist dann oft Teil des Gesamtauftrags.",
+      },
+      {
+        question: "Unterscheidet sich Ankauf von Entrümpelung mit Wertausgleich?",
+        answer:
+          "Beim Ankauf kaufen wir definierte Stücke direkt an und rechnen den Betrag ab. Entrümpelung mit Wertausgleich rechnet verwertbare Massenware pauschal gegen. Beides kombinierbar — wir empfehlen in der Besichtigung die passende Variante.",
       },
     ],
   },

@@ -23,7 +23,6 @@ export type ContactPayload = {
   message?: string;
   /** Eine der fest definierten Leistungs-IDs (Hausentrümpelung, …) */
   serviceType?: string;
-  privacy?: boolean;
   website?: string;
   /** reCAPTCHA v3 token (silent) */
   recaptchaToken?: string;
@@ -67,7 +66,6 @@ export async function submitContactRequest(
   const phoneRaw = typeof body.phone === "string" ? body.phone.trim() : "";
   const phone = compactAtPhoneFromPayload(phoneRaw);
   const message = typeof body.message === "string" ? body.message.trim() : "";
-  const privacy = body.privacy === true;
 
   if (!name) {
     return { ok: false, status: 400, error: "Bitte geben Sie Ihren Namen ein." };
@@ -84,9 +82,6 @@ export async function submitContactRequest(
   }
   if (!message) {
     return { ok: false, status: 400, error: "Bitte beschreiben Sie kurz Ihr Anliegen." };
-  }
-  if (!privacy) {
-    return { ok: false, status: 400, error: "Bitte bestätigen Sie den Hinweis zum Datenschutz." };
   }
 
   const serviceTypeRaw = typeof body.serviceType === "string" ? body.serviceType.trim() : "";

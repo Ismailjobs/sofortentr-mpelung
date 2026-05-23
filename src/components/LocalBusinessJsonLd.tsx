@@ -1,6 +1,13 @@
 import { getSiteOrigin } from "@/config/site-url";
 import { SITE_BRAND } from "@/config/site-brand";
-import { CONTACT_BLOCK, CONTACT_LEGAL_NAME, OPENING_HOURS_SCHEMA_SPEC, OPENING_HOURS_TEXT_LINE, PHONE_DISPLAY } from "@/data/site-content";
+import {
+  CONTACT_BLOCK,
+  CONTACT_LEGAL_NAME,
+  OPENING_HOURS_SCHEMA_SPEC,
+  OPENING_HOURS_TEXT_LINE,
+  PHONE_DISPLAY,
+  SERVICE_IMAGE_DIR,
+} from "@/data/site-content";
 import { getDistrictBySlug, type ViennaDistrict } from "@/data/vienna-districts";
 
 const SERVICE_ENTRIES = [
@@ -67,6 +74,55 @@ const SERVICE_ENTRIES = [
     description:
       "[Beschreibung ergänzen] Gartenhäuser, Außenbereiche und Gerätezonen entrümpeln — Wien und Umgebung, Festpreis nach Aufmaß.",
   },
+  {
+    slug: "verlassenschaft",
+    name: "Verlassenschaft entrümpeln",
+    image: "verlassenschaft.webp",
+    description:
+      "Verlassenschaft entrümpeln und Verlassenschaftsentrümpelung in Wien — diskret, termintreu, Festpreis nach Besichtigung.",
+  },
+  {
+    slug: "nachlass",
+    name: "Nachlass entrümpeln",
+    image: "nachlass.webp",
+    description:
+      "Nachlass entrümpeln und Nachlassentrümpelung für Erben und Verwaltungen in Wien und Umgebung.",
+  },
+  {
+    slug: "haushaltsaufloesung",
+    name: "Haushaltsauflösung",
+    image: "haushaltsaufloesung.webp",
+    description:
+      "Haushaltsauflösung und Entrümpelung in Wien — komplett, besenrein, verbindlicher Festpreis.",
+  },
+  {
+    slug: "wohnungsaufloesung",
+    name: "Wohnungsauflösung",
+    image: "wohnungsaufloesung.webp",
+    description:
+      "Wohnungsauflösung und Entrümpelung in Wien — termingerecht und transparent kalkuliert.",
+  },
+  {
+    slug: "erbschaftshaus",
+    name: "Erbschaftshaus entrümpeln",
+    image: "erbschaftshaus.webp",
+    description:
+      "Erbschaftshaus entrümpeln, geerbtes Haus entrümpeln — auch Wohnung nach Todesfall, Wien und Umgebung.",
+  },
+  {
+    slug: "wertausgleich",
+    name: "Entrümpelung mit Wertausgleich",
+    image: "wertausgleich.webp",
+    description:
+      "Entrümpelung mit Wertausgleich in Wien — verwertbare Gegenstände werden fair angerechnet.",
+  },
+  {
+    slug: "ankauf",
+    name: "Entrümpelung mit Ankauf",
+    image: "ankauf.webp",
+    description:
+      "Entrümpelung mit Ankauf von Antiquitäten, Schmuck, Kameras und Altwaren in Wien.",
+  },
 ] as const;
 
 function telephoneE164(): string {
@@ -131,7 +187,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
       name: s.name,
       description: serviceDescriptionForSchema(s.description),
       url: `${origin}/leistungen/${s.slug}`,
-      image: `${origin}/${s.image}`,
+      image: `${origin}${SERVICE_IMAGE_DIR}/${s.image}`,
       serviceType: "Entrümpelung & Haushaltsauflösung",
       provider: { "@id": businessId },
       areaServed,

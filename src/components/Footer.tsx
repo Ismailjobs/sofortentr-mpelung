@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { HomeHashLink } from "@/components/HomeHashLink";
 import {
   CONTACT_BLOCK,
   FOOTER_LEISTUNGEN,
@@ -13,7 +14,7 @@ import {
 
 function LogoMark() {
   return (
-    <Link href="/#start" className="flex w-fit max-w-full justify-start">
+    <HomeHashLink href="/#start" className="flex w-fit max-w-full justify-start">
       <Image
         src="/sofort-logo.webp"
         alt="SofortEntrümpelung Logo"
@@ -22,7 +23,7 @@ function LogoMark() {
         sizes="(max-width: 640px) min(100vw - 2rem, 320px), (max-width: 1024px) 340px, 390px"
         className="h-[3.35rem] w-auto max-w-full object-contain object-left sm:h-[3.6rem] md:h-[3.8rem] lg:h-[4.05rem] xl:h-[4.25rem]"
       />
-    </Link>
+    </HomeHashLink>
   );
 }
 
@@ -65,12 +66,12 @@ export default function Footer() {
                 <ul className="min-w-0 space-y-3">
                   {NAV_LINKS.slice(0, 3).map((l) => (
                     <li key={l.href}>
-                      <Link
+                      <HomeHashLink
                         href={l.href}
                         className="block text-sm leading-snug text-white/70 transition hover:text-white"
                       >
                         {l.label}
-                      </Link>
+                      </HomeHashLink>
                     </li>
                   ))}
                 </ul>
@@ -85,9 +86,15 @@ export default function Footer() {
             <ul className="space-y-3">
               {FOOTER_SERVICE.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-sm text-white/70 transition hover:text-white">
-                    {l.label}
-                  </Link>
+                  {l.href === "/#faq" ? (
+                    <Link href="/#faq" className="text-sm text-white/70 transition hover:text-white">
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <HomeHashLink href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                      {l.label}
+                    </HomeHashLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -137,9 +144,9 @@ export default function Footer() {
             <Link href={IMPRESSUM_PATH} className="hover:text-brand-orange">
               Impressum
             </Link>
-            <Link href="/#kontakt" className="hover:text-brand-orange">
+            <HomeHashLink href="/#kontakt" className="hover:text-brand-orange">
               AGB
-            </Link>
+            </HomeHashLink>
           </div>
         </div>
       </div>
