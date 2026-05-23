@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_BRAND, sitePageTitle } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import {
   CONTACT_BLOCK,
   CONTACT_LEGAL_NAME,
@@ -177,9 +177,9 @@ export default function ImpressumPage() {
           </article>
         </div>
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }

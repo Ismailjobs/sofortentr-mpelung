@@ -203,7 +203,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
         name: SITE_BRAND,
         legalName: CONTACT_LEGAL_NAME,
         description:
-          "Entrümpelung und Haushaltsauflösung in Wien und Umgebung — Festpreis nach Besichtigung, fachgerechte Entsorgung, schnelle Termine.",
+          "Entrümpelung und Haushaltsauflösung in Wien — Festpreis nach Besichtigung. Was kostet eine Entrümpelung? Wohnungsauflösung, Messie Wohnung reinigen & Entrümpelung nach Todesfall.",
         url: `${origin}/`,
         image: [logoUrl],
         logo: {

@@ -1,23 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 18 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
-const stagger: Variants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.06 },
-  },
-};
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -25,30 +8,50 @@ type Props = {
   staggerChildren?: boolean;
 };
 
-export default function ServicePageReveal({ children, className, staggerChildren = false }: Props) {
+export default function ServicePageReveal({ children, className = "", staggerChildren = false }: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -48px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.12, margin: "0px 0px -48px 0px" }}
-      variants={staggerChildren ? stagger : fadeUp}
+    <div
+      ref={ref}
+      className={`reveal-on-scroll ${staggerChildren ? "reveal-on-scroll--stagger" : ""} ${
+        visible ? "reveal-on-scroll--in" : ""
+      } ${className}`.trim()}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function ServicePageRevealItem({
   children,
-  className,
+  className = "",
 }: {
   children: ReactNode;
   className?: string;
 }) {
-  return (
-    <motion.div className={className} variants={fadeUp}>
-      {children}
-    </motion.div>
-  );
+  return <div className={`reveal-on-scroll-item ${className}`.trim()}>{children}</div>;
 }

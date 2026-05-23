@@ -12,3 +12,4 @@ build
 *.tsbuildinfo
 .env
 .env*.local
+public/_optimized/

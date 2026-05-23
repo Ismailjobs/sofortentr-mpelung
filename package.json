@@ -2,18 +2,25 @@
   "name": "sofortentrumpelung",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 109",
+    "safari >= 16.4"
+  ],
   "scripts": {
     "dev": "next dev",
     "dev:all": "concurrently -n web,api -c cyan,magenta \"npm run dev\" \"npm run api\"",
     "dev:ngrok": "next dev --hostname 0.0.0.0",
     "api": "npm run dev --prefix server",
     "build": "next build",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:images:apply": "node scripts/optimize-images.mjs --apply",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "framer-motion": "^12.39.0",
     "lucide-react": "^0.548.0",
     "next": "16.2.4",
     "react": "19.2.4",
@@ -27,6 +34,7 @@
     "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

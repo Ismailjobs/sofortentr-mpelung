@@ -297,7 +297,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   "messie-entruempelung": {
     introParagraphs: [
-      "Eine Messie-Wohnung entrümpeln ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und einen respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
+      "Eine Messie-Wohnung entrümpeln — oder gezielt Messie Wohnung reinigen — ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und einen respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
       "Als Team für Messie Entrümpelung planen wir vor Ort: Welche Räume zuerst, welche Etappen sinnvoll sind und wie die Messie-Wohnung Räumung termingerecht abgeschlossen werden kann — ohne zusätzlichen Stress.",
       "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Messie Entrümpelung inklusive Abtransport, fachgerechter Entsorgung und besenreiner Übergabe — transparent und ohne Überraschungen.",
     ],
@@ -310,6 +310,11 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
       "Festpreis nach Besichtigung — kein offenes Stundenmodell",
     ],
     faq: [
+      {
+        question: "Messie Wohnung reinigen",
+        answer:
+          "Messie Wohnung reinigen bedeutet bei uns eine strukturierte Messie-Entrümpelung: Sortierung, Verladung, Abtransport und fachgerechte Entsorgung — diskret, in Etappen wenn sinnvoll und mit Festpreis nach Besichtigung. Die Messie-Wohnung Räumung planen wir mit Angehörigen, Betreuung oder Verwaltung abgestimmt.",
+      },
       {
         question: "Was umfasst die Messie Entrümpelung bei Ihnen?",
         answer:
@@ -399,6 +404,11 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
     ],
     faq: [
       {
+        question: "Entrümpelung nach Todesfall",
+        answer:
+          "Entrümpelung nach Todesfall bei Verlassenschaft bedeutet: hinterlassene Wohnung oder Objekt termingerecht leeren, fachgerecht entsorgen und besenrein übergeben. Verlassenschaft entrümpeln planen wir mit Erben oder Verwaltung — Festpreis nach kostenloser Besichtigung.",
+      },
+      {
         question: "Was bedeutet Verlassenschaft entrümpeln konkret?",
         answer:
           "Die Verlassenschaftsentrümpelung umfasst die Leerung des Hausrats im vereinbarten Umfang — Möbel, Kartons, Geräte, Textilien und Sperrmüll. Verlassenschaft entrümpeln heißt bei uns: vollständig, termintreu und zum Festpreis nach Besichtigung.",
@@ -433,7 +443,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   nachlass: {
     introParagraphs: [
-      "Nachlass entrümpeln verlangt Übersicht, Diskretion und einen Partner, der Termine und Erwartungen der Beteiligten ernst nimmt — ob als Erbe, Testamentsvollstrecker oder Verwaltung in Wien.",
+      "Entrümpelung nach Todesfall verlangt Diskretion und einen Partner, der Termine und Erwartungen der Beteiligten ernst nimmt — ob als Erbe, Testamentsvollstrecker oder Verwaltung in Wien.",
       "Wir begleiten die Nachlassentrümpelung von der Besichtigung bis zur besenreinen Übergabe: Sortierung, Abtransport, fachgerechte Entsorgung und klare Kommunikation mit allen Beteiligten.",
       "Ob komplette Wohnung, Haus oder einzelne Räume: Nachlass entrümpeln erhalten Sie zum verbindlichen Festpreis — transparent geplant, ohne versteckte Zusatzposten.",
     ],
@@ -446,6 +456,11 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
       "Festpreis nach kostenloser Besichtigung vor Ort",
     ],
     faq: [
+      {
+        question: "Entrümpelung nach Todesfall",
+        answer:
+          "Entrümpelung nach Todesfall umfasst die diskrete Leerung der hinterlassenen Wohnung oder des Objekts — inklusive Sortierung persönlicher Dinge, Abtransport und besenreiner Übergabe. Wir koordinieren mit Erben, Verwaltung oder Notar und nennen nach Besichtigung einen verbindlichen Festpreis.",
+      },
       {
         question: "Wer beauftragt die Nachlassentrümpelung?",
         answer:
@@ -529,8 +544,8 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   wohnungsaufloesung: {
     introParagraphs: [
+      "Wie läuft eine Wohnungsauflösung ab? Zuerst klären wir Umfang und Termin — dann räumen wir effizient, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
       "Eine Wohnungsauflösung und Entrümpelung ist in Wien meist streng terminiert — Mietende, Käufertermin, Verkauf oder Erbschaft lassen wenig Spielraum.",
-      "Wir räumen Wohnungen effizient, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
       "Nach Objektbesichtigung erhalten Sie einen verbindlichen Festpreis für die Wohnungsauflösung — Wohnungsauflösung und Entrümpelung transparent, ohne versteckte Zusatzkosten.",
     ],
     includedBullets: [
@@ -542,6 +557,11 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
       "Koordination mit Erbengemeinschaft, Verwaltung oder Makler",
     ],
     faq: [
+      {
+        question: "Wie läuft eine Wohnungsauflösung ab?",
+        answer:
+          "Nach Ihrer Anfrage besichtigen wir die Wohnung kostenlos und erstellen ein Festpreis-Angebot. Am Termin räumen wir im vereinbarten Umfang, verladen, entsorgen fachgerecht und übergeben besenrein — oft termingerecht zum Mietende, Verkauf oder Erbfall. Wohnungsauflösung und Entrümpelung aus einer Hand.",
+      },
       {
         question: "Was beinhaltet eine Wohnungsauflösung?",
         answer:
@@ -590,6 +610,11 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
       "Festpreis nach Besichtigung — Verwertung optional über Wertausgleich oder Ankauf",
     ],
     faq: [
+      {
+        question: "Entrümpelung nach Todesfall",
+        answer:
+          "Bei Entrümpelung nach Todesfall leeren wir geerbtes Haus oder Wohnung im vereinbarten Umfang — diskret, termintreu und mit Festpreis nach Besichtigung. Haus entrümpeln nach Erbschaft koordinieren wir mit allen Erben; persönliche Unterlagen und Wertsachen werden separiert übergeben.",
+      },
       {
         question: "Was umfasst Erbschaftshaus entrümpeln?",
         answer:

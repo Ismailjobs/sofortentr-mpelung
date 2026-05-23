@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { sitePageTitle } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import DatenschutzBody from "./DatenschutzBody";
 
 export const metadata: Metadata = {
@@ -39,9 +39,9 @@ export default function DatenschutzPage() {
           </div>
         </div>
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }

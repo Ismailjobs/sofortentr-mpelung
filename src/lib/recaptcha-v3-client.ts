@@ -16,7 +16,6 @@ async function sleep(ms: number) {
   await new Promise((r) => setTimeout(r, ms));
 }
 
-/** Wartet auf next/script-Laden von api.js — kein appendChild/remove (sonst Konflikt mit React DOM). */
 async function waitForGrecaptcha(timeoutMs = 15_000): Promise<void> {
   const t0 = Date.now();
   while (Date.now() - t0 < timeoutMs) {
@@ -26,16 +25,53 @@ async function waitForGrecaptcha(timeoutMs = 15_000): Promise<void> {
   throw new Error("recaptcha-load-timeout");
 }
 
-/**
- * reCAPTCHA v3 — unsichtbar. Script wird per next/script eingebunden, hier nur Token holen.
- */
+let scriptLoadPromise: Promise<void> | null = null;
+
+/** reCAPTCHA v3 — erst beim Absenden laden (TBT + bfcache). */
+export function loadRecaptchaV3Script(): Promise<void> {
+  if (!isRecaptchaSiteKeyConfigured()) {
+    return Promise.reject(new Error("recaptcha-site-key-not-set"));
+  }
+  if (typeof window === "undefined") {
+    return Promise.reject(new Error("recaptcha-ssr"));
+  }
+  if (window.grecaptcha?.ready) return Promise.resolve();
+  if (scriptLoadPromise) return scriptLoadPromise;
+
+  const siteKey = RECAPTCHA_V3_SITE_KEY.trim();
+  const src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(siteKey)}`;
+
+  scriptLoadPromise = new Promise((resolve, reject) => {
+    const existing = document.querySelector(`script[src="${src}"]`);
+    if (existing) {
+      waitForGrecaptcha().then(resolve).catch(reject);
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => {
+      waitForGrecaptcha().then(resolve).catch(reject);
+    };
+    script.onerror = () => {
+      scriptLoadPromise = null;
+      reject(new Error("recaptcha-script-error"));
+    };
+    document.head.appendChild(script);
+  });
+
+  return scriptLoadPromise;
+}
+
 export async function getContactFormRecaptchaToken(): Promise<string> {
   if (!isRecaptchaSiteKeyConfigured()) {
     throw new Error("recaptcha-site-key-not-set");
   }
   const siteKey = RECAPTCHA_V3_SITE_KEY.trim();
 
-  await waitForGrecaptcha();
+  await loadRecaptchaV3Script();
 
   return new Promise((resolve, reject) => {
     window.grecaptcha!.ready(async () => {

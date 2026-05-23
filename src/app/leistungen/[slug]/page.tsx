@@ -3,16 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { HomeHashLink } from "@/components/HomeHashLink";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
+import FaqPageJsonLd from "@/components/FaqPageJsonLd";
 import ServiceIntroText from "@/components/ServiceIntroText";
 import ServicePageReveal from "@/components/ServicePageReveal";
 import SimilarServicesSection from "@/components/SimilarServicesSection";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 import { getRelatedServicesForSlug } from "@/data/related-services";
 import { getServiceDetailPageData } from "@/data/service-page-details";
@@ -57,6 +58,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <FaqPageJsonLd items={service.faq} />
       <Header />
       <main className="bg-brand-muted">
         <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">
@@ -65,7 +67,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             alt={service.imageAlt}
             fill
             priority
+            fetchPriority="high"
             sizes="100vw"
+            quality={60}
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-brand-dark/78" />
@@ -155,9 +159,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
         <ContactPanel />
       </main>
-      <ContactFormSection defaultServiceTypeId={slug} />
+      <LazyContactFormSection defaultServiceTypeId={slug} />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }

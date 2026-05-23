@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
-import ContactFormSection from "@/components/ContactFormSection";
+import { preload } from "react-dom";
 import { sitePageTitle } from "@/config/site-brand";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
+import FaqPageJsonLd from "@/components/FaqPageJsonLd";
 import AboutUsSection from "@/components/AboutUsSection";
 import Hero from "@/components/Hero";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
+import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialSlider from "@/components/TestimonialSlider";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
-import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
+import { GENERAL_FAQ, HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
+
+preload("/hero.webp", { as: "image", fetchPriority: "high" });
 
 export const metadata: Metadata = {
-  title: sitePageTitle("Startseite · Entrümpelung Wien"),
+  title: sitePageTitle("Professionelle Entrümpelung Wien zum Fixpreis"),
+  description:
+    "Was kostet eine Entrümpelung? Wohnungsentrümpelung Wien innerhalb 24h. Wie läuft eine Wohnungsauflösung ab? Messie Wohnung reinigen & Entrümpelung nach Todesfall — Festpreis nach Besichtigung.",
 };
 
 /** Landing-Inhalte: werden hier gebündelt und per `map`/Props an Sektionen übergeben (@/data/site-content). */
@@ -30,6 +36,7 @@ export default function Home() {
   return (
     <>
       <LocalBusinessJsonLd />
+      <FaqPageJsonLd items={GENERAL_FAQ} />
       <Header />
       <main>
         <Hero />
@@ -38,10 +45,10 @@ export default function Home() {
         <AboutUsSection />
         <WhyUs />
         <ProcedureSections />
-        <TestimonialSlider testimonials={PAGE.testimonials} />
+        <LazyTestimonialSlider testimonials={PAGE.testimonials} />
         <ContactPanel />
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
       <WhatsAppFAB />
     </>

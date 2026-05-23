@@ -27,8 +27,7 @@ export default function Hero({ district = null }: HeroProps) {
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
                 key={i}
-                className="star-shimmer h-3.5 w-3.5 fill-current stroke-current"
-                style={{ animationDelay: `${i * 170}ms` }}
+                className="h-3.5 w-3.5 fill-current stroke-current"
               />
             ))}
           </div>
@@ -77,17 +76,18 @@ export default function Hero({ district = null }: HeroProps) {
                 </span>
               </>
             ) : (
-              <>
-                Entrümpelung in{" "}
-                <span className="text-brand-orange">Wien</span>
-              </>
+              <>Professionelle Entrümpelung Wien zum Fixpreis</>
             )}
           </h1>
-          <p className={isHome ? "text-lg font-medium text-white sm:text-xl" : "text-lg font-medium text-white"}>
-            {district
-              ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})`
-              : "Schnell, zuverlässig — und fair im Preis."}
-          </p>
+          {isHome ? (
+            <h2 className="text-balance text-lg font-semibold leading-snug text-brand-orange sm:text-xl lg:text-2xl">
+              Wohnungsentrümpelung Wien innerhalb 24h
+            </h2>
+          ) : (
+            <p className="text-lg font-medium text-white">
+              {`Festpreis nach Besichtigung · ${district!.name} (${district!.zip})`}
+            </p>
+          )}
           <p
             className={
               isHome

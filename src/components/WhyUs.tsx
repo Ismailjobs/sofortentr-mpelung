@@ -1,8 +1,8 @@
 import { Check } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { TRUCK_IMAGE_SIZES } from "@/lib/image-sizes";
 import { WHY_US_CTA, WHY_US_EYEBROW, WHY_US_FEATURES, WHY_US_HEADLINE } from "@/data/site-content";
-
-const TRUCK_IMG = "/truck.webp";
 
 export default function WhyUs() {
   const CalcIcon = WHY_US_CTA.calculatorIcon;
@@ -34,10 +34,14 @@ export default function WhyUs() {
           </div>
 
           <div className="flex w-full self-start justify-center px-[3px] py-1 sm:px-1 lg:px-0 lg:py-0">
-            {/* eslint-disable-next-line @next/next/no-img-element -- freigestelltes PNG aus /public */}
-            <img
-              src={TRUCK_IMG}
+            <Image
+              src="/truck.webp"
               alt="Transporter"
+              width={880}
+              height={546}
+              sizes={TRUCK_IMAGE_SIZES}
+              quality={68}
+              loading="lazy"
               className="pointer-events-none mx-auto block h-auto w-full max-w-full max-h-[min(53vh,470px)] object-contain select-none drop-shadow-[0_18px_36px_rgba(0,0,0,.5)] sm:max-h-[min(56vh,530px)] sm:max-w-[min(94vw,720px)] lg:max-h-[min(66vh,640px)] lg:max-w-[min(100%,880px)]"
               draggable={false}
             />

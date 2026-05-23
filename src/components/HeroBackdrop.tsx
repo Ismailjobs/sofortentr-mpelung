@@ -19,8 +19,10 @@ export default function HeroBackdrop({ priority = false, className = "" }: Props
         src={HERO_BG_SRC}
         alt="Professionelle Entrümpelung in Wien — Hintergrundbild"
         fill
-        sizes="100vw"
+        sizes="(max-width: 640px) 640px, 100vw"
+        quality={50}
         priority={priority}
+        fetchPriority={priority ? "high" : "auto"}
         className={HERO_OBJECT_POSITION}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/92 via-brand-dark/70 to-brand-dark/30" />

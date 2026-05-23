@@ -170,7 +170,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "messie-entruempelung",
     title: "Messie-Entrümpelung",
     description:
-      "Messie-Wohnung entrümpeln in Wien — diskrete Messie Entrümpelung und Messie-Wohnung Räumung mit Festpreis nach Besichtigung.",
+      "Messie Wohnung reinigen und Messie-Wohnung entrümpeln in Wien — diskrete Messie Entrümpelung mit Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE["messie-entruempelung"],
     imageAlt: "Diskrete Messie-Entrümpelung",
     icon: HeartHandshake,
@@ -196,7 +196,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "nachlass",
     title: "Nachlass entrümpeln",
     description:
-      "Nachlass entrümpeln und Nachlassentrümpelung in Wien — für Erben und Verwaltungen, Festpreis nach Besichtigung.",
+      "Nachlass entrümpeln und Entrümpelung nach Todesfall in Wien — für Erben und Verwaltungen, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.nachlass,
     imageAlt: "Nachlass entrümpeln — professionelle Unterstützung",
     icon: Scale,
@@ -214,7 +214,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "wohnungsaufloesung",
     title: "Wohnungsauflösung",
     description:
-      "Wohnungsauflösung und Entrümpelung — schnell, zuverlässig und für Wien & Umgebung.",
+      "Wohnungsauflösung Wien — wie läuft eine Wohnungsauflösung ab? Termingerecht, besenrein und zum Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.wohnungsaufloesung,
     imageAlt: "Wohnungsauflösung in Wien",
     icon: Building2,
@@ -223,7 +223,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "erbschaftshaus",
     title: "Erbschaftshaus entrümpeln",
     description:
-      "Erbschaftshaus entrümpeln, geerbtes Haus und Wohnung nach Todesfall — Haus entrümpeln nach Erbschaft in Wien.",
+      "Erbschaftshaus entrümpeln und Entrümpelung nach Todesfall — geerbtes Haus und Wohnung in Wien, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.erbschaftshaus,
     imageAlt: "Erbschaftshaus entrümpeln in Wien",
     icon: Landmark,
@@ -361,9 +361,24 @@ export type GeneralFaqItem = {
 
 export const GENERAL_FAQ: GeneralFaqItem[] = [
   {
-    question: "Was kostet eine Entrümpelung in Wien?",
+    question: "Was kostet eine Entrümpelung?",
     answer:
-      "Die Kosten hängen von Objektgröße, Menge, Zugängen und Entsorgungsmix ab. Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis — auf unserer Preisseite finden Sie transparente Richtwerte inklusive möglicher Wertanrechnung.",
+      "Die Kosten hängen von Objektgröße, Menge, Zugängen und Entsorgungsmix ab. Nach kostenloser Besichtigung in Wien und Umgebung erhalten Sie einen verbindlichen Festpreis — auf unserer Preisseite finden Sie transparente Richtwerte inklusive möglicher Wertanrechnung.",
+  },
+  {
+    question: "Wie läuft eine Wohnungsauflösung ab?",
+    answer:
+      "Zuerst melden Sie sich mit kurzer Objektbeschreibung. Wir besichtigen kostenlos vor Ort, nennen einen Festpreis und vereinbaren den Termin. Am Einsatztag räumen wir die Wohnung im vereinbarten Umfang, transportieren ab, entsorgen fachgerecht und übergeben besenrein — Details zur Wohnungsauflösung finden Sie auf unserer Leistungsseite.",
+  },
+  {
+    question: "Messie Wohnung reinigen",
+    answer:
+      "Eine Messie-Wohnung reinigen heißt bei uns: strukturierte Messie-Entrümpelung mit Sortierung, Abtransport und fachgerechter Entsorgung — diskret, in Etappen wenn nötig und zum Festpreis nach Besichtigung. Angehörige, Betreuer und Verwaltungen koordinieren wir respektvoll mit.",
+  },
+  {
+    question: "Entrümpelung nach Todesfall",
+    answer:
+      "Nach einem Todesfall übernehmen wir die Entrümpelung diskret und termintreu — für Erben, Verwaltungen und Testamentsvollstrecker in Wien. Umfang, Sortierung persönlicher Dinge und besenreine Übergabe klären wir in der Besichtigung; danach gilt ein verbindlicher Festpreis.",
   },
   {
     question: "Wie läuft die kostenlose Besichtigung ab?",

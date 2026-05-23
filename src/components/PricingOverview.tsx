@@ -86,7 +86,7 @@ export default function PricingOverview() {
     <div className="space-y-8 sm:space-y-10">
       <div className="text-center">
         <h2 className="text-balance text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl lg:text-4xl">
-          Was kostet eine Haushaltsauflösung{" "}
+          Was kostet eine Entrümpelung{" "}
           <span className="text-brand-orange">in Wien?</span>
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 sm:text-base">

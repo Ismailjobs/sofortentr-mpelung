@@ -1,10 +1,8 @@
 "use client";
 
 import { CheckCircle2, ChevronDown, Loader2, Mail, Phone, Send } from "lucide-react";
-import Script from "next/script";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CONTACT_BLOCK, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
-import { RECAPTCHA_V3_SITE_KEY } from "@/config/recaptcha";
 import {
   CONTACT_MAX_MESSAGE_CHARS,
   CONTACT_MAX_NAME_CHARS,
@@ -274,13 +272,6 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
       aria-labelledby="kontakt-formular-heading"
       className="form-section-warm scroll-mt-28 border-t border-brand-orange/10 py-16 sm:py-24"
     >
-      {isRecaptchaSiteKeyConfigured() ? (
-        <Script
-          id="google-recaptcha-v3"
-          src={`https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(RECAPTCHA_V3_SITE_KEY.trim())}`}
-          strategy="afterInteractive"
-        />
-      ) : null}
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <div>

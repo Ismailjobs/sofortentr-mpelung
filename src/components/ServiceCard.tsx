@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { SERVICE_CARD_IMAGE_SIZES } from "@/lib/image-sizes";
 
 export type ServiceCardProps = {
   id: string;
@@ -29,7 +30,8 @@ export default function ServiceCard({
             src={imageSrc}
             alt={imageAlt}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+            sizes={SERVICE_CARD_IMAGE_SIZES}
+            quality={62}
             className="object-cover transition duration-500 group-hover:scale-[1.03]"
           />
           <span className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-24 bg-gradient-to-t from-black/45 to-transparent" />

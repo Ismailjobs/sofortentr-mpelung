@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import type { LucideIcon } from "lucide-react";
 import { ClipboardCheck, FileCheck, Truck } from "lucide-react";
 import Link from "next/link";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import PricingOverview from "@/components/PricingOverview";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 
 export const metadata: Metadata = {
   title: sitePageTitle("Preise & Fixpreis"),
   description:
-    "Transparente Richtpreise für Haushaltsauflösung und Entrümpelung in Wien — mit Wertanrechnung und Festpreis nach Besichtigung.",
+    "Was kostet eine Entrümpelung? Transparente Richtpreise für Haushaltsauflösung und Entrümpelung in Wien — Festpreis nach kostenloser Besichtigung.",
 };
 
 const PRICE_NOTES: {
@@ -91,9 +91,9 @@ export default function PreisePage() {
 
         <ContactPanel />
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }

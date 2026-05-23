@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialSlider from "@/components/TestimonialSlider";
+import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { getSiteOrigin } from "@/config/site-url";
 import { VIENNA_DISTRICTS, getDistrictBySlug } from "@/data/vienna-districts";
 import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
@@ -63,12 +63,12 @@ export default async function ViennaDistrictLandingPage({ params }: PageProps) {
         <ServicesSection services={PAGE.services} showAllLink />
         <WhyUs />
         <ProcedureSections />
-        <TestimonialSlider testimonials={PAGE.testimonials} />
+        <LazyTestimonialSlider testimonials={PAGE.testimonials} />
         <ContactPanel />
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }

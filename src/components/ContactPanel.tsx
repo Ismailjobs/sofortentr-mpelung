@@ -118,7 +118,7 @@ export default function ContactPanel() {
       id="faq"
       eyebrow="FAQ"
       heading="Häufig gestellte Fragen"
-      intro="Alles Wichtige zu Kosten, Ablauf und Leistungsumfang auf einen Blick — für Entrümpelungen in Wien und Umgebung."
+      intro="Antworten zu Kosten, Wohnungsauflösung, Messie-Wohnungen und Entrümpelung nach Todesfall — für Wien und Umgebung."
       items={GENERAL_FAQ}
       headerVariant="rich"
       className="scroll-mt-28 border-t border-neutral-200/80 bg-gradient-to-b from-brand-muted/40 via-white to-white"

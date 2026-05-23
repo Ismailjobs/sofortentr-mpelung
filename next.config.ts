@@ -8,15 +8,23 @@ const extraDevOrigins =
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  experimental: {
+    optimizePackageImports: ["lucide-react"],
+  },
   allowedDevOrigins: [
     "fb26-151-135-17-247.ngrok-free.app",
     "100.126.24.114",
     ...extraDevOrigins,
   ],
   images: {
+    formats: ["image/avif", "image/webp"],
+    qualities: [50, 60, 62, 68, 75],
+    /** Kleinere Zwischengrößen → weniger Über-Download bei Karten/Logo. */
+    deviceSizes: [640, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 420, 480, 512, 640],
     /** Dev: /public-WebP ohne _next/image-Zwischencache (nach Bildtausch sofort sichtbar). */
     unoptimized: process.env.NODE_ENV === "development",
-    minimumCacheTTL: process.env.NODE_ENV === "development" ? 0 : 60,
+    minimumCacheTTL: process.env.NODE_ENV === "development" ? 0 : 31_536_000,
     remotePatterns: [
       {
         protocol: "https",

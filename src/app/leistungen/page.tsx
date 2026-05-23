@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContactFormSection from "@/components/ContactFormSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import { sitePageTitle } from "@/config/site-brand";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { SERVICES } from "@/data/site-content";
 
 const LEISTUNGEN_COVER = SERVICES.find((s) => s.id === "hausentruempelung") ?? SERVICES[0];
@@ -29,6 +29,7 @@ export default function LeistungenPage() {
             fill
             priority
             sizes="100vw"
+            quality={60}
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-brand-dark/78" />
@@ -52,9 +53,9 @@ export default function LeistungenPage() {
         <ServicesSection services={SERVICES} showSectionHeader={false} />
         <ContactPanel />
       </main>
-      <ContactFormSection />
+      <LazyContactFormSection />
       <Footer />
-      <WhatsAppFAB />
+      <LazyWhatsAppFAB />
     </>
   );
 }
