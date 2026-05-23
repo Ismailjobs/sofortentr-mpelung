@@ -8,13 +8,14 @@ import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import FaqPageJsonLd from "@/components/FaqPageJsonLd";
 import AboutUsSection from "@/components/AboutUsSection";
 import Hero from "@/components/Hero";
-import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
-import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
+import LazyContactFormSection, { ContactFormPlaceholder } from "@/components/lazy/LazyContactFormSection";
+import LazyTestimonialSlider, { TestimonialPlaceholder } from "@/components/lazy/LazyTestimonialSlider";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
+import DeferredIdle from "@/components/lazy/DeferredIdle";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
 import { GENERAL_FAQ, HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
 
 preload("/hero.webp", { as: "image", fetchPriority: "high" });
@@ -45,12 +46,18 @@ export default function Home() {
         <AboutUsSection />
         <WhyUs />
         <ProcedureSections />
-        <LazyTestimonialSlider testimonials={PAGE.testimonials} />
+        <DeferredIdle fallback={<TestimonialPlaceholder />}>
+          <LazyTestimonialSlider testimonials={PAGE.testimonials} />
+        </DeferredIdle>
         <ContactPanel />
       </main>
-      <LazyContactFormSection />
+      <DeferredIdle fallback={<ContactFormPlaceholder />}>
+        <LazyContactFormSection />
+      </DeferredIdle>
       <Footer />
-      <WhatsAppFAB />
+      <DeferredIdle>
+        <LazyWhatsAppFAB />
+      </DeferredIdle>
     </>
   );
 }

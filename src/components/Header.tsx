@@ -1,7 +1,8 @@
 import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
-import { HomeHashLink } from "@/components/HomeHashLink";
-import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import Link from "next/link";
+import HeaderNavLinks from "@/components/HeaderNavLinks";
+import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
 const MOBILE_NAV_ID = "mobile-nav-toggle";
@@ -18,8 +19,8 @@ export default function Header() {
 
       <div className="relative z-[120] mx-auto flex min-w-0 max-w-[min(100%,88rem)] items-center justify-between gap-3 bg-brand-dark py-2.5 pl-1 pr-3 pb-3 sm:gap-6 sm:py-2 sm:pb-2.5 sm:pl-3 sm:pr-5 min-[1148px]:grid min-[1148px]:grid-cols-[auto_1fr_auto] min-[1148px]:items-center min-[1148px]:gap-10 min-[1148px]:px-6 min-[1148px]:py-1">
         <div className="min-w-0 flex-1 min-[1148px]:flex-none min-[1148px]:min-w-0">
-          <HomeHashLink
-            href="/#start"
+          <Link
+            href="/"
             className="block h-[clamp(3.75rem,14vw,5.1rem)] w-[clamp(10rem,min(72vw,calc(100dvw_-_7.5rem)),19rem)] max-w-full min-w-0 shrink-0 sm:h-[4.25rem] sm:w-[280px] md:h-[4.8rem] md:w-[320px] min-[1148px]:h-[5.2rem] min-[1148px]:w-[360px]"
           >
             <Image
@@ -32,23 +33,10 @@ export default function Header() {
               priority
               className="h-full w-full object-contain object-left"
             />
-          </HomeHashLink>
+          </Link>
         </div>
 
-        <nav
-          className="hidden min-[1148px]:flex min-[1148px]:flex-wrap min-[1148px]:items-center min-[1148px]:justify-center min-[1148px]:gap-x-10"
-          aria-label="Hauptnavigation"
-        >
-          {NAV_LINKS.map(({ label, href }) => (
-            <HomeHashLink
-              key={href}
-              href={href}
-              className="text-sm font-medium text-white/95 transition-colors hover:text-brand-orange"
-            >
-              {label}
-            </HomeHashLink>
-          ))}
-        </nav>
+        <HeaderNavLinks variant="desktop" />
 
         <div className="relative z-10 flex shrink-0 items-center gap-2 sm:gap-3">
           <a
@@ -84,30 +72,9 @@ export default function Header() {
         className="absolute left-0 right-0 top-full z-[110] min-[1148px]:hidden grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none peer-checked:grid-rows-[1fr] peer-checked:[&_.mobile-nav-inner]:visible peer-checked:[&_.mobile-nav-inner]:pointer-events-auto peer-checked:[&_.mobile-nav-inner]:translate-y-0 peer-checked:[&_.mobile-nav-inner]:opacity-100"
       >
         <div className="min-h-0 overflow-hidden border-t border-white/10 bg-brand-dark shadow-xl">
-          <nav
-            className="mobile-nav-inner invisible pointer-events-none flex flex-col gap-3 px-3 py-4 opacity-0 transition-[opacity,transform,visibility] duration-300 ease-out motion-reduce:transition-none -translate-y-2 sm:px-5"
-            aria-label="Mobile Navigation"
-          >
-            {NAV_LINKS.map(({ label, href }) => (
-              <label key={href} htmlFor={MOBILE_NAV_ID} className="cursor-pointer">
-                <HomeHashLink
-                  href={href}
-                  className="block text-base font-medium text-white/95 transition-colors hover:text-brand-orange"
-                >
-                  {label}
-                </HomeHashLink>
-              </label>
-            ))}
-            <label htmlFor={MOBILE_NAV_ID} className="cursor-pointer">
-              <a
-                href={PHONE_TEL_HREF}
-                className="mt-2 inline-flex items-center gap-2 rounded-btn border border-brand-orange px-4 py-3 text-brand-orange"
-              >
-                <Phone className="h-5 w-5" />
-                <span className="font-semibold">{PHONE_DISPLAY}</span>
-              </a>
-            </label>
-          </nav>
+          <div className="mobile-nav-inner invisible pointer-events-none px-3 py-4 opacity-0 transition-[opacity,transform,visibility] duration-300 ease-out motion-reduce:transition-none -translate-y-2 sm:px-5">
+            <HeaderNavLinks variant="mobile" />
+          </div>
         </div>
       </div>
     </header>

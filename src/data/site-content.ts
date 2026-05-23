@@ -32,7 +32,7 @@ export const DATENSCHUTZ_PATH = "/datenschutz";
 export const IMPRESSUM_PATH = "/impressum";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Startseite", href: "/#start" },
+  { label: "Startseite", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
   { label: "Über uns", href: "/#ueber-uns" },
   { label: "Preise", href: "/preise" },

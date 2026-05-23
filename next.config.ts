@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  turbopack: {
+    resolveAlias: {
+      "../build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module": "./src/lib/modern-polyfill.js",
+    },
+  },
   allowedDevOrigins: [
     "fb26-151-135-17-247.ngrok-free.app",
     "100.126.24.114",

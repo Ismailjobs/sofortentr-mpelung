@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import { HomeHashLink } from "@/components/HomeHashLink";
+import type { ReactNode } from "react";
 import {
   CONTACT_BLOCK,
   FOOTER_LEISTUNGEN,
@@ -13,9 +13,32 @@ import {
 } from "@/data/site-content";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
+function HashOrLink({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: ReactNode;
+}) {
+  if (href.includes("#")) {
+    return (
+      <a href={href} className={className}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  );
+}
+
 function LogoMark() {
   return (
-    <HomeHashLink href="/#start" className="flex w-fit max-w-full justify-start">
+    <Link href="/" className="flex w-fit max-w-full justify-start">
       <Image
         src="/sofort-logo.webp"
         alt="SofortEntrümpelung Logo"
@@ -25,7 +48,7 @@ function LogoMark() {
         quality={75}
         className="h-[3.35rem] w-auto max-w-full object-contain object-left sm:h-[3.6rem] md:h-[3.8rem] lg:h-[4.05rem] xl:h-[4.25rem]"
       />
-    </HomeHashLink>
+    </Link>
   );
 }
 
@@ -68,12 +91,12 @@ export default function Footer() {
                 <ul className="min-w-0 space-y-3">
                   {NAV_LINKS.slice(0, 3).map((l) => (
                     <li key={l.href}>
-                      <HomeHashLink
+                      <HashOrLink
                         href={l.href}
                         className="block text-sm leading-snug text-white/70 transition hover:text-white"
                       >
                         {l.label}
-                      </HomeHashLink>
+                      </HashOrLink>
                     </li>
                   ))}
                 </ul>
@@ -88,9 +111,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {FOOTER_SERVICE.map((l) => (
                 <li key={l.label}>
-                  <HomeHashLink href={l.href} className="text-sm text-white/70 transition hover:text-white">
+                  <HashOrLink href={l.href} className="text-sm text-white/70 transition hover:text-white">
                     {l.label}
-                  </HomeHashLink>
+                  </HashOrLink>
                 </li>
               ))}
             </ul>
@@ -140,9 +163,9 @@ export default function Footer() {
             <Link href={IMPRESSUM_PATH} className="hover:text-brand-orange">
               Impressum
             </Link>
-            <HomeHashLink href="/#kontakt" className="hover:text-brand-orange">
+            <HashOrLink href="/#kontakt" className="hover:text-brand-orange">
               AGB
-            </HomeHashLink>
+            </HashOrLink>
           </div>
         </div>
       </div>
