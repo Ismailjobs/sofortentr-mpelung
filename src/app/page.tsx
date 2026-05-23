@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       <LocalBusinessJsonLd />
-      <FaqPageJsonLd items={GENERAL_FAQ} />
+      <FaqPageJsonLd items={GENERAL_FAQ} pageId="faq" />
       <Header />
       <main>
         <Hero />

@@ -359,7 +359,8 @@ export type GeneralFaqItem = {
   answer: string;
 };
 
-export const GENERAL_FAQ: GeneralFaqItem[] = [
+/** SEO-Schwerpunkte — erscheinen zuerst in der Startseiten-FAQ. */
+export const GENERAL_FAQ_PRIORITY: GeneralFaqItem[] = [
   {
     question: "Was kostet eine Entrümpelung?",
     answer:
@@ -380,6 +381,9 @@ export const GENERAL_FAQ: GeneralFaqItem[] = [
     answer:
       "Nach einem Todesfall übernehmen wir die Entrümpelung diskret und termintreu — für Erben, Verwaltungen und Testamentsvollstrecker in Wien. Umfang, Sortierung persönlicher Dinge und besenreine Übergabe klären wir in der Besichtigung; danach gilt ein verbindlicher Festpreis.",
   },
+];
+
+const GENERAL_FAQ_MORE: GeneralFaqItem[] = [
   {
     question: "Wie läuft die kostenlose Besichtigung ab?",
     answer:
@@ -410,6 +414,11 @@ export const GENERAL_FAQ: GeneralFaqItem[] = [
     answer:
       "Ja — wir entrümpeln in ganz Wien und auf Anfrage in der Umgebung. Enge Stiegenhäuser, Altbauten ohne Aufzug und Kurzparkzonen kennen wir aus der täglichen Praxis.",
   },
+];
+
+export const GENERAL_FAQ: GeneralFaqItem[] = [
+  ...GENERAL_FAQ_PRIORITY,
+  ...GENERAL_FAQ_MORE,
   {
     question: "Übernehmen Sie auch Nachlass, Verlassenschaft oder Messie-Wohnungen?",
     answer:

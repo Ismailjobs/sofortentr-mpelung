@@ -6,6 +6,8 @@ type Props = {
   eyebrow?: string;
   heading?: string;
   intro?: string;
+  /** Kurzliste oberhalb der Accordion-Einträge (Startseiten-FAQ). */
+  priorityQuestions?: string[];
   items: ServiceFaqItem[];
   className?: string;
   /** Verzierter Kopfbereich (Startseiten-FAQ) */
@@ -17,6 +19,7 @@ export default function ServiceFaqSection({
   eyebrow = "Fragen & Antworten",
   heading = "Häufige Fragen",
   intro = "Antworten auf typische Fragen zu Ablauf, Kosten und Organisation — bei Bedarf klären wir alles Weitere persönlich in einem kurzen Gespräch.",
+  priorityQuestions = [],
   items,
   className = "",
   headerVariant = "simple",
@@ -69,7 +72,20 @@ export default function ServiceFaqSection({
             </>
           )}
 
-          <div className={`space-y-3 ${isRichHeader ? "" : "mt-10"}`}>
+          {priorityQuestions.length > 0 ? (
+            <ul className={`flex flex-wrap justify-center gap-2 ${isRichHeader ? "mb-8" : "mb-6 mt-6"}`}>
+              {priorityQuestions.map((question) => (
+                <li
+                  key={question}
+                  className="rounded-full bg-brand-orange/10 px-3 py-1.5 text-xs font-semibold text-brand-dark ring-1 ring-brand-orange/20 sm:text-sm"
+                >
+                  {question}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
+          <div className={`space-y-3 ${isRichHeader || priorityQuestions.length > 0 ? "" : "mt-10"}`}>
             {items.map((item, index) => (
               <details
                 key={`${item.question}-${index}`}

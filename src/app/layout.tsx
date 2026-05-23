@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} min-h-screen bg-white antialiased`}>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){function s(h){if(!h)return;var id=h.replace(/^#/,'');var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}function r(){s(location.hash);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',r);else r();window.addEventListener('hashchange',r);})();`,
+            __html: `(function(){function s(h){if(!h)return;var id=h.replace(/^#/,"");var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth",block:"start"});}function r(){s(location.hash);}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",r);else r();window.addEventListener("hashchange",r);var cb=document.getElementById("mobile-nav-toggle");if(cb){var mq=window.matchMedia("(max-width:1147px)");var y=0;function unlock(){document.body.style.position="";document.body.style.top="";document.body.style.left="";document.body.style.right="";document.body.style.width="";window.scrollTo(0,y);}function lock(){if(!mq.matches)return;y=window.scrollY;document.body.style.position="fixed";document.body.style.top="-"+y+"px";document.body.style.left="0";document.body.style.right="0";document.body.style.width="100%";}cb.addEventListener("change",function(){cb.checked?lock():unlock();});mq.addEventListener("change",function(){if(!mq.matches&&cb.checked){cb.checked=false;unlock();}});}})();`,
           }}
         />
         <CallFAB />

@@ -20,8 +20,15 @@
   }
 }
 
+@media (max-width: 1147px) {
+  html:has(#mobile-nav-toggle:checked) {
+    overscroll-behavior: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   margin: 0;
   max-width: 100%;
   overflow-x: clip;
