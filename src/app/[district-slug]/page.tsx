@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
@@ -54,10 +56,17 @@ export default async function ViennaDistrictLandingPage({ params }: PageProps) {
     notFound();
   }
 
+  const breadcrumbs = [
+    { label: "Startseite", href: "/" },
+    { label: `Entrümpelung Wien ${district.zip} ${district.name}` },
+  ];
+
   return (
     <>
+      <BreadcrumbListJsonLd items={breadcrumbs} id={`breadcrumb-${slug}`} />
       <Header />
       <main>
+        <Breadcrumbs items={breadcrumbs} className="border-b border-black/[0.06]" />
         <Hero district={{ zip: district.zip, name: district.name }} />
         <TrustBar items={PAGE.trust} />
         <ServicesSection services={PAGE.services} showAllLink />

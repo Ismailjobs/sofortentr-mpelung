@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import { HomeHashLink } from "@/components/HomeHashLink";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
 import FaqPageJsonLd from "@/components/FaqPageJsonLd";
+import ServiceJsonLd from "@/components/ServiceJsonLd";
 import ServiceIntroText from "@/components/ServiceIntroText";
 import ServicePageReveal from "@/components/ServicePageReveal";
 import SimilarServicesSection from "@/components/SimilarServicesSection";
@@ -56,9 +57,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const splitBottom = splitMatch?.[0] ?? "";
   const relatedServices = getRelatedServicesForSlug(slug);
 
+  const schemaBreadcrumbs = [
+    { label: "Startseite", href: "/" },
+    { label: "Leistungen", href: "/leistungen" },
+    { label: normalizedTitle },
+  ];
+
   return (
     <>
-      <FaqPageJsonLd items={service.faq} />
+      <ServiceJsonLd service={service} breadcrumbs={schemaBreadcrumbs} />
+      <FaqPageJsonLd items={service.faq} pageId={`leistung-faq-${slug}`} />
       <Header />
       <main className="bg-brand-muted">
         <section className="relative isolate overflow-hidden py-20 text-white sm:py-24">

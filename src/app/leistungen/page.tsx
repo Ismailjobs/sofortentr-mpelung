@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
+import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { sitePageTitle } from "@/config/site-brand";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
+import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { SERVICES } from "@/data/site-content";
 
@@ -18,8 +20,14 @@ export const metadata: Metadata = {
 };
 
 export default function LeistungenPage() {
+  const breadcrumbs = [
+    { label: "Startseite", href: "/" },
+    { label: "Leistungen" },
+  ];
+
   return (
     <>
+      <BreadcrumbListJsonLd items={breadcrumbs} id="breadcrumb-leistungen" />
       <Header />
       <main className="bg-brand-muted">
         <section className="relative isolate min-h-[min(52svh,26rem)] overflow-hidden sm:min-h-[min(56svh,30rem)]">
@@ -51,6 +59,7 @@ export default function LeistungenPage() {
           </div>
         </section>
 
+        <Breadcrumbs items={breadcrumbs} />
         <ServicesSection services={SERVICES} showSectionHeader={false} />
         <ContactPanel />
       </main>

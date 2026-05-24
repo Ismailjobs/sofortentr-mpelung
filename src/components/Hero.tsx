@@ -2,7 +2,7 @@ import { Calendar, Phone, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroBackdrop from "@/components/HeroBackdrop";
-import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import { PHONE_DISPLAY, PHONE_TEL_HREF, GOOGLE_AGGREGATE_RATING } from "@/data/site-content";
 
 export type HeroDistrict = {
   zip: number;
@@ -22,7 +22,7 @@ export default function Hero({ district = null }: HeroProps) {
       <Image src="/google-logo.svg" alt="" aria-hidden width={40} height={40} className="h-10 w-10 shrink-0" />
       <div>
         <div className="flex items-center gap-2">
-          <span className="text-lg font-bold leading-none">5.0</span>
+          <span className="text-lg font-bold leading-none">{GOOGLE_AGGREGATE_RATING.ratingValue}</span>
           <div className="flex items-center gap-0.5 text-[#fbbc04]" aria-hidden>
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
@@ -32,7 +32,7 @@ export default function Hero({ district = null }: HeroProps) {
             ))}
           </div>
         </div>
-        <p className="mt-0.5 text-sm font-semibold text-neutral-600">200+ Kundenbewertungen</p>
+        <p className="mt-0.5 text-sm font-semibold text-neutral-600">{GOOGLE_AGGREGATE_RATING.reviewCountLabel}</p>
       </div>
     </div>
   );

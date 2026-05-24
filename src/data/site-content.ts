@@ -26,6 +26,15 @@ export type NavLink = {
 export const PHONE_DISPLAY = "+43 681 81130962";
 export const PHONE_TEL_HREF = "tel:+4368181130962";
 
+/** Google-Bewertungen — Hero-Badge & LocalBusiness `aggregateRating` (Schema.org). */
+export const GOOGLE_AGGREGATE_RATING = {
+  ratingValue: "5.0",
+  reviewCount: 200,
+  bestRating: "5",
+  worstRating: "1",
+  reviewCountLabel: "200+ Kundenbewertungen",
+} as const;
+
 /** Rechtliche Seiten — z. B. Formular „Hinweis zum Datenschutz“ */
 export const DATENSCHUTZ_PATH = "/datenschutz";
 
@@ -79,6 +88,8 @@ export type ServiceCardData = {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  /** Schema.org `serviceType` — z. B. „Kellerentrümpelung Wien“. */
+  schemaServiceType: string;
   icon: LucideIcon;
 };
 
@@ -115,6 +126,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Komplette Entrümpelung von Einfamilienhäusern und Mehrparteienhäusern.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.hausentruempelung,
     imageAlt: "Hausentrümpelung durch ein professionelles Team",
+    schemaServiceType: "Hausentrümpelung Wien",
     icon: Building2,
   },
   {
@@ -124,6 +136,7 @@ export const SERVICES: ServiceCardData[] = [
     imageSrc: SERVICE_LEISTUNG_IMAGE.wohnungsentruempelung,
     imageAlt:
       "Team bei der Wohnungsentrümpelung — Möbel und Kartons zum Transport",
+    schemaServiceType: "Wohnungsentrümpelung Wien",
     icon: Home,
   },
   {
@@ -132,6 +145,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Keller, Abteile und Nebenräume werden fachgerecht entrümpelt und entsorgt.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.kellerentruempelung,
     imageAlt: "Entrümpelter Kellerraum",
+    schemaServiceType: "Kellerentrümpelung Wien",
     icon: Boxes,
   },
   {
@@ -140,6 +154,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Lagerflächen und Depots frei machen, sortieren und sauber übergeben.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.lagerentruempelung,
     imageAlt: "Entrümpelung einer Lagerfläche",
+    schemaServiceType: "Lagerentrümpelung Wien",
     icon: Truck,
   },
   {
@@ -148,6 +163,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Diskrete Entrümpelung von Büroflächen inklusive geordneter Entsorgung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.bueroentruempelung,
     imageAlt: "Entrümpelung einer Bürofläche",
+    schemaServiceType: "Büroentrümpelung Wien",
     icon: Shield,
   },
   {
@@ -156,6 +172,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Garagen und Stellflächen schnell räumen und wieder nutzbar machen.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.garagenentruempelung,
     imageAlt: "Entrümpelte Garage",
+    schemaServiceType: "Garagenentrümpelung Wien",
     icon: BadgeCheck,
   },
   {
@@ -164,6 +181,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Dachböden sicher, sorgfältig und effizient entrümpeln lassen.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.dachbodenentruempelung,
     imageAlt: "Entrümpelter Dachboden",
+    schemaServiceType: "Dachbodenentrümpelung Wien",
     icon: Clock,
   },
   {
@@ -173,6 +191,7 @@ export const SERVICES: ServiceCardData[] = [
       "Messie Wohnung reinigen und Messie-Wohnung entrümpeln in Wien — diskrete Messie Entrümpelung mit Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE["messie-entruempelung"],
     imageAlt: "Diskrete Messie-Entrümpelung",
+    schemaServiceType: "Messie Wohnung entrümpeln Wien",
     icon: HeartHandshake,
   },
   {
@@ -181,6 +200,7 @@ export const SERVICES: ServiceCardData[] = [
     description: "Entrümpelung von Gartenhäusern, Gerätezonen und Außenbereichen.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.gartenentruempelung,
     imageAlt: "Entrümpelung im Gartenbereich",
+    schemaServiceType: "Gartenentrümpelung Wien",
     icon: Users,
   },
   {
@@ -190,6 +210,7 @@ export const SERVICES: ServiceCardData[] = [
       "Verlassenschaft entrümpeln und Verlassenschaftsentrümpelung in Wien — diskret, termintreu, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.verlassenschaft,
     imageAlt: "Verlassenschaftsentrümpelung in Wien",
+    schemaServiceType: "Verlassenschaft entrümpeln Wien",
     icon: ScrollText,
   },
   {
@@ -199,6 +220,7 @@ export const SERVICES: ServiceCardData[] = [
       "Nachlass entrümpeln und Entrümpelung nach Todesfall in Wien — für Erben und Verwaltungen, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.nachlass,
     imageAlt: "Nachlass entrümpeln — professionelle Unterstützung",
+    schemaServiceType: "Nachlass entrümpeln Wien",
     icon: Scale,
   },
   {
@@ -208,6 +230,7 @@ export const SERVICES: ServiceCardData[] = [
       "Haushaltsauflösung und Entrümpelung in Wien — komplett, besenrein und zum Festpreis.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.haushaltsaufloesung,
     imageAlt: "Haushaltsauflösung durch erfahrenes Team",
+    schemaServiceType: "Haushaltsauflösung Wien",
     icon: Home,
   },
   {
@@ -217,6 +240,7 @@ export const SERVICES: ServiceCardData[] = [
       "Wohnungsauflösung Wien — wie läuft eine Wohnungsauflösung ab? Termingerecht, besenrein und zum Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.wohnungsaufloesung,
     imageAlt: "Wohnungsauflösung in Wien",
+    schemaServiceType: "Wohnungsauflösung Wien",
     icon: Building2,
   },
   {
@@ -226,6 +250,7 @@ export const SERVICES: ServiceCardData[] = [
       "Erbschaftshaus entrümpeln und Entrümpelung nach Todesfall — geerbtes Haus und Wohnung in Wien, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.erbschaftshaus,
     imageAlt: "Erbschaftshaus entrümpeln in Wien",
+    schemaServiceType: "Erbschaftshaus entrümpeln Wien",
     icon: Landmark,
   },
   {
@@ -235,6 +260,7 @@ export const SERVICES: ServiceCardData[] = [
       "Entrümpelung mit Wertausgleich — verwertbare Gegenstände rechnen wir transparent gegen den Preis.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.wertausgleich,
     imageAlt: "Entrümpelung mit Wertausgleich",
+    schemaServiceType: "Entrümpelung mit Wertausgleich Wien",
     icon: HandCoins,
   },
   {
@@ -244,6 +270,7 @@ export const SERVICES: ServiceCardData[] = [
       "Entrümpelung mit Ankauf — Antiquitäten, Schmuck, Kameras, Antik und Altwaren Ankauf in Wien, Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.ankauf,
     imageAlt: "Entrümpelung mit Altwaren- und Antiquitäten-Ankauf",
+    schemaServiceType: "Entrümpelung mit Ankauf Wien",
     icon: Gem,
   },
 ];

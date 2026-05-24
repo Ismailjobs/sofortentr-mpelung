@@ -6,9 +6,16 @@ import {
   OPENING_HOURS_SCHEMA_SPEC,
   OPENING_HOURS_TEXT_LINE,
   PHONE_DISPLAY,
+  GOOGLE_AGGREGATE_RATING,
+  SERVICES,
   SERVICE_IMAGE_DIR,
 } from "@/data/site-content";
-import { getDistrictBySlug, type ViennaDistrict } from "@/data/vienna-districts";
+import { getDistrictBySlug } from "@/data/vienna-districts";
+import {
+  areaServedForSchema,
+  DEFAULT_SERVICE_CATEGORY,
+  schemaOriginIds,
+} from "@/lib/schema-org";
 
 const SERVICE_ENTRIES = [
   {
@@ -134,26 +141,8 @@ function serviceDescriptionForSchema(raw: string): string {
   return raw.replace(/^\[Beschreibung ergänzen\]\s*/i, "").trim();
 }
 
-function areaServedForSchema(district: ViennaDistrict | undefined, areaWienId: string) {
-  const tail = [
-    { "@id": areaWienId },
-    { "@type": "AdministrativeArea" as const, name: "Niederösterreich" },
-    { "@type": "AdministrativeArea" as const, name: "Burgenland" },
-  ] as const;
-  if (!district) return [...tail];
-  const priorityPlace = {
-    "@type": "Place" as const,
-    name: `${district.name} (PLZ ${district.zip}, Wien)`,
-    containedInPlace: { "@id": areaWienId },
-    address: {
-      "@type": "PostalAddress" as const,
-      postalCode: String(district.zip),
-      addressLocality: "Wien",
-      addressRegion: "Wien",
-      addressCountry: "AT",
-    },
-  };
-  return [priorityPlace, ...tail];
+function catalogServiceType(slug: string): string {
+  return SERVICES.find((s) => s.id === slug)?.schemaServiceType ?? DEFAULT_SERVICE_CATEGORY;
 }
 
 export type LocalBusinessJsonLdProps = {
@@ -169,10 +158,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
   const origin = getSiteOrigin();
   const priorityDistrict = priorityDistrictSlug ? getDistrictBySlug(priorityDistrictSlug) : undefined;
 
-  const businessId = `${origin}/#localbusiness`;
-  const catalogId = `${origin}/#offer-catalog`;
-  const areaWienId = `${origin}/#area-wien`;
-  const websiteId = `${origin}/#website`;
+  const { businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
   const logoUrl = `${origin}/sofort-logo.webp`;
   const logoId = `${origin}/#logo`;
 
@@ -188,7 +174,8 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
       description: serviceDescriptionForSchema(s.description),
       url: `${origin}/leistungen/${s.slug}`,
       image: `${origin}${SERVICE_IMAGE_DIR}/${s.image}`,
-      serviceType: "Entrümpelung & Haushaltsauflösung",
+      serviceType: catalogServiceType(s.slug),
+      category: DEFAULT_SERVICE_CATEGORY,
       provider: { "@id": businessId },
       areaServed,
     },
@@ -242,6 +229,13 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
           opens: row.opens,
           closes: row.closes,
         })),
+        aggregateRating: {
+          "@type": "AggregateRating" as const,
+          ratingValue: GOOGLE_AGGREGATE_RATING.ratingValue,
+          reviewCount: GOOGLE_AGGREGATE_RATING.reviewCount,
+          bestRating: GOOGLE_AGGREGATE_RATING.bestRating,
+          worstRating: GOOGLE_AGGREGATE_RATING.worstRating,
+        },
         hasOfferCatalog: { "@id": catalogId },
       },
       {

@@ -1,10 +1,8 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import type { SchemaBreadcrumbItem } from "@/lib/schema-org";
 
-export type BreadcrumbItem = {
-  label: string;
-  href?: string;
-};
+export type BreadcrumbItem = SchemaBreadcrumbItem;
 
 type Props = {
   items: BreadcrumbItem[];

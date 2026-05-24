@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { LucideIcon } from "lucide-react";
 import { ClipboardCheck, FileCheck, Truck } from "lucide-react";
 import Link from "next/link";
+import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
@@ -41,11 +43,18 @@ const PRICE_NOTES: {
 ];
 
 export default function PreisePage() {
+  const breadcrumbs = [
+    { label: "Startseite", href: "/" },
+    { label: "Preise" },
+  ];
+
   return (
     <>
       <LocalBusinessJsonLd />
+      <BreadcrumbListJsonLd items={breadcrumbs} id="breadcrumb-preise" />
       <Header />
       <main className="bg-brand-muted">
+        <Breadcrumbs items={breadcrumbs} />
         <section className="relative isolate min-h-[min(72svh,40rem)] overflow-hidden pt-20 pb-8 text-white sm:pt-24 sm:pb-10">
           <HeroBackdrop />
           <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
