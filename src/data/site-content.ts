@@ -493,26 +493,28 @@ export const CONTACT_BLOCK = {
   addressRegion: "Wien",
   addressCountry: "AT",
   geo: { latitude: 48.1367, longitude: 16.2970 } as const,
-  hoursMoFr: "Mo–Fr: 07:30 – 18:00",
-  hoursSa: "Sa: 09:00 – 14:00 (nach Vereinbarung)",
+  hours: "Mo – So: 06:00 – 22:00",
 } as const;
 
 /** Schema.org `OpeningHoursSpecification` — gleiche Zeiten wie `CONTACT_BLOCK` (JSON-LD). */
 export const OPENING_HOURS_SCHEMA_SPEC = [
   {
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const,
-    opens: "07:30",
-    closes: "18:00",
-  },
-  {
-    dayOfWeek: ["Saturday"] as const,
-    opens: "09:00",
-    closes: "14:00",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ] as const,
+    opens: "06:00",
+    closes: "22:00",
   },
 ] as const;
 
 /** Einzeiler für JSON-LD `openingHours` (Text) und ggf. andere Ausgaben. */
-export const OPENING_HOURS_TEXT_LINE = `${CONTACT_BLOCK.hoursMoFr} · ${CONTACT_BLOCK.hoursSa}`;
+export const OPENING_HOURS_TEXT_LINE = CONTACT_BLOCK.hours;
 
 export const WHY_US_CTA = {
   calculatorIcon: Calculator,

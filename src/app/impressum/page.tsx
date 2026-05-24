@@ -95,11 +95,7 @@ export default function ImpressumPage() {
 
             <section className="space-y-3">
               <h2 className="text-lg font-extrabold uppercase tracking-tight text-brand-dark">Geschäftszeiten</h2>
-              <p>
-                {CONTACT_BLOCK.hoursMoFr}
-                <br />
-                {CONTACT_BLOCK.hoursSa}
-              </p>
+              <p>{CONTACT_BLOCK.hours}</p>
             </section>
 
             <section className="space-y-3">

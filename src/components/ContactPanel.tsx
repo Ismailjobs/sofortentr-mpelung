@@ -1,7 +1,7 @@
 import { Calendar, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
-import { GENERAL_FAQ, GENERAL_FAQ_PRIORITY, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import { GENERAL_FAQ, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
 
 const WHATSAPP_HREF = "https://wa.me/4368181130962";
 
@@ -119,7 +119,6 @@ export default function ContactPanel() {
       eyebrow="FAQ"
       heading="Häufig gestellte Fragen"
       intro="Antworten zu Kosten, Wohnungsauflösung, Messie-Wohnungen und Entrümpelung nach Todesfall — für Wien und Umgebung."
-      priorityQuestions={GENERAL_FAQ_PRIORITY.map((item) => item.question)}
       items={GENERAL_FAQ}
       headerVariant="rich"
       className="scroll-mt-28 border-t border-neutral-200/80 bg-gradient-to-b from-brand-muted/40 via-white to-white"

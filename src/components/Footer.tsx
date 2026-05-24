@@ -142,11 +142,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
-                <span className="leading-relaxed">
-                  {CONTACT_BLOCK.hoursMoFr}
-                  <br />
-                  {CONTACT_BLOCK.hoursSa}
-                </span>
+                <span className="leading-relaxed">{CONTACT_BLOCK.hours}</span>
               </li>
             </ul>
           </div>

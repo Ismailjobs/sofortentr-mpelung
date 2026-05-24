@@ -225,7 +225,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
         openingHours: OPENING_HOURS_TEXT_LINE,
         openingHoursSpecification: OPENING_HOURS_SCHEMA_SPEC.map((row) => ({
           "@type": "OpeningHoursSpecification" as const,
-          dayOfWeek: row.dayOfWeek.length === 1 ? row.dayOfWeek[0] : [...row.dayOfWeek],
+          dayOfWeek: [...row.dayOfWeek],
           opens: row.opens,
           closes: row.closes,
         })),
