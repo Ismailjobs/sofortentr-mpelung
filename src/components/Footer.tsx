@@ -11,6 +11,7 @@ import {
   PHONE_DISPLAY,
   PHONE_TEL_HREF,
 } from "@/data/site-content";
+import FooterSocialLinks from "@/components/FooterSocialLinks";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
 function HashOrLink({
@@ -63,6 +64,7 @@ export default function Footer() {
               Ihr lokaler Partner für professionelle Entrümpelung in Wien und Umgebung —
               schnell, transparent und mit Entsorgung aus einer Hand.
             </p>
+            <FooterSocialLinks />
           </div>
 
           <div className="min-w-0 lg:col-span-2">

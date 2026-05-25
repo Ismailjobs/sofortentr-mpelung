@@ -480,6 +480,42 @@ export const FOOTER_SERVICE: FooterLink[] = [
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
+export type SocialNetwork = "xing" | "linkedin" | "x" | "facebook" | "instagram";
+
+export type SocialLink = {
+  label: string;
+  href: string;
+  network: SocialNetwork;
+};
+
+export const FOOTER_SOCIAL_LINKS: SocialLink[] = [
+  {
+    label: "SofortEntrümpelung auf Xing",
+    href: "https://www.xing.com/pages/sofortentruempelung",
+    network: "xing",
+  },
+  {
+    label: "SofortEntrümpelung auf LinkedIn",
+    href: "https://www.linkedin.com/company/sofortentrumpelung",
+    network: "linkedin",
+  },
+  {
+    label: "SofortEntrümpelung auf X",
+    href: "https://x.com/sofortEntrumpl",
+    network: "x",
+  },
+  {
+    label: "SofortEntrümpelung auf Facebook",
+    href: "https://www.facebook.com/profile.php?id=61590409469212",
+    network: "facebook",
+  },
+  {
+    label: "SofortEntrümpelung auf Instagram",
+    href: "https://www.instagram.com/sofortentrumpelung/",
+    network: "instagram",
+  },
+];
+
 /** Eintrag im Firmenbuch / Rechtsform e.U. — für JSON-LD `legalName` und Impressum-relevante Texte. */
 export const CONTACT_LEGAL_NAME = "Mesut Duman e.U.";
 
@@ -494,6 +530,13 @@ export const CONTACT_BLOCK = {
   addressCountry: "AT",
   geo: { latitude: 48.1367, longitude: 16.2970 } as const,
   hours: "Mo – So: 06:00 – 22:00",
+} as const;
+
+/** Google Maps — Embed & Link (Koordinaten = `CONTACT_BLOCK.geo`). */
+export const CONTACT_MAP = {
+  embedSrc: `https://maps.google.com/maps?q=${CONTACT_BLOCK.geo.latitude},${CONTACT_BLOCK.geo.longitude}&hl=de&z=16&output=embed`,
+  openHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_BLOCK.address)}`,
+  title: `Standort ${CONTACT_BLOCK.address}`,
 } as const;
 
 /** Schema.org `OpeningHoursSpecification` — gleiche Zeiten wie `CONTACT_BLOCK` (JSON-LD). */

@@ -19,6 +19,7 @@ import {
   CONTACT_FORM_ERROR_NETWORK,
   formatContactSubmitError,
 } from "@/lib/contact-form-errors";
+import LazyGoogleMapEmbed from "@/components/LazyGoogleMapEmbed";
 import { getContactFormRecaptchaToken, isRecaptchaSiteKeyConfigured } from "@/lib/recaptcha-v3-client";
 
 type FormState = {
@@ -301,6 +302,7 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 {PHONE_DISPLAY}
               </a>
             </div>
+            <LazyGoogleMapEmbed />
           </div>
 
           <div className="form-card-warm rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8">
