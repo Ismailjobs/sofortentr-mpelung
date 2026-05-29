@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE_BRAND } from "@/config/site-brand";
-import { CONTACT_BLOCK, CONTACT_LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { CONTACT_BLOCK, CONTACT_LEGAL_NAME, PHONE_DISPLAY } from "@/data/site-content";
 
 type Props = {
   siteHost: string;
@@ -48,9 +49,7 @@ export default function DatenschutzBody({ siteHost }: Props) {
           </a>
           <br />
           Telefon:{" "}
-          <a className="font-semibold text-brand-orange underline" href={PHONE_TEL_HREF}>
-            {PHONE_DISPLAY}
-          </a>
+          <PhoneLink className="font-semibold text-brand-orange underline">{PHONE_DISPLAY}</PhoneLink>
         </p>
         <p>
           Verantwortlicher ist jene natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die

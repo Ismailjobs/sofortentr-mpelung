@@ -13,8 +13,8 @@ import {
   CONTACT_LEGAL_NAME,
   DATENSCHUTZ_PATH,
   PHONE_DISPLAY,
-  PHONE_TEL_HREF,
 } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
 
 export const metadata: Metadata = {
   title: sitePageTitle("Impressum"),
@@ -68,9 +68,9 @@ export default function ImpressumPage() {
               </p>
               <p>
                 Telefon:{" "}
-                <a className="font-semibold text-brand-orange underline" href={PHONE_TEL_HREF}>
+                <PhoneLink className="font-semibold text-brand-orange underline">
                   {PHONE_DISPLAY}
-                </a>
+                </PhoneLink>
                 <br />
                 E-Mail:{" "}
                 <a className="font-semibold text-brand-orange underline" href={`mailto:${CONTACT_BLOCK.email}`}>

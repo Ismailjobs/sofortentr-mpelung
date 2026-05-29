@@ -2,7 +2,8 @@ import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderNavLinks from "@/components/HeaderNavLinks";
-import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { PHONE_DISPLAY } from "@/data/site-content";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
 const MOBILE_NAV_ID = "mobile-nav-toggle";
@@ -39,16 +40,13 @@ export default function Header() {
         <HeaderNavLinks variant="desktop" />
 
         <div className="relative z-10 flex shrink-0 items-center gap-2 sm:gap-3">
-          <a
-            href={PHONE_TEL_HREF}
-            className="hidden min-w-[9rem] items-center gap-3 rounded-btn border border-brand-orange/70 bg-transparent px-4 py-2 text-brand-orange shadow-sm transition-colors hover:bg-brand-orange/10 sm:flex"
-          >
+          <PhoneLink className="hidden min-w-[9rem] items-center gap-3 rounded-btn border border-brand-orange/70 bg-transparent px-4 py-2 text-brand-orange shadow-sm transition-colors hover:bg-brand-orange/10 sm:flex">
             <Phone className="h-6 w-6 shrink-0" strokeWidth={2.25} aria-hidden />
             <span className="flex flex-col text-left leading-tight">
               <span className="text-sm font-semibold">{PHONE_DISPLAY}</span>
               <span className="text-[11px] text-brand-orange/80">Jetzt anrufen!</span>
             </span>
-          </a>
+          </PhoneLink>
 
           <label
             htmlFor={MOBILE_NAV_ID}

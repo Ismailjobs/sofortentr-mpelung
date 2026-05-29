@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { Camera, Phone } from "lucide-react";
-import { PHONE_TEL_HREF, WHATSAPP_PHOTO_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { WHATSAPP_PHOTO_HREF } from "@/data/site-content";
 
 function WhatsAppLogo({ className }: { className?: string }) {
   return (
@@ -77,10 +78,9 @@ export default function WhatsAppFAB() {
 
         <div className="relative flex h-full w-[38%] max-w-[11.5rem] shrink-0 flex-col divide-y divide-brand-dark/15 bg-brand-orange sm:max-w-[13rem] md:w-[var(--wa-action-w)] md:max-w-none">
           <NotifyBadge />
-          <a
-            href={PHONE_TEL_HREF}
+          <PhoneLink
             aria-label="Jetzt anrufen"
-            className="grid min-h-0 flex-1 grid-cols-[1.75rem_minmax(0,1fr)] items-start gap-x-2 px-2.5 py-1.5 transition hover:bg-[#ff8f26] sm:grid-cols-[1.875rem_minmax(0,1fr)] sm:gap-x-2.5 sm:px-3 md:px-2.5 md:py-2"
+            className="flex min-h-0 flex-1 items-center gap-2 px-2.5 py-1.5 transition hover:bg-[#ff8f26] sm:gap-2.5 sm:px-3 md:px-2.5 md:py-2"
           >
             <ActionIcon>
               <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2.5} aria-hidden />
@@ -88,7 +88,7 @@ export default function WhatsAppFAB() {
             <span className="text-[0.58rem] font-extrabold uppercase leading-tight text-brand-dark sm:text-[0.65rem] md:text-[0.62rem]">
               Kostenlos anrufen
             </span>
-          </a>
+          </PhoneLink>
           <a
             href={WHATSAPP_PHOTO_HREF}
             aria-label="WhatsApp mit vorausgefüllter Nachricht öffnen"

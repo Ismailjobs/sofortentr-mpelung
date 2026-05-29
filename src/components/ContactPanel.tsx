@@ -1,7 +1,8 @@
 import { Calendar, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
-import { GENERAL_FAQ, PHONE_DISPLAY, PHONE_TEL_HREF, WHATSAPP_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { GENERAL_FAQ, PHONE_DISPLAY, WHATSAPP_HREF } from "@/data/site-content";
 
 const CHANNELS = [
   {
@@ -32,12 +33,9 @@ const CHANNELS = [
     cardClass:
       "bg-gradient-to-b from-[#eef4ff] to-[#e0ebff] ring-blue-600/10 hover:ring-blue-600/25",
     cta: (
-      <a
-        href={PHONE_TEL_HREF}
-        className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-[#2563eb] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1d4ed8] hover:shadow-md"
-      >
+      <PhoneLink className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-[#2563eb] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1d4ed8] hover:shadow-md">
         {PHONE_DISPLAY}
-      </a>
+      </PhoneLink>
     ),
   },
   {

@@ -9,8 +9,8 @@ import {
   IMPRESSUM_PATH,
   NAV_LINKS,
   PHONE_DISPLAY,
-  PHONE_TEL_HREF,
 } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
 import FooterSocialLinks from "@/components/FooterSocialLinks";
 import { SITE_LOGO_SIZES } from "@/lib/image-sizes";
 
@@ -136,9 +136,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/75">
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
-                <a href={PHONE_TEL_HREF} className="hover:text-white">
-                  {PHONE_DISPLAY}
-                </a>
+                <PhoneLink className="hover:text-white">{PHONE_DISPLAY}</PhoneLink>
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" aria-hidden />

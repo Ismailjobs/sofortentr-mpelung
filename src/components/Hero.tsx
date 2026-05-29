@@ -2,7 +2,8 @@ import { Calendar, Phone, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroBackdrop from "@/components/HeroBackdrop";
-import { PHONE_DISPLAY, PHONE_TEL_HREF, GOOGLE_AGGREGATE_RATING } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { PHONE_DISPLAY, GOOGLE_AGGREGATE_RATING } from "@/data/site-content";
 
 export type HeroDistrict = {
   zip: number;
@@ -124,8 +125,7 @@ export default function Hero({ district = null }: HeroProps) {
                 <Calendar className="h-5 w-5" aria-hidden />
                 {isHome ? "Besichtigung vereinbaren" : "Gratis Besichtigung"}
               </Link>
-              <a
-                href={PHONE_TEL_HREF}
+              <PhoneLink
                 className={
                   isHome
                     ? "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
@@ -134,7 +134,7 @@ export default function Hero({ district = null }: HeroProps) {
               >
                 <Phone className="h-5 w-5 text-white" strokeWidth={2.5} aria-hidden />
                 Jetzt anrufen
-              </a>
+              </PhoneLink>
             </div>
             <div className="mt-3 flex w-full justify-center lg:hidden">
               <div className="w-[min(272px,calc(100dvw_-_1.5rem))] max-w-full scale-[0.9] sm:scale-95">

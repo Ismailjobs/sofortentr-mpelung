@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone } from "lucide-react";
 import { resolveHomeHashHref } from "@/lib/nav-href";
-import { NAV_LINKS, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { NAV_LINKS, PHONE_DISPLAY } from "@/data/site-content";
 
 const MOBILE_NAV_ID = "mobile-nav-toggle";
 
@@ -47,13 +48,10 @@ export default function HeaderNavLinks({ variant }: Props) {
         </label>
       ))}
       <label htmlFor={MOBILE_NAV_ID} className="cursor-pointer">
-        <a
-          href={PHONE_TEL_HREF}
-          className="mt-2 inline-flex items-center gap-2 rounded-btn border border-brand-orange px-4 py-3 text-brand-orange"
-        >
+        <PhoneLink className="mt-2 inline-flex items-center gap-2 rounded-btn border border-brand-orange px-4 py-3 text-brand-orange">
           <Phone className="h-5 w-5" />
           <span className="font-semibold">{PHONE_DISPLAY}</span>
-        </a>
+        </PhoneLink>
       </label>
     </nav>
   );

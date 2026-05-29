@@ -2,7 +2,8 @@
 
 import { CheckCircle2, ChevronDown, Loader2, Mail, Phone, Send } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CONTACT_BLOCK, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
+import PhoneLink from "@/components/PhoneLink";
+import { CONTACT_BLOCK, PHONE_DISPLAY } from "@/data/site-content";
 import {
   CONTACT_MAX_MESSAGE_CHARS,
   CONTACT_MAX_NAME_CHARS,
@@ -294,13 +295,10 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 <Mail className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
                 {CONTACT_BLOCK.email}
               </a>
-              <a
-                href={PHONE_TEL_HREF}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange"
-              >
+              <PhoneLink className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange">
                 <Phone className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
                 {PHONE_DISPLAY}
-              </a>
+              </PhoneLink>
             </div>
             <LazyGoogleMapEmbed />
           </div>

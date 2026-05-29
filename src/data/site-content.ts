@@ -24,7 +24,12 @@ export type NavLink = {
 };
 
 export const PHONE_DISPLAY = "+43 681 81130962";
-export const PHONE_TEL_HREF = "tel:+4368181130962";
+
+/** E.164 nur Ziffern (AT Mobil 681 …) — für tel:-Links. */
+export const PHONE_TEL_NUMBER = "4368181130962";
+
+/** Einfacher Anruf-Link — in allen gängigen Mobil- und Desktop-Browsern. */
+export const PHONE_TEL_HREF = `tel:+${PHONE_TEL_NUMBER}`;
 
 const WHATSAPP_NUMBER = "4368181130962";
 
