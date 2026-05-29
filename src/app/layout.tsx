@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import WhatsAppFAB from "@/components/WhatsAppFAB";
+import BottomContactBar from "@/components/BottomContactBar";
 import { getSiteOrigin } from "@/config/site-url";
 import { sitePageTitle } from "@/config/site-brand";
 import { HASH_SCROLL_SCRIPT } from "@/lib/hash-scroll";
@@ -31,14 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de-AT" className={`${montserrat.variable} scroll-smooth`} data-scroll-behavior="smooth">
-      <body className={`${montserrat.className} min-h-screen bg-white antialiased`}>
+      <body
+        className={`${montserrat.className} min-h-screen bg-white pb-[calc(3.75rem+env(safe-area-inset-bottom,0px))] antialiased sm:pb-[calc(4rem+env(safe-area-inset-bottom,0px))]`}
+      >
         <GoogleAnalytics />
         <Script
           id="hash-scroll"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: HASH_SCROLL_SCRIPT }}
         />
-        <WhatsAppFAB />
+        <BottomContactBar />
         {children}
       </body>
     </html>
