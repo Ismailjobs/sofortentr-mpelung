@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import CallFAB from "@/components/CallFAB";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { getSiteOrigin } from "@/config/site-url";
 import { sitePageTitle } from "@/config/site-brand";
 import { HASH_SCROLL_SCRIPT } from "@/lib/hash-scroll";
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="de-AT" className={`${montserrat.variable} scroll-smooth`} data-scroll-behavior="smooth">
       <body className={`${montserrat.className} min-h-screen bg-white antialiased`}>
+        <GoogleAnalytics />
         <Script
           id="hash-scroll"
           strategy="lazyOnload"
