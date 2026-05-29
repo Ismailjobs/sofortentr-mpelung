@@ -13,7 +13,7 @@ export default function Breadcrumbs({ items, className = "" }: Props) {
   if (items.length === 0) return null;
 
   return (
-    <nav aria-label="Brotkrumennavigation" className={`border-b border-black/[0.06] bg-white ${className}`}>
+    <nav aria-label="Brotkrumennavigation" className={`border-b border-black/[0.06] bg-transparent ${className}`}>
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 py-3.5 sm:px-5 lg:px-6">
         <ol className="flex flex-wrap items-center gap-x-0.5 gap-y-1.5 text-[13px] leading-snug tracking-tight sm:text-sm">
           {items.map((item, index) => {

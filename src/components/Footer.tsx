@@ -23,6 +23,14 @@ function HashOrLink({
   className?: string;
   children: ReactNode;
 }) {
+  /** `/#faq` etc. → immer Startseite + Anker (Next.js client navigation). */
+  if (href.startsWith("/#")) {
+    return (
+      <Link href={href} className={className}>
+        {children}
+      </Link>
+    );
+  }
   if (href.includes("#")) {
     return (
       <a href={href} className={className}>

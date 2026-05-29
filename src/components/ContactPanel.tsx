@@ -1,9 +1,7 @@
 import { Calendar, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
-import { GENERAL_FAQ, PHONE_DISPLAY, PHONE_TEL_HREF } from "@/data/site-content";
-
-const WHATSAPP_HREF = "https://wa.me/4368181130962";
+import { GENERAL_FAQ, PHONE_DISPLAY, PHONE_TEL_HREF, WHATSAPP_HREF } from "@/data/site-content";
 
 const CHANNELS = [
   {
@@ -18,8 +16,6 @@ const CHANNELS = [
     cta: (
       <a
         href={WHATSAPP_HREF}
-        target="_blank"
-        rel="noopener noreferrer"
         className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-[#25d366] px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#1ebe5b] hover:shadow-md"
       >
         Jetzt schreiben

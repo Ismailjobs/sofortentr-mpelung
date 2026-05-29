@@ -26,6 +26,16 @@ export type NavLink = {
 export const PHONE_DISPLAY = "+43 681 81130962";
 export const PHONE_TEL_HREF = "tel:+4368181130962";
 
+const WHATSAPP_NUMBER = "4368181130962";
+
+/** Vorausgefüllter Chat-Text — wa.me `?text=` (alle Geräte). */
+export const WHATSAPP_PREFILL_MESSAGE = "Anfrage: Räumungs- und Entrümpelungsservice";
+
+export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_PREFILL_MESSAGE)}`;
+
+/** Gleicher Link wie `WHATSAPP_HREF` (Foto-Leiste / Kontakt). */
+export const WHATSAPP_PHOTO_HREF = WHATSAPP_HREF;
+
 /** Google-Bewertungen — Hero-Badge & LocalBusiness `aggregateRating` (Schema.org). */
 export const GOOGLE_AGGREGATE_RATING = {
   ratingValue: "5.0",
@@ -474,10 +484,14 @@ export const FOOTER_LEISTUNGEN: FooterLink[] = [
   { label: "Entrümpelung mit Ankauf", href: "/leistungen/ankauf" },
 ];
 
+/** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
+export const HOME_FAQ_HREF = "/#faq";
+export const HOME_KONTAKT_HREF = "/#kontakt";
+
 export const FOOTER_SERVICE: FooterLink[] = [
   { label: "Preise", href: "/preise" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Kontakt", href: "/#kontakt" },
+  { label: "FAQ", href: HOME_FAQ_HREF },
+  { label: "Kontakt", href: HOME_KONTAKT_HREF },
 ];
 
 export type SocialNetwork = "xing" | "linkedin" | "x" | "facebook" | "instagram";

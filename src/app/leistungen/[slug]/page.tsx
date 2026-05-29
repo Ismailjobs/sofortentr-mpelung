@@ -14,7 +14,6 @@ import ServiceJsonLd from "@/components/ServiceJsonLd";
 import ServiceIntroText from "@/components/ServiceIntroText";
 import ServicePageReveal from "@/components/ServicePageReveal";
 import SimilarServicesSection from "@/components/SimilarServicesSection";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 import { getRelatedServicesForSlug } from "@/data/related-services";
 import { getServiceDetailPageData } from "@/data/service-page-details";
@@ -170,7 +169,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </main>
       <LazyContactFormSection defaultServiceTypeId={slug} />
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

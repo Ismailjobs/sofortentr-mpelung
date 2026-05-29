@@ -28,6 +28,7 @@ export default function ServiceFaqSection({
 
   return (
     <section
+      id={id}
       className={`py-16 sm:py-20 ${className}`.trim()}
       aria-labelledby={`${id}-heading`}
     >
