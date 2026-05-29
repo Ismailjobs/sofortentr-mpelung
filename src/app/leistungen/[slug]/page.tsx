@@ -17,6 +17,7 @@ import SimilarServicesSection from "@/components/SimilarServicesSection";
 import { sitePageTitle } from "@/config/site-brand";
 import { getRelatedServicesForSlug } from "@/data/related-services";
 import { getServiceDetailPageData } from "@/data/service-page-details";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { SERVICES } from "@/data/site-content";
 
 type PageProps = {
@@ -169,6 +170,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </main>
       <LazyContactFormSection defaultServiceTypeId={slug} />
       <Footer />
+      <LazyWhatsAppFAB />
     </>
   );
 }

@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import PricingOverview from "@/components/PricingOverview";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 
 export const metadata: Metadata = {
@@ -101,6 +102,7 @@ export default function PreisePage() {
       </main>
       <LazyContactFormSection />
       <Footer />
+      <LazyWhatsAppFAB />
     </>
   );
 }

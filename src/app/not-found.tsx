@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { sitePageTitle } from "@/config/site-brand";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function NotFound() {
         </div>
       </main>
       <Footer />
+      <LazyWhatsAppFAB />
     </>
   );
 }

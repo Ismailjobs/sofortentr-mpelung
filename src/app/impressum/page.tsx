@@ -5,6 +5,7 @@ import { getSiteOrigin } from "@/config/site-url";
 import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
+import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
@@ -182,6 +183,7 @@ export default function ImpressumPage() {
       </main>
       <LazyContactFormSection />
       <Footer />
+      <LazyWhatsAppFAB />
     </>
   );
 }

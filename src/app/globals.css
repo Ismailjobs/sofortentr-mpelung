@@ -18,6 +18,79 @@
   .rounded-btn {
     border-radius: var(--radius-btn);
   }
+
+  @keyframes fab-pulse-ring {
+    0% {
+      box-shadow:
+        0 0 0 0 var(--fab-pulse-color),
+        0 14px 42px -8px rgba(0, 0, 0, 0.45);
+    }
+    65% {
+      box-shadow:
+        0 0 0 16px transparent,
+        0 14px 42px -8px rgba(0, 0, 0, 0.45);
+    }
+    100% {
+      box-shadow:
+        0 0 0 0 transparent,
+        0 14px 42px -8px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .fab-btn {
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 5px solid #fff;
+    color: #fff;
+    box-shadow: 0 14px 42px -8px rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease;
+    animation: fab-pulse-ring 2.25s ease-out infinite;
+  }
+
+  .fab-btn:hover {
+    transform: scale(1.06);
+  }
+
+  .fab-btn--whatsapp {
+    --fab-pulse-color: rgba(37, 211, 102, 0.55);
+    background-color: #25d366;
+  }
+
+  .fab-btn--whatsapp:hover {
+    background-color: #1ebe5b;
+  }
+
+  .fab-btn--call {
+    --fab-pulse-color: rgba(37, 99, 235, 0.55);
+    background-color: #2563eb;
+  }
+
+  .fab-btn--call:hover {
+    background-color: #1d4ed8;
+  }
+
+  .fab-label {
+    border-radius: 9999px;
+    border: 2px solid #fff;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fab-btn {
+      animation: none;
+    }
+  }
 }
 
 @media (max-width: 1147px) {
