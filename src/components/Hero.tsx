@@ -41,7 +41,11 @@ export default function Hero({ district = null }: HeroProps) {
     <section className="relative isolate min-h-[min(72svh,40rem)] overflow-hidden">
       <HeroBackdrop priority />
 
-      <div className="relative mx-auto max-w-[min(100%,88rem)] px-3 pb-8 pt-24 sm:px-5 sm:pb-9 sm:pt-14 lg:px-6 lg:pb-10 lg:pt-16">
+      <div
+        className={`relative mx-auto max-w-[min(100%,88rem)] px-3 pb-8 sm:px-5 sm:pb-9 sm:pt-14 lg:px-6 lg:pb-10 lg:pt-16 ${
+          isHome ? "pt-[3.85rem]" : "pt-24"
+        }`}
+      >
         <div className="max-w-2xl space-y-6 text-white">
           <p
             className={
