@@ -55,12 +55,16 @@ export const DATENSCHUTZ_PATH = "/datenschutz";
 
 export const IMPRESSUM_PATH = "/impressum";
 
+/** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
+export const HOME_FAQ_HREF = "/#faq";
+export const HOME_KONTAKT_HREF = "/#kontakt";
+
 export const NAV_LINKS: NavLink[] = [
-  { label: "Startseite", href: "/" },
-  { label: "Leistungen", href: "/leistungen" },
   { label: "Über uns", href: "/#ueber-uns" },
+  { label: "Leistungen", href: "/leistungen" },
   { label: "Preise", href: "/preise" },
-  { label: "Kontakt", href: "/#kontakt" },
+  { label: "Kontakt", href: HOME_KONTAKT_HREF },
+  { label: "FAQ", href: HOME_FAQ_HREF },
 ];
 
 export type TrustItem = {
@@ -488,10 +492,6 @@ export const FOOTER_LEISTUNGEN: FooterLink[] = [
   { label: "Wertausgleich", href: "/leistungen/wertausgleich" },
   { label: "Entrümpelung mit Ankauf", href: "/leistungen/ankauf" },
 ];
-
-/** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
-export const HOME_FAQ_HREF = "/#faq";
-export const HOME_KONTAKT_HREF = "/#kontakt";
 
 export const FOOTER_SERVICE: FooterLink[] = [
   { label: "Preise", href: "/preise" },
