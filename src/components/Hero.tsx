@@ -10,13 +10,25 @@ export type HeroDistrict = {
   name: string;
 };
 
+export type HeroRegion = {
+  name: string;
+  tagline: string;
+};
+
 type HeroProps = {
   /** Bezirks-Landing: PLZ + Bezirksname im Hero */
   district?: HeroDistrict | null;
+  /** Bundesland-Landing (NÖ, Burgenland) */
+  region?: HeroRegion | null;
 };
 
-export default function Hero({ district = null }: HeroProps) {
-  const isHome = !district;
+export default function Hero({ district = null, region = null }: HeroProps) {
+  const isHome = !district && !region;
+  const locationLine = district
+    ? { eyebrow: `Entrümpelung · ${district.zip} Wien · ${district.name}`, sub: `${district.name} (${district.zip})` }
+    : region
+      ? { eyebrow: `Entrümpelung · ${region.name}`, sub: region.tagline }
+      : null;
 
   const ratingBadge = (
     <div className="flex w-[272px] items-center gap-3 rounded-xl bg-white px-4 py-2.5 text-brand-dark shadow-xl ring-1 ring-black/10">
@@ -55,10 +67,16 @@ export default function Hero({ district = null }: HeroProps) {
                 : "text-xs font-bold uppercase tracking-[0.35em] text-white/85 sm:text-sm"
             }
           >
-            {district ? (
-              <>
-                Entrümpelung · <span className="text-brand-orange">{district.zip} Wien</span> · {district.name}
-              </>
+            {locationLine ? (
+              district ? (
+                <>
+                  Entrümpelung · <span className="text-brand-orange">{district.zip} Wien</span> · {district.name}
+                </>
+              ) : (
+                <>
+                  Entrümpelung · <span className="text-brand-orange">{region!.name}</span>
+                </>
+              )
             ) : (
               <>Sofort zur Leerung in Wien & Umgebung</>
             )}
@@ -80,6 +98,13 @@ export default function Hero({ district = null }: HeroProps) {
                   {district.name}
                 </span>
               </>
+            ) : region ? (
+              <>
+                <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-[3.65rem]">ENTRÜMPELUNG</span>
+                <span className="mt-2 block text-3xl text-brand-orange sm:text-4xl lg:text-5xl xl:text-[3.1rem]">
+                  {region.name.toUpperCase()}
+                </span>
+              </>
             ) : (
               <>Professionelle Entrümpelung Wien zum Fixpreis</>
             )}
@@ -90,7 +115,9 @@ export default function Hero({ district = null }: HeroProps) {
             </h2>
           ) : (
             <p className="text-lg font-medium text-white">
-              {`Festpreis nach Besichtigung · ${district!.name} (${district!.zip})`}
+              {district
+                ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})`
+                : `Festpreis nach Besichtigung · ${region!.tagline}`}
             </p>
           )}
           <p
@@ -103,6 +130,11 @@ export default function Hero({ district = null }: HeroProps) {
             {district ? (
               <>
                 Wir entrümpeln in {district.name} (PLZ {district.zip}) und im gesamten Stadtgebiet — inklusive
+                fachgerechter Entsorgung und verbindlichem Festpreis nach Besichtigung.
+              </>
+            ) : region ? (
+              <>
+                Wir entrümpeln in {region.name} und der Region um Wien — Wohnung, Haus, Keller und Büro inklusive
                 fachgerechter Entsorgung und verbindlichem Festpreis nach Besichtigung.
               </>
             ) : (

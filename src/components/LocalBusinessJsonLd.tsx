@@ -6,11 +6,12 @@ import {
   OPENING_HOURS_SCHEMA_SPEC,
   OPENING_HOURS_TEXT_LINE,
   PHONE_DISPLAY,
+  BUSINESS_SAME_AS,
   GOOGLE_AGGREGATE_RATING,
   SERVICES,
   SERVICE_IMAGE_DIR,
 } from "@/data/site-content";
-import { getDistrictBySlug } from "@/data/vienna-districts";
+import { getLocationBySlug } from "@/data/location-landings";
 import {
   areaServedForSchema,
   DEFAULT_SERVICE_CATEGORY,
@@ -146,23 +147,25 @@ function catalogServiceType(slug: string): string {
 }
 
 export type LocalBusinessJsonLdProps = {
-  /** Middleware + Root-Layout: Bezirks-Landing → PLZ/Ort zuerst in `areaServed`. */
-  priorityDistrictSlug?: string | null;
+  /** Lokations-Landing (Bezirk oder Bundesland) → priorisiert `areaServed`. */
+  priorityLocationSlug?: string | null;
 };
 
 /**
  * JSON-LD: LocalBusiness + OfferCatalog + WebSite (@graph).
- * Auf Bezirksseiten priorisiert `areaServed` den jeweiligen Bezirk (Header `x-vienna-district-slug`).
+ * Auf Lokations-Landings priorisiert `areaServed` den jeweiligen Bezirk bzw. das Bundesland.
  */
-export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: LocalBusinessJsonLdProps) {
+export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: LocalBusinessJsonLdProps) {
   const origin = getSiteOrigin();
-  const priorityDistrict = priorityDistrictSlug ? getDistrictBySlug(priorityDistrictSlug) : undefined;
+  const location = priorityLocationSlug ? getLocationBySlug(priorityLocationSlug) : undefined;
+  const priorityDistrict = location?.kind === "district" ? location.district : undefined;
+  const priorityRegionName = location?.kind === "region" ? location.region.name : null;
 
   const { businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
   const logoUrl = `${origin}/sofort-logo.webp`;
   const logoId = `${origin}/#logo`;
 
-  const areaServed = areaServedForSchema(priorityDistrict, areaWienId);
+  const areaServed = areaServedForSchema(priorityDistrict, areaWienId, priorityRegionName);
 
   const itemListElement = SERVICE_ENTRIES.map((s, index) => ({
     "@type": "ListItem" as const,
@@ -236,6 +239,7 @@ export default function LocalBusinessJsonLd({ priorityDistrictSlug = null }: Loc
           bestRating: GOOGLE_AGGREGATE_RATING.bestRating,
           worstRating: GOOGLE_AGGREGATE_RATING.worstRating,
         },
+        sameAs: [...BUSINESS_SAME_AS],
         hasOfferCatalog: { "@id": catalogId },
       },
       {

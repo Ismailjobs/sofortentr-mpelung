@@ -535,6 +535,23 @@ export const FOOTER_SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
+/**
+ * Social-Media- & Branchenverzeichnis-Profile — schema.org `sameAs` (LocalBusiness).
+ * @see https://schema.org/sameAs
+ */
+export const BUSINESS_SAME_AS = [
+  "https://share.google/TPOAJioCzqdohEOpG",
+  "https://www.facebook.com/profile.php?id=61590409469212",
+  "https://www.instagram.com/sofortentrumpelung/",
+  "https://www.linkedin.com/company/sofortentrumpelung",
+  "https://x.com/sofortEntrumpl",
+  "https://www.xing.com/pages/sofortentruempelung",
+  "https://de.pinterest.com/sofortentrumplung/",
+  "https://www.herold.at/gelbe-seiten/wien/wBkxJ/sofortentruempelung/",
+  "https://www.cylex.at/wien/sofortentr%c3%bcmpelung-8616065.html",
+  "https://www.tupalo.at/wien/sofortentruempelung",
+] as const;
+
 /** Eintrag im Firmenbuch / Rechtsform e.U. — für JSON-LD `legalName` und Impressum-relevante Texte. */
 export const CONTACT_LEGAL_NAME = "Mesut Duman e.U.";
 

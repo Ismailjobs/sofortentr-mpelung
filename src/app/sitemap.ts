@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getSiteOrigin } from "@/config/site-url";
 import { DATENSCHUTZ_PATH, IMPRESSUM_PATH, SERVICES } from "@/data/site-content";
-import { VIENNA_DISTRICTS } from "@/data/vienna-districts";
+import { getAllLocationSlugs } from "@/data/location-landings";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteOrigin();
@@ -16,9 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.8,
   }));
 
-  for (const d of VIENNA_DISTRICTS) {
+  for (const slug of getAllLocationSlugs()) {
     entries.push({
-      url: `${base}/${d.slug}`,
+      url: `${base}/${slug}`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.75,

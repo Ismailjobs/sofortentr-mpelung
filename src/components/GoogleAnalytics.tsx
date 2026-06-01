@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 /** Google Analytics 4 — Measurement ID */
-const GA_MEASUREMENT_ID = "G-RTE2LWVQVT";
+export const GA_MEASUREMENT_ID = "G-RTE2LWVQVT";
 
 /**
  * Google tag (gtag.js) — lädt nach Hydration (`afterInteractive`), blockiert nicht den First Paint.

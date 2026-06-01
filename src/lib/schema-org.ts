@@ -22,8 +22,20 @@ export function defaultAreaServed(areaWienId: string) {
 export function areaServedForSchema(
   district: ViennaDistrict | undefined,
   areaWienId: string,
+  priorityRegionName?: string | null,
 ) {
   const tail = defaultAreaServed(areaWienId);
+
+  if (priorityRegionName) {
+    const rest = tail.filter(
+      (item) => !("name" in item && item.name === priorityRegionName),
+    );
+    return [
+      { "@type": "AdministrativeArea" as const, name: priorityRegionName },
+      ...rest,
+    ];
+  }
+
   if (!district) return tail;
   const priorityPlace = {
     "@type": "Place" as const,

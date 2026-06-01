@@ -13,14 +13,14 @@ import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
-import { getSiteOrigin } from "@/config/site-url";
-import { VIENNA_DISTRICTS, getDistrictBySlug } from "@/data/vienna-districts";
+import { getAllLocationSlugs, getLocationBySlug } from "@/data/location-landings";
 import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
+import { buildLocationMetadata } from "@/lib/location-metadata";
 
 export const dynamicParams = false;
 
 type PageProps = {
-  params: Promise<{ "district-slug": string }>;
+  params: Promise<{ "location-slug": string }>;
 };
 
 const PAGE = {
@@ -30,36 +30,34 @@ const PAGE = {
 };
 
 export function generateStaticParams() {
-  return VIENNA_DISTRICTS.map((d) => ({ "district-slug": d.slug }));
+  return getAllLocationSlugs().map((slug) => ({ "location-slug": slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { "district-slug": slug } = await params;
-  const d = getDistrictBySlug(slug);
-  if (!d) {
-    return { title: "Entrümpelung Wien" };
+  const { "location-slug": slug } = await params;
+  const location = getLocationBySlug(slug);
+  if (!location) {
+    return { title: "Entrümpelung Wien & Umgebung" };
   }
-  const title = `Entrümpelung ${d.zip} Wien ${d.name} | Sofort Entrümpelung - Festpreis`;
-  const description = `Professionelle Entrümpelung in ${d.zip} Wien ${d.name}. Wir bieten schnelle Termine, kostenlose Besichtigung und garantierte Festpreise für Ihre Räumung.`;
-  const base = getSiteOrigin();
-  return {
-    title,
-    description,
-    alternates: { canonical: `${base}/${d.slug}` },
-  };
+  return buildLocationMetadata(location);
 }
 
-export default async function ViennaDistrictLandingPage({ params }: PageProps) {
-  const { "district-slug": slug } = await params;
-  const district = getDistrictBySlug(slug);
-  if (!district) {
+function breadcrumbLabel(location: NonNullable<ReturnType<typeof getLocationBySlug>>): string {
+  if (location.kind === "district") {
+    const d = location.district;
+    return `Entrümpelung Wien ${d.zip} ${d.name}`;
+  }
+  return `Entrümpelung ${location.region.name}`;
+}
+
+export default async function LocationLandingPage({ params }: PageProps) {
+  const { "location-slug": slug } = await params;
+  const location = getLocationBySlug(slug);
+  if (!location) {
     notFound();
   }
 
-  const breadcrumbs = [
-    { label: "Startseite", href: "/" },
-    { label: `Entrümpelung Wien ${district.zip} ${district.name}` },
-  ];
+  const breadcrumbs = [{ label: "Startseite", href: "/" }, { label: breadcrumbLabel(location) }];
 
   return (
     <>
@@ -67,7 +65,11 @@ export default async function ViennaDistrictLandingPage({ params }: PageProps) {
       <Header />
       <main>
         <Breadcrumbs items={breadcrumbs} className="border-b border-black/[0.06]" />
-        <Hero district={{ zip: district.zip, name: district.name }} />
+        {location.kind === "district" ? (
+          <Hero district={{ zip: location.district.zip, name: location.district.name }} />
+        ) : (
+          <Hero region={{ name: location.region.name, tagline: location.region.tagline }} />
+        )}
         <TrustBar items={PAGE.trust} />
         <ServicesSection services={PAGE.services} showAllLink />
         <WhyUs />
