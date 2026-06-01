@@ -5,7 +5,7 @@ import {
   DEFAULT_SERVICE_CATEGORY,
   festpreisOffer,
   schemaOriginIds,
-  defaultAreaServed,
+  baseAreaServed,
   type SchemaBreadcrumbItem,
 } from "@/lib/schema-org";
 
@@ -35,7 +35,7 @@ export default function ServiceJsonLd({ service, breadcrumbs }: Props) {
         serviceType: service.schemaServiceType,
         category: DEFAULT_SERVICE_CATEGORY,
         provider: { "@id": businessId },
-        areaServed: defaultAreaServed(areaWienId),
+        areaServed: baseAreaServed(areaWienId),
         offers: festpreisOffer(origin),
         audience: {
           "@type": "Audience" as const,

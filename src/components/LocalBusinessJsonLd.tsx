@@ -16,6 +16,7 @@ import {
   areaServedForSchema,
   DEFAULT_SERVICE_CATEGORY,
   schemaOriginIds,
+  wienCityGraphNode,
 } from "@/lib/schema-org";
 
 const SERVICE_ENTRIES = [
@@ -242,12 +243,7 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
         sameAs: [...BUSINESS_SAME_AS],
         hasOfferCatalog: { "@id": catalogId },
       },
-      {
-        "@type": "City" as const,
-        "@id": areaWienId,
-        name: "Wien",
-        containedInPlace: { "@type": "Country" as const, name: "Österreich" },
-      },
+      wienCityGraphNode(areaWienId),
       {
         "@type": "OfferCatalog" as const,
         "@id": catalogId,
