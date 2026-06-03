@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_BRAND, sitePageTitle } from "@/config/site-brand";
+import { SITE_BRAND } from "@/config/site-brand";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import { getSiteOrigin } from "@/config/site-url";
 import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -17,10 +18,11 @@ import {
 } from "@/data/site-content";
 import PhoneLink from "@/components/PhoneLink";
 
-export const metadata: Metadata = {
-  title: sitePageTitle("Impressum"),
+export const metadata: Metadata = buildPageMetadata({
+  title: "Impressum & Anbieterkennzeichnung",
   description: `Impressum und Anbieterkennzeichnung — ${SITE_BRAND}, ${CONTACT_LEGAL_NAME}.`,
-};
+  path: "/impressum",
+});
 
 function siteUrlDisplay(): string {
   try {

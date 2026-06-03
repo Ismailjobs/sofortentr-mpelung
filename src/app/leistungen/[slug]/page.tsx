@@ -14,7 +14,8 @@ import ServiceJsonLd from "@/components/ServiceJsonLd";
 import ServiceIntroText from "@/components/ServiceIntroText";
 import ServicePageReveal from "@/components/ServicePageReveal";
 import SimilarServicesSection from "@/components/SimilarServicesSection";
-import { sitePageTitle } from "@/config/site-brand";
+import { pageTitleSegment } from "@/config/site-brand";
+import { getSiteOrigin } from "@/config/site-url";
 import { getRelatedServicesForSlug } from "@/data/related-services";
 import { getServiceDetailPageData } from "@/data/service-page-details";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
@@ -32,12 +33,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const service = getServiceDetailPageData(slug);
   if (!service) {
-    return { title: sitePageTitle("Leistung") };
+    return { title: pageTitleSegment("Leistung nicht gefunden") };
   }
   const pageTitle = service.title.replace(/\u200b/g, "");
+  const origin = getSiteOrigin();
   return {
-    title: sitePageTitle(pageTitle),
+    title: pageTitleSegment(`${pageTitle} Wien`),
     description: service.description,
+    alternates: { canonical: `${origin}/leistungen/${slug}` },
   };
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { sitePageTitle } from "@/config/site-brand";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -13,11 +13,12 @@ import { SERVICES } from "@/data/site-content";
 
 const LEISTUNGEN_COVER = SERVICES.find((s) => s.id === "hausentruempelung") ?? SERVICES[0];
 
-export const metadata: Metadata = {
-  title: sitePageTitle("Leistungen"),
+export const metadata: Metadata = buildPageMetadata({
+  title: "Leistungen — Entrümpelung & Haushaltsauflösung Wien",
   description:
     "Haus-, Wohnungs-, Keller- und Büroentrümpelung in Wien — alle Services im Überblick.",
-};
+  path: "/leistungen",
+});
 
 export default function LeistungenPage() {
   const breadcrumbs = [

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { preload } from "react-dom";
-import { sitePageTitle } from "@/config/site-brand";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -20,11 +20,12 @@ import { GENERAL_FAQ, HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/si
 
 preload("/hero.webp", { as: "image", fetchPriority: "high" });
 
-export const metadata: Metadata = {
-  title: sitePageTitle("Professionelle Entrümpelung Wien zum Fixpreis"),
+export const metadata: Metadata = buildPageMetadata({
+  title: "Professionelle Entrümpelung Wien zum Fixpreis",
   description:
     "Was kostet eine Entrümpelung? Wohnungsentrümpelung Wien innerhalb 24h. Wie läuft eine Wohnungsauflösung ab? Messie Wohnung reinigen & Entrümpelung nach Todesfall — Festpreis nach Besichtigung.",
-};
+  path: "/",
+});
 
 /** Landing-Inhalte: werden hier gebündelt und per `map`/Props an Sektionen übergeben (@/data/site-content). */
 const PAGE = {

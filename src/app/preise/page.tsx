@@ -12,13 +12,14 @@ import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import PricingOverview from "@/components/PricingOverview";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
-import { sitePageTitle } from "@/config/site-brand";
+import { buildPageMetadata } from "@/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: sitePageTitle("Preise & Fixpreis"),
+export const metadata: Metadata = buildPageMetadata({
+  title: "Preise & Fixpreis Entrümpelung Wien",
   description:
     "Was kostet eine Entrümpelung? Transparente Richtpreise für Haushaltsauflösung und Entrümpelung in Wien — Festpreis nach kostenloser Besichtigung.",
-};
+  path: "/preise",
+});
 
 const PRICE_NOTES: {
   icon: LucideIcon;

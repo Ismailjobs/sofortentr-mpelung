@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { sitePageTitle } from "@/config/site-brand";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import { getSiteOrigin } from "@/config/site-url";
 import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -10,10 +10,11 @@ import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import DatenschutzBody from "./DatenschutzBody";
 
-export const metadata: Metadata = {
-  title: sitePageTitle("Datenschutz"),
+export const metadata: Metadata = buildPageMetadata({
+  title: "Datenschutzerklärung",
   description: "Datenschutzerklärung — Verarbeitung personenbezogener Daten bei Sofort Entrümpelung.",
-};
+  path: "/datenschutz",
+});
 
 function siteHostLabel(): string {
   try {

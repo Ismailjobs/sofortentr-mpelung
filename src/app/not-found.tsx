@@ -4,11 +4,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
-import { sitePageTitle } from "@/config/site-brand";
+import { pageTitleSegment } from "@/config/site-brand";
 
 export const metadata: Metadata = {
-  title: sitePageTitle("Seite nicht gefunden"),
+  title: pageTitleSegment("Seite nicht gefunden (404)"),
   description: "Die angeforderte Seite gibt es nicht — Sofort Entrümpelung Wien.",
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {
