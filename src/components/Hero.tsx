@@ -20,9 +20,17 @@ type HeroProps = {
   district?: HeroDistrict | null;
   /** Bundesland-Landing (NÖ, Burgenland) */
   region?: HeroRegion | null;
+  /** Lokations-Landing: individueller Hero-Text (Duplicate Content vermeiden) */
+  locationIntro?: string | null;
+  locationTagline?: string | null;
 };
 
-export default function Hero({ district = null, region = null }: HeroProps) {
+export default function Hero({
+  district = null,
+  region = null,
+  locationIntro = null,
+  locationTagline = null,
+}: HeroProps) {
   const isHome = !district && !region;
   const locationLine = district
     ? { eyebrow: `Entrümpelung · ${district.zip} Wien · ${district.name}`, sub: `${district.name} (${district.zip})` }
@@ -115,9 +123,10 @@ export default function Hero({ district = null, region = null }: HeroProps) {
             </h2>
           ) : (
             <p className="text-lg font-medium text-white">
-              {district
-                ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})`
-                : `Festpreis nach Besichtigung · ${region!.tagline}`}
+              {locationTagline ??
+                (district
+                  ? `Festpreis nach Besichtigung · ${district.name} (${district.zip})`
+                  : `Festpreis nach Besichtigung · ${region!.tagline}`)}
             </p>
           )}
           <p
@@ -127,7 +136,9 @@ export default function Hero({ district = null, region = null }: HeroProps) {
                 : "text-sm leading-relaxed text-white/90 sm:text-base"
             }
           >
-            {district ? (
+            {locationIntro ? (
+              locationIntro
+            ) : district ? (
               <>
                 Wir entrümpeln in {district.name} (PLZ {district.zip}) und im gesamten Stadtgebiet — inklusive
                 fachgerechter Entsorgung und verbindlichem Festpreis nach Besichtigung.

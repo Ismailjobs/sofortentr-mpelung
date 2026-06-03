@@ -30,7 +30,11 @@ const PREISE_POINTS = [
   "Schnelle Angebote für Standardfälle auf Anfrage",
 ];
 
-export default function ProcedureSections() {
+type ProcedureSectionsProps = {
+  ablaufIntro?: string;
+};
+
+export default function ProcedureSections({ ablaufIntro }: ProcedureSectionsProps) {
   return (
     <div className="bg-white">
       <section id="ablauf" className="scroll-mt-28 border-t border-neutral-100 py-16 sm:py-20">
@@ -41,6 +45,9 @@ export default function ProcedureSections() {
               <h2 className="mt-2 text-2xl font-extrabold uppercase tracking-tight text-brand-dark sm:text-3xl">
                 So läuft&apos;s bei uns
               </h2>
+              {ablaufIntro ? (
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 sm:text-base">{ablaufIntro}</p>
+              ) : null}
             </div>
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-muted px-4 py-2 text-sm font-semibold text-brand-dark">
               <ListOrdered className="h-4 w-4 text-brand-orange" aria-hidden />

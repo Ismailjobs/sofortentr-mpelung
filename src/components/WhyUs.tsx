@@ -4,7 +4,11 @@ import Link from "next/link";
 import { TRUCK_IMAGE_SIZES } from "@/lib/image-sizes";
 import { WHY_US_CTA, WHY_US_EYEBROW, WHY_US_FEATURES, WHY_US_HEADLINE } from "@/data/site-content";
 
-export default function WhyUs() {
+type WhyUsProps = {
+  headline?: string;
+};
+
+export default function WhyUs({ headline }: WhyUsProps) {
   const CalcIcon = WHY_US_CTA.calculatorIcon;
 
   return (
@@ -19,7 +23,7 @@ export default function WhyUs() {
               {WHY_US_EYEBROW}
             </p>
             <h2 className="mt-2 text-[1.15rem] font-bold uppercase leading-snug tracking-tight text-white sm:text-2xl lg:mt-3 lg:text-[1.5rem] lg:leading-snug xl:text-[1.62rem]">
-              {WHY_US_HEADLINE}
+              {headline ?? WHY_US_HEADLINE}
             </h2>
             <ul className="mt-5 space-y-2.5 text-left sm:mt-6">
               {WHY_US_FEATURES.map((feature) => (

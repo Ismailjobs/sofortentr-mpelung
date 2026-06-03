@@ -7,6 +7,7 @@ import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import LocationLocalIntro from "@/components/LocationLocalIntro";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
 import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
@@ -16,6 +17,7 @@ import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { getAllLocationSlugs, getLocationBySlug } from "@/data/location-landings";
 import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
 import { buildLocationMetadata } from "@/lib/location-metadata";
+import { getLocationPageCopy } from "@/lib/location-page-copy";
 
 export const dynamicParams = false;
 
@@ -57,6 +59,10 @@ export default async function LocationLandingPage({ params }: PageProps) {
     notFound();
   }
 
+  const copy = getLocationPageCopy(location);
+  const plzOrRegion =
+    location.kind === "district" ? String(location.district.zip) : location.region.name;
+
   const breadcrumbs = [{ label: "Startseite", href: "/" }, { label: breadcrumbLabel(location) }];
 
   return (
@@ -66,14 +72,27 @@ export default async function LocationLandingPage({ params }: PageProps) {
       <main>
         <Breadcrumbs items={breadcrumbs} className="border-b border-black/[0.06]" />
         {location.kind === "district" ? (
-          <Hero district={{ zip: location.district.zip, name: location.district.name }} />
+          <Hero
+            district={{ zip: location.district.zip, name: location.district.name }}
+            locationIntro={copy.heroIntro}
+            locationTagline={copy.heroTagline}
+          />
         ) : (
-          <Hero region={{ name: location.region.name, tagline: location.region.tagline }} />
+          <Hero
+            region={{ name: location.region.name, tagline: location.region.tagline }}
+            locationIntro={copy.heroIntro}
+            locationTagline={copy.heroTagline}
+          />
         )}
         <TrustBar items={PAGE.trust} />
-        <ServicesSection services={PAGE.services} showAllLink />
-        <WhyUs />
-        <ProcedureSections />
+        <LocationLocalIntro plzOrRegion={plzOrRegion} name={copy.name} text={copy.localInsight} />
+        <ServicesSection
+          services={PAGE.services}
+          showAllLink
+          sectionTeaser={copy.servicesTeaser}
+        />
+        <WhyUs headline={copy.whyUsHeadline} />
+        <ProcedureSections ablaufIntro={copy.ablaufIntro} />
         <LazyTestimonialSlider testimonials={PAGE.testimonials} />
         <ContactPanel />
       </main>

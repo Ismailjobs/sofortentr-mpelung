@@ -9,6 +9,8 @@ type Props = {
   showSectionHeader?: boolean;
   /** z. B. bg-zinc-50 direkt unter dem Hero */
   sectionSurfaceClass?: string;
+  /** Lokations-Landing: Teaser unter der Überschrift */
+  sectionTeaser?: string;
 };
 
 export default function ServicesSection({
@@ -16,6 +18,7 @@ export default function ServicesSection({
   showAllLink = false,
   showSectionHeader = true,
   sectionSurfaceClass = "bg-brand-muted",
+  sectionTeaser,
 }: Props) {
   const surface = sectionSurfaceClass.trim() || "bg-brand-muted";
   return (
@@ -36,6 +39,11 @@ export default function ServicesSection({
             <h2 className="mt-3 text-balance text-[clamp(1.45rem,6.2vw,2.25rem)] font-extrabold uppercase leading-tight tracking-tight text-brand-dark">
               {showAllLink ? "Ausgewählte Entrümpelungsservices" : "Alle Entrümpelungsservices im Überblick"}
             </h2>
+            {sectionTeaser ? (
+              <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-neutral-600">
+                {sectionTeaser}
+              </p>
+            ) : null}
           </div>
         ) : null}
 

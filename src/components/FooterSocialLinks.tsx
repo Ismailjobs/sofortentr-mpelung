@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { SocialNetwork } from "@/data/site-content";
 import { FOOTER_SOCIAL_LINKS } from "@/data/site-content";
 
@@ -6,9 +7,14 @@ function SocialIcon({ network }: { network: SocialNetwork }) {
   switch (network) {
     case "xing":
       return (
-        <svg viewBox="0 0 24 24" className={className} aria-hidden>
-          <path d="M20.5 0h-4.8L12 8.1 8.3 0H3.5l6.1 10.7L3.5 24h4.8l3.7-8.1L16.7 24h4.8l-6.1-10.7L20.5 0z" />
-        </svg>
+        <Image
+          src="/xing.png"
+          alt=""
+          width={20}
+          height={20}
+          className="h-5 w-5 object-contain"
+          aria-hidden
+        />
       );
     case "linkedin":
       return (
