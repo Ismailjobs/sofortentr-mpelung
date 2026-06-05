@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap (absolute URL — bei anderer Domain anpassen oder via Hosting-Redirect)
+Sitemap: https://sofortentrumpelung.at/sitemap.xml
