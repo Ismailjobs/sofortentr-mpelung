@@ -14,6 +14,7 @@ import {
   CONTACT_BLOCK,
   CONTACT_LEGAL_NAME,
   DATENSCHUTZ_PATH,
+  GISA_NUMBER,
   PHONE_DISPLAY,
 } from "@/data/site-content";
 import PhoneLink from "@/components/PhoneLink";
@@ -61,6 +62,8 @@ export default function ImpressumPage() {
                 <strong>{CONTACT_LEGAL_NAME}</strong>
                 <br />
                 {SITE_BRAND}
+                <br />
+                GISA-Zahl: {GISA_NUMBER}
               </p>
               <p>
                 {CONTACT_BLOCK.streetAddress}
@@ -105,8 +108,8 @@ export default function ImpressumPage() {
                 Aufsichtsbehörde / Gewerbebehörde
               </h2>
               <p>
-                Zuständige Behörden richten sich nach dem Sitz des Unternehmens in Wien. Angaben zu GISA oder
-                Gewerbeberechtigung können auf Anfrage mitgeteilt werden.
+                Zuständige Behörden richten sich nach dem Sitz des Unternehmens in Wien. Gewerbedaten sind im
+                Gewerbeinformationssystem Austria (GISA) unter GISA-Zahl {GISA_NUMBER} einsehbar.
               </p>
             </section>
 
@@ -172,7 +175,7 @@ export default function ImpressumPage() {
             <section className="space-y-3">
               <p className="text-xs text-neutral-500">
                 Hinweis: Dieses Impressum ist eine allgemeine Vorlage und ersetzt keine Rechtsberatung. Ergänzen Sie
-                ggf. UID-Nummer, Firmenbuchdaten, GISA und Berufsbezeichnungen nach Vorgabe Ihrer Behörden.
+                ggf. UID-Nummer und weitere Pflichtangaben nach Vorgabe Ihrer Behörden.
               </p>
               <p>
                 <Link href={DATENSCHUTZ_PATH} className="font-semibold text-brand-orange underline">

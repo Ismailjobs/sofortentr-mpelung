@@ -555,6 +555,9 @@ export const BUSINESS_SAME_AS = [
 /** Eintrag im Firmenbuch / Rechtsform e.U. — für JSON-LD `legalName` und Impressum-relevante Texte. */
 export const CONTACT_LEGAL_NAME = "Mesut Duman e.U.";
 
+/** Gewerbeinformationssystem Austria (GISA) — Pflichtangabe im Impressum (ECG). */
+export const GISA_NUMBER = "39404220";
+
 export const CONTACT_BLOCK = {
   email: "office@sofortentrumpelung.at",
   /** Anzeige (Footer, Datenschutz, E-Mails) */
