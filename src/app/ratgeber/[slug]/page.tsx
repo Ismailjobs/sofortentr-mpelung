@@ -100,13 +100,7 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
       <RatgeberArticleJsonLd article={meta} breadcrumbs={breadcrumbs} />
       <Header />
       <main className="bg-brand-muted">
-        <RatgeberHero
-          eyebrow="Ratgeber"
-          title={meta.title}
-          subtitle={meta.excerpt}
-          footer={heroMeta}
-          priority
-        />
+        <RatgeberHero title={meta.title} subtitle={meta.excerpt} footer={heroMeta} priority />
 
         <Breadcrumbs items={breadcrumbs} />
 

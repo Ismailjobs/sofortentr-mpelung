@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { pageTitleSegment, SITE_BRAND } from "@/config/site-brand";
+import {
+  buildSocialMetadata,
+  OG_IMAGE_HEIGHT,
+  OG_IMAGE_WIDTH,
+  OG_LOCALE,
+  ogImageUrl,
+} from "@/config/site-social";
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
-import { RATGEBER_HERO_IMAGE, RATGEBER_PATH } from "@/data/ratgeber/registry";
-
-const OG_LOCALE = "de_AT";
+import { RATGEBER_PATH } from "@/data/ratgeber/registry";
 const ARTICLE_SECTION = "Entrümpelung & Haushaltsauflösung Wien";
 
 export function ratgeberArticleUrl(slug: string): string {
@@ -58,14 +63,15 @@ const INDEX_ROBOTS = {
 export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Metadata {
   const origin = getSiteOrigin();
   const url = ratgeberArticleUrl(article.slug);
-  const imageUrl = `${origin}${RATGEBER_HERO_IMAGE}`;
-  const title = resolveMetaTitle(article);
-  const ogTitle = resolveOgTitle(article);
+  const imageUrl = ogImageUrl();
+  const documentTitle = resolveMetaTitle(article);
+  const shareTitle = resolveOgTitle(article);
   const tags = resolveTags(article);
   const modified = article.updatedAt ?? article.publishedAt;
 
   return {
-    title: pageTitleSegment(title),
+    /** Nur Artikeltitel — ohne Root-`title.template` („Sofort Entrümpelung | …“). */
+    title: { absolute: documentTitle },
     description: article.description,
     keywords: tags.length > 0 ? tags : undefined,
     authors: [{ name: SITE_BRAND, url: origin }],
@@ -84,7 +90,7 @@ export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Meta
       type: "article",
       locale: OG_LOCALE,
       siteName: SITE_BRAND,
-      title: ogTitle,
+      title: shareTitle,
       description: article.description,
       url,
       publishedTime: article.publishedAt,
@@ -94,15 +100,16 @@ export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Meta
       images: [
         {
           url: imageUrl,
-          width: 1920,
-          height: 1080,
-          alt: `${article.title} — ${SITE_BRAND}`,
+          width: OG_IMAGE_WIDTH,
+          height: OG_IMAGE_HEIGHT,
+          alt: article.title,
+          type: "image/webp",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: ogTitle,
+      title: shareTitle,
       description: article.description,
       images: [imageUrl],
     },
@@ -123,8 +130,10 @@ export function buildRatgeberIndexMetadata(): Metadata {
   const description =
     "Praxisnahe Ratgeber zu Entrümpelung, Haushaltsauflösung, Kosten und Ablauf in Wien — von Sofort Entrümpelung.";
 
+  const pageTitle = "Ratgeber — Tipps zu Entrümpelung & Haushaltsauflösung Wien";
+
   return {
-    title: pageTitleSegment("Ratgeber — Tipps zu Entrümpelung & Haushaltsauflösung Wien"),
+    title: pageTitleSegment(pageTitle),
     description,
     robots: INDEX_ROBOTS,
     alternates: {
@@ -134,20 +143,6 @@ export function buildRatgeberIndexMetadata(): Metadata {
         "application/rss+xml": ratgeberFeedUrl(),
       },
     },
-    openGraph: {
-      type: "website",
-      locale: OG_LOCALE,
-      siteName: SITE_BRAND,
-      title: `Ratgeber — ${SITE_BRAND}`,
-      description,
-      url,
-      images: [{ url: `${origin}${RATGEBER_HERO_IMAGE}` }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `Ratgeber — ${SITE_BRAND}`,
-      description,
-      images: [`${origin}${RATGEBER_HERO_IMAGE}`],
-    },
+    ...buildSocialMetadata({ title: pageTitle, description, path: RATGEBER_PATH }),
   };
 }

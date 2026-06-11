@@ -4,6 +4,7 @@ import Script from "next/script";
 import CallFAB from "@/components/CallFAB";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAnalyticsPageViews from "@/components/GoogleAnalyticsPageViews";
+import { buildSocialMetadata } from "@/config/site-social";
 import { getSiteOrigin } from "@/config/site-url";
 import { rootLayoutTitle } from "@/config/site-brand";
 import { HASH_SCROLL_SCRIPT } from "@/lib/hash-scroll";
@@ -18,11 +19,17 @@ const montserrat = Montserrat({
   adjustFontFallback: true,
 });
 
+const ROOT_DESCRIPTION =
+  "Schnelle, zuverlässige und günstige Räumung in Wien — Wohnung, Haus, Keller und mehr inklusive Entsorgung.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
   title: rootLayoutTitle(),
-  description:
-    "Schnelle, zuverlässige und günstige Räumung in Wien — Wohnung, Haus, Keller und mehr inklusive Entsorgung.",
+  description: ROOT_DESCRIPTION,
+  ...buildSocialMetadata({
+    title: "Entrümpelung in Wien",
+    description: ROOT_DESCRIPTION,
+  }),
 };
 
 export default function RootLayout({

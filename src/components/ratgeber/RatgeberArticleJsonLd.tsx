@@ -1,7 +1,7 @@
 import { SITE_BRAND } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
-import { RATGEBER_HERO_IMAGE } from "@/data/ratgeber/registry";
+import { OG_IMAGE_PATH } from "@/config/site-social";
 import {
   ratgeberArticleUrl,
   ratgeberIndexUrl,
@@ -17,7 +17,7 @@ type Props = {
 export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
   const origin = getSiteOrigin();
   const url = ratgeberArticleUrl(article.slug);
-  const image = `${origin}${RATGEBER_HERO_IMAGE}`;
+  const image = `${origin}${OG_IMAGE_PATH}`;
   const blogId = `${ratgeberIndexUrl()}#blog`;
   const webPageId = `${url}#webpage`;
   const blogPostingId = `${url}#article`;
