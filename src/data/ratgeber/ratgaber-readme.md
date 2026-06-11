@@ -132,16 +132,16 @@
 
 ---
 
-## Artikel 2 — MA 48 vs. Entrümpelungsfirma in Wien
+## Artikel 2 — Entrümpelung in Wien: MA 48 oder Räumungsfirma?
 
 | Feld | Wert |
 |------|------|
 | **Slug** | `ma-48-vs-entruempelungsfirma-wien` |
 | **URL** | `/ratgeber/ma-48-vs-entruempelungsfirma-wien` |
 | **Datei** | `src/components/ratgeber/articles/ma-48-vs-entruempelungsfirma-wien.tsx` |
-| **H1** | MA 48 vs. Entrümpelungsfirma in Wien |
-| **SEO-Titel** | MA 48 vs. Entrümpelungsfirma Wien — Logistikvergleich 2026 |
-| **OG-Titel** | Eigenregie MA 48 oder Räumungsfirma? Entscheidungshilfe Wien |
+| **H1** | Entrümpelung in Wien: MA 48 oder Räumungsfirma? |
+| **SEO-Titel** | Entrümpelung Wien — MA 48 Eigenregie oder Räumungsfirma? Ratgeber 2026 |
+| **OG-Titel** | MA 48 oder Räumungsfirma? Entscheidungshilfe für Wien |
 | **Veröffentlicht** | 2024-11-05 |
 | **Aktualisiert** | 2026-02-18 |
 | **Lesezeit** | ca. 8 Min. |

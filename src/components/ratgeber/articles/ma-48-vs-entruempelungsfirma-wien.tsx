@@ -19,14 +19,14 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "ma-48-vs-entruempelungsfirma-wien",
-  title: "MA 48 vs. Entrümpelungsfirma in Wien",
-  seoTitle: "MA 48 vs. Entrümpelungsfirma Wien — Logistikvergleich 2026",
-  ogTitle: "Eigenregie MA 48 oder Räumungsfirma? Entscheidungshilfe Wien",
+  title: "Entrümpelung in Wien: MA 48 oder Räumungsfirma?",
+  seoTitle: "Entrümpelung Wien — MA 48 Eigenregie oder Räumungsfirma? Ratgeber 2026",
+  ogTitle: "MA 48 oder Räumungsfirma? Entscheidungshilfe für Wien",
   focusKeyword: "MA 48 Entrümpelung Wien",
   description:
-    "MA 48 Eigenregie oder professionelle Räumungsfirma in Wien? Logistikvergleich, Kostenfallen, Wertausgleich und Checkliste für die richtige Entscheidung 2026.",
+    "Wann eignet sich die MA 48 in Eigenregie, wann eine professionelle Räumungsfirma in Wien? Orientierung zu Ablauf, Kosten, Wertausgleich und Checkliste — neutral erklärt.",
   excerpt:
-    "Logistischer Vergleich: Eigenregie via MA 48 vs. externe Projektabwicklung — wann lohnt sich was in Wien?",
+    "Wann lohnt sich Eigenregie über die MA 48, wann eine professionelle Räumungsfirma? Orientierung für Wien — ohne Druck, mit klarer Entscheidungshilfe.",
   publishedAt: "2024-11-05",
   updatedAt: "2026-02-18",
   keywords: [
@@ -162,7 +162,7 @@ export default function Ma48VsEntruempelungsfirmaWien() {
 
       <RatgeberH2>Operativer Leistungsabgleich: Matrix der Bereitstellung</RatgeberH2>
 
-      <RatgeberTableWrap caption="MA 48 Eigenregie vs. professionelles Projektmanagement">
+      <RatgeberTableWrap caption="Eigenregie (MA 48) und professionelle Projektabwicklung im Überblick">
         <RatgeberThead>
           <tr>
             <RatgeberTh>Parameter</RatgeberTh>
