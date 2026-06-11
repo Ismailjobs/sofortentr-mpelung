@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
 import { getSiteOrigin } from "@/config/site-url";
-import { DATENSCHUTZ_PATH, IMPRESSUM_PATH, SERVICES } from "@/data/site-content";
+import { DATENSCHUTZ_PATH, IMPRESSUM_PATH, RATGEBER_PATH, SERVICES } from "@/data/site-content";
 import { getAllLocationSlugs } from "@/data/location-landings";
+import { getAllRatgeberSlugs, getRatgeberArticle } from "@/data/ratgeber/registry";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteOrigin();
   const lastModified = new Date();
 
-  const staticPaths = ["", "/leistungen", "/preise", "/partner", DATENSCHUTZ_PATH, IMPRESSUM_PATH];
+  const staticPaths = ["", "/leistungen", RATGEBER_PATH, "/preise", "/partner", DATENSCHUTZ_PATH, IMPRESSUM_PATH];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${base}${path || "/"}`,
@@ -33,6 +34,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     });
   }
+
+  for (const slug of getAllRatgeberSlugs()) {
+    const article = getRatgeberArticle(slug);
+    const articleModified = article?.updatedAt ?? article?.publishedAt;
+    entries.push({
+      url: `${base}${RATGEBER_PATH}/${slug}`,
+      lastModified: articleModified ?? lastModified,
+      changeFrequency: article?.updatedAt ? "weekly" : "monthly",
+      priority: 0.78,
+    });
+  }
+
+  entries.push({
+    url: `${base}${RATGEBER_PATH}/feed.xml`,
+    lastModified,
+    changeFrequency: "daily",
+    priority: 0.5,
+  });
 
   return entries;
 }

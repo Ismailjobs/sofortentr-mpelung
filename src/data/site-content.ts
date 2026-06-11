@@ -57,6 +57,8 @@ export const IMPRESSUM_PATH = "/impressum";
 
 export const PARTNER_PATH = "/partner";
 
+export const RATGEBER_PATH = "/ratgeber";
+
 /** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
 export const HOME_FAQ_HREF = "/#faq";
 export const HOME_KONTAKT_HREF = "/#kontakt";
@@ -64,6 +66,7 @@ export const HOME_KONTAKT_HREF = "/#kontakt";
 export const NAV_LINKS: NavLink[] = [
   { label: "Über uns", href: "/#ueber-uns" },
   { label: "Leistungen", href: "/leistungen" },
+  { label: "Ratgeber", href: RATGEBER_PATH },
   { label: "Preise", href: "/preise" },
   { label: "Kontakt", href: HOME_KONTAKT_HREF },
   { label: "FAQ", href: HOME_FAQ_HREF },
@@ -496,6 +499,7 @@ export const FOOTER_LEISTUNGEN: FooterLink[] = [
 ];
 
 export const FOOTER_SERVICE: FooterLink[] = [
+  { label: "Ratgeber", href: RATGEBER_PATH },
   { label: "Preise", href: "/preise" },
   { label: "FAQ", href: HOME_FAQ_HREF },
   { label: "Kontakt", href: HOME_KONTAKT_HREF },

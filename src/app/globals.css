@@ -201,6 +201,47 @@ body {
   }
 }
 
+/* Ratgeber: horizontale Tabellen auf Mobil — Scroll-Hinweis */
+.ratgeber-table-scroll {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 122, 0, 0.45) transparent;
+}
+
+.ratgeber-table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.ratgeber-table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgba(255, 122, 0, 0.45);
+}
+
+.ratgeber-table-scroll-fade {
+  background: linear-gradient(to left, rgb(255 255 255 / 0.98) 0%, rgb(255 255 255 / 0.55) 45%, transparent 100%);
+}
+
+.ratgeber-table-scroll-hint {
+  animation: ratgeber-scroll-hint 2.4s ease-in-out infinite;
+}
+
+@keyframes ratgeber-scroll-hint {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ratgeber-table-scroll-hint {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 .title-split-under-550 {
   display: none;
 }
