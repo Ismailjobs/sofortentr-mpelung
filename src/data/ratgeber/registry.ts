@@ -11,9 +11,27 @@ export { RATGEBER_PATH };
  * 3. Unten importieren und in `RATGEBER_ARTICLES` eintragen
  */
 
+import EntruempelungGemeindebauWienerWohnen, {
+  meta as entruempelungGemeindebauMeta,
+} from "@/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen";
+import EntruempelungWienSteuerAbsetzen, {
+  meta as entruempelungWienSteuerAbsetzenMeta,
+} from "@/components/ratgeber/articles/entruempelung-wien-steuer-absetzen";
+import GratisRaeumungWienWertanrechnung, {
+  meta as gratisRaeumungWienMeta,
+} from "@/components/ratgeber/articles/gratis-raeumung-wien-wertanrechnung";
+import WohnungsaufloesungNachTodesfallWien, {
+  meta as wohnungsaufloesungNachTodesfallMeta,
+} from "@/components/ratgeber/articles/wohnungsaufloesung-nach-todesfall-wien";
 import Ma48VsEntruempelungsfirmaWien, {
   meta as ma48VsEntruempelungsfirmaWienMeta,
 } from "@/components/ratgeber/articles/ma-48-vs-entruempelungsfirma-wien";
+import MessieWohnungRaeumenWien, {
+  meta as messieWohnungRaeumenWienMeta,
+} from "@/components/ratgeber/articles/messie-wohnung-raeumen-wien";
+import MoebelVerkaufenWienWillhabenWertanrechnung, {
+  meta as moebelVerkaufenWienMeta,
+} from "@/components/ratgeber/articles/moebel-verkaufen-wien-willhaben-wertanrechnung";
 import WasKostetEntruempelungWien, {
   meta as wasKostetEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/was-kostet-entruempelung-wien";
@@ -23,6 +41,12 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(messieWohnungRaeumenWienMeta, MessieWohnungRaeumenWien),
+  register(entruempelungGemeindebauMeta, EntruempelungGemeindebauWienerWohnen),
+  register(wohnungsaufloesungNachTodesfallMeta, WohnungsaufloesungNachTodesfallWien),
+  register(gratisRaeumungWienMeta, GratisRaeumungWienWertanrechnung),
+  register(entruempelungWienSteuerAbsetzenMeta, EntruempelungWienSteuerAbsetzen),
+  register(moebelVerkaufenWienMeta, MoebelVerkaufenWienWillhabenWertanrechnung),
   register(ma48VsEntruempelungsfirmaWienMeta, Ma48VsEntruempelungsfirmaWien),
   register(wasKostetEntruempelungWienMeta, WasKostetEntruempelungWien),
 ];

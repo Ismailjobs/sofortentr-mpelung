@@ -201,9 +201,12 @@ body {
   }
 }
 
-/* Ratgeber: horizontale Tabellen auf Mobil — Scroll-Hinweis */
+/* Ratgeber: Tabelle horizontal wischen, Seite weiter vertikal scrollen */
 .ratgeber-table-scroll {
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 122, 0, 0.45) transparent;
 }

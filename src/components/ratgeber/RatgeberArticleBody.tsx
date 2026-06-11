@@ -65,6 +65,15 @@ export function RatgeberOl({ children }: { children: ReactNode }) {
   );
 }
 
+export function RatgeberBadge({ label, note }: { label: string; note?: string }) {
+  return (
+    <aside className="!my-6 rounded-xl border border-black/[0.06] bg-brand-muted/60 px-5 py-4 sm:px-6">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-orange">{label}</p>
+      {note ? <p className="mt-2 text-sm leading-relaxed text-neutral-600">{note}</p> : null}
+    </aside>
+  );
+}
+
 export function RatgeberCtaBox({ children }: { children: ReactNode }) {
   return (
     <aside className="!my-10 rounded-2xl border border-brand-orange/20 bg-brand-orange/[0.06] p-6 ring-1 ring-brand-orange/10 sm:p-8">
@@ -83,7 +92,7 @@ export function RatgeberTableWrap({
   return (
     <figure className="!my-8">
       <div className="relative overflow-hidden rounded-xl border border-black/[0.06]">
-        <div className="ratgeber-table-scroll overflow-x-auto overscroll-x-contain touch-pan-x">
+        <div className="ratgeber-table-scroll overflow-x-auto">
           <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
             {caption ? (
               <caption className="bg-brand-muted/80 px-4 py-3 text-left text-sm font-bold text-brand-dark sm:px-5">
@@ -100,7 +109,7 @@ export function RatgeberTableWrap({
       </div>
       <figcaption className="ratgeber-table-scroll-hint mt-2.5 flex items-center justify-center gap-2 text-xs font-medium text-neutral-500 md:hidden">
         <MoveHorizontal className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden strokeWidth={2} />
-        <span>Wischen für vollständige Tabelle</span>
+        <span>Tabelle wischen · Seite normal nach oben/unten scrollen</span>
       </figcaption>
     </figure>
   );

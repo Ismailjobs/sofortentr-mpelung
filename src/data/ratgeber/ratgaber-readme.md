@@ -3,7 +3,7 @@
 > Pflege-Dokumentation: Jeder veröffentlichte Ratgeber-Artikel mit URL, Inhaltsschwerpunkten und Ziel-Keywords.  
 > Bei neuen Artikeln: Eintrag hier ergänzen + `registry.ts` aktualisieren.
 
-**Stand:** Implementierung im Repo — 2 veröffentlichte Artikel
+**Stand:** Implementierung im Repo — 8 veröffentlichte Artikel
 
 ---
 
@@ -213,6 +213,282 @@
 - **Intent:** Informational / Commercial Investigation
 - **Wer sucht:** Eigentümer, Erben, Hausverwaltungen vor Entscheidung MA 48 vs. Firma
 - **Ziel:** Entscheidungshilfe, Vertrauen in professionelle Abwicklung, Kontaktanfrage
+
+---
+
+## Artikel 3 — Möbel verkaufen in Wien: Willhaben oder Sofort-Wertanrechnung?
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `moebel-verkaufen-wien-willhaben-wertanrechnung` |
+| **URL** | `/ratgeber/moebel-verkaufen-wien-willhaben-wertanrechnung` |
+| **Datei** | `src/components/ratgeber/articles/moebel-verkaufen-wien-willhaben-wertanrechnung.tsx` |
+| **H1** | Möbel verkaufen in Wien: Willhaben oder Sofort-Wertanrechnung? |
+| **SEO-Titel** | Möbel verkaufen Wien — Willhaben oder Wertanrechnung bei Entrümpelung? |
+| **OG-Titel** | Möbel verkaufen in Wien: Willhaben oder Sofort-Wertanrechnung |
+| **Veröffentlicht** | 2024-10-22 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 7 Min. |
+
+### Primäres Fokus-Keyword
+
+`Möbel verkaufen Wien`
+
+### Sekundäre Keywords
+
+| Keyword |
+|---------|
+| Möbel verkaufen Wien |
+| Willhaben Möbel verkaufen |
+| Wertanrechnung Entrümpelung |
+| Möbelankauf Wien |
+| Haushaltsauflösung Wien Möbel |
+| Entrümpelung mit Wertausgleich |
+| Möbel privat verkaufen Österreich |
+
+### Inhalt & Struktur (H2/H3)
+
+1. **Marktplatz-Check: Willhaben** — Vorteile / Nachteile
+2. **Sofort-Wertanrechnung** — Vorteile / Nachteile
+3. **Komfort und Eigenaufwand im Überblick** — Vergleichstabelle (5 Kriterien)
+4. **Welche Möbel für Wertanrechnung?** — Bullet-Liste
+5. **Kombi-Strategie** — Willhaben + Wertanrechnung
+6. **Fazit** + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/wertausgleich`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/ankauf`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/#kontakt-formular`
+
+### FAQ (4 Fragen)
+
+1. Lohnt sich Willhaben in Wien?
+2. Was ist Sofort-Wertanrechnung?
+3. Kann Entrümpelung kostenlos werden?
+4. Kombination Willhaben + Wertanrechnung?
+
+---
+
+## Artikel 4 — Entrümpelung in Wien von der Steuer absetzen
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-wien-steuer-absetzen` |
+| **URL** | `/ratgeber/entruempelung-wien-steuer-absetzen` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-wien-steuer-absetzen.tsx` |
+| **H1** | Entrümpelung in Wien von der Steuer absetzen: Leitfaden 2026 |
+| **SEO-Titel** | Entrümpelung in Wien von der Steuer absetzen |
+| **OG-Titel** | Entrümpelung Wien steuerlich absetzen — Praxis-Leitfaden 2026 |
+| **Veröffentlicht** | 2024-07-14 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung Steuer absetzen Wien`
+
+### Sekundäre Keywords
+
+| Keyword |
+|---------|
+| Entrümpelung Steuer absetzen Wien |
+| Haushaltsauflösung steuerlich absetzen |
+| Wohnungsauflösung Steuer Österreich |
+| Entrümpelung Rechnung aufteilen |
+| Verlassenschaft Steuer Wien |
+| Lohnkosten Entrümpelung absetzen |
+| Entsorgungskosten Steuer |
+
+### Besonderheiten
+
+- Rozet: „Praxis-Leitfaden 2026“ + Nachweis-Zeile (`RatgeberBadge`)
+- Rechtlicher Hinweis (keine Steuerberatung)
+- Sicherheits-Matrix-Tabelle (5 Prüfpunkte)
+- 4-Schritte-Praxisablauf
+
+### Interne Verlinkung
+
+- `/leistungen/wertausgleich`
+- `/leistungen/verlassenschaft`
+- `/leistungen/haushaltsaufloesung`
+- `/#kontakt-formular`
+
+### FAQ (4 Fragen)
+
+1. Kann ich Entrümpelungskosten absetzen?
+2. Warum Lohnkosten und Entsorgung trennen?
+3. Was gehört auf die Rechnung?
+4. Ersetzt der Ratgeber Steuerberatung?
+
+---
+
+## Artikel 5 — Gratis Räumung in Wien mit Wertanrechnung
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `gratis-raeumung-wien-wertanrechnung` |
+| **URL** | `/ratgeber/gratis-raeumung-wien-wertanrechnung` |
+| **Datei** | `src/components/ratgeber/articles/gratis-raeumung-wien-wertanrechnung.tsx` |
+| **H1** | Gratis Räumung in Wien mit Wertanrechnung |
+| **SEO-Titel** | Gratis Räumung in Wien durch Wertanrechnung: So geht's |
+| **OG-Titel** | Gratis Räumung Wien — Wertanrechnung von Möbeln & Antiquitäten |
+| **Veröffentlicht** | 2024-06-20 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Gratis Räumung Wien`
+
+### Sekundäre Keywords
+
+| Keyword |
+|---------|
+| Gratis Räumung Wien |
+| kostenlose Wohnungsauflösung Wien |
+| Wertanrechnung Entrümpelung |
+| Entrümpelung mit Wertausgleich |
+| Wertausgleich Wien |
+| Haushaltsauflösung gratis |
+| Antiquitäten Ankauf Wien |
+| Null Euro Räumung Wien |
+
+### Inhalt & Struktur
+
+1. **Das Prinzip des fairen Wertausgleichs** — inkl. Praxis-Szenarien Wien
+2. **Schritt für Schritt zum Null-Tarif** (4 Schritte)
+3. **Welche Objekte hohen Wertausgleich sichern**
+4. **Wenn der Wert nicht ausreicht** — Teilanrechnung, Trennung, Ratenzahlung
+5. **FAQ** (3 Fragen + Fazit)
+6. CTA
+
+### Interne Verlinkung
+
+- `/leistungen/wertausgleich`
+- `/leistungen/ankauf`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wohnungsaufloesung`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/ratgeber/moebel-verkaufen-wien-willhaben-wertanrechnung`
+- `/#kontakt-formular`
+
+### FAQ (Schema + im Text)
+
+1. Wann 100 % kostenlos?
+2. Einzelankauf ohne Räumung?
+3. Wie wird der Wert ermittelt?
+4. Wertüberschuss?
+
+---
+
+## Artikel 6 — Wohnungsauflösung nach Todesfall Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `wohnungsaufloesung-nach-todesfall-wien` |
+| **URL** | `/ratgeber/wohnungsaufloesung-nach-todesfall-wien` |
+| **Datei** | `src/components/ratgeber/articles/wohnungsaufloesung-nach-todesfall-wien.tsx` |
+| **H1** | Wohnungsauflösung nach einem Todesfall in Wien: Praxis-Ratgeber |
+| **SEO-Titel** | Wohnungsauflösung nach Todesfall Wien — Leitfaden für Erben 2026 |
+| **Veröffentlicht** | 2024-05-08 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Wohnungsauflösung nach Todesfall Wien`
+
+### Inhalt
+
+- Rechtliche Ausgangslage (Gerichtskommissär)
+- 3-Phasen-Plan
+- Inventarprotokoll
+- Checkliste A/B/C (11 Punkte)
+- Typische Fehler + 3 Fallbeispiele
+- Rechtlicher Hinweis + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/verlassenschaft`
+- `/leistungen/nachlass`
+- `/leistungen/wertausgleich`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 7 — Entrümpelung im Gemeindebau / Wiener Wohnen
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-gemeindebau-wiener-wohnen` |
+| **URL** | `/ratgeber/entruempelung-gemeindebau-wiener-wohnen` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen.tsx` |
+| **H1** | Entrümpelung im Gemeindebau: Tipps für die Rückgabe an Wiener Wohnen |
+| **SEO-Titel** | Entrümpelung im Gemeindebau: Wiener Wohnen Übergabe-Tipps |
+| **Veröffentlicht** | 2024-06-12 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung Gemeindebau Wien`
+
+### Inhalt
+
+- Rückbau-Vorgaben (Böden, Wände, Einbauten)
+- Logistik (Halteverbotszone, Tragewege, Aufzug)
+- Eigenregie vs. Fachbetrieb
+- Übergabe-Checkliste (6 Punkte)
+- Fazit + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 8 — Messie-Wohnung räumen Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `messie-wohnung-raeumen-wien` |
+| **URL** | `/ratgeber/messie-wohnung-raeumen-wien` |
+| **Datei** | `src/components/ratgeber/articles/messie-wohnung-raeumen-wien.tsx` |
+| **H1** | Messie-Wohnung räumen in Wien: Ablauf, Diskretion und Hygiene |
+| **SEO-Titel** | Messie-Wohnung räumen in Wien: Ablauf & Diskretion |
+| **Veröffentlicht** | 2024-07-18 |
+| **Aktualisiert** | 2026-03-01 |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Messie-Wohnung räumen Wien`
+
+### Inhalt
+
+- Diskretion & Scham-Thematik
+- Strategischer Ablauf (4 Schritte)
+- Gesundheitsrisiken & Arbeitsschutz
+- Wiederherstellung (Rückbau, Desinfektion, Ozon)
+- Kosten + Fazit + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/messie`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/#kontakt-formular`
 
 ---
 

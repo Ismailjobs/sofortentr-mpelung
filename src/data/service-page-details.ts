@@ -1,6 +1,9 @@
 import type { ServiceCardData } from "@/data/site-content";
 import { SERVICES } from "@/data/site-content";
 
+/** Letzte inhaltliche Aktualisierung der Leistungsseiten — für Sitemap-`lastmod`. */
+export const LEISTUNGEN_CONTENT_UPDATED_AT = "2026-06-11";
+
 export type ServiceFaqItem = {
   question: string;
   answer: string;
@@ -17,7 +20,7 @@ export type ServiceDetailPageData = ServiceCardData & ServicePageExtra;
 const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
   hausentruempelung: {
     introParagraphs: [
-      "Ob Einfamilienhaus, Reihenhaus oder Mehrparteienhaus: Wir übernehmen die komplette oder teilweise Hausräumung — von Kellergeschoss bis Dachboden, inklusive Abtransport und fachgerechter Entsorgung.",
+      "Ob Einfamilienhaus, Reihenhaus oder Mehrparteienhaus: Wir übernehmen die vollständige oder teilweise Hausräumung — von Kellergeschoss bis Dachboden, inklusive Abtransport und fachgerechter Entsorgung.",
       "Nach einer kostenlosen Besichtigung erhalten Sie einen verbindlichen Festpreis. So behalten Sie Kosten und Zeitplan von Anfang an im Griff — ohne versteckte Zusatzposten.",
     ],
     includedBullets: [
@@ -57,7 +60,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   wohnungsentruempelung: {
     introParagraphs: [
-      "Wohnungsentrümpelungen sind oft zeitkritisch — z. B. bei Übergabeterminen, Nachlass oder Umzug. Wir arbeiten effizient, rücksichtsvoll gegenüber Nachbarn und mit sauberer Übergabe der Wohnung.",
+      "Wohnungsentrümpelungen sind oft zeitkritisch — z. B. bei Übergabeterminen, Nachlass oder Umzug. Wir arbeiten zügig, rücksichtsvoll gegenüber Nachbarn und mit sauberer Übergabe der Wohnung.",
       "Ob komplette Leerung oder Teilbereiche: Nach Objektbesichtigung erhalten Sie einen klaren Festpreis und einen fairen Zeitplan.",
     ],
     includedBullets: [
@@ -97,7 +100,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   kellerentruempelung: {
     introParagraphs: [
-      "Keller und Abteile sammeln über Jahre Kartons, alte Möbel und Geräte. Wir schaffen Platz — strukturiert, mit klarem Festpreis und sauberer Freilegung der Fläche für Sie oder die Hausgemeinschaft.",
+      "Keller und Abteile sammeln über Jahre Kartons, alte Möbel und Geräte. Wir schaffen Platz — strukturiert, mit klarem Festpreis und sauberer Freilegung der Fläche für Sie oder die Hausgemeinschaft in Wien.",
       "Enge Zugänge und Treppen sind im Aufwand berücksichtigt; nach Besichtigung wissen Sie genau, was ansteht.",
     ],
     includedBullets: [
@@ -137,7 +140,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   lagerentruempelung: {
     introParagraphs: [
-      "Lager, Kleinlager und Firmendepots müssen manchmal schnell frei werden — z. B. bei Auszug, Neuvermietung oder Bestandsbereinigung. Wir sortieren, verladen und entsorgen strukturiert, damit die Fläche wieder nutzbar ist.",
+      "Lager, Kleinlager und Firmendepots müssen manchmal schnell frei werden — z. B. bei Auszug, Neuvermietung oder Bestandsbereinigung. Wir sortieren, verladen und entsorgen strukturiert, damit die Fläche wieder nutzbar wird.",
       "Der Festpreis basiert auf Besichtigung: Volumen, Hubhöhe, Stapler-Zugang und Entsorgungsmix werden realistisch bewertet.",
     ],
     includedBullets: [
@@ -177,7 +180,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   bueroentruempelung: {
     introParagraphs: [
-      "Büroflächen, Coworking oder Praxisräume sollen oft diskret und termingenau geleert werden — inklusive Aktenresten, Möbeln und Technik. Wir achten auf saubere Trennung und verlässliche Übergabe.",
+      "Büroflächen, Coworking oder Praxisräume sollen oft diskret und termingenau geleert werden — inklusive Aktenresten, Möbeln und Technik. Wir achten auf saubere Trennung und verlässliche Übergabe in Wien.",
       "Nach Besichtigung erhalten Sie einen Festpreis; sensible Bereiche behandeln wir nach Ihren Vorgaben.",
     ],
     includedBullets: [
@@ -217,7 +220,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   garagenentruempelung: {
     introParagraphs: [
-      "Garagen und Stellplätze werden häufig zur langjährigen Lagerstätte. Wir räumen schnell und gründlich, damit Sie wieder ein- und ausfahren oder die Fläche neu nutzen können.",
+      "Garagen und Stellplätze werden häufig zur langjährigen Lagerstätte. Wir räumen zügig und gründlich, damit Sie wieder ein- und ausfahren oder die Fläche neu nutzen können.",
       "Festpreis nach Besichtigung — inklusive schwerer Teile und fachgerechter Entsorgung.",
     ],
     includedBullets: [
@@ -257,7 +260,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   dachbodenentruempelung: {
     introParagraphs: [
-      "Dachböden sind oft schwer zugänglich und über Jahre voll geworden. Wir arbeiten sicher und strukturiert — mit Schutz sensibler Bereiche und realistischer Zeitplanung über enge Zugänge.",
+      "Dachböden sind oft schwer zugänglich und über Jahre voll geworden. Wir arbeiten sicher und strukturiert — mit Schutz sensibler Bereiche und realistischer Zeitplanung bei engen Zugängen.",
       "Nach Begutachtung vor Ort: Festpreis und klare Aussage, wie viele Einsatzkräfte und welche Logistik sinnvoll sind.",
     ],
     includedBullets: [
@@ -297,7 +300,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   "messie-entruempelung": {
     introParagraphs: [
-      "Eine Messie-Wohnung entrümpeln — oder gezielt Messie Wohnung reinigen — ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und einen respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
+      "Eine Messie-Wohnung entrümpeln — oder gezielt Messie Wohnung reinigen — ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
       "Als Team für Messie Entrümpelung planen wir vor Ort: Welche Räume zuerst, welche Etappen sinnvoll sind und wie die Messie-Wohnung Räumung termingerecht abgeschlossen werden kann — ohne zusätzlichen Stress.",
       "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Messie Entrümpelung inklusive Abtransport, fachgerechter Entsorgung und besenreiner Übergabe — transparent und ohne Überraschungen.",
     ],
@@ -350,7 +353,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   gartenentruempelung: {
     introParagraphs: [
-      "Gartenhäuser, Geräteschuppen und Außenbereiche sammeln Grünabfallreste, alte Geräte und Möbel. Wir räumen auf, trennen Fraktionen und entsorgen fachgerecht — ideal vor Neuplanung oder Verkauf.",
+      "Gartenhäuser, Geräteschuppen und Außenbereiche sammeln Grünabfallreste, alte Geräte und Möbel. Wir räumen auf, trennen Fraktionen und entsorgen fachgerecht — ideal vor Neuplanung oder Verkauf in Wien.",
       "Festpreis nach Ansicht vor Ort: Zufahrten, Wege und Volumen fließen ein.",
     ],
     includedBullets: [
@@ -390,7 +393,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   verlassenschaft: {
     introParagraphs: [
-      "Verlassenschaft entrümpeln steht oft unter Zeitdruck: Übergabe an Erben, Neuvermietung, Verkauf oder Abwicklung durch die Verwaltung muss termingerecht klappen — in Wien und Umgebung.",
+      "Verlassenschaft entrümpeln steht oft unter Zeitdruck: Übergabe an Erben, Neuvermietung, Verkauf oder Abwicklung durch die Verwaltung muss termingerecht klappen — in Wien und der Region.",
       "Wir übernehmen die Verlassenschaftsentrümpelung strukturiert und diskret: von der kostenlosen Besichtigung über Sortierung und Abtransport bis zur besenreinen Übergabe — alles aus einer Hand.",
       "Ob Wohnung, Reihenhaus oder größeres Objekt: Verlassenschaft entrümpeln planen wir mit verbindlichem Festpreis, damit Sie Kosten und Ablauf von Anfang an kennen.",
     ],
@@ -443,7 +446,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   nachlass: {
     introParagraphs: [
-      "Entrümpelung nach Todesfall verlangt Diskretion und einen Partner, der Termine und Erwartungen der Beteiligten ernst nimmt — ob als Erbe, Testamentsvollstrecker oder Verwaltung in Wien.",
+      "Entrümpelung nach Todesfall verlangt Diskretion und einen Partner, der Termine und Erwartungen der Beteiligten ernst nimmt — ob als Erbe, Testamentsvollstrecker oder Verwaltung.",
       "Wir begleiten die Nachlassentrümpelung von der Besichtigung bis zur besenreinen Übergabe: Sortierung, Abtransport, fachgerechte Entsorgung und klare Kommunikation mit allen Beteiligten.",
       "Ob komplette Wohnung, Haus oder einzelne Räume: Nachlass entrümpeln erhalten Sie zum verbindlichen Festpreis — transparent geplant, ohne versteckte Zusatzposten.",
     ],
@@ -496,7 +499,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   haushaltsaufloesung: {
     introParagraphs: [
-      "Eine Haushaltsauflösung und Entrümpelung bündelt alles, was bei einer kompletten Haushaltsauflösung anfällt: Sortieren, Verladen, Abtransport und fachgerechte Entsorgung — in Wien und Umgebung.",
+      "Eine Haushaltsauflösung und Entrümpelung bündelt alles, was bei einer kompletten Haushaltsauflösung anfällt: Sortieren, Verladen, Abtransport und fachgerechte Entsorgung — in Wien und der Region.",
       "Typische Anlässe: Umzug ins Pflegeheim, Erbschaft, Neuvermietung, Verkauf oder Entrümpelung vor Renovierung. Wir übernehmen die Haushaltsauflösung termingerecht und besenrein.",
       "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Haushaltsauflösung und Entrümpelung — inklusive Anfahrt und Entsorgung im vereinbarten Umfang.",
     ],
@@ -544,7 +547,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   wohnungsaufloesung: {
     introParagraphs: [
-      "Wie läuft eine Wohnungsauflösung ab? Zuerst klären wir Umfang und Termin — dann räumen wir effizient, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
+      "Wie läuft eine Wohnungsauflösung ab? Zuerst klären wir Umfang und Termin — dann räumen wir zügig, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
       "Eine Wohnungsauflösung und Entrümpelung ist in Wien meist streng terminiert — Mietende, Käufertermin, Verkauf oder Erbschaft lassen wenig Spielraum.",
       "Nach Objektbesichtigung erhalten Sie einen verbindlichen Festpreis für die Wohnungsauflösung — Wohnungsauflösung und Entrümpelung transparent, ohne versteckte Zusatzkosten.",
     ],
@@ -597,7 +600,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   erbschaftshaus: {
     introParagraphs: [
-      "Erbschaftshaus entrümpeln oder ein geerbtes Haus entrümpeln bedeutet oft mehr als eine Wohnung: Keller, Dachboden, Garage und jahrzehntelanger Hausrat — in Wien und Umgebung ein großes Organisationsprojekt für Erben.",
+      "Erbschaftshaus entrümpeln oder ein geerbtes Haus entrümpeln bedeutet oft mehr als eine Wohnung: Keller, Dachboden, Garage und jahrzehntelanger Hausrat — in Wien ein großes Organisationsprojekt für Erben.",
       "Wir unterstützen Sie beim Haus entrümpeln nach Erbschaft ebenso wie bei der Wohnung entrümpeln nach Todesfall — strukturiert, diskret und mit einem verbindlichen Festpreis nach Besichtigung.",
       "Ob Einfamilienhaus, Reihenhaus oder Mehrparteien-Objekt: Das Erbschaftshaus planen wir mit klarer Zeitleiste, Abstimmung aller Erben und besenreiner Übergabe für Verkauf, Vermietung oder Neuverteilung.",
     ],
@@ -650,7 +653,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   wertausgleich: {
     introParagraphs: [
-      "Entrümpelung mit Wertausgleich ist die faire Alternative zum „alles entsorgen“: Verwertbare Möbel, Geräte, Werkzeuge oder Sammlungen rechnen wir realistisch gegen den Festpreis — in Wien und Umgebung.",
+      "Entrümpelung mit Wertausgleich ist die faire Alternative zum „alles entsorgen“: Verwertbare Möbel, Geräte, Werkzeuge oder Sammlungen rechnen wir realistisch gegen den Festpreis — in Wien und der Region.",
       "Besonders nach Erbschaft oder bei großen Haushalten steht noch brauchbarer Hausrat im Weg. Entrümpelung mit Wertausgleich senkt Ihre Kosten, ohne dass Sie selbst Verkaufskanäle organisieren müssen.",
       "Nach Besichtigung sehen Sie schriftlich, welcher Wertausgleich möglich ist — danach der verbindliche Endpreis für die komplette Entrümpelung inklusive Abtransport und besenreiner Übergabe.",
     ],
@@ -698,7 +701,7 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   ankauf: {
     introParagraphs: [
-      "Entrümpelung mit Ankauf vereint Räumung und Verwertung in einem Auftrag: Wir räumen den Haushalt und kaufen auf Wunsch Antiquitäten, Antik, Schmuck, Modeschmuck, Kameras und ausgewählte Altwaren direkt an — in Wien und Umgebung.",
+      "Entrümpelung mit Ankauf vereint Räumung und Verwertung in einem Auftrag: Wir räumen den Haushalt und kaufen auf Wunsch Antiquitäten, Antik, Schmuck, Modeschmuck, Kameras und ausgewählte Altwaren direkt an — in Wien und der Region.",
       "Ob Entrümpelung und Altwaren Ankauf nach Erbschaft oder gezielter Schmuck Ankauf in einer Wohnung: Nach Besichtigung erhalten Sie ein Gesamtangebot — Festpreis für die Räumung minus realistischer Ankaufswert.",
       "Sie sparen Zeit, mehrere Kontakte und Abstimmungsaufwand. Entrümpelung mit Ankauf heißt bei uns: ein Team, ein Termin, besenreine Übergabe — transparent vor Start fixiert.",
     ],

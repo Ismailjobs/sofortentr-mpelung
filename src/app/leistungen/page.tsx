@@ -16,7 +16,7 @@ const LEISTUNGEN_COVER = SERVICES.find((s) => s.id === "hausentruempelung") ?? S
 export const metadata: Metadata = buildPageMetadata({
   title: "Leistungen — Entrümpelung & Haushaltsauflösung Wien",
   description:
-    "Haus-, Wohnungs-, Keller- und Büroentrümpelung in Wien — alle Services im Überblick.",
+    "Haus-, Wohnungs-, Keller- und Büroentrümpelung in Wien — alle Leistungen im Überblick.",
   path: "/leistungen",
 });
 
