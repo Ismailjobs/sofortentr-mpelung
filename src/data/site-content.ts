@@ -55,6 +55,8 @@ export const DATENSCHUTZ_PATH = "/datenschutz";
 
 export const IMPRESSUM_PATH = "/impressum";
 
+export const PARTNER_PATH = "/partner";
+
 /** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
 export const HOME_FAQ_HREF = "/#faq";
 export const HOME_KONTAKT_HREF = "/#kontakt";

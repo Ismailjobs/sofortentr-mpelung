@@ -7,6 +7,7 @@ import {
   FOOTER_LEISTUNGEN,
   FOOTER_SERVICE,
   IMPRESSUM_PATH,
+  PARTNER_PATH,
   NAV_LINKS,
   PHONE_DISPLAY,
 } from "@/data/site-content";
@@ -163,6 +164,9 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4">
             <Link href="/datenschutz" className="hover:text-brand-orange">
               Datenschutz
+            </Link>
+            <Link href={PARTNER_PATH} className="hover:text-brand-orange">
+              Partner
             </Link>
             <Link href={IMPRESSUM_PATH} className="hover:text-brand-orange">
               Impressum
