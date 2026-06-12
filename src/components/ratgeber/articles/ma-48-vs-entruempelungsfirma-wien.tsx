@@ -24,9 +24,9 @@ export const meta: RatgeberArticleMeta = {
   ogTitle: "MA 48 oder Räumungsfirma? Entscheidungshilfe für Wien",
   focusKeyword: "MA 48 Entrümpelung Wien",
   description:
-    "Wann eignet sich die MA 48 in Eigenregie, wann eine professionelle Räumungsfirma in Wien? Orientierung zu Ablauf, Kosten, Wertausgleich und Checkliste — neutral erklärt.",
+    "In Wien gibt es verschiedene Möglichkeiten, eine Räumung durchzuführen. Wir erklären die Unterschiede, die jeweiligen Vorteile und worauf Sie bei Ihrer Entscheidung achten sollten – transparent und ohne Verkaufsdruck.",
   excerpt:
-    "Wann lohnt sich Eigenregie über die MA 48, wann eine professionelle Räumungsfirma? Orientierung für Wien — ohne Druck, mit klarer Entscheidungshilfe.",
+    "In Wien gibt es verschiedene Möglichkeiten, eine Räumung durchzuführen. Wir erklären die Unterschiede, die jeweiligen Vorteile und worauf Sie bei Ihrer Entscheidung achten sollten – transparent und ohne Verkaufsdruck.",
   publishedAt: "2024-11-05",
   updatedAt: "2026-02-18",
   keywords: [
