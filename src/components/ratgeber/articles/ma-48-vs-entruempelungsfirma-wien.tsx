@@ -28,7 +28,6 @@ export const meta: RatgeberArticleMeta = {
   excerpt:
     "In Wien gibt es verschiedene Möglichkeiten, eine Räumung durchzuführen. Wir erklären die Unterschiede, die jeweiligen Vorteile und worauf Sie bei Ihrer Entscheidung achten sollten – transparent und ohne Verkaufsdruck.",
   publishedAt: "2024-11-05",
-  updatedAt: "2026-02-18",
   keywords: [
     "MA 48 Entrümpelung Wien",
     "Räumungsfirma Wien",

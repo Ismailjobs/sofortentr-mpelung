@@ -1,5 +1,5 @@
 import RatgeberArticleBody, {
-  RatgeberBadge,
+  RatgeberFreshnessBadge,
   RatgeberCtaBox,
   RatgeberH2,
   RatgeberH3,
@@ -30,7 +30,6 @@ export const meta: RatgeberArticleMeta = {
   excerpt:
     "Welche Kosten einer Haushaltsauflösung in Wien sind steuerlich relevant? Struktur, Rechnungsaufteilung und Belege — Praxis-Leitfaden 2026.",
   publishedAt: "2024-07-14",
-  updatedAt: "2026-03-01",
   keywords: [
     "Entrümpelung Steuer absetzen Wien",
     "Haushaltsauflösung steuerlich absetzen",
@@ -68,9 +67,10 @@ export const meta: RatgeberArticleMeta = {
 export default function EntruempelungWienSteuerAbsetzen() {
   return (
     <RatgeberArticleBody>
-      <RatgeberBadge
-        label="Praxis-Leitfaden 2026"
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Praxis-Leitfaden" }}
         note="Geprüft auf Basis der aktuellen steuerlichen Praxisstrukturen für Wiener Räumungsprojekte."
+        article={meta}
       />
 
       <RatgeberLead>

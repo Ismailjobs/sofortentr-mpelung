@@ -10,6 +10,8 @@ import RatgeberHero from "@/components/ratgeber/RatgeberHero";
 import { RATGEBER_ARTICLES } from "@/data/ratgeber/registry";
 import { buildRatgeberIndexMetadata } from "@/lib/ratgeber-seo";
 
+export const revalidate = 86_400;
+
 export const metadata = buildRatgeberIndexMetadata();
 
 export default function RatgeberIndexPage() {

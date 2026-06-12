@@ -1,6 +1,12 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { MoveHorizontal } from "lucide-react";
+import {
+  getRatgeberFreshnessBadgeLabel,
+  getRatgeberFreshnessBadgeNote,
+  type RatgeberDateArticle,
+  type RatgeberFreshnessBadgeVariant,
+} from "@/lib/ratgeber-dates";
 
 const prose =
   "ratgeber-prose space-y-6 text-sm leading-relaxed text-neutral-800 sm:space-y-7 sm:text-base";
@@ -72,6 +78,21 @@ export function RatgeberBadge({ label, note }: { label: string; note?: string })
       {note ? <p className="mt-2 text-sm leading-relaxed text-neutral-600">{note}</p> : null}
     </aside>
   );
+}
+
+/** Badge mit automatisch rollierendem Monat/Jahr — kein manuelles Datum, nie in der Zukunft. */
+export function RatgeberFreshnessBadge({
+  variant,
+  note,
+  article,
+}: {
+  variant: RatgeberFreshnessBadgeVariant;
+  note?: string;
+  article: RatgeberDateArticle;
+}) {
+  const label = getRatgeberFreshnessBadgeLabel(variant, article);
+  const displayNote = getRatgeberFreshnessBadgeNote(variant, article, note);
+  return <RatgeberBadge label={label} note={displayNote} />;
 }
 
 export function RatgeberCtaBox({ children }: { children: ReactNode }) {

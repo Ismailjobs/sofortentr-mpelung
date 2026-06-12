@@ -3,6 +3,7 @@ import { getSiteOrigin } from "@/config/site-url";
 import { DATENSCHUTZ_PATH, IMPRESSUM_PATH, RATGEBER_PATH, SERVICES } from "@/data/site-content";
 import { getAllLocationSlugs } from "@/data/location-landings";
 import { getAllRatgeberSlugs, getRatgeberArticle } from "@/data/ratgeber/registry";
+import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import { LEISTUNGEN_CONTENT_UPDATED_AT } from "@/data/service-page-details";
 
 function toSitemapDate(iso: string): Date {
@@ -43,11 +44,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const slug of getAllRatgeberSlugs()) {
     const article = getRatgeberArticle(slug);
-    const articleModified = article?.updatedAt ?? article?.publishedAt;
+    const articleModified = article ? getRatgeberEffectiveUpdatedAt(article) : undefined;
     entries.push({
       url: `${base}${RATGEBER_PATH}/${slug}`,
       lastModified: articleModified ? toSitemapDate(articleModified) : lastModified,
-      changeFrequency: article?.updatedAt ? "weekly" : "monthly",
+      changeFrequency: "weekly",
       priority: 0.78,
     });
   }

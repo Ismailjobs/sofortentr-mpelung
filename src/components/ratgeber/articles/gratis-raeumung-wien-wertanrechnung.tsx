@@ -1,5 +1,5 @@
 import RatgeberArticleBody, {
-  RatgeberBadge,
+  RatgeberFreshnessBadge,
   RatgeberCtaBox,
   RatgeberH2,
   RatgeberH3,
@@ -21,9 +21,14 @@ export const meta: RatgeberArticleMeta = {
   description:
     "Kostenlose Wohnungsauflösung in Wien? Erfahren Sie, wie Wertanrechnung von Möbeln und Antiquitäten eine Gratis-Räumung möglich macht — Schritt für Schritt erklärt.",
   excerpt:
-    "Wann ist eine professionelle Räumung in Wien kostenlos? So funktioniert fairer Wertausgleich mit Sofort Entrümpelung — Praxis-Leitfaden 2026.",
+    "Wann ist eine professionelle Räumung in Wien kostenlos? So funktioniert fairer Wertausgleich mit Sofort Entrümpelung.",
+  freshnessExcerpt: {
+    kind: "guide",
+    guideName: "Praxis-Leitfaden",
+    suffix:
+      "Wann ist eine professionelle Räumung in Wien kostenlos? So funktioniert fairer Wertausgleich mit Sofort Entrümpelung.",
+  },
   publishedAt: "2024-06-20",
-  updatedAt: "2026-03-01",
   keywords: [
     "Gratis Räumung Wien",
     "kostenlose Wohnungsauflösung Wien",
@@ -62,9 +67,10 @@ export const meta: RatgeberArticleMeta = {
 export default function GratisRaeumungWienWertanrechnung() {
   return (
     <RatgeberArticleBody>
-      <RatgeberBadge
-        label="Ratgeber 2026"
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Ratgeber" }}
         note="Zertifizierter Wertausgleich für Räumungsprojekte in Wien und Umgebung."
+        article={meta}
       />
 
       <RatgeberLead>

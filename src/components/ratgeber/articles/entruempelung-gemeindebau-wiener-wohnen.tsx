@@ -1,5 +1,5 @@
 import RatgeberArticleBody, {
-  RatgeberBadge,
+  RatgeberFreshnessBadge,
   RatgeberChecklist,
   RatgeberCtaBox,
   RatgeberH2,
@@ -21,9 +21,13 @@ export const meta: RatgeberArticleMeta = {
   description:
     "Gemeindewohnung an Wiener Wohnen zurückgeben? 💡 Unser Leitfaden zeigt, wie die Entrümpelung im Gemeindebau ohne teure Nachzahlungen gelingt.",
   excerpt:
-    "Gemeindebau-Leitfaden 2026 — Rückbau, Logistik und Übergabe-Checkliste für die Rückgabe an Wiener Wohnen.",
+    "Rückbau, Logistik und Übergabe-Checkliste für die Rückgabe an Wiener Wohnen.",
+  freshnessExcerpt: {
+    kind: "guide",
+    guideName: "Gemeindebau-Leitfaden",
+    suffix: "Rückbau, Logistik und Übergabe-Checkliste für die Rückgabe an Wiener Wohnen.",
+  },
   publishedAt: "2024-06-12",
-  updatedAt: "2026-03-01",
   keywords: [
     "Entrümpelung Gemeindebau Wien",
     "Wiener Wohnen Übergabe",
@@ -61,9 +65,10 @@ export const meta: RatgeberArticleMeta = {
 export default function EntruempelungGemeindebauWienerWohnen() {
   return (
     <RatgeberArticleBody>
-      <RatgeberBadge
-        label="Gemeindebau-Leitfaden 2026"
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Gemeindebau-Leitfaden" }}
         note="Praxis-Erfahrung aus erfolgreichen Wohnungsrückgaben bei Wiener Wohnen in allen Wiener Gemeindebezirken."
+        article={meta}
       />
 
       <RatgeberLead>

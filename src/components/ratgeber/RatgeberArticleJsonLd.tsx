@@ -2,6 +2,7 @@ import { SITE_BRAND } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { OG_IMAGE_PATH } from "@/config/site-social";
+import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import {
   ratgeberArticleUrl,
   ratgeberIndexUrl,
@@ -21,7 +22,7 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
   const blogId = `${ratgeberIndexUrl()}#blog`;
   const webPageId = `${url}#webpage`;
   const blogPostingId = `${url}#article`;
-  const modified = article.updatedAt ?? article.publishedAt;
+  const modified = getRatgeberEffectiveUpdatedAt(article);
   const timeRequired = readingTimeToIsoDuration(article.readingTimeMinutes);
 
   const about = [

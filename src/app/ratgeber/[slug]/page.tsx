@@ -18,7 +18,15 @@ import {
   getRelatedRatgeberArticles,
   RATGEBER_PATH,
 } from "@/data/ratgeber/registry";
+import {
+  getRatgeberDisplayExcerpt,
+  getRatgeberEffectiveUpdatedAt,
+  ratgeberShowsAsUpdated,
+} from "@/lib/ratgeber-dates";
 import { buildRatgeberArticleMetadata } from "@/lib/ratgeber-seo";
+
+/** Täglich neu berechnen — rollierendes Aktualisierungsdatum bleibt im aktuellen Monat. */
+export const revalidate = 86_400;
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -39,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 function formatDate(iso: string): string {
   try {
-    return new Date(iso).toLocaleDateString("de-AT", {
+    return new Date(`${iso}T12:00:00.000Z`).toLocaleDateString("de-AT", {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -59,7 +67,8 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
 
   const { Component, ...meta } = article;
   const related = getRelatedRatgeberArticles(slug);
-  const modified = meta.updatedAt ?? meta.publishedAt;
+  const modified = getRatgeberEffectiveUpdatedAt(meta);
+  const showsUpdated = ratgeberShowsAsUpdated(meta);
 
   const breadcrumbs = [
     { label: "Startseite", href: "/" },
@@ -75,9 +84,9 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
           Veröffentlicht <time dateTime={meta.publishedAt}>{formatDate(meta.publishedAt)}</time>
         </span>
       </span>
-      {meta.updatedAt && meta.updatedAt !== meta.publishedAt ? (
+      {showsUpdated ? (
         <span>
-          Aktualisiert <time dateTime={meta.updatedAt}>{formatDate(meta.updatedAt)}</time>
+          Aktualisiert <time dateTime={modified}>{formatDate(modified)}</time>
         </span>
       ) : null}
       {meta.readingTimeMinutes ? (
@@ -100,7 +109,12 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
       <RatgeberArticleJsonLd article={meta} breadcrumbs={breadcrumbs} />
       <Header />
       <main className="bg-brand-muted">
-        <RatgeberHero title={meta.title} subtitle={meta.excerpt} footer={heroMeta} priority />
+        <RatgeberHero
+          title={meta.title}
+          subtitle={getRatgeberDisplayExcerpt(meta)}
+          footer={heroMeta}
+          priority
+        />
 
         <Breadcrumbs items={breadcrumbs} />
 

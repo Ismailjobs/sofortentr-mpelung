@@ -9,6 +9,7 @@
  */
 import RatgeberArticleBody, {
   RatgeberCtaBox,
+  RatgeberFreshnessBadge,
   RatgeberH2,
   RatgeberInternalLink,
   RatgeberLead,
@@ -26,9 +27,14 @@ export const meta: RatgeberArticleMeta = {
   focusKeyword: "Entrümpelung Wien",
   description:
     "Kurze Meta-Description mit Fokus-Keyword für Google (ca. 150 Zeichen).",
-  excerpt: "Ein Satz für die Karte auf der Ratgeber-Übersichtsseite.",
+  excerpt: "Kurztext ohne Datum (Fallback).",
+  freshnessExcerpt: {
+    kind: "guide",
+    guideName: "Ratgeber",
+    suffix: "Ein Satz für Hero und Karten — Monat/Jahr rolliert automatisch.",
+  },
   publishedAt: "2024-01-15",
-  updatedAt: "2026-01-10",
+  // Optional: updateDay (1–28) — sonst Eintrag in src/lib/ratgeber-dates.ts
   keywords: ["Entrümpelung Wien", "Haushaltsauflösung"],
   faq: [
     {
@@ -42,6 +48,12 @@ export const meta: RatgeberArticleMeta = {
 export default function VorlageArtikel() {
   return (
     <RatgeberArticleBody>
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Ratgeber" }}
+        note="Optionaler Zusatztext — Datum im Label wird automatisch aktualisiert."
+        article={meta}
+      />
+
       <RatgeberLead>
         Der erste Absatz — fett hervorgehoben. Hier das wichtigste Keyword und die Kernaussage
         platzieren.

@@ -2,15 +2,26 @@ import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { RATGEBER_PATH } from "@/data/ratgeber/registry";
+import {
+  getRatgeberDisplayExcerpt,
+  getRatgeberEffectiveUpdatedAt,
+  ratgeberShowsAsUpdated,
+} from "@/lib/ratgeber-dates";
 
 type Props = Pick<
   RatgeberArticleMeta,
-  "slug" | "title" | "excerpt" | "publishedAt" | "updatedAt" | "readingTimeMinutes"
+  | "slug"
+  | "title"
+  | "excerpt"
+  | "freshnessExcerpt"
+  | "publishedAt"
+  | "updateDay"
+  | "readingTimeMinutes"
 >;
 
 function formatDate(iso: string): string {
   try {
-    return new Date(iso).toLocaleDateString("de-AT", {
+    return new Date(`${iso}T12:00:00.000Z`).toLocaleDateString("de-AT", {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -25,12 +36,24 @@ export default function RatgeberCard({
   slug,
   title,
   excerpt,
+  freshnessExcerpt,
   publishedAt,
-  updatedAt,
+  updateDay,
   readingTimeMinutes,
 }: Props) {
-  const displayDate = updatedAt && updatedAt !== publishedAt ? updatedAt : publishedAt;
-  const dateLabel = updatedAt && updatedAt !== publishedAt ? "Aktualisiert" : "Veröffentlicht";
+  const articleRef = { slug, publishedAt, updateDay };
+  const displayExcerpt = getRatgeberDisplayExcerpt({
+    excerpt,
+    freshnessExcerpt,
+    slug,
+    publishedAt,
+    updateDay,
+  });
+  const isUpdated = ratgeberShowsAsUpdated(articleRef);
+  const displayDate = isUpdated
+    ? getRatgeberEffectiveUpdatedAt(articleRef)
+    : publishedAt.slice(0, 10);
+  const dateLabel = isUpdated ? "Aktualisiert" : "Veröffentlicht";
 
   return (
     <article className="group flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/[0.06] transition duration-300 hover:-translate-y-0.5 hover:shadow-md sm:p-7">
@@ -56,7 +79,9 @@ export default function RatgeberCard({
         </Link>
       </h2>
 
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600 sm:text-base">{excerpt}</p>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600 sm:text-base">
+        {displayExcerpt}
+      </p>
 
       <Link
         href={`${RATGEBER_PATH}/${slug}`}

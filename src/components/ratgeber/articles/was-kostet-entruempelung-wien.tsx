@@ -28,7 +28,6 @@ export const meta: RatgeberArticleMeta = {
   excerpt:
     "Die reale Preislogik für Wohnungsauflösungen 2026 — Kostenfaktoren, Richtwerte für Wien und wie Sie Angebote fachgerecht vergleichen.",
   publishedAt: "2024-09-18",
-  updatedAt: "2026-02-12",
   keywords: [
     "Was kostet Entrümpelung Wien",
     "Haushaltsauflösung Kosten Wien",

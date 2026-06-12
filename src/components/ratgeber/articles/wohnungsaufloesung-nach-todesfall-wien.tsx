@@ -1,5 +1,5 @@
 import RatgeberArticleBody, {
-  RatgeberBadge,
+  RatgeberFreshnessBadge,
   RatgeberChecklist,
   RatgeberCtaBox,
   RatgeberH2,
@@ -22,9 +22,13 @@ export const meta: RatgeberArticleMeta = {
   description:
     "Wohnung nach Todesfall in Wien auflösen? Leitfaden für Erben: Rechtslage, 3-Phasen-Plan, Inventarprotokoll, Checkliste und typische Fehler — rechtssicher erklärt.",
   excerpt:
-    "Leitfaden für Erben 2026 — von der ersten Sicherung bis zur besenreinen Übergabe nach einem Todesfall in Wien.",
+    "Von der ersten Sicherung bis zur besenreinen Übergabe nach einem Todesfall in Wien.",
+  freshnessExcerpt: {
+    kind: "guide",
+    guideName: "Leitfaden für Erben",
+    suffix: "von der ersten Sicherung bis zur besenreinen Übergabe nach einem Todesfall in Wien.",
+  },
   publishedAt: "2024-05-08",
-  updatedAt: "2026-03-01",
   keywords: [
     "Wohnungsauflösung nach Todesfall Wien",
     "Verlassenschaft Wien",
@@ -62,9 +66,10 @@ export const meta: RatgeberArticleMeta = {
 export default function WohnungsaufloesungNachTodesfallWien() {
   return (
     <RatgeberArticleBody>
-      <RatgeberBadge
-        label="Leitfaden für Erben 2026"
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Leitfaden für Erben" }}
         note="Rechtssichere Dokumentation und Zusammenarbeit mit Notaren und Nachlassverwaltern bei Wiener Verlassenschaften."
+        article={meta}
       />
 
       <RatgeberLead>

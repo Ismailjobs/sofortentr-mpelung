@@ -1,5 +1,5 @@
 import RatgeberArticleBody, {
-  RatgeberBadge,
+  RatgeberFreshnessBadge,
   RatgeberCtaBox,
   RatgeberH2,
   RatgeberH3,
@@ -20,9 +20,14 @@ export const meta: RatgeberArticleMeta = {
   description:
     "Professionelle Hilfe bei Messie-Wohnungen in Wien. 💡 Sofort Entrümpelung sorgt für diskrete Räumung, Sortierung & hygienische Grundreinigung.",
   excerpt:
-    "Spezial-Räumung 2026 — diskreter Ablauf, Arbeitsschutz und Wiederherstellung für extrem überfüllte Wohnungen in Wien.",
+    "Diskreter Ablauf, Arbeitsschutz und Wiederherstellung für extrem überfüllte Wohnungen in Wien.",
+  freshnessExcerpt: {
+    kind: "guide",
+    guideName: "Spezial-Räumung",
+    suffix:
+      "diskreter Ablauf, Arbeitsschutz und Wiederherstellung für extrem überfüllte Wohnungen in Wien.",
+  },
   publishedAt: "2024-07-18",
-  updatedAt: "2026-03-01",
   keywords: [
     "Messie-Wohnung räumen Wien",
     "Messie Entrümpelung Wien",
@@ -60,9 +65,10 @@ export const meta: RatgeberArticleMeta = {
 export default function MessieWohnungRaeumenWien() {
   return (
     <RatgeberArticleBody>
-      <RatgeberBadge
-        label="Spezial-Räumung 2026"
+      <RatgeberFreshnessBadge
+        variant={{ kind: "guide", guideName: "Spezial-Räumung" }}
         note="Zertifizierte Extremreinigung, Geruchsneutralisation und diskrete Abwicklung von Messie-Fällen im Großraum Wien."
+        article={meta}
       />
 
       <RatgeberLead>

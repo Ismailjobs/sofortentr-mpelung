@@ -1,7 +1,10 @@
 import { SITE_BRAND } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
 import { RATGEBER_ARTICLES } from "@/data/ratgeber/registry";
+import { getRatgeberDisplayExcerpt, getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import { ratgeberArticleUrl, ratgeberFeedUrl, ratgeberIndexUrl } from "@/lib/ratgeber-seo";
+
+export const revalidate = 86_400;
 
 function escapeXml(value: string): string {
   return value
@@ -25,7 +28,7 @@ export function GET() {
 
   const items = RATGEBER_ARTICLES.map((article) => {
     const link = ratgeberArticleUrl(article.slug);
-    const pubDate = toRfc822(article.publishedAt);
+    const pubDate = toRfc822(getRatgeberEffectiveUpdatedAt(article));
     const categories = [
       article.focusKeyword,
       ...(article.keywords ?? []).slice(0, 3),
@@ -39,7 +42,7 @@ export function GET() {
       <title>${escapeXml(article.title)}</title>
       <link>${escapeXml(link)}</link>
       <guid isPermaLink="true">${escapeXml(link)}</guid>
-      <description>${escapeXml(article.description)}</description>
+      <description>${escapeXml(getRatgeberDisplayExcerpt(article))}</description>
       <pubDate>${pubDate}</pubDate>
 ${categoryXml}
     </item>`;

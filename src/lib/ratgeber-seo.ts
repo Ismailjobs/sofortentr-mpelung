@@ -10,6 +10,7 @@ import {
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { RATGEBER_PATH } from "@/data/ratgeber/registry";
+import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 const ARTICLE_SECTION = "Entrümpelung & Haushaltsauflösung Wien";
 
 export function ratgeberArticleUrl(slug: string): string {
@@ -67,7 +68,7 @@ export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Meta
   const documentTitle = resolveMetaTitle(article);
   const shareTitle = resolveOgTitle(article);
   const tags = resolveTags(article);
-  const modified = article.updatedAt ?? article.publishedAt;
+  const modified = getRatgeberEffectiveUpdatedAt(article);
 
   return {
     /** Nur Artikeltitel — ohne Root-`title.template` („Sofort Entrümpelung | …“). */

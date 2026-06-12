@@ -9,20 +9,48 @@ export { RATGEBER_PATH };
  * 1. Datei unter `src/components/ratgeber/articles/{slug}.tsx` anlegen (Vorlage: `_vorlage-artikel.tsx`)
  * 2. `meta` exportieren + default-Komponente mit Inhalt
  * 3. Unten importieren und in `RATGEBER_ARTICLES` eintragen
+ * 4. Slug + Aktualisierungstag in `src/lib/ratgeber-dates.ts` → `RATGEBER_ARTICLE_UPDATE_DAYS`
  */
 
+import ChecklisteWohnungsraeumungWien, {
+  meta as checklisteWohnungsraeumungWienMeta,
+} from "@/components/ratgeber/articles/checkliste-wohnungsraeumung-wien";
+import DachbodenraeumungWienMa48, {
+  meta as dachbodenraeumungWienMa48Meta,
+} from "@/components/ratgeber/articles/dachbodenraeumung-wien-ma-48";
+import DelogierungZwangsrauemungWien, {
+  meta as delogierungZwangsrauemungMeta,
+} from "@/components/ratgeber/articles/delogierung-zwangsrauemung-wien";
 import EntruempelungGemeindebauWienerWohnen, {
   meta as entruempelungGemeindebauMeta,
 } from "@/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen";
+import EntruempelungVorSanierungWien, {
+  meta as entruempelungVorSanierungWienMeta,
+} from "@/components/ratgeber/articles/entruempelung-vor-sanierung-wien";
+import EntruempelungWien5FehlerVermeiden, {
+  meta as entruempelungWien5FehlerVermeidenMeta,
+} from "@/components/ratgeber/articles/entruempelung-wien-5-fehler-vermeiden";
+import GebrauchteMoebelBewertenWien, {
+  meta as gebrauchteMoebelBewertenWienMeta,
+} from "@/components/ratgeber/articles/gebrauchte-moebel-bewerten-wien";
+import GeschaeftslokalRaeumenWienRueckbau, {
+  meta as geschaeftslokalRaeumenWienRueckbauMeta,
+} from "@/components/ratgeber/articles/geschaeftslokal-raeumen-wien-rueckbau";
 import EntruempelungWienSteuerAbsetzen, {
   meta as entruempelungWienSteuerAbsetzenMeta,
 } from "@/components/ratgeber/articles/entruempelung-wien-steuer-absetzen";
 import GratisRaeumungWienWertanrechnung, {
   meta as gratisRaeumungWienMeta,
 } from "@/components/ratgeber/articles/gratis-raeumung-wien-wertanrechnung";
+import KellerraeumungWienKostenSchimmel, {
+  meta as kellerraeumungWienKostenSchimmelMeta,
+} from "@/components/ratgeber/articles/kellerraeumung-wien-kosten-schimmel";
 import WohnungsaufloesungNachTodesfallWien, {
   meta as wohnungsaufloesungNachTodesfallMeta,
 } from "@/components/ratgeber/articles/wohnungsaufloesung-nach-todesfall-wien";
+import Ma48MistplaetzeEntsorgungsGuideWien, {
+  meta as ma48MistplaetzeEntsorgungsGuideMeta,
+} from "@/components/ratgeber/articles/ma-48-mistplaetze-entsorgungs-guide-wien";
 import Ma48VsEntruempelungsfirmaWien, {
   meta as ma48VsEntruempelungsfirmaWienMeta,
 } from "@/components/ratgeber/articles/ma-48-vs-entruempelungsfirma-wien";
@@ -35,12 +63,25 @@ import MoebelVerkaufenWienWillhabenWertanrechnung, {
 import WasKostetEntruempelungWien, {
   meta as wasKostetEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/was-kostet-entruempelung-wien";
+import WasTunMitAltenSchaetzenWien, {
+  meta as wasTunMitAltenSchaetzenWienMeta,
+} from "@/components/ratgeber/articles/was-tun-mit-alten-schaetzen-wien";
 
 function register(meta: RatgeberArticleMeta, Component: ComponentType): RatgeberArticleEntry {
   return { ...meta, Component };
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(wasTunMitAltenSchaetzenWienMeta, WasTunMitAltenSchaetzenWien),
+  register(gebrauchteMoebelBewertenWienMeta, GebrauchteMoebelBewertenWien),
+  register(checklisteWohnungsraeumungWienMeta, ChecklisteWohnungsraeumungWien),
+  register(entruempelungWien5FehlerVermeidenMeta, EntruempelungWien5FehlerVermeiden),
+  register(entruempelungVorSanierungWienMeta, EntruempelungVorSanierungWien),
+  register(geschaeftslokalRaeumenWienRueckbauMeta, GeschaeftslokalRaeumenWienRueckbau),
+  register(dachbodenraeumungWienMa48Meta, DachbodenraeumungWienMa48),
+  register(kellerraeumungWienKostenSchimmelMeta, KellerraeumungWienKostenSchimmel),
+  register(ma48MistplaetzeEntsorgungsGuideMeta, Ma48MistplaetzeEntsorgungsGuideWien),
+  register(delogierungZwangsrauemungMeta, DelogierungZwangsrauemungWien),
   register(messieWohnungRaeumenWienMeta, MessieWohnungRaeumenWien),
   register(entruempelungGemeindebauMeta, EntruempelungGemeindebauWienerWohnen),
   register(wohnungsaufloesungNachTodesfallMeta, WohnungsaufloesungNachTodesfallWien),

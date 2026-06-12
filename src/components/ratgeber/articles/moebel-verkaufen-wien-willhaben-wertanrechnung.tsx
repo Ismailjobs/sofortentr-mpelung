@@ -27,7 +27,6 @@ export const meta: RatgeberArticleMeta = {
   excerpt:
     "Wohin mit dem Möbelberg bei der Wohnungsauflösung? Willhaben, privater Verkauf oder Wertanrechnung — Vor- und Nachteile im Überblick.",
   publishedAt: "2024-10-22",
-  updatedAt: "2026-03-01",
   keywords: [
     "Möbel verkaufen Wien",
     "Willhaben Möbel verkaufen",

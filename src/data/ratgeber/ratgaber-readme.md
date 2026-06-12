@@ -3,7 +3,7 @@
 > Pflege-Dokumentation: Jeder veröffentlichte Ratgeber-Artikel mit URL, Inhaltsschwerpunkten und Ziel-Keywords.  
 > Bei neuen Artikeln: Eintrag hier ergänzen + `registry.ts` aktualisieren.
 
-**Stand:** Implementierung im Repo — 8 veröffentlichte Artikel
+**Stand:** Implementierung im Repo — 18 veröffentlichte Artikel
 
 ---
 
@@ -17,6 +17,7 @@
 | Artikel-Dateien | `src/components/ratgeber/articles/{slug}.tsx` |
 | Registry | `src/data/ratgeber/registry.ts` |
 | SEO-Builder | `src/lib/ratgeber-seo.ts` |
+| Aktualisierungsdaten | `src/lib/ratgeber-dates.ts` |
 | Vorlage | `src/components/ratgeber/articles/_vorlage-artikel.tsx` |
 
 **Gemeinsame Seiten-Features (alle Artikel):**
@@ -29,6 +30,29 @@
 - RSS-Eintrag, Sitemap (`priority` 0,78)
 - Kontaktformular am Seitenende
 - Verwandte Ratgeber-Artikel (falls vorhanden)
+
+### Rollierendes Aktualisierungsdatum (automatisch)
+
+Jeder Artikel zeigt monatlich ein frisches **„Aktualisiert am …“** — ohne manuelles `updatedAt` in den Artikeldateien.
+
+| Mechanismus | Details |
+|-------------|---------|
+| **Logik** | `getRatgeberEffectiveUpdatedAt()` — fester Tag pro Slug, **nie in der Zukunft** |
+| **Vormonat** | Ist der Fixtag im laufenden Monat noch nicht erreicht (z. B. heute 13., Tag 26 → 26. Vormonat), wird der Vormonat genutzt |
+| **Tage** | `RATGEBER_ARTICLE_UPDATE_DAYS` in `ratgeber-dates.ts` (1–28, pro Artikel unterschiedlich) |
+| **Neuer Artikel** | Slug in `RATGEBER_ARTICLE_UPDATE_DAYS` eintragen oder optional `updateDay` in `meta` |
+| **SEO** | Meta `article:modified_time`, JSON-LD `dateModified`, Sitemap `lastmod`, RSS `pubDate` |
+| **ISR** | `revalidate: 86400` auf `/ratgeber`, `/ratgeber/[slug]`, `/ratgeber/feed.xml` |
+
+Beispiel am 13. Mai: Artikel mit Tag 4 → 4. Mai; Artikel mit Tag 26 → 26. April (nicht 26. Mai in der Zukunft).
+
+**Badge & Excerpt im Artikeltext (automatisch):**
+
+- `RatgeberFreshnessBadge` statt statischem `RatgeberBadge` mit „Juni 2026“
+- `freshnessExcerpt` in `meta` für Hero-Untertitel und Karten
+- Varianten: `{ kind: "updated-month" }`, `{ kind: "guide", guideName: "…" }`, `{ kind: "expert" }`
+
+Kein manuelles Datum mehr in Artikeldateien — Monat und Jahr wechseln bei jedem Request/ISR-Zyklus.
 
 ---
 
@@ -489,6 +513,429 @@
 - `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`
 - `/ratgeber/was-kostet-entruempelung-wien`
 - `/#kontakt-formular`
+
+---
+
+## Artikel 9 — Delogierung & Zwangsräumung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `delogierung-zwangsrauemung-wien` |
+| **URL** | `/ratgeber/delogierung-zwangsrauemung-wien` |
+| **Datei** | `src/components/ratgeber/articles/delogierung-zwangsrauemung-wien.tsx` |
+| **H1** | Delogierung & Zwangsräumung in Wien: Schnelle, diskrete & besenreine Räumung für Eigentümer |
+| **SEO-Titel** | Delogierung & Zwangsräumung Wien \| Hilfe für Vermieter & Hausverwaltungen |
+| **Veröffentlicht** | 2025-02-10 |
+| **Aktualisiert** | 2026-06-12 |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Zwangsräumung Wien`
+
+### Zielgruppe
+
+Vermieter, Eigentümer, Hausverwaltungen (B2B)
+
+### Inhalt
+
+- Leerstand nach Delogierung
+- Diskretion im Stiegenhaus
+- MA-48-Entsorgung & Wertausgleich
+- ÖNorm B 2502 / besenreine Übergabe
+- B2B-Partner + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wertausgleich`
+- `/leistungen/messie-entruempelung`
+- `/ratgeber/messie-wohnung-raeumen-wien`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`
+- `/partner`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 10 — MA 48 Mistplätze Entsorgungs-Guide Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `ma-48-mistplaetze-entsorgungs-guide-wien` |
+| **URL** | `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien` |
+| **Datei** | `src/components/ratgeber/articles/ma-48-mistplaetze-entsorgungs-guide-wien.tsx` |
+| **H1** | Wiener Mistplätze der MA 48: Der ultimative Entsorgungs-Guide für Eigentümer |
+| **SEO-Titel** | MA 48 Mistplätze Wien — Entsorgungs-Guide für Eigentümer 2026 |
+| **Veröffentlicht** | 2024-09-14 |
+| **Aktualisiert** | 2026-06-12 |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`MA 48 Mistplätze Wien`
+
+### Inhalt
+
+- Taktischer Ablauf (3 Schritte)
+- Entsorgungsmatrix (6 Zeilen Tabelle)
+- Problemstoff-Risiko
+- DIY vs. Vollservice (5 Zeilen Tabelle)
+- Beispielkalkulation 3-Zimmer-Wohnung
+- Standortbezug Wien
+- Checkliste (6 Punkte) + CTA
+
+### Interne Verlinkung
+
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/leistungen/wertausgleich`
+- `/leistungen/kellerentruempelung`
+- `/leistungen/dachbodenentruempelung`
+- `/leistungen/haushaltsaufloesung`
+- `/preise`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 11 — Kellerräumung Wien Kosten & Schimmel
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `kellerraeumung-wien-kosten-schimmel` |
+| **URL** | `/ratgeber/kellerraeumung-wien-kosten-schimmel` |
+| **Datei** | `src/components/ratgeber/articles/kellerraeumung-wien-kosten-schimmel.tsx` |
+| **H1** | Kellerräumung in Wien: Kosten, Feuchtigkeitsrisiken und fachgerechte Entsorgung |
+| **SEO-Titel** | Kellerräumung Wien — Kosten, Schimmel & fachgerechte Entsorgung 2026 |
+| **Veröffentlicht** | 2024-08-20 |
+| **Aktualisiert** | 2026-06-12 |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Kellerräumung Wien`
+
+### Inhalt
+
+- Richtpreise (3 Stufen)
+- Versteckte Kostenfaktoren (3 H3)
+- Schimmel-Vorgehen (4 Punkte)
+- Gefährliche Abfälle (4 Kategorien)
+- Wertausgleich
+- Checkliste (5 Punkte) + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/kellerentruempelung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/preise`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 12 — Dachbodenräumung Wien MA 48
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `dachbodenraeumung-wien-ma-48` |
+| **URL** | `/ratgeber/dachbodenraeumung-wien-ma-48` |
+| **Datei** | `src/components/ratgeber/articles/dachbodenraeumung-wien-ma-48.tsx` |
+| **H1** | Dachbodenräumung in Wien: Taktischer Leitfaden für MA 48 & Express-Profis |
+| **SEO-Titel** | Dachbodenräumung Wien — MA 48, Kosten & Express-Ratgeber 2026 |
+| **Veröffentlicht** | 2024-10-22 |
+| **Aktualisierungstag** | 13 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Dachbodenräumung Wien`
+
+### Inhalt
+
+- Altbau-Logistik (3 Punkte)
+- Vergleichstabelle MA 48 / DIY / Vollservice
+- 6-Schritte-Checkliste
+- Wertanrechnung
+- Richtpreise + Express-Hinweis + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/dachbodenentruempelung`
+- `/leistungen/wertausgleich`
+- `/leistungen/wohnungsaufloesung`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/kellerraeumung-wien-kosten-schimmel`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/preise`
+- `/#kontakt-formular`
+
+---
+
+## Artikel 13 — Geschäftslokal räumen Wien (Rückbau)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `geschaeftslokal-raeumen-wien-rueckbau` |
+| **URL** | `/ratgeber/geschaeftslokal-raeumen-wien-rueckbau` |
+| **Datei** | `src/components/ratgeber/articles/geschaeftslokal-raeumen-wien-rueckbau.tsx` |
+| **H1** | Geschäftslokal räumen lassen in Wien: Rückbau, rechtssichere Übergabe und Fixpreis-Garantie |
+| **SEO-Titel** | Geschäftslokal räumen Wien — Rückbau, Entsorgung & Fixpreis 2026 |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 19 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Geschäftslokal räumen Wien`
+
+### Inhalt
+
+- Strategische Rückwärts-Kalkulation (4 Punkte)
+- Professioneller Rückbau (4 H3: Ladenbau, Außenwerbung, Gastro, Böden)
+- Strategischer Tipp (kombinierter Termin)
+- Gastro & Retail Besonderheiten (3 Punkte)
+- Entsorgungsnachweise & MA 48
+- Fixpreis-Parameter (5 Punkte)
+- Kombinierte Büro- & Lagerauflösung
+- FAQ (4 Fragen) + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/wertausgleich`
+- `/leistungen/bueroentruempelung`
+- `/leistungen/lagerentruempelung`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/ratgeber/entruempelung-wien-steuer-absetzen`
+- `/preise`
+- `/#kontakt-formular`
+
+### Suchintention
+
+B2B — Geschäftsführer, Vermieter und Hausverwaltungen bei Standortschließung, Mietende oder Insolvenz; Fokus auf Rückbau, rechtssichere Übergabe und Fixpreis.
+
+---
+
+## Artikel 14 — Entrümpelung vor der Sanierung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-vor-sanierung-wien` |
+| **URL** | `/ratgeber/entruempelung-vor-sanierung-wien` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-vor-sanierung-wien.tsx` |
+| **H1** | Entrümpelung vor der Sanierung in Wien: Was muss raus, was darf bleiben? |
+| **SEO-Titel** | Entrümpelung vor Sanierung Wien — Demontage, MA 48 & Fixpreis 2026 |
+| **Veröffentlicht** | 2026-06-12 |
+| **Aktualisierungstag** | 22 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung vor Sanierung Wien`
+
+### Inhalt
+
+- Handwerker-Vorbereitung (besenrein vor Gewerke)
+- Demontage (Küche, Böden, Verkleidungen)
+- Sperrmüll vs. Bauschutt (2 H3)
+- Denkmalschutz / Altbau (3 Punkte + Tipp-Box)
+- Wertanrechnung für Sanierungsbudget
+- Fixpreis-Partner + CTA
+- FAQ (4 Fragen)
+
+### Interne Verlinkung
+
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/preise`
+- `/#kontakt-formular`
+
+### Suchintention
+
+Private Bauherren und Investoren vor Kernsanierung — was raus, was bleibt, MA-48-Trennung, Demontage und Fixpreis.
+
+---
+
+## Artikel 15 — 5 fatale Fehler bei der Entrümpelung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-wien-5-fehler-vermeiden` |
+| **URL** | `/ratgeber/entruempelung-wien-5-fehler-vermeiden` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-wien-5-fehler-vermeiden.tsx` |
+| **H1** | Räumung in Wien: 5 fatale Fehler, die Sie bei der Wahl einer Entrümpelungsfirma vermeiden müssen |
+| **SEO-Titel** | Entrümpelung Wien — 5 Fehler vermeiden \| Verbraucherschutz 2026 |
+| **Veröffentlicht** | 2026-06-13 |
+| **Aktualisierungstag** | 25 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung Wien Fehler`
+
+### Inhalt
+
+- Einleitung (schwarze Schafe, Dumpingpreise)
+- Fehler 1–5 (je H2 + H3 Gefahr/Lösung): Besichtigung, Stundenlohn, Wertanrechnung, MA 48, Haftpflicht
+- Fazit + CTA
+- FAQ (4 Fragen)
+
+### Interne Verlinkung
+
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/preise`
+- `/#kontakt-formular`
+
+### Suchintention
+
+Verbraucherschutz — Angst vor Betrug, Nachforderungen und illegaler Entsorgung; Conversion über Transparenz, Fixpreis und Wertanrechnung.
+
+---
+
+## Artikel 16 — Checkliste Wohnungsräumung Wien (7 Schritte)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `checkliste-wohnungsraeumung-wien` |
+| **URL** | `/ratgeber/checkliste-wohnungsraeumung-wien` |
+| **Datei** | `src/components/ratgeber/articles/checkliste-wohnungsraeumung-wien.tsx` |
+| **H1** | Die perfekte Checkliste für die Wohnungsräumung: In 7 Schritten zur besenreinen Übergabe |
+| **SEO-Titel** | Wohnungsräumung Wien — 7-Schritte-Checkliste zur besenreinen Übergabe 2026 |
+| **Veröffentlicht** | 2026-06-14 |
+| **Aktualisierungstag** | 27 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Wohnungsräumung Wien Checkliste`
+
+### Inhalt
+
+- 7 Schritte (H2): Dokumente, Inventar-Audit, Bürokratie, Besichtigung, MA 48, Einsatztag, Endkontrolle
+- Checklist-Komponente (Schritt 7)
+- Fazit + FAQ (3 Fragen) + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`
+- `/ratgeber/entruempelung-wien-5-fehler-vermeiden`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/ma-48-vs-entruempelungsfirma-wien`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/#kontakt-formular`
+
+### Suchintention
+
+Umzug, Verlassenschaft, Gemeindebau-Rückgabe — „Wo fange ich an?“; Conversion über strukturierte Checkliste und Fixpreis-Service.
+
+---
+
+## Artikel 17 — Gebrauchte Möbel bewerten Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `gebrauchte-moebel-bewerten-wien` |
+| **URL** | `/ratgeber/gebrauchte-moebel-bewerten-wien` |
+| **Datei** | `src/components/ratgeber/articles/gebrauchte-moebel-bewerten-wien.tsx` |
+| **H1** | Gebrauchte Möbel bewerten in Wien: Wertvolles Inventar oder reiner Sperrmüll? |
+| **SEO-Titel** | Gebrauchte Möbel bewerten Wien — Wertermittlung & Wertanrechnung 2026 |
+| **Veröffentlicht** | 2026-06-15 |
+| **Aktualisierungstag** | 20 (rollierend) |
+| **Lesezeit** | ca. 11 Min. |
+
+### Primäres Fokus-Keyword
+
+`Gebrauchte Möbel bewerten Wien`
+
+### Inhalt
+
+- 5 Kernkriterien (H3)
+- 4-Schritte-Praxisablauf (H3)
+- 4 Praxis-Beispiele (H3: Mid-Century, Biedermeier, Esstisch, Pressspan)
+- Entscheidungsmatrix (Tabelle)
+- 4 häufige Fehler
+- Lokaler Operationshinweis Wien
+- Express-Räumung + CTA
+- FAQ (4 Fragen)
+
+### Interne Verlinkung
+
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/moebel-verkaufen-wien-willhaben-wertanrechnung`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/checkliste-wohnungsraeumung-wien`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/was-kostet-entruempelung-wien`
+- `/#kontakt-formular`
+
+### Suchintention
+
+Haushaltsauflösung — ist das Möbel Schrott oder wertvoll? Conversion über Bewertungs-Know-how und Wertanrechnung. Ergänzt Artikel `moebel-verkaufen-wien-willhaben-wertanrechnung` (Willhaben-Vergleich).
+
+---
+
+## Artikel 18 — Was tun mit alten Schätzen Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `was-tun-mit-alten-schaetzen-wien` |
+| **URL** | `/ratgeber/was-tun-mit-alten-schaetzen-wien` |
+| **Datei** | `src/components/ratgeber/articles/was-tun-mit-alten-schaetzen-wien.tsx` |
+| **H1** | Was tun mit alten Schätzen? Nachhaltig verkaufen, spenden oder recyceln in Wien |
+| **SEO-Titel** | Alte Schätze in Wien — Verkaufen, Spenden oder Recyceln \| Leitfaden 2026 |
+| **Veröffentlicht** | 2026-06-16 |
+| **Aktualisierungstag** | 23 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`alte Schätze Wien verwerten`
+
+### Inhalt
+
+- Verkaufen (Wertanrechnung + 3 Eigenregie-Kanäle)
+- Spenden (Caritas, 48er-Tandler, Sozialmärkte)
+- Recyceln (MA 48, Textilien, Sperrmüllabholung)
+- Zeithinweis-Box
+- FAQ (4 Fragen) + CTA
+
+### Interne Verlinkung
+
+- `/leistungen/haushaltsaufloesung`
+- `/leistungen/wohnungsaufloesung`
+- `/leistungen/wertausgleich`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/gebrauchte-moebel-bewerten-wien`
+- `/ratgeber/moebel-verkaufen-wien-willhaben-wertanrechnung`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/checkliste-wohnungsraeumung-wien`
+- `/#kontakt-formular`
+
+### Suchintention
+
+Nachhaltige Haushaltsauflösung — verkaufen vs. spenden vs. recyceln; Conversion über Wertanrechnung und Express-Service.
 
 ---
 

@@ -2,6 +2,7 @@ import { SITE_BRAND } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { RATGEBER_HERO_IMAGE } from "@/data/ratgeber/registry";
+import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import { ratgeberArticleUrl, ratgeberIndexUrl } from "@/lib/ratgeber-seo";
 import { breadcrumbListSchema, type SchemaBreadcrumbItem } from "@/lib/schema-org";
 
@@ -51,7 +52,7 @@ export default function RatgeberCollectionJsonLd({ articles, breadcrumbs }: Prop
           headline: a.title,
           url: ratgeberArticleUrl(a.slug),
           datePublished: a.publishedAt,
-          dateModified: a.updatedAt ?? a.publishedAt,
+          dateModified: getRatgeberEffectiveUpdatedAt(a),
         })),
       },
       {
