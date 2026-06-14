@@ -21,6 +21,24 @@ import DachbodenraeumungWienMa48, {
 import DelogierungZwangsrauemungWien, {
   meta as delogierungZwangsrauemungMeta,
 } from "@/components/ratgeber/articles/delogierung-zwangsrauemung-wien";
+import WohnungsraeumungSeniorenWien, {
+  meta as wohnungsraeumungSeniorenWienMeta,
+} from "@/components/ratgeber/articles/wohnungsraeumung-senioren-wien";
+import SchwerlastentsorgungWien, {
+  meta as schwerlastentsorgungWienMeta,
+} from "@/components/ratgeber/articles/schwerlastentsorgung-wien";
+import EntruempelungOesterreichweit, {
+  meta as entruempelungOesterreichweitMeta,
+} from "@/components/ratgeber/articles/entruempelung-oesterreichweit";
+import EntruempelungBurgenlandMattersburgRustOberpullendorf, {
+  meta as entruempelungBurgenlandMattersburgRustOberpullendorfMeta,
+} from "@/components/ratgeber/articles/entruempelung-burgenland-mattersburg-rust-oberpullendorf";
+import EntruempelungKorneuburgTullnSchwechat, {
+  meta as entruempelungKorneuburgTullnSchwechatMeta,
+} from "@/components/ratgeber/articles/entruempelung-korneuburg-tulln-schwechat";
+import EntruempelungsdienstVsEntruempelungsfirmaWien, {
+  meta as entruempelungsdienstVsEntruempelungsfirmaWienMeta,
+} from "@/components/ratgeber/articles/entruempelungsdienst-vs-entruempelungsfirma-wien";
 import EntruempelungGemeindebauWienerWohnen, {
   meta as entruempelungGemeindebauMeta,
 } from "@/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen";
@@ -60,6 +78,18 @@ import MessieWohnungRaeumenWien, {
 import MoebelVerkaufenWienWillhabenWertanrechnung, {
   meta as moebelVerkaufenWienMeta,
 } from "@/components/ratgeber/articles/moebel-verkaufen-wien-willhaben-wertanrechnung";
+import PraxisaufloesungWien, {
+  meta as praxisaufloesungWienMeta,
+} from "@/components/ratgeber/articles/praxisaufloesung-wien";
+import ZimmerRaeumungWien, {
+  meta as zimmerRaeumungWienMeta,
+} from "@/components/ratgeber/articles/zimmer-raeumung-wien";
+import RaeumungsexperteWienBesichtigung, {
+  meta as raeumungsexperteWienBesichtigungMeta,
+} from "@/components/ratgeber/articles/raeumungsexperte-wien-besichtigung";
+import RichtigAusmistenWien, {
+  meta as richtigAusmistenWienMeta,
+} from "@/components/ratgeber/articles/richtig-ausmisten-wien";
 import WasKostetEntruempelungWien, {
   meta as wasKostetEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/was-kostet-entruempelung-wien";
@@ -72,6 +102,19 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(wohnungsraeumungSeniorenWienMeta, WohnungsraeumungSeniorenWien),
+  register(schwerlastentsorgungWienMeta, SchwerlastentsorgungWien),
+  register(entruempelungOesterreichweitMeta, EntruempelungOesterreichweit),
+  register(
+    entruempelungBurgenlandMattersburgRustOberpullendorfMeta,
+    EntruempelungBurgenlandMattersburgRustOberpullendorf,
+  ),
+  register(entruempelungKorneuburgTullnSchwechatMeta, EntruempelungKorneuburgTullnSchwechat),
+  register(raeumungsexperteWienBesichtigungMeta, RaeumungsexperteWienBesichtigung),
+  register(zimmerRaeumungWienMeta, ZimmerRaeumungWien),
+  register(praxisaufloesungWienMeta, PraxisaufloesungWien),
+  register(richtigAusmistenWienMeta, RichtigAusmistenWien),
+  register(entruempelungsdienstVsEntruempelungsfirmaWienMeta, EntruempelungsdienstVsEntruempelungsfirmaWien),
   register(wasTunMitAltenSchaetzenWienMeta, WasTunMitAltenSchaetzenWien),
   register(gebrauchteMoebelBewertenWienMeta, GebrauchteMoebelBewertenWien),
   register(checklisteWohnungsraeumungWienMeta, ChecklisteWohnungsraeumungWien),

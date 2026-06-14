@@ -3,7 +3,7 @@
 > Pflege-Dokumentation: Jeder veröffentlichte Ratgeber-Artikel mit URL, Inhaltsschwerpunkten und Ziel-Keywords.  
 > Bei neuen Artikeln: Eintrag hier ergänzen + `registry.ts` aktualisieren.
 
-**Stand:** Implementierung im Repo — 18 veröffentlichte Artikel
+**Stand:** Implementierung im Repo — 28 veröffentlichte Artikel
 
 ---
 
@@ -936,6 +936,248 @@ Haushaltsauflösung — ist das Möbel Schrott oder wertvoll? Conversion über B
 ### Suchintention
 
 Nachhaltige Haushaltsauflösung — verkaufen vs. spenden vs. recyceln; Conversion über Wertanrechnung und Express-Service.
+
+---
+
+## Artikel 19 — Richtig ausmisten Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `richtig-ausmisten-wien` |
+| **URL** | `/ratgeber/richtig-ausmisten-wien` |
+| **Datei** | `src/components/ratgeber/articles/richtig-ausmisten-wien.tsx` |
+| **H1** | Richtig ausmisten in Wien: So schaffen Sie Platz und Ordnung vor der Räumung |
+| **SEO-Titel** | Richtig ausmisten Wien — 4-Kisten-Methode & KonMari vor der Räumung 2026 |
+| **Veröffentlicht** | 2026-06-14 |
+| **Aktualisierungstag** | 28 (rollierend) |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`ausmisten Wien`
+
+### Suchintention
+
+Vor der Räumung strukturiert aussortieren — 4 Kisten, KonMari, Raumplan; Conversion über anschließende Fixpreis-Entrümpelung.
+
+---
+
+## Artikel 20 — Entrümpelungsdienst vs. Entrümpelungsfirma Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelungsdienst-vs-entruempelungsfirma-wien` |
+| **URL** | `/ratgeber/entruempelungsdienst-vs-entruempelungsfirma-wien` |
+| **Datei** | `src/components/ratgeber/articles/entruempelungsdienst-vs-entruempelungsfirma-wien.tsx` |
+| **H1** | Entrümpelung in Wien: Entrümpelungsdienst oder professionelle Entrümpelungsfirma? |
+| **SEO-Titel** | Entrümpelungsdienst vs. Entrümpelungsfirma Wien — Vergleich & Kriterien 2026 |
+| **Veröffentlicht** | 2026-05-28 |
+| **Aktualisierungstag** | 15 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelungsfirma Wien`
+
+### Suchintention
+
+Dienst vs. Vollservice verstehen; Conversion über 6 Qualitätskriterien und Fixpreis-Angebot.
+
+---
+
+## Artikel 21 — Praxisauflösung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `praxisaufloesung-wien` |
+| **URL** | `/ratgeber/praxisaufloesung-wien` |
+| **Datei** | `src/components/ratgeber/articles/praxisaufloesung-wien.tsx` |
+| **H1** | Praxisauflösung in Wien: Professionelle Checkliste und reibungsloser Ablauf |
+| **SEO-Titel** | Praxisauflösung Wien — DSGVO, Rückbau & Fixpreis-Checkliste 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-05 |
+| **Aktualisierungstag** | 17 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Praxisauflösung Wien`
+
+### Suchintention
+
+Ärzte/Ordinationen bei Praxisschließung — DSGVO, Medizingeräte, Fixpreis; B2B-Conversion.
+
+---
+
+## Artikel 22 — Zimmerräumung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `zimmer-raeumung-wien` |
+| **URL** | `/ratgeber/zimmer-raeumung-wien` |
+| **Datei** | `src/components/ratgeber/articles/zimmer-raeumung-wien.tsx` |
+| **H1** | Zimmer Räumung in Wien: Strukturierter Zeitplan, WG-Übergabe und Kosten |
+| **SEO-Titel** | Zimmerräumung Wien — Zeitplan, WG-Übergabe & Kosten 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-05-18 |
+| **Aktualisierungstag** | 6 (rollierend) |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Zimmerräumung Wien`
+
+### Suchintention
+
+WG-Auszug / Studentinnen / Teilräumung — Zeitplan, Kosten, MA 48 vs. Firma; Conversion über Fixpreis.
+
+---
+
+## Artikel 23 — Räumungsexperte Wien (Besichtigung & Fixpreis)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `raeumungsexperte-wien-besichtigung` |
+| **URL** | `/ratgeber/raeumungsexperte-wien-besichtigung` |
+| **Datei** | `src/components/ratgeber/articles/raeumungsexperte-wien-besichtigung.tsx` |
+| **H1** | Räumungsexperte in Wien: So läuft die professionelle Besichtigung zum garantierten Fixpreis |
+| **SEO-Titel** | Räumungsexperte Wien — Besichtigung & Fixpreis in 6 Schritten 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-08 |
+| **Aktualisierungstag** | 10 (rollierend) |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Räumungsexperte Wien`
+
+### Suchintention
+
+Besichtigung/Fixpreis-Transparenz — Vertrauen & Conversion über kostenlose Vor-Ort-Besichtigung.
+
+---
+
+## Artikel 24 — Entrümpelung Korneuburg, Tulln & Schwechat
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-korneuburg-tulln-schwechat` |
+| **URL** | `/ratgeber/entruempelung-korneuburg-tulln-schwechat` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-korneuburg-tulln-schwechat.tsx` |
+| **H1** | Entrümpelung in Korneuburg, Tulln & Schwechat: Professionelle Logistik, Fixpreise und Wertanrechnung |
+| **SEO-Titel** | Entrümpelung Korneuburg, Tulln & Schwechat — Fixpreis & Logistik 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-05-12 |
+| **Aktualisierungstag** | 12 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung Korneuburg`
+
+### Suchintention
+
+Local SEO Wien-Umland — regionale Logistik, Fixpreis, Wertanrechnung; Conversion NÖ.
+
+---
+
+## Artikel 25 — Entrümpelung Burgenland (Mattersburg, Rust & Oberpullendorf)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-burgenland-mattersburg-rust-oberpullendorf` |
+| **URL** | `/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-burgenland-mattersburg-rust-oberpullendorf.tsx` |
+| **H1** | Entrümpelung in Burgenland Nord & Mitte: Professionelle Räumung in Mattersburg, Rust & Oberpullendorf |
+| **SEO-Titel** | Entrümpelung Burgenland — Mattersburg, Rust & Oberpullendorf 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-06-01 |
+| **Aktualisierungstag** | 5 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung Burgenland`
+
+### Suchintention
+
+Local SEO Burgenland — regionale Logistik, Fixpreis, Wertanrechnung; Conversion Mattersburg/Rust/Oberpullendorf.
+
+---
+
+## Artikel 26 — Entrümpelung österreichweit
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `entruempelung-oesterreichweit` |
+| **URL** | `/ratgeber/entruempelung-oesterreichweit` |
+| **Datei** | `src/components/ratgeber/articles/entruempelung-oesterreichweit.tsx` |
+| **H1** | Entrümpelung österreichweit: Professionelle Räumung in der Steiermark, Kärnten, Oberösterreich & Salzburg |
+| **SEO-Titel** | Entrümpelung österreichweit — Steiermark, Kärnten, OÖ & Salzburg 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-06-04 |
+| **Aktualisierungstag** | 8 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung österreichweit`
+
+### Suchintention
+
+Bundesländer-Expansion — Fixpreis, Express-Notdienst, regionale Logistik; Conversion außerhalb Wien.
+
+---
+
+## Artikel 27 — Schwerlastentsorgung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `schwerlastentsorgung-wien` |
+| **URL** | `/ratgeber/schwerlastentsorgung-wien` |
+| **Datei** | `src/components/ratgeber/articles/schwerlastentsorgung-wien.tsx` |
+| **H1** | Schwerlastentsorgung in Wien: Tresore, Klaviere und Maschinen richtig räumen |
+| **SEO-Titel** | Schwerlastentsorgung Wien — Tresore, Klaviere & Maschinen 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-06-10 |
+| **Aktualisierungstag** | 2 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Schwerlastentsorgung Wien`
+
+### Suchintention
+
+Spezial-Entsorgung Tresor/Klavier/Maschine — Demontage, MA-48-Ausschluss, Fixpreis; Conversion.
+
+---
+
+## Artikel 28 — Wohnungsräumung Senioren Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `wohnungsraeumung-senioren-wien` |
+| **URL** | `/ratgeber/wohnungsraeumung-senioren-wien` |
+| **Datei** | `src/components/ratgeber/articles/wohnungsraeumung-senioren-wien.tsx` |
+| **H1** | Wohnungsräumung für Senioren in Wien: Empathische Planung, Ablauf und Wertanrechnung |
+| **SEO-Titel** | Wohnungsräumung Senioren Wien — empathischer Ablauf & Fixpreis 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-06-13 |
+| **Aktualisierungstag** | 1 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Wohnungsräumung Senioren Wien`
+
+### Besondere Elemente
+
+Checkliste-Tabelle (Aufgabe / Status / Hinweise), Wertanrechnung-Hinweis, 4-Schritte-Plan
+
+### Suchintention
+
+Senioren/Angehörige — empathische Räumung, Wertanrechnung, Pflegezeiten; Conversion.
 
 ---
 

@@ -26,6 +26,16 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "checkliste-wohnungsraeumung-wien": 27,
   "gebrauchte-moebel-bewerten-wien": 20,
   "was-tun-mit-alten-schaetzen-wien": 23,
+  "richtig-ausmisten-wien": 28,
+  "entruempelungsdienst-vs-entruempelungsfirma-wien": 15,
+  "praxisaufloesung-wien": 17,
+  "zimmer-raeumung-wien": 6,
+  "raeumungsexperte-wien-besichtigung": 10,
+  "entruempelung-korneuburg-tulln-schwechat": 12,
+  "entruempelung-burgenland-mattersburg-rust-oberpullendorf": 5,
+  "entruempelung-oesterreichweit": 8,
+  "schwerlastentsorgung-wien": 2,
+  "wohnungsraeumung-senioren-wien": 1,
 };
 
 function slugToUpdateDay(slug: string): number {
