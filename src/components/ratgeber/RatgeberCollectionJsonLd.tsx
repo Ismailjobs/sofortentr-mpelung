@@ -4,7 +4,7 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { RATGEBER_HERO_IMAGE } from "@/data/ratgeber/registry";
 import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import { ratgeberArticleUrl, ratgeberIndexUrl } from "@/lib/ratgeber-seo";
-import { breadcrumbListSchema, type SchemaBreadcrumbItem } from "@/lib/schema-org";
+import { breadcrumbListSchema, schemaOriginIds, type SchemaBreadcrumbItem } from "@/lib/schema-org";
 
 type Props = {
   articles: RatgeberArticleMeta[];
@@ -13,6 +13,7 @@ type Props = {
 
 export default function RatgeberCollectionJsonLd({ articles, breadcrumbs }: Props) {
   const origin = getSiteOrigin();
+  const { organizationId } = schemaOriginIds(origin);
   const indexUrl = ratgeberIndexUrl();
   const blogId = `${indexUrl}#blog`;
   const image = `${origin}${RATGEBER_HERO_IMAGE}`;
@@ -43,8 +44,7 @@ export default function RatgeberCollectionJsonLd({ articles, breadcrumbs }: Prop
         inLanguage: "de-AT",
         publisher: {
           "@type": "Organization",
-          name: SITE_BRAND,
-          url: origin,
+          "@id": organizationId,
         },
         blogPost: articles.map((a) => ({
           "@type": "BlogPosting",

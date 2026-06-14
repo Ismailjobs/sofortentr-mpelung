@@ -1,4 +1,3 @@
-import { SITE_BRAND } from "@/config/site-brand";
 import { getSiteOrigin } from "@/config/site-url";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 import { OG_IMAGE_PATH } from "@/config/site-social";
@@ -8,7 +7,7 @@ import {
   ratgeberIndexUrl,
   readingTimeToIsoDuration,
 } from "@/lib/ratgeber-seo";
-import { breadcrumbListSchema, type SchemaBreadcrumbItem } from "@/lib/schema-org";
+import { breadcrumbListSchema, schemaOriginIds, type SchemaBreadcrumbItem } from "@/lib/schema-org";
 
 type Props = {
   article: RatgeberArticleMeta;
@@ -17,6 +16,7 @@ type Props = {
 
 export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
   const origin = getSiteOrigin();
+  const { organizationId } = schemaOriginIds(origin);
   const url = ratgeberArticleUrl(article.slug);
   const image = `${origin}${OG_IMAGE_PATH}`;
   const blogId = `${ratgeberIndexUrl()}#blog`;
@@ -72,14 +72,11 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
       ...(article.keywords?.length ? { keywords: article.keywords.join(", ") } : {}),
       author: {
         "@type": "Organization",
-        "@id": `${origin}/#localbusiness`,
-        name: SITE_BRAND,
-        url: origin,
+        "@id": organizationId,
       },
       publisher: {
         "@type": "Organization",
-        name: SITE_BRAND,
-        url: origin,
+        "@id": organizationId,
         logo: {
           "@type": "ImageObject",
           url: `${origin}/sofort-logo.webp`,

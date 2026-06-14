@@ -3,6 +3,7 @@ import { SITE_BRAND } from "@/config/site-brand";
 import {
   CONTACT_BLOCK,
   CONTACT_LEGAL_NAME,
+  CONTACT_MAP,
   OPENING_HOURS_SCHEMA_SPEC,
   OPENING_HOURS_TEXT_LINE,
   PHONE_DISPLAY,
@@ -14,8 +15,14 @@ import {
 import { getLocationBySlug } from "@/data/location-landings";
 import {
   areaServedForSchema,
-  DEFAULT_SERVICE_CATEGORY,
+  festpreisOffer,
+  gisaPropertyValueIdentifier,
+  LOCAL_BUSINESS_CATEGORIES,
+  LOCAL_BUSINESS_SCHEMA_TYPES,
+  organizationGraphNode,
+  schemaContactPoint,
   schemaOriginIds,
+  serviceCatalogCategory,
   wienCityGraphNode,
 } from "@/lib/schema-org";
 
@@ -144,7 +151,7 @@ function serviceDescriptionForSchema(raw: string): string {
 }
 
 function catalogServiceType(slug: string): string {
-  return SERVICES.find((s) => s.id === slug)?.schemaServiceType ?? DEFAULT_SERVICE_CATEGORY;
+  return SERVICES.find((s) => s.id === slug)?.schemaServiceType ?? serviceCatalogCategory(slug);
 }
 
 export type LocalBusinessJsonLdProps = {
@@ -153,7 +160,7 @@ export type LocalBusinessJsonLdProps = {
 };
 
 /**
- * JSON-LD: LocalBusiness + OfferCatalog + WebSite (@graph).
+ * JSON-LD: Organization + HomeAndConstructionBusiness + OfferCatalog + WebSite (@graph).
  * Auf Lokations-Landings priorisiert `areaServed` den jeweiligen Bezirk bzw. das Bundesland.
  */
 export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: LocalBusinessJsonLdProps) {
@@ -162,7 +169,7 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
   const priorityDistrict = location?.kind === "district" ? location.district : undefined;
   const priorityRegionName = location?.kind === "region" ? location.region.name : null;
 
-  const { businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
+  const { organizationId, businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
   const logoUrl = `${origin}/sofort-logo.webp`;
   const logoId = `${origin}/#logo`;
 
@@ -179,7 +186,7 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
       url: `${origin}/leistungen/${s.slug}`,
       image: `${origin}${SERVICE_IMAGE_DIR}/${s.image}`,
       serviceType: catalogServiceType(s.slug),
-      category: DEFAULT_SERVICE_CATEGORY,
+      category: serviceCatalogCategory(s.slug),
       provider: { "@id": businessId },
       areaServed,
     },
@@ -188,9 +195,11 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
+      organizationGraphNode(organizationId, logoId, logoUrl, origin, telephoneE164()),
       {
-        "@type": ["LocalBusiness", "ProfessionalService"] as const,
+        "@type": [...LOCAL_BUSINESS_SCHEMA_TYPES],
         "@id": businessId,
+        parentOrganization: { "@id": organizationId },
         name: SITE_BRAND,
         legalName: CONTACT_LEGAL_NAME,
         description:
@@ -208,10 +217,15 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
         },
         telephone: telephoneE164(),
         email: CONTACT_BLOCK.email,
+        contactPoint: schemaContactPoint(telephoneE164(), CONTACT_BLOCK.email, origin),
+        hasMap: CONTACT_MAP.openHref,
+        identifier: gisaPropertyValueIdentifier(),
+        isAcceptingNewClients: true,
         priceRange: "$$",
         currenciesAccepted: "EUR",
         paymentAccepted: "Barzahlung, Banküberweisung, Debitkarte, Kreditkarte",
         knowsLanguage: "de-AT",
+        category: [...LOCAL_BUSINESS_CATEGORIES],
         address: {
           "@type": "PostalAddress" as const,
           streetAddress: CONTACT_BLOCK.streetAddress,
@@ -241,6 +255,7 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
           worstRating: GOOGLE_AGGREGATE_RATING.worstRating,
         },
         sameAs: [...BUSINESS_SAME_AS],
+        makesOffer: festpreisOffer(origin),
         hasOfferCatalog: { "@id": catalogId },
       },
       wienCityGraphNode(areaWienId),
@@ -257,7 +272,7 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
         url: origin,
         name: SITE_BRAND,
         inLanguage: "de-AT",
-        publisher: { "@id": businessId },
+        publisher: { "@id": organizationId },
         about: { "@id": businessId },
       },
     ],

@@ -2,10 +2,10 @@ import { getSiteOrigin } from "@/config/site-url";
 import type { ServiceDetailPageData } from "@/data/service-page-details";
 import {
   breadcrumbListSchema,
-  DEFAULT_SERVICE_CATEGORY,
   festpreisOffer,
   schemaOriginIds,
   baseAreaServed,
+  serviceCatalogCategory,
   type SchemaBreadcrumbItem,
 } from "@/lib/schema-org";
 
@@ -33,7 +33,7 @@ export default function ServiceJsonLd({ service, breadcrumbs }: Props) {
         url: serviceUrl,
         image: `${origin}${service.imageSrc}`,
         serviceType: service.schemaServiceType,
-        category: DEFAULT_SERVICE_CATEGORY,
+        category: serviceCatalogCategory(service.id),
         provider: { "@id": businessId },
         areaServed: baseAreaServed(areaWienId),
         offers: festpreisOffer(origin),

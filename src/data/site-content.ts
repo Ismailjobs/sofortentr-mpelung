@@ -41,7 +41,7 @@ export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
 /** Gleicher Link wie `WHATSAPP_HREF` (Foto-Leiste / Kontakt). */
 export const WHATSAPP_PHOTO_HREF = WHATSAPP_HREF;
 
-/** Google-Bewertungen — Hero-Badge & LocalBusiness `aggregateRating` (Schema.org). */
+/** Google-Bewertungen — Hero-Badge & HomeAndConstructionBusiness `aggregateRating` (Schema.org). */
 export const GOOGLE_AGGREGATE_RATING = {
   ratingValue: "5.0",
   reviewCount: 200,
@@ -573,7 +573,7 @@ export const CONTACT_BLOCK = {
   addressLocality: "Wien",
   addressRegion: "Wien",
   addressCountry: "AT",
-  geo: { latitude: 48.1367, longitude: 16.2970 } as const,
+  geo: { latitude: 48.1349140, longitude: 16.2981160 } as const,
   hours: "Mo – So: 06:00 – 22:00",
 } as const;
 
