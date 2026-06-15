@@ -28,7 +28,7 @@ export const meta: RatgeberArticleMeta = {
     kind: "updated",
     suffix: "Praxiserprobter Leitfaden für stressfreie Wohnungsauflösungen im Wiener Raum.",
   },
-  publishedAt: "2026-06-14",
+  publishedAt: "2026-06-10",
   keywords: [
     "Wohnungsräumung Wien Checkliste",
     "Wohnungsauflösung Wien Ablauf",
@@ -75,7 +75,11 @@ export default function ChecklisteWohnungsraeumungWien() {
         <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
           Haushaltsauflösung
         </RatgeberInternalLink>{" "}
-        oder Wohnungsräumung in Wien kann Betroffene schnell vor organisatorische Mammutaufgaben stellen. Ganz
+        oder{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
+          Wohnungsauflösung in Wien
+        </RatgeberInternalLink>{" "}
+        kann Betroffene schnell vor organisatorische Mammutaufgaben stellen. Ganz
         egal, ob ein privater Umzug ansteht, die Räumung einer geerbten Verlassenschaft bewältigt werden muss
         oder die offizielle Rückgabe einer Gemeindewohnung naht: Die alles entscheidende Frage lautet im ersten
         Moment fast immer: „Wo fange ich überhaupt an?“

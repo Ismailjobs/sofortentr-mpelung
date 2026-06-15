@@ -32,7 +32,7 @@ export const meta: RatgeberArticleMeta = {
     guideName: "Senioren-Leitfaden",
     suffix: "Empathische Planung und diskrete Räumung für Senioren und Angehörige in Wien.",
   },
-  publishedAt: "2026-06-13",
+  publishedAt: "2026-06-09",
   keywords: [
     "Wohnungsräumung Senioren Wien",
     "Entrümpelung Senioren Wien",
@@ -82,7 +82,11 @@ export default function WohnungsraeumungSeniorenWien() {
       <RatgeberLead>
         Eine <strong>Wohnungsräumung für Senioren in Wien</strong> ist mehr als Logistik: Es geht um
         Würde, Zeitplanung mit Pflege und Angehörigen sowie faire Wertanrechnung — zum verbindlichen
-        Fixpreis nach Besichtigung.
+        Fixpreis nach Besichtigung. Unsere{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
+          Wohnungsauflösung
+        </RatgeberInternalLink>{" "}
+        ist auf diskrete Senioren-Räumungen im Wiener Raum ausgerichtet.
       </RatgeberLead>
 
       <RatgeberP>

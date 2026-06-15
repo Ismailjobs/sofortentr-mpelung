@@ -83,9 +83,12 @@ export default function PraxisaufloesungWien() {
 
       <RatgeberP>
         Ob Zahnarztordination, Allgemeinmedizin oder Therapiepraxis: Wer mit System vorgeht, vermeidet
-        Datenschutzrisiken, Nachforderungen der Hausverwaltung und teure Leerstandstage. Diese
-        4-Schritte-Checkliste von Sofort Entrümpelung strukturiert den Ablauf — vergleichbar mit unserem
-        Leitfaden für{" "}
+        Datenschutzrisiken, Nachforderungen der Hausverwaltung und teure Leerstandstage. Unsere{" "}
+        <RatgeberInternalLink href="/leistungen/bueroentruempelung">
+          Büroentrümpelung in Wien
+        </RatgeberInternalLink>{" "}
+        deckt Praxisauflösungen inklusive DSGVO-Aktenvernichtung ab. Diese 4-Schritte-Checkliste strukturiert
+        den Ablauf — vergleichbar mit unserem Leitfaden für{" "}
         <RatgeberInternalLink href="/ratgeber/geschaeftslokal-raeumen-wien-rueckbau">
           Geschäftslokal-Rückbau
         </RatgeberInternalLink>

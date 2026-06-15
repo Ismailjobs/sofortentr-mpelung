@@ -6,6 +6,7 @@ import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LeistungenRatgeberSection from "@/components/LeistungenRatgeberSection";
 import ServicesSection from "@/components/ServicesSection";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
@@ -62,6 +63,7 @@ export default function LeistungenPage() {
 
         <Breadcrumbs items={breadcrumbs} />
         <ServicesSection services={SERVICES} showSectionHeader={false} />
+        <LeistungenRatgeberSection />
         <ContactPanel />
       </main>
       <LazyContactFormSection />

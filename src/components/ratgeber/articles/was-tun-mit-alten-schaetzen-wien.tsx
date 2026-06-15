@@ -29,7 +29,7 @@ export const meta: RatgeberArticleMeta = {
     suffix:
       "Unabhängiger Praxis-Leitfaden für umweltbewusste Haushaltsauflösungen im Wiener Raum.",
   },
-  publishedAt: "2026-06-16",
+  publishedAt: "2026-06-10",
   keywords: [
     "alte Schätze Wien verwerten",
     "Haushaltsauflösung nachhaltig Wien",
@@ -89,8 +89,12 @@ export default function WasTunMitAltenSchaetzenWien() {
 
       <RatgeberP>
         Das schont nicht nur die Umwelt im Wiener Raum, sondern entlastet auch das finale Budget Ihres
-        Räumungsprojekts spürbar. Sofort Entrümpelung zeigt Ihnen in diesem Ratgeber die effizientesten
-        Entsorgungs- und Verwertungswege.
+        Räumungsprojekts spürbar — besonders über unseren{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">
+          Wertausgleich bei der Haushaltsauflösung
+        </RatgeberInternalLink>
+        . Sofort Entrümpelung zeigt Ihnen in diesem Ratgeber die effizientesten Entsorgungs- und
+        Verwertungswege.
       </RatgeberP>
 
       <RatgeberH2>Verkaufen: Werte systematisch erkennen und clever anrechnen lassen</RatgeberH2>

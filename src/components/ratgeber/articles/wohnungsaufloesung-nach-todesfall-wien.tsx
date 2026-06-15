@@ -37,6 +37,8 @@ export const meta: RatgeberArticleMeta = {
     "Wohnung entrümpeln nach Tod",
     "Gerichtskommissär Verlassenschaft",
     "Haushaltsauflösung Nachlass Wien",
+    "Verlassenschaft Wien entrümpeln",
+    "Nachlass Wohnung räumen Wien",
   ],
   faq: [
     {
@@ -81,7 +83,15 @@ export default function WohnungsaufloesungNachTodesfallWien() {
       <RatgeberP>
         In der täglichen Praxis zeigt sich jedoch, dass solche Projekte selten an der logistischen Umsetzung
         scheitern. Vielmehr führen unklare Rechtslagen, fehlende Absprachen in der Erbengemeinschaft oder
-        verpasste Fristen bei der Hausverwaltung zu teuren Verzögerungen.
+        verpasste Fristen bei der Hausverwaltung zu teuren Verzögerungen. Professionelle{" "}
+        <RatgeberInternalLink href="/leistungen/verlassenschaft">
+          Verlassenschaftsräumung
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/leistungen/nachlass">
+          Nachlassentrümpelung in Wien
+        </RatgeberInternalLink>{" "}
+        setzen erst nach Freigabe durch den Gerichtskommissär ein.
       </RatgeberP>
       <RatgeberP>
         Dieser Leitfaden von Sofort Entrümpelung gibt Ihnen einen klaren, rechtssicheren Fahrplan an die Hand
