@@ -3,7 +3,7 @@
 > Pflege-Dokumentation: Jeder veröffentlichte Ratgeber-Artikel mit URL, Inhaltsschwerpunkten und Ziel-Keywords.  
 > Bei neuen Artikeln: Eintrag hier ergänzen + `registry.ts` aktualisieren.
 
-**Stand:** Implementierung im Repo — 28 veröffentlichte Artikel
+**Stand:** Implementierung im Repo — 32 veröffentlichte Artikel
 
 ---
 
@@ -1178,6 +1178,118 @@ Checkliste-Tabelle (Aufgabe / Status / Hinweise), Wertanrechnung-Hinweis, 4-Schr
 ### Suchintention
 
 Senioren/Angehörige — empathische Räumung, Wertanrechnung, Pflegezeiten; Conversion.
+
+---
+
+## Artikel 29 — Gartenentrümpelung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `gartenentruempelung-wien-kosten-ablauf` |
+| **URL** | `/ratgeber/gartenentruempelung-wien-kosten-ablauf` |
+| **Datei** | `src/components/ratgeber/articles/gartenentruempelung-wien-kosten-ablauf.tsx` |
+| **H1** | Garten entrümpeln: Kosten, Ablauf und Profi-Tipps für Ihre Grünoase |
+| **SEO-Titel** | Gartenentrümpelung Wien — Kosten, Ablauf & Profi-Tipps 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-14 |
+| **Aktualisierungstag** | 29 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Gartenentrümpelung Wien`
+
+### Besondere Elemente
+
+Kosten-Tabelle, 5-Schritte-Ablauf, DIY vs. Firma, 4 FAQ
+
+### Suchintention
+
+Gartenräumung — Kosten, Ablauf, Entsorgung; Conversion über Fixpreis & Gartenentrümpelung-Leistung.
+
+---
+
+## Artikel 30 — Garagenentrümpelung Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `garagenentruempelung-wien-kosten-ablauf` |
+| **URL** | `/ratgeber/garagenentruempelung-wien-kosten-ablauf` |
+| **Datei** | `src/components/ratgeber/articles/garagenentruempelung-wien-kosten-ablauf.tsx` |
+| **H1** | Garagenentrümpelung in Wien: Kosten, Ablauf & Tipps für mehr Platz |
+| **SEO-Titel** | Garagenentrümpelung Wien — Kosten, Ablauf & Fixpreis-Tipps 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-13 |
+| **Aktualisierungstag** | 30 (rollierend) |
+| **Lesezeit** | ca. 8 Min. |
+
+### Primäres Fokus-Keyword
+
+`Garagenentrümpelung Wien`
+
+### Besondere Elemente
+
+Kosten-Tabelle (Volumen), Problemstoffe, 3-Schritte-Ablauf, 4 FAQ
+
+### Suchintention
+
+Garagenräumung — Kosten, Sondermüll, Fixpreis; Conversion über Garagenentrümpelung-Leistung.
+
+---
+
+## Artikel 31 — Büroentrümpelung Wien (DSGVO & Rückbau)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `bueroentruempelung-wien-dsgvo-rueckbau` |
+| **URL** | `/ratgeber/bueroentruempelung-wien-dsgvo-rueckbau` |
+| **Datei** | `src/components/ratgeber/articles/bueroentruempelung-wien-dsgvo-rueckbau.tsx` |
+| **H1** | Büroentrümpelung in Wien: Ratgeber für Aktenvernichtung, DSGVO & Rückbau |
+| **SEO-Titel** | Büroentrümpelung Wien — DSGVO, Aktenvernichtung & Rückbau 2026 |
+| **Meta-Description** | ca. 145 Zeichen |
+| **Veröffentlicht** | 2026-06-12 |
+| **Aktualisierungstag** | 31 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Büroentrümpelung Wien`
+
+### Besondere Elemente
+
+Rückbau-Tabelle, DSGVO/Aktenvernichtung, 4-Schritte-Ablauf, 4 FAQ, Rechtshinweis
+
+### Suchintention
+
+B2B Firmenauflösung — DSGVO, Rückbau, Fixpreis; Conversion über Büroentrümpelung-Leistung.
+
+---
+
+## Artikel 32 — Keller aufräumen & entrümpeln Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `keller-aufraeumen-entruempeln-wien` |
+| **URL** | `/ratgeber/keller-aufraeumen-entruempeln-wien` |
+| **Datei** | `src/components/ratgeber/articles/keller-aufraeumen-entruempeln-wien.tsx` |
+| **H1** | Keller aufräumen und entrümpeln in Wien: Mit System zum perfekten Stauraum |
+| **SEO-Titel** | Keller entrümpeln Wien — Aufräumen, Ordnung & Fixpreis-Tipps 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 32 (rollierend) |
+| **Lesezeit** | ca. 9 Min. |
+
+### Primäres Fokus-Keyword
+
+`Keller entrümpeln Wien`
+
+### Besondere Elemente
+
+4-Kategorien-System, Feuchtigkeits-Tipps, Schimmel-Hinweis, 4 FAQ; ergänzt Artikel Kellerräumung (Kosten/Schimmel)
+
+### Suchintention
+
+DIY Keller ordnen vs. Profi — Conversion über Kellerentrümpelung & Fixpreis.
 
 ---
 

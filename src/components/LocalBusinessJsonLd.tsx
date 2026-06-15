@@ -1,26 +1,11 @@
 import { getSiteOrigin } from "@/config/site-url";
 import { SITE_BRAND } from "@/config/site-brand";
-import {
-  CONTACT_BLOCK,
-  CONTACT_LEGAL_NAME,
-  CONTACT_MAP,
-  OPENING_HOURS_SCHEMA_SPEC,
-  OPENING_HOURS_TEXT_LINE,
-  PHONE_DISPLAY,
-  BUSINESS_SAME_AS,
-  GOOGLE_AGGREGATE_RATING,
-  SERVICES,
-  SERVICE_IMAGE_DIR,
-} from "@/data/site-content";
+import { SERVICES, SERVICE_IMAGE_DIR } from "@/data/site-content";
 import { getLocationBySlug } from "@/data/location-landings";
 import {
   areaServedForSchema,
-  festpreisOffer,
-  gisaPropertyValueIdentifier,
-  LOCAL_BUSINESS_CATEGORIES,
-  LOCAL_BUSINESS_SCHEMA_TYPES,
+  homeAndConstructionBusinessGraphNode,
   organizationGraphNode,
-  schemaContactPoint,
   schemaOriginIds,
   serviceCatalogCategory,
   wienCityGraphNode,
@@ -141,11 +126,6 @@ const SERVICE_ENTRIES = [
   },
 ] as const;
 
-function telephoneE164(): string {
-  return PHONE_DISPLAY.replace(/\s+/g, "").replace(/^\+/, "+");
-}
-
-/** Platzhalter aus Service-Beschreibungen entfernen (Rich Results / Lesbarkeit). */
 function serviceDescriptionForSchema(raw: string): string {
   return raw.replace(/^\[Beschreibung ergänzen\]\s*/i, "").trim();
 }
@@ -161,7 +141,7 @@ export type LocalBusinessJsonLdProps = {
 
 /**
  * JSON-LD: Organization + HomeAndConstructionBusiness + OfferCatalog + WebSite (@graph).
- * Auf Lokations-Landings priorisiert `areaServed` den jeweiligen Bezirk bzw. das Bundesland.
+ * Alle Schema-Bausteine werden zentral aus `@/lib/schema-org` bezogen.
  */
 export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: LocalBusinessJsonLdProps) {
   const origin = getSiteOrigin();
@@ -172,7 +152,6 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
   const { organizationId, businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
   const logoUrl = `${origin}/sofort-logo.webp`;
   const logoId = `${origin}/#logo`;
-
   const areaServed = areaServedForSchema(priorityDistrict, areaWienId, priorityRegionName);
 
   const itemListElement = SERVICE_ENTRIES.map((s, index) => ({
@@ -195,75 +174,23 @@ export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: Loc
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
-      organizationGraphNode(organizationId, logoId, logoUrl, origin, telephoneE164()),
-      {
-        "@type": [...LOCAL_BUSINESS_SCHEMA_TYPES],
-        "@id": businessId,
-        parentOrganization: { "@id": organizationId },
-        name: SITE_BRAND,
-        legalName: CONTACT_LEGAL_NAME,
-        description:
-          "Entrümpelung und Haushaltsauflösung in Wien — Festpreis nach Besichtigung. Was kostet eine Entrümpelung? Wohnungsauflösung, Messie Wohnung reinigen & Entrümpelung nach Todesfall.",
-        url: `${origin}/`,
-        image: [logoUrl],
-        logo: {
-          "@type": "ImageObject" as const,
-          "@id": logoId,
-          url: logoUrl,
-          contentUrl: logoUrl,
-          width: 620,
-          height: 150,
-          caption: SITE_BRAND,
-        },
-        telephone: telephoneE164(),
-        email: CONTACT_BLOCK.email,
-        contactPoint: schemaContactPoint(telephoneE164(), CONTACT_BLOCK.email, origin),
-        hasMap: CONTACT_MAP.openHref,
-        identifier: gisaPropertyValueIdentifier(),
-        isAcceptingNewClients: true,
-        priceRange: "$$",
-        currenciesAccepted: "EUR",
-        paymentAccepted: "Barzahlung, Banküberweisung, Debitkarte, Kreditkarte",
-        knowsLanguage: "de-AT",
-        category: [...LOCAL_BUSINESS_CATEGORIES],
-        address: {
-          "@type": "PostalAddress" as const,
-          streetAddress: CONTACT_BLOCK.streetAddress,
-          postalCode: CONTACT_BLOCK.postalCode,
-          addressLocality: CONTACT_BLOCK.addressLocality,
-          addressRegion: CONTACT_BLOCK.addressRegion,
-          addressCountry: CONTACT_BLOCK.addressCountry,
-        },
-        geo: {
-          "@type": "GeoCoordinates" as const,
-          latitude: CONTACT_BLOCK.geo.latitude,
-          longitude: CONTACT_BLOCK.geo.longitude,
-        },
+      organizationGraphNode(organizationId, logoId, logoUrl, origin),
+      homeAndConstructionBusinessGraphNode({
+        origin,
+        businessId,
+        organizationId,
+        catalogId,
+        logoId,
+        logoUrl,
         areaServed,
-        openingHours: OPENING_HOURS_TEXT_LINE,
-        openingHoursSpecification: OPENING_HOURS_SCHEMA_SPEC.map((row) => ({
-          "@type": "OpeningHoursSpecification" as const,
-          dayOfWeek: [...row.dayOfWeek],
-          opens: row.opens,
-          closes: row.closes,
-        })),
-        aggregateRating: {
-          "@type": "AggregateRating" as const,
-          ratingValue: GOOGLE_AGGREGATE_RATING.ratingValue,
-          reviewCount: GOOGLE_AGGREGATE_RATING.reviewCount,
-          bestRating: GOOGLE_AGGREGATE_RATING.bestRating,
-          worstRating: GOOGLE_AGGREGATE_RATING.worstRating,
-        },
-        sameAs: [...BUSINESS_SAME_AS],
-        makesOffer: festpreisOffer(origin),
-        hasOfferCatalog: { "@id": catalogId },
-      },
+      }),
       wienCityGraphNode(areaWienId),
       {
         "@type": "OfferCatalog" as const,
         "@id": catalogId,
         name: "Entrümpelungsleistungen",
-        description: "Festpreis-Entrümpelung und Haushaltsauflösung — alle Leistungen mit verbindlichem Angebot nach Besichtigung.",
+        description:
+          "Festpreis-Entrümpelung und Haushaltsauflösung — alle Leistungen mit verbindlichem Angebot nach Besichtigung.",
         itemListElement,
       },
       {

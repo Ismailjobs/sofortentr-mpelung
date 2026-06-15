@@ -36,6 +36,10 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "entruempelung-oesterreichweit": 8,
   "schwerlastentsorgung-wien": 2,
   "wohnungsraeumung-senioren-wien": 1,
+  "gartenentruempelung-wien-kosten-ablauf": 29,
+  "garagenentruempelung-wien-kosten-ablauf": 30,
+  "bueroentruempelung-wien-dsgvo-rueckbau": 31,
+  "keller-aufraeumen-entruempeln-wien": 32,
 };
 
 function slugToUpdateDay(slug: string): number {

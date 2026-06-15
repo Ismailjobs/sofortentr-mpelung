@@ -42,6 +42,18 @@ import EntruempelungsdienstVsEntruempelungsfirmaWien, {
 import EntruempelungGemeindebauWienerWohnen, {
   meta as entruempelungGemeindebauMeta,
 } from "@/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen";
+import KellerAufraeumenEntruempelnWien, {
+  meta as kellerAufraeumenEntruempelnWienMeta,
+} from "@/components/ratgeber/articles/keller-aufraeumen-entruempeln-wien";
+import BueroentruempelungWienDsgvoRueckbau, {
+  meta as bueroentruempelungWienDsgvoRueckbauMeta,
+} from "@/components/ratgeber/articles/bueroentruempelung-wien-dsgvo-rueckbau";
+import GaragenentruempelungWienKostenAblauf, {
+  meta as garagenentruempelungWienKostenAblaufMeta,
+} from "@/components/ratgeber/articles/garagenentruempelung-wien-kosten-ablauf";
+import GartenentruempelungWienKostenAblauf, {
+  meta as gartenentruempelungWienKostenAblaufMeta,
+} from "@/components/ratgeber/articles/gartenentruempelung-wien-kosten-ablauf";
 import EntruempelungVorSanierungWien, {
   meta as entruempelungVorSanierungWienMeta,
 } from "@/components/ratgeber/articles/entruempelung-vor-sanierung-wien";
@@ -102,6 +114,10 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(kellerAufraeumenEntruempelnWienMeta, KellerAufraeumenEntruempelnWien),
+  register(bueroentruempelungWienDsgvoRueckbauMeta, BueroentruempelungWienDsgvoRueckbau),
+  register(garagenentruempelungWienKostenAblaufMeta, GaragenentruempelungWienKostenAblauf),
+  register(gartenentruempelungWienKostenAblaufMeta, GartenentruempelungWienKostenAblauf),
   register(wohnungsraeumungSeniorenWienMeta, WohnungsraeumungSeniorenWien),
   register(schwerlastentsorgungWienMeta, SchwerlastentsorgungWien),
   register(entruempelungOesterreichweitMeta, EntruempelungOesterreichweit),

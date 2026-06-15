@@ -6,6 +6,10 @@ import {
   CONTACT_LEGAL_NAME,
   CONTACT_MAP,
   GISA_NUMBER,
+  GOOGLE_AGGREGATE_RATING,
+  OPENING_HOURS_SCHEMA_SPEC,
+  OPENING_HOURS_TEXT_LINE,
+  PHONE_TEL_NUMBER,
 } from "@/data/site-content";
 import {
   SCHEMA_BURGENLAND_CITIES,
@@ -13,7 +17,9 @@ import {
   SCHEMA_VIENNA_POSTAL_CODES,
 } from "@/data/schema-area-served";
 
-/** Kategorien für LocalBusiness-JSON-LD (`category`-Array). */
+// ─── Typen & Konstanten (Single Source of Truth) ─────────────────────────────
+
+/** Kategorien für HomeAndConstructionBusiness-JSON-LD (`category`-Array). */
 export const LOCAL_BUSINESS_CATEGORIES = [
   "Räumungsservice",
   "Entrümpelungsservice",
@@ -37,12 +43,16 @@ export const LOCAL_BUSINESS_CATEGORIES = [
   "Altwaren Ankauf",
 ] as const;
 
-export const DEFAULT_SERVICE_CATEGORY = LOCAL_BUSINESS_CATEGORIES[1];
+export type LocalBusinessCategory = (typeof LOCAL_BUSINESS_CATEGORIES)[number];
 
-/** JSON-LD `@type` für den operativen Standort (Entrümpelung / Haushaltsauflösung). */
+export const DEFAULT_SERVICE_CATEGORY: LocalBusinessCategory = LOCAL_BUSINESS_CATEGORIES[1];
+
+/** JSON-LD `@type` für den operativen Standort — zentral verwaltet. */
 export const LOCAL_BUSINESS_SCHEMA_TYPES = ["LocalBusiness", "HomeAndConstructionBusiness"] as const;
 
-const SERVICE_CATALOG_CATEGORY_BY_SLUG: Record<string, string> = {
+export type LocalBusinessSchemaType = (typeof LOCAL_BUSINESS_SCHEMA_TYPES)[number];
+
+const SERVICE_CATALOG_CATEGORY_BY_SLUG: Record<string, LocalBusinessCategory | string> = {
   hausentruempelung: "Hausentrümpelung",
   wohnungsentruempelung: "Wohnungsentrümpelung",
   "messie-entruempelung": "Messie Entrümpelung",
@@ -61,31 +71,7 @@ const SERVICE_CATALOG_CATEGORY_BY_SLUG: Record<string, string> = {
   ankauf: "Altwaren Ankauf",
 };
 
-/** Passende `category` pro Leistungs-Slug (OfferCatalog & Service-Seiten). */
-export function serviceCatalogCategory(slug: string): string {
-  return SERVICE_CATALOG_CATEGORY_BY_SLUG[slug] ?? DEFAULT_SERVICE_CATEGORY;
-}
-
-export function gisaPropertyValueIdentifier() {
-  return {
-    "@type": "PropertyValue" as const,
-    propertyID: "GISA-Nummer",
-    name: "Gewerbeinformationssystem Austria (GISA)",
-    value: GISA_NUMBER,
-  };
-}
-
-export function schemaContactPoint(telephone: string, email: string, origin: string) {
-  return {
-    "@type": "ContactPoint" as const,
-    telephone,
-    email,
-    contactType: "customer service",
-    areaServed: "AT",
-    availableLanguage: ["de-AT", "German"],
-    url: `${origin}/#kontakt-formular`,
-  };
-}
+// ─── IDs & Hilfsfunktionen ───────────────────────────────────────────────────
 
 export function schemaOriginIds(origin: string) {
   return {
@@ -94,6 +80,65 @@ export function schemaOriginIds(origin: string) {
     areaWienId: `${origin}/#area-wien`,
     catalogId: `${origin}/#offer-catalog`,
     websiteId: `${origin}/#website`,
+  } as const;
+}
+
+/** E.164-Telefonnummer für Schema.org (`+4368181130962`). */
+export function schemaTelephoneE164(): string {
+  return `+${PHONE_TEL_NUMBER}`;
+}
+
+/** Passende `category` pro Leistungs-Slug (OfferCatalog & Service-Seiten). */
+export function serviceCatalogCategory(slug: string): string {
+  const exact = SERVICE_CATALOG_CATEGORY_BY_SLUG[slug];
+  if (exact) return exact;
+  if (/keller/i.test(slug)) return "Kellerentrümpelung";
+  if (/^haus/i.test(slug) || slug === "haus") return "Hausentrümpelung";
+  return DEFAULT_SERVICE_CATEGORY;
+}
+
+/** GISA-Sicilnummer — Organization & HomeAndConstructionBusiness. */
+export function gisaPropertyValueIdentifier() {
+  return {
+    "@type": "PropertyValue" as const,
+    name: "GISA-Nr",
+    value: GISA_NUMBER,
+  };
+}
+
+/** Kontaktpunkt — HomeAndConstructionBusiness & Organization. */
+export function schemaContactPoint() {
+  return {
+    "@type": "ContactPoint" as const,
+    telephone: schemaTelephoneE164(),
+    contactType: "customer service",
+    availableLanguage: ["German", "English"] as const,
+  };
+}
+
+/** Festpreis-Signal auf Business-Ebene (`makesOffer`). */
+export function businessMakesOffer(origin: string) {
+  return {
+    "@type": "Offer" as const,
+    name: "Festpreis-Angebot",
+    url: `${origin}/preise`,
+  };
+}
+
+/** Erweitertes Angebot für einzelne Service-Seiten (`offers`). */
+export function festpreisOffer(origin: string) {
+  return {
+    ...businessMakesOffer(origin),
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    description:
+      "Festpreis nach kostenloser Besichtigung — Entsorgung, An- und Abfahrt inklusive",
+    priceSpecification: {
+      "@type": "PriceSpecification" as const,
+      priceCurrency: "EUR",
+      description:
+        "Verbindliches Angebot nach Objektbesichtigung; transparente Richtpreise online",
+    },
   };
 }
 
@@ -108,13 +153,14 @@ export function organizationPostalAddress() {
   };
 }
 
-/** `@graph`-Knoten: Organisation (Marke / Rechtsträger) — verlinkt mit LocalBusiness & WebSite. */
+// ─── @graph-Knoten-Builder ───────────────────────────────────────────────────
+
+/** Organisation (Marke / Rechtsträger). */
 export function organizationGraphNode(
   organizationId: string,
   logoId: string,
   logoUrl: string,
   origin: string,
-  telephone: string,
 ) {
   return {
     "@type": "Organization" as const,
@@ -124,17 +170,94 @@ export function organizationGraphNode(
     url: origin,
     logo: { "@id": logoId },
     image: logoUrl,
-    telephone,
+    telephone: schemaTelephoneE164(),
     email: CONTACT_BLOCK.email,
     address: organizationPostalAddress(),
     identifier: gisaPropertyValueIdentifier(),
-    contactPoint: schemaContactPoint(telephone, CONTACT_BLOCK.email, origin),
+    contactPoint: schemaContactPoint(),
     sameAs: [...BUSINESS_SAME_AS],
     knowsLanguage: "de-AT",
   };
 }
 
-/** `@graph`-Knoten: Wien mit PLZ-Abdeckung & alternateName. */
+export type HomeAndConstructionBusinessGraphParams = {
+  origin: string;
+  businessId: string;
+  organizationId: string;
+  catalogId: string;
+  logoId: string;
+  logoUrl: string;
+  areaServed: ReturnType<typeof areaServedForSchema>;
+};
+
+/** HomeAndConstructionBusiness — operativer Standort mit allen Pflichtsignalen. */
+export function homeAndConstructionBusinessGraphNode({
+  origin,
+  businessId,
+  organizationId,
+  catalogId,
+  logoId,
+  logoUrl,
+  areaServed,
+}: HomeAndConstructionBusinessGraphParams) {
+  return {
+    "@type": [...LOCAL_BUSINESS_SCHEMA_TYPES],
+    "@id": businessId,
+    parentOrganization: { "@id": organizationId },
+    name: SITE_BRAND,
+    legalName: CONTACT_LEGAL_NAME,
+    description:
+      "Entrümpelung und Haushaltsauflösung in Wien — Festpreis nach Besichtigung. Was kostet eine Entrümpelung? Wohnungsauflösung, Messie Wohnung reinigen & Entrümpelung nach Todesfall.",
+    url: `${origin}/`,
+    image: [logoUrl],
+    logo: {
+      "@type": "ImageObject" as const,
+      "@id": logoId,
+      url: logoUrl,
+      contentUrl: logoUrl,
+      width: 620,
+      height: 150,
+      caption: SITE_BRAND,
+    },
+    telephone: schemaTelephoneE164(),
+    email: CONTACT_BLOCK.email,
+    contactPoint: schemaContactPoint(),
+    hasMap: CONTACT_MAP.openHref,
+    identifier: gisaPropertyValueIdentifier(),
+    isAcceptingNewClients: true,
+    makesOffer: businessMakesOffer(origin),
+    priceRange: "$$",
+    currenciesAccepted: "EUR",
+    paymentAccepted: "Barzahlung, Banküberweisung, Debitkarte, Kreditkarte",
+    knowsLanguage: "de-AT",
+    category: [...LOCAL_BUSINESS_CATEGORIES],
+    address: organizationPostalAddress(),
+    geo: {
+      "@type": "GeoCoordinates" as const,
+      latitude: CONTACT_BLOCK.geo.latitude,
+      longitude: CONTACT_BLOCK.geo.longitude,
+    },
+    areaServed,
+    openingHours: OPENING_HOURS_TEXT_LINE,
+    openingHoursSpecification: OPENING_HOURS_SCHEMA_SPEC.map((row) => ({
+      "@type": "OpeningHoursSpecification" as const,
+      dayOfWeek: [...row.dayOfWeek],
+      opens: row.opens,
+      closes: row.closes,
+    })),
+    aggregateRating: {
+      "@type": "AggregateRating" as const,
+      ratingValue: GOOGLE_AGGREGATE_RATING.ratingValue,
+      reviewCount: GOOGLE_AGGREGATE_RATING.reviewCount,
+      bestRating: GOOGLE_AGGREGATE_RATING.bestRating,
+      worstRating: GOOGLE_AGGREGATE_RATING.worstRating,
+    },
+    sameAs: [...BUSINESS_SAME_AS],
+    hasOfferCatalog: { "@id": catalogId },
+  };
+}
+
+/** Wien mit PLZ-Abdeckung & alternateName. */
 export function wienCityGraphNode(areaWienId: string) {
   return {
     "@type": "City" as const,
@@ -212,23 +335,6 @@ export function areaServedForSchema(
   return [priorityPlace, ...base];
 }
 
-/** Festpreis-Angebot — verlinkt Richtpreise, ohne irreführende Fixbeträge pro Leistung. */
-export function festpreisOffer(origin: string) {
-  return {
-    "@type": "Offer" as const,
-    url: `${origin}/preise`,
-    priceCurrency: "EUR",
-    availability: "https://schema.org/InStock",
-    description:
-      "Festpreis nach kostenloser Besichtigung — Entsorgung, An- und Abfahrt inklusive",
-    priceSpecification: {
-      "@type": "PriceSpecification" as const,
-      priceCurrency: "EUR",
-      description: "Verbindliches Angebot nach Objektbesichtigung; transparente Richtpreise online",
-    },
-  };
-}
-
 export type SchemaBreadcrumbItem = {
   label: string;
   href?: string;
@@ -246,7 +352,9 @@ export function breadcrumbListSchema(
       "@type": "ListItem" as const,
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: item.href.startsWith("http") ? item.href : `${origin}${item.href}` } : {}),
+      ...(item.href
+        ? { item: item.href.startsWith("http") ? item.href : `${origin}${item.href}` }
+        : {}),
     })),
   };
 }
