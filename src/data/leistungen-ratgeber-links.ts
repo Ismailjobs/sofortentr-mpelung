@@ -26,8 +26,20 @@ export const LEISTUNGEN_RATGEBER_GROUPS: LeistungenRatgeberGroup[] = [
         href: `${RATGEBER_PATH}/wohnungsraeumung-senioren-wien`,
       },
       {
+        title: "Wiener Wohnen Übergabe — Gemeindebau ohne Stress",
+        href: `${RATGEBER_PATH}/gemeindebau-wiener-wohnen-wohnungsuebergabe`,
+      },
+      {
         title: "5 typische Fehler bei der Entrümpelung vermeiden",
         href: `${RATGEBER_PATH}/entruempelung-wien-5-fehler-vermeiden`,
+      },
+      {
+        title: "Express Entrümpelung Wien — 24h Krisenmanagement",
+        href: `${RATGEBER_PATH}/express-entruempelung-wien-24h-krisenmanagement`,
+      },
+      {
+        title: "Räumung nach Wasserschaden & Brandschaden",
+        href: `${RATGEBER_PATH}/raeumung-wasserschaden-brandschaden-wien`,
       },
     ],
   },
@@ -40,6 +52,10 @@ export const LEISTUNGEN_RATGEBER_GROUPS: LeistungenRatgeberGroup[] = [
         href: `${RATGEBER_PATH}/wohnungsaufloesung-nach-todesfall-wien`,
       },
       {
+        title: "Verlassenschaften Wien — sensible Räumung",
+        href: `${RATGEBER_PATH}/verlassenschaft-entruempelung-wien-sensibel`,
+      },
+      {
         title: "Gratis-Räumung durch Wertanrechnung",
         href: `${RATGEBER_PATH}/gratis-raeumung-wien-wertanrechnung`,
       },
@@ -49,6 +65,10 @@ export const LEISTUNGEN_RATGEBER_GROUPS: LeistungenRatgeberGroup[] = [
     serviceLabel: "Büroentrümpelung & Praxisauflösung",
     serviceHref: "/leistungen/bueroentruempelung",
     links: [
+      {
+        title: "Büroauflösung Wien — Diskretion & Datenschutz",
+        href: `${RATGEBER_PATH}/bueroaufloesung-wien-diskretion-datenschutz`,
+      },
       {
         title: "Praxisauflösung Wien — DSGVO & Rückbau",
         href: `${RATGEBER_PATH}/praxisaufloesung-wien`,

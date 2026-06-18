@@ -42,6 +42,21 @@ import EntruempelungsdienstVsEntruempelungsfirmaWien, {
 import EntruempelungGemeindebauWienerWohnen, {
   meta as entruempelungGemeindebauMeta,
 } from "@/components/ratgeber/articles/entruempelung-gemeindebau-wiener-wohnen";
+import GemeindebauWienerWohnenWohnungsuebergabe, {
+  meta as gemeindebauWienerWohnenWohnungsuebergabeMeta,
+} from "@/components/ratgeber/articles/gemeindebau-wiener-wohnen-wohnungsuebergabe";
+import BueroaufloesungWienDiskretionDatenschutz, {
+  meta as bueroaufloesungWienDiskretionDatenschutzMeta,
+} from "@/components/ratgeber/articles/bueroaufloesung-wien-diskretion-datenschutz";
+import VerlassenschaftEntruempelungWienSensibel, {
+  meta as verlassenschaftEntruempelungWienSensibelMeta,
+} from "@/components/ratgeber/articles/verlassenschaft-entruempelung-wien-sensibel";
+import RaeumungWasserschadenBrandschadenWien, {
+  meta as raeumungWasserschadenBrandschadenWienMeta,
+} from "@/components/ratgeber/articles/raeumung-wasserschaden-brandschaden-wien";
+import ExpressEntruempelungWien24hKrisenmanagement, {
+  meta as expressEntruempelungWien24hKrisenmanagementMeta,
+} from "@/components/ratgeber/articles/express-entruempelung-wien-24h-krisenmanagement";
 import KellerAufraeumenEntruempelnWien, {
   meta as kellerAufraeumenEntruempelnWienMeta,
 } from "@/components/ratgeber/articles/keller-aufraeumen-entruempeln-wien";
@@ -114,6 +129,11 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(gemeindebauWienerWohnenWohnungsuebergabeMeta, GemeindebauWienerWohnenWohnungsuebergabe),
+  register(bueroaufloesungWienDiskretionDatenschutzMeta, BueroaufloesungWienDiskretionDatenschutz),
+  register(verlassenschaftEntruempelungWienSensibelMeta, VerlassenschaftEntruempelungWienSensibel),
+  register(raeumungWasserschadenBrandschadenWienMeta, RaeumungWasserschadenBrandschadenWien),
+  register(expressEntruempelungWien24hKrisenmanagementMeta, ExpressEntruempelungWien24hKrisenmanagement),
   register(kellerAufraeumenEntruempelnWienMeta, KellerAufraeumenEntruempelnWien),
   register(bueroentruempelungWienDsgvoRueckbauMeta, BueroentruempelungWienDsgvoRueckbau),
   register(garagenentruempelungWienKostenAblaufMeta, GaragenentruempelungWienKostenAblauf),

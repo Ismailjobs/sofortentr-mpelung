@@ -40,6 +40,11 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "garagenentruempelung-wien-kosten-ablauf": 30,
   "bueroentruempelung-wien-dsgvo-rueckbau": 31,
   "keller-aufraeumen-entruempeln-wien": 32,
+  "express-entruempelung-wien-24h-krisenmanagement": 33,
+  "raeumung-wasserschaden-brandschaden-wien": 34,
+  "verlassenschaft-entruempelung-wien-sensibel": 35,
+  "bueroaufloesung-wien-diskretion-datenschutz": 36,
+  "gemeindebau-wiener-wohnen-wohnungsuebergabe": 37,
 };
 
 function slugToUpdateDay(slug: string): number {

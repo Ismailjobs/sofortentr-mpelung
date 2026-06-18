@@ -3,7 +3,7 @@
 > Pflege-Dokumentation: Jeder veröffentlichte Ratgeber-Artikel mit URL, Inhaltsschwerpunkten und Ziel-Keywords.  
 > Bei neuen Artikeln: Eintrag hier ergänzen + `registry.ts` aktualisieren.
 
-**Stand:** Implementierung im Repo — 32 veröffentlichte Artikel
+**Stand:** Implementierung im Repo — 37 veröffentlichte Artikel
 
 ---
 
@@ -1290,6 +1290,220 @@ B2B Firmenauflösung — DSGVO, Rückbau, Fixpreis; Conversion über Büroentrü
 ### Suchintention
 
 DIY Keller ordnen vs. Profi — Conversion über Kellerentrümpelung & Fixpreis.
+
+---
+
+## Artikel 33 — Express Entrümpelung Wien (24h)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `express-entruempelung-wien-24h-krisenmanagement` |
+| **URL** | `/ratgeber/express-entruempelung-wien-24h-krisenmanagement` |
+| **Datei** | `src/components/ratgeber/articles/express-entruempelung-wien-24h-krisenmanagement.tsx` |
+| **H1** | Express Entrümpelung Wien: Krisenmanagement unter extremem Zeitdruck (24h-Service) |
+| **SEO-Titel** | Express Entrümpelung Wien — 24h Krisenmanagement & Fixpreis 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 33 (rollierend, clamp auf Monatslänge) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Express Entrümpelung Wien`
+
+### H2-Gliederung
+
+1. 3-Zonen-Triage-System (Zone 1–3)
+2. Wiener Lärmschutz / Ruhezeiten
+3. Gerichtliche Fristen & Gerichtsvollzieher
+4. Müllraum-Illusion & Großdeponie-Bypass
+5. Schnelligkeit + Bauschutz
+
+### Besondere Elemente
+
+4 FAQ, Ruhezeiten-Warning (Gemeindebau), CTA Express-Anfrage; ergänzt Delogierung-Artikel
+
+### Interne Links
+
+- `/leistungen/wohnungsaufloesung`, `/leistungen/haushaltsaufloesung`
+- `/ratgeber/delogierung-zwangsrauemung-wien`, `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`
+- `/ratgeber/checkliste-wohnungsraeumung-wien`, `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`
+- `/ratgeber/raeumungsexperte-wien-besichtigung`, `/ratgeber/zimmer-raeumung-wien`, `/preise`
+
+### Suchintention
+
+Notfall / 24h / Krisenfall — Conversion über Express-Besichtigung & Fixpreis.
+
+---
+
+## Artikel 34 — Räumung nach Wasserschaden & Brandschaden Wien
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `raeumung-wasserschaden-brandschaden-wien` |
+| **URL** | `/ratgeber/raeumung-wasserschaden-brandschaden-wien` |
+| **Datei** | `src/components/ratgeber/articles/raeumung-wasserschaden-brandschaden-wien.tsx` |
+| **H1** | Räumung nach Wasserschaden & Brandschaden in Wien: Abwicklung, Sondermüll und Versicherung |
+| **SEO-Titel** | Entrümpelung nach Wasserschaden Wien — Brandschaden, Versicherung & Sondermüll 2026 |
+| **Meta-Description** | ca. 158 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 34 (rollierend) |
+| **Lesezeit** | ca. 11 Min. |
+
+### Primäres Fokus-Keyword
+
+`Entrümpelung nach Wasserschaden Wien`
+
+### H2-Gliederung
+
+1. Wettlauf gegen Schimmel & Korrosion
+2. Beweissicherung vor Entsorgung
+3. Brandmüll & Sondermüll (kein Sperrmüll)
+4. Versicherung Haushalt vs. Gebäude
+5. Geruchsneutralisation & besenrein
+
+### Besondere Elemente
+
+4 FAQ, Versicherungs-Warning, Schadensprotokoll; ergänzt Express-Entrümpelung-Artikel
+
+### Interne Links
+
+- `/leistungen/haushaltsaufloesung`, `/leistungen/wohnungsaufloesung`
+- `/ratgeber/express-entruempelung-wien-24h-krisenmanagement`, `/ratgeber/entruempelung-vor-sanierung-wien`
+- `/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien`, `/ratgeber/schwerlastentsorgung-wien`
+- `/ratgeber/was-kostet-entruempelung-wien`, `/ratgeber/checkliste-wohnungsraeumung-wien`, `/preise`
+
+### Suchintention
+
+Schadensfall / Versicherung / Sondermüll — Conversion über Schadens-Besichtigung & Fixpreis.
+
+---
+
+## Artikel 35 — Verlassenschaft entrümpeln Wien (sensibel)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `verlassenschaft-entruempelung-wien-sensibel` |
+| **URL** | `/ratgeber/verlassenschaft-entruempelung-wien-sensibel` |
+| **Datei** | `src/components/ratgeber/articles/verlassenschaft-entruempelung-wien-sensibel.tsx` |
+| **H1** | Verlassenschaften in Wien: Sensible Räumung nach einem Todesfall |
+| **SEO-Titel** | Verlassenschaft entrümpeln Wien — sensible Räumung & Wertanrechnung 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 35 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Verlassenschaft entrümpeln Wien`
+
+### H2-Gliederung
+
+1. Unbedachte Entsorgung aus Trauer (Triage)
+2. Rechtliche Fallstricke & Inventarverzeichnis
+3. Wertanrechnung beim Erbe
+4. Diskretion im Stiegenhaus
+5. Komplettservice bis Schlüsselübergabe
+
+### Besondere Elemente
+
+4 FAQ, Rechts-Warning, empathischer Ton; ergänzt Artikel Wohnungsauflösung nach Todesfall (rechtlich)
+
+### Interne Links
+
+- `/leistungen/verlassenschaft`, `/leistungen/nachlass`
+- `/ratgeber/wohnungsaufloesung-nach-todesfall-wien`, `/ratgeber/gratis-raeumung-wien-wertanrechnung`
+- `/ratgeber/was-tun-mit-alten-schaetzen-wien`, `/ratgeber/gebrauchte-moebel-bewerten-wien`
+- `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`, `/ratgeber/checkliste-wohnungsraeumung-wien`, `/preise`
+
+### Suchintention
+
+Emotionale Angehörigen-Suche — Conversion über diskrete Verlassenschaftsräumung & Besichtigung.
+
+---
+
+## Artikel 36 — Büroauflösung Wien (Diskretion & Datenschutz)
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `bueroaufloesung-wien-diskretion-datenschutz` |
+| **URL** | `/ratgeber/bueroaufloesung-wien-diskretion-datenschutz` |
+| **Datei** | `src/components/ratgeber/articles/bueroaufloesung-wien-diskretion-datenschutz.tsx` |
+| **H1** | Professionelle Büroauflösung in Wien: Diskretion, Datenschutz & Rückbau 2026 |
+| **SEO-Titel** | Büroauflösung Wien — Diskretion, DSGVO-Rückbau & Zero-Downtime 2026 |
+| **Meta-Description** | ca. 158 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 36 (rollierend) |
+| **Lesezeit** | ca. 11 Min. |
+
+### Primäres Fokus-Keyword
+
+`Büroauflösung Wien` (abgrenzend zu Artikel Büroentrümpelung)
+
+### H2-Gliederung
+
+1. Verantwortungsmatrix (GF-Perspektive)
+2. Rückbau-Pflicht im Gewerbemietvertrag
+3. Zero-Downtime / Nacht- & Wochenendeinsätze
+4. Circular Economy & IT-Restwert
+5. Übergabe-Protokoll (Checklist)
+
+### Besondere Elemente
+
+4 FAQ, Übergabe-Checklist, Expert-Badge; verlinkt auf Büroentrümpelung-DSGVO-Artikel statt Duplikat
+
+### Interne Links
+
+- `/leistungen/bueroentruempelung`, `/leistungen/wertausgleich`
+- `/ratgeber/bueroentruempelung-wien-dsgvo-rueckbau`, `/ratgeber/praxisaufloesung-wien`
+- `/ratgeber/geschaeftslokal-raeumen-wien-rueckbau`, `/ratgeber/express-entruempelung-wien-24h-krisenmanagement`
+- `/ratgeber/gratis-raeumung-wien-wertanrechnung`, `/ratgeber/raeumungsexperte-wien-besichtigung`, `/preise`
+
+### Suchintention
+
+Geschäftsführer / Facility — Conversion über B2B-Besichtigung; ergänzt (nicht ersetzt) Büroentrümpelung-Artikel.
+
+---
+
+## Artikel 37 — Gemeindebau & Wiener Wohnen Übergabe
+
+| Feld | Wert |
+|------|------|
+| **Slug** | `gemeindebau-wiener-wohnen-wohnungsuebergabe` |
+| **URL** | `/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe` |
+| **Datei** | `src/components/ratgeber/articles/gemeindebau-wiener-wohnen-wohnungsuebergabe.tsx` |
+| **H1** | Gemeindebau & Wiener Wohnen: Räumung & Wohnungsübergabe ohne Stress |
+| **SEO-Titel** | Wiener Wohnen Übergabe — Gemeindebau Räumung & Kaution 2026 |
+| **Meta-Description** | ca. 155 Zeichen |
+| **Veröffentlicht** | 2026-06-11 |
+| **Aktualisierungstag** | 37 (rollierend) |
+| **Lesezeit** | ca. 10 Min. |
+
+### Primäres Fokus-Keyword
+
+`Wiener Wohnen Wohnungsübergabe` (abgrenzend zu Entrümpelung Gemeindebau)
+
+### H2-Gliederung
+
+1. Übergabe-Hürde (Demontage, besenrein, Entsorgungsnachweise)
+2. Keller & Dachboden als Blocker
+3. Gemeindebau-Logistik (Park, Lift, Ruhezeiten)
+4. Termin-Druck & Fixpreis
+5. Kaution retten
+
+### Besondere Elemente
+
+4 FAQ, Kaution-Warning; verlinkt auf bestehenden Gemeindebau-Rückbau-Artikel
+
+### Interne Links
+
+- `/ratgeber/entruempelung-gemeindebau-wiener-wohnen`, `/leistungen/wohnungsaufloesung`
+- `/ratgeber/keller-aufraeumen-entruempeln-wien`, `/ratgeber/dachbodenraeumung-wien-ma-48`
+- `/ratgeber/express-entruempelung-wien-24h-krisenmanagement`, `/ratgeber/checkliste-wohnungsraeumung-wien`, `/preise`
+
+### Suchintention
+
+Mieter vor Übergabe — Kautionsschutz & stressfreie Schlüsselrückgabe.
 
 ---
 
