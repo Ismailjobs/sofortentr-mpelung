@@ -57,6 +57,58 @@ export const IMPRESSUM_PATH = "/impressum";
 
 export const PARTNER_PATH = "/partner";
 
+export type SitePartner = {
+  name: string;
+  url: string;
+  /** z. B. Bundesland oder Schwerpunkt — für Partner-Karte */
+  region: string;
+  /** Kurztext auf /partner (Backlink-Kontext) */
+  description: string;
+};
+
+/** Kooperations- & Backlink-Partner — zentral für /partner und interne Verweise. */
+export const SITE_PARTNERS: readonly SitePartner[] = [
+  {
+    name: "Objekträumung",
+    url: "https://objektraeumung.at",
+    region: "Österreich",
+    description:
+      "Professionelle Räumung und Haushaltsauflösung — Wohnungen, Häuser, Keller und Nachlässe zum Fixpreis nach Besichtigung.",
+  },
+  {
+    name: "Swift Umzug",
+    url: "https://swiftumzug.at",
+    region: "Österreich",
+    description:
+      "Umzugsservice und begleitende Räumungsleistungen — koordinierte Übergabe, Transport und Entrümpelung aus einer Hand.",
+  },
+  {
+    name: "Entrümpelung Oberösterreich",
+    url: "https://entruempelung-ooe.at",
+    region: "Oberösterreich",
+    description:
+      "Regionale Entrümpelung und Haushaltsauflösung in Oberösterreich — von Linz bis in das Umland, diskret und termintreu.",
+  },
+  {
+    name: "Steirer Entrümpler",
+    url: "https://steirer-entruempler.at",
+    region: "Steiermark",
+    description:
+      "Entrümpelung und Räumung in der Steiermark — Wohnungsauflösungen, Keller, Nachlass und Gewerbe mit Festpreisangebot.",
+  },
+  {
+    name: "Entrümpelungsfirma Salzburg",
+    url: "https://entruempelungsfirma-salzburg.at",
+    region: "Salzburg",
+    description:
+      "Entrümpelungsfirma für Salzburg und Umgebung — Haushaltsauflösung, Verlassenschaft und Objekträumung mit fachgerechter Entsorgung.",
+  },
+] as const;
+
+export function partnerHost(url: string): string {
+  return url.replace(/^https?:\/\//i, "").replace(/\/$/, "");
+}
+
 export const RATGEBER_PATH = "/ratgeber";
 
 /** Startseiten-Anker — immer mit führendem `/`, nie nur `#…` (sonst bleibt man auf Unterseiten). */
