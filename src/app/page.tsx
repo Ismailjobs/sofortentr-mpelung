@@ -3,6 +3,7 @@ import { preload } from "react-dom";
 import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
+import HomeNetworkRecommendations from "@/components/HomeNetworkRecommendations";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import FaqPageJsonLd from "@/components/FaqPageJsonLd";
@@ -55,6 +56,7 @@ export default function Home() {
       <DeferredIdle fallback={<ContactFormPlaceholder />}>
         <LazyContactFormSection />
       </DeferredIdle>
+      <HomeNetworkRecommendations />
       <Footer />
       <DeferredIdle>
         <LazyWhatsAppFAB />
