@@ -45,6 +45,21 @@ import EntruempelungGemeindebauWienerWohnen, {
 import GemeindebauWienerWohnenWohnungsuebergabe, {
   meta as gemeindebauWienerWohnenWohnungsuebergabeMeta,
 } from "@/components/ratgeber/articles/gemeindebau-wiener-wohnen-wohnungsuebergabe";
+import StadtWienGemeindewohnungRueckgabevorgaben, {
+  meta as stadtWienGemeindewohnungRueckgabevorgabenMeta,
+} from "@/components/ratgeber/articles/stadt-wien-gemeindewohnung-rueckgabevorgaben";
+import BuwogGenossenschaftEntruempelungWien, {
+  meta as buwogGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/buwog-genossenschaft-entruempelung-wien";
+import OevwGenossenschaftEntruempelungWien, {
+  meta as oevwGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/oevw-genossenschaft-entruempelung-wien";
+import SiedlungsunionGenossenschaftEntruempelungWien, {
+  meta as siedlungsunionGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/siedlungsunion-genossenschaft-entruempelung-wien";
+import FamilienwohnbauGenossenschaftEntruempelungWien, {
+  meta as familienwohnbauGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/familienwohnbau-genossenschaft-entruempelung-wien";
 import BueroaufloesungWienDiskretionDatenschutz, {
   meta as bueroaufloesungWienDiskretionDatenschutzMeta,
 } from "@/components/ratgeber/articles/bueroaufloesung-wien-diskretion-datenschutz";
@@ -129,6 +144,11 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(familienwohnbauGenossenschaftEntruempelungWienMeta, FamilienwohnbauGenossenschaftEntruempelungWien),
+  register(siedlungsunionGenossenschaftEntruempelungWienMeta, SiedlungsunionGenossenschaftEntruempelungWien),
+  register(oevwGenossenschaftEntruempelungWienMeta, OevwGenossenschaftEntruempelungWien),
+  register(buwogGenossenschaftEntruempelungWienMeta, BuwogGenossenschaftEntruempelungWien),
+  register(stadtWienGemeindewohnungRueckgabevorgabenMeta, StadtWienGemeindewohnungRueckgabevorgaben),
   register(gemeindebauWienerWohnenWohnungsuebergabeMeta, GemeindebauWienerWohnenWohnungsuebergabe),
   register(bueroaufloesungWienDiskretionDatenschutzMeta, BueroaufloesungWienDiskretionDatenschutz),
   register(verlassenschaftEntruempelungWienSensibelMeta, VerlassenschaftEntruempelungWienSensibel),

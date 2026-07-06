@@ -45,6 +45,11 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "verlassenschaft-entruempelung-wien-sensibel": 35,
   "bueroaufloesung-wien-diskretion-datenschutz": 36,
   "gemeindebau-wiener-wohnen-wohnungsuebergabe": 37,
+  "stadt-wien-gemeindewohnung-rueckgabevorgaben": 6,
+  "buwog-genossenschaft-entruempelung-wien": 14,
+  "oevw-genossenschaft-entruempelung-wien": 21,
+  "siedlungsunion-genossenschaft-entruempelung-wien": 8,
+  "familienwohnbau-genossenschaft-entruempelung-wien": 17,
 };
 
 function slugToUpdateDay(slug: string): number {
