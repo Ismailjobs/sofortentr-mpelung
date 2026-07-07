@@ -60,6 +60,18 @@ import SiedlungsunionGenossenschaftEntruempelungWien, {
 import FamilienwohnbauGenossenschaftEntruempelungWien, {
   meta as familienwohnbauGenossenschaftEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/familienwohnbau-genossenschaft-entruempelung-wien";
+import EgwGenossenschaftEntruempelungNiederoesterreich, {
+  meta as egwGenossenschaftEntruempelungNiederoesterreichMeta,
+} from "@/components/ratgeber/articles/egw-genossenschaft-entruempelung-niederoesterreich";
+import EbsgGenossenschaftEntruempelungNoeBurgenland, {
+  meta as ebsgGenossenschaftEntruempelungNoeBurgenlandMeta,
+} from "@/components/ratgeber/articles/ebsg-genossenschaft-entruempelung-noe-burgenland";
+import EbgGenossenschaftEntruempelungWien, {
+  meta as ebgGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/ebg-genossenschaft-entruempelung-wien";
+import BauhilfeGenossenschaftEntruempelungWien, {
+  meta as bauhilfeGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/bauhilfe-genossenschaft-entruempelung-wien";
 import BueroaufloesungWienDiskretionDatenschutz, {
   meta as bueroaufloesungWienDiskretionDatenschutzMeta,
 } from "@/components/ratgeber/articles/bueroaufloesung-wien-diskretion-datenschutz";
@@ -144,6 +156,10 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(bauhilfeGenossenschaftEntruempelungWienMeta, BauhilfeGenossenschaftEntruempelungWien),
+  register(ebgGenossenschaftEntruempelungWienMeta, EbgGenossenschaftEntruempelungWien),
+  register(ebsgGenossenschaftEntruempelungNoeBurgenlandMeta, EbsgGenossenschaftEntruempelungNoeBurgenland),
+  register(egwGenossenschaftEntruempelungNiederoesterreichMeta, EgwGenossenschaftEntruempelungNiederoesterreich),
   register(familienwohnbauGenossenschaftEntruempelungWienMeta, FamilienwohnbauGenossenschaftEntruempelungWien),
   register(siedlungsunionGenossenschaftEntruempelungWienMeta, SiedlungsunionGenossenschaftEntruempelungWien),
   register(oevwGenossenschaftEntruempelungWienMeta, OevwGenossenschaftEntruempelungWien),

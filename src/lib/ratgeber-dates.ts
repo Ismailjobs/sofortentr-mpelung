@@ -50,6 +50,10 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "oevw-genossenschaft-entruempelung-wien": 21,
   "siedlungsunion-genossenschaft-entruempelung-wien": 8,
   "familienwohnbau-genossenschaft-entruempelung-wien": 17,
+  "egw-genossenschaft-entruempelung-niederoesterreich": 12,
+  "ebsg-genossenschaft-entruempelung-noe-burgenland": 23,
+  "ebg-genossenschaft-entruempelung-wien": 9,
+  "bauhilfe-genossenschaft-entruempelung-wien": 5,
 };
 
 function slugToUpdateDay(slug: string): number {
