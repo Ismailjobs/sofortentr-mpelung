@@ -72,6 +72,12 @@ import EbgGenossenschaftEntruempelungWien, {
 import BauhilfeGenossenschaftEntruempelungWien, {
   meta as bauhilfeGenossenschaftEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/bauhilfe-genossenschaft-entruempelung-wien";
+import HaushaltsaufloesungErwachsenenvertretungWien, {
+  meta as haushaltsaufloesungErwachsenenvertretungWienMeta,
+} from "@/components/ratgeber/articles/haushaltsaufloesung-erwachsenenvertretung-wien";
+import ArwagGenossenschaftEntruempelungWien, {
+  meta as arwagGenossenschaftEntruempelungWienMeta,
+} from "@/components/ratgeber/articles/arwag-genossenschaft-entruempelung-wien";
 import BueroaufloesungWienDiskretionDatenschutz, {
   meta as bueroaufloesungWienDiskretionDatenschutzMeta,
 } from "@/components/ratgeber/articles/bueroaufloesung-wien-diskretion-datenschutz";
@@ -156,6 +162,8 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(arwagGenossenschaftEntruempelungWienMeta, ArwagGenossenschaftEntruempelungWien),
+  register(haushaltsaufloesungErwachsenenvertretungWienMeta, HaushaltsaufloesungErwachsenenvertretungWien),
   register(bauhilfeGenossenschaftEntruempelungWienMeta, BauhilfeGenossenschaftEntruempelungWien),
   register(ebgGenossenschaftEntruempelungWienMeta, EbgGenossenschaftEntruempelungWien),
   register(ebsgGenossenschaftEntruempelungNoeBurgenlandMeta, EbsgGenossenschaftEntruempelungNoeBurgenland),

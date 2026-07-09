@@ -54,6 +54,8 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "ebsg-genossenschaft-entruempelung-noe-burgenland": 23,
   "ebg-genossenschaft-entruempelung-wien": 9,
   "bauhilfe-genossenschaft-entruempelung-wien": 5,
+  "haushaltsaufloesung-erwachsenenvertretung-wien": 19,
+  "arwag-genossenschaft-entruempelung-wien": 16,
 };
 
 function slugToUpdateDay(slug: string): number {
