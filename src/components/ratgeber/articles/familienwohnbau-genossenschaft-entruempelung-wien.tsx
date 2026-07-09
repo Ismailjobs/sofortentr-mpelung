@@ -90,6 +90,14 @@ export default function FamilienwohnbauGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur Familienwohnbau finden Sie auf{" "}
+        <RatgeberInternalLink href="https://familienwohnbau.at/de/">
+          familienwohnbau.at
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
       <RatgeberH2>1. Was die Familienwohnbau Genossenschaft bei der Wohnungsrückgabe verlangt</RatgeberH2>
       <RatgeberP>
         Die Familienwohnbau Gemeinnützige Bau- und Siedlungsgesellschaft verwaltet zahlreiche moderne und

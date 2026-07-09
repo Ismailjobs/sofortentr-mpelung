@@ -87,6 +87,11 @@ export default function EbgGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur EBG finden Sie auf{" "}
+        <RatgeberInternalLink href="https://ebg-wohnen.at/">ebg-wohnen.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Anforderungen der EBG Genossenschaft bei Mietende</RatgeberH2>
       <RatgeberP>
         Die EBG verwaltet zahlreiche Wohnanlagen in Wien und stellt standardisierte Bedingungen an

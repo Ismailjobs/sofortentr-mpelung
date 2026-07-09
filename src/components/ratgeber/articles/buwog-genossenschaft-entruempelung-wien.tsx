@@ -96,6 +96,11 @@ export default function BuwogGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur BUWOG finden Sie auf{" "}
+        <RatgeberInternalLink href="https://buwog.at/">buwog.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Warum sich eine professionelle Räumung Ihrer BUWOG-Wohnung auszahlt</RatgeberH2>
       <RatgeberP>
         Die Kriterien für die Rückgabe einer Genossenschaftswohnung sind streng. Oft müssen Einbauten

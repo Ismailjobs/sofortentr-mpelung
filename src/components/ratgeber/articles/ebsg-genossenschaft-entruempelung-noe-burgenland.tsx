@@ -86,6 +86,11 @@ export default function EbsgGenossenschaftEntruempelungNoeBurgenland() {
         und im <RatgeberInternalLink href="/entruempelung-burgenland">Burgenland</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur EBSG finden Sie auf{" "}
+        <RatgeberInternalLink href="https://www.ebsg.at/">ebsg.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Richtlinien der EBSG Genossenschaft bei der Wohnungsrückgabe</RatgeberH2>
       <RatgeberP>
         Da die EBSG leistbaren Wohnraum in zahlreichen Gemeinden Niederösterreichs und des Burgenlands

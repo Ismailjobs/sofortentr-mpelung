@@ -93,6 +93,11 @@ export default function BauhilfeGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur Bauhilfe finden Sie auf{" "}
+        <RatgeberInternalLink href="https://www.bauhilfe.at/">bauhilfe.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Wohnungsräumung Bauhilfe Genossenschaft — Was wirklich gefordert wird</RatgeberH2>
       <RatgeberP>
         Wer eine Wohnung an die Bauhilfe Genossenschaft zurückgibt, muss typische Kriterien des Wiener

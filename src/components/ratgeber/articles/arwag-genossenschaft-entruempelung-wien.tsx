@@ -88,6 +88,11 @@ export default function ArwagGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur ARWAG finden Sie auf{" "}
+        <RatgeberInternalLink href="https://arwag.at/">arwag.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Übergabe-Richtlinien der ARWAG Genossenschaft</RatgeberH2>
       <RatgeberP>
         Die ARWAG verwaltet zahlreiche Wohnprojekte im urbanen Raum Wiens und stellt klare Bedingungen an

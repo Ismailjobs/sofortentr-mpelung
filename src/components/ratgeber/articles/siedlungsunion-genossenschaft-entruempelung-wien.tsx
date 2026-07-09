@@ -89,6 +89,14 @@ export default function SiedlungsunionGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur Siedlungsunion finden Sie auf{" "}
+        <RatgeberInternalLink href="https://www.siedlungsunion.at/">
+          siedlungsunion.at
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
       <RatgeberH2>1. Die Übergabe-Richtlinien der Siedlungsunion Genossenschaft</RatgeberH2>
       <RatgeberP>
         Die Siedlungsunion verwaltet eine Vielzahl an Wohnobjekten und stellt klare, standardisierte Bedingungen

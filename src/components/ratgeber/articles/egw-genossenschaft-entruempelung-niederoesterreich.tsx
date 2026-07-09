@@ -86,6 +86,11 @@ export default function EgwGenossenschaftEntruempelungNiederoesterreich() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zur EGW finden Sie auf{" "}
+        <RatgeberInternalLink href="https://egw.at/">egw.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. EGW Genossenschaft: Strenge Regeln für die Wohnungsrückgabe</RatgeberH2>
       <RatgeberP>
         Die EGW verwaltet zahlreiche Wohnprojekte in ganz Niederösterreich und verlangt bei Mietende die

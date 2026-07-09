@@ -90,6 +90,11 @@ export default function OevwGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberP>
+        Offizielle Informationen zum ÖVW finden Sie auf{" "}
+        <RatgeberInternalLink href="https://www.oevw.at/">oevw.at</RatgeberInternalLink>.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Richtlinien der ÖVW-Wohnungsrückgabe im Überblick</RatgeberH2>
       <RatgeberP>
         Da das ÖVW einen großen Bestand an Wohnanlagen in ganz Wien verwaltet, existieren standardisierte und
