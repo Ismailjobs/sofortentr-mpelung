@@ -91,6 +91,18 @@ export default function EbsgGenossenschaftEntruempelungNoeBurgenland() {
         <RatgeberInternalLink href="https://www.ebsg.at/">ebsg.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>EBSG: NÖ und Burgenland — andere Logistik als Wien</RatgeberH2>
+      <RatgeberP>
+        Die EBSG betreut Wohnbau in Gemeinden wie Mödling, Schwechat oder Mattersburg — oft mit eigenen
+        Parkplätzen, aber längeren Anfahrtswegen für unsere Teams aus Wien. Wir kalkulieren deshalb
+        Fahrtzeiten transparent in den Fixpreis ein, statt nachträglich „Anfahrtszuschläge“ zu berechnen.
+      </RatgeberP>
+      <RatgeberP>
+        In EBSG-Häusern mit Gartenanteil oder Terrasse vergessen Ausziehende häufig Gartenmöbel oder
+        Schuppeninhalt. Auch diese Flächen gehören zur Übergabe — wir leeren Nebenflächen im selben Termin mit,
+        damit die Abnahme nicht an einem alten Gartenstuhl scheitert.
+      </RatgeberP>
+
       <RatgeberH2>1. Richtlinien der EBSG Genossenschaft bei der Wohnungsrückgabe</RatgeberH2>
       <RatgeberP>
         Da die EBSG leistbaren Wohnraum in zahlreichen Gemeinden Niederösterreichs und des Burgenlands

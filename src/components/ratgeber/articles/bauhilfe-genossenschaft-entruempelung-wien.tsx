@@ -98,6 +98,19 @@ export default function BauhilfeGenossenschaftEntruempelungWien() {
         <RatgeberInternalLink href="https://www.bauhilfe.at/">bauhilfe.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>Bauhilfe-Objekte: Innenstadt vs. Randlage</RatgeberH2>
+      <RatgeberP>
+        Die Bauhilfe betreibt Wohnbau vor allem in zentralen Lagen — etwa in den Bezirken 3, 5 und 10. Viele
+        Häuser haben schmale Zufahrten und nur wenige reservierte Ladezonen. Für größere Entrümpelungen
+        koordinieren wir deshalb oft Nacht- oder Frühtermine, wenn die Straße ruhiger ist.
+      </RatgeberP>
+      <RatgeberP>
+        Typisch für ältere Bauhilfe-Bestände sind kleine Badezimmer mit eingebauten Schränken und
+        nachträglich verklebte PVC-Böden in Flur und Küche. Diese Beläge lassen sich nicht mit dem Küchenmesser
+        lösen — wir arbeiten mit Heißluft und Fachwerkzeug, damit keine Klebereste als Abnahmemangel
+        zurückbleiben.
+      </RatgeberP>
+
       <RatgeberH2>1. Wohnungsräumung Bauhilfe Genossenschaft — Was wirklich gefordert wird</RatgeberH2>
       <RatgeberP>
         Wer eine Wohnung an die Bauhilfe Genossenschaft zurückgibt, muss typische Kriterien des Wiener

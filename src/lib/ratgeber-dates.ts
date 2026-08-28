@@ -56,6 +56,12 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "bauhilfe-genossenschaft-entruempelung-wien": 5,
   "haushaltsaufloesung-erwachsenenvertretung-wien": 19,
   "arwag-genossenschaft-entruempelung-wien": 16,
+  "entruempelung-liesing-wien-1230": 4,
+  "entruempelung-1010-wien": 11,
+  "entruempelung-favoriten-wien-1100": 13,
+  "entruempelung-donaustadt-wien-1220": 22,
+  "entruempelung-leopoldstadt-wien-1020": 7,
+  "entruempelung-floridsdorf-wien-1210": 15,
 };
 
 function slugToUpdateDay(slug: string): number {

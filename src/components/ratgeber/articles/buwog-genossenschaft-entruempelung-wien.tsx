@@ -101,6 +101,21 @@ export default function BuwogGenossenschaftEntruempelungWien() {
         <RatgeberInternalLink href="https://buwog.at/">buwog.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>Was BUWOG-Objekte in Wien praktisch unterscheidet</RatgeberH2>
+      <RatgeberP>
+        Die BUWOG verwaltet sowohl große Nachkriegs-Siedlungen mit weiten Innenhöfen als auch modernere
+        Neubauten — etwa in Donaustadt, Favoriten oder Floridsdorf. In der Praxis bedeutet das: oft lange
+        Wege vom Kellerabteil über mehrere Stiegenhäuser bis zur Zufahrt, und Parkplätze direkt vor dem
+        richtigen Eingang sind selten. Wir planen deshalb Halteverbotszonen und Teamgröße nach
+        Hofstruktur — nicht nur nach Quadratmetern.
+      </RatgeberP>
+      <RatgeberP>
+        Ein wiederkehrendes Detail bei BUWOG-Übergaben sind massige Einbauküchen und Schrankwände aus den
+        1970er- und 80er-Jahren, die in engen Aufzugskabinen nicht im Ganzen transportiert werden können.
+        Unser Team demontiert solche Einbauten vor Ort und entsorgt Kleinteile getrennt — das spart oft einen
+        zweiten Anfahrtsweg und verhindert Beanstandungen bei der Abnahme.
+      </RatgeberP>
+
       <RatgeberH2>1. Warum sich eine professionelle Räumung Ihrer BUWOG-Wohnung auszahlt</RatgeberH2>
       <RatgeberP>
         Die Kriterien für die Rückgabe einer Genossenschaftswohnung sind streng. Oft müssen Einbauten

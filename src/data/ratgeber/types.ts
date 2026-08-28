@@ -39,6 +39,13 @@ export type RatgeberArticleMeta = {
   ogTitle?: string;
   /** FAQ für FAQPage-Schema (Rich Results). */
   faq?: { question: string; answer: string }[];
+  /** Thematisch passende Artikel für „Weiterlesen“ — sonst Cluster-Fallback in `related-slugs.ts`. */
+  relatedSlugs?: string[];
+  /** HowTo-Schritte für Schema.org HowTo (Checklisten-Artikel). */
+  howTo?: {
+    name: string;
+    steps: { name: string; text: string }[];
+  };
   /** Optional — sonst wird grob aus dem Text geschätzt. */
   readingTimeMinutes?: number;
   /** Entwurf: von Indexierung ausschließen. */

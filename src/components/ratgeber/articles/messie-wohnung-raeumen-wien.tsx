@@ -167,8 +167,8 @@ export default function MessieWohnungRaeumenWien() {
         Eine reine Entleerung der Räume reicht bei extremen Härtefällen meist nicht aus, um das Objekt wieder
         bewohnbar zu machen oder ordnungsgemäß an die Hausverwaltung (z.&nbsp;B. Wiener Wohnen) zu übergeben. Mehr
         zur Übergabe im{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
-          Gemeindebau-Leitfaden
+        <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
+          Wiener-Wohnen-Übergabe-Leitfaden
         </RatgeberInternalLink>
         .
       </RatgeberP>

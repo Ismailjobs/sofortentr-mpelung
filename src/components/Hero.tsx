@@ -46,10 +46,7 @@ export default function Hero({
           <span className="text-lg font-bold leading-none">{GOOGLE_AGGREGATE_RATING.ratingValue}</span>
           <div className="flex items-center gap-0.5 text-[#fbbc04]" aria-hidden>
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className="h-3.5 w-3.5 fill-current stroke-current"
-              />
+              <Star key={i} className="h-3.5 w-3.5 fill-current stroke-current" />
             ))}
           </div>
         </div>
@@ -158,7 +155,7 @@ export default function Hero({
           <div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
-                href="#kontakt"
+                href={isHome ? "#kontakt-formular" : "#kontakt"}
                 className={
                   isHome
                     ? "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"

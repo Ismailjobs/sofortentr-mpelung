@@ -59,6 +59,31 @@ export const meta: RatgeberArticleMeta = {
         "Ein eingespieltes Team räumt die Wohnung inklusive Keller meist innerhalb eines Tages — während private Helfer oft mehrere Wochenenden benötigen.",
     },
   ],
+  howTo: {
+    name: "Entrümpelung im Gemeindebau für die Wiener-Wohnen-Übergabe",
+    steps: [
+      {
+        name: "Vorabbesichtigung mit Werkmeister vereinbaren",
+        text: "Schriftlich festhalten, welche Einbauten und Bodenbeläge entfernt werden müssen.",
+      },
+      {
+        name: "Rückbau von Böden und Einbauten",
+        text: "Laminat, PVC, Zwischenwände und nicht genehmigte Küchen fachgerecht demontieren.",
+      },
+      {
+        name: "Wohnung und Nebenräume räumen",
+        text: "Alle Räume, Kellerabteil, Balkon und Dachboden vollständig leeren.",
+      },
+      {
+        name: "Logistik und Halteverbotszone planen",
+        text: "LKW-Zufahrt, Tragewege und Ruhezeiten in der Wohnanlage berücksichtigen.",
+      },
+      {
+        name: "Besenreine Übergabe vorbereiten",
+        text: "Wände neutral streichen, Schlüssel sammeln und Übergabeprotokoll bereithalten.",
+      },
+    ],
+  },
   readingTimeMinutes: 8,
 };
 
@@ -195,6 +220,21 @@ export default function EntruempelungGemeindebauWienerWohnen() {
         <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink> und{" "}
         <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink> beraten wir Sie
         vor Ort.
+      </RatgeberP>
+
+      <RatgeberH2>Dieser Ratgeber im Überblick: Rückbau &amp; Logistik</RatgeberH2>
+      <RatgeberP>
+        Dieser Artikel konzentriert sich auf <strong>Rückbau, Werkmeister-Vorabbesichtigung und
+        Logistik</strong> ohne Lift — also die handwerkliche und organisatorische Vorbereitung der Räumung. Für
+        Kautionsschutz, Keller-Blockaden und Terminplanung lesen Sie{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
+          Wiener Wohnen Übergabe ohne Stress
+        </RatgeberInternalLink>
+        . Die technische Abnahme (Böden, Sanitär, Loggia, Mängelliste) behandelt unser Ratgeber{" "}
+        <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
+          Rückgabevorgaben Stadt-Wien-Gemeindewohnung
+        </RatgeberInternalLink>
+        .
       </RatgeberP>
 
       <RatgeberH2>Die finale Übergabe-Checkliste für den Stichtag</RatgeberH2>

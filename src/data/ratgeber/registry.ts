@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { RATGEBER_PATH } from "@/data/site-content";
+import { resolveRelatedSlugs } from "@/data/ratgeber/related-slugs";
 import type { RatgeberArticleEntry, RatgeberArticleMeta } from "./types";
 
 export { RATGEBER_PATH };
@@ -12,6 +13,24 @@ export { RATGEBER_PATH };
  * 4. Slug + Aktualisierungstag in `src/lib/ratgeber-dates.ts` → `RATGEBER_ARTICLE_UPDATE_DAYS`
  */
 
+import EntruempelungFloridsdorfWien1210, {
+  meta as entruempelungFloridsdorfWien1210Meta,
+} from "@/components/ratgeber/articles/entruempelung-floridsdorf-wien-1210";
+import EntruempelungLeopoldstadtWien1020, {
+  meta as entruempelungLeopoldstadtWien1020Meta,
+} from "@/components/ratgeber/articles/entruempelung-leopoldstadt-wien-1020";
+import EntruempelungDonaustadtWien1220, {
+  meta as entruempelungDonaustadtWien1220Meta,
+} from "@/components/ratgeber/articles/entruempelung-donaustadt-wien-1220";
+import EntruempelungFavoritenWien1100, {
+  meta as entruempelungFavoritenWien1100Meta,
+} from "@/components/ratgeber/articles/entruempelung-favoriten-wien-1100";
+import Entruempelung1010Wien, {
+  meta as entruempelung1010WienMeta,
+} from "@/components/ratgeber/articles/entruempelung-1010-wien";
+import EntruempelungLiesingWien1230, {
+  meta as entruempelungLiesingWien1230Meta,
+} from "@/components/ratgeber/articles/entruempelung-liesing-wien-1230";
 import ChecklisteWohnungsraeumungWien, {
   meta as checklisteWohnungsraeumungWienMeta,
 } from "@/components/ratgeber/articles/checkliste-wohnungsraeumung-wien";
@@ -162,6 +181,12 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(entruempelungFloridsdorfWien1210Meta, EntruempelungFloridsdorfWien1210),
+  register(entruempelungLeopoldstadtWien1020Meta, EntruempelungLeopoldstadtWien1020),
+  register(entruempelungFavoritenWien1100Meta, EntruempelungFavoritenWien1100),
+  register(entruempelungDonaustadtWien1220Meta, EntruempelungDonaustadtWien1220),
+  register(entruempelungLiesingWien1230Meta, EntruempelungLiesingWien1230),
+  register(entruempelung1010WienMeta, Entruempelung1010Wien),
   register(arwagGenossenschaftEntruempelungWienMeta, ArwagGenossenschaftEntruempelungWien),
   register(haushaltsaufloesungErwachsenenvertretungWienMeta, HaushaltsaufloesungErwachsenenvertretungWien),
   register(bauhilfeGenossenschaftEntruempelungWienMeta, BauhilfeGenossenschaftEntruempelungWien),
@@ -229,6 +254,14 @@ export function getAllRatgeberSlugs(): string[] {
 }
 
 export function getRelatedRatgeberArticles(currentSlug: string, limit = 3): RatgeberArticleEntry[] {
+  const current = getRatgeberArticle(currentSlug);
+  const slugs = resolveRelatedSlugs(currentSlug, current?.relatedSlugs, limit);
+  if (slugs?.length) {
+    return slugs
+      .map((slug) => getRatgeberArticle(slug))
+      .filter((a): a is RatgeberArticleEntry => a !== undefined)
+      .slice(0, limit);
+  }
   return RATGEBER_ARTICLES.filter((a) => a.slug !== currentSlug).slice(0, limit);
 }
 

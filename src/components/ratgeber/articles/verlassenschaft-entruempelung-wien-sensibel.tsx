@@ -187,7 +187,7 @@ export default function VerlassenschaftEntruempelungWienSensibel() {
       <RatgeberH2>5. Komplettservice bis zur Schlüsselübergabe</RatgeberH2>
       <RatgeberP>
         Ziel: die Wohnung in einem Zustand übergeben, den Sie direkt an den Vermieter — z. B.{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
+        <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
           Wiener Wohnen
         </RatgeberInternalLink>{" "}
         oder private Eigentümer — zurückgeben können:

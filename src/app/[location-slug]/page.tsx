@@ -15,6 +15,7 @@ import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
 import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { getAllLocationSlugs, getLocationBySlug } from "@/data/location-landings";
+import { getDistrictRatgeberPath } from "@/data/district-ratgeber-slugs";
 import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
 import { buildLocationMetadata } from "@/lib/location-metadata";
 import { getLocationPageCopy } from "@/lib/location-page-copy";
@@ -62,6 +63,8 @@ export default async function LocationLandingPage({ params }: PageProps) {
   const copy = getLocationPageCopy(location);
   const plzOrRegion =
     location.kind === "district" ? String(location.district.zip) : location.region.name;
+  const ratgeberHref =
+    location.kind === "district" ? getDistrictRatgeberPath(location.district.zip) : undefined;
 
   const breadcrumbs = [{ label: "Startseite", href: "/" }, { label: breadcrumbLabel(location) }];
 
@@ -85,7 +88,12 @@ export default async function LocationLandingPage({ params }: PageProps) {
           />
         )}
         <TrustBar items={PAGE.trust} />
-        <LocationLocalIntro plzOrRegion={plzOrRegion} name={copy.name} text={copy.localInsight} />
+        <LocationLocalIntro
+          plzOrRegion={plzOrRegion}
+          name={copy.name}
+          text={copy.localInsight}
+          ratgeberHref={ratgeberHref}
+        />
         <ServicesSection
           services={PAGE.services}
           showAllLink

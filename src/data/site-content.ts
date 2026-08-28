@@ -424,36 +424,72 @@ export type Testimonial = {
   location: string;
 };
 
+/** Google-Kundenstimmen — Startseite & Location-Landings (TestimonialSlider). */
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Sehr zuverlässig und freundlich. Termin ging blitzschnell, Keller war in wenigen Stunden leer.",
-    name: "Michael K.",
-    location: "Wien, 21. Bezirk",
+      "Die Entrümpelung wurde zuverlässig und professionell durchgeführt. Das Team arbeitete effizient, ordentlich und war dabei sehr freundlich.",
+    name: "Florian H.",
+    location: "Google-Bewertung",
   },
   {
     quote:
-      "Fixpreis wie besprochen, keine versteckten Kosten. Klare Empfehlung für Wohnungsräumung.",
-    name: "Sandra M.",
-    location: "Wien, 10. Bezirk",
+      "Ich bin sehr zufrieden mit dem Service dieser Entrümpelungsfirma. Das Team war pünktlich, freundlich und hat äußerst sauber sowie schnell gearbeitet.",
+    name: "Feinschmecker",
+    location: "Google-Bewertung",
   },
   {
     quote:
-      "Nachlass meiner Tante wurde respektvoll sortiert. Kommunikation war von Anfang an top.",
-    name: "Thomas R.",
-    location: "Niederösterreich",
+      "Die Entrümpelung lief absolut perfekt. Das Team war pünktlich, super schnell und hat extrem sauber gearbeitet. Die Absprachen waren unkompliziert und der Preis stimmte.",
+    name: "Luka Mikowich",
+    location: "Google-Bewertung",
   },
   {
     quote:
-      "Team war pünktlich, hielt alles sauber und war gegenüber den Nachbarn sehr rücksichtsvoll.",
-    name: "Elif Y.",
-    location: "Wien, 3. Bezirk",
+      "Wir haben die Firma Sofort Entrümpelung für eine komplette Hausentrümpelung in 1230 Wien sowie in Vösendorf beauftragt und sind wirklich begeistert.",
+    name: "Murat Turan",
+    location: "Google-Bewertung",
+  },
+  {
+    quote: "Super professionelles Service!!!",
+    name: "tturan",
+    location: "Google-Bewertung",
   },
   {
     quote:
-      "Von der Anfrage bis zur Entsorgung alles aus einer Hand. Danke für die schnelle Hilfe!",
-    name: "Andreas P.",
-    location: "Wien, 16. Bezirk",
+      "Ich bin durch die Empfehlung eines Freundes auf Sofort Entrümpelung aufmerksam geworden und wurde nicht enttäuscht — Haushalt entrümpelt. Das Team war top.",
+    name: "Mehmet Emin Doğan",
+    location: "Google-Bewertung",
+  },
+  {
+    quote:
+      "I needed a short-notice cleanout, and Sofort Entrümpelung delivered exactly what their name promises: immediate action. They scheduled me on short notice and worked efficiently.",
+    name: "Karen Smith",
+    location: "Google review",
+  },
+  {
+    quote:
+      "Der Service und die Kundenberatung waren unglaublich angenehm, leichte Terminvereinbarung und schnell war alles erledigt.",
+    name: "Ali Dikme",
+    location: "Google-Bewertung",
+  },
+  {
+    quote:
+      "Sie haben überall gründlich sauber gemacht, es ist unglaublich — kein bisschen Schmutz ist mehr übrig. Ich bin dankbar, danke!",
+    name: "Halil Akmermer",
+    location: "Google-Bewertung",
+  },
+  {
+    quote:
+      "Was mir bei dieser Firma besonders gefallen hat, ist die klare Kommunikation und die transparente Abwicklung bei unserer Haushaltsauflösung.",
+    name: "Burak Yücel",
+    location: "Google-Bewertung",
+  },
+  {
+    quote:
+      "Wir haben Sofort Entrümpelung mit einer kompletten Hausentrümpelung sowie der Räumung unseres Lagers inklusive anschließendem Umzug beauftragt und waren wirklich zufrieden.",
+    name: "Saber Aouam",
+    location: "Google-Bewertung",
   },
 ];
 

@@ -93,6 +93,20 @@ export default function ArwagGenossenschaftEntruempelungWien() {
         <RatgeberInternalLink href="https://arwag.at/">arwag.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>Typische ARWAG-Bausubstanz in Wien</RatgeberH2>
+      <RatgeberP>
+        Die ARWAG betreibt seit 1922 gemeinnützigen Wohnbau — viele Bestände stammen aus den 1960er bis
+        1980er Jahren in Simmering, Donaustadt oder Liesing. Charakteristisch sind solide Massivbauweise,
+        großzügige Kellerabteile und oft original erhaltene Holz-Einbauküchen. Genau diese Kombination macht
+        Eigenregie-Räumungen zeitaufwendig: Demontage, Sortierung und mehrfache MA-48-Fahrten sind in einem
+        Wochenende selten machbar.
+      </RatgeberP>
+      <RatgeberP>
+        Bei ARWAG-Abnahmen achten Prüfer häufig auf verbliebene Dübel in Betonwänden und auf nicht
+        genehmigte Balkonverglasungen älterer Baujahre. Wir dokumentieren den Rückbauzustand auf Wunsch mit
+        Fotos — hilfreich, falls später Fragen zur Kaution entstehen.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Übergabe-Richtlinien der ARWAG Genossenschaft</RatgeberH2>
       <RatgeberP>
         Die ARWAG verwaltet zahlreiche Wohnprojekte im urbanen Raum Wiens und stellt klare Bedingungen an

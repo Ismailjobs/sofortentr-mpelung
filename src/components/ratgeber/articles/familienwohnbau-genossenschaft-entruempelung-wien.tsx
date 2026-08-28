@@ -98,6 +98,19 @@ export default function FamilienwohnbauGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberH2>Familienwohnbau: Neubau-Standards und Familienwohnungen</RatgeberH2>
+      <RatgeberP>
+        Familienwohnbau errichtet überwiegend moderne Mehrfamilienhäuser mit barrierearmen Zugängen — aber
+        auch ältere Bestände in Liesing oder Donaustadt. In Neubauten achten Prüfer besonders auf
+        unbeschädigte Bodenfliesen und funktionierende Raffstores; in Altbauten der Genossenschaft eher auf
+        Rückbau von Teppichböden und Holzdeckenverkleidungen.
+      </RatgeberP>
+      <RatgeberP>
+        Da viele Familienwohnbau-Mieter Kinder hatten, sind Kinderzimmer-Einbauten (Hochbetten, Regalwände)
+        häufig fest montiert. Wir demontieren solche Konstruktionen kindersicher und entsorgen Schrauben und
+        Dübel separat — ein Detail, das bei der Abnahme oft übersehen wird, bis der Prüfer die Wand abtastet.
+      </RatgeberP>
+
       <RatgeberH2>1. Was die Familienwohnbau Genossenschaft bei der Wohnungsrückgabe verlangt</RatgeberH2>
       <RatgeberP>
         Die Familienwohnbau Gemeinnützige Bau- und Siedlungsgesellschaft verwaltet zahlreiche moderne und

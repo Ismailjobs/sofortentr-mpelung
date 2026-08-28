@@ -91,6 +91,19 @@ export default function EgwGenossenschaftEntruempelungNiederoesterreich() {
         <RatgeberInternalLink href="https://egw.at/">egw.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>EGW in Niederösterreich: Reihenhäuser und Wohnparks</RatgeberH2>
+      <RatgeberP>
+        Die EGW (Eisenstädter Gemeinnützige Wohnungsgesellschaft) verwaltet viele Reihenhaus- und
+        Wohnparkanlagen in St. Pölten, Wiener Neustadt oder entlang der Westbahn. Hier sind Garagen und
+        Abstellräume genauso Teil der Übergabe wie die Wohnung selbst — ein voller Garagenboden blockiert
+        oft die Schlüsselrückgabe genauso wie ein voller Keller in Wien.
+      </RatgeberP>
+      <RatgeberP>
+        In EGW-Objekten mit eigener Heizöltank-Nische oder Pelletlager sehen wir gelegentlich Altlasten, die
+        nicht über den normalen Mistplatz entsorgt werden dürfen. Wir koordinieren die fachgerechte Abfuhr und
+        liefern Entsorgungsbelege für die Hausverwaltung.
+      </RatgeberP>
+
       <RatgeberH2>1. EGW Genossenschaft: Strenge Regeln für die Wohnungsrückgabe</RatgeberH2>
       <RatgeberP>
         Die EGW verwaltet zahlreiche Wohnprojekte in ganz Niederösterreich und verlangt bei Mietende die

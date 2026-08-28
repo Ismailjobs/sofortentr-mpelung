@@ -58,6 +58,39 @@ export const meta: RatgeberArticleMeta = {
         "Nein. Nach Erstbesichtigung und Schlüsselübergabe arbeitet das Team autark. Sobald das Objekt besenrein ist, werden Sie zur finalen Abnahme benachrichtigt.",
     },
   ],
+  howTo: {
+    name: "Wohnungsräumung Wien in 7 Schritten",
+    steps: [
+      {
+        name: "Dokumente und Wertsachen sichern",
+        text: "Unterlagen, Schmuck und Erinnerungsstücke vor der Räumung separieren und sicher verwahren.",
+      },
+      {
+        name: "Inventar sortieren und kategorisieren",
+        text: "Gegenstände in Mitnehmen, Verkaufen, Spenden und Entsorgen einteilen.",
+      },
+      {
+        name: "Übergabetermin mit Verwaltung fixieren",
+        text: "Offiziellen Abgabetermin bei Hausverwaltung oder Wiener Wohnen verbindlich vereinbaren.",
+      },
+      {
+        name: "Wertanrechnung prüfen",
+        text: "Verwertbare Möbel und Geräte bewerten lassen — Gegenwert kann Räumungskosten senken.",
+      },
+      {
+        name: "Entsorgung planen (MA 48 oder Firma)",
+        text: "Sperrmüll-Mengen kalkulieren und zwischen Eigenentsorgung und Festpreis-Firma entscheiden.",
+      },
+      {
+        name: "Professionelle Räumung beauftragen",
+        text: "Nach kostenloser Besichtigung Fixpreis vereinbaren und Termin eng an Übergabe legen.",
+      },
+      {
+        name: "Besenreine Übergabe und Schlüssel",
+        text: "Keller, Balkon und Nebenräume leeren, grob reinigen und alle Schlüssel übergeben.",
+      },
+    ],
+  },
   readingTimeMinutes: 9,
 };
 
@@ -155,8 +188,8 @@ export default function ChecklisteWohnungsraeumungWien() {
         <RatgeberLi>
           Kontaktieren Sie die Hausverwaltung oder Institutionen wie Wiener Wohnen, um den offiziellen
           Übergabetermin verbindlich zu fixieren — Details im Ratgeber{" "}
-          <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
-            Entrümpelung im Gemeindebau
+          <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
+            Wiener Wohnen Übergabe &amp; Kaution
           </RatgeberInternalLink>
           .
         </RatgeberLi>

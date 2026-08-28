@@ -104,6 +104,23 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
     });
   }
 
+  if (article.howTo && article.howTo.steps.length > 0) {
+    graph.push({
+      "@type": "HowTo",
+      "@id": `${url}#howto`,
+      name: article.howTo.name,
+      description: article.description,
+      inLanguage: "de-AT",
+      isPartOf: { "@id": webPageId },
+      step: article.howTo.steps.map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+      })),
+    });
+  }
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": graph,

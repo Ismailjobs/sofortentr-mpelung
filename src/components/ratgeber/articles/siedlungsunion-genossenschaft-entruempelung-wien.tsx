@@ -97,6 +97,19 @@ export default function SiedlungsunionGenossenschaftEntruempelungWien() {
         .
       </RatgeberP>
 
+      <RatgeberH2>Siedlungsunion: große Wohnhäuser und Innenhöfe</RatgeberH2>
+      <RatgeberP>
+        Die Siedlungsunion betreibt zahlreiche Großwohnanlagen mit zentralen Müllsammelstellen und strengen
+        Ruhezeiten. Räumungen am Wochenende sind deshalb oft nur samstags vormittags möglich — wir stimmen
+        den Termin mit der Hausverwaltung ab, bevor Nachbarn sich beschweren.
+      </RatgeberP>
+      <RatgeberP>
+        In Siedlungsunion-Objekten in Favoriten oder Simmering stoßen wir häufig auf gemeinschaftlich genutzte
+        Waschküchen im Keller, in denen Mieter noch Waschmaschinen oder Trockner stehen gelassen haben. Auch
+        diese Gegenstände müssen vor der Abnahme verschwinden — wir kümmern uns um Abtransport und
+        Entsorgungsnachweis.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Übergabe-Richtlinien der Siedlungsunion Genossenschaft</RatgeberH2>
       <RatgeberP>
         Die Siedlungsunion verwaltet eine Vielzahl an Wohnobjekten und stellt klare, standardisierte Bedingungen

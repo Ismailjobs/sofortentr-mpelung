@@ -95,6 +95,19 @@ export default function OevwGenossenschaftEntruempelungWien() {
         <RatgeberInternalLink href="https://www.oevw.at/">oevw.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>Besonderheiten bei ÖVW-Wohnanlagen</RatgeberH2>
+      <RatgeberP>
+        Als eines der größten Volkswohnungswerke Österreichs verwaltet das ÖVW standardisierte Übergabeprotokolle
+        über viele Bezirke hinweg — vom Karl-Marx-Hof bis zu Neubauten in Donaustadt. Die Vorgaben sind
+        deshalb oft strenger dokumentiert als bei kleineren Genossenschaften: jeder Mangel wird im
+        Abnahmeprotokoll mit Fotos festgehalten.
+      </RatgeberP>
+      <RatgeberP>
+        In älteren ÖVW-Blöcken ohne Personenaufzug sehen wir regelmäßig vollgestellte Dachbodenanteile, die
+        erst bei der Schlüsselübergabe auffallen. Wir planen solche Nebenflächen von Anfang an in den
+        Festpreis ein, damit die Wohnungsabnahme nicht wegen eines vergessenen Kellers scheitert.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Richtlinien der ÖVW-Wohnungsrückgabe im Überblick</RatgeberH2>
       <RatgeberP>
         Da das ÖVW einen großen Bestand an Wohnanlagen in ganz Wien verwaltet, existieren standardisierte und

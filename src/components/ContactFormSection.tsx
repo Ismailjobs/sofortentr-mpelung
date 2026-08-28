@@ -51,6 +51,11 @@ function emptyFormState(defaultServiceTypeId?: string): FormState {
 export type ContactFormSectionProps = {
   /** Nur auf `/leistungen/[slug]`: diese Leistung im Dropdown vorauswählen */
   defaultServiceTypeId?: string;
+  /**
+   * `section` = volle Kontaktsektion (Standard, alle Seiten außer Home-Hero).
+   * `hero` = kompakte Formular-Karte für Startseiten-Hero (rechts).
+   */
+  variant?: "section" | "hero";
 };
 
 function ServiceTypeSelect({
@@ -154,7 +159,11 @@ function ServiceTypeSelect({
   );
 }
 
-export default function ContactFormSection({ defaultServiceTypeId }: ContactFormSectionProps = {}) {
+export default function ContactFormSection({
+  defaultServiceTypeId,
+  variant = "section",
+}: ContactFormSectionProps = {}) {
+  const isHero = variant === "hero";
   const [form, setForm] = useState<FormState>(() => emptyFormState(defaultServiceTypeId));
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -272,47 +281,80 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
     <section
       id="kontakt-formular"
       aria-labelledby="kontakt-formular-heading"
-      className="form-section-warm scroll-mt-28 border-t border-brand-orange/10 py-16 sm:py-24"
+      className={
+        isHero
+          ? "scroll-mt-28 w-full"
+          : "form-section-warm scroll-mt-28 border-t border-brand-orange/10 py-16 sm:py-24"
+      }
     >
-      <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">Kurz Bescheid geben</p>
-            <h2
-              id="kontakt-formular-heading"
-              className="mt-3 text-2xl font-extrabold uppercase tracking-tight text-brand-dark sm:text-3xl"
-            >
-              Nachricht senden
-            </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600">
-              Schreiben Sie uns — wir antworten zeitnah. Sie erhalten automatisch eine Bestätigung an Ihre E-Mail-Adresse.
-            </p>
-            <div className="mt-6 flex flex-col gap-3">
-              <a
-                href={`mailto:${CONTACT_BLOCK.email}`}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange"
+      <div className={isHero ? "w-full" : "mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6"}>
+        <div
+          className={
+            isHero
+              ? "w-full"
+              : "grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14"
+          }
+        >
+          {!isHero ? (
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">Kurz Bescheid geben</p>
+              <h2
+                id="kontakt-formular-heading"
+                className="mt-3 text-2xl font-extrabold uppercase tracking-tight text-brand-dark sm:text-3xl"
               >
-                <Mail className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
-                {CONTACT_BLOCK.email}
-              </a>
-              <PhoneLink className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange">
-                <Phone className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
-                {PHONE_DISPLAY}
-              </PhoneLink>
+                Nachricht senden
+              </h2>
+              <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600">
+                Schreiben Sie uns — wir antworten zeitnah. Sie erhalten automatisch eine Bestätigung an Ihre
+                E-Mail-Adresse.
+              </p>
+              <div className="mt-6 flex flex-col gap-3">
+                <a
+                  href={`mailto:${CONTACT_BLOCK.email}`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange"
+                >
+                  <Mail className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                  {CONTACT_BLOCK.email}
+                </a>
+                <PhoneLink className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark underline decoration-brand-orange/50 underline-offset-4 transition hover:text-brand-orange hover:decoration-brand-orange">
+                  <Phone className="h-4 w-4 shrink-0 text-brand-orange" aria-hidden />
+                  {PHONE_DISPLAY}
+                </PhoneLink>
+              </div>
+              <LazyGoogleMapEmbed />
             </div>
-            <LazyGoogleMapEmbed />
-          </div>
+          ) : (
+            <h2 id="kontakt-formular-heading" className="sr-only">
+              Kontaktformular — Besichtigung anfragen
+            </h2>
+          )}
 
-          <div className="form-card-warm rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8">
+          <div
+            className={
+              isHero
+                ? "rounded-2xl border border-white/35 bg-white/55 p-5 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.55)] backdrop-blur-xl ring-1 ring-white/25 sm:p-6 lg:p-7"
+                : "form-card-warm rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8"
+            }
+          >
+            {isHero && !sent ? (
+              <div className="mb-4">
+                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-orange">
+                  Kostenlose Anfrage
+                </p>
+                <p className="mt-1 text-lg font-extrabold tracking-tight text-brand-dark">
+                  Jetzt Besichtigung sichern
+                </p>
+              </div>
+            ) : null}
             {sent ? (
-              <div className="flex flex-col items-center py-10 text-center">
+              <div className={`flex flex-col items-center text-center ${isHero ? "py-6" : "py-10"}`}>
                 <span className="inline-flex rounded-full bg-brand-orange/15 p-4 text-brand-orange ring-1 ring-brand-orange/30">
                   <CheckCircle2 className="h-10 w-10" strokeWidth={1.75} aria-hidden />
                 </span>
                 <p className="mt-6 text-lg font-bold text-brand-dark">Nachricht gesendet</p>
                 <p className="mt-2 max-w-sm text-sm text-neutral-600">
-                  Vielen Dank! Wir haben Ihre Anfrage erhalten. Eine kurze Bestätigung sollte in Ihrem Posteingang sein. Bei
-                  Fragen erreichen Sie uns auch unter{" "}
+                  Vielen Dank! Wir haben Ihre Anfrage erhalten. Eine kurze Bestätigung sollte in Ihrem Posteingang
+                  sein. Bei Fragen erreichen Sie uns auch unter{" "}
                   <a className="font-semibold text-brand-orange underline" href={`mailto:${CONTACT_BLOCK.email}`}>
                     {CONTACT_BLOCK.email}
                   </a>
@@ -327,8 +369,8 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 </button>
               </div>
             ) : (
-              <form className="relative space-y-5" onSubmit={handleSubmit} noValidate>
-                <div className="grid gap-5 sm:grid-cols-2">
+              <form className={`relative ${isHero ? "space-y-3.5" : "space-y-5"}`} onSubmit={handleSubmit} noValidate>
+                <div className={`grid gap-3.5 ${isHero ? "" : "gap-5 sm:grid-cols-2"} sm:grid-cols-2`}>
                   <label className="block">
                     <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
                       Name <span className="text-brand-orange">*</span>
@@ -341,7 +383,9 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                       value={form.name}
                       onChange={(e) => update("name", e.target.value)}
                       disabled={submitting}
-                      className="mt-2 w-full rounded-xl border border-black/[0.08] bg-white px-4 py-3 text-sm text-brand-dark shadow-sm outline-none ring-0 transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60"
+                      className={`mt-1.5 w-full rounded-xl border border-black/[0.08] px-3.5 py-2.5 text-sm text-brand-dark shadow-sm outline-none ring-0 transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60 ${
+                        isHero ? "bg-white/80 backdrop-blur-sm" : "bg-white"
+                      }`}
                       placeholder="Ihr Name"
                     />
                   </label>
@@ -357,15 +401,23 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                       value={form.email}
                       onChange={(e) => update("email", e.target.value)}
                       disabled={submitting}
-                      className="mt-2 w-full rounded-xl border border-black/[0.08] bg-white px-4 py-3 text-sm text-brand-dark shadow-sm outline-none transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60"
+                      className={`mt-1.5 w-full rounded-xl border border-black/[0.08] px-3.5 py-2.5 text-sm text-brand-dark shadow-sm outline-none transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60 ${
+                        isHero ? "bg-white/80 backdrop-blur-sm" : "bg-white"
+                      }`}
                       placeholder="name@beispiel.at"
                     />
                   </label>
                 </div>
 
                 <label className="block">
-                  <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">Telefon (optional)</span>
-                  <div className="mt-2 flex min-h-[3rem] w-full overflow-hidden rounded-xl border border-black/[0.08] bg-white shadow-sm ring-0 transition focus-within:border-brand-orange/40 focus-within:ring-2 focus-within:ring-brand-orange/35">
+                  <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+                    Telefon (optional)
+                  </span>
+                  <div
+                    className={`mt-1.5 flex min-h-[2.75rem] w-full overflow-hidden rounded-xl border border-black/[0.08] shadow-sm ring-0 transition focus-within:border-brand-orange/40 focus-within:ring-2 focus-within:ring-brand-orange/35 ${
+                      isHero ? "bg-white/80 backdrop-blur-sm" : "bg-white"
+                    }`}
+                  >
                     <span
                       className="flex shrink-0 items-center border-r border-black/[0.06] bg-neutral-50 px-3 text-sm font-semibold tabular-nums text-neutral-700"
                       aria-hidden
@@ -383,7 +435,7 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                       value={form.phone}
                       onChange={(e) => update("phone", digitsOnlyAtLocal(e.target.value))}
                       disabled={submitting}
-                      className="min-w-0 flex-1 border-0 bg-transparent px-4 py-3 text-sm text-brand-dark outline-none placeholder:text-neutral-400 disabled:opacity-60"
+                      className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-brand-dark outline-none placeholder:text-neutral-400 disabled:opacity-60"
                       placeholder="z. B. 681 …"
                     />
                   </div>
@@ -411,12 +463,14 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                   </span>
                   <textarea
                     name="message"
-                    rows={5}
+                    rows={isHero ? 3 : 5}
                     maxLength={CONTACT_MAX_MESSAGE_CHARS}
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     disabled={submitting}
-                    className="mt-2 w-full resize-y rounded-xl border border-black/[0.08] bg-white px-4 py-3 text-sm text-brand-dark shadow-sm outline-none transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60"
+                    className={`mt-1.5 w-full resize-y rounded-xl border border-black/[0.08] px-3.5 py-2.5 text-sm text-brand-dark shadow-sm outline-none transition placeholder:text-neutral-400 focus:border-brand-orange/40 focus:ring-2 focus:ring-brand-orange/35 disabled:opacity-60 ${
+                      isHero ? "bg-white/80 backdrop-blur-sm" : "bg-white"
+                    }`}
                     placeholder="Objekt, Ort, gewünschter Termin …"
                   />
                 </label>
@@ -434,7 +488,7 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] disabled:pointer-events-none disabled:opacity-60"
                 >
                   {submitting ? (
                     <>
@@ -444,13 +498,12 @@ export default function ContactFormSection({ defaultServiceTypeId }: ContactForm
                   ) : (
                     <>
                       <Send className="h-4 w-4" aria-hidden />
-                      Nachricht senden
+                      {isHero ? "Kostenlos anfragen" : "Nachricht senden"}
                     </>
                   )}
                 </button>
                 <p className="text-xs text-neutral-500">
-                  * Pflichtfelder. Nach dem Absenden erhalten Sie eine Bestätigungs-E-Mail; wir melden uns persönlich bei
-                  Ihnen.
+                  * Pflichtfelder. Nach dem Absenden erhalten Sie eine Bestätigungs-E-Mail.
                 </p>
               </form>
             )}

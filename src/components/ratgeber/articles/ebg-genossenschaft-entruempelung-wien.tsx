@@ -92,6 +92,18 @@ export default function EbgGenossenschaftEntruempelungWien() {
         <RatgeberInternalLink href="https://ebg-wohnen.at/">ebg-wohnen.at</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH2>EBG-Wohnungen: gemischter Bestand in Wien</RatgeberH2>
+      <RatgeberP>
+        Die EBG (Eisenbahn-Genossenschaft) verwaltet Wohnungen entlang der S-Bahn-Achsen — häufig in Penzing,
+        Hietzing oder Liesing. Viele Mieter pendeten jahrzehntelang; Kellerabteile sind deshalb oft mit
+        Werkzeug, Reifen und alten Möbeln vollgestellt, die beim Auszug übersehen werden.
+      </RatgeberP>
+      <RatgeberP>
+        Bei EBG-Übergaben sehen wir regelmäßig selbstgebaute Regalsysteme aus Metall und Holz, die an Wände
+        geschraubt wurden. Solche Konstruktionen müssen rückstandsfrei entfernt werden — inklusive
+        Spachtelung der Bohrlöcher, bevor der Prüfer die Wohnung fotografiert.
+      </RatgeberP>
+
       <RatgeberH2>1. Die Anforderungen der EBG Genossenschaft bei Mietende</RatgeberH2>
       <RatgeberP>
         Die EBG verwaltet zahlreiche Wohnanlagen in Wien und stellt standardisierte Bedingungen an

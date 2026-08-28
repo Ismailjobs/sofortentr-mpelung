@@ -53,7 +53,7 @@ export default function TestimonialSlider({ testimonials }: Props) {
       <div className="mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">
-            Ergebnisse &amp; Zufriedenheit
+            Google-Bewertungen
           </p>
           <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-brand-dark sm:text-4xl">
             Das sagen unsere Kunden

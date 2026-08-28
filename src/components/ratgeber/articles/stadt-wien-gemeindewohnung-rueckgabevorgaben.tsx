@@ -66,6 +66,31 @@ export const meta: RatgeberArticleMeta = {
         "Bei Rückbauarbeiten, schweren Möbeln oder engen Gemeindebau-Logistiken spart ein Fixpreis-Angebot nach Besichtigung Zeit, Nerven und reduziert das Risiko teurer Nachforderungen durch Wiener Wohnen.",
     },
   ],
+  howTo: {
+    name: "Gemeindewohnung Stadt Wien mängelfrei an Wiener Wohnen übergeben",
+    steps: [
+      {
+        name: "Boden- und Wandbeläge prüfen",
+        text: "Nachträglich verlegte Beläge und Klebereste entfernen, Wände neutral weiß hinterlassen.",
+      },
+      {
+        name: "Türen, Fenster und Sanitär kontrollieren",
+        text: "Innentüren funktionsfähig, Fenster ohne Risse, Sanitär und Heizkörper intakt.",
+      },
+      {
+        name: "Ungenehmigte Einbauten zurückbauen",
+        text: "Zwischenwände und Loggiaverbauten ohne Genehmigung fachgerecht demontieren.",
+      },
+      {
+        name: "Kellerabteil und Nebenräume leeren",
+        text: "Keller, Balkon und Dachboden absolut leer und sauber übergeben.",
+      },
+      {
+        name: "Schlüssel und Zählerstände vorbereiten",
+        text: "Alle Schlüssel bereitlegen und Strom-, Gas- und Wasserzähler dokumentieren.",
+      },
+    ],
+  },
   readingTimeMinutes: 11,
 };
 
@@ -87,19 +112,21 @@ export default function StadtWienGemeindewohnungRueckgabevorgaben() {
       <RatgeberP>
         Besonders nach langjährigen Mietverhältnissen wurden oft bauliche Veränderungen vorgenommen oder
         individuelle Einbauten installiert. Um teure Nachzahlungen oder Verzögerungen bei der Übergabe zu
-        vermeiden, ist eine fachgerechte und strukturierte Vorbereitung das A und O. Ergänzend:{" "}
+        vermeiden, ist eine fachgerechte und strukturierte Vorbereitung das A und O.
+      </RatgeberP>
+
+      <RatgeberH2>Dieser Ratgeber im Überblick: Technische Abnahme</RatgeberH2>
+      <RatgeberP>
+        Dieser Leitfaden fokussiert die <strong>technische Wohnungsabnahme</strong> — Böden, Wände, Sanitär,
+        Loggia und Mängelliste bei Wiener Wohnen. Für Rückbau, Laminat und Logistik ohne Lift:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
           Entrümpelung im Gemeindebau
         </RatgeberInternalLink>
-        ,{" "}
+        . Für Kaution, Keller-Blockade und Terminplan:{" "}
         <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
           Wohnungsübergabe ohne Stress
-        </RatgeberInternalLink>{" "}
-        und unsere{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-          Wohnungsentrümpelung
-        </RatgeberInternalLink>{" "}
-        in Wien.
+        </RatgeberInternalLink>
+        .
       </RatgeberP>
 
       <RatgeberH2>1. Wände, Böden und Decken: Die häufigsten Stolpersteine</RatgeberH2>

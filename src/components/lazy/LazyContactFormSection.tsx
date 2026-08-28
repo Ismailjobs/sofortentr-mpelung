@@ -3,7 +3,17 @@
 import dynamic from "next/dynamic";
 import type { ContactFormSectionProps } from "@/components/ContactFormSection";
 
-export function ContactFormPlaceholder() {
+export function ContactFormPlaceholder({ variant = "section" }: { variant?: "section" | "hero" } = {}) {
+  if (variant === "hero") {
+    return (
+      <div
+        id="kontakt-formular"
+        aria-busy="true"
+        aria-label="Kontaktformular wird geladen"
+        className="min-h-[22rem] animate-pulse rounded-2xl bg-white/90 shadow-xl ring-1 ring-white/40"
+      />
+    );
+  }
   return (
     <section
       id="kontakt-formular"
@@ -18,11 +28,17 @@ export function ContactFormPlaceholder() {
   );
 }
 
-const ContactFormSection = dynamic(() => import("@/components/ContactFormSection"), {
-  loading: () => <ContactFormPlaceholder />,
-  ssr: false,
-});
+function createLazyContactForm(variant: "section" | "hero" = "section") {
+  return dynamic(() => import("@/components/ContactFormSection"), {
+    loading: () => <ContactFormPlaceholder variant={variant} />,
+    ssr: false,
+  });
+}
+
+const ContactFormSectionSection = createLazyContactForm("section");
+const ContactFormSectionHero = createLazyContactForm("hero");
 
 export default function LazyContactFormSection(props: ContactFormSectionProps = {}) {
-  return <ContactFormSection {...props} />;
+  const Comp = props.variant === "hero" ? ContactFormSectionHero : ContactFormSectionSection;
+  return <Comp {...props} />;
 }

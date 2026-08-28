@@ -180,6 +180,21 @@ export default function GemeindebauWienerWohnenWohnungsuebergabe() {
         </RatgeberLi>
       </RatgeberUl>
 
+      <RatgeberH2>Dieser Ratgeber im Überblick: Kaution &amp; Terminplan</RatgeberH2>
+      <RatgeberP>
+        Hier geht es um <strong>Kautionsschutz, Keller- und Dachboden-Blockaden, Entsorgungsnachweise und
+        Terminplanung</strong> — nicht um die technische Detailprüfung bei der Abnahme. Rückbau, Laminat und
+        Werkmeister-Tipps:{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
+          Entrümpelung im Gemeindebau
+        </RatgeberInternalLink>
+        . Böden, Sanitär, Türen und die vollständige Abnahme-Checkliste:{" "}
+        <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
+          Rückgabevorgaben Gemeindewohnung Stadt Wien
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
       <RatgeberH2>5. Warum professionelle Räumung Ihre Kaution rettet</RatgeberH2>
       <RatgeberP>
         Oft ist nicht die Miete, sondern einbehaltene Kaution der größte Kostenfaktor — weil die Übergabe nicht

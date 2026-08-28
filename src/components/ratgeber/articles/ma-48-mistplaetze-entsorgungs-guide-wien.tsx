@@ -67,6 +67,31 @@ export const meta: RatgeberArticleMeta = {
         "Bei hohem Volumen, Stockwerk ohne Lift, Übergabefrist, Problemstoffen oder wenn Zeit-, Fahrzeug- und Helferkosten den Fixpreis einer Firma übersteigen würden.",
     },
   ],
+  howTo: {
+    name: "Sperrmüll über MA-48-Mistplätze in Wien entsorgen",
+    steps: [
+      {
+        name: "Abfallstoffe im Objekt vorsortieren",
+        text: "Sperrmüll, Holz, Metall, Elektrogeräte und Problemstoffe strikt trennen, bevor Sie zum Mistplatz fahren.",
+      },
+      {
+        name: "Mistplatz und Zufahrtsbedingungen prüfen",
+        text: "Ziel-Mistplatz, Öffnungszeiten, Zufahrtshöhen und Gewichtslimits der MA 48 vorab kontrollieren.",
+      },
+      {
+        name: "Trageweg und Logistik sichern",
+        text: "Stiegenhaus freiräumen, ggf. Halteverbotszone beantragen und schwere Lasten mit ausreichend Helfern transportieren.",
+      },
+      {
+        name: "Problemstoffe sicher verpacken",
+        text: "Farben, Chemikalien und Batterien flüssigkeitssicher und beschriftet in Original- oder zugelassenen Behältern transportieren.",
+      },
+      {
+        name: "Anlieferung und Dokumentation",
+        text: "Sortenrein abgeben, Belege aufbewahren — relevant bei Übergaben an Hausverwaltungen oder Wiener Wohnen.",
+      },
+    ],
+  },
   readingTimeMinutes: 10,
 };
 

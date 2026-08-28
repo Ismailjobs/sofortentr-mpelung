@@ -1,11 +1,15 @@
+import Link from "next/link";
+
 type Props = {
   plzOrRegion: string;
   name: string;
   text: string;
+  /** Link zum passenden Bezirks-Ratgeber, falls vorhanden */
+  ratgeberHref?: string;
 };
 
 /** Bezirks-/Regions-spezifischer SEO-Intro unter der TrustBar. */
-export default function LocationLocalIntro({ plzOrRegion, name, text }: Props) {
+export default function LocationLocalIntro({ plzOrRegion, name, text, ratgeberHref }: Props) {
   return (
     <section
       aria-labelledby="location-local-intro-heading"
@@ -20,6 +24,16 @@ export default function LocationLocalIntro({ plzOrRegion, name, text }: Props) {
           Entrümpelung {plzOrRegion} – {name}
         </h2>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-neutral-700 sm:text-lg">{text}</p>
+        {ratgeberHref ? (
+          <p className="mt-5">
+            <Link
+              href={ratgeberHref}
+              className="font-semibold text-brand-orange underline decoration-brand-orange/40 underline-offset-4 transition-colors hover:text-brand-dark"
+            >
+              Ausführlicher Ratgeber für {name} ({plzOrRegion}) →
+            </Link>
+          </p>
+        ) : null}
       </div>
     </section>
   );
