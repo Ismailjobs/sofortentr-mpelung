@@ -66,6 +66,8 @@ const BEZIRK_RATGEBER_CLUSTER = [
   "entruempelung-1010-wien",
   "entruempelung-leopoldstadt-wien-1020",
   "entruempelung-favoriten-wien-1100",
+  "entruempelung-meidling-wien-1120",
+  "entruempelung-ottakring-wien-1160",
   "entruempelung-floridsdorf-wien-1210",
   "entruempelung-donaustadt-wien-1220",
   "entruempelung-liesing-wien-1230",
@@ -139,6 +141,16 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
   "entruempelung-floridsdorf-wien-1210": [
     "entruempelung-liesing-wien-1230",
     "entruempelung-donaustadt-wien-1220",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-meidling-wien-1120": [
+    "entruempelung-liesing-wien-1230",
+    "entruempelung-favoriten-wien-1100",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-ottakring-wien-1160": [
+    "entruempelung-gemeindebau-wiener-wohnen",
+    "entruempelung-meidling-wien-1120",
     "was-kostet-entruempelung-wien",
   ],
   "entruempelung-wien-steuer-absetzen": [

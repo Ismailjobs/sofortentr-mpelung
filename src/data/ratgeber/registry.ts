@@ -13,6 +13,12 @@ export { RATGEBER_PATH };
  * 4. Slug + Aktualisierungstag in `src/lib/ratgeber-dates.ts` → `RATGEBER_ARTICLE_UPDATE_DAYS`
  */
 
+import EntruempelungOttakringWien1160, {
+  meta as entruempelungOttakringWien1160Meta,
+} from "@/components/ratgeber/articles/entruempelung-ottakring-wien-1160";
+import EntruempelungMeidlingWien1120, {
+  meta as entruempelungMeidlingWien1120Meta,
+} from "@/components/ratgeber/articles/entruempelung-meidling-wien-1120";
 import EntruempelungFloridsdorfWien1210, {
   meta as entruempelungFloridsdorfWien1210Meta,
 } from "@/components/ratgeber/articles/entruempelung-floridsdorf-wien-1210";
@@ -181,6 +187,8 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(entruempelungOttakringWien1160Meta, EntruempelungOttakringWien1160),
+  register(entruempelungMeidlingWien1120Meta, EntruempelungMeidlingWien1120),
   register(entruempelungFloridsdorfWien1210Meta, EntruempelungFloridsdorfWien1210),
   register(entruempelungLeopoldstadtWien1020Meta, EntruempelungLeopoldstadtWien1020),
   register(entruempelungFavoritenWien1100Meta, EntruempelungFavoritenWien1100),
