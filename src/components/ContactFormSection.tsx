@@ -279,12 +279,11 @@ export default function ContactFormSection({
 
   return (
     <section
-      id="kontakt-formular"
       aria-labelledby="kontakt-formular-heading"
       className={
         isHero
           ? "scroll-mt-28 w-full"
-          : "form-section-warm scroll-mt-28 border-t border-brand-orange/10 py-16 sm:py-24"
+          : "form-section-warm border-t border-brand-orange/10 py-16 sm:py-24"
       }
     >
       <div className={isHero ? "w-full" : "mx-auto max-w-[min(100%,88rem)] px-3 sm:px-5 lg:px-6"}>
@@ -330,10 +329,11 @@ export default function ContactFormSection({
           )}
 
           <div
+            id="kontakt-formular"
             className={
               isHero
-                ? "rounded-2xl border border-white/35 bg-white/55 p-5 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.55)] backdrop-blur-xl ring-1 ring-white/25 sm:p-6 lg:p-7"
-                : "form-card-warm rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8"
+                ? "scroll-mt-28 rounded-2xl border border-white/35 bg-white/55 p-5 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.55)] backdrop-blur-xl ring-1 ring-white/25 sm:p-6 lg:p-7"
+                : "form-card-warm scroll-mt-28 rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8"
             }
           >
             {isHero && !sent ? (

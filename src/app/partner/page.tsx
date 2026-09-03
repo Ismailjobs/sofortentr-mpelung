@@ -3,7 +3,6 @@ import { buildPageMetadata } from "@/lib/page-metadata";
 import BreadcrumbListJsonLd from "@/components/BreadcrumbListJsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { partnerHost, SITE_PARTNERS } from "@/data/site-content";
@@ -74,7 +73,6 @@ export default function PartnerPage() {
       </main>
       <LazyContactFormSection />
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

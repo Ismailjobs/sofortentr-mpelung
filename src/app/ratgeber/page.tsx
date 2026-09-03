@@ -3,7 +3,6 @@ import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import RatgeberCard from "@/components/ratgeber/RatgeberCard";
 import RatgeberCollectionJsonLd from "@/components/ratgeber/RatgeberCollectionJsonLd";
 import RatgeberHero from "@/components/ratgeber/RatgeberHero";
@@ -64,7 +63,6 @@ export default function RatgeberIndexPage() {
         <LazyContactFormSection />
       </main>
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

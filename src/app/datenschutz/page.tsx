@@ -7,7 +7,6 @@ import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import DatenschutzBody from "./DatenschutzBody";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -50,7 +49,6 @@ export default function DatenschutzPage() {
       </main>
       <LazyContactFormSection />
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

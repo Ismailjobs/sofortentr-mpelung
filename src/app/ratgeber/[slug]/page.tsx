@@ -10,7 +10,6 @@ import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { pageTitleSegment } from "@/config/site-brand";
 import {
   getAllRatgeberSlugs,
@@ -137,7 +136,6 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
         <LazyContactFormSection />
       </main>
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

@@ -11,7 +11,6 @@ import AboutUsSection from "@/components/AboutUsSection";
 import Hero from "@/components/Hero";
 import LazyContactFormSection, { ContactFormPlaceholder } from "@/components/lazy/LazyContactFormSection";
 import LazyTestimonialSlider, { TestimonialPlaceholder } from "@/components/lazy/LazyTestimonialSlider";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import DeferredIdle from "@/components/lazy/DeferredIdle";
 import ProcedureSections from "@/components/ProcedureSections";
 import ServicesSection from "@/components/ServicesSection";
@@ -58,9 +57,6 @@ export default function Home() {
       </DeferredIdle>
       <HomeNetworkRecommendations />
       <Footer />
-      <DeferredIdle>
-        <LazyWhatsAppFAB />
-      </DeferredIdle>
     </>
   );
 }

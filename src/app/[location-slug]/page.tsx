@@ -13,7 +13,6 @@ import ServicesSection from "@/components/ServicesSection";
 import LazyTestimonialSlider from "@/components/lazy/LazyTestimonialSlider";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { getAllLocationSlugs, getLocationBySlug } from "@/data/location-landings";
 import { getDistrictRatgeberPath } from "@/data/district-ratgeber-slugs";
 import { HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
@@ -106,7 +105,6 @@ export default async function LocationLandingPage({ params }: PageProps) {
       </main>
       <LazyContactFormSection />
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

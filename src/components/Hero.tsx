@@ -176,17 +176,13 @@ export default function Hero({
                 Jetzt anrufen
               </PhoneLink>
             </div>
-            <div className="mt-3 flex w-full justify-center lg:hidden">
+            <div className="mt-3 flex w-full justify-center sm:justify-start">
               <div className="w-[min(272px,calc(100dvw_-_1.5rem))] max-w-full scale-[0.9] sm:scale-95">
                 {ratingBadge}
               </div>
             </div>
           </div>
           <p className="sr-only">{PHONE_DISPLAY}</p>
-        </div>
-
-        <div className="absolute bottom-5 right-12 hidden lg:block xl:bottom-6 xl:right-14">
-          {ratingBadge}
         </div>
       </div>
     </section>

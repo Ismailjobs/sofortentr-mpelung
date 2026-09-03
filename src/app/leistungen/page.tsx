@@ -9,7 +9,6 @@ import Header from "@/components/Header";
 import LeistungenRatgeberSection from "@/components/LeistungenRatgeberSection";
 import ServicesSection from "@/components/ServicesSection";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
-import LazyWhatsAppFAB from "@/components/lazy/LazyWhatsAppFAB";
 import { SERVICES } from "@/data/site-content";
 
 const LEISTUNGEN_COVER = SERVICES.find((s) => s.id === "hausentruempelung") ?? SERVICES[0];
@@ -68,7 +67,6 @@ export default function LeistungenPage() {
       </main>
       <LazyContactFormSection />
       <Footer />
-      <LazyWhatsAppFAB />
     </>
   );
 }

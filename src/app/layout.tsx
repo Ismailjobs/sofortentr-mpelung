@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
-import CallFAB from "@/components/CallFAB";
+import ContactFAB from "@/components/ContactFAB";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAnalyticsPageViews from "@/components/GoogleAnalyticsPageViews";
 import { buildSocialMetadata } from "@/config/site-social";
@@ -47,7 +47,7 @@ export default function RootLayout({
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{ __html: HASH_SCROLL_SCRIPT }}
         />
-        <CallFAB />
+        <ContactFAB />
         {children}
       </body>
     </html>
