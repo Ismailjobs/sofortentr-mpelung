@@ -14,6 +14,9 @@ function scrollToKontaktForm() {
   const el = document.getElementById("kontakt-formular");
   if (el) {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
     return;
   }
   window.location.assign(`/${FORM_HASH}`);

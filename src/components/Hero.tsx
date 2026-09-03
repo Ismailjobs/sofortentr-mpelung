@@ -1,7 +1,7 @@
-import { Calendar, Phone, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 import HeroBackdrop from "@/components/HeroBackdrop";
-import PhoneLink from "@/components/PhoneLink";
+import HeroCtaButtons from "@/components/HeroCtaButtons";
 import { PHONE_DISPLAY, GOOGLE_AGGREGATE_RATING } from "@/data/site-content";
 
 export type HeroDistrict = {
@@ -151,30 +151,8 @@ export default function Hero({
               </>
             )}
           </p>
-          <div className="relative z-[2]">
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <a
-                href="#kontakt-formular"
-                className={
-                  isHome
-                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
-                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
-                }
-              >
-                <Calendar className="h-5 w-5" aria-hidden />
-                {isHome ? "Besichtigung vereinbaren" : "Gratis Besichtigung"}
-              </a>
-              <PhoneLink
-                className={
-                  isHome
-                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
-                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white ring-1 ring-white/15 transition hover:bg-white/10"
-                }
-              >
-                <Phone className="h-5 w-5 text-white" strokeWidth={2.5} aria-hidden />
-                Jetzt anrufen
-              </PhoneLink>
-            </div>
+          <div className="relative z-20">
+            <HeroCtaButtons isHome={isHome} />
             <div className="mt-3 flex w-full justify-center sm:justify-start">
               <div className="w-[min(272px,calc(100dvw_-_1.5rem))] max-w-full scale-[0.9] sm:scale-95">
                 {ratingBadge}
