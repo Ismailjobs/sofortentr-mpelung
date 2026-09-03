@@ -1,6 +1,5 @@
 import { Calendar, Phone, Star } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import PhoneLink from "@/components/PhoneLink";
 import { PHONE_DISPLAY, GOOGLE_AGGREGATE_RATING } from "@/data/site-content";
@@ -154,22 +153,22 @@ export default function Hero({
           </p>
           <div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link
-                href={isHome ? "#kontakt-formular" : "#kontakt"}
+              <a
+                href="#kontakt-formular"
                 className={
                   isHome
-                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
-                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
+                    ? "relative z-10 inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
+                    : "relative z-10 inline-flex items-center justify-center gap-2 rounded-btn bg-brand-orange px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-lg transition hover:bg-[#ff8f26] hover:shadow-xl"
                 }
               >
                 <Calendar className="h-5 w-5" aria-hidden />
                 {isHome ? "Besichtigung vereinbaren" : "Gratis Besichtigung"}
-              </Link>
+              </a>
               <PhoneLink
                 className={
                   isHome
-                    ? "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
-                    : "inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white ring-1 ring-white/15 transition hover:bg-white/10"
+                    ? "relative z-10 inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/10"
+                    : "relative z-10 inline-flex items-center justify-center gap-2 rounded-btn bg-black px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white ring-1 ring-white/15 transition hover:bg-white/10"
                 }
               >
                 <Phone className="h-5 w-5 text-white" strokeWidth={2.5} aria-hidden />

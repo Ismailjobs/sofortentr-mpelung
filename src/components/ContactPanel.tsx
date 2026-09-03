@@ -1,5 +1,4 @@
 import { Calendar, MessageCircle, Phone } from "lucide-react";
-import Link from "next/link";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
 import PhoneLink from "@/components/PhoneLink";
 import { GENERAL_FAQ, PHONE_DISPLAY, WHATSAPP_HREF } from "@/data/site-content";
@@ -48,12 +47,12 @@ const CHANNELS = [
     cardClass:
       "bg-gradient-to-b from-[#fff6ed] to-[#ffecd9] ring-brand-orange/20 hover:ring-brand-orange/40",
     cta: (
-      <Link
+      <a
         href="#kontakt-formular"
         className="mt-auto inline-flex w-full max-w-xs items-center justify-center rounded-btn bg-brand-orange px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-black shadow-sm transition hover:bg-[#ff8f26] hover:shadow-md"
       >
         Anfrage stellen
-      </Link>
+      </a>
     ),
   },
 ] as const;

@@ -14,9 +14,6 @@ function scrollToKontaktForm() {
   const el = document.getElementById("kontakt-formular");
   if (el) {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
-    // Formular-Feld in den Fokus bringen (nicht die Karte darüber)
-    const firstField = el.querySelector<HTMLElement>("input, textarea, select, button");
-    firstField?.focus({ preventScroll: true });
     return;
   }
   window.location.assign(`/${FORM_HASH}`);
