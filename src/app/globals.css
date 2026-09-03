@@ -32,7 +32,6 @@
 
   .contact-fab-ripple {
     position: absolute;
-    /* Button sits above the "Kontakt" label — ripple around the circle only */
     top: 0;
     left: 50%;
     width: 4.5rem;
@@ -40,7 +39,7 @@
     margin-left: -2.25rem;
     border-radius: 9999px;
     background-color: #1d4ed8;
-    pointer-events: none;
+    pointer-events: none !important;
     animation: contact-fab-ripple 2.2s ease-out infinite;
   }
 

@@ -56,76 +56,78 @@ export default function ContactFAB() {
         />
       ) : null}
 
+      {/* pointer-events-none: nur echte Controls fangen Taps — Rest der Seite bleibt klickbar */}
       <div
-        className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
+        className="pointer-events-none fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
         style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
       >
-        <div
-          id={menuId}
-          role="menu"
-          aria-hidden={!open}
-          className={`mb-1 flex w-[min(17.5rem,calc(100dvw-3rem))] flex-col gap-2 transition-[opacity,transform,visibility] duration-200 ease-out ${
-            open
-              ? "visible translate-y-0 opacity-100"
-              : "invisible translate-y-3 pointer-events-none opacity-0"
-          }`}
-        >
-          <a
-            role="menuitem"
-            href={PHONE_TEL_HREF}
-            onClick={close}
-            className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
+        {open ? (
+          <div
+            id={menuId}
+            role="menu"
+            className="pointer-events-auto mb-1 flex w-[min(17.5rem,calc(100dvw-3rem))] flex-col gap-2"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2563eb] text-white">
-              <Phone className="h-5 w-5" strokeWidth={2.25} aria-hidden />
-            </span>
-            <span className="min-w-0 text-left">
-              <span className="block text-sm font-bold text-brand-dark">Anrufen</span>
-              <span className="block text-xs text-neutral-500">Direkt verbinden</span>
-            </span>
-          </a>
-
-          <a
-            role="menuitem"
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={close}
-            className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
-          >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25d366] text-white">
-              <MessageCircle className="h-5 w-5" strokeWidth={2.25} aria-hidden />
-            </span>
-            <span className="min-w-0 text-left">
-              <span className="block text-sm font-bold text-brand-dark">WhatsApp</span>
-              <span className="block text-[11px] leading-snug text-neutral-500">
-                Fotos senden &amp; Angebot sichern
+            <a
+              role="menuitem"
+              href={PHONE_TEL_HREF}
+              onClick={close}
+              className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2563eb] text-white">
+                <Phone className="h-5 w-5" strokeWidth={2.25} aria-hidden />
               </span>
-            </span>
-          </a>
+              <span className="min-w-0 text-left">
+                <span className="block text-sm font-bold text-brand-dark">Anrufen</span>
+                <span className="block text-xs text-neutral-500">Direkt verbinden</span>
+              </span>
+            </a>
 
-          <a
-            role="menuitem"
-            href={FORM_HASH}
-            onClick={onFormClick}
-            className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
-          >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-orange text-brand-dark">
-              <Mail className="h-5 w-5" strokeWidth={2.25} aria-hidden />
-            </span>
-            <span className="min-w-0 text-left">
-              <span className="block text-sm font-bold text-brand-dark">E-Mail / Formular</span>
-              <span className="block text-xs text-neutral-500">{CONTACT_BLOCK.email}</span>
-            </span>
-          </a>
-        </div>
+            <a
+              role="menuitem"
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={close}
+              className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25d366] text-white">
+                <MessageCircle className="h-5 w-5" strokeWidth={2.25} aria-hidden />
+              </span>
+              <span className="min-w-0 text-left">
+                <span className="block text-sm font-bold text-brand-dark">WhatsApp</span>
+                <span className="block text-[11px] leading-snug text-neutral-500">
+                  Fotos senden &amp; Angebot sichern
+                </span>
+              </span>
+            </a>
 
-        <div className="relative flex flex-col items-center gap-1.5">
+            <a
+              role="menuitem"
+              href={FORM_HASH}
+              data-hash-scroll="off"
+              onClick={onFormClick}
+              className="flex items-center gap-3 rounded-2xl bg-white px-3.5 py-2.5 shadow-lg ring-1 ring-black/8 transition hover:bg-neutral-50"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-orange text-brand-dark">
+                <Mail className="h-5 w-5" strokeWidth={2.25} aria-hidden />
+              </span>
+              <span className="min-w-0 text-left">
+                <span className="block text-sm font-bold text-brand-dark">E-Mail / Formular</span>
+                <span className="block text-xs text-neutral-500">{CONTACT_BLOCK.email}</span>
+              </span>
+            </a>
+          </div>
+        ) : (
+          <div id={menuId} hidden aria-hidden />
+        )}
+
+        {/* Nur Kreis + Label klickbar — Ripple liegt darunter und fängt keine Events */}
+        <div className="pointer-events-none relative flex w-[4.5rem] flex-col items-center gap-1.5">
           {!open ? (
-            <>
-              <span className="contact-fab-ripple" aria-hidden />
-              <span className="contact-fab-ripple contact-fab-ripple--delay" aria-hidden />
-            </>
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[4.5rem]" aria-hidden>
+              <span className="contact-fab-ripple" />
+              <span className="contact-fab-ripple contact-fab-ripple--delay" />
+            </div>
           ) : null}
           <button
             type="button"
@@ -133,7 +135,7 @@ export default function ContactFAB() {
             aria-expanded={open}
             aria-controls={menuId}
             aria-label={open ? "Kontaktmenü schließen" : "Kontakt öffnen"}
-            className={`relative z-10 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full text-white shadow-xl ring-2 ring-white/90 transition-colors duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+            className={`pointer-events-auto relative z-10 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full text-white shadow-xl ring-2 ring-white/90 transition-colors duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
               open
                 ? "bg-brand-orange focus-visible:outline-brand-orange"
                 : "bg-[#1d4ed8] focus-visible:outline-[#1d4ed8]"
@@ -146,7 +148,7 @@ export default function ContactFAB() {
             )}
           </button>
           <span
-            className={`relative z-10 rounded-full border-2 border-white px-2.5 py-0.5 text-[0.6875rem] font-extrabold uppercase tracking-wide text-white shadow-md transition-colors duration-200 ${
+            className={`pointer-events-none relative z-10 rounded-full border-2 border-white px-2.5 py-0.5 text-[0.6875rem] font-extrabold uppercase tracking-wide text-white shadow-md transition-colors duration-200 ${
               open ? "bg-brand-orange" : "bg-[#1d4ed8]"
             }`}
           >
