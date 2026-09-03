@@ -13,8 +13,9 @@ export default function TrustBar({ items }: Props) {
 
   return (
     <div className="relative z-10">
-      <div className="relative -mt-12 px-3 sm:px-5">
-        <div className="mx-auto max-w-[min(100%,88rem)] rounded-2xl bg-white px-2 py-5 shadow-xl ring-1 ring-black/[0.06] sm:px-6 lg:px-10 lg:py-8">
+      {/* Negativer Margin überlappt nur den Hero-Abstand — Klicks auf Hero-CTAs nicht blockieren */}
+      <div className="pointer-events-none relative -mt-12 px-3 sm:px-5">
+        <div className="pointer-events-auto mx-auto max-w-[min(100%,88rem)] rounded-2xl bg-white px-2 py-5 shadow-xl ring-1 ring-black/[0.06] sm:px-6 lg:px-10 lg:py-8">
           <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-8">
             {items.map(({ icon: Icon, title, description }, index) => {
               const isLastAlone = lastItemAlone && index === items.length - 1;

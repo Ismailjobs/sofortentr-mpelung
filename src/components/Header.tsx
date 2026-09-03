@@ -67,7 +67,7 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        className="absolute left-0 right-0 top-full z-[110] min-[1148px]:hidden grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none peer-checked:grid-rows-[1fr] peer-checked:[&_.mobile-nav-inner]:visible peer-checked:[&_.mobile-nav-inner]:pointer-events-auto peer-checked:[&_.mobile-nav-inner]:translate-y-0 peer-checked:[&_.mobile-nav-inner]:opacity-100"
+        className="pointer-events-none absolute left-0 right-0 top-full z-[110] min-[1148px]:hidden grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none peer-checked:pointer-events-auto peer-checked:grid-rows-[1fr] peer-checked:[&_.mobile-nav-inner]:visible peer-checked:[&_.mobile-nav-inner]:pointer-events-auto peer-checked:[&_.mobile-nav-inner]:translate-y-0 peer-checked:[&_.mobile-nav-inner]:opacity-100"
       >
         <div className="min-h-0 overflow-hidden border-t border-white/10 bg-brand-dark shadow-xl">
           <div className="mobile-nav-inner invisible pointer-events-none px-3 py-4 opacity-0 transition-[opacity,transform,visibility] duration-300 ease-out motion-reduce:transition-none -translate-y-2 sm:px-5">

@@ -14,7 +14,7 @@ type Props = {
 
 export default function HeroBackdrop({ priority = false, className = "" }: Props) {
   return (
-    <div className={`absolute inset-0 ${className}`.trim()}>
+    <div className={`pointer-events-none absolute inset-0 ${className}`.trim()} aria-hidden>
       <Image
         src={HERO_BG_SRC}
         alt=""
