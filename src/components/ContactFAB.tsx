@@ -121,10 +121,10 @@ export default function ContactFAB() {
           <div id={menuId} hidden aria-hidden />
         )}
 
-        {/* Nur Kreis + Label klickbar — Ripple liegt darunter und fängt keine Events */}
-        <div className="pointer-events-none relative flex w-[4.5rem] flex-col items-center gap-1.5">
+        {/* Nur Pill klickbar — Ripple fängt keine Events */}
+        <div className="pointer-events-none relative">
           {!open ? (
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[4.5rem]" aria-hidden>
+            <div className="pointer-events-none absolute inset-0" aria-hidden>
               <span className="contact-fab-ripple" />
               <span className="contact-fab-ripple contact-fab-ripple--delay" />
             </div>
@@ -135,25 +135,14 @@ export default function ContactFAB() {
             aria-expanded={open}
             aria-controls={menuId}
             aria-label={open ? "Kontaktmenü schließen" : "Kontakt öffnen"}
-            className={`pointer-events-auto relative z-10 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full text-white shadow-xl ring-2 ring-white/90 transition-colors duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+            className={`pointer-events-auto relative z-10 inline-flex h-12 min-w-[7.5rem] items-center justify-center rounded-full px-6 text-sm font-extrabold uppercase tracking-wide text-white shadow-xl ring-2 ring-white/90 transition-[colors,transform] duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
               open
                 ? "bg-brand-orange focus-visible:outline-brand-orange"
                 : "bg-[#1d4ed8] focus-visible:outline-[#1d4ed8]"
             }`}
           >
-            {open ? (
-              <X className="h-9 w-9" strokeWidth={2.5} aria-hidden />
-            ) : (
-              <MessageCircle className="h-9 w-9" strokeWidth={2.25} aria-hidden />
-            )}
+            {open ? <X className="h-6 w-6" strokeWidth={2.5} aria-hidden /> : "Kontakt"}
           </button>
-          <span
-            className={`pointer-events-none relative z-10 rounded-full border-2 border-white px-2.5 py-0.5 text-[0.6875rem] font-extrabold uppercase tracking-wide text-white shadow-md transition-colors duration-200 ${
-              open ? "bg-brand-orange" : "bg-[#1d4ed8]"
-            }`}
-          >
-            Kontakt
-          </span>
         </div>
       </div>
     </>

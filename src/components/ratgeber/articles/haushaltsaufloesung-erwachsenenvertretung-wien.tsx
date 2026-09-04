@@ -86,15 +86,11 @@ export default function HaushaltsaufloesungErwachsenenvertretungWien() {
       </RatgeberP>
 
       <RatgeberP>
-        Offizielle Informationen zur Erwachsenenvertretung finden Sie auf{" "}
-        <RatgeberInternalLink href="https://www.oesterreich.gv.at/de/themen/gesetze_und_recht/erwachsenenvertretung_und_vorsorgevollmacht_bisher_sachwalterschaft/Seite.2900327">
-          oesterreich.gv.at
-        </RatgeberInternalLink>{" "}
-        sowie zum zuständigen{" "}
+        Offizielle Informationen zum zuständigen{" "}
         <RatgeberInternalLink href="https://www.justiz.gv.at/html/default/2c94848a60c1583801614badbfbc5452.de.html">
           Pflegschaftsgericht (Justiz)
-        </RatgeberInternalLink>
-        .
+        </RatgeberInternalLink>{" "}
+        finden Sie auf den Seiten der österreichischen Justiz.
       </RatgeberP>
 
       <RatgeberP>
