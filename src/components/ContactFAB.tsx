@@ -122,22 +122,22 @@ export default function ContactFAB() {
           <div id={menuId} hidden aria-hidden />
         )}
 
-        {/* Maskottchen: Unterkante am Pill — etwas größer, leicht nach rechts */}
+        {/* Maskottchen ganz hinten — Unterkante genau am Pill-Rand */}
         {!open ? (
           <Image
-            src="/maskot-fab.webp"
+            src="/maskot2-fab.webp"
             alt=""
-            width={280}
+            width={259}
             height={321}
-            sizes="144px"
-            className="pointer-events-none relative z-20 mb-[-2px] mr-3 h-28 w-auto select-none drop-shadow-md sm:mr-4 sm:h-32"
+            sizes="160px"
+            className="pointer-events-none relative z-0 mb-0 -mr-0.5 h-40 w-auto select-none drop-shadow-md sm:h-44"
             aria-hidden
             priority={false}
           />
         ) : null}
 
-        {/* Pill — Ripple unter der Maske; kein Abstand nach oben */}
-        <div className="pointer-events-none relative z-10">
+        {/* Pill + Ring über der Maske */}
+        <div className="pointer-events-none relative z-20">
           {!open ? (
             <div className="pointer-events-none absolute inset-0" aria-hidden>
               <span className="contact-fab-ripple" />
@@ -150,7 +150,7 @@ export default function ContactFAB() {
             aria-expanded={open}
             aria-controls={menuId}
             aria-label={open ? "Kontaktmenü schließen" : "Kontakt öffnen"}
-            className={`pointer-events-auto relative z-10 inline-flex h-12 min-w-[7.5rem] items-center justify-center rounded-full px-6 text-sm font-extrabold uppercase tracking-wide text-white shadow-xl ring-2 ring-white/90 transition-[colors,transform] duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+            className={`pointer-events-auto relative z-20 inline-flex h-12 min-w-[7.5rem] items-center justify-center rounded-full px-6 text-sm font-extrabold uppercase tracking-wide text-white shadow-xl ring-2 ring-white/90 transition-[colors,transform] duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
               open
                 ? "bg-brand-orange focus-visible:outline-brand-orange"
                 : "bg-[#1d4ed8] focus-visible:outline-[#1d4ed8]"
