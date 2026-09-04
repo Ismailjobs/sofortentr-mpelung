@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, MessageCircle, Phone, X } from "lucide-react";
+import Image from "next/image";
 import { useCallback, useEffect, useId, useState, type MouseEvent } from "react";
 import {
   CONTACT_BLOCK,
@@ -58,7 +59,7 @@ export default function ContactFAB() {
 
       {/* pointer-events-none: nur echte Controls fangen Taps — Rest der Seite bleibt klickbar */}
       <div
-        className="pointer-events-none fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
+        className="pointer-events-none fixed bottom-6 right-6 z-50 flex flex-col items-end gap-0"
         style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
       >
         {open ? (
@@ -121,8 +122,22 @@ export default function ContactFAB() {
           <div id={menuId} hidden aria-hidden />
         )}
 
-        {/* Nur Pill klickbar — Ripple fängt keine Events */}
-        <div className="pointer-events-none relative">
+        {/* Maskottchen: Unterkante am Pill — etwas größer, leicht nach rechts */}
+        {!open ? (
+          <Image
+            src="/maskot-fab.webp"
+            alt=""
+            width={280}
+            height={321}
+            sizes="144px"
+            className="pointer-events-none relative z-20 mb-[-2px] mr-3 h-28 w-auto select-none drop-shadow-md sm:mr-4 sm:h-32"
+            aria-hidden
+            priority={false}
+          />
+        ) : null}
+
+        {/* Pill — Ripple unter der Maske; kein Abstand nach oben */}
+        <div className="pointer-events-none relative z-10">
           {!open ? (
             <div className="pointer-events-none absolute inset-0" aria-hidden>
               <span className="contact-fab-ripple" />

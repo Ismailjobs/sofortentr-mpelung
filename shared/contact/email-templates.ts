@@ -116,40 +116,49 @@ export function buildInternalNotificationHtml(params: {
 }
 
 export function buildCustomerAutoReplyHtml(escNameFirst: string, escServiceLabel: string): string {
+  const phone = escapeHtml(MAIL_CONFIG.phoneDisplay);
   const inner = `
     <p style="margin:0 0 16px;font-size:18px;line-height:1.35;font-weight:700;color:${C.dark};font-family:Arial,Helvetica,sans-serif;">
       Hallo ${escNameFirst},
     </p>
-    <p style="margin:0 0 14px;font-size:14px;line-height:1.55;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+    <p style="margin:0 0 20px;font-size:14px;line-height:1.55;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
       <strong style="color:${C.textMuted};font-size:12px;letter-spacing:0.06em;text-transform:uppercase;">Gewünschte Leistung</strong><br />
       <span style="font-size:15px;font-weight:700;color:${C.dark};">${escServiceLabel}</span>
     </p>
-    <p style="margin:0 0 16px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
-      vielen Dank für Ihre Nachricht — wir haben sie <strong style="color:${C.dark};">erhalten</strong> und melden uns <strong style="color:${C.dark};">schnellstmöglich</strong> bei Ihnen.
-    </p>
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin:24px 0;">
-      <tr>
-        <td style="padding:18px 20px;background:${C.mutedBg};border-radius:8px;border:1px solid ${C.border};">
-          <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:${C.orange};font-family:Arial,Helvetica,sans-serif;">Nächste Schritte</p>
-          <p style="margin:0;font-size:14px;line-height:1.6;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
-            Wir prüfen Ihre Angaben und melden uns für Rückfragen oder einen <strong style="color:${C.dark};">Besichtigungstermin</strong> — transparent, mit Festpreis nach Besichtigung.
-          </p>
-        </td>
-      </tr>
-    </table>
     <p style="margin:0 0 12px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
-      <strong style="color:${C.dark};">Dringend?</strong> Rufen Sie uns direkt an:
+      vielen Dank für Ihre Anfrage.
     </p>
-    <p style="margin:0 0 28px;">
-      <a href="${MAIL_CONFIG.phoneTelHref}" style="display:inline-block;padding:12px 22px;background:${C.orange};color:#111111;text-decoration:none;font-weight:700;font-size:14px;border-radius:8px;font-family:Arial,Helvetica,sans-serif;">${escapeHtml(MAIL_CONFIG.phoneDisplay)}</a>
+    <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+      Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich persönlich bei Ihnen.
+    </p>
+    <p style="margin:0 0 8px;font-size:15px;line-height:1.65;font-weight:700;color:${C.dark};font-family:Arial,Helvetica,sans-serif;">
+      Wie geht es weiter?
+    </p>
+    <p style="margin:0 0 12px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+      Wir prüfen kurz Ihre Angaben und kontaktieren Sie, um offene Fragen zu klären oder einen kostenlosen Besichtigungstermin zu vereinbaren.
+    </p>
+    <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+      Nach der Besichtigung erhalten Sie auf Wunsch ein transparentes Festpreisangebot – ohne versteckte Kosten.
+    </p>
+    <p style="margin:0 0 8px;font-size:15px;line-height:1.65;font-weight:700;color:${C.dark};font-family:Arial,Helvetica,sans-serif;">
+      Sie möchten nicht warten oder Ihre Anfrage ist dringend?
+    </p>
+    <p style="margin:0 0 12px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+      Rufen Sie uns gerne direkt an:
+    </p>
+    <p style="margin:0 0 20px;font-size:16px;line-height:1.5;font-family:Arial,Helvetica,sans-serif;">
+      <a href="${MAIL_CONFIG.phoneTelHref}" style="color:${C.orange};font-weight:700;text-decoration:none;">📞 ${phone}</a>
+    </p>
+    <p style="margin:0 0 28px;font-size:15px;line-height:1.65;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
+      Wir freuen uns, Ihnen weiterhelfen zu können.
     </p>
     <p style="margin:0;font-size:14px;line-height:1.55;color:${C.textBody};font-family:Arial,Helvetica,sans-serif;">
       Mit freundlichen Grüßen<br />
-      <strong style="color:${C.dark};font-size:15px;">${escapeHtml(MAIL_CONFIG.siteName)}</strong>
+      <strong style="color:${C.dark};font-size:15px;">Ihr SofortEntrümpelung-Team</strong>
     </p>`;
 
   return wrapEmail({
-    preheader: "Wir haben Ihre Nachricht erhalten.",
+    preheader: "Wir haben Ihre Anfrage erhalten und melden uns schnellstmöglich.",
     title: "Bestätigung Ihrer Anfrage",
     innerHtml: inner,
   });
@@ -182,15 +191,23 @@ ${MAIL_CONFIG.siteName} · ${MAIL_CONFIG.phoneDisplay} · ${MAIL_CONFIG.siteUrl}
 export function buildCustomerAutoReplyText(plainName: string, serviceLabel: string): string {
   return `Hallo ${plainName},
 
-Gewünschte Leistung: ${serviceLabel}
+Gewünschte Leistung:
+${serviceLabel}
 
-vielen Dank für Ihre Nachricht — wir haben sie erhalten und melden uns schnellstmöglich bei Ihnen.
+vielen Dank für Ihre Anfrage.
+Wir haben Ihre Nachricht erhalten und melden uns schnellstmöglich persönlich bei Ihnen.
 
-Nächste Schritte: Wir prüfen Ihre Angaben und melden uns für Rückfragen oder einen Besichtigungstermin.
+Wie geht es weiter?
+Wir prüfen kurz Ihre Angaben und kontaktieren Sie, um offene Fragen zu klären oder einen kostenlosen Besichtigungstermin zu vereinbaren.
+Nach der Besichtigung erhalten Sie auf Wunsch ein transparentes Festpreisangebot – ohne versteckte Kosten.
 
-Dringend? Tel. ${MAIL_CONFIG.phoneDisplay}
+Sie möchten nicht warten oder Ihre Anfrage ist dringend?
+Rufen Sie uns gerne direkt an:
+📞 ${MAIL_CONFIG.phoneDisplay}
+
+Wir freuen uns, Ihnen weiterhelfen zu können.
 
 Mit freundlichen Grüßen
-${MAIL_CONFIG.siteName}
+Ihr SofortEntrümpelung-Team
 ${MAIL_CONFIG.siteUrl}`;
 }
