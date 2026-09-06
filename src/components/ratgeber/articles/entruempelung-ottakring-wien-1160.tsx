@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-ottakring-wien-1160",
-  title: "Entrümpelung Ottakring: Brunnenmarkt, dichter Wohnbau und pragmatische Räumung",
-  seoTitle: "Entrümpelung Ottakring Wien | Fixpreis & Keller",
-  ogTitle: "Entrümpelung Ottakring 1160 — Brunnenmarkt & Fixpreis",
-  focusKeyword: "Entrümpelung Ottakring Wien",
+  title: "Entrümpelung Ottakring Wien 1160: Brunnenmarkt, dichter Wohnbau und pragmatische Räumung",
+  seoTitle: "Entrümpelung Ottakring Wien 1160 | Fixpreis & Keller",
+  ogTitle: "Entrümpelung Ottakring Wien 1160 — Brunnenmarkt & Fixpreis",
+  focusKeyword: "Entrümpelung Ottakring Wien 1160",
   description:
     "Entrümpelung im 16. Bezirk: Ottakringer Straße, Neulerchenfeld, Brunnenmarkt. Wohnungen, Keller und kleine Betriebe — Fixpreis nach Besichtigung.",
   excerpt:

@@ -295,7 +295,7 @@ export default function ContactFormSection({
           }
         >
           {!isHero ? (
-            <div>
+            <div className="order-2 lg:order-1">
               <p className="text-xs font-bold uppercase tracking-[0.35em] text-brand-orange">Kurz Bescheid geben</p>
               <h2
                 id="kontakt-formular-heading"
@@ -333,7 +333,7 @@ export default function ContactFormSection({
             className={
               isHero
                 ? "scroll-mt-28 rounded-2xl border border-white/35 bg-white/55 p-5 shadow-[0_28px_60px_-24px_rgba(0,0,0,0.55)] backdrop-blur-xl ring-1 ring-white/25 sm:p-6 lg:p-7"
-                : "form-card-warm scroll-mt-28 rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8"
+                : "form-card-warm order-1 scroll-mt-28 rounded-3xl p-6 shadow-[0_24px_50px_-28px_rgba(0,0,0,0.22)] ring-1 ring-brand-orange/15 sm:p-8 lg:order-2"
             }
           >
             {isHero && !sent ? (

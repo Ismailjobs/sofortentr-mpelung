@@ -14,9 +14,9 @@ import PricingOverview from "@/components/PricingOverview";
 import { buildPageMetadata } from "@/lib/page-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Preise & Fixpreis Entrümpelung Wien",
+  title: "Entrümpelung Wien Kosten & Fixpreise | Sofort Entrümpelung",
   description:
-    "Entrümpelung Wien Kosten im Überblick: transparente Richtpreise für Haushaltsauflösung und Entrümpelung — Festpreis nach kostenloser Besichtigung.",
+    "Entrümpelung Wien Kosten: Richtwerte ab 50 € (Zimmer) bis ca. 800–1.200 € (Haus). Transparente Fixpreise nach Besichtigung — kostenlos anfragen!",
   path: "/preise",
 });
 

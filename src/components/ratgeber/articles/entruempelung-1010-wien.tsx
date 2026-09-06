@@ -14,10 +14,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-1010-wien",
-  title: "Entrümpelung Innere Stadt: Altbau, Zufahrt und diskrete Räumung im 1. Bezirk",
-  seoTitle: "Entrümpelung 1010 Wien | Ablauf, Kosten & Tipps",
-  ogTitle: "Entrümpelung 1010 Wien — Altbau, Zufahrt & Fixpreis",
-  focusKeyword: "Entrümpelung 1010 Wien",
+  title: "Entrümpelung Innere Stadt Wien 1010: Altbau, Zufahrt und diskrete Räumung",
+  seoTitle: "Entrümpelung Innere Stadt Wien 1010 | Ablauf, Kosten & Tipps",
+  ogTitle: "Entrümpelung Innere Stadt Wien 1010 — Altbau, Zufahrt & Fixpreis",
+  focusKeyword: "Entrümpelung Innere Stadt Wien 1010",
   description:
     "Entrümpelung 1010 Wien: Altbau & Zufahrt. Tipps zu Ablauf, Kosten, Zugang, Wertanrechnung und sauberer Übergabe – verständlich und praxisnah erklärt.",
   excerpt:

@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-favoriten-wien-1100",
-  title: "Entrümpelung Favoriten: Wiens bevölkerungsreichster Bezirk",
-  seoTitle: "Entrümpelung Favoriten Wien | Fixpreis & Gemeindebau-Erfahrung",
-  ogTitle: "Entrümpelung Favoriten 1100 — Gemeindebau & Fixpreis",
-  focusKeyword: "Entrümpelung Favoriten Wien",
+  title: "Entrümpelung Favoriten Wien 1100: Wiens bevölkerungsreichster Bezirk",
+  seoTitle: "Entrümpelung Favoriten Wien 1100 | Fixpreis & Gemeindebau",
+  ogTitle: "Entrümpelung Favoriten Wien 1100 — Gemeindebau & Fixpreis",
+  focusKeyword: "Entrümpelung Favoriten Wien 1100",
   description:
     "Entrümpelung im 10. Bezirk: Erfahrung mit Gemeindebauten, Altbau & Neubau in Favoriten. Fixpreis nach kostenloser Besichtigung.",
   excerpt:

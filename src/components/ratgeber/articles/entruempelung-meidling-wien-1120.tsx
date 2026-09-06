@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-meidling-wien-1120",
-  title: "Entrümpelung Meidling: Altbau, Nachkriegsbau und kurze Wege im 12. Bezirk",
-  seoTitle: "Entrümpelung Meidling Wien | Fixpreis & schnelle Termine",
-  ogTitle: "Entrümpelung Meidling 1120 — Altbau & Fixpreis",
-  focusKeyword: "Entrümpelung Meidling Wien",
+  title: "Entrümpelung Meidling Wien 1120: Altbau, Nachkriegsbau und kurze Wege",
+  seoTitle: "Entrümpelung Meidling Wien 1120 | Fixpreis & schnelle Termine",
+  ogTitle: "Entrümpelung Meidling Wien 1120 — Altbau & Fixpreis",
+  focusKeyword: "Entrümpelung Meidling Wien 1120",
   description:
     "Entrümpelung im 12. Bezirk: Meidlinger Hauptstraße, Philadelphiabrücke, Altbau und Nachkriegsbau. Fixpreis nach kostenloser Besichtigung.",
   excerpt:

@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-liesing-wien-1230",
-  title: "Entrümpelung Liesing: Direkt am Firmenstandort von Sofort Entrümpelung",
-  seoTitle: "Entrümpelung Liesing Wien | Kurze Wege, schneller Termin",
-  ogTitle: "Entrümpelung Liesing 1230 — kurze Wege vom Firmensitz",
-  focusKeyword: "Entrümpelung Liesing Wien",
+  title: "Entrümpelung Liesing Wien 1230: Direkt am Firmenstandort von Sofort Entrümpelung",
+  seoTitle: "Entrümpelung Liesing Wien 1230 | Kurze Wege, schneller Termin",
+  ogTitle: "Entrümpelung Liesing Wien 1230 — kurze Wege vom Firmensitz",
+  focusKeyword: "Entrümpelung Liesing Wien 1230",
   description:
     "Entrümpelung im 23. Bezirk direkt vom Firmensitz aus: Alt-Erlaa, Rodaun, Kalksburg. Besonders schnelle Terminvergabe nach kostenloser Besichtigung.",
   excerpt:

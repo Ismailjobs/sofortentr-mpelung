@@ -64,10 +64,13 @@ const NOTFALL_CLUSTER = [
 
 const BEZIRK_RATGEBER_CLUSTER = [
   "entruempelung-1010-wien",
+  "entruempelung-landstrasse-wien-1030",
   "entruempelung-leopoldstadt-wien-1020",
   "entruempelung-favoriten-wien-1100",
   "entruempelung-meidling-wien-1120",
   "entruempelung-ottakring-wien-1160",
+  "entruempelung-hernals-wien-1170",
+  "entruempelung-brigittenau-wien-1200",
   "entruempelung-floridsdorf-wien-1210",
   "entruempelung-donaustadt-wien-1220",
   "entruempelung-liesing-wien-1230",
@@ -151,6 +154,21 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
   "entruempelung-ottakring-wien-1160": [
     "entruempelung-gemeindebau-wiener-wohnen",
     "entruempelung-meidling-wien-1120",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-brigittenau-wien-1200": [
+    "entruempelung-gemeindebau-wiener-wohnen",
+    "entruempelung-leopoldstadt-wien-1020",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-landstrasse-wien-1030": [
+    "entruempelung-1010-wien",
+    "entruempelung-leopoldstadt-wien-1020",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-hernals-wien-1170": [
+    "entruempelung-ottakring-wien-1160",
+    "entruempelung-gemeindebau-wiener-wohnen",
     "was-kostet-entruempelung-wien",
   ],
   "entruempelung-wien-steuer-absetzen": [

@@ -7,9 +7,12 @@ import { RATGEBER_PATH } from "@/data/site-content";
 export const DISTRICT_RATGEBER_SLUG: Readonly<Record<string, string>> = {
   "1010": "entruempelung-1010-wien",
   "1020": "entruempelung-leopoldstadt-wien-1020",
+  "1030": "entruempelung-landstrasse-wien-1030",
   "1100": "entruempelung-favoriten-wien-1100",
   "1120": "entruempelung-meidling-wien-1120",
   "1160": "entruempelung-ottakring-wien-1160",
+  "1170": "entruempelung-hernals-wien-1170",
+  "1200": "entruempelung-brigittenau-wien-1200",
   "1210": "entruempelung-floridsdorf-wien-1210",
   "1220": "entruempelung-donaustadt-wien-1220",
   "1230": "entruempelung-liesing-wien-1230",

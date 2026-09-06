@@ -64,6 +64,9 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "entruempelung-floridsdorf-wien-1210": 15,
   "entruempelung-meidling-wien-1120": 18,
   "entruempelung-ottakring-wien-1160": 24,
+  "entruempelung-brigittenau-wien-1200": 2,
+  "entruempelung-landstrasse-wien-1030": 9,
+  "entruempelung-hernals-wien-1170": 20,
 };
 
 function slugToUpdateDay(slug: string): number {

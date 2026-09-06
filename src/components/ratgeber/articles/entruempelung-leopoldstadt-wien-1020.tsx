@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-leopoldstadt-wien-1020",
-  title: "Entrümpelung Leopoldstadt: Gründerzeit, Prater und Gemeindebau im 2. Bezirk",
-  seoTitle: "Entrümpelung Leopoldstadt Wien | Praterstern & Fixpreis",
-  ogTitle: "Entrümpelung Leopoldstadt 1020 — Gründerzeit & Gemeindebau",
-  focusKeyword: "Entrümpelung Leopoldstadt Wien",
+  title: "Entrümpelung Leopoldstadt Wien 1020: Gründerzeit, Prater und Gemeindebau",
+  seoTitle: "Entrümpelung Leopoldstadt Wien 1020 | Praterstern & Fixpreis",
+  ogTitle: "Entrümpelung Leopoldstadt Wien 1020 — Gründerzeit & Gemeindebau",
+  focusKeyword: "Entrümpelung Leopoldstadt Wien 1020",
   description:
     "Entrümpelung im 2. Bezirk: Gründerzeithäuser am Praterstern, Gemeindebauten und Gewerbe im Karmeliterviertel. Fixpreis nach kostenloser Besichtigung.",
   excerpt:

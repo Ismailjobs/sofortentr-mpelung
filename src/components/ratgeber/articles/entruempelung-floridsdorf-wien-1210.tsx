@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-floridsdorf-wien-1210",
-  title: "Entrümpelung Floridsdorf: Nordbezirk von Strebersdorf bis Donauinsel",
-  seoTitle: "Entrümpelung Floridsdorf Wien | Reihenhaus & Fixpreis",
-  ogTitle: "Entrümpelung Floridsdorf 1210 — Nordbezirk & Logistik",
-  focusKeyword: "Entrümpelung Floridsdorf Wien",
+  title: "Entrümpelung Floridsdorf Wien 1210: Nordbezirk von Strebersdorf bis Donauinsel",
+  seoTitle: "Entrümpelung Floridsdorf Wien 1210 | Reihenhaus & Fixpreis",
+  ogTitle: "Entrümpelung Floridsdorf Wien 1210 — Nordbezirk & Logistik",
+  focusKeyword: "Entrümpelung Floridsdorf Wien 1210",
   description:
     "Entrümpelung im 21. Bezirk: Reihenhäuser in Strebersdorf, Hochhäuser und Gewerbe nordöstlich der Donau. Fixpreis nach kostenloser Besichtigung.",
   excerpt:

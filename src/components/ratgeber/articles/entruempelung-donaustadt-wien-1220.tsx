@@ -12,10 +12,10 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-donaustadt-wien-1220",
-  title: "Entrümpelung Donaustadt: Wiens größter Flächenbezirk",
-  seoTitle: "Entrümpelung Donaustadt Wien | Seestadt bis Einfamilienhaus",
-  ogTitle: "Entrümpelung Donaustadt 1220 — Seestadt & Einfamilienhaus",
-  focusKeyword: "Entrümpelung Donaustadt Wien",
+  title: "Entrümpelung Donaustadt Wien 1220: Wiens größter Flächenbezirk",
+  seoTitle: "Entrümpelung Donaustadt Wien 1220 | Seestadt bis Einfamilienhaus",
+  ogTitle: "Entrümpelung Donaustadt Wien 1220 — Seestadt & Einfamilienhaus",
+  focusKeyword: "Entrümpelung Donaustadt Wien 1220",
   description:
     "Entrümpelung im 22. Bezirk: von der Seestadt Aspern bis zu Einfamilienhäusern in Süßenbrunn. Fixpreis nach Besichtigung.",
   excerpt:

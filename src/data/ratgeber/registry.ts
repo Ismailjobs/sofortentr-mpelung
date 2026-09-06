@@ -37,6 +37,15 @@ import Entruempelung1010Wien, {
 import EntruempelungLiesingWien1230, {
   meta as entruempelungLiesingWien1230Meta,
 } from "@/components/ratgeber/articles/entruempelung-liesing-wien-1230";
+import EntruempelungBrigittenauWien1200, {
+  meta as entruempelungBrigittenauWien1200Meta,
+} from "@/components/ratgeber/articles/entruempelung-brigittenau-wien-1200";
+import EntruempelungLandstrasseWien1030, {
+  meta as entruempelungLandstrasseWien1030Meta,
+} from "@/components/ratgeber/articles/entruempelung-landstrasse-wien-1030";
+import EntruempelungHernalsWien1170, {
+  meta as entruempelungHernalsWien1170Meta,
+} from "@/components/ratgeber/articles/entruempelung-hernals-wien-1170";
 import ChecklisteWohnungsraeumungWien, {
   meta as checklisteWohnungsraeumungWienMeta,
 } from "@/components/ratgeber/articles/checkliste-wohnungsraeumung-wien";
@@ -195,6 +204,9 @@ const _entries: RatgeberArticleEntry[] = [
   register(entruempelungDonaustadtWien1220Meta, EntruempelungDonaustadtWien1220),
   register(entruempelungLiesingWien1230Meta, EntruempelungLiesingWien1230),
   register(entruempelung1010WienMeta, Entruempelung1010Wien),
+  register(entruempelungBrigittenauWien1200Meta, EntruempelungBrigittenauWien1200),
+  register(entruempelungLandstrasseWien1030Meta, EntruempelungLandstrasseWien1030),
+  register(entruempelungHernalsWien1170Meta, EntruempelungHernalsWien1170),
   register(arwagGenossenschaftEntruempelungWienMeta, ArwagGenossenschaftEntruempelungWien),
   register(haushaltsaufloesungErwachsenenvertretungWienMeta, HaushaltsaufloesungErwachsenenvertretungWien),
   register(bauhilfeGenossenschaftEntruempelungWienMeta, BauhilfeGenossenschaftEntruempelungWien),

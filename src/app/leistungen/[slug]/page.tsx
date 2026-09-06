@@ -7,7 +7,6 @@ import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { HomeHashLink } from "@/components/HomeHashLink";
 import ServiceFaqSection from "@/components/ServiceFaqSection";
 import FaqPageJsonLd from "@/components/FaqPageJsonLd";
 import ServiceJsonLd from "@/components/ServiceJsonLd";
@@ -105,17 +104,17 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <p className="mt-5 max-w-3xl text-base text-white/85 sm:text-lg">{service.description}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="#kontakt"
+                href="#kontakt-formular"
                 className="inline-flex items-center justify-center rounded-btn bg-brand-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:bg-[#ff8f26]"
               >
                 Jetzt Termin anfragen
               </Link>
-              <HomeHashLink
-                href="/#leistungen"
+              <Link
+                href="/leistungen"
                 className="inline-flex items-center justify-center rounded-btn border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
               >
                 Alle Services ansehen
-              </HomeHashLink>
+              </Link>
               <Link
                 href="/preise"
                 className="inline-flex items-center justify-center rounded-btn border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
