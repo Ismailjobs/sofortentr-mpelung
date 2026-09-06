@@ -15,11 +15,11 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 export const meta: RatgeberArticleMeta = {
   slug: "gratis-raeumung-wien-wertanrechnung",
   title: "Gratis Räumung in Wien mit Wertanrechnung",
-  seoTitle: "Gratis Räumung in Wien durch Wertanrechnung: So geht's",
-  ogTitle: "Gratis Räumung Wien — Wertanrechnung von Möbeln & Antiquitäten",
-  focusKeyword: "Gratis Räumung Wien",
+  seoTitle: "Gratis Entrümpelung Wien durch Wertanrechnung: So geht's",
+  ogTitle: "Gratis Entrümpelung & Räumung in Wien durch Wertanrechnung",
+  focusKeyword: "Gratis Entrümpelung Wien",
   description:
-    "Kostenlose Wohnungsauflösung in Wien? Erfahren Sie, wie Wertanrechnung von Möbeln und Antiquitäten eine Gratis-Räumung möglich macht — Schritt für Schritt erklärt.",
+    "Gratis Entrümpelungen Wien mit Wertanrechnung: Wann eine Räumung günstiger oder kostenlos möglich ist — und worauf Sie achten sollten.",
   excerpt:
     "Wann ist eine professionelle Räumung in Wien kostenlos? So funktioniert fairer Wertausgleich mit Sofort Entrümpelung.",
   freshnessExcerpt: {

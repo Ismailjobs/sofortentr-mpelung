@@ -20,9 +20,9 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 export const meta: RatgeberArticleMeta = {
   slug: "was-kostet-entruempelung-wien",
   title: "Was kostet eine Entrümpelung in Wien?",
-  seoTitle: "Was kostet eine Entrümpelung in Wien? Kosten & Richtwerte 2026",
-  ogTitle: "Entrümpelung Wien: Kosten, Richtwerte & Fixpreis-Logik 2026",
-  focusKeyword: "Was kostet Entrümpelung Wien",
+  seoTitle: "Entrümpelung Wien Kosten — Was kostet eine Entrümpelung? 2026",
+  ogTitle: "Entrümpelung Wien Kosten: Richtwerte & Fixpreis-Logik 2026",
+  focusKeyword: "Entrümpelung Wien Kosten",
   description:
     "Entrümpelung & Haushaltsauflösung Wien 2026: reale Preisfaktoren, Kosten-Richtwerte, Wertausgleich und Fixpreis-Tipps — transparent erklärt.",
   excerpt:

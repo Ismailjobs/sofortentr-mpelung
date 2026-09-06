@@ -32,7 +32,8 @@ export function buildSocialMetadata({
   type = "website",
 }: SocialMetadataInput): Pick<Metadata, "openGraph" | "twitter"> {
   const origin = getSiteOrigin();
-  const ogTitle = sitePageTitle(title);
+  const trimmed = title.trim();
+  const ogTitle = trimmed.includes(SITE_BRAND) ? trimmed : sitePageTitle(trimmed);
   const url = path ? `${origin}${path}` : origin;
   const imageUrl = ogImageUrl();
 

@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import HomeNetworkRecommendations from "@/components/HomeNetworkRecommendations";
+import HomeSeoClusterLinks from "@/components/HomeSeoClusterLinks";
 import Header from "@/components/Header";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import FaqPageJsonLd from "@/components/FaqPageJsonLd";
@@ -21,9 +22,9 @@ import { GENERAL_FAQ, HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/si
 preload("/hero.webp", { as: "image", fetchPriority: "high" });
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Professionelle Entrümpelung Wien zum Fixpreis",
+  title: "Entrümpelung Wien ab 150€ | Sofort Entrümpelung zum Fixpreis",
   description:
-    "Was kostet eine Entrümpelung? Wohnungsentrümpelung Wien innerhalb 24h. Wie läuft eine Wohnungsauflösung ab? Messie Wohnung reinigen & Entrümpelung nach Todesfall — Festpreis nach Besichtigung.",
+    "Entrümpelung Wien zum Fixpreis: Hausentrümpelung & Hausräumung Wien, diskrete Messie Entrümpelung Wien. Inkl. Wertanrechnung — jetzt kostenlos anfragen!",
   path: "/",
 });
 
@@ -55,6 +56,7 @@ export default function Home() {
       <DeferredIdle fallback={<ContactFormPlaceholder />}>
         <LazyContactFormSection />
       </DeferredIdle>
+      <HomeSeoClusterLinks />
       <HomeNetworkRecommendations />
       <Footer />
     </>

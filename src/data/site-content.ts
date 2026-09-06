@@ -199,7 +199,8 @@ export const SERVICES: ServiceCardData[] = [
   {
     id: "hausentruempelung",
     title: "Hausentrümpelung",
-    description: "Komplette Entrümpelung von Einfamilienhäusern und Mehrparteienhäusern.",
+    description:
+      "Hausentrümpelung & Hausräumung Wien — komplette Räumung von Einfamilien- und Mehrparteienhäusern inkl. Entsorgung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.hausentruempelung,
     imageAlt: "Hausentrümpelung durch ein professionelles Team",
     schemaServiceType: "Hausentrümpelung Wien",
@@ -264,10 +265,10 @@ export const SERVICES: ServiceCardData[] = [
     id: "messie-entruempelung",
     title: "Messie-Entrümpelung",
     description:
-      "Messie Wohnung reinigen und Messie-Wohnung entrümpeln in Wien — diskrete Messie Entrümpelung mit Festpreis nach Besichtigung.",
+      "Messie Entrümpelung Wien — Messie-Wohnung reinigen und entrümpeln, diskret und zum Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE["messie-entruempelung"],
     imageAlt: "Diskrete Messie-Entrümpelung",
-    schemaServiceType: "Messie Wohnung entrümpeln Wien",
+    schemaServiceType: "Messie Entrümpelung Wien",
     icon: HeartHandshake,
   },
   {
@@ -303,7 +304,7 @@ export const SERVICES: ServiceCardData[] = [
     id: "haushaltsaufloesung",
     title: "Haushaltsauflösung",
     description:
-      "Haushaltsauflösung und Entrümpelung in Wien — komplett, besenrein und zum Festpreis.",
+      "Haushaltsauflösung Wien — komplett, besenrein und zum Festpreis nach Besichtigung.",
     imageSrc: SERVICE_LEISTUNG_IMAGE.haushaltsaufloesung,
     imageAlt: "Haushaltsauflösung durch erfahrenes Team",
     schemaServiceType: "Haushaltsauflösung Wien",
@@ -351,7 +352,13 @@ export const SERVICES: ServiceCardData[] = [
   },
 ];
 
-export const HOME_SERVICES: ServiceCardData[] = SERVICES.slice(0, 4);
+export const HOME_SERVICES: ServiceCardData[] = (
+  ["hausentruempelung", "wohnungsentruempelung", "messie-entruempelung", "kellerentruempelung"] as const
+).map((id) => {
+  const service = SERVICES.find((s) => s.id === id);
+  if (!service) throw new Error(`HOME_SERVICES: missing service id ${id}`);
+  return service;
+});
 
 export type AboutUsHighlight = {
   icon: LucideIcon;
@@ -364,11 +371,11 @@ export const ABOUT_US_EYEBROW = "Über uns";
 export const ABOUT_US_HEADLINE = "Lokal, fair und zuverlässig";
 
 export const ABOUT_US_SUBHEADLINE =
-  "Ihr regionaler Entrümpelungsservice in Wien – persönlich erklärt, ohne leere Versprechen.";
+  "Entrümpelung Wien — Hausentrümpelung, Hausräumung und Messie Entrümpelung Wien, persönlich erklärt, ohne leere Versprechen.";
 
 export const ABOUT_US_PARAGRAPHS: string[] = [
-  "Sofort Entrümpelung ist ein lokales Entrümpelungsunternehmen aus Wien und unterstützt Privatpersonen, Familien, Hausverwaltungen und Betriebe bei Entrümpelungen jeder Größe. Im Mittelpunkt steht ein einfacher Ablauf: Sie senden eine Anfrage, wir klären den Umfang, besichtigen bei Bedarf kostenlos vor Ort und erstellen ein transparentes Festpreis-Angebot. Danach kümmert sich unser Team um die Entrümpelung, den Abtransport und die fachgerechte Entsorgung.",
-  "Viele Kunden melden sich bei uns, wenn eine Wohnung geräumt werden muss, ein Keller über Jahre voll geworden ist oder eine Haushaltsauflösung bevorsteht. Auch bei Nachlässen, Verlassenschaften, Dachböden, Büroräumen, Lagern oder einzelnen Möbelstücken helfen wir schnell und diskret weiter. Dabei geht es nicht nur darum, Gegenstände aus einem Objekt zu tragen: Wichtig sind eine saubere Planung, geschützte Transportwege, ein respektvoller Umgang mit persönlichen Dingen und eine besenreine Übergabe.",
+  "Sofort Entrümpelung ist ein lokales Entrümpelungsunternehmen aus Wien und unterstützt Privatpersonen, Familien, Hausverwaltungen und Betriebe bei der Entrümpelung Wien jeder Größe — von der Wohnungsräumung bis zur Hausentrümpelung und Hausräumung Wien. Im Mittelpunkt steht ein einfacher Ablauf: Sie senden eine Anfrage, wir klären den Umfang, besichtigen bei Bedarf kostenlos vor Ort und erstellen ein transparentes Festpreis-Angebot. Danach kümmert sich unser Team um die Entrümpelung, den Abtransport und die fachgerechte Entsorgung.",
+  "Viele Kunden melden sich bei uns, wenn eine Wohnung geräumt werden muss, ein Keller über Jahre voll geworden ist oder eine Haushaltsauflösung bevorsteht. Auch bei Nachlässen, Verlassenschaften, Dachböden, Büroräumen, Lagern sowie bei diskreter Messie Entrümpelung Wien helfen wir schnell weiter. Dabei geht es nicht nur darum, Gegenstände aus einem Objekt zu tragen: Wichtig sind eine saubere Planung, geschützte Transportwege, ein respektvoller Umgang mit persönlichen Dingen und eine besenreine Übergabe.",
   "Als Entrümpelungsfirma in Wien kennen wir die typischen Herausforderungen in der Stadt: enge Stiegenhäuser, Altbauwohnungen, Innenhöfe, Kurzparkzonen, kleine Aufzüge und klare Vorgaben von Hausverwaltungen. Diese Erfahrung hilft, jeden Einsatz realistisch einzuschätzen und unnötige Verzögerungen zu vermeiden. Sind Möbel, Hausrat oder verwertbare Stücke vorhanden, prüfen wir, ob Entrümpelung mit Wertausgleich oder Ankauf sinnvoll ist – fair bewertet statt pauschal entsorgt.",
   "Unser Ziel ist eine Entrümpelung, die für Sie nachvollziehbar, planbar und stressfrei bleibt. Deshalb arbeiten wir mit Fixpreis-Angeboten, direkter Kommunikation und einem Team, das vom ersten Kontakt bis zur besenreinen Übergabe Verantwortung übernimmt.",
 ];
@@ -506,14 +513,19 @@ export const GENERAL_FAQ_PRIORITY: GeneralFaqItem[] = [
       "Die Kosten hängen von Objektgröße, Menge, Zugängen und Entsorgungsmix ab. Nach kostenloser Besichtigung in Wien und Umgebung erhalten Sie einen verbindlichen Festpreis — auf unserer Preisseite finden Sie transparente Richtwerte inklusive möglicher Wertanrechnung.",
   },
   {
+    question: "Hausentrümpelung & Hausräumung Wien — was ist enthalten?",
+    answer:
+      "Bei der Hausentrümpelung bzw. Hausräumung Wien räumen wir das Haus im vereinbarten Umfang — oft von Keller bis Dachboden — inklusive Sortierung, Abtransport und fachgerechter Entsorgung. Nach der kostenlosen Besichtigung gilt ein verbindlicher Festpreis; Details finden Sie auf der Leistungsseite Hausentrümpelung.",
+  },
+  {
     question: "Wie läuft eine Wohnungsauflösung ab?",
     answer:
       "Zuerst melden Sie sich mit kurzer Objektbeschreibung. Wir besichtigen kostenlos vor Ort, nennen einen Festpreis und vereinbaren den Termin. Am Einsatztag räumen wir die Wohnung im vereinbarten Umfang, transportieren ab, entsorgen fachgerecht und übergeben besenrein — Details zur Wohnungsauflösung finden Sie auf unserer Leistungsseite.",
   },
   {
-    question: "Messie Wohnung reinigen",
+    question: "Messie Entrümpelung Wien",
     answer:
-      "Eine Messie-Wohnung reinigen heißt bei uns: strukturierte Messie-Entrümpelung mit Sortierung, Abtransport und fachgerechter Entsorgung — diskret, in Etappen wenn nötig und zum Festpreis nach Besichtigung. Angehörige, Betreuer und Verwaltungen koordinieren wir respektvoll mit.",
+      "Messie Entrümpelung Wien heißt bei uns: strukturierte Räumung mit Sortierung, Abtransport und fachgerechter Entsorgung — diskret, in Etappen wenn nötig und zum Festpreis nach Besichtigung. Angehörige, Betreuer und Verwaltungen koordinieren wir respektvoll mit.",
   },
   {
     question: "Entrümpelung nach Todesfall",

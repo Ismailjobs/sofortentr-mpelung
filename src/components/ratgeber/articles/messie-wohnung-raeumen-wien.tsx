@@ -14,11 +14,11 @@ import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 export const meta: RatgeberArticleMeta = {
   slug: "messie-wohnung-raeumen-wien",
   title: "Messie-Wohnung räumen in Wien: Ablauf, Diskretion und Hygiene",
-  seoTitle: "Messie-Wohnung räumen in Wien: Ablauf & Diskretion",
-  ogTitle: "Messie-Wohnung räumen in Wien — Ablauf, Diskretion und Hygiene",
-  focusKeyword: "Messie-Wohnung räumen Wien",
+  seoTitle: "Messie Entrümpelung Wien — Ablauf, Diskretion & Hygiene",
+  ogTitle: "Messie Entrümpelung Wien — Ablauf, Diskretion und Hygiene",
+  focusKeyword: "Messie Entrümpelung Wien",
   description:
-    "Professionelle Hilfe bei Messie-Wohnungen in Wien. 💡 Sofort Entrümpelung sorgt für diskrete Räumung, Sortierung & hygienische Grundreinigung.",
+    "Messie Entrümpelung Wien: diskrete Räumung, Sortierung und hygienische Grundreinigung. Sofort Entrümpelung — Festpreis nach Besichtigung.",
   excerpt:
     "Diskreter Ablauf, Arbeitsschutz und Wiederherstellung für extrem überfüllte Wohnungen in Wien.",
   freshnessExcerpt: {

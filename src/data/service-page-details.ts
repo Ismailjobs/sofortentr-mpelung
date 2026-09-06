@@ -20,7 +20,7 @@ export type ServiceDetailPageData = ServiceCardData & ServicePageExtra;
 const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
   hausentruempelung: {
     introParagraphs: [
-      "Ob Einfamilienhaus, Reihenhaus oder Mehrparteienhaus: Wir übernehmen die vollständige oder teilweise Hausräumung — von Kellergeschoss bis Dachboden, inklusive Abtransport und fachgerechter Entsorgung.",
+      "Hausentrümpelung Wien und Hausräumung Wien: Ob Einfamilienhaus, Reihenhaus oder Mehrparteienhaus — wir übernehmen die vollständige oder teilweise Räumung von Kellergeschoss bis Dachboden, inklusive Abtransport und fachgerechter Entsorgung.",
       "Nach einer kostenlosen Besichtigung erhalten Sie einen verbindlichen Festpreis. So behalten Sie Kosten und Zeitplan von Anfang an im Griff — ohne versteckte Zusatzposten.",
     ],
     includedBullets: [
@@ -300,9 +300,9 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   "messie-entruempelung": {
     introParagraphs: [
-      "Eine Messie-Wohnung entrümpeln — oder gezielt Messie Wohnung reinigen — ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
+      "Messie Entrümpelung Wien — oder gezielt eine Messie-Wohnung reinigen — ist mehr als „alles in Container werfen“. Es braucht Struktur, Erfahrung und respektvollen Umgang — für Betroffene, Angehörige, Betreuer und Hausverwaltungen in Wien.",
       "Als Team für Messie Entrümpelung planen wir vor Ort: Welche Räume zuerst, welche Etappen sinnvoll sind und wie die Messie-Wohnung Räumung termingerecht abgeschlossen werden kann — ohne zusätzlichen Stress.",
-      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Messie Entrümpelung inklusive Abtransport, fachgerechter Entsorgung und besenreiner Übergabe — transparent und ohne Überraschungen.",
+      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Messie Entrümpelung Wien inklusive Abtransport, fachgerechter Entsorgung und besenreiner Übergabe — transparent und ohne Überraschungen.",
     ],
     includedBullets: [
       "Messie-Wohnung entrümpeln mit diskreter Logistik und abgestimmten Zeitfenstern",
@@ -499,9 +499,9 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   haushaltsaufloesung: {
     introParagraphs: [
-      "Eine Haushaltsauflösung und Entrümpelung bündelt alles, was bei einer kompletten Haushaltsauflösung anfällt: Sortieren, Verladen, Abtransport und fachgerechte Entsorgung — in Wien und der Region.",
+      "Haushaltsauflösung Wien: Wir bündeln Sortieren, Verladen, Abtransport und fachgerechte Entsorgung — für den kompletten Haushalt in Wien und der Region.",
       "Typische Anlässe: Umzug ins Pflegeheim, Erbschaft, Neuvermietung, Verkauf oder Entrümpelung vor Renovierung. Wir übernehmen die Haushaltsauflösung termingerecht und besenrein.",
-      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Haushaltsauflösung und Entrümpelung — inklusive Anfahrt und Entsorgung im vereinbarten Umfang.",
+      "Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis für die Haushaltsauflösung Wien — inklusive Anfahrt und Entsorgung im vereinbarten Umfang.",
     ],
     includedBullets: [
       "Haushaltsauflösung und Entrümpelung aus einer Hand — ein Ansprechpartner",
@@ -547,9 +547,9 @@ const SERVICE_PAGE_DETAILS: Record<string, ServicePageExtra> = {
 
   wohnungsaufloesung: {
     introParagraphs: [
-      "Wie läuft eine Wohnungsauflösung ab? Zuerst klären wir Umfang und Termin — dann räumen wir zügig, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
+      "Wohnungsauflösung Wien — wie läuft sie ab? Zuerst klären wir Umfang und Termin, dann räumen wir zügig, diskret und besenrein: von der Besichtigung über Verladung und Entsorgung bis zur Übergabe an Vermieter, Käufer oder Verwaltung.",
       "Eine Wohnungsauflösung und Entrümpelung ist in Wien meist streng terminiert — Mietende, Käufertermin, Verkauf oder Erbschaft lassen wenig Spielraum.",
-      "Nach Objektbesichtigung erhalten Sie einen verbindlichen Festpreis für die Wohnungsauflösung — Wohnungsauflösung und Entrümpelung transparent, ohne versteckte Zusatzkosten.",
+      "Nach Objektbesichtigung erhalten Sie einen verbindlichen Festpreis für die Wohnungsauflösung Wien — transparent, ohne versteckte Zusatzkosten.",
     ],
     includedBullets: [
       "Wohnungsauflösung und Entrümpelung mit verbindlichem Festpreis",

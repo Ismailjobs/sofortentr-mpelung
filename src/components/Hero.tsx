@@ -115,7 +115,7 @@ export default function Hero({
           </h1>
           {isHome ? (
             <h2 className="text-balance text-lg font-semibold leading-snug text-brand-orange sm:text-xl lg:text-2xl">
-              Wohnungsentrümpelung Wien innerhalb 24h
+              Hausentrümpelung &amp; Hausräumung Wien · Messie Entrümpelung Wien
             </h2>
           ) : (
             <p className="text-lg font-medium text-white">
@@ -146,8 +146,9 @@ export default function Hero({
               </>
             ) : (
               <>
-                Wir räumen Wohnungen, Keller und Büros in Wien — ordentlich, mit fachgerechter Entsorgung und einem
-                Festpreis, den Sie vorher kennen. Einfach anrufen oder eine Besichtigung vereinbaren.
+                Professionelle Entrümpelung Wien für Wohnung und Haus — inklusive Hausentrümpelung, Hausräumung Wien und
+                diskreter Messie Entrümpelung Wien. Fachgerechte Entsorgung, Fixpreis nach Besichtigung: anrufen oder
+                Termin vereinbaren.
               </>
             )}
           </p>

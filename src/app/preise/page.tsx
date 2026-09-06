@@ -16,7 +16,7 @@ import { buildPageMetadata } from "@/lib/page-metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Preise & Fixpreis Entrümpelung Wien",
   description:
-    "Was kostet eine Entrümpelung? Transparente Richtpreise für Haushaltsauflösung und Entrümpelung in Wien — Festpreis nach kostenloser Besichtigung.",
+    "Entrümpelung Wien Kosten im Überblick: transparente Richtpreise für Haushaltsauflösung und Entrümpelung — Festpreis nach kostenloser Besichtigung.",
   path: "/preise",
 });
 

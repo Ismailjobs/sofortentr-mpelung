@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageTitleSegment } from "@/config/site-brand";
+import { pageTitleSegment, SITE_BRAND } from "@/config/site-brand";
 import { buildSocialMetadata } from "@/config/site-social";
 import { getSiteOrigin } from "@/config/site-url";
 
@@ -13,10 +13,12 @@ type PageMetadataInput = {
 
 /** Statische Seiten: Title, Description, canonical, openGraph & twitter. */
 export function buildPageMetadata({ title, description, path }: PageMetadataInput): Metadata {
+  const trimmed = title.trim();
+  const absolute = trimmed.includes(SITE_BRAND);
   const meta: Metadata = {
-    title: pageTitleSegment(title),
+    title: absolute ? { absolute: trimmed } : pageTitleSegment(trimmed),
     description,
-    ...buildSocialMetadata({ title, description, path }),
+    ...buildSocialMetadata({ title: trimmed, description, path }),
   };
   if (path) {
     meta.alternates = { canonical: `${getSiteOrigin()}${path}` };
