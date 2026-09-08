@@ -51,7 +51,7 @@ export default function ContactFAB() {
       {open ? (
         <button
           type="button"
-          className="fixed inset-0 z-40 cursor-default bg-black/25 backdrop-blur-[1px] transition-opacity"
+          className="fixed inset-0 z-40 cursor-default bg-black/40 transition-opacity"
           aria-label="Menü schließen"
           onClick={close}
         />

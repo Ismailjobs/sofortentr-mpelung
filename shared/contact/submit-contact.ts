@@ -114,7 +114,7 @@ export async function submitContactRequest(
       ok: false,
       status: 400,
       error:
-        "Die Telefonnummer ist ungültig. Erwartet wird eine österreichische Nummer (nach +43 nur Ziffern, z. B. 681 …).",
+        "Die Telefonnummer ist ungültig. Erwartet wird eine österreichische Nummer (nach +43 nur Ziffern, z. B. 664 …).",
     };
   }
 

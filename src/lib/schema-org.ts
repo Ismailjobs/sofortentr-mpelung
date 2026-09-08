@@ -83,7 +83,7 @@ export function schemaOriginIds(origin: string) {
   } as const;
 }
 
-/** E.164-Telefonnummer für Schema.org (`+4368181130962`). */
+/** E.164-Telefonnummer für Schema.org (`+436642147171`). */
 export function schemaTelephoneE164(): string {
   return `+${PHONE_TEL_NUMBER}`;
 }

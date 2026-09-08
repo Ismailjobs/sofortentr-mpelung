@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { preload } from "react-dom";
 import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
@@ -18,8 +17,6 @@ import ServicesSection from "@/components/ServicesSection";
 import TrustBar from "@/components/TrustBar";
 import WhyUs from "@/components/WhyUs";
 import { GENERAL_FAQ, HOME_SERVICES, TESTIMONIALS, TRUST_ITEMS } from "@/data/site-content";
-
-preload("/hero.webp", { as: "image", fetchPriority: "high" });
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Entrümpelung Wien ab 150€ | Sofort Entrümpelung zum Fixpreis",

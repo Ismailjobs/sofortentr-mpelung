@@ -22,25 +22,26 @@
   @keyframes contact-fab-ripple {
     0% {
       transform: scale(1);
-      opacity: 0.4;
+      opacity: 0.35;
     }
     100% {
-      transform: scale(1.25);
+      transform: scale(1.18);
       opacity: 0;
     }
   }
 
+  /* Ein Impuls statt Dauerloop — weniger Main-Thread / GPU auf Mobile */
   .contact-fab-ripple {
     position: absolute;
     inset: 0;
     border-radius: 9999px;
     background-color: #1d4ed8;
     pointer-events: none !important;
-    animation: contact-fab-ripple 2.2s ease-out infinite;
+    animation: contact-fab-ripple 2s ease-out 1 both;
   }
 
   .contact-fab-ripple--delay {
-    animation-delay: 1.1s;
+    animation-delay: 0.9s;
   }
 
   @media (prefers-reduced-motion: reduce) {

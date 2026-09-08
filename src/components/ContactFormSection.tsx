@@ -436,7 +436,7 @@ export default function ContactFormSection({
                       onChange={(e) => update("phone", digitsOnlyAtLocal(e.target.value))}
                       disabled={submitting}
                       className="min-w-0 flex-1 border-0 bg-transparent px-3.5 py-2.5 text-sm text-brand-dark outline-none placeholder:text-neutral-400 disabled:opacity-60"
-                      placeholder="z. B. 681 …"
+                      placeholder="z. B. 664 …"
                     />
                   </div>
                 </label>

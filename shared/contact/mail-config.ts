@@ -20,8 +20,8 @@ export const MAIL_CONFIG = {
   /** Kleine Headline im dunklen Kopfbereich */
   tagline: "Professionelle Entrümpelung · Wien & Umgebung",
 
-  phoneDisplay: "+43 681 81130962",
-  phoneTelHref: "tel:+4368181130962",
+  phoneDisplay: "+43 664 2147171",
+  phoneTelHref: "tel:+436642147171",
 
   addressLine: "Brunner Straße 75, Objekt D/Büro 3, 1230 Wien",
   officeHours: "Mo–Fr: 07:30 – 18:00 · Sa: 09:00 – 14:00 (nach Vereinbarung)",

@@ -4,16 +4,17 @@ import Script from "next/script";
 export const GA_MEASUREMENT_ID = "G-RTE2LWVQVT";
 
 /**
- * Google tag (gtag.js) — lädt nach Hydration (`afterInteractive`), blockiert nicht den First Paint.
+ * Google tag (gtag.js) — `lazyOnload`: lädt nach dem Load-Event,
+ * konkurriert nicht mit First Paint / Early Interaction (INP).
  */
 export default function GoogleAnalytics() {
   return (
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="google-analytics-gtag" strategy="afterInteractive">
+      <Script id="google-analytics-gtag" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

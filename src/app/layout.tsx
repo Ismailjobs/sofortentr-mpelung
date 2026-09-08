@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
-import ContactFAB from "@/components/ContactFAB";
+import ContactFAB from "@/components/lazy/LazyContactFAB";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAnalyticsPageViews from "@/components/GoogleAnalyticsPageViews";
 import { buildSocialMetadata } from "@/config/site-social";
