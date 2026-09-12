@@ -10,6 +10,7 @@ import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
+import ServiceFaqSection from "@/components/ServiceFaqSection";
 import { pageTitleSegment } from "@/config/site-brand";
 import {
   getAllRatgeberSlugs,
@@ -130,6 +131,17 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
             <Component />
           </div>
         </article>
+
+        {meta.faq && meta.faq.length > 0 ? (
+          <ServiceFaqSection
+            id="ratgeber-faq"
+            eyebrow="Fragen & Antworten"
+            heading="Häufige Fragen"
+            intro="Kurz und klar — Details klären wir gern in der kostenlosen Besichtigung."
+            items={meta.faq}
+            className="border-t border-black/[0.04] bg-white"
+          />
+        ) : null}
 
         <RelatedRatgeberSection articles={related} />
         <ContactPanel />

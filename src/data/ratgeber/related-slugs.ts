@@ -64,12 +64,24 @@ const NOTFALL_CLUSTER = [
 
 const BEZIRK_RATGEBER_CLUSTER = [
   "entruempelung-1010-wien",
-  "entruempelung-landstrasse-wien-1030",
   "entruempelung-leopoldstadt-wien-1020",
+  "entruempelung-landstrasse-wien-1030",
+  "entruempelung-wieden-wien-1040",
+  "entruempelung-margareten-wien-1050",
+  "entruempelung-mariahilf-wien-1060",
+  "entruempelung-neubau-wien-1070",
+  "entruempelung-josefstadt-wien-1080",
+  "entruempelung-alsergrund-wien-1090",
   "entruempelung-favoriten-wien-1100",
+  "entruempelung-simmering-wien-1110",
   "entruempelung-meidling-wien-1120",
+  "entruempelung-hietzing-wien-1130",
+  "entruempelung-penzing-wien-1140",
+  "entruempelung-rudolfsheim-fuenfhaus-wien-1150",
   "entruempelung-ottakring-wien-1160",
   "entruempelung-hernals-wien-1170",
+  "entruempelung-waehring-wien-1180",
+  "entruempelung-doebling-wien-1190",
   "entruempelung-brigittenau-wien-1200",
   "entruempelung-floridsdorf-wien-1210",
   "entruempelung-donaustadt-wien-1220",
@@ -169,6 +181,66 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
   "entruempelung-hernals-wien-1170": [
     "entruempelung-ottakring-wien-1160",
     "entruempelung-gemeindebau-wiener-wohnen",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-wieden-wien-1040": [
+    "entruempelung-1010-wien",
+    "entruempelung-landstrasse-wien-1030",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-neubau-wien-1070": [
+    "entruempelung-josefstadt-wien-1080",
+    "entruempelung-meidling-wien-1120",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-josefstadt-wien-1080": [
+    "entruempelung-neubau-wien-1070",
+    "entruempelung-alsergrund-wien-1090",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-margareten-wien-1050": [
+    "entruempelung-mariahilf-wien-1060",
+    "entruempelung-meidling-wien-1120",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-mariahilf-wien-1060": [
+    "entruempelung-margareten-wien-1050",
+    "entruempelung-rudolfsheim-fuenfhaus-wien-1150",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-simmering-wien-1110": [
+    "entruempelung-favoriten-wien-1100",
+    "entruempelung-landstrasse-wien-1030",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-hietzing-wien-1130": [
+    "entruempelung-penzing-wien-1140",
+    "gartenentruempelung-wien-kosten-ablauf",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-penzing-wien-1140": [
+    "entruempelung-hietzing-wien-1130",
+    "entruempelung-rudolfsheim-fuenfhaus-wien-1150",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-rudolfsheim-fuenfhaus-wien-1150": [
+    "entruempelung-mariahilf-wien-1060",
+    "entruempelung-ottakring-wien-1160",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-waehring-wien-1180": [
+    "entruempelung-doebling-wien-1190",
+    "entruempelung-hernals-wien-1170",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-doebling-wien-1190": [
+    "entruempelung-waehring-wien-1180",
+    "gartenentruempelung-wien-kosten-ablauf",
+    "was-kostet-entruempelung-wien",
+  ],
+  "entruempelung-alsergrund-wien-1090": [
+    "praxisaufloesung-wien",
+    "entruempelung-josefstadt-wien-1080",
     "was-kostet-entruempelung-wien",
   ],
   "entruempelung-wien-steuer-absetzen": [

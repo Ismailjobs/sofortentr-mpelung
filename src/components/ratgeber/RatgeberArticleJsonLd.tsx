@@ -51,7 +51,7 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
       mainEntity: { "@id": blogPostingId },
     },
     {
-      "@type": "BlogPosting",
+      "@type": ["BlogPosting", "Article"],
       "@id": blogPostingId,
       headline: article.title,
       abstract: article.excerpt,

@@ -2,62 +2,82 @@ import RatgeberArticleBody, {
   RatgeberCtaBox,
   RatgeberFreshnessBadge,
   RatgeberH2,
+  RatgeberH3,
   RatgeberInternalLink,
   RatgeberLead,
   RatgeberLi,
+  RatgeberOl,
   RatgeberP,
   RatgeberUl,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta, BezirkStructureBlocks } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "entruempelung-meidling-wien-1120",
-  title: "Entrümpelung Meidling Wien 1120: Altbau, Nachkriegsbau und kurze Wege",
-  seoTitle: "Entrümpelung Meidling Wien 1120 | Fixpreis & schnelle Termine",
-  ogTitle: "Entrümpelung Meidling Wien 1120 — Altbau & Fixpreis",
+  title: "Entrümpelung Meidling Wien 1120: Altbau, Nachkriegsbau und Nähe zu Liesing",
+  seoTitle: "Entrümpelung Meidling Wien 1120 | Altbau, Nachkriegsbau & Fixpreis",
+  ogTitle: "Entrümpelung Meidling Wien 1120 — Altbau, Nachkriegsbau & kurze Wege",
   focusKeyword: "Entrümpelung Meidling Wien 1120",
   description:
-    "Entrümpelung im 12. Bezirk: Meidlinger Hauptstraße, Philadelphiabrücke, Altbau und Nachkriegsbau. Fixpreis nach kostenloser Besichtigung.",
+    "Entrümpelung 1120 Wien: Altbau und Nachkriegsbau in Meidling, kurze Wege zu Liesing. MA 46 Halteverbot, MA 48 Entsorgung, Fixpreis nach Besichtigung.",
   excerpt:
-    "Entrümpelung in Meidling (1120) — Altbau, Kellerfreimachung und Wohnungswechsel mit Fixpreis nach Besichtigung.",
+    "Entrümpelung in Meidling (1120) — Altbau, Nachkriegsbau und kurze Wege vom Firmensitz Liesing mit Fixpreis.",
   freshnessExcerpt: {
     kind: "guide",
     guideName: "Meidling-Leitfaden",
-    suffix: "Altbau, Nachkriegsbau und kurze Wege vom Firmensitz Liesing.",
+    suffix: "Altbau, Nachkriegsbau, Nähe Liesing, MA 46/48 und Fixpreis im 12. Bezirk.",
   },
   publishedAt: "2026-08-31",
   keywords: [
     "Entrümpelung Meidling Wien",
     "Entrümpelung 1120 Wien",
     "Wohnungsauflösung Meidling",
-    "Haushaltsauflösung 12. Bezirk",
     "Kellerräumung Meidling",
     "Nachlassräumung Meidling",
+    "Altbau Entrümpelung 1120",
     "Fixpreis Entrümpelung Meidling",
   ],
   faq: [
     {
-      question: "Wie schnell ist ein Termin in Meidling möglich?",
+      question: "Warum sind Termine in Meidling (1120) oft besonders gut planbar?",
       answer:
-        "Vom Firmensitz in Liesing (1230) sind die Wege kurz — Besichtigungen und Räumungen oft innerhalb weniger Werktage.",
+        "Weil die Wege vom Firmensitz in Liesing (1230) kurz sind. Besichtigungen und Räumungen lassen sich häufig innerhalb weniger Werktage koordinieren — vorausgesetzt, Zugang und Nebenflächen sind klar.",
     },
     {
-      question: "Räumen Sie auch Keller und Dachböden in Meidling?",
+      question: "Unterscheidet sich Altbau von Nachkriegsbau bei der Entrümpelung in Meidling?",
       answer:
-        "Ja. Bei der Besichtigung erfassen wir Wohnung, Keller und Nebenflächen gemeinsam, damit der Fixpreis alles abdeckt.",
+        "Ja. Altbau bringt oft steile Treppen ohne Lift und enge Türbreiten. Nachkriegsbauten haben häufiger Aufzüge, dafür größere Keller- und Abstellstrukturen. Der Fixpreis folgt dem konkreten Zugang.",
     },
     {
-      question: "Kommen Sie auch zu Nachlasswohnungen vor Neuvermietung?",
+      question: "Brauche ich an der Meidlinger Hauptstraße ein MA-46-Halteverbot?",
       answer:
-        "Ja. Wir räumen besenrein und stimmen den Termin mit Hausverwaltung oder Erben ab.",
+        "Häufig ja, wenn kein verlässliches Ladefenster existiert. Wir prüfen das bei der Besichtigung und beantragen bei Bedarf eine temporäre Halteverbotszone bei der MA 46.",
+    },
+    {
+      question: "Wie läuft die Entsorgung über die MA 48?",
+      answer:
+        "Wir sortieren und entsorgen fachgerecht im Fixpreis. Eigenregie-Mistplatz-Touren entfallen, wenn der Auftrag die komplette Entsorgung umfasst.",
     },
     {
       question: "Was kostet eine Entrümpelung in Meidling?",
       answer:
-        "Nach kostenloser Besichtigung erhalten Sie einen schriftlichen Fixpreis. Orientierung im Ratgeber „Was kostet eine Entrümpelung in Wien?“.",
+        "Nach kostenloser Besichtigung erhalten Sie einen schriftlichen Fixpreis. Orientierung: Ratgeber „Was kostet eine Entrümpelung in Wien?“ und unsere Preisseite — ohne Fantasie-Preistabellen.",
+    },
+    {
+      question: "Können Wohnung und Keller in einem Termin geräumt werden?",
+      answer:
+        "Ja — wenn beide Bereiche bei der Besichtigung erfasst sind. Gerade in Meidling sind Kellerabteile oft der vergessene Aufwandstreiber.",
     },
   ],
-  readingTimeMinutes: 7,
+  readingTimeMinutes: 10,
+  relatedSlugs: [
+    "entruempelung-favoriten-wien-1100",
+    "entruempelung-liesing-wien-1230",
+    "was-kostet-entruempelung-wien",
+    "verlassenschaft-entruempelung-wien-sensibel",
+    "messie-wohnung-raeumen-wien",
+  ],
 };
 
 export default function EntruempelungMeidlingWien1120() {
@@ -65,88 +85,238 @@ export default function EntruempelungMeidlingWien1120() {
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
         variant={{ kind: "guide", guideName: "Meidling-Leitfaden" }}
-        note="Altbau, Nachkriegsbau und Keller — Fixpreis nach Besichtigung im 12. Bezirk."
+        note="Altbau, Nachkriegsbau und kurze Wege — praxisnah für den 12. Bezirk."
         article={meta}
       />
 
       <RatgeberLead>
-        Meidling liegt zentral und ist für uns vom Firmensitz in Liesing besonders gut erreichbar. Entlang der
-        Meidlinger Hauptstraße und rund um die Philadelphiabrücke mischen sich Gründerzeithäuser,
-        Nachkriegsbauten und kleinere Gewerbeflächen — jede Räumung braucht eine eigene Logistikplanung.
+        Meidling liegt dort, wo Wien dichter wird und gleichzeitig wieder atmet: Entlang der Meidlinger
+        Hauptstraße und rund um die Philadelphiabrücke wechseln Gründerzeitfassaden mit Nachkriegsbauten, und
+        wenige Stationen weiter beginnt der Süden mit kürzeren Wegen und anderer Bebauung. Für eine Entrümpelung
+        in 1120 heißt das: Der Bezirk ist zentral genug für knappen Parkraum — und nah genug an Liesing, dass
+        Termine oft spürbar schneller greifen.
       </RatgeberLead>
 
+      <BezirkEarlyCta
+        title="Entrümpelung Meidling 1120"
+        text="Altbau oder Nachkriegsbau: kurze Wege, klarer Fixpreis."
+      />
       <RatgeberP>
-        Dieser Ratgeber zeigt, worauf es bei einer{" "}
-        <RatgeberInternalLink href="/entruempelung-wien-1120">
-          Entrümpelung in Meidling (1120)
-        </RatgeberInternalLink>{" "}
-        ankommt. Vom Firmensitz in{" "}
+        Dieser Ratgeber erklärt, worauf es bei Altbau und Nachkriegsbau im 12. Bezirk ankommt. Leistungen:{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>,{" "}
+        <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>,{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink> und{" "}
+        <RatgeberInternalLink href="/preise">Preise</RatgeberInternalLink>. Zum Firmensitz und den kurzen Wegen:
+        {" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-liesing-wien-1230">
-          Liesing (1230)
-        </RatgeberInternalLink>{" "}
-        sind Anfahrt und Termine hier oft kürzer als in weiter entfernten Bezirken.
-      </RatgeberP>
-
-      <RatgeberH2>Ein Bezirk mit gemischter Bebauung</RatgeberH2>
-      <RatgeberP>
-        Im 12. Bezirk finden Sie enge Altbauwohnungen ohne Lift ebenso wie größere Nachkriegsbauten mit Keller-
-        und Dachbodenabteilen. Häufig geht es um Wohnungswechsel,{" "}
-        <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
-          Nachlassräumungen
-        </RatgeberInternalLink>{" "}
-        oder Kellerfreimachungen vor Neuvermietung.
-      </RatgeberP>
-      <RatgeberP>
-        Entlang der Meidlinger Hauptstraße und in den Seitenstraßen ist Parkraum knapp — Halteverbote und
-        kurze Ladezeiten klären wir vorab, damit der Abtransport reibungslos läuft.
-      </RatgeberP>
-
-      <RatgeberH2>Typische Herausforderungen in Meidling</RatgeberH2>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Enge Stiegenhäuser:</strong> Möbel werden bei Bedarf zerlegt — Türbreiten und Stockwerk
-          prüfen wir bei der Besichtigung.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Keller und Abstellräume:</strong> Oft mitzuräumen —{" "}
-          <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
-            Kellerräumung Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Kurze Wege vom Firmensitz:</strong> Von Liesing aus sind wir in Meidling schnell vor Ort —
-          praktisch bei dringenden Übergabeterminen.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Gemischte Objekte:</strong> Wohnung plus Keller oder kleines Gewerbe — alles in einem
-          Fixpreis, wenn bei der Anfrage vollständig genannt.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>Was kostet eine Entrümpelung in Meidling?</RatgeberH2>
-      <RatgeberP>
-        Volumen, Zugang und Entsorgungsmix bestimmen den Fixpreis nach Besichtigung. Überblick:{" "}
-        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
-          Was kostet eine Entrümpelung in Wien?
+          Entrümpelung Liesing 1230
         </RatgeberInternalLink>
         .
       </RatgeberP>
 
-      <RatgeberH2>Wertanrechnung im 12. Bezirk</RatgeberH2>
+      <RatgeberH2>Altbau und Nachkriegsbau: zwei Arbeitstage unter einer PLZ</RatgeberH2>
       <RatgeberP>
-        Gut erhaltene Möbel, Elektrogeräte oder Fahrräder können angerechnet werden —{" "}
+        In Meidlinger Altbauten entscheiden oft Stockwerk ohne Lift, schmale Treppen und Innenhöfe über den
+        Aufwand. Derselbe Schrank, der im Erdgeschoß in Minuten draußen ist, bindet im vierten Stock ohne Aufzug
+        ein ganzes Zeitfenster. Nachkriegsbauten bringen andere Motive: häufiger Lift, dafür größere Keller,
+        Abstellräume und manchmal längere Wege innerhalb der Anlage.
+      </RatgeberP>
+      <RatgeberP>
+        Genau deshalb beginnt jede seriöse Kalkulation mit dem Zugang. Eine{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">Wohnungsentrümpelung</RatgeberInternalLink>{" "}
+        ohne Kellerangabe ist in Meidling oft unvollständig — und genau dort entstehen später die Diskussionen,
+        die ein guter Fixpreis vermeiden soll.
+      </RatgeberP>
+      <RatgeberP>
+        Rund um die Philadelphiabrücke und entlang der Meidlinger Hauptstraße spürt man den Bezirk als
+        Verkehrsknoten: kurze Haltefenster, dichter Alltag, wenig Toleranz für improvisiertes Laden. In den
+        ruhigeren Seitenstraßen bleibt der Hof eng, die Stiege steil, die Nachbarschaft nah. Beides verlangt
+        Planung — nur mit anderen Schwerpunkten. Wir besichtigen deshalb das konkrete Haus, nicht die PLZ-Karte.
+      </RatgeberP>
+      <RatgeberP>
+        Die Nähe zu Liesing beschleunigt Besichtigung und Einsatz, ersetzt aber keine vollständige Anfrage.
+        Übergabetermin, Endzustand, Stockwerk, Lift und Nebenflächen gehören von Anfang an dazu. Dann greifen
+        kurze Wege wirklich: als Terminsicherheit, nicht als Ausrede für unklare Preise. Meidling ist dafür der
+        ideale Bezirk — zentral genug für knappe Logistik, nah genug für schnelle Koordination.
+      </RatgeberP>
+
+      <RatgeberH2>Nähe zu Liesing: kurze Wege, klare Termine</RatgeberH2>
+      <RatgeberP>
+        Vom Firmensitz in Liesing sind Anfahrt und Rückwege nach Meidling kurz. Das hilft bei dringenden
+        Wohnungswechseln, Nachlassfällen vor Neuvermietung und bei Terminen, die an Hausverwaltung oder Notar
+        gebunden sind. Kurze Wege ersetzen allerdings keine Planung: Auch in 1120 brauchen Zufahrt, Teamgröße und
+        Entsorgung eine klare Reihenfolge.
+      </RatgeberP>
+
+      <RatgeberH2>MA 46 Halteverbot entlang der Meidlinger Hauptstraße</RatgeberH2>
+      <RatgeberP>
+        Parkraum ist entlang der Meidlinger Hauptstraße und in vielen Seitenstraßen knapp. Wo kein verlässliches
+        Ladefenster existiert, beantragen wir bei der <strong>MA 46</strong> eine temporäre Halteverbotszone —
+        mit Vorlauf, der zum Übergabetermin passt. Besonders bei Altbau ohne Lift zählt jede legale Minute am
+        Fahrzeug.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung klären wir: Reicht ein kurzes Zeitfenster, oder ist das Halteverbot die sauberere
+        Lösung für Team, Anrainer und Hausordnung? Diese Entscheidung gehört in Meidling zur professionellen
+        Vorbereitung.
+      </RatgeberP>
+      <RatgeberP>
+        Die Nähe zu Liesing hilft bei der Koordination — sie ersetzt aber keinen Vorlauf, wenn ein Halteverbot
+        nötig ist. Wer einen engen Übergabetermin hat, sollte Zufahrt und MA-46-Bedarf deshalb in der Erstanfrage
+        ansprechen. Dann greifen kurze Wege und behördliche Planung zusammen: schneller vor Ort, aber trotzdem mit
+        legalem Ladefenster und ruhigem Ablauf.
+      </RatgeberP>
+
+      <RatgeberH2>MA 48: Entsorgung ohne Mehrfachfahrten</RatgeberH2>
+      <RatgeberP>
+        Die <strong>MA 48</strong> stellt Mistplätze und Entsorgungsregeln bereit. Für Kleinmengen kann Eigenregie
+        funktionieren; bei kompletter Haushaltsauflösung inklusive Keller summiert sich der Aufwand schnell. Wir
+        übernehmen Sortierung und fachgerechte Entsorgung im Fixpreis. Vertiefung:{" "}
+        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
+          MA 48 oder Räumungsfirma?
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien">
+          MA-48-Entsorgungs-Guide
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+      <RatgeberP>
+        In Meidling ist der Mix aus Altbau-Inventar und Kellerresten typisch. Mehrere Eigenregie-Fahrten kosten
+        schnell mehr Zeit als der kurze Weg aus Liesing zum Objekt. Wir bündeln Demontage, Abtransport und
+        Entsorgung deshalb in einem Ablauf — mit klarer Sortierung und ohne dass Sie Mistplatz-Öffnungszeiten und
+        Fahrzeuglogistik selbst orchestrieren müssen.
+      </RatgeberP>
+
+      <RatgeberH2>Typische Fälle in Meidling</RatgeberH2>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Wohnungswechsel:</strong>{" "}
+          <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink> mit
+          besenreiner Übergabe.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Nachlass:</strong>{" "}
+          <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
+            Verlassenschafts-Entrümpelung
+          </RatgeberInternalLink>
+          ,{" "}
+          <RatgeberInternalLink href="/leistungen/verlassenschaft">Verlassenschaft</RatgeberInternalLink>.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Messie-Situationen:</strong>{" "}
+          <RatgeberInternalLink href="/ratgeber/messie-wohnung-raeumen-wien">
+            Messie-Wohnung räumen
+          </RatgeberInternalLink>
+          ,{" "}
+          <RatgeberInternalLink href="/leistungen/messie-entruempelung">Messie-Entrümpelung</RatgeberInternalLink>.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Keller &amp; Dachboden:</strong>{" "}
+          <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>,{" "}
+          <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">Dachbodenentrümpelung</RatgeberInternalLink>
+          .
+        </RatgeberLi>
+      </RatgeberUl>
+
+      <RatgeberH2>Kostenlogik ohne Fantasiepreise</RatgeberH2>
+      <RatgeberP>
+        Volumen, Zugang, Stockwerk, Lift, Demontage, Halteverbot und Entsorgungsmix bestimmen den Fixpreis.
+        Orientierung:{" "}
+        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
+          Was kostet eine Entrümpelung in Wien?
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/preise">Preise</RatgeberInternalLink>. Verwertbares:{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertanrechnung</RatgeberInternalLink>,{" "}
         <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
           Wertanrechnung erklärt
         </RatgeberInternalLink>
         .
       </RatgeberP>
+      <RatgeberP>
+        Altbau ohne Lift und Nachkriegsbau mit Keller können bei gleicher Wohnfläche sehr unterschiedlich
+        kalkulieren. Deshalb keine Fantasie-Preistabelle — sondern Besichtigung, klarer Umfang, schriftlicher
+        Fixpreis. Die kurzen Wege aus Liesing verbessern Termine, ersetzen aber keine vollständige Erfassung der
+        Flächen.
+      </RatgeberP>
 
-      <RatgeberCtaBox>
-        <p className="font-bold text-brand-dark">Entrümpelung Meidling — Fixpreis nach Besichtigung</p>
+      <RatgeberH2>Ablauf im 12. Bezirk</RatgeberH2>
+      <RatgeberOl>
+        <RatgeberLi>
+          <strong>Besichtigen:</strong> Altbau oder Nachkriegsbau — Zugang, Keller, Zufahrt.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Fixpreis:</strong> Umfang und Endzustand schriftlich.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>MA 46:</strong> Halteverbot bei Bedarf.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Räumen:</strong> Demontage, Abtransport, MA-48-Entsorgung.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Übergeben:</strong> Vereinbarten Zustand prüfen.
+        </RatgeberLi>
+      </RatgeberOl>
+
+      <RatgeberH3>Nachbarbezirke</RatgeberH3>
+      <RatgeberP>
+        Weiterlesen:{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-favoriten-wien-1100">
+          Entrümpelung Favoriten 1100
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-liesing-wien-1230">
+          Entrümpelung Liesing 1230
+        </RatgeberInternalLink>
+        . Bei Gemeindebau-Übergaben zusätzlich{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
+          Entrümpelung im Gemeindebau
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
+      <RatgeberH2>Meidlinger Hauptstraße, Philadelphiabrücke und die Praxis der kurzen Wege</RatgeberH2>
+      <RatgeberP>
+        Entlang der Meidlinger Hauptstraße ist der Alltag dicht: Geschäfte, Verkehr, knappe Haltemöglichkeiten.
+        Eine Räumung braucht hier ein realistisches Ladefenster — oft mit MA-46-Halteverbot —, damit Demontage und
+        Abtransport nicht gegen den Straßenfluss arbeiten. In den Seitenstraßen und Innenhöfen entscheiden
+        Türbreiten und Stockwerk. Altbau ohne Lift bleibt das klassische Szenario, in dem Vorbereitung und
+        Teamgröße den Tag retten.
+      </RatgeberP>
+      <RatgeberP>
+        Nachkriegsbauten erzählen eine andere Geschichte: häufiger Aufzug, dafür größere Keller und Abstellflächen,
+        manchmal längere Wege innerhalb der Anlage. Wer nur die Wohnung fotografiert und den Keller „später“
+        erwähnt, bekommt keinen belastbaren Fixpreis. Genau deshalb erfassen wir bei der Besichtigung Wohnung und
+        Nebenflächen gemeinsam — besonders in Meidling, wo gemischte Bebauung der Normalfall ist.
+      </RatgeberP>
+      <RatgeberP>
+        Die Nähe zu Liesing ist ein echter Termin-Vorteil: kurze Anfahrt, schnellere Besichtigungsfenster, bessere
+        Koordination bei dringenden Übergaben. Sie ersetzt aber keine Klarheit. Nennen Sie Übergabetermin,
+        gewünschten Endzustand und alle Flächen in der Erstanfrage. Dann lassen sich MA-46-Vorlauf, Team und
+        MA-48-Entsorgung so legen, dass der Tag planbar bleibt — auch wenn der Kalender eng ist.
+      </RatgeberP>
+      <RatgeberP>
+        Praktische Vorbereitung: Persönliches sichern, Verbleibendes markieren, Hausverwaltung informieren, Fotos
+        mit Stockwerk und Zugang senden. Wer das erledigt, erlebt Meidling als Bezirk der kurzen Wege im besten
+        Sinn — nicht als Überraschungsgebiet zwischen Altbau-Treppe und vergessenem Kellerabteil. Der Fixpreis
+        bleibt verbindlich, wenn der Umfang von Anfang an vollständig ist.
+      </RatgeberP>
+      <RatgeberP>
+        Ob Altbau an der Meidlinger Hauptstraße oder Nachkriegsbau mit Keller: Sagen Sie uns den Übergabetermin und
+        den gewünschten Endzustand. Dann nutzen wir die Nähe zu Liesing dort, wo sie am meisten hilft — bei
+        schnellen, ruhigen Terminen mit klarem Fixpreis.
+      </RatgeberP>
+
+      
+      <BezirkStructureBlocks districtLabel="Meidling (1120)" />
+
+<RatgeberCtaBox>
+        <p className="font-bold text-brand-dark">Entrümpelung Meidling 1120 — Fixpreis nach Besichtigung</p>
         <RatgeberP>
-          Altbau, Nachkriegsbau oder Kellerfreimachung im 12. Bezirk: kostenlose Besichtigung, verbindlicher
-          Festpreis, besenreine Übergabe auf Wunsch.
+          Altbau, Nachkriegsbau oder Kellerfreimachung im 12. Bezirk: kurze Wege aus Liesing, kostenlose
+          Besichtigung, verbindlicher Festpreis — inklusive klarer Planung zu MA 46 und MA 48.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">Jetzt unverbindlich anfragen →</RatgeberInternalLink>

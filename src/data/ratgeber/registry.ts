@@ -13,6 +13,42 @@ export { RATGEBER_PATH };
  * 4. Slug + Aktualisierungstag in `src/lib/ratgeber-dates.ts` → `RATGEBER_ARTICLE_UPDATE_DAYS`
  */
 
+import EntruempelungWiedenWien1040, {
+  meta as entruempelungWiedenWien1040Meta,
+} from "@/components/ratgeber/articles/entruempelung-wieden-wien-1040";
+import EntruempelungNeubauWien1070, {
+  meta as entruempelungNeubauWien1070Meta,
+} from "@/components/ratgeber/articles/entruempelung-neubau-wien-1070";
+import EntruempelungJosefstadtWien1080, {
+  meta as entruempelungJosefstadtWien1080Meta,
+} from "@/components/ratgeber/articles/entruempelung-josefstadt-wien-1080";
+import EntruempelungAlsergrundWien1090, {
+  meta as entruempelungAlsergrundWien1090Meta,
+} from "@/components/ratgeber/articles/entruempelung-alsergrund-wien-1090";
+import EntruempelungMargaretenWien1050, {
+  meta as entruempelungMargaretenWien1050Meta,
+} from "@/components/ratgeber/articles/entruempelung-margareten-wien-1050";
+import EntruempelungMariahilfWien1060, {
+  meta as entruempelungMariahilfWien1060Meta,
+} from "@/components/ratgeber/articles/entruempelung-mariahilf-wien-1060";
+import EntruempelungSimmeringWien1110, {
+  meta as entruempelungSimmeringWien1110Meta,
+} from "@/components/ratgeber/articles/entruempelung-simmering-wien-1110";
+import EntruempelungHietzingWien1130, {
+  meta as entruempelungHietzingWien1130Meta,
+} from "@/components/ratgeber/articles/entruempelung-hietzing-wien-1130";
+import EntruempelungPenzingWien1140, {
+  meta as entruempelungPenzingWien1140Meta,
+} from "@/components/ratgeber/articles/entruempelung-penzing-wien-1140";
+import EntruempelungRudolfsheimFuenfhausWien1150, {
+  meta as entruempelungRudolfsheimFuenfhausWien1150Meta,
+} from "@/components/ratgeber/articles/entruempelung-rudolfsheim-fuenfhaus-wien-1150";
+import EntruempelungDoeblingWien1190, {
+  meta as entruempelungDoeblingWien1190Meta,
+} from "@/components/ratgeber/articles/entruempelung-doebling-wien-1190";
+import EntruempelungWaehringWien1180, {
+  meta as entruempelungWaehringWien1180Meta,
+} from "@/components/ratgeber/articles/entruempelung-waehring-wien-1180";
 import EntruempelungOttakringWien1160, {
   meta as entruempelungOttakringWien1160Meta,
 } from "@/components/ratgeber/articles/entruempelung-ottakring-wien-1160";
@@ -196,6 +232,18 @@ function register(meta: RatgeberArticleMeta, Component: ComponentType): Ratgeber
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(entruempelungWiedenWien1040Meta, EntruempelungWiedenWien1040),
+  register(entruempelungNeubauWien1070Meta, EntruempelungNeubauWien1070),
+  register(entruempelungJosefstadtWien1080Meta, EntruempelungJosefstadtWien1080),
+  register(entruempelungAlsergrundWien1090Meta, EntruempelungAlsergrundWien1090),
+  register(entruempelungMargaretenWien1050Meta, EntruempelungMargaretenWien1050),
+  register(entruempelungMariahilfWien1060Meta, EntruempelungMariahilfWien1060),
+  register(entruempelungSimmeringWien1110Meta, EntruempelungSimmeringWien1110),
+  register(entruempelungHietzingWien1130Meta, EntruempelungHietzingWien1130),
+  register(entruempelungPenzingWien1140Meta, EntruempelungPenzingWien1140),
+  register(entruempelungRudolfsheimFuenfhausWien1150Meta, EntruempelungRudolfsheimFuenfhausWien1150),
+  register(entruempelungDoeblingWien1190Meta, EntruempelungDoeblingWien1190),
+  register(entruempelungWaehringWien1180Meta, EntruempelungWaehringWien1180),
   register(entruempelungOttakringWien1160Meta, EntruempelungOttakringWien1160),
   register(entruempelungMeidlingWien1120Meta, EntruempelungMeidlingWien1120),
   register(entruempelungFloridsdorfWien1210Meta, EntruempelungFloridsdorfWien1210),

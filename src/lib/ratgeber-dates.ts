@@ -67,6 +67,18 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "entruempelung-brigittenau-wien-1200": 2,
   "entruempelung-landstrasse-wien-1030": 9,
   "entruempelung-hernals-wien-1170": 20,
+  "entruempelung-wieden-wien-1040": 3,
+  "entruempelung-neubau-wien-1070": 10,
+  "entruempelung-josefstadt-wien-1080": 25,
+  "entruempelung-alsergrund-wien-1090": 28,
+  "entruempelung-margareten-wien-1050": 6,
+  "entruempelung-mariahilf-wien-1060": 14,
+  "entruempelung-simmering-wien-1110": 17,
+  "entruempelung-hietzing-wien-1130": 21,
+  "entruempelung-penzing-wien-1140": 23,
+  "entruempelung-rudolfsheim-fuenfhaus-wien-1150": 27,
+  "entruempelung-waehring-wien-1180": 8,
+  "entruempelung-doebling-wien-1190": 12,
 };
 
 function slugToUpdateDay(slug: string): number {
