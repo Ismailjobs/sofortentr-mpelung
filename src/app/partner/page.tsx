@@ -8,9 +8,9 @@ import Header from "@/components/Header";
 import { partnerHost, SITE_PARTNERS } from "@/data/site-content";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Partner & Kooperationen in Österreich",
+  title: "Partner & Kooperationen",
   description:
-    "Unsere Partner für Entrümpelung, Räumung und Umzug in Österreich — Objekträumung, Swift Umzug, Oberösterreich, Steiermark und Salzburg. Verlässliche regionale Anlaufstellen.",
+    "Unser Partner für Entrümpelung und Räumung — Objekträumung (objektraeumung.at). Verlässliche Kooperation mit transparenten Abläufen und Festpreis nach Besichtigung.",
   path: "/partner",
 });
 
@@ -34,8 +34,8 @@ export default function PartnerPage() {
 
           <article className="mt-10 space-y-10 text-sm leading-relaxed text-neutral-800 sm:text-base">
             <p>
-              Für anspruchsvolle Räumungen und Entrümpelungen arbeiten wir mit erfahrenen Spezialisten in ganz
-              Österreich zusammen — dieselben Qualitätsansprüche: transparente Abläufe, faire Festpreise nach
+              Für anspruchsvolle Räumungen und Entrümpelungen arbeiten wir mit einem erfahrenen Partner
+              zusammen — dieselben Qualitätsansprüche: transparente Abläufe, faire Festpreise nach
               Besichtigung und zuverlässige Entsorgung.
             </p>
 
@@ -62,7 +62,7 @@ export default function PartnerPage() {
             ))}
 
             <p className="text-neutral-600">
-              Sie betreiben einen Entrümpelungs- oder Umzugsservice in Österreich und möchten Partner werden?{" "}
+              Sie betreiben einen Entrümpelungs- oder Räumungsservice und möchten Partner werden?{" "}
               <a href="/#kontakt" className="font-semibold text-brand-orange underline">
                 Kontaktieren Sie uns
               </a>
