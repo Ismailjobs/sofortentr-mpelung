@@ -262,10 +262,6 @@ export default function EntruempelungPenzingWien1140() {
         verbindlich — auch wenn Hanglage und Nebenflächen den Tag länger machen als eine flache Online-Schätzung
         vermuten lässt.
       </RatgeberP>
-      <RatgeberP>
-        Seriöse Orientierung ohne Fantasie-Preistabellen: Faktoren verstehen, Zufahrt prüfen, schriftlich
-        fixieren. So wird Entrümpelung in Hütteldorf, Baumgarten und Breitensee planbar statt riskant.
-      </RatgeberP>
 
       <RatgeberH2>Hütteldorf, Baumgarten, Breitensee: drei Logiken unter einer PLZ</RatgeberH2>
       <RatgeberP>
@@ -286,12 +282,6 @@ export default function EntruempelungPenzingWien1140() {
         prüfen, Rest entsorgen. Hanglage und emotionale Last gleichzeitig zu stemmen, gelingt nur mit Planung.
         Fotos der Zufahrt und Stufen helfen in der Erstanfrage — ersetzen aber selten die Vor-Ort-Klärung, wenn
         Kehren, Steigung oder enge Tore den Abtransport bestimmen.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung vor Verkauf oder Sanierung: Handwerkertermine und Räumung in denselben Kalender legen,
-        Hangzufahrt beschreiben, Nebenflächen vollständig nennen. Wenn MA&nbsp;46 nötig ist, muss der Vorlauf
-        passen.       Dann bleibt Luft für Demontage und Endkontrolle — genau das, was Westlage und Hangstraßen
-        verlangen. Penzing belohnt klare Zufahrtsangaben und bestraft flache Online-Pauschalen.
       </RatgeberP>
 
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
@@ -322,12 +312,6 @@ export default function EntruempelungPenzingWien1140() {
         </RatgeberLi>
       </RatgeberOl>
 
-      <RatgeberP>
-        Kurz für Penzing: Beschreiben Sie Hanglage und Zufahrt früh, nennen Sie Keller, Garage und Garten
-        vollständig und klären Sie bei Bedarf ein MA-46-Haltefenster. Mit MA-48-Entsorgung und Fixpreis nach
-        Besichtigung bleibt die Räumung sicher und planbar — in Hütteldorf, Baumgarten und Breitensee.
-      </RatgeberP>
-
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>
       <RatgeberP>
         <RatgeberInternalLink href="/ratgeber/entruempelung-hietzing-wien-1130">
@@ -342,6 +326,27 @@ export default function EntruempelungPenzingWien1140() {
           Ottakring 1160
         </RatgeberInternalLink>
         .
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Penzing: Altbau an der Linzer Straße in Breitensee</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Altbauwohnung im dritten Stock ohne Lift nahe der Linzer Straße in Breitensee —
+        dichter Bestand, knapper Parkraum, dazu ein Kellerabteil über mehrere Stufen. Bei der Besichtigung
+        wird klar: Der Trageweg durchs Stiegenhaus bestimmt den Tag stärker als die Wohnfläche, und vor dem
+        Haus gibt es kein verlässliches spontanes Ladefenster — Verkehr und Kurzparkzone teilen sich denselben
+        Meter.
+      </RatgeberP>
+      <RatgeberP>
+        Wir beantragen bei Bedarf eine Halteverbotszone bei der <strong>MA 46</strong>, planen Demontage vor
+        Ort und schützen Treppenhaus und Böden. Am Einsatztag arbeiten wir in kurzen Ladephasen gegen den
+        Linzer-Straße-Verkehr und tragen Sperriges nur demontiert. Keller und Wohnung laufen im selben Termin,
+        weil beides im Fixpreis erfasst war — ohne Hang-Improvisation, aber mit derselben Sorgfalt wie in den
+        steileren Lagen Richtung Hütteldorf.
+      </RatgeberP>
+      <RatgeberP>
+        Entsorgung läuft getrennt und fachgerecht über die <strong>MA 48</strong>. Am Ende steht die
+        besenreine Übergabe inklusive Keller — ohne dass Sie selbst Mistplatz-Touren organisieren oder am
+        Einsatztag noch über vergessene Abteile nachverhandeln.
       </RatgeberP>
 
       

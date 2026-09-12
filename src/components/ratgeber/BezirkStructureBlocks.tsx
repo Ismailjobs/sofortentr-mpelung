@@ -41,10 +41,10 @@ type Props = {
 export function BezirkStructureBlocks({ districtLabel }: Props) {
   return (
     <>
-      <RatgeberH2>Was den Aufwand in {districtLabel} wirklich bestimmt</RatgeberH2>
+      <RatgeberH2>Kostenfaktoren auf einen Blick — {districtLabel}</RatgeberH2>
       <RatgeberP>
-        Nicht die PLZ allein entscheidet über Zeit und Preis — sondern Zugang, Volumen und Entsorgungsmix.
-        Die Übersicht hilft bei der Erstanfrage; der verbindliche Fixpreis folgt nach der Besichtigung.
+        Die Tabelle ordnet die wichtigsten Hebel für Zeit und Fixpreis. Sie ersetzt keine Besichtigung,
+        hilft aber bei der Erstanfrage — und vermeidet Fantasiepreise ohne Objektbezug.
       </RatgeberP>
       <RatgeberTableWrap caption={`Kostenfaktoren Entrümpelung ${districtLabel} (ohne Fantasiepreise)`}>
         <RatgeberThead>

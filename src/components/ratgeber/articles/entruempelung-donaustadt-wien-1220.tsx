@@ -306,65 +306,25 @@ export default function EntruempelungDonaustadtWien1220() {
         gehört in solchen Häusern oft dazu — nicht als Extra, sondern als Teil des Gesamtauftrags.
       </RatgeberP>
 
-      <RatgeberH2>MA 46: Halteverbot zwischen Seestadt und Streusiedlung</RatgeberH2>
-      <RatgeberP>
-        Die <strong>MA 46</strong> regelt in Wien das Halten und Parken — und in Donaustadt ist der
-        Bedarf uneinheitlich. In der Seestadt und an dichteren Wohnstraßen in Kagran schafft ein
-        temporäres Halteverbot planbare Ladezeiten für LKW und Transporter. Bei Einfamilienhäusern mit
-        Einfahrt in Süßenbrunn oder Hirschstetten reicht oft die private Zufahrt — vorausgesetzt, das
-        Team kann direkt ans Haus fahren. Entscheidend ist die Besichtigung: Wir messen nicht nur
-        Volumen, sondern auch, wo das Fahrzeug stehen darf und wie weit getragen werden muss.
-      </RatgeberP>
-      <RatgeberP>
-        Wer selbst organisiert, verliert in Donaustadt leicht einen Tag mit Behördengängen und
-        Schilderaufstellung. Deshalb ist der Vergleich lohnenswert:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-          MA 48 vs. Entrümpelungsfirma
-        </RatgeberInternalLink>
-        . Bei uns gehört die Planung — inklusive MA-46-Abstimmung bei Bedarf — zum Ablauf, nicht zur
-        Eigenleistung der Kundin oder des Kunden.
-      </RatgeberP>
-
-      <RatgeberH2>MA 48: Garten, Elektro und Sperrmüll im 22. Bezirk</RatgeberH2>
-      <RatgeberP>
-        Donaustadt produziert bei Räumungen oft mehr Entsorgungsfraktionen als Innenbezirke: Gartenabfälle
-        aus dem Grundstück, alte Geräte aus Keller und Garage, Sperrmüll aus dem Wohnhaus. Die{" "}
-        <strong>MA 48</strong> ist der kommunale Rahmen — wir sortieren vor Ort und führen alles
-        fachgerecht ab. Das spart Fahrten zu den Mistplätzen und verhindert, dass nach der Räumung
-        noch Kartons im Hof stehen.
-      </RatgeberP>
-      <RatgeberP>
-        Orientierung zu Abgabestellen und Sortierregeln:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien">
-          MA-48-Mistplätze-Guide
-        </RatgeberInternalLink>
-        . Bei Sanierung oder Abrissvorbereitung:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
-          Entrümpelung vor Sanierung
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
       <RatgeberH2>Vorbereitung: alle Nebenflächen beim ersten Anruf nennen</RatgeberH2>
       <RatgeberP>
         Donaustadt bestraft Unvollständigkeit. Wer bei der Anfrage nur „Wohnung 80 m²“ schreibt und
-        Garage, Garten und Dachboden verschweigt, bekommt keinen ehrlichen Fixpreis — und am
-        Einsatztag entsteht Diskussion. Besser: Adresse, Objekttyp, alle Nebenflächen und ein
-        Wunschtermin nennen. Fotos von Zugang und Hof helfen, besonders bei EFH mit mehreren
-        Gebäudeteilen.
-      </RatgeberP>
-      <RatgeberP>
-        Checkliste und typische Fehler:{" "}
+        Garage, Garten und Dachboden verschweigt, bekommt keinen ehrlichen Fixpreis. Besser: Adresse,
+        Objekttyp, alle Nebenflächen und Wunschtermin nennen. Checkliste und Fehler:{" "}
         <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
           Checkliste Wohnungsräumung
-        </RatgeberInternalLink>{" "}
-        und{" "}
+        </RatgeberInternalLink>
+        ,{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
           5 Fehler vermeiden
         </RatgeberInternalLink>
-        . Zur Besichtigung selbst:{" "}
+        ,{" "}
         <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
           Räumungsexperte Wien
+        </RatgeberInternalLink>
+        . Bei Sanierung:{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
+          Entrümpelung vor Sanierung
         </RatgeberInternalLink>
         .
       </RatgeberP>
@@ -386,14 +346,29 @@ export default function EntruempelungDonaustadtWien1220() {
         . Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig — ob Seestadt-Wohnung
         oder Einfamilienhaus mit Garage in Süßenbrunn.
       </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Donaustadt: Altbauwohnung in Kagran mit knapper Ladezone</RatgeberH3>
       <RatgeberP>
-        Donaustadt ist kein Einheitsbezirk — wer „1220“ sagt, meint manchmal Seestadt-Tower, manchmal
-        ein Generationenhaus in Essling. Genau deshalb bleibt die Besichtigung der seriöse Weg zum
-        Fixpreis: Volumen, Zugang, Nebenflächen und Entsorgungsmix werden vor Ort erfasst, nicht am
-        Telefon geschätzt.         So bleibt der Preis fix — und der Einsatztag planbar, egal ob Seestadt oder Streusiedlung.
+        Wohnungsauflösung in einem Nachkriegsbau nahe dem Kagraner Platz: dritter Stock, Lift nur
+        eingeschränkt nutzbar, Keller vollgestellt, Zufahrt enger als in der Seestadt Aspern.
+        Lieferverkehr und Anwohnerparkplätze ließen kein verlässliches „kurz halten“ zu — wer hier
+        improvisiert, verliert den Vormittag an Diskussionen am Gehsteig. Bei der Besichtigung erfassten
+        wir Wohnung und Keller und beantragten ein Halteverbot der <strong>MA 46</strong>; der Vorlauf
+        passte zum Übergabetermin der Verwaltung.
+      </RatgeberP>
+      <RatgeberP>
+        Am Einsatztag: Demontage im Haus, geschützte Tragewege, kurze Ladephasen am markierten Spot.
+        Sperrmüll und Elektro wurden sortiert und über die <strong>MA 48</strong> entsorgt. Der
+        Fixpreis nach Besichtigung blieb gültig, weil Zugang und Nebenflächen von Anfang an im Umfang
+        standen — kein Seestadt-Neubau-Schema auf einen Kagraner Altbau übertragen. Ortsteil und Objekt
+        bestimmten Teamgröße und Zeitfenster; der Übergabetermin der Verwaltung blieb erreichbar.
+        So blieb Entrümpelung in Kagran planbar trotz knapper Ladezone.
+      </RatgeberP>
+      <RatgeberP>
+        In 1220 zählt der Ortsteil: Kagran braucht andere Logistik als Aspern — dieselbe PLZ, anderer Tag,
+        anderer Fixpreis-Umfang nach Besichtigung.
       </RatgeberP>
 
-      
       <BezirkStructureBlocks districtLabel="Donaustadt (1220)" />
 
 <RatgeberCtaBox>

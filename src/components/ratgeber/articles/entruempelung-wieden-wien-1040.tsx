@@ -250,6 +250,26 @@ export default function EntruempelungWiedenWien1040() {
         Wohnung wirklich leer ist und niemand selbst zum Mistplatz fahren muss.
       </RatgeberP>
 
+      <RatgeberH3>Praxis-Beispiel aus Wieden: Altbau an der Wiedner Hauptstraße, enge Stiege</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz am Rand zur Favoritenstraße bzw. entlang der Wiedner Hauptstraße: Gründerzeitwohnung
+        im dritten Stock, kein Lift, enge Wendungen im Stiegenhaus. Der Schrank steht seit Jahrzehnten — durch
+        die Tür passt er nur demontiert. Vor dem Haus konkurrieren Lieferverkehr und Kurzparkzone; ein spontanes
+        Halten würde den Gehsteig und die Nachbarschaft blockieren. Hier zählt der Trageweg mehr als die reine
+        Zimmerzahl.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung messen wir Türbreiten und Trageweg, beantragen bei der MA&nbsp;46 ein temporäres
+        Halteverbot und legen Demontage sowie Bodenschutz fest. Am Einsatztag zerlegen wir sperrige Möbel vor Ort,
+        schützen Flur und Stiege und laden in kurzen Phasen — ohne den Eingang stundenlang zu belegen. Kellerreste
+        und Elektrogeräte trennen wir parallel für die MA-48-Wege.
+      </RatgeberP>
+      <RatgeberP>
+        Die Übergabe erfolgt besenrein zum Fixpreis nach Besichtigung: Stockwerk, enge Stiege und Ladezone waren
+        von Anfang an Teil der Kalkulation — nicht die Überraschung am Räumungsmorgen. Sie wissen vor dem Termin
+        verbindlich, woran Sie sind.
+      </RatgeberP>
+
       <RatgeberH2>Was kostet eine Entrümpelung in Wieden?</RatgeberH2>
       <RatgeberP>
         Volumen, Zugang, Stockwerk und Entsorgungsmix bestimmen den Fixpreis nach Besichtigung.
@@ -302,6 +322,14 @@ export default function EntruempelungWiedenWien1040() {
         <RatgeberInternalLink href="/leistungen/nachlass">
           Nachlass
         </RatgeberInternalLink>
+        . Bei stark überfüllten Wohnungen:{" "}
+        <RatgeberInternalLink href="/ratgeber/messie-wohnung-raeumen-wien">
+          Messie-Wohnung räumen
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/leistungen/messie-entruempelung">
+          Messie-Entrümpelung
+        </RatgeberInternalLink>
         .
       </RatgeberP>
 
@@ -345,46 +373,6 @@ export default function EntruempelungWiedenWien1040() {
         die Wohnungstür zufällt.
       </RatgeberP>
 
-      <RatgeberH2>MA 46 im 4. Bezirk: Karlsplatz, Hauptstraße, Freihaus</RatgeberH2>
-      <RatgeberP>
-        In Wieden ist die <strong>MA 46</strong> selten optional. Rund um Karlsplatz, entlang der
-        Wiedner Hauptstraße und in den engen Gassen des Freihausviertels ist legaler Ladeplatz knapp.
-        Ein temporäres Halteverbot schafft planbare Minuten am Haus — ohne dass das Team zwischen
-        Parkscheibe und Strafzettel pendeln muss. Wir beantragen und koordinieren das bei Bedarf,
-        damit der Einsatztag nicht an fehlendem Stellplatz scheitert.
-      </RatgeberP>
-      <RatgeberP>
-        Wer selbst organisiert, unterschätzt oft den Vorlauf: Schilder, Genehmigung, korrekte Zone.
-        Deshalb lohnt der Vergleich:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-          MA 48 vs. Entrümpelungsfirma
-        </RatgeberInternalLink>
-        . Bei uns gehört die MA-46-Planung zum Ablauf — nicht zur Last der Erben oder Verwaltung.
-      </RatgeberP>
-
-      <RatgeberH2>MA 48: Entsorgung nach der Räumung in Wieden</RatgeberH2>
-      <RatgeberP>
-        Nach einer Entrümpelung in 1040 soll die Wohnung wirklich leer sein — nicht nur leerer als
-        zuvor. Die <strong>MA 48</strong> verlangt getrennte Fraktionen: Sperrmüll, Elektro, Reststoffe.
-        Wir sortieren vor Ort und führen alles fachgerecht ab. Details:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien">
-          MA-48-Mistplätze-Guide
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Bei stark überfüllten Wohnungen — selten, aber in Altbauten mit langem Bewohnerleben
-        möglich —:{" "}
-        <RatgeberInternalLink href="/ratgeber/messie-wohnung-raeumen-wien">
-          Messie-Wohnung räumen
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/leistungen/messie-entruempelung">
-          Messie-Entrümpelung
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
       <RatgeberH2>Vorbereitung: Stockwerk, Lift und Ladeplatz vorab klären</RatgeberH2>
       <RatgeberP>
         Eine gute Anfrage für Wieden Wien 1040 enthält: genaue Adresse, Stockwerk, Lift ja/nein,
@@ -424,13 +412,6 @@ export default function EntruempelungWiedenWien1040() {
         </RatgeberInternalLink>{" "}
         planen wir Anfahrt und Teamgröße so, dass auch knappe Ladezonen am Karlsplatz beherrschbar
         bleiben — Fixpreis nach Besichtigung, MA 46 bei Bedarf, MA 48 für die Entsorgung.
-      </RatgeberP>
-      <RatgeberP>
-        Wieden ist klein, aber anspruchsvoll: Altbau ohne Lift, enge Höfe, knapper Parkraum und oft
-        ein fester Übergabetermin. Wer hier entrümpeln lässt, braucht weniger Versprechen und mehr
-        Planung — Besichtigung, Fixpreis, MA-46-Halteverbot bei Bedarf, MA-48-Entsorgung und auf
-        Wunsch besenreine Übergabe. So wird aus einer Räumung in 1040 ein steuerbarer Ablauf — vom
-        Karlsplatz bis ins Freihausviertel.
       </RatgeberP>
 
       

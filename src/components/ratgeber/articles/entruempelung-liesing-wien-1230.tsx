@@ -292,54 +292,26 @@ export default function EntruempelungLiesingWien1230() {
 
       <RatgeberH2>Mauer, Rodaun und der Grüngürtel: EFH mit Garten als Liesing-Motiv</RatgeberH2>
       <RatgeberP>
-        Richtung Mauer und Rodaun wird Liesing grüner und ruhiger. Einfamilienhäuser mit großen
-        Gärten, Geräteschuppen und alten Obstbäumen sind hier Alltag — und genau dort sammeln sich
-        über Jahrzehnte Dinge an, die bei einem Umzug oder Nachlass auf einmal sichtbar werden.
-        Gartenmöbel, Rasenmäher, alte Zäune, Reste aus dem Gewächshaus: Das Volumen liegt oft
-        draußen, nicht in der Wohnung.
-      </RatgeberP>
-      <RatgeberP>
-        Eine{" "}
+        Richtung Mauer und Rodaun wird Liesing grüner: Einfamilienhäuser mit Geräteschuppen und oft
+        großem Außenvolumen. Eine{" "}
         <RatgeberInternalLink href="/ratgeber/gartenentruempelung-wien-kosten-ablauf">
           Gartenentrümpelung
         </RatgeberInternalLink>{" "}
-        in 1230 erfordert manchmal Zufahrt über Kieswege oder enge Gartentore — deshalb gehört der
-        Zugang zur Besichtigung, nicht zur Überraschung am Einsatztag. Wer den Garten bei der
-        Erstanfrage mitnennen, bekommt einen Fixpreis, der wirklich alles abdeckt.
+        braucht manchmal Zufahrt über Kieswege oder enge Gartentore — der Zugang gehört zur
+        Besichtigung. Wer den Garten bei der Erstanfrage mitnennen, bekommt einen Fixpreis, der alles
+        abdeckt.
       </RatgeberP>
 
-      <RatgeberH2>MA 46: Halteverbot in Alt-Erlaa und an der Breitenfurter Straße</RatgeberH2>
+      <RatgeberH2>MA 46 und MA 48 im Firmensitz-Bezirk</RatgeberH2>
       <RatgeberP>
-        Die <strong>MA 46</strong> ist in Liesing nicht überall gleich relevant. In Alt-Erlaa und an
-        dichteren Abschnitten der Breitenfurter Straße kann ein temporäres Halteverbot sinnvoll sein —
-        besonders wenn mehrere Fahrzeuge gleichzeitig laden. Bei Einfamilienhäusern in Rodaun oder
-        Kalksburg mit eigener Einfahrt entfällt das oft. Wir entscheiden das bei der Besichtigung,
-        nicht am Telefon mit pauschalen Versprechen.
-      </RatgeberP>
-      <RatgeberP>
-        Für termingebundene Übergaben — etwa bei Verkauf oder Neuvermietung — planen wir den
-        MA-46-Vorlauf in denselben Kalender wie die Räumung. Wer erst am Vortag merkt, dass kein
-        Ladeplatz frei ist, verliert genau den Puffer, den ein Firmensitz in Liesing sonst bietet.
-      </RatgeberP>
-
-      <RatgeberH2>MA 48: Entsorgung bei Garten, Keller und Gewerbe</RatgeberH2>
-      <RatgeberP>
-        Liesing vereint Wohnen und Gewerbe: entlang der Breitenfurter Straße Lager und Büros, in
-        Rodaun Gärten und Keller, in Alt-Erlaa kompaktes Wohnvolumen. Die <strong>MA 48</strong>
-        verlangt saubere Trennung — Gartenabfälle, Elektro, Sperrmüll und Reststoffe dürfen nicht
-        vermischt werden. Wir übernehmen das im Fixpreis, damit niemand nach der Räumung selbst zu
-        den Mistplätzen fahren muss.
-      </RatgeberP>
-      <RatgeberP>
-        Bei feuchten Kellern in älteren Häusern:{" "}
+        In Alt-Erlaa und an dichteren Abschnitten der Breitenfurter Straße kann ein temporäres
+        Halteverbot der <strong>MA 46</strong> sinnvoll sein; bei EFH in Rodaun oder Kalksburg mit
+        Einfahrt oft nicht. Die <strong>MA 48</strong> verlangt saubere Trennung — Gartenabfälle,
+        Elektro, Sperrmüll. Wir übernehmen das im Fixpreis. Bei feuchten Kellern:{" "}
         <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
           Kellerräumung Wien
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/leistungen/kellerentruempelung">
-          Kellerentrümpelung
         </RatgeberInternalLink>
-        . Bei Dachböden:{" "}
+        ; bei Dachböden:{" "}
         <RatgeberInternalLink href="/ratgeber/dachbodenraeumung-wien-ma-48">
           Dachbodenräumung
         </RatgeberInternalLink>
@@ -348,9 +320,8 @@ export default function EntruempelungLiesingWien1230() {
 
       <RatgeberH2>Gewerbe und Lager: Breitenfurter Straße und Industriegebiet</RatgeberH2>
       <RatgeberP>
-        Entlang der Breitenfurter Straße und im Liesinger Industriegebiet räumen wir regelmäßig Büros,
-        Lager und kleinere Geschäftslokale. Hier zählt Termintreue und diskrete Abwicklung — besonders
-        bei Geschäftsaufgabe oder Standortwechsel. Orientierung:{" "}
+        Entlang der Breitenfurter Straße und im Liesinger Industriegebiet räumen wir Büros, Lager und
+        Geschäftslokale — mit Termintreue und diskreter Abwicklung. Orientierung:{" "}
         <RatgeberInternalLink href="/ratgeber/geschaeftslokal-raeumen-wien-rueckbau">
           Geschäftslokal räumen
         </RatgeberInternalLink>
@@ -367,18 +338,12 @@ export default function EntruempelungLiesingWien1230() {
 
       <RatgeberH2>Vorbereitung in Liesing: kurze Wege nutzen, Umfang klar nennen</RatgeberH2>
       <RatgeberP>
-        Weil wir direkt im Bezirk sitzen, lohnt sich eine frühzeitige, vollständige Anfrage besonders:
-        Adresse in 1230, Objektart (Hochhaus, EFH, Gewerbe), alle Nebenflächen und der
-        Wunschtermin. Fotos von Zugang, Garage und Garten beschleunigen die Besichtigung. Wer
-        persönliche Gegenstände behalten will, markiert sie vor dem Einsatztag — der Rest wird
-        besenrein übergeben.
-      </RatgeberP>
-      <RatgeberP>
-        Mehr zur Besichtigung:{" "}
+        Adresse in 1230, Objektart (Hochhaus, EFH, Gewerbe), alle Nebenflächen und Wunschtermin —
+        Fotos von Zugang, Garage und Garten beschleunigen die Besichtigung. Mehr dazu:{" "}
         <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
           Räumungsexperte Wien
         </RatgeberInternalLink>
-        . Bei Sanierung:{" "}
+        ; bei Sanierung:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
           Entrümpelung vor Sanierung
         </RatgeberInternalLink>
@@ -399,11 +364,31 @@ export default function EntruempelungLiesingWien1230() {
         <RatgeberInternalLink href="/ratgeber/entruempelung-donaustadt-wien-1220">
           Donaustadt Wien 1220
         </RatgeberInternalLink>{" "}
-        schnell erreichbar. Im 23. Bezirk selbst gilt: Fixpreis nach Besichtigung, MA 46 bei Bedarf,
-        MA 48 für die Entsorgung — und kurze Wege vom Firmensitz bis zur Haustür im gesamten 23. Bezirk Wien 1230.
+        schnell erreichbar. Im 23. Bezirk gilt: Fixpreis nach Besichtigung, MA 46 bei Bedarf, MA 48
+        für die Entsorgung — kurze Wege vom Firmensitz bis zur Haustür.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Liesing: Hochhaus Alt-Erlaa mit Keller-Nebenfläche</RatgeberH3>
+      <RatgeberP>
+        Wohnungsauflösung in Alt-Erlaa: Etagenwohnung plus vollgestelltes Kellerabteil, fixer
+        Übergabetermin der Hausverwaltung. Aufzug und Lieferzeiten sind geregelt — ohne Vorabstimmung
+        stockt der Tag an der Lifttür. Parallel lag ein zweites Objekt in Kalksburg an der Maurer
+        Lange Gasse (EFH mit Garten) in der Anfrage; wir trennten die Einsätze, weil Hochhaus-Regeln
+        und EFH-Zufahrt unterschiedliche Teamplanung brauchen und nicht in denselben Vormittag passen.
+      </RatgeberP>
+      <RatgeberP>
+        Für Alt-Erlaa: Abstimmung mit der Verwaltung, Schutz im Stiegenhaus, bei Bedarf Haltefenster
+        der <strong>MA 46</strong> an dichter Zufahrt. Wohnung und Keller in einem Zug; Sperrmüll und
+        Elektro über die <strong>MA 48</strong>. Der Fixpreis nach Besichtigung galt für den
+        schriftlichen Umfang — Nebenfläche inklusive. Vom Firmensitz in Liesing war die Anfahrt kurz;
+        der Vorlauf für Lift und Halteverbot blieb der kritische Pfad, nicht die Entfernung. Kalksburg
+        erhielt einen eigenen Termin mit Garten- und Zufahrtsprüfung.
+      </RatgeberP>
+      <RatgeberP>
+        Im 23. Bezirk: Hochhaus und EFH teilen die PLZ, nicht die Logistik — deshalb entscheidet die
+        Besichtigung vor dem Festpreis.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Liesing (1230)" />
 
 <RatgeberCtaBox>

@@ -206,6 +206,27 @@ export default function EntruempelungLeopoldstadtWien1020() {
         <RatgeberInternalLink href="/leistungen/messie-entruempelung">Messie-Entrümpelung</RatgeberInternalLink>.
       </RatgeberP>
 
+      <RatgeberH3>Praxis-Beispiel aus Leopoldstadt: Gemeindebau nahe Praterstraße mit Kellerabteil</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz im Karmeliterviertel bzw. entlang der Praterstraße: eine Gemeindebauwohnung im dritten
+        Stock plus Kellerabteil, Übergabetermin an Wiener Wohnen. Bei der Besichtigung zeigt sich der eigentliche
+        Aufwand: enger Hof, knappe Ladezone Richtung Donaukanal, Keller voller Sperrgut — und am Straßenrand
+        Kurzparkdruck, der ohne Plan jede Minute kostet. Die Wohnfläche allein sagt wenig; der Weg vom Abteil zum
+        Fahrzeug entscheidet den Tag.
+      </RatgeberP>
+      <RatgeberP>
+        Wir beantragen bei der MA&nbsp;46 ein temporäres Halteverbot mit ausreichendem Vorlauf, erfassen Wohnung und
+        Keller gemeinsam im Fixpreis und legen Teamgröße sowie Sortierreihenfolge fest. Am Einsatztag laden wir in
+        klaren Phasen: zuerst sperrige Möbel aus der Wohnung, dann das Kellerabteil, ohne den Hofzugang zu
+        blockieren. Nachbarschaft und Hausverwaltung bekommen ein ruhiges Zeitfenster statt improvisierter
+        Doppelparkerei am Donaukanal.
+      </RatgeberP>
+      <RatgeberP>
+        Das Räumgut wird vor Ort getrennt; Verwertbares prüfen wir, der Rest geht MA-48-konform. Die Übergabe
+        erfolgt besenrein im vereinbarten Zustand — Fixpreis nach Besichtigung, weil Nebenfläche, Stockwerk und
+        Zufahrt von Anfang an Teil der Kalkulation waren.
+      </RatgeberP>
+
       <RatgeberH2>Kostenlogik ohne Fantasiepreise</RatgeberH2>
       <RatgeberP>
         Volumen, Stockwerk, Lift, Trageweg, Demontage, Halteverbot und Entsorgungsmix bestimmen den Fixpreis — nicht
@@ -279,35 +300,6 @@ export default function EntruempelungLeopoldstadtWien1020() {
         </RatgeberLi>
       </RatgeberUl>
 
-      <RatgeberH2>Praterstern-Alltag, Karmeliter-Höfe, Nordbahn-Neubau — konkret gedacht</RatgeberH2>
-      <RatgeberP>
-        Am Praterstern und entlang der großen Achsen zählt Takt: Verkehr, Kurzparkregeln, oft steile Stiegen.
-        Hier planen wir lieber ein klares Ladefenster als improvisierte Halteversuche. Im Karmeliterviertel kommt
-        die Hausgemeinschaft näher an den Ablauf heran — enge Höfe übertragen jeden Stoß und jedes längere Stehen
-        sofort in den Alltag der Nachbarschaft. Diskretion und kurze Wege vom Stiegenhaus zum Fahrzeug sind deshalb
-        Teil der Leistung, nicht nur Höflichkeit.
-      </RatgeberP>
-      <RatgeberP>
-        Im Nordbahnviertel dagegen treffen Aufzüge, Tiefgaragen und moderne Hausordnungen auf andere Fragen: Welcher
-        Eingang ist freigegeben? Welche Zeiten gelten für Sperrmüll und Transporte? Wer das bei der Besichtigung
-        klärt, spart am Räumungstag Diskussionen mit der Verwaltung. Leopoldstadt belohnt Präzision — und bestraft
-        Pauschalschätzungen, die nur „1020“ auf dem Zettel haben.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung hilft überall gleich: Persönliches sichern, Verbleibendes markieren, Nebenflächen nennen,
-        Fotos mit Zugang und Stockwerk senden. Wenn ein Übergabetermin fix ist — Verkauf, Neuvermietung, Wiener
-        Wohnen — sagen Sie das in der Erstanfrage. Dann können Teamgröße, MA-46-Vorlauf und Entsorgungslogistik
-        so gelegt werden, dass der Tag ruhig endet statt hektisch beginnt. Genau das ist der Unterschied zwischen
-        einer Räumung, die den Bezirk kennt, und einer, die ihn nur durchquert.
-      </RatgeberP>
-      <RatgeberP>
-        Auch Mischobjekte sind in Leopoldstadt häufig: Wohnung plus Keller, manchmal ein kleines Lager oder
-        Gewerbeanteil. Was in der Anfrage fehlt, fehlt später im Fixpreis — und genau dort entstehen Nachträge.
-        Nennen Sie den gewünschten Endzustand in einem Satz. Dann bleibt der Preis verbindlich, und die Übergabe
-        wird zu einem nachvollziehbaren Abschluss statt zu einer Verhandlung auf der letzten Meile.
-      </RatgeberP>
-
-      
       <BezirkStructureBlocks districtLabel="Leopoldstadt (1020)" />
 
 <RatgeberCtaBox>

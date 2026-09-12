@@ -290,81 +290,6 @@ export default function EntruempelungFloridsdorfWien1210() {
         .
       </RatgeberP>
 
-      <RatgeberH2>Strebersdorf: Reihenhaus, Keller und der lange Weg im Bezirk</RatgeberH2>
-      <RatgeberP>
-        In Strebersdorf und ähnlichen Siedlungen entscheiden Nebenflächen über den Aufwand: Keller,
-        Dachboden, Garage und manchmal ein Gartenhaus, das über Jahrzehnte zum zweiten Lager wurde.
-        Wer nur die Wohnräume nennt, bekommt am Einsatztag Überraschungen — und genau dort entstehen
-        Nachverhandlungen. Deshalb erfassen wir bei der Besichtigung alle Bereiche in einem Zug.
-      </RatgeberP>
-      <RatgeberP>
-        Floridsdorf ist flächenmäßig groß: Von Floridsdorf-Mitte bis Strebersdorf sind es mehrere
-        Kilometer. Anfahrt und Teamplanung werden realistisch kalkuliert — nicht mit einer
-        Innenstadt-Pauschale. Bei Generationenhäusern und Nachlässen helfen strukturierte Abläufe:{" "}
-        <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
-          Verlassenschaft sensibel räumen
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/leistungen/verlassenschaft">
-          Verlassenschaft
-        </RatgeberInternalLink>
-        . In Siedlungsstraßen reicht oft eine gut geplante Ladezeit; bei Bedarf klären wir ein
-        Halteverbot der <strong>MA 46</strong>.
-      </RatgeberP>
-
-      <RatgeberH2>Donauinsel und Hochhaus: Aufzug, Hausordnung und Zeitfenster</RatgeberH2>
-      <RatgeberP>
-        An der Donauinsel und in den Hochhausanlagen entlang der Neuen Donau erleichtern Aufzüge oft
-        den Transport — aber Hausordnungen regeln Lieferzeiten, Aufzugsnutzung und manchmal sogar
-        separate Eingänge. Wer ohne Abstimmung anrückt, steht schnell vor geschlossenen Lifttüren oder
-        einer Verwaltung, die „heute geht nicht“ sagt. Wir klären das vorab, damit der Einsatztag nicht
-        an der Hausordnung scheitert.
-      </RatgeberP>
-      <RatgeberP>
-        Typisch sind Wohnungswechsel, Leerung vor Neuvermietung oder{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
-          Entrümpelung vor Sanierung
-        </RatgeberInternalLink>
-        . Volumen allein sagt wenig — der Zugang ist oft der echte Kostenfaktor. Bei dichteren Blocks
-        nahe der Donauinsel kann ein MA-46-Halteverbot sinnvoller sein als in einer
-        Reihenhaussiedlung mit Einfahrt.
-      </RatgeberP>
-
-      <RatgeberH2>Brünner Straße, Jedlesee und Gewerbe: der dritte Floridsdorf-Typ</RatgeberH2>
-      <RatgeberP>
-        Entlang der Brünner Straße und in den Gewerbeinseln räumen wir Büros, Lager und kleine Betriebe
-        — mit Blick auf Akten, Inventar und{" "}
-        <RatgeberInternalLink href="/ratgeber/bueroaufloesung-wien-diskretion-datenschutz">
-          Diskretion und Datenschutz
-        </RatgeberInternalLink>
-        . Eine{" "}
-        <RatgeberInternalLink href="/leistungen/bueroentruempelung">
-          Büroentrümpelung
-        </RatgeberInternalLink>{" "}
-        braucht andere Sortierung als eine private{" "}
-        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
-          Haushaltsauflösung
-        </RatgeberInternalLink>
-        . In Jedlesee und Großjedlersdorf mischen sich ältere Ortskerne mit Nachkriegssiedlungen —
-        jeweils mit eigenem Takt bei Zufahrt und Parkraum.
-      </RatgeberP>
-      <RatgeberP>
-        Was aus Wohnung, Keller, Garage oder Lager kommt, führen wir über die <strong>MA 48</strong> ab
-        — getrennt nach Holz, Metall, Elektro und Restmüll. Vergleich Selbstorganisation vs. Firma:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-          MA 48 vs. Entrümpelungsfirma
-        </RatgeberInternalLink>
-        . Bei feuchten Kellern:{" "}
-        <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
-          Kellerräumung Wien
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
-          Dachbodenentrümpelung
-        </RatgeberInternalLink>
-        , wenn der Dachboden mitgeräumt werden soll.
-      </RatgeberP>
-
       <RatgeberH2>Von Strebersdorf bis Donauinsel: konkret vorbereiten</RatgeberH2>
       <RatgeberP>
         Floridsdorf belohnt Vollständigkeit in der Anfrage. Nennen Sie Objektart (Reihenhaus,
@@ -377,26 +302,21 @@ export default function EntruempelungFloridsdorfWien1210() {
         <RatgeberInternalLink href="/ratgeber/richtig-ausmisten-wien">
           Richtig ausmisten in Wien
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Bei Häusern mit Garten und Garage alle Bereiche bei der Erstanfrage erwähnen — sonst fehlt der
-        entscheidende Teil im Angebot. Orientierung zu Kostenfaktoren ohne Fake-Tabellen:{" "}
+        . Orientierung:{" "}
         <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
           Was kostet eine Entrümpelung in Wien?
         </RatgeberInternalLink>
-        . Typische Fehler vermeiden:{" "}
+        ; Stolpersteine:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
           5 Fehler bei der Entrümpelung
         </RatgeberInternalLink>
-        . Dann bleibt der Fixpreis verbindlich — von Strebersdorf bis Donauinsel.
+        .
       </RatgeberP>
 
       <RatgeberH2>Garage, Garten und Nebengebäude: oft der vergessene Teil</RatgeberH2>
       <RatgeberP>
         In Floridsdorf stehen Garage und Gartenhütte häufig neben der Wohnung — und werden in der
-        Erstanfrage vergessen. Reifen, Werkzeug, alte Gartenmöbel und Sperrmüll aus dem Keller
-        summieren sich schnell. Deshalb gehören{" "}
+        Erstanfrage vergessen. Deshalb gehören{" "}
         <RatgeberInternalLink href="/ratgeber/garagenentruempelung-wien-kosten-ablauf">
           Garagenentrümpelung
         </RatgeberInternalLink>{" "}
@@ -404,11 +324,7 @@ export default function EntruempelungFloridsdorfWien1210() {
         <RatgeberInternalLink href="/ratgeber/gartenentruempelung-wien-kosten-ablauf">
           Gartenentrümpelung
         </RatgeberInternalLink>{" "}
-        in dieselbe Besichtigung wie die Wohnräume. Wer alles in einem Zug erfasst, bekommt einen
-        Fixpreis, der wirklich alles abdeckt.
-      </RatgeberP>
-      <RatgeberP>
-        Bei Nachlässen in Reihenhaussiedlungen kommen emotionale und praktische Fragen zusammen:{" "}
+        in dieselbe Besichtigung. Bei Nachlässen:{" "}
         <RatgeberInternalLink href="/ratgeber/wohnungsaufloesung-nach-todesfall-wien">
           Wohnungsauflösung nach Todesfall
         </RatgeberInternalLink>
@@ -420,7 +336,7 @@ export default function EntruempelungFloridsdorfWien1210() {
         <RatgeberInternalLink href="/ratgeber/haushaltsaufloesung-erwachsenenvertretung-wien">
           Erwachsenenvertretung
         </RatgeberInternalLink>
-        . Diskretion im engen Grätzl ist dabei genauso wichtig wie die MA-48-konforme Entsorgung.
+        .
       </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke</RatgeberH3>
@@ -437,7 +353,33 @@ export default function EntruempelungFloridsdorfWien1210() {
         unterscheiden sich: Strebersdorfer Siedlung versus Seestadt-Neubau versus Donauinsel-Hochhaus.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Floridsdorf: Großfeldsiedlung an der Donaufelder Straße — großes Volumen</RatgeberH3>
+      <RatgeberP>
+        Komplette Haushaltsauflösung in einem Mehrparteienhaus der Großfeldsiedlung: große Wohnfläche,
+        voller Keller, Abstellraum — Zufahrt Donaufelder Straße, knappe Ladezonen am Block, viele
+        Parteien im Haus. Das Volumen lag klar über einer Innenstadt-Etage; ohne planbares Haltefenster
+        wäre jeder Abtransportgang zum Engpass geworden. Bei der Besichtigung erfassten wir alle Flächen
+        und beantragten ein Halteverbot der <strong>MA 46</strong> für den Einsatztag — mit Vorlauf zum
+        gewünschten Übergabetermin.
+      </RatgeberP>
+      <RatgeberP>
+        Team und Fahrzeuge wurden auf das reale Volumen ausgelegt — nicht auf eine „Standardwohnung
+        1210“. Demontage, Abtransport, Trennung von Sperrmüll und Elektro über die <strong>MA 48</strong>{" "}
+        liefen in einem abgestimmten Zeitfenster. Der Fixpreis nach Besichtigung deckte Wohnung und
+        Nebenflächen ab; der gewünschte Endzustand (besenrein) war schriftlich fixiert. So blieb der
+        Festpreis gültig, obwohl das Volumen groß und die Zufahrt eng war — typisch für die
+        Großfeldsiedlung an der Donaufelder Straße.
+      </RatgeberP>
+      <RatgeberP>
+        In Floridsdorf entscheiden große Siedlungsvolumen und Zugang oft mehr als die PLZ — deshalb
+        gehört die Vor-Ort-Erfassung vor jeden verbindlichen Festpreis.
+      </RatgeberP>
+      <RatgeberP>
+        Ob Großfeldsiedlung, Jedlesee oder Donaufelder Straße: Floridsdorf belohnt klare Volumenangaben und
+        realistische Ladeplanung. Wer Keller und Abstellräume mitnennt, bekommt ein Team, das zum Objekt passt —
+        und einen Fixpreis nach Besichtigung, der große Siedlungslagen nicht mit Innenstadt-Etagen gleichsetzt.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Floridsdorf (1210)" />
 
 <RatgeberCtaBox>

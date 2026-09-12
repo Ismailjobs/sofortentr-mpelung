@@ -148,12 +148,6 @@ export default function EntruempelungLandstrasseWien1030() {
         Gerade bei Büro- und Praxisräumungen zählt das Zeitfenster doppelt: Betrieb und Nachbarschaft sollen den
         Tag planbar erleben. Ein sauber beantragtes Halteverbot ist dann kein Luxus, sondern Teil der Diskretion.
       </RatgeberP>
-      <RatgeberP>
-        Auch am Rennweg und in Erdberg ändert sich nur die Kulisse, nicht die Grundregel: Ohne legales Ladefenster
-        wird jeder Abtransport zum Risiko. Wir prüfen deshalb bei der Besichtigung Zufahrt, mögliche Ladezonen und
-        den nötigen Vorlauf — und schreiben das Ergebnis in denselben Plan wie Teamgröße und Endzustand. So bleibt
-        der Fixpreis belastbar und der Termin ruhig.
-      </RatgeberP>
 
       <RatgeberH2>MA 48: Entsorgung mit System statt Mehrfachfahrten</RatgeberH2>
       <RatgeberP>
@@ -204,6 +198,32 @@ export default function EntruempelungLandstrasseWien1030() {
           <RatgeberInternalLink href="/leistungen/messie-entruempelung">Messie-Entrümpelung</RatgeberInternalLink>.
         </RatgeberLi>
       </RatgeberUl>
+
+      <RatgeberH3>Praxis-Beispiel aus Landstraße: Altbau am Rochusmarkt, dichte Kurzparkzone</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz nahe Rochusmarkt: Gründerzeitwohnung im zweiten Stock ohne Lift, Übergabe vor
+        Neuvermietung. Der Markt-Alltag und die Kurzparkzone entlang der Landstraßer Hauptstraße lassen kein
+        spontanes Halten zu — Lieferverkehr und Anwohner teilen sich denselben Meter. In Erdberg wäre die Zufahrt
+        oft großzügiger; hier entscheidet das Ladefenster über den ganzen Tag. Ohne Plan wird jeder Abtransport
+        zum Risiko für Termin, Hausverwaltung und Nachbarschaft.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung prüfen wir Treppenhaus, Türbreiten und mögliche Ladezonen und beantragen bei der
+        MA&nbsp;46 ein temporäres Halteverbot mit Vorlauf zum Übergabetermin. Am Einsatztag demontieren wir sperrige
+        Möbel vor Ort, schützen das Stiegenhaus und laden in kurzen, klaren Phasen — so bleibt der Marktzugang
+        frei und die Hausgemeinschaft ungestört. Parallel sortieren wir Aktenreste, Altmöbel und Kellergut für die
+        MA-48-Wege.
+      </RatgeberP>
+      <RatgeberP>
+        Am Ende steht die besenreine Übergabe im Fixpreis nach Besichtigung: Zugang, Kurzparklage und Entsorgungsmix
+        waren von Anfang an kalkuliert — ohne Nachtrag und ohne improvisierte Mistplatz-Touren in Eigenregie.
+      </RatgeberP>
+      <RatgeberP>
+        Landstraße zeigt den typischen Wien-Mix besonders klar: Rochusmarkt und Erdberg sind dieselbe PLZ, aber
+        zwei Geschwindigkeiten. Wer nur „1030“ schreibt und die Kurzparkzone am Markt vergisst, unterschätzt den
+        Tag. Wer Hofzufahrt, Stockwerk und Übergabetermin früh nennt, bekommt einen Ablauf, der zur Adresse passt —
+        und einen Festpreis, der nicht an der ersten Ladeblockade zerbricht.
+      </RatgeberP>
 
       <RatgeberH2>Was den Fixpreis in Landstraße bestimmt</RatgeberH2>
       <RatgeberP>
@@ -263,39 +283,6 @@ export default function EntruempelungLandstrasseWien1030() {
         <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">Dachbodenentrümpelung</RatgeberInternalLink>.
       </RatgeberP>
 
-      <RatgeberH2>Rochus am Morgen, Belvedere am Nachmittag, Erdberg im Terminplan</RatgeberH2>
-      <RatgeberP>
-        Am Rochusmarkt beginnt der Tag mit Lieferverkehr und knappen Metern Gehsteig. Eine Räumung hier braucht
-        ein Zeitfenster, das den Markt-Alltag nicht blockiert und trotzdem genug Raum für Demontage und Abtransport
-        lässt. Richtung Belvedere und Rennweg verschiebt sich der Fokus: repräsentative Treppenhäuser, oft hohe
-        Erwartungen an Diskretion, häufig Sanierungs- oder Verkaufsdruck. Dort zählen Bodenschutz und ruhige
-        Kommunikation mit der Hausverwaltung ebenso wie die reine Tragleistung.
-      </RatgeberP>
-      <RatgeberP>
-        In Erdberg und entlang gewerblich geprägter Achsen können Volumen und Zufahrt anders aussehen — größere
-        Mengen, andere Betriebszeiten, manchmal bessere Zufahrt, aber strengere Regeln in Anlagen. Wer Landstraße
-        als einheitlichen Bezirk kalkuliert, unterschätzt genau diese Grätzl-Unterschiede. Wir besichtigen deshalb
-        nicht „1030“, sondern das konkrete Haus, den konkreten Hof und das konkrete Ladefenster.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung ist simpel und wirksam: Dokumente und Wertgegenstände sichern, Verbleibendes kennzeichnen,
-        Keller und Dachboden mitnennen, Fotos von Zugang und Stockwerk senden. Bei Büro- und Praxisflächen zusätzlich
-        Betriebszeiten und Ansprechpartner nennen. Dann lassen sich MA-46-Vorlauf, Teamgröße und MA-48-Entsorgung so
-        legen, dass der Fixpreis hält und der Übergabetermin nicht zur Überraschung wird. Landstraße belohnt
-        Klarheit — und bestraft vage Anfragen mit Nachträgen, die niemand braucht.
-      </RatgeberP>
-      <RatgeberP>
-        Der gewünschte Endzustand sollte vorab in einem Satz stehen: leer, besenrein, übergabefähig. Gerade wenn
-        Notar, Makler oder Hausverwaltung denselben Kalender teilen, ist diese Definition der eigentliche
-        Projektrahmen. Mit ihr wird aus einer Entrümpelung in 1030 ein steuerbarer Ablauf — von Rochus bis Erdberg.
-      </RatgeberP>
-      <RatgeberP>
-        Wer uns mit Fotos, Stockwerk, Liftangabe und Nebenräumen kontaktiert, beschleunigt die Einschätzung spürbar.
-        Fehlt etwas, fragen wir nach — lieber vor dem Fixpreis als danach. So bleibt Landstraße planbar, auch wenn
-        die Grätzl zwischen Rochusmarkt und Erdberg unterschiedlich ticken.
-      </RatgeberP>
-
-      
       <BezirkStructureBlocks districtLabel="Landstraße (1030)" />
 
 <RatgeberCtaBox>

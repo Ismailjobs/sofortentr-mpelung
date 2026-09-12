@@ -314,34 +314,7 @@ export default function EntruempelungJosefstadtWien1080() {
         .
       </RatgeberP>
 
-      <RatgeberH2>Lange Gasse: wenn der Gehsteig mitplant</RatgeberH2>
-      <RatgeberP>
-        Die Lange Gasse ist die Lebensader der Josefstadt — Wohnungen, Lokale, Theater und dichter
-        Verkehr auf wenig Raum. Wer hier entrümpeln lässt, steht nicht vor einer leeren Straße, sondern
-        mitten im Bezirksalltag. Ladezonen sind kurz, Einfahrten zu Innenhöfen oft schmal, und
-        Nachbarn merken sofort, wenn ein Transporter ohne Absprache blockiert. Deshalb klären wir vor
-        dem Einsatztag, wo das Fahrzeug stehen darf und ob ein Halteverbot der <strong>MA 46</strong>{" "}
-        sinnvoller ist als ein improvisiertes „kurz halten“.
-      </RatgeberP>
-      <RatgeberP>
-        Typisch sind Wohnungen in Zinshäusern direkt an der Achse: viel Verkehr, wenig Parkraum, dafür
-        kurze Wege zum Objekt — wenn der Hofzugang passt. Eine{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-          Wohnungsentrümpelung
-        </RatgeberInternalLink>{" "}
-        braucht hier Demontage und Bodenschutz im Stiegenhaus. Wer den gewünschten Endzustand und den
-        Übergabetermin in der Erstanfrage nennt, hilft uns, Teamgröße und MA-46-Vorlauf realistisch zu
-        planen.
-      </RatgeberP>
-
-      <RatgeberH2>Innenhöfe: der unsichtbare Engpass</RatgeberH2>
-      <RatgeberP>
-        Hinter den Fassaden der Josefstadt öffnen sich Höfe, die von der Straße aus unsichtbar sind —
-        und genau dort entscheidet sich oft der Tag. Ein schmaler Durchgang, eine enge Wendung, ein
-        Kellerabteil am anderen Ende des Hofes: Der Trageweg verlängert sich, jede Türbreite zählt.
-        Genau deshalb erfassen wir bei der Besichtigung Hof, Stiegenhaus und alle Nebenflächen in einem
-        Zug. Was fehlt, wird zum Nachtrag — was erfasst ist, bleibt im Fixpreis.
-      </RatgeberP>
+      <RatgeberH2>Josefstadt im Detail: Gründerzeit, Diskretion und klare Übergabe</RatgeberH2>
       <RatgeberP>
         Nachlasswohnungen in 1080 folgen selten einem Standardablauf. Erben leben oft außerhalb Wiens,
         Verwaltungen setzen Fristen. Wir arbeiten mit klaren Regeln: Persönliches wird vorab gesichert
@@ -355,15 +328,6 @@ export default function EntruempelungJosefstadtWien1080() {
           Wohnungsräumung für Senioren
         </RatgeberInternalLink>{" "}
         gilt dasselbe — nur mit mehr Zeit für Sortieren und Abstimmen.
-      </RatgeberP>
-
-      <RatgeberH2>Josefstadt im Detail: Gründerzeit, Diskretion und klare Übergabe</RatgeberH2>
-      <RatgeberP>
-        Vorbereitung hilft überall gleich: Persönliches sichern, Verbleibendes markieren, Keller und
-        Dachboden nennen, Fotos mit Hofzugang und Stockwerk senden. Bei fixen Terminen mit Makler,
-        Verwaltung oder Notar sagen Sie das in der Erstanfrage. Dann passen Teamgröße, Halteverbot und
-        Entsorgungslogistik in denselben Kalender. Die Josefstadt belohnt Präzision — und bestraft
-        Pauschalschätzungen, die nur „1080“ auf dem Zettel haben.
       </RatgeberP>
       <RatgeberP>
         Leerung vor{" "}
@@ -420,7 +384,28 @@ export default function EntruempelungJosefstadtWien1080() {
         Anfang an klar ist.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Josefstadt: Altbau zwischen Josefstädter Straße und Lange Gasse</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Gründerzeitwohnung im dritten Stock ohne Lift, Eingang von einer engen
+        Seitenstraße zwischen Josefstädter Straße und Lange Gasse. Der Hofdurchgang ist schmal, die
+        Wendung zur Stiege eng, und vor dem Haus steht selten länger als ein Lieferfahrzeug. Bei der
+        Besichtigung wird klar: Schrank und Couch passen nur demontiert durch Treppenhaus und Hof — ohne
+        legales Ladefenster stockt jeder Gang am Gehsteig.
+      </RatgeberP>
+      <RatgeberP>
+        Wir beantragen rechtzeitig eine temporäre Halteverbotszone bei der <strong>MA 46</strong>, legen
+        das Team auf Demontage und kurze Trageketten aus und wählen ein Zeitfenster außerhalb der
+        abendlichen Theater- und Lokalzeiten. Am Einsatztag schützen wir Stiegenhaus und Hofböden,
+        zerlegen sperrige Möbel vor Ort und laden in klaren Phasen — ohne die enge Gasse stundenlang zu
+        blockieren. Die Hausverwaltung erhält denselben Endzustand, der im Fixpreis vereinbart war.
+      </RatgeberP>
+      <RatgeberP>
+        Parallel sortieren wir Verwertbares und führen Sperrmüll, Elektro und Reststoffe über die{" "}
+        <strong>MA 48</strong> ab. Kellerabteil und Dachbodenkammer werden im selben Termin mitgeräumt,
+        weil sie bei der Besichtigung erfasst waren. Am Ende steht die besenreine Übergabe — ohne dass
+        Sie selbst zum Mistplatz fahren oder Nachbarn mit improvisiertem Halten belasten.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Josefstadt (1080)" />
 
 <RatgeberCtaBox>

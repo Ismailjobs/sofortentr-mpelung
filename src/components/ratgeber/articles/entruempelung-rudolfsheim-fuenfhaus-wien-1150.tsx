@@ -256,10 +256,6 @@ export default function EntruempelungRudolfsheimFuenfhausWien1150() {
         verhindert Nachkalkulation — und genau das unterscheidet einen lokalen Ratgeber von ausgetauschten
         PLZ-Texten.
       </RatgeberP>
-      <RatgeberP>
-        Seriöse Preisfindung ohne Fantasie-Euro: Faktoren verstehen, Besichtigung nutzen, schriftlich fixieren.
-        So wird Entrümpelung in Rudolfsheim-Fünfhaus planbar — trotz Westbahnhof-Verkehr und dichtem Altbau.
-      </RatgeberP>
 
       <RatgeberH2>Europaplatz, Schloßallee und warum 1150 lokale Texte braucht</RatgeberH2>
       <RatgeberP>
@@ -274,18 +270,6 @@ export default function EntruempelungRudolfsheimFuenfhausWien1150() {
         wenig aus, wenn der Trageweg den Tag bestimmt. Demontage vor Ort, Treppenhausschutz und kurze
         Ladephasen schützen Nachbarn und Tempo. Wer das bei der Besichtigung klärt, übergibt ruhig — auch wenn
         der Gehsteig voller Alltag ist.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung vor Vermietung, Verkauf oder Nachlass: Persönliches sichern, Verbleibendes markieren,
-        Nebenflächen nennen, Fotos von Stockwerk und Zugang senden, Termin klar kommunizieren. Wenn MA&nbsp;46
-        nötig ist, gehört der Vorlauf in denselben Kalender. Dann bleibt Luft für Demontage, Abtransport und
-        die letzte Kontrolle — und der Fixpreis bleibt das, was er sein soll: verbindlich.
-      </RatgeberP>
-      <RatgeberP>
-        Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig inklusive Keller und Dachboden,
-        wenn vereinbart. Das spart Diskussionen über Restmüll und vergessene Abteile. Mit lokaler Logistik statt
-        Textschablone wird aus einer Räumung in Rudolfsheim-Fünfhaus ein steuerbarer Ablauf — genau das, was
-        der thin SERP bisher oft nicht liefert.
       </RatgeberP>
 
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
@@ -316,12 +300,6 @@ export default function EntruempelungRudolfsheimFuenfhausWien1150() {
         </RatgeberLi>
       </RatgeberOl>
 
-      <RatgeberP>
-        Kurz für Rudolfsheim-Fünfhaus: Planen Sie Westbahnhof- und Gürtel-Zufahrt mit, erfassen Sie Keller und
-        Dachboden, und setzen Sie bei Bedarf auf MA&nbsp;46. Mit lokaler Logistik statt Textschablone, MA-48-Entsorgung
-        und Fixpreis nach Besichtigung füllt dieser Ratgeber die dünne SERP-Lücke in 1150 mit Substanz.
-      </RatgeberP>
-
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>
       <RatgeberP>
         <RatgeberInternalLink href="/ratgeber/entruempelung-mariahilf-wien-1060">
@@ -340,6 +318,27 @@ export default function EntruempelungRudolfsheimFuenfhausWien1150() {
           Meidling 1120
         </RatgeberInternalLink>
         .
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Rudolfsheim-Fünfhaus: dichter Altbau am Gürtel nahe Schweglerstraße</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Altbauwohnung im vierten Stock ohne Lift, Eingang in einer Seitenstraße nahe
+        Gürtel und Schweglerstraße. Parkraum ist extrem knapp, die Ladezone vor dem Haus praktisch nicht
+        vorhanden, der Kellerabteil liegt am anderen Ende eines engen Hofs. Bei der Besichtigung entscheiden
+        Trageweg, Türbreiten und legales Halten — nicht die reine Wohnfläche. Ohne Plan stockt jeder Gang am
+        Gehsteig.
+      </RatgeberP>
+      <RatgeberP>
+        Wir beantragen rechtzeitig eine Halteverbotszone bei der <strong>MA 46</strong>, legen Demontage und
+        kurze Trageketten fest und wählen ein Zeitfenster abseits der Westbahnhof-Stoßzeiten. Am Einsatztag
+        schützen wir Stiegenhaus und Hof, zerlegen sperrige Möbel vor Ort und laden in klar begrenzten Phasen —
+        ohne den Gehsteig improvisiert zu blockieren. Nachbarn und Hausverwaltung erleben einen ruhigen,
+        vorher abgesprochenen Ablauf.
+      </RatgeberP>
+      <RatgeberP>
+        Sperrmüll, Elektro und Reststoffe führen wir über die <strong>MA 48</strong> ab; Verwertbares wird
+        geprüft. Wohnung und Keller sind am Ende besenrein im Fixpreis — ohne Eigenregie-Mistplatz-Touren und
+        ohne Nachtrag, weil Nebenflächen und Zufahrt von Anfang an erfasst waren.
       </RatgeberP>
 
       

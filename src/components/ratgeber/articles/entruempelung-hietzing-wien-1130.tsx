@@ -262,10 +262,6 @@ export default function EntruempelungHietzingWien1130() {
         gilt. Wer Garten, Garage und Keller früh nennt, verhindert Überraschungen und hält den Ablauf ruhig —
         genau das, was Villenviertel und Schönbrunn-Nähe erwarten.
       </RatgeberP>
-      <RatgeberP>
-        Seriöse Preisfindung heißt: Faktoren verstehen, Besichtigung nutzen, schriftlich fixieren — ohne
-        Fantasie-Euro-Tabellen aus dem Internet. So bleibt eine Hausentrümpelung in 1130 planbar und diskret.
-      </RatgeberP>
 
       <RatgeberH2>Ober St. Veit, Unter St. Veit und Schönbrunn-Rand</RatgeberH2>
       <RatgeberP>
@@ -287,13 +283,6 @@ export default function EntruempelungHietzingWien1130() {
         Langsamkeit, sondern Planung: ruhige Zeitfenster, legale Ladezone, unauffälliger Ablauf. So bleibt die
         Räumung steuerbar — auch wenn das Inventar emotional belastet und das Volumen groß ist.
       </RatgeberP>
-      <RatgeberP>
-        Vorbereitung vor Verkauf oder Sanierung: Handwerkertermine und Räumung in denselben Kalender legen,
-        Nebenflächen vollständig nennen, Zufahrtshinweise senden. Wenn ein Halteverbot nötig ist, muss der
-        MA-46-Vorlauf passen.       Dann bleibt genug Luft für Demontage, Abtransport und die letzte Kontrolle —
-        genau das, was Villenviertel und Schönbrunn-Nähe erwarten. Hietzing belohnt diese Reihenfolge mit einem
-        ruhigen, diskreten Einsatztag.
-      </RatgeberP>
 
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
       <RatgeberP>
@@ -312,18 +301,6 @@ export default function EntruempelungHietzingWien1130() {
           </RatgeberInternalLink>
         </RatgeberLi>
       </RatgeberOl>
-      <RatgeberP>
-        Der Endzustand sollte klar sein: besenrein, übergabe- oder verkaufsfähig. Mit Diskretion, realistischer
-        Logistik und MA-48-konformer Entsorgung wird aus einer Villenräumung im 13. Bezirk ein ruhiger,
-        steuerbarer Ablauf — auch wenn das Volumen größer ist als in einer Innenstadt-Wohnung.
-      </RatgeberP>
-
-      <RatgeberP>
-        Kurz für Hietzing: Erfassen Sie Haus, Garten, Garage und Keller gemeinsam, planen Sie Diskretion und
-        Zufahrt mit, und nutzen Sie MA&nbsp;46 dort, wo Villenstraßen keine spontane Ladezone erlauben. Mit
-        MA-48-konformer Entsorgung und Fixpreis nach Besichtigung bleibt die Räumung ruhig — auch nahe
-        Schönbrunn und in Ober oder Unter St. Veit.
-      </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke</RatgeberH3>
       <RatgeberP>
@@ -339,6 +316,27 @@ export default function EntruempelungHietzingWien1130() {
           Liesing 1230
         </RatgeberInternalLink>
         .
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Hietzing: Einfamilienhaus nahe Hietzinger Hauptstraße</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: ein Einfamilienhaus in ruhiger Cottage-Lage abseits der Hietzinger Hauptstraße —
+        Wohnräume, voller Keller, Garage und Garten mit Geräteschuppen. Der Generationswechsel steht an; die
+        Zufahrt ist eng, ohne Wendemöglichkeit am Grundstück. Bei der Besichtigung erfassen wir Haus und
+        Außenflächen gemeinsam, damit kein Schuppen „später“ den Fixpreis aufweicht und der Endzustand klar
+        definiert ist — inklusive was „besenrein“ für Garten und Garage bedeutet.
+      </RatgeberP>
+      <RatgeberP>
+        Wir planen ein ruhiges Zeitfenster, klären ob eine Halteverbotszone der <strong>MA 46</strong> in der
+        Villenstraße nötig ist, und legen Reihenfolge fest: Persönliches sichern, Verwertbares prüfen, dann
+        Räumung von innen nach außen. Am Einsatztag bleiben Ladephasen kurz und unauffällig — Anrainer sehen
+        einen geordneten Ablauf, keine improvisierte Gehsteig-Blockade nahe touristisch belebter Abschnitte
+        Richtung Schönbrunn.
+      </RatgeberP>
+      <RatgeberP>
+        Hausrat, Elektro und Sperriges führen wir über die <strong>MA 48</strong> ab; Gartenmaterial und
+        Altgeräte planen wir mit. Am Ende stehen Haus, Keller, Garage und Garten im vereinbarten Endzustand —
+        diskret, ohne Eigenregie-Marathon und ohne Nachtrag über vergessene Nebenflächen.
       </RatgeberP>
 
       

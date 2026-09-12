@@ -163,6 +163,18 @@ export default function EntruempelungHernalsWien1170() {
         <RatgeberInternalLink href="/ratgeber/wohnungsaufloesung-nach-todesfall-wien">
           Wohnungsauflösung nach Todesfall
         </RatgeberInternalLink>
+        ; bei Betreuung auch{" "}
+        <RatgeberInternalLink href="/ratgeber/haushaltsaufloesung-erwachsenenvertretung-wien">
+          Erwachsenenvertretung
+        </RatgeberInternalLink>
+        ; bei Umzug ins Pflegeheim{" "}
+        <RatgeberInternalLink href="/ratgeber/wohnungsraeumung-senioren-wien">
+          Wohnungsräumung Senioren
+        </RatgeberInternalLink>
+        . Dachbodenabteile am Kalvarienberg:{" "}
+        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
+          Dachbodenentrümpelung
+        </RatgeberInternalLink>
         .
       </RatgeberP>
       <RatgeberP>
@@ -302,77 +314,6 @@ export default function EntruempelungHernalsWien1170() {
         .
       </RatgeberP>
 
-      <RatgeberH2>Alszeile im Alltag: wenn der Gehsteig mitplant</RatgeberH2>
-      <RatgeberP>
-        Die Alszeile ist Hernals&apos; Schlagader — Geschäfte, Buslinien, Radwege und Anrainer, die
-        zur Arbeit eilen. Wer hier entrümpeln lässt, steht nicht vor einer leeren Straße, sondern mitten
-        im Bezirksalltag. Ladezonen sind kurz, Einfahrten zu Innenhöfen oft schmal, und Nachbarn merken
-        sofort, wenn ein Transporter ohne Absprache blockiert. Deshalb klären wir vor dem Einsatztag,
-        wo das Fahrzeug stehen darf und ob ein Halteverbot der <strong>MA 46</strong> sinnvoller ist als
-        ein improvisiertes „kurz halten“.
-      </RatgeberP>
-      <RatgeberP>
-        Typisch sind Wohnungen in Zinshäusern direkt an der Achse: viel Verkehr, wenig Parkraum, dafür
-        kurze Wege zum Objekt. Eine{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-          Wohnungsentrümpelung
-        </RatgeberInternalLink>{" "}
-        braucht hier Demontage und Bodenschutz — und ein Zeitfenster, das den Markt- und Lieferverkehr
-        mitdenkt. Wer den gewünschten Endzustand und den Übergabetermin in der Erstanfrage nennt, hilft
-        uns, Teamgröße und MA-46-Vorlauf realistisch zu planen.
-      </RatgeberP>
-
-      <RatgeberH2>Kalvarienberg und Hanglage: Treppen statt Aufzug</RatgeberH2>
-      <RatgeberP>
-        Richtung Kalvarienberg wird Hernals ruhiger — und oft anspruchsvoller für die Logistik. In den
-        ansteigenden Wohnstraßen dominieren Gründerzeithäuser ohne Lift, enge Treppenhäuser und
-        Dachbodenabteile, die über Jahrzehnte gewachsen sind. Der Trageweg verlängert sich, jede
-        Türbreite zählt, und manchmal entscheidet ein einziger enges Treppenhaus über Demontage oder
-        Zerlegung vor Ort. Genau deshalb erfassen wir bei der Besichtigung Stockwerk, Zugang und alle
-        Nebenflächen — siehe auch{" "}
-        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
-          Dachbodenentrümpelung
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Am Kalvarienberg kommen häufig ältere Haushalte und langjährige Bewohner:innen vor, deren
-        Wohnungen mehr Geschichten als Quadratmeter haben. Bei{" "}
-        <RatgeberInternalLink href="/ratgeber/wohnungsraeumung-senioren-wien">
-          Wohnungsräumung für Senioren
-        </RatgeberInternalLink>{" "}
-        oder Umzug ins Pflegeheim gilt dasselbe wie bei jeder Räumung in 1170 — nur mit mehr Zeit für
-        Sortieren und Abstimmen. Wer vorab ausmistet, spart am Einsatztag: Tipps unter{" "}
-        <RatgeberInternalLink href="/ratgeber/richtig-ausmisten-wien">
-          Richtig ausmisten in Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>Nachlass im 17. Bezirk: Erben, Verwaltung und Termine</RatgeberH2>
-      <RatgeberP>
-        Nachlasswohnungen in Hernals folgen selten einem Standardablauf. Erben leben oft außerhalb
-        Wiens, Verwaltungen setzen Fristen, und manchmal greift eine{" "}
-        <RatgeberInternalLink href="/ratgeber/haushaltsaufloesung-erwachsenenvertretung-wien">
-          Erwachsenenvertretung
-        </RatgeberInternalLink>{" "}
-        ein. Wir arbeiten mit klaren Regeln: Persönliches wird vorab gesichert oder markiert, Dokumente
-        bleiben getrennt, der Rest wird sortiert und über die <strong>MA 48</strong> fachgerecht
-        entsorgt. Diskretion im Hausflur ist keine Geste — sie ist Teil der Leistung, wenn Nachbarn
-        fragen und Erben Ruhe brauchen.
-      </RatgeberP>
-      <RatgeberP>
-        Wertvolles kann angerechnet werden; Unklares klären wir bei der Besichtigung. Bei fixen
-        Terminen mit Notar, Makler oder Hausverwaltung planen wir Puffer statt leerer Versprechen.
-        Vorbereitung hilft:{" "}
-        <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
-          Checkliste Wohnungsräumung
-        </RatgeberInternalLink>
-        , Fotos von Zugang und Keller, und ein Satz zum gewünschten Endzustand — besenrein oder
-        übergabefertig. Dann bleibt der Fixpreis verbindlich, und Hernals wird nicht zum
-        Improvisationstag.
-      </RatgeberP>
-
       <RatgeberH3>Nachbarbezirke und Vergleich</RatgeberH3>
       <RatgeberP>
         Hernals teilt mit Ottakring und{" "}
@@ -384,7 +325,27 @@ export default function EntruempelungHernalsWien1170() {
         einen Festpreis, der hält — ohne Bezirks-Pauschale und ohne erfundene Euro-Tabellen.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Hernals: Nachlass am Hang zwischen Hernalser Hauptstraße und Alszeile</RatgeberH3>
+      <RatgeberP>
+        Erben aus dem Umland meldeten eine Nachlasswohnung im vierten Stock eines Zinshauses ohne Lift —
+        Zufahrt von der Hernalser Hauptstraße, Ladezone knapp Richtung Alszeile, Kellerabteil über eine
+        enge Hofstiege. Am Kalvarienberg-Hang verlängert jede Stufe den Trageweg; Parkraum an der Achse
+        ist rar, und Nachbarn merken sofort, wenn ein Transporter ohne Absprache blockiert. Bei der
+        Besichtigung erfassten wir Wohnung, Keller und Dachbodenabteil gemeinsam und beantragten für den
+        Einsatztag ein Halteverbot der <strong>MA 46</strong> mit Vorlauf zum Verwaltungstermin.
+      </RatgeberP>
+      <RatgeberP>
+        Persönliches und Dokumente wurden vorab markiert und gesichert; der Rest Demontage, Abtransport,
+        Trennung. Sperrmüll und Elektro gingen über die <strong>MA 48</strong> — ohne dass die Erben
+        selbst Mistplatz-Touren organisieren mussten. Der Fixpreis stand nach Besichtigung schriftlich;
+        weil Nebenflächen und Stockwerk von Anfang an im Umfang waren, blieb er am Einsatztag gültig.
+        Diskretion im Hausflur war Teil der Leistung, nicht optional.
+      </RatgeberP>
+      <RatgeberP>
+        Hanglage plus Altbau ohne Lift: In Hernals entscheidet die Besichtigung über Teamgröße und
+        Haltefenster — nicht die PLZ allein.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Hernals (1170)" />
 
 <RatgeberCtaBox>

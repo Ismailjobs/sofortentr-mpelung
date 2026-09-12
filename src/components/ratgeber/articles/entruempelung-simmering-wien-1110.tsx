@@ -270,11 +270,6 @@ export default function EntruempelungSimmeringWien1110() {
         Endzustand klar — damit der Preis am Einsatztag noch derselbe ist. Wer Gewerbeanteil und Nebenflächen
         früh nennt, verhindert Nachkalkulation und Übergabe-Stress.
       </RatgeberP>
-      <RatgeberP>
-        Seriöse Orientierung ohne Fantasie-Euro-Tabellen: Faktoren verstehen, Besichtigung nutzen, Fixpreis
-        schriftlich fixieren. Genau das macht Entrümpelung in 1110 planbar — ob Wohnung, Keller oder gemischtes
-        Objekt an der Simmeringer Hauptstraße.
-      </RatgeberP>
 
       <RatgeberH2>Simmeringer Hauptstraße, Siedlung und Gewerbehof</RatgeberH2>
       <RatgeberP>
@@ -288,19 +283,6 @@ export default function EntruempelungSimmeringWien1110() {
         und gemischte Reststoffe gehören in die Planung. Wir trennen Entsorgungslogik früh, damit der Fixpreis
         nicht weich wird. Diskretion bleibt trotzdem wichtig — besonders bei Nachlasswohnungen in der Nähe des
         Zentralfriedhofs, wo Termine oft emotional und organisatorisch eng sind.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung vor Übergabe oder Verkauf: Persönliches sichern, Verbleibendes markieren, Keller und Lager
-        vollständig nennen, Fotos von Zugang und Volumen senden, Termin klar kommunizieren. Wenn Gewerbe und
-        Wohnung im selben Auftrag liegen, sagen Sie das in der Erstanfrage — dann kann Teamgröße und
-        Entsorgungsmix realistisch kalkuliert werden. Simmering belohnt diese Klarheit und bestraft
-        „nur die Wohnung“-Schätzungen.
-      </RatgeberP>
-      <RatgeberP>
-        Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig — inklusive Nebenflächen. Das
-        klingt einfach, spart aber Diskussionen über vergessene Abteile oder Restmaterial im Hof. Mit klarer
-        Definition, MA-46-Vorlauf und MA-48-konformer Entsorgung wird aus einer Räumung im 11. Bezirk ein
-        steuerbarer Ablauf, auch wenn Volumen und Objekttyp gemischt sind.
       </RatgeberP>
 
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
@@ -331,13 +313,6 @@ export default function EntruempelungSimmeringWien1110() {
         </RatgeberLi>
       </RatgeberOl>
 
-      <RatgeberP>
-        Kurz zusammengefasst für Simmering: Nennen Sie früh Wohn- und Gewerbeanteil, Keller oder Lager,
-        Zufahrt und Übergabetermin. Mit MA&nbsp;46-Vorlauf, MA-48-konformer Entsorgung und schriftlichem
-        Fixpreis nach Besichtigung bleibt die Räumung planbar — von der Simmeringer Hauptstraße bis zu
-        Siedlung und Gewerbehof nahe dem Zentralfriedhof.
-      </RatgeberP>
-
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>
       <RatgeberP>
         <RatgeberInternalLink href="/ratgeber/entruempelung-favoriten-wien-1100">
@@ -352,6 +327,28 @@ export default function EntruempelungSimmeringWien1110() {
           Meidling 1120
         </RatgeberInternalLink>
         .
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Simmering: gemischtes Objekt an der Simmeringer Hauptstraße Richtung Kaiserebersdorf</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Wohnung im Gemeindebau nahe der Simmeringer Hauptstraße, dazu ein größeres
+        Kellerabteil und — im selben Auftrag — ein kleiner Lageranteil in einem Hof Richtung Kaiserebersdorf.
+        Bei der Besichtigung wird klar: Hausrat und Gewerbereste dürfen nicht in denselben Entsorgungsweg;
+        die Zufahrt zur Siedlung und die Hofzufahrt zum Lager sind zwei unterschiedliche Logiken unter einer
+        PLZ. Ohne vollständige Erfassung würde der Fixpreis weich.
+      </RatgeberP>
+      <RatgeberP>
+        Wir planen Team und Fahrzeuge so, dass Wohnung und Keller zuerst leer und besenrein sind, danach das
+        Lager mit getrennter Sortierung. Wo der Verkehr an der Hauptstraße kein verlässliches Fenster lässt,
+        beantragen wir eine Halteverbotszone bei der <strong>MA 46</strong>. Am Einsatztag bleiben Ladephasen
+        kurz, Anrainer und Hofdurchfahrt werden nicht improvisiert blockiert — auch wenn zwei Standorte denselben
+        Kalendertag teilen.
+      </RatgeberP>
+      <RatgeberP>
+        Hausrat entsorgen wir MA-48-konform über die <strong>MA 48</strong>; Gewerbeabfall und Altmaterial
+        laufen getrennt und fachgerecht. Am Ende stehen zwei klare Endzustände im selben Fixpreis — Wohnung
+        übergabefähig, Lager leer —, ohne dass Sie selbst Mistplatz- und Gewerbeentsorgung nachorganisieren
+        müssen.
       </RatgeberP>
 
       

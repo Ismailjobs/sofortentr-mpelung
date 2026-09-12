@@ -288,41 +288,6 @@ export default function EntruempelungDoeblingWien1190() {
         damit der Fixpreis am Einsatztag noch derselbe ist, den Sie unterschrieben haben.
       </RatgeberP>
 
-      <RatgeberH2>Grinzing, Sievering, Nußdorf, Heiligenstadt: lokale Unterschiede</RatgeberH2>
-      <RatgeberP>
-        In Grinzing und Sievering dominieren Villen, Weingärten-Nähe und ruhige Straßen. Hier zählen Diskretion,
-        legale Ladezonen und die vollständige Erfassung von Garten und Garage. In Nußdorf und Richtung
-        Kahlenbergerdorf kommen steilere Zufahrten und engere Kehren hinzu — der Trageweg entscheidet oft über
-        Teamgröße. In Heiligenstadt mischen sich Altbauwohnungen und dichtere Bebauung: Demontage und Stiege
-        spielen eine größere Rolle als in einem freistehenden Haus.
-      </RatgeberP>
-      <RatgeberP>
-        Neustift am Walde und die höher gelegenen Wohnlagen verlangen ähnliche Sorgfalt wie Hanglagen im Westen:
-        Zufahrt beschreiben, Wendemöglichkeit prüfen, Nebenflächen nennen. Ein Dachboden voller Kartons und ein
-        Keller mit Sperrigem verdoppeln den Umfang, wenn sie in der Erstanfrage fehlen. Wir binden deshalb den
-        Fixpreis an die Besichtigung — und schreiben den Umfang klar, damit er am Einsatztag noch gilt.
-      </RatgeberP>
-      <RatgeberP>
-        Bei Verkauf und Sanierung gilt zusätzlich der Kalender: Handwerker, Notartermine und Räumung gehören
-        zusammengeplant. Der Endzustand sollte in einem Satz stehen — besenrein und übergabe- oder verkaufsfähig —
-        inklusive vereinbarter Nebenflächen. Das reduziert Diskussionen über Restmaterial im Gartenhaus oder
-        vergessene Garagenecken.
-      </RatgeberP>
-      <RatgeberP>
-        Diskretion in Weinlagen bedeutet Planung, nicht Langsamkeit: ruhige Zeitfenster, unauffälliger Ablauf,
-        klare Absprache mit Eigentümern und Erben. Persönliches zuerst sichern, dann Verwertung prüfen, dann
-        entsorgen. So bleibt eine Nachlassräumung in Döbling beherrschbar — auch wenn das Inventar über
-        Jahrzehnte gewachsen ist und die Straße eng wirkt.
-      </RatgeberP>
-      <RatgeberP>
-        Wer in 1190 anfragt, sollte Lage (z.&nbsp;B. Grinzing, Heiligenstadt, Sievering), Objekttyp und
-        Nebenflächen früh nennen. Fotos der Zufahrt helfen; die Vor-Ort-Besichtigung bleibt der seriöse Weg,
-        wenn Hang, Weinbergstraße oder Nebengebäude den Aufwand bestimmen. Dann greifen MA&nbsp;46, Team und
-        MA-48-Entsorgung ineinander — und der Fixpreis bleibt verbindlich. Döbling belohnt diese Reihenfolge:
-        Wer Umfang und Diskretion früh klärt, übergibt ruhig — auch wenn Villa, Weinlage und Generationswechsel
-        denselben Kalender teilen.
-      </RatgeberP>
-
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
       <RatgeberP>
         Vorbereitung in Döbling: Persönliches und Wertgegenstände sichern, Verbleibendes markieren, Garten-
@@ -352,12 +317,6 @@ export default function EntruempelungDoeblingWien1190() {
           .
         </RatgeberLi>
       </RatgeberOl>
-      <RatgeberP>
-        Mit Diskretion, realistischer Logistik und klarer Entsorgung wird aus einer Villen- oder
-        Nachlassräumung im 19. Bezirk ein steuerbarer Ablauf — auch wenn das Volumen größer und die Straße
-        enger ist als in der Innenstadt. Döbling belohnt Vorbereitung: Wer Umfang und Zufahrt früh nennt,
-        übergibt ruhig.
-      </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>
       <RatgeberP>
@@ -379,7 +338,27 @@ export default function EntruempelungDoeblingWien1190() {
         .
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Döbling: Einfamilienhaus in Grinzing mit Gartenhütte, Zufahrt Billrothstraße</RatgeberH3>
+      <RatgeberP>
+        Verkauf eines Einfamilienhauses in Grinzing: Wohnräume, Keller, Garage und eine vollgestellte
+        Gartenhütte — Zufahrt über eine enge Weinbergstraße, Anfahrt von der Billrothstraße. Die Nachbarschaft
+        erwartet Diskretion; improvisiertes Halten fällt sofort auf und verzögert den Abtransport. Bei der
+        Besichtigung erfassten wir Haus und alle Nebenflächen, prüften Wendemöglichkeit und beantragten für
+        längere Ladephasen ein Halteverbot der <strong>MA 46</strong> mit Vorlauf zum Notartermin.
+      </RatgeberP>
+      <RatgeberP>
+        Am Einsatztag: ruhiges Zeitfenster, Grundstücksschutz, Gartenhütte und Garage zuerst, danach Wohnräume
+        und Keller. Sperrmüll, Elektro und Gartenmaterial wurden getrennt und über die <strong>MA 48</strong>{" "}
+        entsorgt. Verwertbare Möbel wurden bei der Besichtigung markiert und angerechnet. Der Fixpreis galt
+        für den vollständigen Umfang — ohne Nachtrag für „vergessene“ Nebenflächen oder Restmaterial im
+        Gartenhaus. Der Notartermin blieb erreichbar, weil MA-46-Vorlauf und Räumung denselben Kalender teilten —
+        ohne improvisiertes Halten in der Weinbergstraße.
+      </RatgeberP>
+      <RatgeberP>
+        In Döbling entscheiden Hanglage, Zufahrt und Garten oft mehr als die reine Wohnfläche — deshalb gehört
+        die Besichtigung vor jeden verbindlichen Festpreis, auch in Sievering oder Grinzing.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Döbling (1190)" />
 
 <RatgeberCtaBox>

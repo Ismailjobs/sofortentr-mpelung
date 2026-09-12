@@ -267,32 +267,6 @@ export default function EntruempelungWaehringWien1180() {
         Gersthofer Straße.
       </RatgeberP>
 
-      <RatgeberH2>Cottageviertel, Türkenschanzpark und Gersthofer Alltag</RatgeberH2>
-      <RatgeberP>
-        Im Cottageviertel prägen ruhige Villenstraßen und Nachbarschaftserwartungen den Ablauf. Eine Räumung
-        hier soll unauffällig bleiben: legale Ladezone, kurze Ladephasen, Treppenhaus- und Grundstücksschutz.
-        Rund um den Türkenschanzpark wechseln Häuser und Wohnungen — der Aufwand folgt dem Objekt, nicht einer
-        Bezirksromantik. Entlang der Gersthofer Straße kommen dichterer Verkehr und Altbau ohne Lift hinzu.
-      </RatgeberP>
-      <RatgeberP>
-        Viele Cottage-Häuser haben Nebenflächen, die in der ersten Schätzung fehlen: Keller, Dachboden, Garage,
-        Geräteschuppen, Gartenreste. Wer nur Wohnräume nennt, unterschätzt den Umfang. Wir erfassen Nebenflächen
-        bei der Besichtigung und legen fest, was besenrein konkret bedeutet. Das schützt Fixpreis und
-        Übergabetermin — und genau das erwarten ruhige Wohnlagen.
-      </RatgeberP>
-      <RatgeberP>
-        Bei Nachlass und Generationswechsel hilft eine klare Reihenfolge: Persönliches sichern, Verwertbares
-        prüfen, Rest entsorgen, Endzustand herstellen. Diskretion und Tempo sind kein Widerspruch, wenn Planung
-        stimmt. Fotos helfen zur Orientierung; die Vor-Ort-Klärung bleibt entscheidend, wenn Zufahrt und
-        Nebengebäude den Tag bestimmen.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung vor Verkauf oder Sanierung: Handwerkertermine und Räumung in denselben Kalender legen,
-        Nebenflächen vollständig nennen, Zufahrt beschreiben. Wenn MA&nbsp;46 nötig ist, muss der Vorlauf
-        passen.       Dann bleibt Luft für Demontage, Abtransport und die letzte Kontrolle — und aus einer Räumung
-        im 18. Bezirk wird ein ruhiger, steuerbarer Ablauf. Währing belohnt Diskretion und klare Nebenflächen.
-      </RatgeberP>
-
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
       <RatgeberP>
         Vorbereitung: Persönliches sichern, Verbleibendes markieren, Nebenflächen nennen, Zufahrt beschreiben,
@@ -320,17 +294,6 @@ export default function EntruempelungWaehringWien1180() {
           .
         </RatgeberLi>
       </RatgeberOl>
-      <RatgeberP>
-        Mit Diskretion, realistischer Logistik und klarer Entsorgung wird aus einer Räumung im Cottageviertel
-        oder entlang der Gersthofer Straße ein steuerbarer Ablauf — auch wenn das Volumen größer ist als eine
-        typische Etagenwohnung vermuten lässt.
-      </RatgeberP>
-
-      <RatgeberP>
-        Kurz für Währing: Cottageviertel verlangt Diskretion, Altbau an der Gersthofer Straße verlangt
-        Tragewegplanung. Nennen Sie Nebenflächen vollständig, klären Sie MA&nbsp;46 bei Bedarf und entsorgen Sie
-        über MA-48-Wege im Fixpreis. Nach Besichtigung bleibt die Räumung im 18. Bezirk ruhig und verbindlich.
-      </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>
       <RatgeberP>
@@ -352,7 +315,34 @@ export default function EntruempelungWaehringWien1180() {
         .
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Währing: Cottage-Nebenflächen und Altbau an Gentzgasse / Währinger Gürtel</RatgeberH3>
+      <RatgeberP>
+        Ein Generationswechsel im Cottageviertel: freistehendes Haus mit Keller, Garage und Geräteschuppen —
+        parallel eine Altbauwohnung einer Angehörigen nahe Gentzgasse Richtung Währinger Gürtel. Zwei
+        Objekttypen, eine PLZ: Villa mit Zufahrt versus Zinshaus ohne Lift und knappe Ladezone am Gürtel.
+        Bei der Besichtigung erfassten wir beide Umfänge getrennt, prüften Tragewege und beantragten für
+        die Gürtel-nahe Wohnung ein Halteverbot der <strong>MA 46</strong>; am Cottage-Objekt reichte die
+        private Zufahrt.
+      </RatgeberP>
+      <RatgeberP>
+        Am Einsatztag zuerst die Etagenwohnung (Demontage, kurzes Ladefenster, Bodenschutz), danach das
+        Cottage-Haus inkl. Nebenflächen — ruhige Zeitfenster, Grundstücksschutz, unauffälliger Ablauf.
+        Sperrmüll, Elektro und Gartenreste gingen sortiert über die <strong>MA 48</strong>. Der Fixpreis
+        galt für den schriftlich vereinbarten Umfang; Verwertbares wurde bei der Besichtigung markiert
+        und angerechnet, wo sinnvoll. Persönliches sicherten die Angehörigen vor dem Start. Zwei
+        Kalenderfenster, ein klarer Endzustand je Objekt — so blieb der Festpreis verbindlich.
+      </RatgeberP>
+      <RatgeberP>
+        Währing belohnt Diskretion und vollständige Nebenflächenangaben — Cottage und Altbau brauchen dieselbe
+        Sorgfalt, aber unterschiedliche Logistik am Einsatztag.
+      </RatgeberP>
+      <RatgeberP>
+        Gerade Generationswechsel im 18. Bezirk verbinden oft zwei Adressen: das ruhigere Cottage-Grundstück und
+        die Gürtel-nahe Etage. Wer beide Umfänge getrennt besichtigen und schriftlich abgrenzen lässt, vermeidet
+        Mischkalkulationen. So bleibt jeder Fixpreis dem Objekt zugeordnet — und die Entsorgung über die MA&nbsp;48
+        nachvollziehbar dokumentiert.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Währing (1180)" />
 
 <RatgeberCtaBox>

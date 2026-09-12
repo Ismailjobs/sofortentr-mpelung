@@ -132,12 +132,6 @@ export default function EntruempelungFavoritenWien1100() {
         herstellen. So bleibt der Termin beherrschbar — auch wenn der Inhalt der Wohnung es auf den ersten Blick
         nicht ist.
       </RatgeberP>
-      <RatgeberP>
-        Wiener-Wohnen-Fristen sind selten verhandelbar. Deshalb gehört das Übergabedatum in die Erstanfrage, nicht
-        in die Schlussminute. Mit diesem Datum planen wir MA-46-Vorlauf, Teamgröße und Puffer für die letzte
-        Kontrolle. Genau diese Reihenfolge macht Gemeindebau-Räumungen in 1100 planbar statt riskant — und genau
-        deshalb verlinken wir bewusst auf den Spezialratgeber zur Entrümpelung im Gemeindebau.
-      </RatgeberP>
 
       <RatgeberH2>MA 46 Halteverbot in dichter Favoriten-Logistik</RatgeberH2>
       <RatgeberP>
@@ -150,12 +144,6 @@ export default function EntruempelungFavoritenWien1100() {
         In engen Innenhöfen und bei langen Tragewegen ohne Lift ist die legale Ladezone oft der Unterschied zwischen
         einem geordneten Vormittag und einem Tag voller Unterbrechungen. Wir klären das vor Ort — nicht am
         Räumungsmorgen.
-      </RatgeberP>
-      <RatgeberP>
-        Gerade bei Wiener-Wohnen-Terminen darf das Halteverbot nicht „irgendwann“ kommen. Es muss zum
-        Übergabedatum passen — mit Puffer für Demontage, Abtransport und die letzte Kontrolle. Favoriten belohnt
-        diese Reihenfolge: Wer MA 46, Team und Endzustand früh klärt, übergibt besenrein. Wer die Logistik
-        nachschiebt, riskiert genau den Stress, den Gemeindebau-Fristen nicht verzeihen.
       </RatgeberP>
 
       <RatgeberH2>MA 48: Entsorgung ohne Eigenregie-Marathon</RatgeberH2>
@@ -283,25 +271,28 @@ export default function EntruempelungFavoritenWien1100() {
         kein einheitlicher „1100-Preis“, sondern eine Sammlung lokaler Logiken unter einer PLZ. Genau deshalb
         bleibt die Besichtigung der seriöse Weg zum Fixpreis.
       </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Favoriten: Gemeindebau-Übergabe nahe Reumannplatz</RatgeberH3>
       <RatgeberP>
-        Vorbereitung vor Wiener-Wohnen-Terminen: Persönliches sichern, Verbleibendes markieren, Nebenflächen
-        vollständig nennen, Fotos von Stockwerk und Zugang senden, Übergabedatum klar kommunizieren. Wenn ein
-        Halteverbot nötig ist, muss der MA-46-Vorlauf in denselben Kalender. Dann bleibt genug Luft für Demontage,
-        Abtransport und die letzte Kontrolle vor der Übergabe. Wer erst am Vortag improvisiert, riskiert genau
-        den Stress, den Favoriten bei fixen Fristen nicht verzeiht.
+        Typischer Einsatz: eine Wiener-Wohnen-Wohnung entlang der Favoritenstraße, wenige Minuten vom
+        Reumannplatz, dritter Stock mit altem Lift, plus Kellerabteil im Hoftrakt. Der Übergabetermin ist
+        fix — besenrein, Nebenflächen leer, keine Diskussion über Restmüll in Ecken. Bei der Besichtigung
+        erfassen wir Wohnung, Keller, Liftmaß und die knappe Ladezone vor dem Stiegenhaus in einem Zug.
       </RatgeberP>
       <RatgeberP>
-        Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig. Das klingt einfach, spart aber
-        Diskussionen über vergessene Abteile, Restmüll in Ecken oder demontierte Einbauten. Mit klarer Definition,
-        realistischer Logistik und MA-48-konformer Entsorgung wird aus einer Räumung im 10. Bezirk ein steuerbarer
-        Ablauf — auch wenn der Kalender eng und der Gemeindebau dicht ist.
+        Weil vor dem Haus kaum legales Halten möglich ist, beantragen wir rechtzeitig eine Halteverbotszone
+        bei der <strong>MA 46</strong> und legen Teamgröße sowie Demontage auf denselben Kalender wie die
+        Übergabe. Am Einsatztag schützen wir Treppenhaus und Lift, räumen Wohnung und Keller, und laden in
+        kurzen Phasen — ohne den Gehsteig improvisiert zu blockieren. Der gewünschte Endzustand steht vorher
+        schriftlich im Fixpreis.
       </RatgeberP>
       <RatgeberP>
-        Für Favoriten gilt besonders: Nennen Sie das Übergabedatum früh. Dann greifen Halteverbot, Team und
-        besenreine Übergabe ineinander — und der Fixpreis bleibt das, was er sein soll: verbindlich.
+        Sperrmüll und Reststoffe führen wir über die <strong>MA 48</strong> ab; Verwertbares wird geprüft,
+        Persönliches war markiert. Am Schluss bleibt die Wohnung übergabefähig — inklusive Keller —, ohne
+        dass Sie am Übergabetag noch Mistplatz-Touren nachschieben. Genau diese Reihenfolge hält Fristen und
+        Festpreis in Favoriten stabil.
       </RatgeberP>
 
-      
       <BezirkStructureBlocks districtLabel="Favoriten (1100)" />
 
 <RatgeberCtaBox>

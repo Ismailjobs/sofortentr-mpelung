@@ -284,6 +284,32 @@ export default function EntruempelungNeubauWien1070() {
         .
       </RatgeberP>
 
+      <RatgeberH3>Praxis-Beispiel aus Neubau: Spittelberg-Altbau bei Touristenverkehr und Halteverbot</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz im Spittelberg bzw. nahe der Neubaugasse: Altbauwohnung im zweiten Stock, enge Gasse,
+        Kopfsteinpflaster, kein verlässlicher Ladeplatz. Tagsüber teilen sich Touristen, Lieferverkehr und
+        Anwohner denselben Meter — ohne Halteverbot steckt der Transporter im Gassennetz fest, und die
+        Hausgemeinschaft erlebt den Tag als Dauerstörung vor der Haustür. Hier plant das Gassennetz mit, nicht
+        nur das Inventar.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung messen wir Trageweg, Wendungen und Hofdurchgang und beantragen bei der MA&nbsp;46 ein
+        temporäres Halteverbot mit realistischem Vorlauf. Am Einsatztag wählen wir ein Zeitfenster abseits der
+        stärksten Besucherfrequenz, demontieren sperrige Möbel vor Ort und laden in kurzen Ketten — ohne den
+        Gehsteig stundenlang zu blockieren. Parallel sortieren wir Hausrat und Elektro für die MA-48-Wege.
+      </RatgeberP>
+      <RatgeberP>
+        Die Übergabe erfolgt besenrein zum Fixpreis nach Besichtigung: Gassenlage, Stockwerk und Halteverbot waren
+        von Anfang an kalkuliert — genau das, was Spittelberg und Neubaugasse von einer Bezirks-Pauschale
+        unterscheidet. Ohne diese Vorab-Klärung bleibt jeder Preis vorläufig.
+      </RatgeberP>
+      <RatgeberP>
+        Neubau bleibt ein Bezirk der kurzen Wege und engen Gassen: Museumsquartier, Mariahilfer Kante und
+        Spittelberg teilen sich denselben Verkehrsraum. Wer Touristenfrequenz und Halteverbot-Vorlauf ignoriert,
+        verliert den Tag an Improvisation. Wer Zugang und Zeitfenster vorab klärt, behält den Festpreis — und die
+        Nachbarschaft.
+      </RatgeberP>
+
       <RatgeberH2>Was kostet eine Entrümpelung in Neubau?</RatgeberH2>
       <RatgeberP>
         Volumen, Zugang, Stockwerk und Entsorgungsmix bestimmen den Fixpreis nach Besichtigung — keine
@@ -313,82 +339,6 @@ export default function EntruempelungNeubauWien1070() {
           Was tun mit alten Schätzen?
         </RatgeberInternalLink>
         .
-      </RatgeberP>
-
-      <RatgeberH2>Spittelberg: wenn das Gassennetz mitplant</RatgeberH2>
-      <RatgeberP>
-        Im Spittelberg teilen sich Wirtshäuser, Ateliers und Altbauwohnungen dasselbe enge Netz. Wer
-        hier ohne Vorbereitung anrückt, blockiert schnell den Gehsteig — und erzeugt Konflikte mit
-        Anrainern, die den Bezirk als Wohnort kennen. Deshalb klären wir vor dem Einsatztag, wo das
-        Fahrzeug stehen darf, ob ein Halteverbot der <strong>MA 46</strong> nötig ist und wie lange der
-        Trageweg vom Stiegenhaus wirklich dauert. Kopfsteinpflaster, enge Wendungen und manchmal nur
-        ein schmaler Hofdurchgang entscheiden über Demontage vor Ort.
-      </RatgeberP>
-      <RatgeberP>
-        Typisch sind Nachlässe in charmanten, aber logistisch anspruchsvollen Häusern — persönliche
-        Stücke neben Möbeln, die seit Jahrzehnten nicht mehr durch die Tür passen. Bei{" "}
-        <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
-          Verlassenschaft sensibel räumen
-        </RatgeberInternalLink>{" "}
-        gilt: Wertvolles vorab sichern, Rest sortieren, Entsorgung über die <strong>MA 48</strong>. Wer
-        den Übergabetermin mit Verwaltung oder Makler in der Erstanfrage nennt, hilft uns, MA-46-Vorlauf
-        und Teamgröße passend zu wählen.
-      </RatgeberP>
-
-      <RatgeberH2>Museumsquartier und Mariahilfer Straße: Besucherstrom trifft Wohnalltag</RatgeberH2>
-      <RatgeberP>
-        Rund um Museumsquartier pulsiert tagsüber ein anderer Takt als nachts: Lieferverkehr,
-        Touristen, Anwohner auf dem Weg zur U-Bahn. Eine Entrümpelung muss diesen Rhythmus mitdenken —
-        realistisches Zeitfenster statt Improvisation zur Stoßzeit. Objekte mit Innenhofzugang brauchen
-        zusätzlich klare Absprache: Welcher Eingang ist frei? Welche Zeiten gelten laut Hausordnung?
-        Wer das bei der Besichtigung klärt, spart am Räumungstag Diskussionen mit der Verwaltung.
-      </RatgeberP>
-      <RatgeberP>
-        Entlang der Mariahilfer Straße und in den Seitenstraßen Richtung Westbahnhof mischen sich
-        Einkaufsverkehr und dichtes Wohnen. Kellerabteile sind häufig und werden gern vergessen — sie
-        gehören in dieselbe Besichtigung wie die Wohnung, sonst entsteht der Nachtrag, den niemand will.
-        Ergänzend:{" "}
-        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
-          Dachbodenentrümpelung
-        </RatgeberInternalLink>{" "}
-        und Tipps unter{" "}
-        <RatgeberInternalLink href="/ratgeber/richtig-ausmisten-wien">
-          Richtig ausmisten in Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>Neubau im Detail: Vorbereitung, die den Fixpreis hält</RatgeberH2>
-      <RatgeberP>
-        Vorbereitung hilft überall gleich: Persönliches sichern, Verbleibendes markieren, Nebenflächen
-        nennen, Fotos mit Zugang und Stockwerk senden. Bei fixen Terminen — Verkauf, Neuvermietung,
-        Übergabe an die Hausverwaltung — sagen Sie das in der Erstanfrage. Dann passen Teamgröße,
-        Halteverbot und MA-48-Entsorgung in denselben Kalender. Neubau belohnt Präzision: Mit
-        definiertem Endzustand und vollständiger Flächenangabe wird aus einer Räumung im 7. Bezirk ein
-        steuerbarer Ablauf — auch wenn Spittelberg eng bleibt und die Mariahilfer Straße laut ist.
-      </RatgeberP>
-      <RatgeberP>
-        Auch Mischobjekte sind im Neubau häufig: Wohnung plus Keller, manchmal ein kleines Atelier oder
-        Gewerbeanteil hinter der Wohnungstür. Was in der Anfrage fehlt, fehlt später im Fixpreis — und
-        genau dort entstehen Nachträge. Nennen Sie den gewünschten Endzustand in einem Satz: besenrein,
-        übergabefertig, nur leergeräumt. Dann bleibt der Preis verbindlich, und die Übergabe wird zu
-        einem nachvollziehbaren Abschluss statt zu einer Verhandlung auf der letzten Meile.
-      </RatgeberP>
-      <RatgeberP>
-        Stark überfüllte Wohnungen verlangen mehr Zeit und Diskretion. Orientierung:{" "}
-        <RatgeberInternalLink href="/ratgeber/messie-wohnung-raeumen-wien">
-          Messie-Wohnung räumen
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/leistungen/messie-entruempelung">
-          Messie-Entrümpelung
-        </RatgeberInternalLink>
-        . Bei{" "}
-        <RatgeberInternalLink href="/ratgeber/wohnungsraeumung-senioren-wien">
-          Wohnungsräumung für Senioren
-        </RatgeberInternalLink>{" "}
-        oder Umzug ins Pflegeheim gilt im 7. Bezirk dasselbe wie überall — nur mit mehr Zeit für
-        Sortieren und Abstimmen mit Angehörigen.
       </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke und Vergleich</RatgeberH3>

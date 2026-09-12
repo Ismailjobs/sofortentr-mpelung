@@ -324,73 +324,16 @@ export default function EntruempelungAlsergrundWien1090() {
         .
       </RatgeberP>
 
-      <RatgeberH2>Uni-Campus und Währinger Straße: wenn der Semesterwechsel mitplant</RatgeberH2>
-      <RatgeberP>
-        Rund um den Campus pulsiert ein anderer Takt als in ruhigeren Wohnbezirken: Semesterbeginn,
-        Prüfungsphasen, Umzugswochenenden. Wer hier entrümpeln lässt, steht selten allein — oft
-        koordiniert er mit Mitbewohner:innen, Vermieter oder Hausverwaltung gleichzeitig. Eine{" "}
-        <RatgeberInternalLink href="/ratgeber/zimmer-raeumung-wien">
-          Zimmer-Räumung
-        </RatgeberInternalLink>{" "}
-        braucht klare Regeln: Was bleibt für Nachmieter, was gehört in den Keller, was muss weg?
-        Wer das vorab markiert, spart am Einsatztag Diskussionen.
-      </RatgeberP>
-      <RatgeberP>
-        Entlang der Währinger Straße mischen sich Studenten-WGs, ältere Altbauhaushalte und kleine
-        Lokale. Kellerabteile sind häufig und werden gern vergessen — sie gehören in dieselbe
-        Besichtigung wie die Wohnung. Ergänzend:{" "}
-        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
-          Dachbodenentrümpelung
-        </RatgeberInternalLink>{" "}
-        und Tipps unter{" "}
-        <RatgeberInternalLink href="/ratgeber/richtig-ausmisten-wien">
-          Richtig ausmisten in Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>Spitalsviertel und Praxisauflösung: Diskretion als Standard</RatgeberH2>
-      <RatgeberP>
-        Im medizinischen Umfeld des 9. Bezirks liegen Ordinationen oft Tür an Tür mit Wohnungen und
-        anderen Praxen. Eine{" "}
-        <RatgeberInternalLink href="/ratgeber/praxisaufloesung-wien">
-          Praxisauflösung
-        </RatgeberInternalLink>{" "}
-        braucht deshalb Termine, die den laufenden Betrieb respektieren — frühe Morgenstunden,
-        ruhigere Nachmittage oder Fenster außerhalb der Sprechzeiten. Inventar, Wartezimmermöbel und
-        Technik werden sortiert; sensible Unterlagen bleiben getrennt, wenn Sie sie vorab markieren.
-      </RatgeberP>
-      <RatgeberP>
-        Datenschutz ist hier kein Marketingwort, sondern Teil der Leistung. Vertiefung:{" "}
-        <RatgeberInternalLink href="/ratgeber/bueroaufloesung-wien-diskretion-datenschutz">
-          Büroauflösung mit Datenschutz
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/leistungen/bueroentruempelung">
-          Büroentrümpelung
-        </RatgeberInternalLink>
-        . Entsorgung läuft über die <strong>MA 48</strong> — Sie müssen keine eigenen Mistplatz-Touren
-        organisieren. Bei Leerung vor{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
-          Sanierung
-        </RatgeberInternalLink>{" "}
-        gilt dasselbe Prinzip: Umfang erfassen, Fixpreis schriftlich, Termin mit Bauleitung abstimmen.
-      </RatgeberP>
-
       <RatgeberH2>Alsergrund im Detail: Vorbereitung, die den Fixpreis hält</RatgeberH2>
-      <RatgeberP>
-        Vorbereitung hilft überall gleich: Persönliches sichern, Verbleibendes markieren, Objektart
-        nennen (Wohnung, Praxis, Mischobjekt), Fotos mit Zugang und Stockwerk senden. Bei fixen
-        Terminen — Übergabe, Praxis-Schließung, Nachmiete — sagen Sie das in der Erstanfrage. Dann
-        passen Teamgröße, Halteverbot der <strong>MA 46</strong> und MA-48-Entsorgung in denselben
-        Kalender. Alsergrund belohnt Präzision: Mit definiertem Endzustand und vollständiger
-        Flächenangabe wird aus einer Räumung im 9. Bezirk ein steuerbarer Ablauf.
-      </RatgeberP>
       <RatgeberP>
         Auch Mischobjekte sind im Alsergrund häufig: Wohnung plus Praxisanteil, Keller und manchmal ein
         kleines Lager. Was in der Anfrage fehlt, fehlt später im Fixpreis. Nennen Sie den gewünschten
         Endzustand in einem Satz — besenrein, übergabefertig, praxisleer. Dann bleibt der Preis
-        verbindlich. Bei{" "}
+        verbindlich. Bei Leerung vor{" "}
+        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
+          Sanierung
+        </RatgeberInternalLink>{" "}
+        gilt dasselbe: Umfang erfassen, Fixpreis schriftlich, Termin mit Bauleitung abstimmen. Bei{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
           Gemeindebau / Wiener Wohnen
         </RatgeberInternalLink>{" "}
@@ -414,6 +357,14 @@ export default function EntruempelungAlsergrundWien1090() {
         ,{" "}
         <RatgeberInternalLink href="/leistungen/messie-entruempelung">
           Messie-Entrümpelung
+        </RatgeberInternalLink>
+        . Ergänzend:{" "}
+        <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
+          Dachbodenentrümpelung
+        </RatgeberInternalLink>{" "}
+        und{" "}
+        <RatgeberInternalLink href="/ratgeber/richtig-ausmisten-wien">
+          Richtig ausmisten in Wien
         </RatgeberInternalLink>
         .
       </RatgeberP>
@@ -442,7 +393,28 @@ export default function EntruempelungAlsergrundWien1090() {
         die Übergabe wird zum planbaren Abschluss statt zum Nachverhandeln.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Alsergrund: Altbau ohne Lift nahe Alser Straße und Spitalgasse</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Altbauwohnung im vierten Stock ohne Lift, wenige Gehminuten von Alser
+        Straße und Spitalgasse — Uni- und Klinikverkehr teilen sich denselben knappen Parkraum. Bei der
+        Besichtigung zeigt sich: Das Stiegenhaus ist schmal, die Wohnung voller WG-Inventar und
+        Sperriges, der Kellerabteil gehört zur Übergabe. Ohne legales Ladefenster würde jeder Gang gegen
+        Stoßzeiten und Lieferverkehr arbeiten.
+      </RatgeberP>
+      <RatgeberP>
+        Wir legen den Einsatztag bewusst außerhalb der Uni- und Visiten-Stoßzeiten, beantragen bei Bedarf
+        eine Halteverbotszone bei der <strong>MA 46</strong> und planen Demontage vor Ort. Am Tag selbst
+        schützen wir Treppenhaus und Geländer, zerlegen große Möbel in der Wohnung und tragen in kurzen
+        Ketten zum Fahrzeug. Mitbewohner:innen und Hausverwaltung wissen vorab, welches Zeitfenster gilt —
+        so bleibt der Hausflur ruhig trotz dichten Alltags.
+      </RatgeberP>
+      <RatgeberP>
+        Sperrmüll, Elektro und Reststoffe trennen wir und führen sie über die <strong>MA 48</strong> ab;
+        Verwertbares wird geprüft, Persönliches war vorab markiert. Wohnung und Keller sind am Ende
+        besenrein, der Fixpreis hält, weil Zugang und Nebenflächen bei der Besichtigung erfasst waren —
+        ohne dass Sie selbst Mistplatz-Touren organisieren müssen.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Alsergrund (1090)" />
 
 <RatgeberCtaBox>

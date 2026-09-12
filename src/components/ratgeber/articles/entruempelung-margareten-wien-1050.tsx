@@ -270,6 +270,26 @@ export default function EntruempelungMargaretenWien1050() {
         auch wenn der Inhalt der Wohnung emotional belastet.
       </RatgeberP>
 
+      <RatgeberH3>Praxis-Beispiel aus Margareten: Dichter Altbau an Margaretenstraße und Arbeitergasse</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz zwischen Margaretenstraße und Arbeitergasse: Zinshauswohnung im vierten Stock ohne
+        Lift, dazu ein Kellerabteil voller Sperrgut. Der Innenhof ist der einzige sinnvolle Weg nach draußen —
+        eng, gewunden, mit Nachbarn, die jeden längeren Aufenthalt im Eingang spüren. Vor dem Haus ist Parkraum
+        knapp; ohne Plan wird aus dem Abtransport ein Stau auf dem Gehsteig. Genau diese Kombination aus Stockwerk
+        und Hofzugang macht Margareten kalkulatorisch anspruchsvoll.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung prüfen wir Hofdurchfahrt, Türbreiten und Demontagebedarf und beantragen bei der
+        MA&nbsp;46 ein temporäres Halteverbot mit Vorlauf zum Übergabetermin. Am Einsatztag zerlegen wir große
+        Möbel vor Ort, schützen Stiegenhaus und Flur und laden in kurzen Ketten vom Hof zum Fahrzeug. Parallel
+        leeren wir das Kellerabteil und sortieren Sperrmüll, Elektro und Reststoffe für die MA-48-Wege — ohne
+        dass Sie selbst zum Mistplatz fahren.
+      </RatgeberP>
+      <RatgeberP>
+        Die Übergabe erfolgt besenrein zum Fixpreis nach Besichtigung: Trageweg, Stockwerk und Nebenfläche waren
+        von Anfang an kalkuliert — genau das, was in dichter Margaretener Gründerzeit den Unterschied macht.
+      </RatgeberP>
+
       <RatgeberH2>Fixpreis: was den Aufwand in Margareten bestimmt</RatgeberH2>
       <RatgeberP>
         Volumen, Stockwerk, Lift, Trageweg, Demontage und Entsorgungsmix — nicht ein pauschaler
@@ -326,9 +346,8 @@ export default function EntruempelungMargaretenWien1050() {
         </RatgeberLi>
       </RatgeberOl>
       <RatgeberP>
-        Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig. Das klingt einfach, spart aber
-        Diskussionen über vergessene Kellerabteile oder Restmüll in Ecken. Mit klarer Definition, realistischer
-        Logistik und MA-48-konformer Entsorgung wird aus einer Räumung im 5. Bezirk ein steuerbarer Ablauf —
+        Der Endzustand sollte in einem Satz stehen: besenrein und übergabefähig. Mit klarer Definition,
+        realistischer Logistik und MA-48-konformer Entsorgung bleibt die Räumung im 5. Bezirk planbar —
         auch wenn die Stiege eng und der Hof verwinkelt ist.
       </RatgeberP>
 

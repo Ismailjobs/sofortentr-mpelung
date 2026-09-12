@@ -206,6 +206,26 @@ export default function Entruempelung1010Wien() {
         wie wir Übergabe, Sortierung und Dokumentation ruhig strukturieren.
       </RatgeberP>
 
+      <RatgeberH3>Praxis-Beispiel aus der Inneren Stadt: Altbau am Graben, 4. Stock ohne Lift</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz: eine Altbauwohnung zwischen Graben und Herrengasse, vierter Stock, kein Lift, enger
+        Hofdurchgang. Bei der Besichtigung wird klar: Der Schrank passt nur demontiert durch die Wendeltreppe,
+        Parkett und Geländer brauchen Schutz, und vor dem Haus gibt es nur ein kurzes legales Ladefenster —
+        Touristenstrom und Lieferverkehr teilen sich denselben Meter Gehsteig.
+      </RatgeberP>
+      <RatgeberP>
+        Wir beantragen rechtzeitig eine temporäre Halteverbotszone bei der MA&nbsp;46, legen das Team auf Demontage
+        und kurze Trageketten aus und wählen ein Zeitfenster am Rand der Stoßzeiten. Am Einsatztag schützen wir
+        Stiegenhaus und Hof, zerlegen sperrige Möbel vor Ort und laden in wenigen, klaren Phasen — ohne den Hof
+        stundenlang zu blockieren. Denkmalnahe Böden und Stuck bleiben unberührt; die Hausgemeinschaft erlebt den
+        Tag als ruhige Abwicklung statt als Baustelle im Eingang.
+      </RatgeberP>
+      <RatgeberP>
+        Parallel sortieren wir Verwertbares und entsorgen den Rest MA-48-konform. Am Ende steht die vereinbarte
+        besenreine Übergabe — Fixpreis nach Besichtigung, ohne Nachtrag, weil Zugang, Stockwerk und Ladezone von
+        Anfang an Teil der Kalkulation waren.
+      </RatgeberP>
+
       <RatgeberH2>Was den Aufwand in 1010 wirklich bestimmt — ohne Fantasiepreise</RatgeberH2>
       <RatgeberP>
         Es gibt keine seriöse „Standardtabelle“, die eine denkmalgeschützte Wohnung am Graben und ein Erdgeschoss
@@ -301,30 +321,6 @@ export default function Entruempelung1010Wien() {
         andere Zufahrts- und Bebauungsmuster.
       </RatgeberP>
 
-      <RatgeberH2>Vorbereitung, die in der Inneren Stadt Zeit und Nerven spart</RatgeberH2>
-      <RatgeberP>
-        Bevor das Team kommt, lohnt eine kurze, klare Vorbereitung: Persönliche Dokumente, Schlüssel, Bargeld und
-        Schmuck sichern; was bleiben soll, markieren; Hausverwaltung über den Termin informieren. In denkmalnahen
-        Häusern ist der Hinweis auf schonenden Umgang mit Stiegenhaus und Hof oft genauso wichtig wie die reine
-        Inventarliste. Wer Fotos sendet, sollte Stockwerk, Lift, Innenhofzufahrt und Nebenräume mit abbilden —
-        sonst fehlt der teuerste Teil der Kalkulation.
-      </RatgeberP>
-      <RatgeberP>
-        Randzeiten sind in der Fußgängerzone oft die ruhigeren Fenster: weniger Besucherstrom, bessere Abstimmung
-        mit Lieferverkehr, klarere Kommunikation mit der Hausgemeinschaft. Das bedeutet nicht automatisch
-        „Nachtarbeit“, sondern ein bewusst gewähltes Zeitfenster, das zum Objekt passt. Gerade bei Kanzleien und
-        Ordinationen ist das der Unterschied zwischen diskreter Abwicklung und einem Tag, der im Hausflur
-        diskutiert wird.
-      </RatgeberP>
-      <RatgeberP>
-        Auch der Endzustand sollte vorab in einem Satz stehen: leer, besenrein, übergabefähig für Verkauf oder
-        Sanierung. In 1010 treffen oft Notartermine, Maklerbesichtigungen und Hausverwaltungsfristen aufeinander.
-        Ein Fixpreis ohne definiertes Ziel bleibt weich — ein Fixpreis mit klarem Ziel bleibt planbar. Genau diese
-        Klarheit verbindet Denkmal-Sensibilität mit professioneller Räumungslogik und macht Entrümpelung in der
-        Inneren Stadt zu einem Projekt, das man steuern kann statt nur ertragen.
-      </RatgeberP>
-
-      
       <BezirkStructureBlocks districtLabel="der Inneren Stadt (1010)" />
 
 <RatgeberCtaBox>

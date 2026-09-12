@@ -147,13 +147,6 @@ export default function EntruempelungOttakringWien1160() {
         zusätzliche Hilfskraft ohne Ladezone. Wir klären das bei der Besichtigung — nicht erst, wenn der Transporter
         schon vor der Einfahrt steht.
       </RatgeberP>
-      <RatgeberP>
-        Am Brunnenmarkt und entlang der Ottakringer Straße ist Improvisation teuer: Konflikte mit Lieferverkehr,
-        Anrainern und Marktgeschehen kosten mehr Zeit als ein rechtzeitig beantragtes Halteverbot. Wir planen
-        deshalb den MA-46-Vorlauf bewusst mit dem Räumungstermin — besonders wenn Wohnung und Keller denselben Tag
-        teilen und der Trageweg lang ist. So bleibt dichter Wohnbau beherrschbar.
-      </RatgeberP>
-
       <RatgeberH2>MA 48: Entsorgung aus dem Mehrparteienhaus</RatgeberH2>
       <RatgeberP>
         Was aus Wohnung und Keller kommt, muss korrekt weiter. Die <strong>MA 48</strong> stellt Mistplätze und
@@ -224,12 +217,6 @@ export default function EntruempelungOttakringWien1160() {
         </RatgeberInternalLink>
         .
       </RatgeberP>
-      <RatgeberP>
-        Am Brunnenmarkt und in dichter Bebauung zählt der Zugang oft mehr als die Zimmeranzahl. Deshalb
-        besichtigen wir Höfe, Treppen und Nebenflächen mit — und schreiben den Fixpreis erst danach. So bleibt der
-        Preis verbindlich, auch wenn der Alltag im Grätzl laut und der Hof eng ist.
-      </RatgeberP>
-
       <RatgeberH2>Ablauf in Ottakring</RatgeberH2>
       <RatgeberOl>
         <RatgeberLi>
@@ -258,39 +245,32 @@ export default function EntruempelungOttakringWien1160() {
         . Beide Bezirke teilen dichten Wohnbau — die Grätzl-Motive unterscheiden sich dennoch spürbar.
       </RatgeberP>
 
-      <RatgeberH2>Brunnenmarkt-Takt, Ottakringer Straße und die Kunst der kurzen Ladefenster</RatgeberH2>
+      <RatgeberH3>Praxis-Beispiel aus Ottakring: Altbauwohnung nahe Ottakringer Straße und Brunnenmarkt</RatgeberH3>
       <RatgeberP>
-        Rund um den Brunnenmarkt ist der Gehsteig selten „frei“. Lieferverkehr, Marktgeschehen und Anrainer teilen
-        denselben Raum. Eine Entrümpelung muss diesen Takt mitdenken: realistisches Zeitfenster, ggf. MA-46-Halteverbot,
-        Demontage im Haus statt Improvisation auf der Straße. Wer hier ohne Plan hält, produziert Konflikte — wer
-        vorab klärt, arbeitet ruhig mitten im Grätzl.
+        Eine dreieinhalb-Zimmer-Wohnung im dritten Stock ohne Lift, Hofzufahrt über einen schmalen Durchgang,
+        Kellerabteil im Nebengebäude — typisch für den dichten Wohnbau zwischen Ottakringer Straße und Brunnenmarkt.
+        Am Räumungstag teilen Lieferverkehr und Marktgeschehen denselben Gehsteig; ohne klaren Ladeplatz stockt
+        jeder Gang und erzeugt Konflikte mit Anrainern. Bei der Besichtigung haben wir Stockwerk, Trageweg und
+        Keller erfasst und für den Einsatztag eine temporäre Halteverbotszone bei der <strong>MA 46</strong>{" "}
+        beantragt — mit Vorlauf, der zum Übergabetermin der Hausverwaltung passte.
       </RatgeberP>
       <RatgeberP>
-        Entlang der Ottakringer Straße und in Neulerchenfeld bleibt die Bebauung dicht: Mehrparteienhäuser, enge
-        Höfe, oft kein Lift. Kellerabteile sind häufig und werden gern vergessen. Genau dort entsteht der
-        Nachtrag, den niemand will. Deshalb gehören Wohnung und Nebenflächen in dieselbe Besichtigung und denselben
-        Fixpreis — sonst bleibt der Preis nur auf dem Papier fest.
+        Am Tag selbst: Demontage großer Möbel im Haus, Bodenschutz im Stiegenhaus, kurze Ladephasen am markierten
+        Spot. Wohnung und Keller liefen in einem Zug; Sperrmüll, Elektro und Reststoffe wurden sortiert und über
+        die <strong>MA 48</strong> fachgerecht entsorgt. Der Fixpreis war nach Besichtigung schriftlich fixiert —
+        ohne Nachtrag, weil Nebenflächen und Zugang von Anfang an im Umfang standen.
       </RatgeberP>
       <RatgeberP>
-        Weiter Richtung ruhigerer Lagen ändert sich die Lautstärke, nicht aber die Grundregel: Zugang entscheidet.
-        Vorbereitung hilft überall: Persönliches sichern, Verbleibendes markieren, Hausverwaltung informieren,
-        Fotos mit Stockwerk und Hofzufahrt senden, Übergabetermin nennen. Bei Gemeindebau zusätzlich den gewünschten
-        Endzustand und Fristen klar machen. Dann passen Teamgröße, Halteverbot und MA-48-Entsorgung in denselben
-        Kalender.
+        Genau so bleibt Entrümpelung am Brunnenmarkt beherrschbar: nicht gegen den Grätzl-Takt, sondern mit
+        geplantem Haltefenster, realistischer Teamgröße und klarem Endzustand.
       </RatgeberP>
       <RatgeberP>
-        Ottakring belohnt pragmatische Klarheit. Mit definiertem Endzustand, vollständiger Flächenangabe und
-        realistischer Logistik wird aus einer Räumung im 16. Bezirk ein steuerbarer Ablauf — auch wenn der
-        Brunnenmarkt längst wach ist und der Hof eng bleibt. Genau das ist professionelle Entrümpelung in dichtem
-        Wohnbau: nicht lauter, sondern genauer.
-      </RatgeberP>
-      <RatgeberP>
-        Senden Sie Fotos von Wohnung, Keller und Zugang — oder vereinbaren Sie eine Besichtigung. Je vollständiger
-        die Erstanfrage, desto belastbarer der Fixpreis. So bleibt Entrümpelung in 1160 ruhig, nachvollziehbar und
-        anschlussfähig an Hausverwaltung oder Übergabetermin.
+        In Ottakring scheitern Aufträge selten am Inventar — sondern an unterschätzten Höfen, langen
+        Kellerwegen und einem Marktmorgen ohne Ladezone. Wer Brunnenmarkt-Nähe, Stockwerk und Nebenflächen
+        schon in der Anfrage nennt, spart Nachfragen und hält den Fixpreis nach Besichtigung dort, wo er
+        hingehört: verbindlich, ohne Überraschung am Einsatztag.
       </RatgeberP>
 
-      
       <BezirkStructureBlocks districtLabel="Ottakring (1160)" />
 
 <RatgeberCtaBox>

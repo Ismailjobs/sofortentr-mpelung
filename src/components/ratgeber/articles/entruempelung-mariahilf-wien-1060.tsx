@@ -217,7 +217,27 @@ export default function EntruempelungMariahilfWien1060() {
         <RatgeberInternalLink href="/ratgeber/dachbodenraeumung-wien-ma-48">
           Dachbodenräumung &amp; MA 48
         </RatgeberInternalLink>
-        . Nebenflächen gehören in denselben Fixpreis, wenn sie bei der Besichtigung erfasst sind.
+        .         Nebenflächen gehören in denselben Fixpreis, wenn sie bei der Besichtigung erfasst sind.
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel aus Mariahilf: Seitenstraße an der Mariahilfer Straße, Ladechaos</RatgeberH3>
+      <RatgeberP>
+        Typischer Einsatz in einer Seitenstraße zur Mariahilfer Straße bzw. Richtung Gumpendorfer Straße:
+        Altbauwohnung über dem Handel, zweiter Stock ohne Lift, Übergabe vor Neuvermietung. Fußgängerfrequenz,
+        Lieferverkehr und knappe Meter vor dem Haus machen spontanes Halten unmöglich — wer ohne Zone anrückt,
+        blockiert den Gehsteig und verliert den ganzen Vormittag. In Retail-Lage ist das legale Ladefenster oft
+        der teuerste Faktor an Zeit.
+      </RatgeberP>
+      <RatgeberP>
+        Bei der Besichtigung klären wir Hofdurchfahrt, Türbreiten und das realistische Ladefenster und beantragen
+        bei der MA&nbsp;46 ein temporäres Halteverbot mit Vorlauf. Am Einsatztag demontieren wir sperrige Möbel vor
+        Ort, schützen Treppenhaus und Böden und laden in kurzen, intensiven Phasen — abgestimmt auf Lieferfenster
+        und Nachbarschaft. Parallel trennen wir Hausrat, Elektro und Reststoffe für die MA-48-Entsorgung.
+      </RatgeberP>
+      <RatgeberP>
+        Am Ende steht die besenreine Übergabe zum Fixpreis nach Besichtigung: Retail-Lage, Stockwerk und
+        Ladezone waren von Anfang an Teil der Kalkulation — nicht die Überraschung am Räumungsmorgen. Der
+        vereinbarte Endzustand gilt auch, wenn die Mariahilfer Straße voller Alltag ist.
       </RatgeberP>
 
       <RatgeberH2>Fixpreis ohne Fantasie-Preise</RatgeberH2>
@@ -254,27 +274,6 @@ export default function EntruempelungMariahilfWien1060() {
         Mariahilfer Straße voller Alltag ist und das Zeitfenster eng wirkt.
       </RatgeberP>
 
-      <RatgeberH2>Seitenstraßen, Naschmarkt und Alltagslogistik</RatgeberH2>
-      <RatgeberP>
-        Abseits der Mariahilfer Straße ändert sich der Takt: Seitenstraßen am Naschmarkt, Gumpendorfer Straße
-        und die Grätzln Richtung Getreidemarkt sind dichter, enger und oft ohne klaren Ladeplatz. Hier zählen
-        Hofdurchfahrten, Kellerschächte und die Rücksicht auf Markt- und Lieferverkehr. Eine Räumung am
-        Markttag ohne Zeitfenster ist etwas anderes als ein ruhiger Vormittag in einer Seitenstraße — deshalb
-        gehört der Kalender in die Erstanfrage.
-      </RatgeberP>
-      <RatgeberP>
-        Viele Wohnungen über dem Handel haben lange Tragewege durch Stiegenhäuser, die nicht für Sperrgut
-        gebaut wurden. Demontage vor Ort, Schutz von Treppenhaus und Böden sowie kurze Ladeketten schützen
-        Nachbarn und Team. Wer das unterschätzt, verliert Stunden. Wer es bei der Besichtigung klärt, übergibt
-        besenrein — auch wenn der Gehsteig voller Alltag ist.
-      </RatgeberP>
-      <RatgeberP>
-        Für Express-Fälle vor Vermietung oder Geschäftsschließung gilt: Je früher Zufahrt, Volumen und
-        Nebenflächen klar sind, desto realistischer der Termin. Fotos helfen zur Orientierung, ersetzen in
-        dichter Retail-Lage aber selten die Vor-Ort-Klärung von Türbreiten und Haltemöglichkeit. Genau deshalb
-        bleibt der Fixpreis an die Besichtigung gebunden — und nicht an eine Internet-Pauschale.
-      </RatgeberP>
-
       <RatgeberH2>Vorbereitung und Ablauf</RatgeberH2>
       <RatgeberP>
         Vorbereitung spart in Mariahilf besonders viel Zeit: Persönliches sichern, Verbleibendes markieren,
@@ -305,10 +304,8 @@ export default function EntruempelungMariahilfWien1060() {
         </RatgeberLi>
       </RatgeberOl>
       <RatgeberP>
-        Der Endzustand sollte klar sein: besenrein und übergabefähig. In dichter Handelslage schützt das vor
-        Diskussionen über Restmüll, vergessene Kellerteile oder blockierte Gehsteige. Mit klarer Logistik und
-        MA-48-konformer Entsorgung wird aus einer Räumung im 6. Bezirk ein steuerbarer Vormittag — auch wenn die
-        Mariahilfer Straße voller Alltag ist.
+        Der Endzustand sollte klar sein: besenrein und übergabefähig. Mit klarer Logistik und MA-48-konformer
+        Entsorgung bleibt die Räumung im 6. Bezirk planbar — auch wenn die Mariahilfer Straße voller Alltag ist.
       </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke im Ratgeber</RatgeberH3>

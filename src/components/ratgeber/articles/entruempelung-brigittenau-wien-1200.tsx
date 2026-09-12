@@ -295,37 +295,17 @@ export default function EntruempelungBrigittenauWien1200() {
         aufeinander. Wer hier entrümpeln lässt, arbeitet nicht gegen Stille, sondern gegen knappe
         Ladezonen und lange Stiegenhäuser. Richtung Augarten wird es etwas ruhiger, aber die
         Gemeindebau-Logik bleibt: große Blocks, viele Parteien, Hausverwaltungen mit klaren
-        Übergabefristen.
-      </RatgeberP>
-      <RatgeberP>
-        Der 20. Bezirk belohnt Planung und bestraft Improvisation. Wer nur „1200“ auf dem Zettel hat,
-        unterschätzt oft den Unterschied zwischen einer Wohnung am Donaukanal und einer Anlage Richtung
-        Wallensteinstraße. Bei der Besichtigung klären wir Zugang, Keller, Abstellraum und den
-        gewünschten Endzustand — dann passt der Fixpreis zum Objekt, nicht zur Postleitzahl allein.
+        Übergabefristen. Bei der Besichtigung klären wir Zugang, Keller, Abstellraum und Endzustand —
+        dann passt der Fixpreis zum Objekt, nicht zur Postleitzahl allein.
       </RatgeberP>
 
-      <RatgeberH2>Gemeindebau im Detail: Keller, Abstellraum und Übergabetermin</RatgeberH2>
+      <RatgeberH2>Genossenschaft und Nebenflächen zur Übergabe</RatgeberH2>
       <RatgeberP>
-        Viele Anfragen in Brigittenau betreffen Wiener-Wohnen-Objekte mit fixen Rückgabeterminen. Die
-        Verwaltung erwartet besenreine Wohnungen — und oft mitgeleerte Kellerabteile, die im Mietvertrag
-        mitstehen. Wer zu spät plant, steht am Übergabetag mit halbleerem Keller und nervöser
-        Hausverwaltung da. Deshalb erfassen wir Wohnung und Nebenflächen in einer Besichtigung und
-        nennen realistische Fenster statt leerer Versprechen.
-      </RatgeberP>
-      <RatgeberP>
-        Praxisnahe Orientierung:{" "}
-        <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
-          Wohnungsübergabe Wiener Wohnen
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
-          Rückgabevorgaben der Stadt Wien
-        </RatgeberInternalLink>{" "}
-        und bei Genossenschaften{" "}
+        Neben Wiener Wohnen kommen Genossenschaften vor — Orientierung:{" "}
         <RatgeberInternalLink href="/ratgeber/siedlungsunion-genossenschaft-entruempelung-wien">
           Siedlungsunion
         </RatgeberInternalLink>
-        . Auch{" "}
+        .{" "}
         <RatgeberInternalLink href="/leistungen/dachbodenentruempelung">
           Dachbodenentrümpelung
         </RatgeberInternalLink>{" "}
@@ -333,55 +313,19 @@ export default function EntruempelungBrigittenauWien1200() {
         <RatgeberInternalLink href="/ratgeber/keller-aufraeumen-entruempeln-wien">
           Keller aufräumen
         </RatgeberInternalLink>{" "}
-        gehören oft in denselben Auftrag — wenn sie zur Übergabe zählen, gehören sie in denselben
-        Fixpreis.
-      </RatgeberP>
-
-      <RatgeberH2>Donaukanal und Ufernähe: Logistik zwischen Radweg und Anwohnern</RatgeberH2>
-      <RatgeberP>
-        Am Donaukanal und in den dicht bebauten Straßen daneben ist Parkraum knapp. Lieferverkehr,
-        Radwege und Spaziergänger:innen teilen sich den Gehsteig — ein Lkw „kurz vor der Tür“ ist selten
-        selbstverständlich. Bei Bedarf beantragen wir ein Halteverbot der <strong>MA 46</strong> mit
-        realistischem Vorlauf, damit der Abtransport nicht im Stau oder in Diskussionen mit Anrainern
-        stecken bleibt. Besonders bei großen Gemeindebau-Volumina zählt jede legale Lademinute.
-      </RatgeberP>
-      <RatgeberP>
-        Dazu kommen Mischobjekte: private Wohnungen neben Gewerbe, Neubauanlagen neben älteren Blocks.
-        Eine{" "}
-        <RatgeberInternalLink href="/leistungen/lagerentruempelung">
-          Lagerentrümpelung
-        </RatgeberInternalLink>{" "}
-        braucht andere Wege als eine{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-          Wohnungsentrümpelung
-        </RatgeberInternalLink>
-        — beides kommt in Brigittenau vor. Bei Nachlassfällen:{" "}
-        <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
-          Verlassenschaft sensibel räumen
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/ratgeber/wohnungsaufloesung-nach-todesfall-wien">
-          Wohnungsauflösung nach Todesfall
-        </RatgeberInternalLink>
-        .
+        gehören in denselben Fixpreis, wenn sie zur Rückgabe zählen.
       </RatgeberP>
 
       <RatgeberH2>MA 48 im 20. Bezirk: Entsorgung, die nicht bei Mieter:innen hängen bleibt</RatgeberH2>
       <RatgeberP>
         Sperrmüll, Elektro und Reststoffe trennen wir und führen sie über die <strong>MA 48</strong> ab.
         Bei kompletten Haushaltsauflösungen in dicht bebauten Anlagen ist Eigenregie schnell
-        unpraktisch: Fahrten, Sortierung und Zeit summieren sich. Wir übernehmen die fachgerechte
-        Entsorgung im Fixpreis — Details im{" "}
+        unpraktisch. Details im{" "}
         <RatgeberInternalLink href="/ratgeber/ma-48-mistplaetze-entsorgungs-guide-wien">
           MA-48-Mistplätze-Guide
         </RatgeberInternalLink>
-        . So bleibt die Wohnung wirklich leer, nicht nur „optisch aufgeräumt“.
-      </RatgeberP>
-      <RatgeberP>
-        Vorbereitung hilft überall gleich: Persönliches sichern, Nebenflächen nennen, Fotos von Zugang
-        und Stockwerk senden. Wenn ein Übergabetermin fix ist — Wiener Wohnen, Genossenschaft oder
-        privater Vermieter — sagen Sie das in der Erstanfrage. Dann können Teamgröße, MA-46-Vorlauf
-        und Entsorgungslogistik so gelegt werden, dass der Tag ruhig endet. Typische Stolpersteine:{" "}
+        . Vorbereitung: Persönliches sichern, Nebenflächen nennen, Übergabetermin in der Erstanfrage
+        sagen. Stolpersteine:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
           5 Fehler bei der Entrümpelung
         </RatgeberInternalLink>
@@ -410,7 +354,11 @@ export default function EntruempelungBrigittenauWien1200() {
         </RatgeberInternalLink>{" "}
         und Umzug ins Pflegeheim sind im 20. Bezirk keine Seltenheit. Hier zählt Geduld beim Sortieren
         und ein Team, das den Ablauf im dicht bewohnten Haus ruhig hält — ohne unnötige Präsenz im
-        Stiegenhaus.
+        Stiegenhaus. Bei Lager oder Gewerbe:{" "}
+        <RatgeberInternalLink href="/leistungen/lagerentruempelung">
+          Lagerentrümpelung
+        </RatgeberInternalLink>
+        .
       </RatgeberP>
 
       <RatgeberH3>Nachbarbezirke</RatgeberH3>
@@ -427,7 +375,28 @@ export default function EntruempelungBrigittenauWien1200() {
         noch dichter und stärker von Gemeindebau geprägt.
       </RatgeberP>
 
-      
+      <RatgeberH3>Praxis-Beispiel aus Brigittenau: Gemeindebau Wallensteinstraße, lange Stiege, knappe Ladezone</RatgeberH3>
+      <RatgeberP>
+        Wiener-Wohnen-Wohnung im fünften Stock ohne zuverlässigen Lastenaufzug, Kellerabteil im
+        Untergeschoss, Übergabetermin in zehn Tagen — Lage nahe Wallensteinstraße, Zufahrt Richtung
+        Handelskai mit knapper Ladezone. Lieferverkehr und Anwohnerparkplätze teilen denselben Raum;
+        ohne legale Minute am Fahrzeug dauert jeder Gang unnötig lang. Bei der Besichtigung erfassten wir
+        Wohnung und Keller gemeinsam und beantragten ein Halteverbot der <strong>MA 46</strong> mit
+        Vorlauf zum Rückgabetermin der Verwaltung.
+      </RatgeberP>
+      <RatgeberP>
+        Am Einsatztag: Demontage im Haus, geschützte Tragewege, kurze Ladephasen am markierten Spot.
+        Volumen und Stiege bestimmten die Teamgröße — nicht die reine Zimmerzahl. Sperrmüll und Elektro
+        gingen über die <strong>MA 48</strong>; die Wohnung wurde besenrein übergeben, Keller leer.
+        Der Fixpreis nach Besichtigung blieb gültig, weil Nebenflächen und Endzustand schriftlich
+        vereinbart waren — ohne Nachtrag am Übergabetag. Die Verwaltung erhielt den vereinbarten Zustand
+        termintreu.
+      </RatgeberP>
+      <RatgeberP>
+        Entscheidend war der gemeinsame Kalender: Haltefenster der MA 46, lange Stiege und Übergabefrist —
+        ohne Puffer am Gehsteig wäre der Rückgabetermin der Verwaltung kaum zu halten gewesen.
+      </RatgeberP>
+
       <BezirkStructureBlocks districtLabel="Brigittenau (1200)" />
 
 <RatgeberCtaBox>
