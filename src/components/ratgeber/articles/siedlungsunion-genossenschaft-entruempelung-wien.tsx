@@ -255,7 +255,7 @@ export default function SiedlungsunionGenossenschaftEntruempelungWien() {
       </RatgeberP>
       <RatgeberP>
         Falls Sie neben der Siedlungsunion auch Wohnungen anderer großer Genossenschaften in Wien oder{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Niederösterreich
         </RatgeberInternalLink>{" "}
         zurückgeben müssen, bietet unser Ratgeber-Portal umfassende Hilfestellungen — etwa für die{" "}

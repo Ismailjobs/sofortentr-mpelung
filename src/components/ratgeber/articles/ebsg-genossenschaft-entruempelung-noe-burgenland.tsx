@@ -82,8 +82,8 @@ export default function EbsgGenossenschaftEntruempelungNoeBurgenland() {
         Eine solche Wohnungsübergabe verlangt meist deutlich mehr logistischen Aufwand als ein gewöhnlicher
         Privatumzug. Als Sofort Entrümpelung stehen wir Ihnen als erfahrener und verlässlicher Partner zur
         Seite, um die Wohnungsräumung bei der EBSG effizient, diskret und rechtssicher abzuwickeln — in{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">Niederösterreich</RatgeberInternalLink>{" "}
-        und im <RatgeberInternalLink href="/entruempelung-burgenland">Burgenland</RatgeberInternalLink>.
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">Niederösterreich</RatgeberInternalLink>{" "}
+        und im <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">Burgenland</RatgeberInternalLink>.
       </RatgeberP>
 
       <RatgeberP>

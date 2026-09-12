@@ -1,7 +1,6 @@
 import { getSiteOrigin } from "@/config/site-url";
 import { SITE_BRAND } from "@/config/site-brand";
 import { SERVICES, SERVICE_IMAGE_DIR } from "@/data/site-content";
-import { getLocationBySlug } from "@/data/location-landings";
 import {
   areaServedForSchema,
   homeAndConstructionBusinessGraphNode,
@@ -134,25 +133,17 @@ function catalogServiceType(slug: string): string {
   return SERVICES.find((s) => s.id === slug)?.schemaServiceType ?? serviceCatalogCategory(slug);
 }
 
-export type LocalBusinessJsonLdProps = {
-  /** Lokations-Landing (Bezirk oder Bundesland) → priorisiert `areaServed`. */
-  priorityLocationSlug?: string | null;
-};
-
 /**
  * JSON-LD: Organization + HomeAndConstructionBusiness + OfferCatalog + WebSite (@graph).
  * Alle Schema-Bausteine werden zentral aus `@/lib/schema-org` bezogen.
  */
-export default function LocalBusinessJsonLd({ priorityLocationSlug = null }: LocalBusinessJsonLdProps) {
+export default function LocalBusinessJsonLd() {
   const origin = getSiteOrigin();
-  const location = priorityLocationSlug ? getLocationBySlug(priorityLocationSlug) : undefined;
-  const priorityDistrict = location?.kind === "district" ? location.district : undefined;
-  const priorityRegionName = location?.kind === "region" ? location.region.name : null;
 
   const { organizationId, businessId, catalogId, areaWienId, websiteId } = schemaOriginIds(origin);
   const logoUrl = `${origin}/sofort-logo.webp`;
   const logoId = `${origin}/#logo`;
-  const areaServed = areaServedForSchema(priorityDistrict, areaWienId, priorityRegionName);
+  const areaServed = areaServedForSchema(undefined, areaWienId);
 
   const itemListElement = SERVICE_ENTRIES.map((s, index) => ({
     "@type": "ListItem" as const,

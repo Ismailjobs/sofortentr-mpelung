@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteOrigin } from "@/config/site-url";
 import { DATENSCHUTZ_PATH, IMPRESSUM_PATH, RATGEBER_PATH, SERVICES } from "@/data/site-content";
-import { getAllLocationSlugs } from "@/data/location-landings";
 import { getAllRatgeberSlugs, getRatgeberArticle } from "@/data/ratgeber/registry";
 import { getRatgeberEffectiveUpdatedAt } from "@/lib/ratgeber-dates";
 import { LEISTUNGEN_CONTENT_UPDATED_AT } from "@/data/service-page-details";
@@ -23,15 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: path === "" || path === "/leistungen" ? "weekly" : "monthly",
     priority: path === "" ? 1 : 0.8,
   }));
-
-  for (const slug of getAllLocationSlugs()) {
-    entries.push({
-      url: `${base}/${slug}`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.75,
-    });
-  }
 
   for (const s of SERVICES) {
     entries.push({

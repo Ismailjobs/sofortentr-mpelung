@@ -282,7 +282,7 @@ export default function FamilienwohnbauGenossenschaftEntruempelungWien() {
           ÖVW (Volkswohnungswerk)
         </RatgeberInternalLink>{" "}
         oder Genossenschaften in{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Niederösterreich
         </RatgeberInternalLink>
         .

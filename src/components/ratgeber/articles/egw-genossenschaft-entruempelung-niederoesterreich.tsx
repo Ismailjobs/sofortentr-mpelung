@@ -80,7 +80,7 @@ export default function EgwGenossenschaftEntruempelungNiederoesterreich() {
         Mit Sofort Entrümpelung an Ihrer Seite meistern Sie die Wohnungsübergabe stressfrei. Wir garantieren
         Ihnen eine fachgerechte Räumung, verlässliche Termintreue und eine besenreine Übergabe — alles zu
         einem transparenten Fixpreis. Regionale Abdeckung:{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Entrümpelung in Niederösterreich
         </RatgeberInternalLink>
         .

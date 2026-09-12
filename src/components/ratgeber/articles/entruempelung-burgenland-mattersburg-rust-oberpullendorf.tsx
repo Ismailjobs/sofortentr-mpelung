@@ -82,7 +82,7 @@ export default function EntruempelungBurgenlandMattersburgRustOberpullendorf() {
         Sofort Entrümpelung bedient das Burgenland mit optimierten Routen aus Wien, regionalen
         Entsorgungspartnern und termingerechter Containerlogistik. Dieser Leitfaden zeigt die
         ortsspezifischen Besonderheiten — ergänzend zu unserer{" "}
-        <RatgeberInternalLink href="/entruempelung-burgenland">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">
           Entrümpelung im Burgenland
         </RatgeberInternalLink>{" "}
         und dem Umland-Ratgeber{" "}

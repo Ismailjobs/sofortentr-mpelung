@@ -11,7 +11,7 @@ Ziel: **ca. 1.000–1.200 Wörter** (wichtige PLZ wie 1010/1100/1220 gerne läng
 - [ ] Kosten: Faktoren + Link `/preise` / `was-kostet-entruempelung-wien` — **keine erfundenen €-Tabellen**
 - [ ] 4–6 FAQ in `meta.faq` (FAQPage JSON-LD)
 - [ ] CTA → `/#kontakt-formular`
-- [ ] Keine Links auf `/entruempelung-wien-{PLZ}` Landings (nach Migration)
+- [x] Keine Links auf `/entruempelung-wien-{PLZ}` Landings (nach Migration)
 - [ ] Externe Links selten (ca. 1× pro 2–3 Artikeln, nur offizielle Quellen)
 
 ## Schema

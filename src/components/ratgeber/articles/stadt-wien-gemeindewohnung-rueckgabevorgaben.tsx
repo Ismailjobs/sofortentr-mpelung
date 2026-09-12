@@ -274,24 +274,24 @@ export default function StadtWienGemeindewohnungRueckgabevorgaben() {
       <RatgeberUl>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/entruempelung-wien-1100">Favoriten</RatgeberInternalLink> &amp;{" "}
-            <RatgeberInternalLink href="/entruempelung-wien-1110">Simmering</RatgeberInternalLink>:
+            <RatgeberInternalLink href="/ratgeber/entruempelung-favoriten-wien-1100">Favoriten</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-simmering-wien-1110">Simmering</RatgeberInternalLink>:
           </strong>{" "}
           In den großen, weitläufigen Wohnbauten dieser Bezirke sind es oft prall gefüllte Kellerabteile und
           Dachböden, die über Jahre hinweg als Lager genutzt wurden und nun komplett geräumt werden müssen.
         </RatgeberLi>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/entruempelung-wien-1120">Meidling</RatgeberInternalLink> &amp;{" "}
-            <RatgeberInternalLink href="/entruempelung-wien-1160">Ottakring</RatgeberInternalLink>:
+            <RatgeberInternalLink href="/ratgeber/entruempelung-meidling-wien-1120">Meidling</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-ottakring-wien-1160">Ottakring</RatgeberInternalLink>:
           </strong>{" "}
           Hier dominieren oft ältere Wohnanlagen mit massiven Altholz-Einbauten und schweren Möbelstücken, deren
           Demontage besonderes Werkzeug erfordert.
         </RatgeberLi>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/entruempelung-wien-1210">Floridsdorf</RatgeberInternalLink> &amp;{" "}
-            <RatgeberInternalLink href="/entruempelung-wien-1220">Donaustadt</RatgeberInternalLink>:
+            <RatgeberInternalLink href="/ratgeber/entruempelung-floridsdorf-wien-1210">Floridsdorf</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-donaustadt-wien-1220">Donaustadt</RatgeberInternalLink>:
           </strong>{" "}
           In moderneren oder größeren Anlagen auf der Transdanubien-Seite treffen wir vermehrt auf nachträgliche
           Loggia-Verglasungen und ungenehmigte Raumtrennungen, die vor der Abnahme fachgerecht zurückgebaut werden

@@ -42,19 +42,19 @@ Professionelle Entrümpelung, Haushaltsauflösung und Räumung in Wien, Niederö
 
 ---
 
-## Einzugsgebiet & Regionale Seiten
+## Einzugsgebiet & Regionale Ratgeber
 Wir entrümpeln in ganz Wien (alle 23 Bezirke, PLZ 1010–1230), Niederösterreich und Burgenland.
 
-### Bundesland-Landings
-- [Niederösterreich Räumung](https://sofortentrumpelung.at/entruempelung-niederoesterreich)
-- [Burgenland Räumung](https://sofortentrumpelung.at/entruempelung-burgenland)
+### Bundesland / Umland
+- [Niederösterreich (Korneuburg, Tulln, Schwechat)](https://sofortentrumpelung.at/ratgeber/entruempelung-korneuburg-tulln-schwechat)
+- [Burgenland (Mattersburg, Rust, Oberpullendorf)](https://sofortentrumpelung.at/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf)
 
-### Beispiel-Bezirksseiten (Wien)
-- [1010 Innere Stadt](https://sofortentrumpelung.at/entruempelung-wien-1010)
-- [1100 Favoriten](https://sofortentrumpelung.at/entruempelung-wien-1100)
-- [1180 Währing](https://sofortentrumpelung.at/entruempelung-wien-1180)
-- [1210 Floridsdorf](https://sofortentrumpelung.at/entruempelung-wien-1210)
-- [1230 Liesing](https://sofortentrumpelung.at/entruempelung-wien-1230)
+### Beispiel-Bezirks-Ratgeber (Wien)
+- [1010 Innere Stadt](https://sofortentrumpelung.at/ratgeber/entruempelung-1010-wien)
+- [1100 Favoriten](https://sofortentrumpelung.at/ratgeber/entruempelung-favoriten-wien-1100)
+- [1180 Währing](https://sofortentrumpelung.at/ratgeber/entruempelung-waehring-wien-1180)
+- [1210 Floridsdorf](https://sofortentrumpelung.at/ratgeber/entruempelung-floridsdorf-wien-1210)
+- [1230 Liesing](https://sofortentrumpelung.at/ratgeber/entruempelung-liesing-wien-1230)
 
 ---
 

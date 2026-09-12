@@ -95,11 +95,11 @@ export default function HaushaltsaufloesungErwachsenenvertretungWien() {
 
       <RatgeberP>
         Als Sofort Entrümpelung bieten wir rechtlichen Vertretern und Institutionen in Wien,{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Niederösterreich
         </RatgeberInternalLink>{" "}
         und dem{" "}
-        <RatgeberInternalLink href="/entruempelung-burgenland">Burgenland</RatgeberInternalLink> eine
+        <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">Burgenland</RatgeberInternalLink> eine
         verlässliche, strukturierte und gesetzeskonforme Abwicklung aller anfallenden Räumungsarbeiten — Leistung{" "}
         <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
           Haushaltsauflösung

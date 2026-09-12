@@ -83,11 +83,11 @@ export default function BuwogGenossenschaftEntruempelungWien() {
       <RatgeberP>
         Als Sofort Entrümpelung unterstützen wir Sie mit einem spezialisierten Fachservice für die
         professionelle Räumung von BUWOG-Wohnungen in Wien,{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Niederösterreich
         </RatgeberInternalLink>{" "}
         und dem{" "}
-        <RatgeberInternalLink href="/entruempelung-burgenland">Burgenland</RatgeberInternalLink>.
+        <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">Burgenland</RatgeberInternalLink>.
         Dank transparenter Kalkulation und einer unverbindlichen Erstbesichtigung behalten Sie von Anfang an
         die volle Kostenkontrolle — Orientierung:{" "}
         <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">

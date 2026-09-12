@@ -83,7 +83,7 @@ export default function EntruempelungKorneuburgTullnSchwechat() {
         und termingerechter Deponien-Abstimmung. Ob Einfamilienhaus in Korneuburg, Heuriger in Tulln
         oder Lagerfläche nahe dem Flughafen: Dieser Leitfaden zeigt die regionalen Besonderheiten —
         ergänzend zu unserer{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Entrümpelung in Niederösterreich
         </RatgeberInternalLink>{" "}
         und dem Ratgeber{" "}

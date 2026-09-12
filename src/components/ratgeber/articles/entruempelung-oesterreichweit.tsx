@@ -83,11 +83,11 @@ export default function EntruempelungOesterreichweit() {
       <RatgeberP>
         Sofort Entrümpelung koordiniert Besichtigung, Räumung und besenreine Übergabe in ganz Österreich —
         neben unserem Kerngebiet Wien,{" "}
-        <RatgeberInternalLink href="/entruempelung-niederoesterreich">
+        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
           Niederösterreich
         </RatgeberInternalLink>{" "}
         und{" "}
-        <RatgeberInternalLink href="/entruempelung-burgenland">Burgenland</RatgeberInternalLink>
+        <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">Burgenland</RatgeberInternalLink>
         . Dieser Leitfaden zeigt die regionalen Schwerpunkte und den strukturierten Ablauf Ihrer Anfrage.
       </RatgeberP>
 

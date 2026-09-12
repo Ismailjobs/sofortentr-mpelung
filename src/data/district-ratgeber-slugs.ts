@@ -1,8 +1,7 @@
 import { RATGEBER_PATH } from "@/data/site-content";
 
 /**
- * Bezirks-Landing (`/entruempelung-wien-{PLZ}`) → passender Ratgeber-Slug.
- * Nur Einträge mit veröffentlichtem Ratgeber-Artikel.
+ * Mapping PLZ → Ratgeber-Slug (auch Quelle für 301 in `next.config.ts`).
  */
 export const DISTRICT_RATGEBER_SLUG: Readonly<Record<string, string>> = {
   "1010": "entruempelung-1010-wien",
