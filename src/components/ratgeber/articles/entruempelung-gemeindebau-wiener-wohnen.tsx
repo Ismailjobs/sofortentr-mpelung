@@ -1,15 +1,24 @@
 import RatgeberArticleBody, {
-  RatgeberFreshnessBadge,
   RatgeberChecklist,
   RatgeberCtaBox,
+  RatgeberFreshnessBadge,
   RatgeberH2,
   RatgeberH3,
   RatgeberInternalLink,
   RatgeberLead,
   RatgeberLi,
+  RatgeberOl,
   RatgeberP,
+  RatgeberTableWrap,
+  RatgeberTbody,
+  RatgeberTd,
+  RatgeberTh,
+  RatgeberThead,
+  RatgeberTr,
   RatgeberUl,
+  RatgeberWarning,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
@@ -19,72 +28,84 @@ export const meta: RatgeberArticleMeta = {
   ogTitle: "Entrümpelung im Gemeindebau — Tipps für die Rückgabe an Wiener Wohnen",
   focusKeyword: "Entrümpelung Gemeindebau Wien",
   description:
-    "Gemeindewohnung an Wiener Wohnen zurückgeben? 💡 Unser Leitfaden zeigt, wie die Entrümpelung im Gemeindebau ohne teure Nachzahlungen gelingt.",
+    "Entrümpelung Gemeindebau Wien: Werkmeister-Vorabbesichtigung, Demontage von Laminat und Einbauten, LKW/MA 46 und Tragewege in großen Siedlungen — Praxisleitfaden ohne Fantasiepreise.",
   excerpt:
-    "Rückbau, Logistik und Übergabe-Checkliste für die Rückgabe an Wiener Wohnen.",
+    "Handwerklicher Rückbau und Baustellen-Logistik für die Rückgabe an Wiener Wohnen.",
   freshnessExcerpt: {
     kind: "guide",
     guideName: "Gemeindebau-Leitfaden",
-    suffix: "Rückbau, Logistik und Übergabe-Checkliste für die Rückgabe an Wiener Wohnen.",
+    suffix:
+      "Werkmeister, Demontage und Baustellen-Logistik für die Rückgabe an Wiener Wohnen.",
   },
   publishedAt: "2024-06-12",
   keywords: [
     "Entrümpelung Gemeindebau Wien",
     "Wiener Wohnen Übergabe",
     "Gemeindewohnung zurückgeben",
-    "besenrein Gemeindebau",
-    "Haushaltsauflösung Wiener Wohnen",
-    "Wohnungsrückgabe Wien",
     "Rückbau Laminat Wiener Wohnen",
+    "Werkmeister Vorabbesichtigung",
+    "Halteverbot Gemeindebau MA 46",
+    "Wohnungsrückgabe Wien",
+    "Haushaltsauflösung Wiener Wohnen",
   ],
   faq: [
     {
-      question: "Was bedeutet „besenrein“ bei der Übergabe an Wiener Wohnen?",
+      question: "Warum reicht ein Möbeltransport allein im Gemeindebau nicht?",
       answer:
-        "Die Wohnung muss vollständig geräumt und gereinigt sein — inklusive Keller, Balkon und Dachboden. Zudem sind nachträgliche Einbauten und nicht genehmigte Bodenbeläge in der Regel zu entfernen, Wände neutral weiß zu streichen.",
+        "Weil viele Wohnungen Jahrzehnte lang umgebaut wurden: Laminat, PVC, Zwischenwände und Einbauküchen müssen oft handwerklich demontiert werden — nicht nur hinausgetragen. Ohne Rückbau scheitert die Abnahme trotz leerer Räume.",
     },
     {
-      question: "Muss ich Laminat oder PVC vor der Rückgabe entfernen?",
+      question: "Was bringt die Werkmeister-Vorabbesichtigung vor dem Räumungstag?",
       answer:
-        "In den meisten Fällen ja — sofern keine schriftliche Übernahmebestätigung für den Nachmieter vorliegt. Eine Vorabbesichtigung mit dem Werkmeister klärt verbindlich, was verbleiben darf.",
+        "Der Werkmeister hält schriftlich fest, welche Beläge und Einbauten bleiben dürfen und was zwingend raus muss. Das verhindert Fehlarbeit am Einsatztag und Nachbesserungen kurz vor der Schlüsselübergabe.",
     },
     {
-      question: "Lohnt sich eine Vorabbesichtigung mit dem Werkmeister?",
+      question: "Wann brauche ich im Gemeindebau ein Halteverbot der MA 46?",
       answer:
-        "Unbedingt. Der Werkmeister hält schriftlich fest, welche Einbauten bleiben dürfen und was entfernt werden muss. Das verhindert teure Nachforderungen beim offiziellen Übergabetermin.",
+        "Sobald der LKW vor dem richtigen Stiegenhaus stehen muss und die Zufahrt sonst zugeparkt ist — typisch in großen Anlagen wie Karl-Marx-Hof oder weitläufigen Siedlungen in Favoriten und Floridsdorf. Der Vorlauf für die Genehmigung gehört in den Baustellenplan.",
     },
     {
-      question: "Wie lange dauert eine professionelle Entrümpelung im Gemeindebau?",
+      question: "Wie plane ich Tragewege ohne oder mit engem Lift?",
       answer:
-        "Ein eingespieltes Team räumt die Wohnung inklusive Keller meist innerhalb eines Tages — während private Helfer oft mehrere Wochenenden benötigen.",
+        "Liftmaße, Kabinentiefe und Türbreiten vor Ort messen; sperrige Teile vorher demontieren. Ohne Aufzug wird Stockwerk und Weglänge zum entscheidenden Zeitfaktor — oft entscheidender als das reine Volumen.",
+    },
+    {
+      question: "Kann Wertausgleich die Rückbaukosten mindern?",
+      answer:
+        "Ja, wenn Möbel oder Geräte noch verwertbar sind. Der Rest geht in die fachgerechte Entsorgung. Orientierung: Wertausgleich und Fixpreis nach Besichtigung — ohne erfundene Euro-Beträge.",
+    },
+    {
+      question: "Wo finde ich Kaution, Terminplan und die technische Abnahme-Checkliste?",
+      answer:
+        "Kaution und Kalender: Ratgeber Wiener Wohnen Wohnungsübergabe. Raum-für-Raum-Abnahme: Rückgabevorgaben Stadt-Wien-Gemeindewohnung. Dieser Text konzentriert sich auf Handwerk und Logistik.",
     },
   ],
   howTo: {
-    name: "Entrümpelung im Gemeindebau für die Wiener-Wohnen-Übergabe",
+    name: "Handwerklicher Rückbau und Baustellen-Logistik im Gemeindebau",
     steps: [
       {
-        name: "Vorabbesichtigung mit Werkmeister vereinbaren",
-        text: "Schriftlich festhalten, welche Einbauten und Bodenbeläge entfernt werden müssen.",
+        name: "Werkmeister-Vorabbesichtigung vereinbaren",
+        text: "Schriftlich klären, welche Bodenbeläge, Küchen und Zwischenwände demontiert werden müssen.",
       },
       {
-        name: "Rückbau von Böden und Einbauten",
-        text: "Laminat, PVC, Zwischenwände und nicht genehmigte Küchen fachgerecht demontieren.",
+        name: "Demontage als Handwerksarbeit planen",
+        text: "Laminat, PVC, Einbauten und Küche materialschonend herausnehmen — inkl. Kleber- und Restentsorgung.",
       },
       {
-        name: "Wohnung und Nebenräume räumen",
-        text: "Alle Räume, Kellerabteil, Balkon und Dachboden vollständig leeren.",
+        name: "Liftmaße und Tragewege erfassen",
+        text: "Stockwerk, Aufzugskabine, Hofwege und Stiegenhaus-Zugang vor dem Einsatztag dokumentieren.",
       },
       {
-        name: "Logistik und Halteverbotszone planen",
-        text: "LKW-Zufahrt, Tragewege und Ruhezeiten in der Wohnanlage berücksichtigen.",
+        name: "LKW-Zufahrt und MA-46-Halteverbot organisieren",
+        text: "Ladezone vor dem richtigen Eingang sichern, damit der Abtransport nicht stockt.",
       },
       {
-        name: "Besenreine Übergabe vorbereiten",
-        text: "Wände neutral streichen, Schlüssel sammeln und Übergabeprotokoll bereithalten.",
+        name: "Räumung und Grobreinigung abschließen",
+        text: "Wohnung und Nebenräume leer hinterlassen; technische Feinabnahme und Kautionsthemen separat klären.",
       },
     ],
   },
-  readingTimeMinutes: 8,
+  readingTimeMinutes: 11,
 };
 
 export default function EntruempelungGemeindebauWienerWohnen() {
@@ -92,179 +113,258 @@ export default function EntruempelungGemeindebauWienerWohnen() {
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
         variant={{ kind: "guide", guideName: "Gemeindebau-Leitfaden" }}
-        note="Praxis-Erfahrung aus erfolgreichen Wohnungsrückgaben bei Wiener Wohnen in allen Wiener Gemeindebezirken."
+        note="Fokus: handwerklicher Rückbau, Werkmeister und Baustellen-Logistik in Wiener Gemeindebauten."
         article={meta}
       />
 
       <RatgeberLead>
-        Die Rückgabe einer Gemeindewohnung an Wiener Wohnen unterscheidet sich grundlegend von der Übergabe auf
-        dem privaten Immobilienmarkt. Die Richtlinien der Stadt Wien sind streng: Werden Mängel oder nicht
-        genehmigte Einbauten beim offiziellen Übergabetermin übersehen, drohen dem scheidenden Mieter (oder den
-        Angehörigen im Falle einer Verlassenschaft) saftige Nachzahlungen und eine ungewollte Verlängerung der
-        Mietzahlungen.
+        Wer im Gemeindebau nur an Kartons und Sofas denkt, unterschätzt den eigentlichen Aufwand: Die
+        Entrümpelung Gemeindebau Wien ist oft eine Baustelle mit Demontage, Schuttfraktionen und engen
+        Tragewegen — bevor überhaupt von Schlüsselübergabe die Rede sein kann.
       </RatgeberLead>
 
-      <RatgeberP>
-        Damit die{" "}
-        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
-          Haushaltsauflösung
-        </RatgeberInternalLink>{" "}
-        im Gemeindebau nicht zur Kostenfalle wird, ist eine strategische Vorbereitung das A und O. Sofort
-        Entrümpelung erklärt Ihnen in diesem Ratgeber, worauf die Werkmeister von Wiener Wohnen besonders achten
-        und wie Sie die Räumung logistisch fehlerfrei abwickeln.
-      </RatgeberP>
-
-      <RatgeberH2>Die harten Kriterien: Was verlangt Wiener Wohnen?</RatgeberH2>
-      <RatgeberP>
-        Das magische Wort bei der Wohnungsübergabe heißt „besenrein“ — doch im Gemeindebau steckt der Teufel im
-        Detail. Der vertragsgemäße Zustand erfordert oft den kompletten Rückbau persönlicher Veränderungen der
-        letzten Jahrzehnte.
-      </RatgeberP>
-
-      <RatgeberH3>Die wichtigsten Rückbau-Vorgaben im Überblick</RatgeberH3>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Komplette Räumung:</strong> Nicht nur die Wohnräume selbst, auch zugehörige Kellerabteile,
-          Balkone, Loggien oder Dachbodenflächen müssen absolut leer übergeben werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Bodenbeläge:</strong> Nachträglich verlegte Laminatböden, PVC-Beläge oder verklebte Teppiche
-          müssen im Regelfall restlos entfernt werden, sofern keine schriftliche Übernahmebestätigung für den
-          Nachmieter vorliegt.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Wände und Tapeten:</strong> Knallige oder dunkle Wandfarben müssen deckend weiß gestrichen
-          werden. Auch alte Mustertapeten müssen in vielen Wohnhausanlagen komplett von den Wänden gekratzt werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Eigenmächtige Einbauten:</strong> Nachträglich eingezogene Zwischenwände, hölzerne
-          Deckenverkleidungen, selbstgebaute Bar-Tresen oder Schrankbauten müssen fachgerecht demontiert werden.
-        </RatgeberLi>
-      </RatgeberUl>
+      <BezirkEarlyCta
+        title="Gemeindebau-Rückbau &amp; Logistik"
+        text="Werkmeister-Vorgaben, Laminat-Demontage und LKW-Zufahrt: wir kalkulieren nach Besichtigung vor Ort."
+      />
 
       <RatgeberP>
-        <strong>Der Profi-Tipp für Mieter:</strong> Vereinbaren Sie unbedingt vor dem eigentlichen
-        Räumungstermin eine Vorabbesichtigung mit dem zuständigen Werkmeister von Wiener Wohnen. Dieser hält
-        verbindlich und schriftlich fest, welche Einbauten in der Wohnung verbleiben dürfen und was zwingend
-        entfernt werden muss.
-      </RatgeberP>
-
-      <RatgeberH2>Logistische Hürden im Wiener Gemeindebau</RatgeberH2>
-      <RatgeberP>
-        Die Entrümpelung in großen städtischen Wohnhausanlagen (wie dem Karl-Marx-Hof oder großen Bauten im 10.,
-        11. oder 21. Bezirk) bringt extreme logistische Herausforderungen mit sich, die private Helfer oft
-        unterschätzen:
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Die Parkplatz-Krise:</strong> In den dicht besiedelten Wohnanlagen einen Parkplatz für einen
-          großen LKW zu finden, ist fast unmöglich. Eine behördlich genehmigte Halteverbotszone vor dem richtigen
-          Stiegenhaus ist Pflicht, um Strafen und Abschleppungen zu vermeiden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Endlose Tragewege:</strong> Die Wege von der Wohnungstür über lange Gänge, Innenhöfe und
-          Stiegenhäuser bis hin zum Transporter sind oft hunderte Meter lang. Das kostet enorm viel Kraft und Zeit.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Aufzug-Engpässe:</strong> Viele ältere Gemeindebauten haben entweder gar keinen Lift oder die
-          Kabinen sind viel zu eng für sperrige Sofas und Schrankwände. Zudem muss der Lift schonend beladen werden,
-          um Blockaden und teure Reparaturkosten der Hausverwaltung zu vermeiden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Schutz der Nachbarschaft:</strong> Eine Räumung erzeugt Lärm. Um Konflikte mit den Nachbarn zu
-          vermeiden, müssen die gesetzlichen Ruhezeiten in Wien strikt eingehalten werden.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>Eigenregie vs. Professionelles Räumungsunternehmen</RatgeberH2>
-      <RatgeberP>
-        Viele Mieter versuchen zunächst, die Gemeindewohnung mit Freunden selbst auszuräumen, um Geld zu sparen.
-        Spätestens beim dritten Transport zu den Mistplätzen der MA 48, dem mühsamen Abschlagen von festsitzenden
-        Fliesen oder dem Rückbau von Holzdecken stößt man jedoch an seine Grenzen. Mehr dazu im Ratgeber{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-          MA 48 oder Räumungsfirma
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH3>Warum sich ein Fachbetrieb wie Sofort Entrümpelung bezahlt macht</RatgeberH3>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Schnelligkeit:</strong> Wo private Helfer mehrere Wochenenden opfern, erledigt unser eingespieltes
-          Team die gesamte Wohnung inklusive Keller meist innerhalb eines einzigen Tages.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Erfahrung mit Werkmeistern:</strong> Wir kennen die exakten Ansprüche von Wiener Wohnen und wissen
-          genau, wie eine Wohnung vorbereitet sein muss, damit es bei der Abnahme keine Diskussionen gibt.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Fachgerechte Demontage:</strong> Wir reißen alte Böden, Küchen und Einbauten materialschonend und
-          fachgerecht heraus.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Kostensenkung durch Wertausgleich:</strong> Gut erhaltene Möbel, Antiquitäten oder
-          funktionstüchtige Elektrogeräte kaufen wir direkt an und ziehen den Wert von den Räumungskosten ab — mehr
-          im Ratgeber{" "}
-          <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
-            Gratis Räumung mit Wertanrechnung
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-      </RatgeberUl>
-      <RatgeberP>
-        Eine Übersicht der Kosten finden Sie in unserem Ratgeber{" "}
-        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
-          Was kostet eine Entrümpelung in Wien?
-        </RatgeberInternalLink>
-        . Für{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink> und{" "}
-        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink> beraten wir Sie
-        vor Ort.
-      </RatgeberP>
-
-      <RatgeberH2>Dieser Ratgeber im Überblick: Rückbau &amp; Logistik</RatgeberH2>
-      <RatgeberP>
-        Dieser Artikel konzentriert sich auf <strong>Rückbau, Werkmeister-Vorabbesichtigung und
-        Logistik</strong> ohne Lift — also die handwerkliche und organisatorische Vorbereitung der Räumung. Für
-        Kautionsschutz, Keller-Blockaden und Terminplanung lesen Sie{" "}
+        Dieser Leitfaden behandelt den handwerklichen Rückbau und die Baustellen-Logistik in großen
+        Wohnhausanlagen — von der Werkmeister-Vorabbesichtigung bis zu Liftmaßen und MA-46-Zufahrt.
+        Kaution und Terminplan:{" "}
         <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
-          Wiener Wohnen Übergabe ohne Stress
+          Wiener Wohnen Wohnungsübergabe
         </RatgeberInternalLink>
-        . Die technische Abnahme (Böden, Sanitär, Loggia, Mängelliste) behandelt unser Ratgeber{" "}
+        . Technische Abnahme Raum für Raum:{" "}
         <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
           Rückgabevorgaben Stadt-Wien-Gemeindewohnung
         </RatgeberInternalLink>
+        . Leistungen:{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>
+        ,{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink>
         .
       </RatgeberP>
 
-      <RatgeberH2>Die finale Übergabe-Checkliste für den Stichtag</RatgeberH2>
+      <RatgeberH2>Werkmeister-Vorabbesichtigung: die Baustellenfreigabe</RatgeberH2>
       <RatgeberP>
-        Gehen Sie am Tag der Schlüsselrückgabe noch einmal systematisch durch die Wohnung:
+        Bevor Hammer und Stemmeisen kommen, braucht der Rückbau eine verbindliche Liste. Der Werkmeister von
+        Wiener Wohnen entscheidet, was Stadtinventar bleibt und was Mieter-Einbau war. Ohne dieses Protokoll
+        demontieren Sie vielleicht zu viel — oder zu wenig, und der nächste Termin wird zur Nacharbeit.
       </RatgeberP>
+      <RatgeberP>
+        Praktisch heißt das: Termin vereinbaren, Einbauten zeigen (Laminat, PVC, Zwischenwände, Küchenzeile,
+        Deckenverkleidung) und alles Schriftliche mitnehmen. Erst danach lohnt die detaillierte{" "}
+        <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
+          Räumungs-Besichtigung
+        </RatgeberInternalLink>{" "}
+        mit Fixpreis — weil Umfang und Handwerksanteil dann klar sind. Bei Verlassenschaft oder Erben zuerst
+        Zuständigkeit klären:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-todesfall-verlassenschaft-raeumen-wien">
+          Gemeindewohnung nach Todesfall räumen
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
+      <RatgeberH2>Demontage als Handwerk — nicht als „Möbel raus“</RatgeberH2>
+      <RatgeberP>
+        Laminat und PVC, die über Estrich oder Parkett liegen, sind Demontagearbeit: Platten heben,
+        Klebereste entfernen, Schutt trennen. Zwischenwände aus Rigips oder Holz sind Abbruch mit Staubschutz
+        und Entsorgung — kein Wochenend-Hobby. Einbauküchen brauchen oft Werkzeug, das private Helfer nicht
+        mitbringen. Wer nur „entrümpeln“ meint und den Rückbau unterschätzt, steht am Einsatztag mit
+        Stemmeisen und ohne Entsorgungsplan da.
+      </RatgeberP>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Bodenbeläge:</strong> Schicht für Schicht lösen; Kleber und Unterlagen gehören in die
+          richtige Fraktion, sonst blockiert der Abtransport.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Zwischenwände:</strong> Tragende Elemente nie selbst „abschätzen“ — nur klar als
+          Mieter-Einbau ausgewiesene Trennwände zurückbauen.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Küchen und Schrankwände:</strong> Reihenfolge Demontage → Trageweg → LKW, damit das
+          Stiegenhaus nicht stundenlang verstopft.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Staub und Schutz:</strong> Folien, Absaugung und Schonung von Treppenhäusern gehören zur
+          Baustellenordnung — sonst entstehen Folgeschäden an Stadtflächen.
+        </RatgeberLi>
+      </RatgeberUl>
+      <RatgeberP>
+        Stark vollgestellte Wohnungen brauchen vor dem Rückbau oft erst Sortier- und Hygieneschritte:{" "}
+        <RatgeberInternalLink href="/ratgeber/vollgestellte-gemeindewohnung-entruempeln-wien">
+          vollgestellte Gemeindewohnung entrümpeln
+        </RatgeberInternalLink>
+        . Verwertbares kann den Aufwand mindern:{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>. Die
+        Feinprüfung von Fliesen, Sanitär und Loggia bleibt dem Abnahme-Ratgeber vorbehalten — hier geht es
+        um das Herauslösen der Einbauten und den Abtransport.
+      </RatgeberP>
+
+      <RatgeberH2>Materialflüsse: Schutt, Sperrmüll, Fahrtenkette</RatgeberH2>
+      <RatgeberP>
+        Jede Demontage erzeugt Fraktionen: Holz aus Küchen, Laminatreste, Metallschienen, Kartonage,
+        Sperrmöbel. Im Gemeindebau fehlt oft der Hofplatz zum Zwischenlagern. Deshalb planen wir die
+        Fahrtenkette so, dass Schutt nicht im Stiegenhaus landet und der LKW in sinnvollen Takten beladen
+        wird. Private Helfer unterschätzen genau diesen Teil: Drei Fahrten zur Mistplatz-Logistik der MA 48
+        ohne Sortierung kosten mehr Zeit als ein durchgeplanter Firmeneinsatz.
+      </RatgeberP>
+      <RatgeberP>
+        In großen Siedlungen kommt hinzu, dass der Weg vom vierten Stock bis zur Straße länger dauert als
+        die eigentliche Demontage eines Schrankes. Wer Teamgröße und Fahrzeug zu knapp wählt, verlängert
+        den Tag — und riskiert, dass die Ladezone abläuft, bevor der letzte Gang fertig ist. Deshalb hängt
+        der Fixpreis nach Besichtigung eng an sichtbaren Tragewegen und am Werkmeister-Umfang, nicht an
+        einer pauschalen Zimmerzahl.
+      </RatgeberP>
+
+      <RatgeberH2>Baustellen-Logistik: LKW, MA 46, Liftmaße, Tragewege</RatgeberH2>
+      <RatgeberP>
+        In Anlagen wie dem Karl-Marx-Hof oder großen Siedlungen im 10., 11. oder 21. Bezirk entscheidet nicht
+        das Wohnzimmer über den Tag — sondern der Weg vom Wohnungsboden bis zur Ladebordwand. Lange Höfe,
+        verwinkelte Stiegenhäuser und enge Aufzüge verwandeln jede Demontage in eine Transportkette. Ein
+        falsch gewählter Eingang kann bedeuten, dass das Team zweihundert Meter Hof quert — mit jedem
+        Küchenschrank erneut.
+      </RatgeberP>
+      <RatgeberOl>
+        <RatgeberLi>
+          <strong>Zufahrt:</strong> Welches Stiegenhaus, welche Hofeinfahrt, wo darf der LKW legal stehen?
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>MA 46:</strong> Halteverbot mit Vorlauf beantragen, wenn die Straße sonst zugeparkt ist —
+          der Antrag ist Teil der Baustellenvorbereitung, kein Spontankauf am Einsatztag.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Lift:</strong> Kabinenmaß, Nutzlast, Türbreite — Sofas und Schränke oft vorher zerlegen;
+          Schutzmatten schonen Kabine und vermeiden Haftungsärger mit der Verwaltung.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Ruhezeiten:</strong> Lärmende Demontage nur in erlaubten Fenstern; Nachbarschaft und
+          Hausordnung einplanen.
+        </RatgeberLi>
+      </RatgeberOl>
+      <RatgeberP>
+        Kellerzugänge und Schlüsselketten gehören operativ dazu — Details zu Nebenräumen und Schlüsselplan:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-aufloesen-keller-schluessel-uebergabe">
+          Gemeindewohnung auflösen: Keller &amp; Schlüssel
+        </RatgeberInternalLink>
+        , Leistung{" "}
+        <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>
+        . Selbstorganisation vs. Firma:{" "}
+        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
+          MA 48 vs. Entrümpelungsfirma
+        </RatgeberInternalLink>
+        . Was wir hier bewusst kurz halten: Kautionstermine und Sanitär-Feinheiten — die gehören in die
+        anderen Hub-Texte, damit dieser Leitfaden handwerklich und logistisch bleibt.
+      </RatgeberP>
+
+      <RatgeberH2>Eigenleistung vs. eingespieltes Rückbau-Team</RatgeberH2>
+      <RatgeberP>
+        Freunde mit Transporter helfen bei Kartons. Beim Abschlagen von Belägen, dem Zerlegen einer
+        Küchenzeile und dem Taktieren von Schuttfahrten in einer Großanlage stoßen Laien-Teams schnell an
+        Grenzen: fehlendes Werkzeug, falsche Fraktionen, blockierte Stiegenhäuser. Ein eingespieltes Team
+        kennt die typischen Gemeindebau-Engpässe und kalkuliert Tragewege vor dem ersten Hammerschlag.
+      </RatgeberP>
+      <RatgeberP>
+        Das heißt nicht, dass Sie nichts selbst vorbereiten können: Persönliches auslagern, Zugangsdaten
+        klären, Werkmeister-Termin legen. Der handwerkliche Kern und die LKW-Logistik lassen sich dagegen
+        kaum nebenberuflich stemmen, wenn der Übergabetermin näher rückt und noch Rückbau offen ist.
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel: 4. Stock ohne Lift, Laminat und Küche raus</RatgeberH3>
+      <RatgeberP>
+        In einer Wohnanlage mit langem Innenhof stand die Wohnung im vierten Stock ohne Aufzug. Der
+        Werkmeister hatte Laminat und die Einbauküche zum Rückbau freigegeben. Parallel beantragte das Team ein
+        Halteverbot direkt am Stiegenhaus-Eingang — sonst hätte jeder Gang quer durch den Hof die Zeit verdoppelt.
+        Am Einsatztag zuerst Demontage der Küche und des Laminats (Schutt getrennt), dann Möbel und Kartons über
+        die Stiege, LKW nur so lange an der Ladezone wie nötig. Ergebnis: ein durchgängiger Baustellentag statt
+        drei chaotischer Wochenenden — ohne dass Kaution oder Sanitär-Feinheiten hier das Thema waren.
+      </RatgeberP>
+      <RatgeberP>
+        Solche Einsätze zeigen, warum die Vorabbesichtigung zwei Fragen klären muss: Was wird demontiert —
+        und welcher physische Weg trägt das Material? Fehlt eine der beiden Antworten, wird aus Handwerk
+        Stochern. Mit beiden Antworten bleibt die Entrümpelung Gemeindebau Wien planbar und im Fixpreis
+        nachvollziehbar.
+      </RatgeberP>
+
+      <RatgeberH2>Kostenfaktoren Rückbau &amp; Logistik (ohne Fantasiepreise)</RatgeberH2>
+      <RatgeberP>
+        Die Tabelle zeigt Hebel für Aufwand und Fixpreis nach Besichtigung — keine erfundenen Euro-Beträge.
+        Vertiefung:{" "}
+        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
+          Was kostet eine Entrümpelung in Wien?
+        </RatgeberInternalLink>{" "}
+        und <RatgeberInternalLink href="/preise">Preise</RatgeberInternalLink>.
+      </RatgeberP>
+      <RatgeberTableWrap caption="Kostenfaktoren handwerklicher Rückbau im Gemeindebau (ohne Fantasiepreise)">
+        <RatgeberThead>
+          <RatgeberTr>
+            <RatgeberTh>Hebel</RatgeberTh>
+            <RatgeberTh>Warum er den Einsatztag prägt</RatgeberTh>
+            <RatgeberTh>Vorab klären</RatgeberTh>
+          </RatgeberTr>
+        </RatgeberThead>
+        <RatgeberTbody>
+          <RatgeberTr>
+            <RatgeberTd>Demontage-Umfang</RatgeberTd>
+            <RatgeberTd>Laminat, PVC, Küche, Zwischenwände = Handwerkszeit + Schutt</RatgeberTd>
+            <RatgeberTd>Werkmeister-Protokoll, Fotos der Einbauten</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Stockwerk ohne Lift</RatgeberTd>
+            <RatgeberTd>Jede Stufe multipliziert Tragegänge und Teamgröße</RatgeberTd>
+            <RatgeberTd>Etage, Weglänge Hof/Stiege, sperrige Teile</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Liftkabine / Türbreiten</RatgeberTd>
+            <RatgeberTd>Zu enge Maße erzwingen Vorab-Zerlegung</RatgeberTd>
+            <RatgeberTd>Innenmaße, Nutzlast, Schutzauflagen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Ladezone / MA 46</RatgeberTd>
+            <RatgeberTd>Ohne legale Standfläche stockt der Abtransport</RatgeberTd>
+            <RatgeberTd>Stiegenhaus-Adresse, Vorlauf Halteverbot</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Materialfraktionen</RatgeberTd>
+            <RatgeberTd>Belagsreste und Holz brauchen sortierte Entsorgung</RatgeberTd>
+            <RatgeberTd>Endzustand leer / grob besenrein</RatgeberTd>
+          </RatgeberTr>
+        </RatgeberTbody>
+      </RatgeberTableWrap>
+
+      <RatgeberWarning title="Baustellen-Hinweis">
+        <RatgeberP>
+          Wer Demontage und LKW-Zufahrt erst am Übergabetag organisiert, riskiert stehende Teams und
+          Nacharbeit. Werkmeister-Liste, Liftmaße und Halteverbot gehören in denselben Vorlauf wie die
+          Räumungsbesichtigung — nicht in die letzte Minute.
+        </RatgeberP>
+      </RatgeberWarning>
+
+      <RatgeberH2>Checkliste vor dem Rückbau-Einsatztag</RatgeberH2>
       <RatgeberChecklist
         items={[
-          "Ist jeder Raum inklusive Einbauschränken besenrein gekehrt?",
-          "Wurden Kellerabteil, Dachboden und Balkon komplett geleert?",
-          "Sind alle vom Werkmeister geforderten Rückbauten (Böden, Decken, Wände) erledigt?",
-          "Sind alle Wände in einem neutralen Weißton hinterlassen worden?",
-          "Sind sämtliche Schlüssel (Wohnung, Hauseingang, Keller, Postkasten) vollzählig vorhanden?",
-          "Liegt das offizielle Übergabeprotokoll zur beidseitigen Unterschrift bereit?",
+          "Schriftliches Werkmeister-Protokoll zu Belägen und Einbauten vorliegen",
+          "Demontage-Reihenfolge (Küche / Laminat / Trennwände) mit dem Team abgestimmt",
+          "Stockwerk, Liftmaße und Trageweg Hof–Stiege fotografisch dokumentiert",
+          "MA-46-Halteverbot oder klare Ladezone vor dem richtigen Stiegenhaus gesichert",
+          "Schutt- und Sperrmüllfraktionen für den Abtransport geplant",
+          "Persönliches und Wertgegenstände vor Demontage aus der Wohnung geholt",
         ]}
       />
 
-      <RatgeberH3>Fazit</RatgeberH3>
       <RatgeberP>
-        Der Auszug aus einer Wohnung von Wiener Wohnen erfordert Präzision und die genaue Einhaltung der
-        bürokratischen Spielregeln. Schützen Sie sich vor bösen Überraschungen und teuren Sanierungsforderungen nach
-        Mietende. Mit Sofort Entrümpelung an Ihrer Seite läuft das gesamte Projekt stressfrei, transparent und
-        garantiert termingerecht ab — perfekt vorbereitet für das geschulte Auge des Werkmeisters.
+        Handwerk und Logistik sind die Basis. Danach kommen Kalender und Kaution sowie die technische
+        Feinprüfung — in den verlinkten Schwester-Ratgebern. So bleibt jeder Text thematisch klar und
+        wiederholungsarm.
       </RatgeberP>
 
       <RatgeberCtaBox>
-        <p className="font-bold text-brand-dark">Gemeindewohnung termingerecht übergeben</p>
+        <p className="font-bold text-brand-dark">Rückbau im Gemeindebau — Fixpreis nach Besichtigung</p>
         <RatgeberP>
-          Kostenlose Besichtigung — Fixpreis-Angebot inklusive Rückbau, Räumung und Wertanrechnung. Wir kennen die
-          Anforderungen von Wiener Wohnen in allen Gemeindebezirken.
+          Wir planen Demontage, Tragewege und LKW-Zufahrt in Wiener Gemeindebauten — inklusive Abstimmung auf
+          Werkmeister-Vorgaben.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">Jetzt unverbindlich anfragen →</RatgeberInternalLink>

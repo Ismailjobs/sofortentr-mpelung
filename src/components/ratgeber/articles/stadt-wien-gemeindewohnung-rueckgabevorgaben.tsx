@@ -8,9 +8,16 @@ import RatgeberArticleBody, {
   RatgeberLead,
   RatgeberLi,
   RatgeberP,
+  RatgeberTableWrap,
+  RatgeberTbody,
+  RatgeberTd,
+  RatgeberTh,
+  RatgeberThead,
+  RatgeberTr,
   RatgeberUl,
   RatgeberWarning,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
@@ -23,14 +30,14 @@ export const meta: RatgeberArticleMeta = {
     "Gemeindewohnung Stadt Wien — Rückgabevorgaben bei Wiener Wohnen fehlerfrei erfüllen",
   focusKeyword: "Gemeindewohnung Stadt Wien Rückgabe",
   description:
-    "Gemeindewohnung der Stadt Wien an Wiener Wohnen zurückgeben? Leitfaden zu Böden, Rückbau, Sanitär, Keller & Checkliste — mängelfrei und ohne Nachzahlungen.",
+    "Gemeindewohnung Stadt Wien Rückgabe: Raum-für-Raum-Check zu Böden, Wänden, Türen, Sanitär, Heizkörpern, Loggiaverbau und Zählerständen — Abnahme-Checkliste ohne Fantasiepreise.",
   excerpt:
-    "Rückgabevorgaben für Wiener Wohnen: Wände, Böden, Türen, Loggia, Keller und Übergabe-Checkliste.",
+    "Technische Abnahme-Checkliste Raum für Raum für die Rückgabe an Wiener Wohnen.",
   freshnessExcerpt: {
     kind: "guide",
     guideName: "Wiener-Wohnen-Rückgabe-Leitfaden",
     suffix:
-      "Böden, Rückbau, Sanitär, Keller und Checkliste für die mängelfreie Übergabe an die Stadt Wien.",
+      "Böden, Sanitär, Loggia, Zählerstände und Mängelliste für die Abnahme bei der Stadt Wien.",
   },
   publishedAt: "2026-07-06",
   keywords: [
@@ -38,56 +45,65 @@ export const meta: RatgeberArticleMeta = {
     "Wiener Wohnen Wohnungsabnahme",
     "Gemeindewohnung entrümpeln Wien",
     "Rückgabevorgaben Wiener Wohnen",
-    "Wohnung Stadt Wien zurückgeben",
-    "besenrein Gemeindebau",
-    "Laminat entfernen Wiener Wohnen",
-    "Kellerabteil Übergabe",
     "Loggia Rückbau Gemeindebau",
+    "Zählerstände Wohnungsübergabe",
+    "Sanitär Heizkörper Stadtinventar",
+    "Klebereste Laminat Abnahme",
   ],
   faq: [
     {
-      question: "Was prüft Wiener Wohnen bei der Wohnungsabnahme besonders genau?",
+      question: "Welche Oberflächen prüft die Abnahme zuerst?",
       answer:
-        "Schwerpunkte sind Boden- und Wandbeläge, funktionstüchtige Innentüren und Fenster, intakte Sanitäranlagen und Heizkörper, entfernte ungenehmigte Einbauten sowie vollständig geleerte Nebenräume inklusive Kellerabteil.",
+        "Typischerweise Böden und Wände: nachträgliche Beläge, Klebereste, auffällige Farben, Verkleidungen und beschädigte Fliesen. Ein leerer Raum mit Kleberflecken gilt oft als mangelhaft.",
     },
     {
-      question: "Muss Laminat oder PVC vor der Rückgabe entfernt werden?",
+      question: "Was zählt als Stadtinventar bei Sanitär und Heizung?",
       answer:
-        "In der Regel ja — nachträglich verlegte Beläge über Estrich oder Parkett müssen restlos entfernt werden, sofern keine schriftliche Übernahme durch den Nachmieter vereinbart wurde. Klebereste gelten als Mangel.",
+        "WC, Waschbecken, Wanne oder Dusche sowie montierte Heizkörper gehören in der Regel zum Objekt und müssen funktionsfähig und ohne grobe Schäden übergeben werden — nicht demontiert und mitgenommen.",
     },
     {
-      question: "Gehört das Kellerabteil zur offiziellen Übergabe?",
+      question: "Muss ein Loggiaverbau vor der Rückgabe weg?",
       answer:
-        "Ja. Das Kellerabteil muss leer, sauber und ordnungsgemäß versperrt sein. Ein voller Keller kann die gesamte Schlüsselübergabe verzögern — siehe auch unseren Ratgeber Keller aufräumen Wien.",
+        "Ohne schriftliche Genehmigung von Wiener Wohnen ja: ungenehmigte Verglasungen oder Verbauungen sind rückzubauen. Mit Genehmigung können andere Regeln gelten — das klärt die Abnahme bzw. Vorabsprache.",
     },
     {
-      question: "Lohnt sich eine professionelle Entrümpelung vor der Abnahme?",
+      question: "Warum Zählerstände am Abnahmetag dokumentieren?",
       answer:
-        "Bei Rückbauarbeiten, schweren Möbeln oder engen Gemeindebau-Logistiken spart ein Fixpreis-Angebot nach Besichtigung Zeit, Nerven und reduziert das Risiko teurer Nachforderungen durch Wiener Wohnen.",
+        "Strom, Gas und Wasser brauchen Endstände für die Abmeldung beim Versorger und für das Übergabeprotokoll. Fehlende Notizen erzeugen später Unklarheit — unabhängig von der Räumung selbst.",
+    },
+    {
+      question: "Unterscheiden sich Abnahme-Schwerpunkte je nach Bezirk?",
+      answer:
+        "Ja in der Praxis: In älteren Anlagen fallen oft Einbauten und Beläge auf, in neueren häufiger Loggia-Themen. Die Grundregeln der Stadt Wien bleiben gleich — die typischen Mängel verschieben sich.",
+    },
+    {
+      question: "Wo stehen Demontage-Logistik und Kaution-/Terminführung?",
+      answer:
+        "Handwerk und LKW: Entrümpelung im Gemeindebau. Kalender und Kautionsschutz: Wiener Wohnen Wohnungsübergabe. Dieser Text ist der technische Raum-für-Raum-Check.",
     },
   ],
   howTo: {
-    name: "Gemeindewohnung Stadt Wien mängelfrei an Wiener Wohnen übergeben",
+    name: "Technische Abnahme einer Stadt-Wien-Gemeindewohnung vorbereiten",
     steps: [
       {
-        name: "Boden- und Wandbeläge prüfen",
-        text: "Nachträglich verlegte Beläge und Klebereste entfernen, Wände neutral weiß hinterlassen.",
+        name: "Böden und Wände prüfen",
+        text: "Nachträgliche Beläge und Klebereste entfernen, Wände neutral und ohne Verkleidung hinterlassen.",
       },
       {
-        name: "Türen, Fenster und Sanitär kontrollieren",
-        text: "Innentüren funktionsfähig, Fenster ohne Risse, Sanitär und Heizkörper intakt.",
+        name: "Türen und Fenster kontrollieren",
+        text: "Innentüren funktionsfähig, Beschläge komplett, Scheiben ohne Risse.",
       },
       {
-        name: "Ungenehmigte Einbauten zurückbauen",
-        text: "Zwischenwände und Loggiaverbauten ohne Genehmigung fachgerecht demontieren.",
+        name: "Sanitär und Heizkörper als Stadtinventar checken",
+        text: "Armaturen und Heizkörper intakt belassen; grobe Schäden vor der Abnahme klären.",
       },
       {
-        name: "Kellerabteil und Nebenräume leeren",
-        text: "Keller, Balkon und Dachboden absolut leer und sauber übergeben.",
+        name: "Loggia und Einbauten genehmigungsseitig klären",
+        text: "Ungenehmigte Verbauungen und Zwischenwände zurückbauen.",
       },
       {
-        name: "Schlüssel und Zählerstände vorbereiten",
-        text: "Alle Schlüssel bereitlegen und Strom-, Gas- und Wasserzähler dokumentieren.",
+        name: "Zählerstände und Schlüssel dokumentieren",
+        text: "Endstände notieren, alle Schlüssel bereitlegen, Protokoll vorbereiten.",
       },
     ],
   },
@@ -99,291 +115,271 @@ export default function StadtWienGemeindewohnungRueckgabevorgaben() {
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
         variant={{ kind: "guide", guideName: "Wiener-Wohnen-Rückgabe-Leitfaden" }}
-        note="Praxisorientiert für die offizielle Wohnungsabnahme bei Wiener Wohnen — Stadt Wien."
+        note="Fokus: technische Abnahme Raum für Raum — Oberflächen, Stadtinventar, Loggia, Zähler."
         article={meta}
       />
 
       <RatgeberLead>
-        Wer eine Gemeindewohnung der Stadt Wien (Wiener Wohnen) zurückgeben möchte, merkt schnell, dass die
-        Anforderungen weitaus strenger sind als bei privaten Mietverhältnissen. Ein einfacher Umzug reicht hier
-        bei weitem nicht aus — bei der offiziellen Wohnungsabnahme wird jedes Detail genau geprüft.
+        Bei der Gemeindewohnung Stadt Wien Rückgabe entscheidet oft der Blick des Abnehmers auf Details:
+        Klebereste am Estrich, eine klemmende Innentür, ein rissiges Waschbecken oder eine ungenehmigte
+        Loggiaverglasung. Wer nur „leer“ denkt, übersieht die technische Mängelliste.
       </RatgeberLead>
 
-      <RatgeberP>
-        Besonders nach langjährigen Mietverhältnissen wurden oft bauliche Veränderungen vorgenommen oder
-        individuelle Einbauten installiert. Um teure Nachzahlungen oder Verzögerungen bei der Übergabe zu
-        vermeiden, ist eine fachgerechte und strukturierte Vorbereitung das A und O.
-      </RatgeberP>
+      <BezirkEarlyCta
+        title="Abnahme-Check Gemeindewohnung"
+        text="Böden, Sanitär, Loggia und Zählerstände: wir bereiten die Wohnung für die Wiener-Wohnen-Abnahme vor."
+      />
 
-      <RatgeberH2>Dieser Ratgeber im Überblick: Technische Abnahme</RatgeberH2>
       <RatgeberP>
-        Dieser Leitfaden fokussiert die <strong>technische Wohnungsabnahme</strong> — Böden, Wände, Sanitär,
-        Loggia und Mängelliste bei Wiener Wohnen. Für Rückbau, Laminat und Logistik ohne Lift:{" "}
+        Dieser Leitfaden führt Raum für Raum durch die technische Prüfung — nicht durch Halteverbot-Essays
+        und nicht durch Kautionspsychologie. Demontage und Baustellen-Logistik:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
           Entrümpelung im Gemeindebau
         </RatgeberInternalLink>
-        . Für Kaution, Keller-Blockade und Terminplan:{" "}
+        . Termin und Kautionsschutz:{" "}
         <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
           Wohnungsübergabe ohne Stress
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>1. Wände, Böden und Decken: Die häufigsten Stolpersteine</RatgeberH2>
-      <RatgeberP>
-        Bei der optischen Kontrolle durch Wiener Wohnen stehen Boden- und Wandbeläge meist im Fokus.
-        Eigenmächtige Veränderungen müssen in den Originalzustand zurückversetzt werden — oft im Rahmen einer{" "}
-        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
-          Haushaltsauflösung
-        </RatgeberInternalLink>{" "}
-        oder gezielten{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
-          Entrümpelung vor Sanierung
+        . Keller und Schlüssel operativ:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-aufloesen-keller-schluessel-uebergabe">
+          Gemeindewohnung auflösen
         </RatgeberInternalLink>
         .
       </RatgeberP>
 
-      <RatgeberH3>Darauf müssen Sie besonders achten</RatgeberH3>
+      <RatgeberH2>Böden, Wände, Fliesen: die Oberflächen-Abnahme</RatgeberH2>
+      <RatgeberP>
+        Nachträglich verlegte Laminat- oder PVC-Schichten müssen in der Regel runter — und zwar inklusive
+        Kleber und Unterlage. Zurückbleibende Kleberflecken sind ein klassischer Eintrag auf der
+        Mängelliste. Fliesen in Küche und Bad: lose, stark beschädigte oder erkennbar unsachgemäß
+        nachverlegte Flächen fallen auf. Wände sollen neutral wirken; knallige Farben, Mustertapeten und
+        Styropor- oder Holzverkleidungen gehören oft nicht zum Abnahmebild. Decken mit aufgeklebten Platten
+        oder schweren Verkleidungen werden ebenfalls kritisch betrachtet.
+      </RatgeberP>
+      <RatgeberP>
+        Die eigentliche Demontage ist Handwerk — siehe Hub-Artikel oben. Hier zählt das Ergebnis fürs Auge
+        des Abnehmers: glatte, nachvollziehbare Oberflächen ohne Restmüll in Ecken und Sockeln. Bei einer{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>{" "}
+        oder{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink>{" "}
+        sollte der Endzustand „abnahmefähig“ heißen, nicht nur „leer“. Gehen Sie Raum für Raum mit Taschenlampe
+        und Notizblock: Was der Abnehmer sieht, sollte vorher schon Sie gesehen haben.
+      </RatgeberP>
+
+      <RatgeberH2>Türen, Fenster, Beschläge</RatgeberH2>
+      <RatgeberP>
+        Jede Innentür sollte eingehängt, schließbar und ohne abgerissene Griffe sein. Aufkleber, Spiegelfolien
+        und Bohrlöcher-Chaos an Türblättern wirken unfertig. Fenster und Balkontüren: Scheiben ohne Sprünge,
+        Beschläge bedienbar. Fehlende Schlüssel für Innentüren vorher ersetzen — sonst stockt schon die
+        Begehung. Prüfen Sie auch, ob Türblätter nicht verklemmt oder abgeschliffen wurden, nachdem Böden
+        entfernt wurden: Niveauwechsel nach Belagsrückbau führen manchmal zu schleifenden Türen.
+      </RatgeberP>
+      <RatgeberP>
+        Balkontüren und Fenstergriffe gehören zur Funktionsprüfung genauso wie die Wohnzimmerinnentür. Was
+        klemmt, wird notiert — besser Sie finden es vor dem Abnehmer. Kleine Reparaturen vor dem Termin
+        sind günstiger als eine abgebrochene Abnahme wegen „offener Punkte“.
+      </RatgeberP>
+
+      <RatgeberH2>Sanitär und Heizkörper als Stadtinventar</RatgeberH2>
+      <RatgeberP>
+        WC, Waschbecken, Wanne oder Dusche sowie die Heizkörper sind typischerweise Stadtinventar. Sie bleiben
+        in der Wohnung und müssen funktionieren. Emailschäden, Risse, defekte Armaturen oder abmontierte
+        Heizkörper ohne Ersatz sind Abnahme-Themen — unabhängig davon, wie gründlich Sie entrümpelt haben.
+        Auch Silikonfugen mit grobem Schimmel oder fehlende Siphon-Teile fallen auf, obwohl sie „klein“ wirken.
+      </RatgeberP>
       <RatgeberUl>
         <RatgeberLi>
-          <strong>Bodenbeläge:</strong> Teppiche, Laminat- oder PVC-Böden, die nachträglich über den originalen
-          Estrich oder Parkett gelegt wurden, müssen restlos entfernt werden. Auch Klebereste dürfen nicht
-          zurückbleiben.
+          <strong>Sanitär:</strong> Dichtheit und grobe Schäden prüfen; Standard-Armaturen statt
+          defekter Eigenbauten.
         </RatgeberLi>
         <RatgeberLi>
-          <strong>Fliesen:</strong> Beschädigte, lose oder unprofessionell verlegte Fliesen in Küche und Bad werden
-          bei der Abnahme beanstandet.
+          <strong>Heizkörper:</strong> Montiert, zugänglich, ohne schwere Korrosionsschäden; Ventile
+          bedienbar lassen.
         </RatgeberLi>
         <RatgeberLi>
-          <strong>Wände &amp; Decken:</strong> Auffällige Styroporplatten, Holzverkleidungen oder stark abgenutzte
-          Tapeten müssen komplett demontiert werden.
+          <strong>Nicht mitnehmen:</strong> Was zum Objekt gehört, gehört nicht in den Räumungscontainer.
         </RatgeberLi>
         <RatgeberLi>
-          <strong>Malerarbeiten:</strong> Knallige oder mehrfarbige Wandanstriche werden oft nicht akzeptiert. Die
-          Wohnung sollte in neutralen, hellen Farben übergeben werden.
+          <strong>Bad- und Küchenarmaturen:</strong> Tropfen und fehlende Handläufe/Haltegriffe (falls
+          ursprünglich vorhanden) vorab klären.
         </RatgeberLi>
       </RatgeberUl>
 
+      <RatgeberH2>Loggiaverbau und genehmigungspflichtige Einbauten</RatgeberH2>
       <RatgeberP>
-        Typische Fehler bei der Vorbereitung:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
-          5 Fehler bei der Entrümpelungsfirma-Wahl
+        Eigenmächtige Loggiaverglasungen oder geschlossene Verbauungen ohne schriftliche Freigabe sind ein
+        häufiger Mangel. Dasselbe gilt für Zwischenwände, die den ursprünglichen Grundriss verändern. Vor der
+        Abnahme: Genehmigung suchen oder Rückbau einplanen. Die handwerkliche Ausführung ist eine Sache —
+        die genehmigungsrechtliche Klarheit eine andere. Fotos und alte Schreiben aus dem Mietakt helfen,
+        Diskussionen am Abnahmetag zu verkürzen.
+      </RatgeberP>
+      <RatgeberP>
+        Bei Verlassenschaft oder unklarer Aktenlage zuerst klären, wer entscheiden darf:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-todesfall-verlassenschaft-raeumen-wien">
+          Gemeindewohnung nach Todesfall
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>2. Innentüren, Fenster und Sanitäranlagen im Check</RatgeberH2>
-      <RatgeberP>
-        Alle festen Bestandteile der Wohnung müssen bei der Übergabe voll funktionstüchtig und unbeschädigt
-        sein — unabhängig davon, ob Sie selbst räumen oder eine{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
-          Wohnungsauflösung
-        </RatgeberInternalLink>{" "}
-        beauftragen.
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Türen &amp; Beschläge:</strong> Sämtliche Innentüren müssen eingehängt und funktionstüchtig sein.
-          Fehlende Schlüssel oder beschädigte Türgriffe müssen vorab ersetzt werden. Aufkleber, Spiegelfliesen oder
-          Folien auf den Türen sind komplett zu entfernen.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Fenster:</strong> Glasscheiben an Fenstern und Balkontüren dürfen keine Risse oder Sprünge
-          aufweisen.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Sanitärbereich:</strong> Waschbecken, WCs und Badewannen werden auf Risse und Emailschäden
-          untersucht. Defekte Armaturen müssen gegen funktionierende Standard-Modelle ausgetauscht werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Heizkörper:</strong> Alle Heizkörper müssen ordnungsgemäß montiert, sauber und voll
-          funktionsfähig sein.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>3. Loggiaverbau und ungenehmigte Zwischenwände</RatgeberH2>
-      <RatgeberP>
-        Bauliche Modifikationen in Eigenregie sind bei der Stadt Wien ein kritisches Thema. Wenn für
-        Veränderungen keine schriftliche Genehmigung von Wiener Wohnen vorliegt, gilt die Pflicht zum Rückbau.
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Zwischenwände:</strong> Nachträglich eingezogene Rigipswände oder Raumteiler müssen komplett
-          abgerissen und der ursprüngliche Zustand des Raumes wiederhergestellt werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Balkon &amp; Loggia:</strong> Eigenmächtige Loggiaverbauten oder Verglasungen, die nicht
-          offiziell bewilligt wurden, müssen vor dem Übergabetermin fachgerecht demontiert werden.
-        </RatgeberLi>
-      </RatgeberUl>
-      <RatgeberWarning title="Genehmigung nicht vergessen">
-        <p>
-          Rückbau ohne vorherige Klärung mit dem Werkmeister kann teuer werden. Vereinbaren Sie eine
-          Vorabbesichtigung — Details:{" "}
-          <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
-            kostenlose Besichtigung
-          </RatgeberInternalLink>
-          .
-        </p>
-      </RatgeberWarning>
-
-      <RatgeberH2>4. Kellerabteil und organisatorische Pflichten</RatgeberH2>
-      <RatgeberP>
-        Die Räumung der reinen Wohnfläche ist nur die halbe Miete. Auch die Nebenräume und bürokratischen
-        Schritte gehören zu einer vollständigen Wohnungsaufhebung — inklusive fachgerechter{" "}
-        <RatgeberInternalLink href="/leistungen/kellerentruempelung">
-          Kellerentrümpelung
+        . Bei stark vollgestellten Räumen vor der Feinprüfung sortieren:{" "}
+        <RatgeberInternalLink href="/ratgeber/vollgestellte-gemeindewohnung-entruempeln-wien">
+          vollgestellte Gemeindewohnung entrümpeln
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Vollständige Leerräumung:</strong> Das gesamte persönliche Mobiliar, Einbauküchen (sofern nicht
-          anders vereinbart), Lampen, Satellitenanlagen und Modems müssen ausgebaut werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Das Kellerabteil:</strong> Der Keller muss absolut leer sein. Vergessen Sie nicht, das Abteil
-          ordnungsgemäß zu versperren und die Beschriftung zu aktualisieren. Mehr:{" "}
-          <RatgeberInternalLink href="/ratgeber/keller-aufraeumen-entruempeln-wien">
-            Keller aufräumen &amp; entrümpeln Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Schlüsselübergabe:</strong> Alle zur Wohnung gehörenden Schlüssel (inklusive Keller-,
-          Postkasten- und Haustürschlüssel) müssen lückenlos abgegeben werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Zähler &amp; Verträge:</strong> Dokumentieren Sie die aktuellen Zählerstände von Strom, Gas und
-          Wasser für die endgültige Abmeldung beim Energieversorger.
-        </RatgeberLi>
-      </RatgeberUl>
-      <RatgeberP>
-        Entsorgung von Restmüll und Sonderabfällen aus Keller oder Dachboden:{" "}
-        <RatgeberInternalLink href="/ratgeber/dachbodenraeumung-wien-ma-48">
-          Dachbodenräumung &amp; MA 48
-        </RatgeberInternalLink>
-        .
+        . Wer die Loggia erst am Abnahmetag „entdeckt“, riskiert Verschiebung — besser vorab mit Maßband und
+        Foto klären, was original und was Zubau ist.
       </RatgeberP>
 
-      <RatgeberH2>Regionaler Fokus: Typische Herausforderungen in den Wiener Bezirken</RatgeberH2>
+      <RatgeberH2>Zählerstände und Versorger am Abnahmetag</RatgeberH2>
       <RatgeberP>
-        Je nach Alter und Lage der Gemeindebauten in Wien zeigen sich in der Praxis unterschiedliche
-        Schwerpunkte bei der Räumung:
+        Strom, Gas und Wasser: Endstände fotografieren und notieren, Verträge kündigen bzw. ummelden. Das
+        gehört zur fehlerfreien Rückgabe genauso wie die leere Loggia. Schreiben Sie Zählernummer und Stand
+        ins Protokoll; Unschärfe hier erzeugt später Streit mit dem Versorger, nicht mit dem Werkmeister.
+        Nebenräume (Keller) müssen leer sein — die operative Keller-/Schlüssel-Timeline steht im
+        Auflösen-Ratgeber; hier reicht der Hinweis, dass die Abnahme Nebenflächen mitprüft.
       </RatgeberP>
+      <RatgeberP>
+        Leistung{" "}
+        <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>
+        , Faktoren ohne Fantasiepreise:{" "}
+        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
+          Was kostet eine Entrümpelung in Wien?
+        </RatgeberInternalLink>
+        ,{" "}
+        <RatgeberInternalLink href="/preise">Preise</RatgeberInternalLink>
+        , optional{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>. Eine
+        abnahmefähige Wohnung ohne dokumentierte Zählerstände ist organisatorisch unvollständig — auch wenn
+        alle Oberflächen passen.
+      </RatgeberP>
+
+      <RatgeberH2>So gehen Sie die Begehung Raum für Raum an</RatgeberH2>
+      <RatgeberP>
+        Beginnen Sie im hellsten Raum und arbeiten Sie systematisch: Boden → Wände → Decke → Türen →
+        Einbauten. Im Bad und in der Küche zusätzlich Sanitär und Fliesen. Zum Schluss Loggia/Balkon und
+        Zähler. Diese Reihenfolge verhindert, dass Sie nach der „großen“ Entrümpelung die kleinen, aber
+        abnahmerelevanten Punkte übersehen. Notieren Sie offene Punkte mit Raumbezeichnung — so bleibt die
+        Nacharbeit zielgenau.
+      </RatgeberP>
+
+      <RatgeberH2>Regionale Notizen — frisch formuliert</RatgeberH2>
       <RatgeberUl>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/ratgeber/entruempelung-favoriten-wien-1100">Favoriten</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-favoriten-wien-1100">Favoriten</RatgeberInternalLink>{" "}
+            /{" "}
             <RatgeberInternalLink href="/ratgeber/entruempelung-simmering-wien-1110">Simmering</RatgeberInternalLink>:
           </strong>{" "}
-          In den großen, weitläufigen Wohnbauten dieser Bezirke sind es oft prall gefüllte Kellerabteile und
-          Dachböden, die über Jahre hinweg als Lager genutzt wurden und nun komplett geräumt werden müssen.
+          Häufig lange genutzte Beläge und Einbauten in älteren Blöcken — die Oberflächenprüfung fällt streng
+          aus, wenn Kleber und Restschichten bleiben. Hier lohnt die Taschenlampen-Kontrolle an Sockeln und
+          unter Heizkörpern besonders.
         </RatgeberLi>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/ratgeber/entruempelung-meidling-wien-1120">Meidling</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-meidling-wien-1120">Meidling</RatgeberInternalLink>{" "}
+            /{" "}
             <RatgeberInternalLink href="/ratgeber/entruempelung-ottakring-wien-1160">Ottakring</RatgeberInternalLink>:
           </strong>{" "}
-          Hier dominieren oft ältere Wohnanlagen mit massiven Altholz-Einbauten und schweren Möbelstücken, deren
-          Demontage besonderes Werkzeug erfordert.
+          Alte Holzverkleidungen und schwere Einbauten prägen die Mängelliste; Türen und Beschläge oft
+          jahrzehntealt und hakelig. Funktionsprüfung vor dem Termin spart Überraschungen.
         </RatgeberLi>
         <RatgeberLi>
           <strong>
-            <RatgeberInternalLink href="/ratgeber/entruempelung-floridsdorf-wien-1210">Floridsdorf</RatgeberInternalLink> &amp;{" "}
+            <RatgeberInternalLink href="/ratgeber/entruempelung-floridsdorf-wien-1210">Floridsdorf</RatgeberInternalLink>{" "}
+            /{" "}
             <RatgeberInternalLink href="/ratgeber/entruempelung-donaustadt-wien-1220">Donaustadt</RatgeberInternalLink>:
           </strong>{" "}
-          In moderneren oder größeren Anlagen auf der Transdanubien-Seite treffen wir vermehrt auf nachträgliche
-          Loggia-Verglasungen und ungenehmigte Raumtrennungen, die vor der Abnahme fachgerecht zurückgebaut werden
-          müssen.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>Der sichere Weg zur mängelfreien Übergabe mit Sofort Entrümpelung</RatgeberH2>
-      <RatgeberP>
-        Eine professionelle Räumung spart Ihnen Zeit, Nerven und schützt vor unerwarteten Kosten durch
-        Nachforderungen seitens Wiener Wohnen. Unser Ablauf ist unkompliziert und transparent:
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Kostenlose Besichtigung:</strong> Wir prüfen die Wohnung vor Ort und stellen fest, welche
-          Rückbauarbeiten (Böden, Wände, Einbauten) notwendig sind — siehe{" "}
-          <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
-            Räumungsexperte Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Garantierter Fixpreis:</strong> Sie erhalten ein verbindliches Angebot ohne versteckte
-          Zusatzkosten — Orientierung:{" "}
-          <RatgeberInternalLink href="/preise">Preise &amp; Festpreis</RatgeberInternalLink>
-          ,{" "}
-          <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
-            Kosten-Richtwerte Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Besenreine Durchführung:</strong> Unser Team demontiert alle Einbauten, entfernt alte Beläge,
-          räumt die Wohnung inklusive Keller komplett leer und übergibt das Objekt besenrein. Mögliche
-          Kostensenkung:{" "}
-          <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
-            Wertanrechnung
-          </RatgeberInternalLink>
-          , Leistung{" "}
-          <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>
-          .
+          Loggia- und Verglasungsthemen treten häufiger auf — Genehmigung oder Rückbau vor der Abnahme
+          klären, statt am Protokolltag zu diskutieren.
         </RatgeberLi>
       </RatgeberUl>
       <RatgeberP>
-        Eigenregie vs. Firma:{" "}
-        <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-          MA 48 oder Räumungsfirma
-        </RatgeberInternalLink>
-        . Bei Zeitdruck:{" "}
-        <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
-          Express-Entrümpelung Wien
-        </RatgeberInternalLink>
-        . Gesamt-Checkliste:{" "}
-        <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
-          Checkliste Wohnungsräumung Wien
-        </RatgeberInternalLink>
-        .
+        Die Stadtregeln sind überall ähnlich; die typischen Mängel verschieben sich mit Baujahr und Umbau-
+        Kultur der Anlage. Nutzen Sie Bezirkserfahrung als Hinweis, nicht als Ersatz für die konkrete
+        Wohnungsbegehung.
       </RatgeberP>
 
-      <RatgeberH2>Checkliste für Ihre Wiener-Wohnen-Übergabe</RatgeberH2>
+      <RatgeberH3>Praxis-Beispiel: Mängelliste wegen Kleberesten und Loggia</RatgeberH3>
       <RatgeberP>
-        Bevor der Prüfer zur Abnahme kommt, gehen Sie folgende Punkte nochmals durch:
+        Bei einer Abnahme im Gemeindebau war die Wohnung besenleer — dennoch gab es eine Mängelliste:
+        flächige Klebereste nach Laminatentfernung im Wohnzimmer und eine ungenehmigte Loggiaverglasung.
+        Erst Nacharbeit an Estrich und Demontage der Verglasung machten die Rückgabe möglich. Der Termin
+        verschob sich um wenige Tage; teurer wäre ein Abbruch der Abnahme ohne Plan gewesen. Kaution und
+        LKW-Haltezonen waren hier Nebensache — entscheidend war die technische Checkliste.
       </RatgeberP>
+      <RatgeberP>
+        Die Lehre daraus: Planen Sie die Abnahme als Qualitätskontrolle, nicht als Formsache. Was auf der
+        Mängelliste landet, war meist schon vorher sichtbar — wenn man Raum für Raum hinschaut.
+      </RatgeberP>
+
+      <RatgeberH2>Kostenfaktoren Abnahme-Vorbereitung (ohne Fantasiepreise)</RatgeberH2>
+      <RatgeberTableWrap caption="Technische Abnahme-Hebel Gemeindewohnung Stadt Wien (ohne Fantasiepreise)">
+        <RatgeberThead>
+          <RatgeberTr>
+            <RatgeberTh>Prüfpunkt</RatgeberTh>
+            <RatgeberTh>Typisches Risiko</RatgeberTh>
+            <RatgeberTh>Vor der Abnahme</RatgeberTh>
+          </RatgeberTr>
+        </RatgeberThead>
+        <RatgeberTbody>
+          <RatgeberTr>
+            <RatgeberTd>Beläge &amp; Kleber</RatgeberTd>
+            <RatgeberTd>Mängelliste trotz leerer Räume</RatgeberTd>
+            <RatgeberTd>Restlos entfernen, Oberflächen prüfen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Türen / Fenster</RatgeberTd>
+            <RatgeberTd>Funktionseinschränkung, fehlende Beschläge</RatgeberTd>
+            <RatgeberTd>Begehung Tür für Tür</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Sanitär / Heizkörper</RatgeberTd>
+            <RatgeberTd>Stadtinventar beschädigt oder demontiert</RatgeberTd>
+            <RatgeberTd>Funktionstest, nichts mitnehmen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Loggia / Zwischenwand</RatgeberTd>
+            <RatgeberTd>Rückbaupflicht ohne Genehmigung</RatgeberTd>
+            <RatgeberTd>Aktenlage klären oder demontieren</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Zählerstände</RatgeberTd>
+            <RatgeberTd>Unklare Endabrechnung Versorger</RatgeberTd>
+            <RatgeberTd>Foto + Notiz am Abnahmetag</RatgeberTd>
+          </RatgeberTr>
+        </RatgeberTbody>
+      </RatgeberTableWrap>
+
+      <RatgeberWarning title="Abnahme-Hinweis">
+        <RatgeberP>
+          Leer ist nicht gleich mängelfrei. Klebereste, defektes Stadtinventar und ungenehmigte Loggiaverbauten
+          erzeugen Nacharbeit — auch wenn Kartons und Möbel längst weg sind. Eine kurze Eigenbegehung mit
+          Notizliste vor dem offiziellen Termin spart Verschiebungen und Diskussionen am Protokoll.
+        </RatgeberP>
+      </RatgeberWarning>
+
+      <RatgeberH2>Checkliste technische Abnahme</RatgeberH2>
       <RatgeberChecklist
         items={[
-          "Ist die Wohnung inklusive aller Einbaumöbel komplett leer?",
-          "Wurde das dazugehörige Kellerabteil vollständig geräumt und sauber hinterlassen?",
-          "Sind alle ungenehmigten Wand-, Decken- und Bodenbeläge entfernt?",
-          "Befinden sich alle Innentüren in funktionsfähigem Zustand an ihrem Platz?",
-          "Sind Sanitäranlagen und Heizkörper intakt und frei von schweren Schäden?",
-          "Liegen alle Schlüssel für den Übergabetermin lückenlos bereit?",
-          "Wurden die Zählerstände für Strom und Gas notiert?",
+          "Böden frei von Belags- und Kleberesten, Fliesen ohne lose Stellen",
+          "Wände neutral, ohne Verkleidung und ohne auffällige Farbflächen",
+          "Alle Innentüren eingehängt und bedienbar, Fenster ohne Risse",
+          "Sanitär und Heizkörper als Stadtinventar intakt belassen",
+          "Ungenehmigte Loggiaverbauten / Zwischenwände geklärt oder rückgebaut",
+          "Zählerstände Strom/Gas/Wasser dokumentiert, Schlüssel vollzählig",
         ]}
       />
 
       <RatgeberP>
-        Überlassen Sie den Stress nicht dem Zufall. Mit unserer Erfahrung im Bereich der Gemeindebau-Räumungen
-        sorgen wir dafür, dass Ihre Wohnungsrückgabe an die Stadt Wien absolut reibungslos verläuft. Bei
-        Delogierungsfristen:{" "}
-        <RatgeberInternalLink href="/ratgeber/delogierung-zwangsrauemung-wien">
-          Delogierung &amp; Zwangsräumung Wien
-        </RatgeberInternalLink>
-        .
+        Mit dieser Raum-für-Raum-Logik gehen Sie strukturiert in die Abnahme. Logistik und Kalender bleiben
+        den Schwester-Artikeln vorbehalten — so überschneiden sich die Texte nicht. Wenn Oberflächen,
+        Stadtinventar, Loggia und Zählerstände passen, ist die technische Seite der Gemeindewohnung Stadt
+        Wien Rückgabe erledigt; der Rest ist Organisation und Handwerk in den Hub-Texten daneben.
       </RatgeberP>
 
       <RatgeberCtaBox>
         <p className="font-bold text-brand-dark">
-          Gemeindewohnung Stadt Wien — mängelfrei an Wiener Wohnen übergeben
+          Stadt-Wien-Gemeindewohnung — abnahmefähig übergeben
         </p>
         <RatgeberP>
-          Kostenlose Besichtigung, Fixpreis und besenreine Übergabe inklusive Keller. Wir kennen die
-          Rückgabevorgaben in allen Wiener Gemeindebezirken.
+          Kostenlose Besichtigung und Fixpreis: wir bereiten Oberflächen, Einbauten und Endzustand für die
+          Wiener-Wohnen-Abnahme vor.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">

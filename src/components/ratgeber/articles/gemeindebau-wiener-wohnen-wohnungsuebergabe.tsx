@@ -1,15 +1,24 @@
 import RatgeberArticleBody, {
-  RatgeberFreshnessBadge,
+  RatgeberChecklist,
   RatgeberCtaBox,
+  RatgeberFreshnessBadge,
   RatgeberH2,
   RatgeberH3,
   RatgeberInternalLink,
   RatgeberLead,
   RatgeberLi,
+  RatgeberOl,
   RatgeberP,
+  RatgeberTableWrap,
+  RatgeberTbody,
+  RatgeberTd,
+  RatgeberTh,
+  RatgeberThead,
+  RatgeberTr,
   RatgeberUl,
   RatgeberWarning,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
@@ -19,12 +28,13 @@ export const meta: RatgeberArticleMeta = {
   ogTitle: "Gemeindebau Wien — Wohnungsübergabe an Wiener Wohnen ohne Stress",
   focusKeyword: "Wiener Wohnen Wohnungsübergabe",
   description:
-    "Wiener Wohnen Übergabe ohne Stress: Keller & Dachboden, dokumentierte Entsorgung, Terminplan & Fixpreis — so sichern Sie Ihre Kaution bei der Gemeindewohnungs-Rückgabe.",
+    "Wiener Wohnen Wohnungsübergabe: rückwärts vom Übergabetermin planen, 14-Tage-Frist bei Terminänderung, Keller als Schlüssel-Blocker, Entsorgungsnachweise als Kautionsschutz — ohne Fantasiepreise.",
   excerpt:
-    "Stressfreie Wohnungsübergabe an Wiener Wohnen — Keller, Kaution, Logistik und termingerechte Räumung im Gemeindebau.",
+    "Kautionsschutz und Termin-/Kalenderführung für die Wohnungsübergabe an Wiener Wohnen.",
   freshnessExcerpt: {
     kind: "updated",
-    suffix: "Praxis-Leitfaden für termingerechte Rückgabe und Kautionsschutz in Wiener Gemeindebauten.",
+    suffix:
+      "Praxis-Leitfaden für Terminplan, Nebenraum-Blockaden und Kautionsschutz in Wiener Gemeindebauten.",
   },
   publishedAt: "2026-06-11",
   keywords: [
@@ -33,34 +43,68 @@ export const meta: RatgeberArticleMeta = {
     "Gemeindewohnung zurückgeben Wien",
     "Kaution Wiener Wohnen",
     "Kellerabteil Übergabe Gemeindebau",
-    "besenreine Übergabe Wiener Wohnen",
-    "Wohnungsrückgabe Gemeindebau",
     "Entsorgungsnachweis Kaution",
-    "Fixpreis Gemeindewohnung räumen",
     "Schlüsselübergabe Wiener Wohnen",
+    "Express Räumung Übergabetermin",
+    "Mietverlängerung Gemeindewohnung",
   ],
   faq: [
     {
-      question: "Warum verweigert die Hausverwaltung die Übergabe wegen des Kellers?",
+      question: "Wie plane ich rückwärts vom Wiener-Wohnen-Übergabetermin?",
       answer:
-        "Kellerabteil und Dachboden gehören zum Mietobjekt. Ist das Kellerabteil nicht leer, wird oft die gesamte Schlüsselübergabe blockiert — auch wenn die Wohnung selbst schon geräumt ist.",
+        "Setzen Sie den Abgabetermin als Fixpunkt und rechnen Sie Rückwärts-Puffer für Räumung, Keller, Nachweise und eventuelle Nacharbeit. Änderungen am Termin sollten möglichst spätestens 14 Tage vorher kommuniziert werden — sonst droht Terminchaos.",
     },
     {
-      question: "Brauche ich Entsorgungsnachweise für die Kaution?",
+      question: "Warum blockiert ein volles Kellerabteil die Schlüsselübergabe?",
       answer:
-        "Bei Altlasten oder Sondermüll in Keller oder Dachboden verlangen Verwaltungen oft Nachweise über fachgerechte Entsorgung. Wir liefern Belege als Sicherheit für Ihre Kaution.",
+        "Keller und Dachboden gehören zum Mietobjekt. Ist das Abteil nicht leer und versperrt, verweigern viele Abnahmen die Schlüsselrückgabe — selbst wenn die Wohnung schon leer ist. Der Keller ist ein organisatorischer Blocker, kein Detail der Bodenabnahme.",
     },
     {
-      question: "Wann sollte die Räumung vor der Schlüsselübergabe stattfinden?",
+      question: "Welche Rolle spielen Entsorgungsnachweise für die Kaution?",
       answer:
-        "Idealerweise kurz vor dem Abgabetermin nach Besichtigung — so bleibt die Wohnung nicht lange leerstehend und Sie kennen den Fixpreis im Voraus.",
+        "Bei Altlasten, Sperrmüll oder problematischen Resten aus Keller und Dachboden verlangen Verwaltungen oft Belege über fachgerechte Entsorgung. Solche Nachweise stützen Ihre Position, wenn die Kaution diskutiert wird — ohne dass wir konkrete Einbehaltsbeträge erfinden.",
     },
     {
-      question: "Wo finde ich Details zu Rückbau, Laminat und Werkmeister-Besichtigung?",
+      question: "Was riskiere ich bei verspäteter oder gescheiterter Übergabe?",
       answer:
-        "Technische Rückbau-Vorgaben und Werkmeister-Tipps stehen im Ratgeber Entrümpelung im Gemeindebau — Wiener Wohnen Übergabe-Tipps.",
+        "Bleibt die Wohnung über den Termin hinaus nicht übergabefähig, können weitere Mietzahlungen und organisatorische Kosten entstehen. Deshalb lohnt Express-Räumung nahe der Deadline nur mit klarem Endzustand und Puffer.",
+    },
+    {
+      question: "Wann ist Express-Entrümpelung vor der Schlüsselabgabe sinnvoll?",
+      answer:
+        "Wenn der Übergabetermin nah ist und Keller oder Wohnung noch nicht leer sind. Express ersetzt keine Vorplanung — sie verdichtet einen bereits klaren Auftrag. Details: Express-Entrümpelung Wien.",
+    },
+    {
+      question: "Wo stehen Rückbau-Handwerk und die technische Abnahme-Checkliste?",
+      answer:
+        "Demontage und Logistik: Entrümpelung im Gemeindebau. Raum-für-Raum-Check (Böden, Sanitär, Loggia): Rückgabevorgaben Stadt-Wien-Gemeindewohnung. Hier geht es um Kalender und Kautionsschutz.",
     },
   ],
+  howTo: {
+    name: "Wohnungsübergabe an Wiener Wohnen kautionssicher terminieren",
+    steps: [
+      {
+        name: "Übergabetermin als Fixpunkt setzen",
+        text: "Datum und Uhrzeit mit Wiener Wohnen bestätigen; 14-Tage-Regel bei Änderungen einplanen.",
+      },
+      {
+        name: "Rückwärts-Kalender bauen",
+        text: "Räumung, Keller, Nachweise und Puffer vom Abgabetermin aus rückwärts legen.",
+      },
+      {
+        name: "Nebenräume als Blocker behandeln",
+        text: "Kellerabteil und Dachboden leer und versperrt — sonst keine Schlüsselübergabe.",
+      },
+      {
+        name: "Entsorgungsnachweise sichern",
+        text: "Belege für fachgerechte Entsorgung als Kautionsschutz ablegen.",
+      },
+      {
+        name: "Schlüsselübergabe vorbereiten",
+        text: "Vollständige Schlüsselmenge und Protokoll; bei Zeitnot Express-Fenster nutzen.",
+      },
+    ],
+  },
   readingTimeMinutes: 10,
 };
 
@@ -69,166 +113,265 @@ export default function GemeindebauWienerWohnenWohnungsuebergabe() {
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
         variant={{ kind: "updated-month" }}
-        note="Praxis-Leitfaden für termingerechte Rückgabe und Kautionsschutz in Wiener Gemeindebauten."
+        note="Fokus: Terminplan rückwärts vom Übergabetermin, Keller-Blockaden und Kautionsschutz."
         article={meta}
       />
 
       <RatgeberLead>
-        Die Rückgabe einer Wohnung an <strong>Wiener Wohnen</strong> oder andere große Hausverwaltungen ist für
-        viele Mieter eine enorme Hürde. Wer die Übergabe-Kriterien ignoriert, riskiert einbehaltene Kaution —
-        nicht nur wegen Schmutz, sondern oft wegen übersehener Nebenräume oder fehlender Entsorgungsnachweise.
+        Kaution und Kalender entscheiden oft mehr über den Ausgang einer Wiener Wohnen Wohnungsübergabe als
+        die Frage, ob noch ein Sofa im Wohnzimmer steht. Wer den Abgabetermin ignoriert oder den Keller
+        „später“ plant, verlängert ungewollt die Mietphase — und macht die Kaution zum Verhandlungsobjekt.
+        Dieser Text erklärt deshalb die Zeitachse, nicht den Stemmeisen-Einsatz.
       </RatgeberLead>
 
+      <BezirkEarlyCta
+        title="Übergabe-Termin &amp; Kautionsschutz"
+        text="Rückwärts vom Abgabetermin: Wohnung, Keller und Nachweise — Fixpreis nach Besichtigung."
+      />
+
       <RatgeberP>
-        Sofort Entrümpelung kennt die Anforderungen von Gemeindebauten und städtischen Wohnanlagen in Wien. Dieser
-        Leitfaden fokussiert <strong>Wohnungsübergabe ohne Stress</strong> — Kaution, Terminplan und Nebenräume.
-        Rückbau-Details (Laminat, Tapeten, Werkmeister):{" "}
+        Dieser Ratgeber konzentriert sich auf Terminführung, Nebenraum-Blockaden und weiche
+        Kautionssprache — ohne erfundene Gebühren und ohne technische Abnahme-Essays. Handwerklicher
+        Rückbau und LKW-Logistik:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
           Entrümpelung im Gemeindebau
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>1. Die Übergabe-Hürde: Was Wiener Wohnen prüft</RatgeberH2>
-      <RatgeberP>
-        Bei städtischen Wohnungen reicht es nicht, Möbel hinauszutragen. Hausverwaltungen prüfen bei der
-        Schlüsselübergabe oft streng:
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Fachgerechte Demontage:</strong> Selbst eingebaute Küchenzeilen, Laminat oder Zwischenwände
-          müssen bei Auszug meist entfernt werden — sofern kein Nachmieter übernimmt.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Besenreinheit:</strong> Im Gemeindebau oft Räumung bis zum Rohzustand — keine Kleinteile,
-          Schrauben oder Müllreste.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Dokumentierte Entsorgung:</strong> Bei Altlasten in Keller oder Dachboden Entsorgungsnachweise
-          für die Kaution — wir liefern Belege auf Wunsch.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>2. Spezialaufgabe: Kellerabteil und Dachboden</RatgeberH2>
-      <RatgeberP>
-        Häufig unterschätzt: Nebenräume gehören zur Übergabe. Jahrzehntelanger Unrat im Keller oder auf dem
-        Dachboden blockiert oft die gesamte Schlüsselrückgabe — auch wenn die Wohnung selbst leer ist.
-      </RatgeberP>
-      <RatgeberH3>Unsere Lösung</RatgeberH3>
-      <RatgeberP>
-        Wir nehmen Kellerabteil und Dachboden direkt in den Auftrag auf — alles Nicht-Mietvertrags-Inventar wird
-        fachgerecht entsorgt. Orientierung:{" "}
-        <RatgeberInternalLink href="/ratgeber/keller-aufraeumen-entruempeln-wien">
-          Keller aufräumen Wien
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/ratgeber/dachbodenraeumung-wien-ma-48">
-          Dachbodenräumung Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberWarning title="Kaution-Risiko">
-        <p>
-          Ein volles Kellerabteil ist einer der häufigsten Gründe für verzögerte Übergabe und Kautionseinbehalt —
-          planen Sie Nebenräume von Anfang an mit ein.
-        </p>
-      </RatgeberWarning>
-
-      <RatgeberH2>3. Logistik in der Gemeindebau-Infrastruktur</RatgeberH2>
-      <RatgeberP>
-        Lange Wege, verwinkelte Innenhöfe und schmale Lifte — ein blockierender LKW erzeugt sofort Unmut in der
-        Hausgemeinschaft:
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Park-Management:</strong> Zufahrten so kurz wie möglich blockieren — wo nötig Halteverbotszone.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Liftschutz:</strong> Schutzmatten in sensiblen Aufzügen — Haftungsansprüche der Verwaltung
-          vermeiden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Ruhezeiten:</strong> Gesetzliche Ruhezeiten einhalten — Konflikte mit Nachbarn vermeiden.
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>4. Den Termin-Druck managen</RatgeberH2>
-      <RatgeberP>
-        Mietvertragsende ist fix — wir arbeiten mit verbindlichem Zeitplan:
-      </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Rechtzeitige Besichtigung:</strong> Kurz vor Auszug Volumen präzise einschätzen —{" "}
-          <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
-            kostenlose Besichtigung
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Express nahe Abgabe:</strong> Räumung eng an Schlüsselübergabe — Wohnung nicht wochenlang leer
-          und ungeschützt. Zeitkritisch:{" "}
-          <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
-            Express Entrümpelung
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Fixpreis-Sicherheit:</strong> Budget oft durch Kaution begrenzt — garantierter Fixpreis nach
-          Besichtigung ohne Nachkalkulation.{" "}
-          <RatgeberInternalLink href="/preise">Preise &amp; Festpreis</RatgeberInternalLink>
-          .
-        </RatgeberLi>
-      </RatgeberUl>
-
-      <RatgeberH2>Dieser Ratgeber im Überblick: Kaution &amp; Terminplan</RatgeberH2>
-      <RatgeberP>
-        Hier geht es um <strong>Kautionsschutz, Keller- und Dachboden-Blockaden, Entsorgungsnachweise und
-        Terminplanung</strong> — nicht um die technische Detailprüfung bei der Abnahme. Rückbau, Laminat und
-        Werkmeister-Tipps:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
-          Entrümpelung im Gemeindebau
-        </RatgeberInternalLink>
-        . Böden, Sanitär, Türen und die vollständige Abnahme-Checkliste:{" "}
+        . Mängelliste Raum für Raum:{" "}
         <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
           Rückgabevorgaben Gemeindewohnung Stadt Wien
         </RatgeberInternalLink>
+        . Operativer Schlüssel-/Keller-Plan:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-aufloesen-keller-schluessel-uebergabe">
+          Gemeindewohnung auflösen
+        </RatgeberInternalLink>
         .
       </RatgeberP>
 
-      <RatgeberH2>5. Warum professionelle Räumung Ihre Kaution rettet</RatgeberH2>
+      <RatgeberH2>Rückwärts planen: der Übergabetermin als Fixpunkt</RatgeberH2>
       <RatgeberP>
-        Oft ist nicht die Miete, sondern einbehaltene Kaution der größte Kostenfaktor — weil die Übergabe nicht
-        „ordnungsgemäß“ war:
+        Schreiben Sie das Abgabedatum groß auf den Kalender und arbeiten Sie rückwärts: Wann muss die
+        Räumung fertig sein? Wann der Keller? Wann liegen Entsorgungsnachweise vor? Ein Puffer von einigen
+        Tagen schützt vor dem klassischen Fehler — nämlich Räumung und Übergabe am selben Vormittag zu
+        stapeln. Vorwärtsplanung („wir schauen dann, wann es passt“) scheitert im Gemeindebau oft, weil
+        Wiener Wohnen denselben Slot nicht beliebig neu vergibt.
       </RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>Zurückgebliebene Einbauten, die Abzüge auslösen würden.</RatgeberLi>
-        <RatgeberLi>Altlasten-Entrümpelung über das Grobe hinaus.</RatgeberLi>
-        <RatgeberLi>Objekt, das Hausverwaltungs-Kriterien erfüllt — inklusive Nebenräume.</RatgeberLi>
-      </RatgeberUl>
       <RatgeberP>
-        Wohnungsauflösung im Gemeindebau ist rechtssichere Abwicklung des Mietverhältnisses — nicht nur Transport.
-        Ablauf-Checkliste:{" "}
-        <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
-          Wohnungsräumung Wien
+        Terminänderungen sollten möglichst spätestens 14 Tage vorher kommuniziert werden. Kurzfristige
+        Verschiebungen belasten Hausverwaltung und Räumungsteam gleichermaßen. Scheitert die Übergabe
+        ganz, droht die ungewollte Mietverlängerung: Jeder weitere Tag verlängert die Zahlungspflicht —
+        auch wenn die Wohnung schon „fast“ leer wirkt. Genau deshalb ist der Kalender hier das Hauptthema,
+        nicht die Stemmeisen-Arbeit am Laminat.
+      </RatgeberP>
+      <RatgeberOl>
+        <RatgeberLi>
+          <strong>Tag 0:</strong> Offizieller Übergabetermin (bestätigt).
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Minus Puffer:</strong> Letzte Kontrolle, Schlüssel sammeln, Protokoll vorbereiten.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Minus Räumungsfenster:</strong> Wohnung und Nebenräume leer — Fixpreis nach Besichtigung.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Minus Organisation:</strong> Besichtigung, Nachweise, ggf. Express-Option.
+        </RatgeberLi>
+      </RatgeberOl>
+
+      <RatgeberH2>Was der Kalender sonst noch tragen muss</RatgeberH2>
+      <RatgeberP>
+        Parallel zum Räumungsfenster laufen oft Versorgerkündigungen, Postnachsendung und die Organisation
+        von Vollmachten, wenn Angehörige übergeben. Jeder dieser Punkte braucht einen eigenen Kalenderblock —
+        sonst steht am Abgabetag jemand ohne Ausweis oder ohne vollständige Schlüsselmenge da. Die
+        technische Feinprüfung (Böden, Sanitär) und die Demontage-Logistik bleiben bewusst ausgelagert; hier
+        zählt, dass der Termin nicht durch vergessene Nebenaufgaben kippt.
+      </RatgeberP>
+      <RatgeberP>
+        Wer erbt oder eine Verlassenschaft abwickelt, sollte Dokumente und Freigaben vor dem Räumungsfenster
+        klären — sonst blockiert nicht der Keller, sondern die Rechtslage den Kalender. Dafür:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-todesfall-verlassenschaft-raeumen-wien">
+          Gemeindewohnung nach Todesfall
         </RatgeberInternalLink>
-        , Leistung:{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
-          Wohnungsauflösung
-        </RatgeberInternalLink>
-        , Wertanrechnung:{" "}
-        <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
-          Wertanrechnung
+        . Operative Checklisten zu Schlüssel und Kellerbeschriftung:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-aufloesen-keller-schluessel-uebergabe">
+          Gemeindewohnung auflösen
         </RatgeberInternalLink>
         .
+      </RatgeberP>
+
+      <RatgeberH2>Keller und Dachboden: Blocker für die Schlüssel</RatgeberH2>
+      <RatgeberP>
+        Viele Mieter räumen die Wohnung und vergessen das Abteil im Keller oder den Dachbodenanteil. Bei
+        Wiener Wohnen reicht das oft, um die Schlüsselübergabe zu stoppen. Der Keller ist hier kein
+        technisches Fliesenthema — er ist ein organisatorischer Riegel vor dem Abschluss des
+        Mietverhältnisses. Wer den Kalender nur auf die Wohnungstür ausrichtet, plant an der häufigsten
+        Blockade vorbei.
+      </RatgeberP>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Leer und versperrt:</strong> Alles Persönliche raus; Abteil abschließen und beschriften.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Dachboden:</strong> Wenn zugeordnet, gilt dieselbe Logik wie beim Keller.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Auftragsumfang:</strong> Nebenräume von Anfang an in die{" "}
+          <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>{" "}
+          und{" "}
+          <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>{" "}
+          aufnehmen.
+        </RatgeberLi>
+      </RatgeberUl>
+      <RatgeberP>
+        Bei Verlassenschaft zuerst Rechte und Dokumente klären:{" "}
+        <RatgeberInternalLink href="/ratgeber/gemeindewohnung-todesfall-verlassenschaft-raeumen-wien">
+          Gemeindewohnung nach Todesfall
+        </RatgeberInternalLink>
+        . Bei extrem vollgestellten Objekten Diskretion und Sortierung:{" "}
+        <RatgeberInternalLink href="/ratgeber/vollgestellte-gemeindewohnung-entruempeln-wien">
+          vollgestellte Gemeindewohnung entrümpeln
+        </RatgeberInternalLink>
+        . Planen Sie für den Keller ein eigenes Kalenderfenster — nicht den Rest vom Wohnungsräumungstag.
+      </RatgeberP>
+
+      <RatgeberH2>Entsorgungsnachweise als Kautionsschutz</RatgeberH2>
+      <RatgeberP>
+        Soft gesprochen: Die Kaution soll zurückkommen, wenn das Mietobjekt ordnungsgemäß übergeben wurde.
+        Fehlen Belege zu entsorgtem Sperrmüll oder problematischen Resten aus Keller und Dachboden, wird die
+        Diskussion schwieriger. Fachgerechte Entsorgung mit Nachweis ist deshalb weniger Bürokratie-Hobby als
+        Absicherung — ohne dass hier konkrete Einbehalts-Euro behauptet werden. Bewahren Sie Kopien digital
+        und ausgedruckt; am Übergabetag zählen greifbare Unterlagen mehr als mündliche Zusicherungen.
+      </RatgeberP>
+      <RatgeberP>
+        Professionelle Räumung liefert auf Wunsch Belege und einen klaren Endzustand. Orientierung zu Aufwand
+        und Faktoren:{" "}
+        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
+          Was kostet eine Entrümpelung in Wien?
+        </RatgeberInternalLink>
+        ,{" "}
+        <RatgeberInternalLink href="/preise">Preise</RatgeberInternalLink>
+        ,{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>{" "}
+        bei verwertbaren Stücken. Gesamtablauf einer{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink>{" "}
+        sollte denselben Kalender nutzen wie die Schlüsselabgabe. Wer Nachweise erst Wochen später sucht,
+        schwächt die eigene Position — legen Sie sie direkt nach der Entsorgung ab.
+      </RatgeberP>
+
+      <RatgeberH2>Express nahe der Deadline — mit klarem Auftrag</RatgeberH2>
+      <RatgeberP>
+        Wenn nur noch wenige Tage bleiben, hilft Tempo nur bei klarem Umfang: Welche Räume? Welcher Keller?
+        Welcher Endzustand? Express verdichtet den Kalender, ersetzt aber keine Werkmeister-Demontage und
+        keine technische Feinprüfung — die gehören in die anderen Ratgeber. Zeitkritisch:{" "}
+        <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
+          Express-Entrümpelung Wien
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+      <RatgeberP>
+        Express ohne Auftragsklarheit erzeugt teure Missverständnisse: Das Team räumt die Wohnung, der Keller
+        bleibt voll, die Schlüsselübergabe scheitert trotzdem. Deshalb zuerst Umfang schriftlich fixieren,
+        dann Tempo erhöhen. Ein knapper Kalender verzeiht keine „machen wir später“-Nebenräume.
+      </RatgeberP>
+
+      <RatgeberH2>Kommunikation mit Wiener Wohnen im Übergabe-Fenster</RatgeberH2>
+      <RatgeberP>
+        Halten Sie Zusagen, Verschiebungen und offene Punkte schriftlich fest. Wenn die Räumung einen Tag
+        früher fertig ist als geplant, nutzen Sie den Puffer für eine stille Eigenkontrolle — nicht für neue
+        Baustellen. Fehlt noch ein Schlüssel oder ein Nachweis, klären Sie das vor dem Abnahmetermin, nicht
+        währenddessen. Ruhige, dokumentierte Kommunikation wirkt kautionsschonender als spontane
+        Versprechen am Stiegenhaus.
+      </RatgeberP>
+
+      <RatgeberH3>Praxis-Beispiel: Übergabe in 10 Tagen, Keller noch voll</RatgeberH3>
+      <RatgeberP>
+        Eine Familie hatte den Übergabetermin in zehn Tagen, die Wohnung war weitgehend leer — das
+        Kellerabteil dagegen seit Jahren voll. Ohne leeren Keller drohte die Schlüsselverweigerung und damit
+        weitere Miete. Lösung: sofortige Besichtigung, Keller und Restwohnung in einem Auftrag, Entsorgung
+        mit Nachweis, Schlüssel und Protokoll zwei Tage vor dem Termin. Der Abnahmetermin selbst blieb
+        unverändert; die Kaution wurde nicht durch fehlende Nebenraum-Räumung belastet. Laminat-Rückbau und
+        Fliesen-Check waren hier nicht der Engpass — der Kalender und der Keller waren es.
+      </RatgeberP>
+      <RatgeberP>
+        Zehn Tage wirken lang, bis man Rückwärts rechnet: Besichtigung, Entsorgungstermin, Nachweisablage,
+        Eigenkontrolle. Genau diese Kette macht aus „noch Zeit“ einen realistischen Übergabeplan.
+      </RatgeberP>
+
+      <RatgeberH2>Kostenfaktoren Termin &amp; Kautionsschutz (ohne Fantasiepreise)</RatgeberH2>
+      <RatgeberP>
+        Die Tabelle ordnet organisatorische Hebel — keine erfundenen Beträge.
+      </RatgeberP>
+      <RatgeberTableWrap caption="Kosten- und Risikohebel bei Wiener-Wohnen-Übergabe (ohne Fantasiepreise)">
+        <RatgeberThead>
+          <RatgeberTr>
+            <RatgeberTh>Kalender-/Kautionshebel</RatgeberTh>
+            <RatgeberTh>Wirkung</RatgeberTh>
+            <RatgeberTh>Früh klären</RatgeberTh>
+          </RatgeberTr>
+        </RatgeberThead>
+        <RatgeberTbody>
+          <RatgeberTr>
+            <RatgeberTd>Abstand zum Übergabetermin</RatgeberTd>
+            <RatgeberTd>Zu wenig Puffer = Express-Druck und Fehlerquote</RatgeberTd>
+            <RatgeberTd>Fixes Abgabedatum, 14-Tage-Änderungsfenster</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Keller / Dachboden noch belegt</RatgeberTd>
+            <RatgeberTd>Schlüsselübergabe kann scheitern</RatgeberTd>
+            <RatgeberTd>Nebenräume im Auftragsumfang</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Fehlende Entsorgungsbelege</RatgeberTd>
+            <RatgeberTd>Kautionsschutz schwächer bei Nachfragen</RatgeberTd>
+            <RatgeberTd>Nachweise ablegen und bereithalten</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Gescheiterte Abgabe</RatgeberTd>
+            <RatgeberTd>Risiko weiterer Mietphase</RatgeberTd>
+            <RatgeberTd>Endzustand vor Termin schriftlich fixieren</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Unklarer Auftragsumfang</RatgeberTd>
+            <RatgeberTd>Nachverhandlung statt Fixpreis-Sicherheit</RatgeberTd>
+            <RatgeberTd>Besichtigung aller Flächen</RatgeberTd>
+          </RatgeberTr>
+        </RatgeberTbody>
+      </RatgeberTableWrap>
+
+      <RatgeberWarning title="Termin-Hinweis">
+        <RatgeberP>
+          Ein leeres Wohnzimmer rettet keine Kaution, wenn Keller oder Nachweise fehlen und der
+          Übergabetermin platzt. Planen Sie Nebenräume und Belege mit demselben Ernst wie den
+          Abgabetermin selbst. Rückwärts rechnen ist unbequem — aber zuverlässiger als Hoffnung auf den
+          letzten Tag.
+        </RatgeberP>
+      </RatgeberWarning>
+
+      <RatgeberH2>Checkliste Kaution &amp; Kalender</RatgeberH2>
+      <RatgeberChecklist
+        items={[
+          "Übergabetermin schriftlich bestätigt und im Kalender fixiert",
+          "14-Tage-Vorlauf für Terminänderungen eingeplant",
+          "Rückwärts-Puffer für Räumung und letzte Kontrolle gesetzt",
+          "Kellerabteil und ggf. Dachboden leer, sauber und versperrt",
+          "Entsorgungsnachweise für problematische Fraktionen abgelegt",
+          "Alle Schlüssel (Wohnung, Haus, Keller, Post) vollzählig bereit",
+        ]}
+      />
+
+      <RatgeberP>
+        Mit klarem Kalender und gesicherten Nebenräumen sinkt der Übergabe-Stress spürbar. Für Demontage und
+        Abnahme-Checkliste die verlinkten Hub-Artikel nutzen — so bleibt jeder Text einzigartig. Wer Termin,
+        Keller und Nachweise früh bindet, übergibt ruhiger — und schützt die Kaution, ohne juristische
+        Fantasiezahlen bemühen zu müssen.
       </RatgeberP>
 
       <RatgeberCtaBox>
         <p className="font-bold text-brand-dark">
-          Wiener Wohnen Übergabe — stressfrei &amp; kautionssicher
+          Wiener Wohnen Übergabe — terminsicher &amp; kautionsschonend
         </p>
         <RatgeberP>
-          Wir planen Ihren Auszug effizient: Wohnung, Keller und Dachboden zum Fixpreis — damit Sie die Schlüssel
-          ohne Stress an die Hausverwaltung übergeben.
+          Wir planen rückwärts vom Abgabetermin: Wohnung, Keller und Nachweise zum Fixpreis nach
+          Besichtigung.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">

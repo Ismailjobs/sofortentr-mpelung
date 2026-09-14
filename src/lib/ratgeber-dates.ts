@@ -80,6 +80,9 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "entruempelung-waehring-wien-1180": 8,
   "entruempelung-doebling-wien-1190": 12,
   "altes-haus-modernisieren-entruempelung-heizsystem": 14,
+  "gemeindewohnung-todesfall-verlassenschaft-raeumen-wien": 15,
+  "vollgestellte-gemeindewohnung-entruempeln-wien": 19,
+  "gemeindewohnung-aufloesen-keller-schluessel-uebergabe": 26,
 };
 
 function slugToUpdateDay(slug: string): number {

@@ -118,6 +118,15 @@ import GemeindebauWienerWohnenWohnungsuebergabe, {
 import StadtWienGemeindewohnungRueckgabevorgaben, {
   meta as stadtWienGemeindewohnungRueckgabevorgabenMeta,
 } from "@/components/ratgeber/articles/stadt-wien-gemeindewohnung-rueckgabevorgaben";
+import GemeindewohnungTodesfallVerlassenschaftRaeumenWien, {
+  meta as gemeindewohnungTodesfallVerlassenschaftRaeumenWienMeta,
+} from "@/components/ratgeber/articles/gemeindewohnung-todesfall-verlassenschaft-raeumen-wien";
+import VollgestellteGemeindewohnungEntruempelnWien, {
+  meta as vollgestellteGemeindewohnungEntruempelnWienMeta,
+} from "@/components/ratgeber/articles/vollgestellte-gemeindewohnung-entruempeln-wien";
+import GemeindewohnungAufloesenKellerSchluesselUebergabe, {
+  meta as gemeindewohnungAufloesenKellerSchluesselUebergabeMeta,
+} from "@/components/ratgeber/articles/gemeindewohnung-aufloesen-keller-schluessel-uebergabe";
 import BuwogGenossenschaftEntruempelungWien, {
   meta as buwogGenossenschaftEntruempelungWienMeta,
 } from "@/components/ratgeber/articles/buwog-genossenschaft-entruempelung-wien";
@@ -270,6 +279,15 @@ const _entries: RatgeberArticleEntry[] = [
   register(oevwGenossenschaftEntruempelungWienMeta, OevwGenossenschaftEntruempelungWien),
   register(buwogGenossenschaftEntruempelungWienMeta, BuwogGenossenschaftEntruempelungWien),
   register(stadtWienGemeindewohnungRueckgabevorgabenMeta, StadtWienGemeindewohnungRueckgabevorgaben),
+  register(
+    gemeindewohnungTodesfallVerlassenschaftRaeumenWienMeta,
+    GemeindewohnungTodesfallVerlassenschaftRaeumenWien,
+  ),
+  register(vollgestellteGemeindewohnungEntruempelnWienMeta, VollgestellteGemeindewohnungEntruempelnWien),
+  register(
+    gemeindewohnungAufloesenKellerSchluesselUebergabeMeta,
+    GemeindewohnungAufloesenKellerSchluesselUebergabe,
+  ),
   register(gemeindebauWienerWohnenWohnungsuebergabeMeta, GemeindebauWienerWohnenWohnungsuebergabe),
   register(bueroaufloesungWienDiskretionDatenschutzMeta, BueroaufloesungWienDiskretionDatenschutz),
   register(verlassenschaftEntruempelungWienSensibelMeta, VerlassenschaftEntruempelungWienSensibel),

@@ -4,6 +4,9 @@ const GEMEINDEBAU_CLUSTER = [
   "entruempelung-gemeindebau-wiener-wohnen",
   "gemeindebau-wiener-wohnen-wohnungsuebergabe",
   "stadt-wien-gemeindewohnung-rueckgabevorgaben",
+  "gemeindewohnung-todesfall-verlassenschaft-raeumen-wien",
+  "vollgestellte-gemeindewohnung-entruempeln-wien",
+  "gemeindewohnung-aufloesen-keller-schluessel-uebergabe",
 ] as const;
 
 const GENOSSENSCHAFT_CLUSTER = [
@@ -28,6 +31,7 @@ const TODESFALL_CLUSTER = [
   "verlassenschaft-entruempelung-wien-sensibel",
   "wohnungsaufloesung-nach-todesfall-wien",
   "haushaltsaufloesung-erwachsenenvertretung-wien",
+  "gemeindewohnung-todesfall-verlassenschaft-raeumen-wien",
 ] as const;
 
 const KOSTEN_CLUSTER = [
@@ -131,9 +135,28 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
   "stadt-wien-gemeindewohnung-rueckgabevorgaben": [
     "entruempelung-gemeindebau-wiener-wohnen",
     "gemeindebau-wiener-wohnen-wohnungsuebergabe",
-    "entruempelung-wien-5-fehler-vermeiden",
+    "gemeindewohnung-aufloesen-keller-schluessel-uebergabe",
+  ],
+  "gemeindewohnung-todesfall-verlassenschaft-raeumen-wien": [
+    "wohnungsaufloesung-nach-todesfall-wien",
+    "verlassenschaft-entruempelung-wien-sensibel",
+    "entruempelung-gemeindebau-wiener-wohnen",
+    "gemeindebau-wiener-wohnen-wohnungsuebergabe",
+  ],
+  "vollgestellte-gemeindewohnung-entruempeln-wien": [
+    "messie-wohnung-raeumen-wien",
+    "entruempelung-gemeindebau-wiener-wohnen",
+    "stadt-wien-gemeindewohnung-rueckgabevorgaben",
+    "was-kostet-entruempelung-wien",
+  ],
+  "gemeindewohnung-aufloesen-keller-schluessel-uebergabe": [
+    "stadt-wien-gemeindewohnung-rueckgabevorgaben",
+    "gemeindebau-wiener-wohnen-wohnungsuebergabe",
+    "kellerraeumung-wien-kosten-schimmel",
+    "checkliste-wohnungsraeumung-wien",
   ],
   "messie-wohnung-raeumen-wien": [
+    "vollgestellte-gemeindewohnung-entruempeln-wien",
     "verlassenschaft-entruempelung-wien-sensibel",
     "express-entruempelung-wien-24h-krisenmanagement",
     "was-kostet-entruempelung-wien",
