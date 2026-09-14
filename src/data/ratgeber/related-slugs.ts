@@ -103,6 +103,16 @@ const CLUSTERS: readonly (readonly string[])[] = [
 
 /** Explizite Overrides — höhere Priorität als Cluster-Fallback. */
 const EXPLICIT_RELATED: Record<string, string[]> = {
+  "altes-haus-modernisieren-entruempelung-heizsystem": [
+    "entruempelung-vor-sanierung-wien",
+    "was-kostet-entruempelung-wien",
+    "dachbodenraeumung-wien-ma-48",
+  ],
+  "entruempelung-vor-sanierung-wien": [
+    "altes-haus-modernisieren-entruempelung-heizsystem",
+    "was-kostet-entruempelung-wien",
+    "dachbodenraeumung-wien-ma-48",
+  ],
   "checkliste-wohnungsraeumung-wien": [
     "was-kostet-entruempelung-wien",
     "gemeindebau-wiener-wohnen-wohnungsuebergabe",
@@ -287,11 +297,6 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
     "was-kostet-entruempelung-wien",
     "kellerraeumung-wien-kosten-schimmel",
     "express-entruempelung-wien-24h-krisenmanagement",
-  ],
-  "entruempelung-vor-sanierung-wien": [
-    "was-kostet-entruempelung-wien",
-    "stadt-wien-gemeindewohnung-rueckgabevorgaben",
-    "entruempelung-gemeindebau-wiener-wohnen",
   ],
   "entruempelung-wien-5-fehler-vermeiden": [
     "was-kostet-entruempelung-wien",

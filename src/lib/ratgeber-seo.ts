@@ -64,7 +64,9 @@ const INDEX_ROBOTS = {
 export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Metadata {
   const origin = getSiteOrigin();
   const url = ratgeberArticleUrl(article.slug);
-  const imageUrl = ogImageUrl();
+  const imageUrl = article.imageSrc
+    ? `${origin}${encodeURI(article.imageSrc)}`
+    : ogImageUrl();
   const documentTitle = resolveMetaTitle(article);
   const shareTitle = resolveOgTitle(article);
   const tags = resolveTags(article);
@@ -101,9 +103,9 @@ export function buildRatgeberArticleMetadata(article: RatgeberArticleMeta): Meta
       images: [
         {
           url: imageUrl,
-          width: OG_IMAGE_WIDTH,
-          height: OG_IMAGE_HEIGHT,
-          alt: article.title,
+          width: article.imageSrc ? 1024 : OG_IMAGE_WIDTH,
+          height: article.imageSrc ? 681 : OG_IMAGE_HEIGHT,
+          alt: article.imageAlt?.trim() || article.title,
           type: "image/webp",
         },
       ],

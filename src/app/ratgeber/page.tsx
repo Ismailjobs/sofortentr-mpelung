@@ -6,7 +6,7 @@ import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import RatgeberCard from "@/components/ratgeber/RatgeberCard";
 import RatgeberCollectionJsonLd from "@/components/ratgeber/RatgeberCollectionJsonLd";
 import RatgeberHero from "@/components/ratgeber/RatgeberHero";
-import { RATGEBER_ARTICLES } from "@/data/ratgeber/registry";
+import { getRatgeberListArticles, RATGEBER_ARTICLES } from "@/data/ratgeber/registry";
 import { buildRatgeberIndexMetadata } from "@/lib/ratgeber-seo";
 
 export const revalidate = 86_400;
@@ -14,6 +14,7 @@ export const revalidate = 86_400;
 export const metadata = buildRatgeberIndexMetadata();
 
 export default function RatgeberIndexPage() {
+  const articles = getRatgeberListArticles();
   const breadcrumbs = [
     { label: "Startseite", href: "/" },
     { label: "Ratgeber" },
@@ -39,13 +40,18 @@ export default function RatgeberIndexPage() {
               Alle Ratgeber-Artikel
             </h2>
 
-            {RATGEBER_ARTICLES.length > 0 ? (
+            {articles.length > 0 ? (
               <ul className="grid gap-6 sm:grid-cols-2 lg:gap-8">
-                {RATGEBER_ARTICLES.map((article) => (
-                  <li key={article.slug}>
-                    <RatgeberCard {...article} />
-                  </li>
-                ))}
+                {articles.map((article, index) => {
+                  const isBottomLead =
+                    index === articles.length - 1 &&
+                    article.slug === "altes-haus-modernisieren-entruempelung-heizsystem";
+                  return (
+                    <li key={article.slug} className={isBottomLead ? "sm:col-span-2" : undefined}>
+                      <RatgeberCard {...article} layout={isBottomLead ? "horizontal" : "vertical"} />
+                    </li>
+                  );
+                })}
               </ul>
             ) : (
               <div className="rounded-2xl border border-dashed border-black/10 bg-white px-6 py-16 text-center shadow-sm ring-1 ring-black/[0.04] sm:px-10">

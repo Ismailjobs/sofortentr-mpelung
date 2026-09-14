@@ -25,9 +25,8 @@ export type RatgeberArticleMeta = {
    * Das effektive `dateModified` wird monatlich in `getRatgeberEffectiveUpdatedAt()` berechnet.
    */
   updateDay?: number;
-  /** @deprecated Hero nutzt immer `/hero.webp` — nicht mehr pro Artikel setzen. */
+  /** Optional: Kapak (Hero + OG + Karte). Ohne Angabe: Standard-Hero. */
   imageSrc?: string;
-  /** @deprecated */
   imageAlt?: string;
   /** Optionale Fokus-Keywords — Meta, OG-Tags & Schema.org `about`. */
   keywords?: string[];

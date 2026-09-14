@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/page-metadata";
 import ContactPanel from "@/components/ContactPanel";
 import Footer from "@/components/Footer";
+import HomeRatgeberSection from "@/components/HomeRatgeberSection";
 import HomeNetworkRecommendations from "@/components/HomeNetworkRecommendations";
 import HomeSeoClusterLinks from "@/components/HomeSeoClusterLinks";
 import Header from "@/components/Header";
@@ -44,6 +45,7 @@ export default function Home() {
         <ServicesSection services={PAGE.services} showAllLink />
         <AboutUsSection />
         <WhyUs />
+        <HomeRatgeberSection />
         <ProcedureSections />
         <DeferredIdle fallback={<TestimonialPlaceholder />}>
           <LazyTestimonialSlider testimonials={PAGE.testimonials} />

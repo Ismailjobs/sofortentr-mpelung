@@ -10,21 +10,25 @@ type Props = {
   /** LCP: nur auf der Startseite aktivieren. */
   priority?: boolean;
   className?: string;
+  /** Optional — Artikel-Kapak statt Standard-Hero. */
+  src?: string;
+  alt?: string;
 };
 
-export default function HeroBackdrop({ priority = false, className = "" }: Props) {
+export default function HeroBackdrop({ priority = false, className = "", src, alt }: Props) {
+  const isCustom = Boolean(src);
+  const imageAlt = isCustom ? alt?.trim() || "" : "";
   return (
-    <div className={`pointer-events-none absolute inset-0 ${className}`.trim()} aria-hidden>
+    <div className={`pointer-events-none absolute inset-0 ${className}`.trim()}>
       <Image
-        src={HERO_BG_SRC}
-        alt=""
-        aria-hidden
+        src={src ?? HERO_BG_SRC}
+        alt={imageAlt}
         fill
         sizes="(max-width: 640px) 640px, 100vw"
-        quality={50}
+        quality={isCustom ? 68 : 50}
         priority={priority}
         fetchPriority={priority ? "high" : "auto"}
-        className={HERO_OBJECT_POSITION}
+        className={isCustom ? "object-cover object-center" : HERO_OBJECT_POSITION}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/92 via-brand-dark/70 to-brand-dark/30" />
     </div>

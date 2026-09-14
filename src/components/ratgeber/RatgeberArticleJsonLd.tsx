@@ -18,7 +18,9 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
   const origin = getSiteOrigin();
   const { organizationId } = schemaOriginIds(origin);
   const url = ratgeberArticleUrl(article.slug);
-  const image = `${origin}${OG_IMAGE_PATH}`;
+  const image = article.imageSrc
+    ? `${origin}${encodeURI(article.imageSrc)}`
+    : `${origin}${OG_IMAGE_PATH}`;
   const blogId = `${ratgeberIndexUrl()}#blog`;
   const webPageId = `${url}#webpage`;
   const blogPostingId = `${url}#article`;
@@ -44,7 +46,13 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
       description: article.description,
       inLanguage: "de-AT",
       isPartOf: { "@id": blogId },
-      primaryImageOfPage: { "@type": "ImageObject", url: image },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: image,
+        ...(article.imageAlt
+          ? { name: article.imageAlt, caption: article.imageAlt }
+          : {}),
+      },
       datePublished: article.publishedAt,
       dateModified: modified,
       breadcrumb: { "@id": `${url}#breadcrumb` },
@@ -60,8 +68,14 @@ export default function RatgeberArticleJsonLd({ article, breadcrumbs }: Props) {
       image: {
         "@type": "ImageObject",
         url: image,
-        width: 1920,
-        height: 1080,
+        ...(article.imageSrc
+          ? {
+              width: 1024,
+              height: 681,
+              name: article.imageAlt ?? article.title,
+              caption: article.imageAlt ?? article.title,
+            }
+          : { width: 1920, height: 1080 }),
       },
       datePublished: article.publishedAt,
       dateModified: modified,

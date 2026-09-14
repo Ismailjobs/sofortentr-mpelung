@@ -226,12 +226,16 @@ import WasKostetEntruempelungWien, {
 import WasTunMitAltenSchaetzenWien, {
   meta as wasTunMitAltenSchaetzenWienMeta,
 } from "@/components/ratgeber/articles/was-tun-mit-alten-schaetzen-wien";
+import AltesHausModernisierenEntruempelungHeizsystem, {
+  meta as altesHausModernisierenEntruempelungHeizsystemMeta,
+} from "@/components/ratgeber/articles/altes-haus-modernisieren-entruempelung-heizsystem";
 
 function register(meta: RatgeberArticleMeta, Component: ComponentType): RatgeberArticleEntry {
   return { ...meta, Component };
 }
 
 const _entries: RatgeberArticleEntry[] = [
+  register(altesHausModernisierenEntruempelungHeizsystemMeta, AltesHausModernisierenEntruempelungHeizsystem),
   register(entruempelungWiedenWien1040Meta, EntruempelungWiedenWien1040),
   register(entruempelungNeubauWien1070Meta, EntruempelungNeubauWien1070),
   register(entruempelungJosefstadtWien1080Meta, EntruempelungJosefstadtWien1080),
@@ -308,13 +312,37 @@ const _entries: RatgeberArticleEntry[] = [
   register(wasKostetEntruempelungWienMeta, WasKostetEntruempelungWien),
 ];
 
-/** Alle veröffentlichten Ratgeber — neueste zuerst sortiert. */
+/** Alle veröffentlichten Ratgeber — neueste zuerst. */
 export const RATGEBER_ARTICLES: RatgeberArticleEntry[] = [..._entries].sort(
   (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
 );
 
 export function getRatgeberArticle(slug: string): RatgeberArticleEntry | undefined {
   return RATGEBER_ARTICLES.find((a) => a.slug === slug);
+}
+
+/** Startseite: oben quer, darunter zwei regionale Leitfäden. */
+const HOME_LEAD_SLUG = "altes-haus-modernisieren-entruempelung-heizsystem";
+const HOME_REGION_SLUGS = [
+  "entruempelung-korneuburg-tulln-schwechat",
+  "entruempelung-burgenland-mattersburg-rust-oberpullendorf",
+] as const;
+
+export function getHomeLeadRatgeber(): RatgeberArticleEntry | undefined {
+  return getRatgeberArticle(HOME_LEAD_SLUG);
+}
+
+export function getHomeRegionRatgeberArticles(): RatgeberArticleEntry[] {
+  return HOME_REGION_SLUGS.map((slug) => getRatgeberArticle(slug)).filter(
+    (a): a is RatgeberArticleEntry => a !== undefined,
+  );
+}
+
+/** /ratgeber Liste: Lead-Artikel ganz unten, sonst neueste zuerst. */
+export function getRatgeberListArticles(): RatgeberArticleEntry[] {
+  const rest = RATGEBER_ARTICLES.filter((a) => a.slug !== HOME_LEAD_SLUG);
+  const lead = getRatgeberArticle(HOME_LEAD_SLUG);
+  return lead ? [...rest, lead] : rest;
 }
 
 export function getAllRatgeberSlugs(): string[] {

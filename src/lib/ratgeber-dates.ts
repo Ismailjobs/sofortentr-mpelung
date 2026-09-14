@@ -79,6 +79,7 @@ export const RATGEBER_ARTICLE_UPDATE_DAYS: Record<string, number> = {
   "entruempelung-rudolfsheim-fuenfhaus-wien-1150": 27,
   "entruempelung-waehring-wien-1180": 8,
   "entruempelung-doebling-wien-1190": 12,
+  "altes-haus-modernisieren-entruempelung-heizsystem": 14,
 };
 
 function slugToUpdateDay(slug: string): number {

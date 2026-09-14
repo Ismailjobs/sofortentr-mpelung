@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { MoveHorizontal } from "lucide-react";
 import {
@@ -219,5 +220,38 @@ export function RatgeberInternalLink({
     <Link href={href} className={className}>
       {children}
     </Link>
+  );
+}
+
+export function RatgeberFigure({
+  src,
+  alt,
+  caption,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="!my-8 overflow-hidden rounded-2xl ring-1 ring-black/[0.06]">
+      <div className="relative aspect-[3/2] w-full bg-brand-muted">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 58rem"
+          quality={68}
+          priority={priority}
+          className="object-cover object-center"
+        />
+      </div>
+      {caption ? (
+        <figcaption className="bg-brand-muted/80 px-4 py-2.5 text-sm text-neutral-600 sm:px-5">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }

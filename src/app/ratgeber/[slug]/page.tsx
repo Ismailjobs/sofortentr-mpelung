@@ -114,6 +114,9 @@ export default async function RatgeberArticlePage({ params }: PageProps) {
           subtitle={getRatgeberDisplayExcerpt(meta)}
           footer={heroMeta}
           priority
+          imageSrc={meta.imageSrc}
+          imageAlt={meta.imageAlt}
+          uppercaseTitle={!meta.imageSrc}
         />
 
         <Breadcrumbs items={breadcrumbs} />
