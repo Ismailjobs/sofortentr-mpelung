@@ -3,292 +3,427 @@ import RatgeberArticleBody, {
   RatgeberCtaBox,
   RatgeberFreshnessBadge,
   RatgeberH2,
+  RatgeberH3,
   RatgeberInternalLink,
   RatgeberLead,
   RatgeberLi,
   RatgeberOl,
   RatgeberP,
+  RatgeberTableWrap,
+  RatgeberTbody,
+  RatgeberTd,
+  RatgeberTh,
+  RatgeberThead,
+  RatgeberTr,
   RatgeberUl,
+  RatgeberWarning,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "siedlungsunion-genossenschaft-entruempelung-wien",
-  title: "Wohnungsräumung bei der Siedlungsunion Wien: Der Leitfaden für eine besenreine Übergabe",
-  seoTitle: "Siedlungsunion entrümpeln Wien — besenreine Übergabe & Fixpreis 2026",
-  ogTitle: "Siedlungsunion Wien — Leitfaden für besenreine Wohnungsübergabe",
+  title: "Siedlungsunion Wien: Nebenräume räumen — Keller, Gartenabteil & Außenlager",
+  seoTitle: "Siedlungsunion entrümpeln — Keller, Gartenabteil & Übergabe 2026",
+  ogTitle: "Siedlungsunion Wien — Nebenräume und Siedlungs-Übergabe",
   focusKeyword: "Siedlungsunion Entrümpelung Wien",
   description:
-    "Siedlungsunion-Genossenschaftswohnung räumen? Übergabe-Richtlinien, typische Herausforderungen, Checkliste und Fixpreis — Sofort Entrümpelung in Wien und Umgebung.",
+    "Siedlungsunion-Wohnung übergeben: Keller, Gartenabteil, Außenlager und Siedlungszufahrt — warum Nebenräume die Übergabe kippen und wie Fixpreis nach Besichtigung entsteht.",
   excerpt:
-    "Siedlungsunion-Wohnung termingerecht übergeben: Richtlinien, Wien-Logistik, Full-Service-Ablauf und Vorab-Checkliste.",
+    "Siedlungsunion-Räumung mit Fokus Nebenräume und Siedlungscharakter — nicht Hochhaus-Lift, nicht Verlassenschaft.",
   freshnessExcerpt: {
-    kind: "guide",
-    guideName: "Siedlungsunion-Leitfaden",
-    suffix: "Besenreine Übergabe für Genossenschaftswohnungen der Siedlungsunion in Wien.",
+    kind: "updated",
+    suffix:
+      "Praxis-Leitfaden für Siedlungsunion-Objekte: Keller, Gartenabteile, Außenlager und Siedlungszufahrt.",
   },
   publishedAt: "2026-07-06",
   keywords: [
     "Siedlungsunion Entrümpelung Wien",
-    "Siedlungsunion Genossenschaft räumen",
+    "Siedlungsunion Keller räumen",
+    "Siedlungsunion Gartenabteil",
     "Siedlungsunion Wohnungsübergabe",
     "Genossenschaftswohnung Siedlungsunion Wien",
-    "Siedlungsunion besenrein übergeben",
-    "Wohnungsauflösung Siedlungsunion",
-    "Kellerabteil Siedlungsunion leeren",
-    "Fixpreis Entrümpelung Siedlungsunion",
+    "Nebenräume Genossenschaft räumen",
+    "Siedlungsunion besenrein",
   ],
   faq: [
     {
-      question: "Muss die Einbauküche bei der Siedlungsunion immer raus?",
+      question: "Warum scheitern Siedlungsunion-Übergaben oft an Nebenräumen?",
       answer:
-        "In der Regel ja. Sofern keine schriftliche Bestätigung vorliegt, dass die Küche vom Nachmieter oder der Siedlungsunion übernommen wird, muss sie komplett demontiert und entsorgt werden.",
+        "Weil Keller, Gartenabteil oder Außenlager zum Mietobjekt gehören. Eine leere Wohnung mit vollem Abteil gilt bei vielen Abnahmen nicht als übergabefähig — unabhängig davon, wie sauber das Wohnzimmer wirkt.",
     },
     {
-      question: "Wie lange dauert eine professionelle Wohnungsräumung?",
+      question: "Was ist typisch für Siedlungsunion-Bestände im Vergleich zu Hochhäusern?",
       answer:
-        "Je nach Objektgröße und Inhalt benötigen unsere Teams meist zwischen einem halben und zwei Arbeitstagen, um die Wohnung inklusive Keller besenrein zu übergeben.",
+        "Siedlungscharakter: niedrigere Geschosse, oft eigene oder zugeordnete Außenflächen, engere Zufahrten, starke Nachbarschaftsnähe. Liftfenster großer Anlagen sind selten der Engpass — Nebenflächen und Zufahrt schon.",
     },
     {
-      question: "Gibt es die Möglichkeit einer Wertanrechnung?",
+      question: "Muss ein Gartenabteil immer mitgeräumt werden?",
       answer:
-        "Ja. Gut erhaltene Möbel, Antiquitäten, verwertbare Haushaltsgeräte oder Sammlerstücke werden bei der Besichtigung fair bewertet und direkt mit den Räumungskosten verrechnet.",
+        "Wenn es Ihnen zugeordnet ist und zur Rückgabe gehört: ja. Lassen Sie Geräteschuppen, Holzstöße und Sperrmüll nicht „für später“ — später ist oft der Abnahmetag.",
+    },
+    {
+      question: "Wie plane ich die Siedlungszufahrt?",
+      answer:
+        "Enge Siedlungsstraßen brauchen kurze, klare Entladefenster und Rücksicht auf Nachbarn. Fotos der Zufahrt helfen bei der Kalkulation mehr als reine Zimmerfotos.",
+    },
+    {
+      question: "Wo liegen Verlassenschaft und ARWAG-Protokoll?",
+      answer:
+        "Verlassenschaft: Bauhilfe-Ratgeber. Abnahmeprotokoll/Kaution: ARWAG. Hochhaus-Logistik: BUWOG. Hier: Nebenräume und Siedlungscharakter der Siedlungsunion.",
+    },
+    {
+      question: "Offizielle Siedlungsunion-Infos?",
+      answer: "Auf siedlungsunion.at sowie in Vertrag und Übergabeunterlagen.",
     },
   ],
-  readingTimeMinutes: 8,
+  howTo: {
+    name: "Siedlungsunion-Objekt inkl. Nebenräumen übergeben",
+    steps: [
+      {
+        name: "Nebenraum-Inventar erstellen",
+        text: "Keller, Gartenabteil, Außenlager, Dachboden — alles listen und fotografieren.",
+      },
+      {
+        name: "Zufahrt klären",
+        text: "Siedlungsstraße, Parken, Entladepunkt vor der Besichtigung notieren.",
+      },
+      {
+        name: "Auftragsumfang fixieren",
+        text: "Wohnung + alle zugeordneten Nebenflächen, Endzustand schriftlich.",
+      },
+      {
+        name: "Nebenräume vor oder parallel räumen",
+        text: "Nicht als Restarbeit nach der Wohnungsräumung.",
+      },
+      {
+        name: "Übergabe vorbereiten",
+        text: "Leer/versperrt, Schlüssel vollständig, kurze Eigenkontrolle.",
+      },
+    ],
+  },
+  relatedSlugs: [
+    "kellerraeumung-wien-kosten-schimmel",
+    "gartenentruempelung-wien-kosten-ablauf",
+    "buwog-genossenschaft-entruempelung-wien",
+    "bauhilfe-genossenschaft-entruempelung-wien",
+  ],
+  readingTimeMinutes: 11,
 };
 
 export default function SiedlungsunionGenossenschaftEntruempelungWien() {
   return (
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
-        variant={{ kind: "guide", guideName: "Siedlungsunion-Leitfaden" }}
-        note="Für Genossenschaftswohnungen der Siedlungsunion (Gemeinnützige Wohnungs- und Siedlungsgesellschaft) in Wien."
+        variant={{ kind: "updated-month" }}
+        note="Fokus: Siedlungsunion-Nebenräume — Keller, Gartenabteil, Außenlager und Siedlungszufahrt."
         article={meta}
       />
 
       <RatgeberLead>
-        Die Kündigung oder Rückgabe einer Genossenschaftswohnung der Siedlungsunion (Gemeinnützige Wohnungs-
-        und Siedlungsgesellschaft) stellt viele Mieter vor eine organisatorische und körperliche Mammutaufgabe.
-        Sobald der offizielle Abnahmetermin feststeht, beginnt die Frist zu laufen.
+        Bei der Siedlungsunion Entrümpelung Wien kippt die Übergabe selten am Wohnzimmer — sie kippt am
+        Keller, am Gartenabteil oder am Außenlager hinter dem Carport. Siedlungsbestände haben Charakter:
+        niedrigere Geschosse, zugeordnete Außenflächen, enge Zufahrten, unmittelbare Nachbarn. Dieser
+        Ratgeber behandelt genau diese Nebenraum-Logik. Hochhaus-Lift: BUWOG. Abnahmeprotokoll: ARWAG.
+        Verlassenschaft: Bauhilfe.
       </RatgeberLead>
 
-      <RatgeberP>
-        Das gesamte Objekt muss termingerecht geräumt, von mieterseitigen Einbauten befreit und in einem
-        einwandfreien Zustand übergeben werden. Ein einfacher Auszug reicht bei Genossenschaften selten aus.
-        Um finanzielle Abzüge von der Kaution oder Verzögerungen beim Übergabeprotokoll zu vermeiden, ist eine
-        strukturierte Planung unerlässlich.
-      </RatgeberP>
+      <BezirkEarlyCta
+        title="Siedlungsunion — Nebenräume miträumen"
+        text="Keller, Gartenabteil und Wohnung in einem Auftrag — Fixpreis nach Besichtigung."
+      />
 
       <RatgeberP>
-        Sofort Entrümpelung bietet Ihnen hierfür die fachmännische Lösung in Wien und Umgebung — transparent,
-        schnell und zum garantierten Festpreis. Kosten-Orientierung:{" "}
+        Trägerinfo:{" "}
+        <RatgeberInternalLink href="https://www.siedlungsunion.at/">
+          siedlungsunion.at
+        </RatgeberInternalLink>
+        . Keller-Vertiefung:{" "}
+        <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
+          Kelleräumung Wien
+        </RatgeberInternalLink>
+        . Außenbereich:{" "}
+        <RatgeberInternalLink href="/ratgeber/gartenentruempelung-wien-kosten-ablauf">
+          Gartenentrümpelung
+        </RatgeberInternalLink>
+        . NÖ-Siedlungslogistik:{" "}
+        <RatgeberInternalLink href="/ratgeber/egw-genossenschaft-entruempelung-niederoesterreich">
+          EGW Niederösterreich
+        </RatgeberInternalLink>
+        . Hochhaus-Zufahrt separat:{" "}
+        <RatgeberInternalLink href="/ratgeber/buwog-genossenschaft-entruempelung-wien">
+          BUWOG
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+
+      <RatgeberH2>Siedlungscharakter: warum Nebenräume hier dominieren</RatgeberH2>
+      <RatgeberP>
+        In Siedlungen gehört zum Alltag oft mehr als die Wohnungstür: Abteil im Kellertrakt, Gartengeräte,
+        Holzlager, Fahrradraum. Wer nur die Wohnräume plant, liefert eine halbe Übergabe. Wir sehen
+        regelmäßig Objekte, in denen die Wohnung in einem halben Tag leer ist — und das Außenlager drei
+        weitere Stunden braucht. Genau deshalb muss die{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>{" "}
+        bei der Siedlungsunion als Flächenpaket kalkuliert werden.
+      </RatgeberP>
+      <RatgeberP>
+        Nachbarschaftsnähe verstärkt den Druck: Sperrmüll vor dem Reihenhaus fällt sofort auf. Diskrete,
+        zügige Abfuhr ist Teil der Übergabequalität — nicht nur Höflichkeit. Anders als in Hochhausanlagen
+        entscheiden hier selten Kabinenmaße; entscheidend sind zugeordnete Außenflächen und die Frage, ob
+        die Siedlungszufahrt den Transporter überhaupt trägt.
+      </RatgeberP>
+
+      <RatgeberH2>Nebenraum-Inventar: vom Foto zum Fixpreis</RatgeberH2>
+      <RatgeberP>
+        Der häufigste Kalkulationsfehler ist die Wohnungs-only-Anfrage: drei Zimmerfotos, kein Keller, kein
+        Gartenabteil. Ohne Inventar der Nebenflächen entsteht kein belastbarer Fixpreis — sondern später
+        Nachverhandlung. Listen Sie vor der Besichtigung jede zugeordnete Fläche: Kellerabteil-Nummer,
+        Gartenhäuschen, Carport-Nische, Außenlager hinter der Hecke, ggf. Dachbodenanteil. Ein Foto pro
+        Fläche genügt oft, um Volumen und Fraktionen grob zu schätzen.
+      </RatgeberP>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Wohnung:</strong> Zimmer, Einbauten, Balkon — klassischer Kern.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Keller:</strong> Abteil leer/voll, Gangzugang, Feuchte-/Schimmelhinweise.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Außen:</strong> Gartenabteil, Geräteschuppen, Holzstoß, Carport, Fahrradraum.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Zufahrt:</strong> Siedlungsstraße, Wendeplatz, Abstand zur nächsten Einfahrt.
+        </RatgeberLi>
+      </RatgeberUl>
+      <RatgeberP>
+        Schreiben Sie den Endzustand für jede Fläche fest: leer und versperrt, besenrein, ohne Zwischenlager
+        im Gemeinschaftsbereich. Erst dann ist die{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink>{" "}
+        ein Flächenpaket — und der Fixpreis nach Besichtigung deckt, was am Abnahmetag wirklich zählt.
+        Orientierung ohne Fantasiepreise:{" "}
         <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
           Was kostet Entrümpelung in Wien?
         </RatgeberInternalLink>
         .
       </RatgeberP>
 
+      <RatgeberH2>Kellerabteil: der häufigste Blocker</RatgeberH2>
       <RatgeberP>
-        Offizielle Informationen zur Siedlungsunion finden Sie auf{" "}
-        <RatgeberInternalLink href="https://www.siedlungsunion.at/">
-          siedlungsunion.at
+        Das Abteil ist klein, aber voll — Jahrzehnte Gerümpel, Farbeimer, Reifen. Ohne leeren Keller bleibt
+        die Schlüsselübergabe oft aus. Planen Sie{" "}
+        <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>{" "}
+        als eigenen Block mit eigenem Zeitfenster. Schimmel- und Feuchtrisiken:{" "}
+        <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
+          Kelleräumung Kosten &amp; Schimmel
         </RatgeberInternalLink>
         .
       </RatgeberP>
-
-      <RatgeberH2>Siedlungsunion: große Wohnhäuser und Innenhöfe</RatgeberH2>
-      <RatgeberP>
-        Die Siedlungsunion betreibt zahlreiche Großwohnanlagen mit zentralen Müllsammelstellen und strengen
-        Ruhezeiten. Räumungen am Wochenende sind deshalb oft nur samstags vormittags möglich — wir stimmen
-        den Termin mit der Hausverwaltung ab, bevor Nachbarn sich beschweren.
-      </RatgeberP>
-      <RatgeberP>
-        In Siedlungsunion-Objekten in Favoriten oder Simmering stoßen wir häufig auf gemeinschaftlich genutzte
-        Waschküchen im Keller, in denen Mieter noch Waschmaschinen oder Trockner stehen gelassen haben. Auch
-        diese Gegenstände müssen vor der Abnahme verschwinden — wir kümmern uns um Abtransport und
-        Entsorgungsnachweis.
-      </RatgeberP>
-
-      <RatgeberH2>1. Die Übergabe-Richtlinien der Siedlungsunion Genossenschaft</RatgeberH2>
-      <RatgeberP>
-        Die Siedlungsunion verwaltet eine Vielzahl an Wohnobjekten und stellt klare, standardisierte Bedingungen
-        an ausziehende Parteien. Bei der formellen Wohnungsabnahme wird genau kontrolliert, ob das Objekt den
-        Richtlinien entspricht. Das bedeutet im Regelfall:
-      </RatgeberP>
       <RatgeberUl>
         <RatgeberLi>
-          <strong>Vollständige Entleerung:</strong> Alle Möbel, Textilien, Elektrogeräte und persönlichen
-          Gegenstände müssen komplett aus der Wohnung entfernt werden.
+          <strong>Leer und versperrt:</strong> Persönliches raus, Abteil abschließen
         </RatgeberLi>
         <RatgeberLi>
-          <strong>Räumung der Nebenräume:</strong> Das dazugehörige Kellerabteil sowie Balkone, Terrassen oder
-          Gartenanteile müssen vollkommen leer und sauber hinterlassen werden —{" "}
-          <RatgeberInternalLink href="/leistungen/kellerentruempelung">
-            Kellerentrümpelung
-          </RatgeberInternalLink>
-          ,{" "}
-          <RatgeberInternalLink href="/ratgeber/gartenentruempelung-wien-kosten-ablauf">
-            Gartenentrümpelung Wien
-          </RatgeberInternalLink>
-          .
+          <strong>Gänge frei:</strong> kein Zwischenlager im Kellerflur
         </RatgeberLi>
         <RatgeberLi>
-          <strong>Rückbau von Modifikationen:</strong> Einbauten, die nicht offiziell vom Nachmieter oder der
-          Genossenschaft übernommen werden, müssen fachgerecht demontiert werden.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Besenreiner Zustand:</strong> Die gesamte Wohnfläche wird sauber gefegt (besenrein) an den
-          Prüfer übergeben.
+          <strong>Fraktionen:</strong> Problemstoffe nicht „mit dem Rest“ mischen
         </RatgeberLi>
       </RatgeberUl>
-
-      <RatgeberH2>2. Typische Herausforderungen bei der Siedlungsunion-Räumung</RatgeberH2>
       <RatgeberP>
-        Gerade bei langjährigen Mietverhältnissen sammelt sich im Laufe der Jahrzehnte ein enormer Hausrat an.
-        Viele Mieter unterschätzen den logistischen Aufwand, der mit einer vollständigen Räumung verbunden ist.
-        Vergleichbare Stolpersteine:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
-          5 Fehler bei der Entrümpelung vermeiden
-        </RatgeberInternalLink>
-        .
+        In Siedlungen liegt der Keller oft ebenerdig oder wenige Stufen tiefer — das verkürzt den Trageweg,
+        ändert aber nichts am Blocker-Status. Ein volles Abteil stoppt die Übergabe genauso wie in einem
+        Hochhaus; nur die Logistik ist anders. Beschriften und Schlüssel bereitlegen, bevor die Wohnung
+        „fertig“ wirkt.
       </RatgeberP>
-      <RatgeberP>In der Praxis stoßen wir häufig auf folgende Probleme:</RatgeberP>
-      <RatgeberUl>
-        <RatgeberLi>
-          <strong>Sperrige Einbauten:</strong> Massive Schrankwände, nachträglich eingezogene Regalsysteme oder
-          alte Einbauküchen, deren Demontage spezielles Werkzeug erfordert.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Alte Bodenbeläge:</strong> Teppiche, PVC- oder Laminatböden, die eigenmächtig verlegt wurden
-          und nun inklusive aller Klebereste entfernt werden müssen.
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Logistische Hürden in Wien:</strong> Enge Stiegenhäuser, fehlende Aufzüge in älteren
-          Wohnanlagen sowie strikte Zufahrts- und Halteverbote vor dem Gebäude, die das Verladen von Sperrmüll
-          erschweren —{" "}
-          <RatgeberInternalLink href="/ratgeber/schwerlastentsorgung-wien">
-            Schwerlastentsorgung Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-      </RatgeberUl>
 
-      <RatgeberH2>3. Unser Full-Service-Konzept für Ihre Genossenschaftswohnung</RatgeberH2>
+      <RatgeberH2>Gartenabteil, Außenlager, Carport</RatgeberH2>
       <RatgeberP>
-        Mit Sofort Entrümpelung müssen Sie weder Transporte koordinieren noch teure Container mieten. Wir
-        übernehmen die komplette Abwicklung für Sie:
+        Gartenabteile und Außenlager sind Siedlungs-Klassiker. Rasenmäher, Plastikmöbel, Brennholz,
+        Kinderspielzeug — alles zählt zur Rückgabe, wenn zugeordnet.{" "}
+        <RatgeberInternalLink href="/leistungen/gartenentruempelung">Gartenentrümpelung</RatgeberInternalLink>{" "}
+        und ggf.{" "}
+        <RatgeberInternalLink href="/leistungen/garagenentruempelung">Garagen-/Carport-Räumung</RatgeberInternalLink>{" "}
+        gehören in denselben Auftrag wie die Wohnung. Sonst steht am Abnahmetag noch ein Geräteschuppen voll.
+      </RatgeberP>
+      <RatgeberP>
+        Tipp: Fotografieren Sie Außenflächen bei der Anfrage mit. Zimmerfotos allein unterschätzen den Umfang
+        systematisch — und erzeugen später Nachverhandlungen statt Fixpreis-Sicherheit. Holzstöße und
+        Grünschnitt brauchen oft eigene Abfuhrwege; mischen Sie sie nicht gedanklich mit dem Wohnungsinventar.
+      </RatgeberP>
+
+      <RatgeberH2>Reihenfolge: Außen und Keller vor dem Wohnungsfeinschliff</RatgeberH2>
+      <RatgeberP>
+        Die klassische Fehleinschätzung: erst die Wohnung „schön“ machen, Nebenräume „wenn noch Zeit ist“.
+        Am Abnahmetag fehlt dann genau diese Zeit. Bewährt ist die umgekehrte Logik: zuerst Keller und
+        Außenlager leeren — dort entstehen die Übergabe-Blocker —, parallel oder danach die Wohnräume, zum
+        Schluss Eigenkontrolle aller Flächen. So bleibt der sichtbare Wohnbereich nicht als Alibi stehen,
+        während hinten noch der Geräteschuppen voll ist.
       </RatgeberP>
       <RatgeberOl>
-        <RatgeberLi>
-          <strong>Kostenlose Vor-Ort-Besichtigung:</strong> Wir analysieren das Objekt unverbindlich und besprechen
-          alle notwendigen Rückbauarbeiten —{" "}
-          <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
-            Besichtigung &amp; Fixpreis
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Transparentes Fixpreisangebot:</strong> Verbindliches Festpreisangebot inklusive Deponie,
-          Arbeitsstunden und Transport —{" "}
-          <RatgeberInternalLink href="/preise">Preise &amp; Festpreis</RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Fachgerechte Demontage &amp; Entsorgung:</strong> Küchen, Bodenbeläge und Sperrmüll —
-          umweltgerechte Mülltrennung bei zertifizierten Wiener Entsorgungsbetrieben —{" "}
-          <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-            Wohnungsentrümpelung
-          </RatgeberInternalLink>
-          ,{" "}
-          <RatgeberInternalLink href="/ratgeber/ma-48-vs-entruempelungsfirma-wien">
-            MA 48 vs. Entrümpelungsfirma
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Garantierte Pünktlichkeit:</strong> Der Räumungstermin liegt rechtzeitig vor der offiziellen
-          Abnahme — bei Bedarf{" "}
-          <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
-            Express-Entrümpelung Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
+        <RatgeberLi>Nebenraum-Inventar inkl. Fotos und Zufahrt</RatgeberLi>
+        <RatgeberLi>Keller und Außenflächen räumen (Blocker zuerst)</RatgeberLi>
+        <RatgeberLi>Wohnung leeren und Einbauten nur laut Vertrag rückbauen</RatgeberLi>
+        <RatgeberLi>Gemeinschaftswege und Vorgarten von Resten befreien</RatgeberLi>
+        <RatgeberLi>Eigenkontrolle: jede Fläche leer/versperrt, Schlüssel komplett</RatgeberLi>
       </RatgeberOl>
-
-      <RatgeberH2>4. Vorab-Checkliste für Mieter: Nichts vergessen?</RatgeberH2>
       <RatgeberP>
-        Bevor der Kontrolleur der Siedlungsunion zur Abnahme erscheint, sollten Sie die Wohnung auf folgende
-        Kernpunkte überprüfen. Ausführliche Version:{" "}
-        <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
-          Checkliste Wohnungsräumung Wien
+        Parallelarbeit funktioniert, wenn zwei Teams oder klar getrennte Zeitfenster verfügbar sind — nicht
+        wenn eine Person zwischen Garten und Küche hin- und herläuft. Schreiben Sie die Reihenfolge in den
+        Auftrag; sonst gewinnt am Einsatztag die Optik der Wohnung gegen die Realität der Nebenräume.
+      </RatgeberP>
+
+      <RatgeberH2>Siedlungszufahrt und Nachbarn</RatgeberH2>
+      <RatgeberP>
+        Enge Siedlungsstraßen vertragen keine improvisierte Doppelpark-Strategie. Kurze Entladefenster,
+        klarer Standplatz, Rücksicht auf Einfahrten. Informieren Sie Nachbarn kurz, wenn der Einsatz länger
+        dauert — das reduziert Konflikte und hält Wege frei. Ein Transporter quer vor drei Carports blockiert
+        nicht nur den Einsatz, sondern die ganze Zeile.
+      </RatgeberP>
+      <RatgeberP>
+        Fotos der Zufahrt und des Wendeplatzes gehören in die Anfrage. Manchmal ist der Siedlungsrand der
+        bessere Entladepunkt als die Haustür — dann tragen Sie etwas weiter, aber legal und nachbarschaftlich
+        ruhiger. Kostenlogik ohne Fantasiepreise bleibt an Volumen, Zufahrt und Flächenpaket gebunden, nicht
+        an Internet-Pauschalen.
+      </RatgeberP>
+
+      <RatgeberH2>Wetter, Tageslicht und Außenlagerung</RatgeberH2>
+      <RatgeberP>
+        Außenlager und Gartenabteile sind wetterabhängig. Nasse Holzstöße, matschige Wege und frühe Dunkelheit
+        im Winter verlängern den Einsatz spürbar. Planen Sie für Außenflächen Tageslicht und, wenn nötig,
+        ein zweites kurzes Fenster statt eines überladenen Abends. Regenschutz für Kartons und Elektrogeräte
+        aus dem Schuppen verhindert, dass nasse Reste zurück in die schon leere Wohnung wandern.
+      </RatgeberP>
+      <RatgeberP>
+        Zwischenlagerung auf dem Vorgarten oder dem Gehweg ist in Siedlungen besonders sichtbar — und oft
+        unerwünscht. Nutzen Sie den Transporter als laufendes Depot: raus aus dem Abteil, rein ins Fahrzeug,
+        Fläche sofort freimachen. So bleibt die Siedlungsstraße begehbar und die Übergabe wirkt professionell,
+        nicht wie ein mehrtägiger Sperrmüll-Basar.
+      </RatgeberP>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Tageslicht:</strong> Außenräume nicht in die letzte Dämmerung schieben
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Nässe:</strong> Wege und Grünschnitt einkalkulieren, nicht ignorieren
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Zwischenlager:</strong> Fahrzeug statt Vorgarten als Depot nutzen
+        </RatgeberLi>
+      </RatgeberUl>
+
+      <RatgeberH3>Praxis-Beispiel: Wohnung leer, Gartenabteil voll</RatgeberH3>
+      <RatgeberP>
+        Eine Siedlungsunion-Wohnung war besenrein — das Gartenabteil seit Jahren voll. Die Abnahme wurde
+        verschoben, weil Nebenflächen fehlten. Lösung beim zweiten Anlauf: Abteil und Rest in einem Auftrag,
+        Entladung am Siedlungsrand, Keller am selben Vormittag, Übergabe am Folgetag. Der Fehler war nicht
+        fehlende Motivation — es war eine Wohnungs-only-Planung ohne Inventar der Außenflächen.
+      </RatgeberP>
+      <RatgeberP>
+        Beim zweiten Termin zählte das Flächenpaket: Foto vom Schuppen, klarer Standplatz, Reihenfolge
+        Außen–Keller–Wohnungskontrolle. Genau diese Kette macht aus einer gescheiterten Abnahme eine
+        planbare Rückgabe.
+      </RatgeberP>
+
+      <RatgeberH2>Was zur übergabefähigen Siedlungsunion-Rückgabe gehört</RatgeberH2>
+      <RatgeberP>
+        Leer, zugänglich, ohne zurückgelassenen Sperrmüll in Gemeinschafts- oder Außenflächen. Einbauten nur
+        rückbauen, wenn Vertrag oder Verwaltung es verlangen. Wertanrechnung bei Verwertbarem:{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>. Für
+        Verlassenschaft in anderen Beständen — bewusst nicht hier vertieft:{" "}
+        <RatgeberInternalLink href="/ratgeber/bauhilfe-genossenschaft-entruempelung-wien">
+          Bauhilfe
+        </RatgeberInternalLink>
+        . Abnahmeprotokoll und Kautionsschutz:{" "}
+        <RatgeberInternalLink href="/ratgeber/arwag-genossenschaft-entruempelung-wien">
+          ARWAG
         </RatgeberInternalLink>
         .
       </RatgeberP>
+      <RatgeberP>
+        Schlüsselmenge prüfen: Wohnung, Haus, Kellerabteil, ggf. Garten- oder Carport-Schloss. Ein
+        vergessener Abteilschlüssel ist in Siedlungen ein klassischer Stopper — genauso wie ein noch
+        verschlossenes, aber volles Außenlager.
+      </RatgeberP>
+
+      <RatgeberH2>Kostenhebel Nebenräume (ohne Fantasiepreise)</RatgeberH2>
+      <RatgeberP>
+        Die Tabelle ordnet Flächen- und Zufahrtshebel — keine erfundenen Euro-Beträge.
+      </RatgeberP>
+      <RatgeberTableWrap caption="Hebel Siedlungsunion-Räumung mit Nebenräumen">
+        <RatgeberThead>
+          <RatgeberTr>
+            <RatgeberTh>Hebel</RatgeberTh>
+            <RatgeberTh>Wirkung</RatgeberTh>
+            <RatgeberTh>Früh klären</RatgeberTh>
+          </RatgeberTr>
+        </RatgeberThead>
+        <RatgeberTbody>
+          <RatgeberTr>
+            <RatgeberTd>Keller nicht im Auftrag</RatgeberTd>
+            <RatgeberTd>Übergabe blockiert</RatgeberTd>
+            <RatgeberTd>Abteil mitbesichtigen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Gartenabteil / Außenlager</RatgeberTd>
+            <RatgeberTd>Unterschätzter Zeitbedarf</RatgeberTd>
+            <RatgeberTd>Außenfotos bei Anfrage</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Enge Siedlungszufahrt</RatgeberTd>
+            <RatgeberTd>Längere Entladung, Nachbarschaftskonflikt</RatgeberTd>
+            <RatgeberTd>Standplatz vorab</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Wohnung-only-Planung</RatgeberTd>
+            <RatgeberTd>Nacharbeit und Terminverschiebung</RatgeberTd>
+            <RatgeberTd>Flächenpaket schriftlich</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Wetter / Tageslicht Außen</RatgeberTd>
+            <RatgeberTd>Verzögerung bei Nässe und Dunkelheit</RatgeberTd>
+            <RatgeberTd>Tagesfenster für Außenflächen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Wertanrechnung</RatgeberTd>
+            <RatgeberTd>Kann Fixpreis mindern</RatgeberTd>
+            <RatgeberTd>Verwertbares zeigen</RatgeberTd>
+          </RatgeberTr>
+        </RatgeberTbody>
+      </RatgeberTableWrap>
+
+      <RatgeberWarning title="Nebenraum-Hinweis">
+        <RatgeberP>
+          Eine leere Wohnung ist keine Übergabe, wenn Keller oder Gartenabteil noch voll sind. Listen Sie
+          Nebenflächen zuerst — dann wirken Fixpreis und Termin realistisch. Siedlungszufahrt und Wetter für
+          Außenlager gehören in denselben Plan wie das Wohnzimmer.
+        </RatgeberP>
+      </RatgeberWarning>
+
+      <RatgeberH2>Checkliste Siedlungsunion Nebenräume</RatgeberH2>
       <RatgeberChecklist
         items={[
-          "Ist die Wohnfläche inklusive aller Nischen und Wandschränke komplett leer?",
-          "Wurde das Kellerabteil vollständig freigemacht und das eigene Vorhängeschloss entfernt?",
-          "Sind mieterseitig angebrachte Halterungen, Schrauben und Dübel aus den Wänden entfernt?",
-          "Wurden alle ungenehmigten Wand- oder Deckenverkleidungen zurückgebaut?",
-          "Sind alle Räumlichkeiten ordnungsgemäß besenrein gesäubert?",
+          "Kellerabteil fotografiert und im Auftrag",
+          "Gartenabteil / Außenlager / Carport geprüft",
+          "Siedlungszufahrt und Entladepunkt geklärt",
+          "Reihenfolge Außen/Keller vor Wohnungsfeinschliff",
+          "Tageslicht-/Wetterfenster für Außenflächen",
+          "Endzustand für alle Flächen schriftlich",
+          "Schlüssel und Eigenkontrolle vor Abnahme",
         ]}
       />
 
-      <RatgeberH2>Zuverlässige Räumung für alle Wiener Wohnbaugenossenschaften</RatgeberH2>
       <RatgeberP>
-        Egal ob ein geplanter Umzug, eine Übersiedlung ins Pflegeheim, eine Scheidung oder eine sensible
-        Verlassenschaft der Grund für die Räumung ist — wir stehen Ihnen mit Diskretion und Tatkraft zur Seite.
-        Leistungen:{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
-          Wohnungsauflösung
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/leistungen/verlassenschaft">
-          Verlassenschaftsräumung
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/ratgeber/wohnungsraeumung-senioren-wien">
-          Wohnungsräumung Senioren Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Falls Sie neben der Siedlungsunion auch Wohnungen anderer großer Genossenschaften in Wien oder{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
-          Niederösterreich
-        </RatgeberInternalLink>{" "}
-        zurückgeben müssen, bietet unser Ratgeber-Portal umfassende Hilfestellungen — etwa für die{" "}
-        <RatgeberInternalLink href="/ratgeber/buwog-genossenschaft-entruempelung-wien">
-          BUWOG Genossenschaft
-        </RatgeberInternalLink>
-        , das{" "}
-        <RatgeberInternalLink href="/ratgeber/oevw-genossenschaft-entruempelung-wien">
-          ÖVW (Volkswohnungswerk)
-        </RatgeberInternalLink>{" "}
-        oder den{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
-          Wiener Gemeindebau
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Wertanrechnung senkt den Endpreis oft deutlich — Details:{" "}
-        <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
-          Wertanrechnung Wien
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>
-        .
+        Mit Nebenraum-first-Planung wird die Siedlungsunion-Rückgabe planbar — ohne böse Überraschung am
+        Abnahmetag. Für Hochhaus-, Protokoll- und Verlassenschafts-Hubs die Geschwistertexte nutzen; hier
+        bleiben Siedlung und Außenflächen der Kern. Wer Inventar, Zufahrt und Reihenfolge früh bindet,
+        übergibt ruhiger und nachbarschaftsschonend.
       </RatgeberP>
 
       <RatgeberCtaBox>
-        <p className="font-bold text-brand-dark">
-          Siedlungsunion Wien — kostenlose Besichtigung &amp; Fixpreis
-        </p>
+        <p className="font-bold text-brand-dark">Siedlungsunion — Wohnung + Nebenräume</p>
         <RatgeberP>
-          Unverbindliche Beratung vor Ort. Besenreine Übergabe inklusive Keller, Balkon und Wertanrechnung auf
-          Wunsch.
+          Keller, Gartenabteil und Wohnräume in einem Fixpreis nach Besichtigung — übergabefähig und
+          nachbarschaftsschonend.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">

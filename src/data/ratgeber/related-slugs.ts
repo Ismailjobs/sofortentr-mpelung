@@ -281,6 +281,36 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
     "geschaeftslokal-raeumen-wien-rueckbau",
     "wohnungsaufloesung-nach-todesfall-wien",
   ],
+  "buwog-genossenschaft-entruempelung-wien": [
+    "arwag-genossenschaft-entruempelung-wien",
+    "siedlungsunion-genossenschaft-entruempelung-wien",
+    "was-kostet-entruempelung-wien",
+    "entruempelung-gemeindebau-wiener-wohnen",
+  ],
+  "arwag-genossenschaft-entruempelung-wien": [
+    "buwog-genossenschaft-entruempelung-wien",
+    "bauhilfe-genossenschaft-entruempelung-wien",
+    "gemeindebau-wiener-wohnen-wohnungsuebergabe",
+    "checkliste-wohnungsraeumung-wien",
+  ],
+  "egw-genossenschaft-entruempelung-niederoesterreich": [
+    "ebsg-genossenschaft-entruempelung-noe-burgenland",
+    "entruempelung-korneuburg-tulln-schwechat",
+    "buwog-genossenschaft-entruempelung-wien",
+    "was-kostet-entruempelung-wien",
+  ],
+  "bauhilfe-genossenschaft-entruempelung-wien": [
+    "wohnungsaufloesung-nach-todesfall-wien",
+    "verlassenschaft-entruempelung-wien-sensibel",
+    "gemeindewohnung-todesfall-verlassenschaft-raeumen-wien",
+    "arwag-genossenschaft-entruempelung-wien",
+  ],
+  "siedlungsunion-genossenschaft-entruempelung-wien": [
+    "kellerraeumung-wien-kosten-schimmel",
+    "gartenentruempelung-wien-kosten-ablauf",
+    "buwog-genossenschaft-entruempelung-wien",
+    "bauhilfe-genossenschaft-entruempelung-wien",
+  ],
   "zimmer-raeumung-wien": [
     "checkliste-wohnungsraeumung-wien",
     "entruempelung-gemeindebau-wiener-wohnen",

@@ -1,4 +1,5 @@
 import RatgeberArticleBody, {
+  RatgeberChecklist,
   RatgeberCtaBox,
   RatgeberFreshnessBadge,
   RatgeberH2,
@@ -8,316 +9,417 @@ import RatgeberArticleBody, {
   RatgeberLi,
   RatgeberOl,
   RatgeberP,
+  RatgeberTableWrap,
+  RatgeberTbody,
+  RatgeberTd,
+  RatgeberTh,
+  RatgeberThead,
+  RatgeberTr,
   RatgeberUl,
+  RatgeberWarning,
 } from "@/components/ratgeber/RatgeberArticleBody";
+import { BezirkEarlyCta } from "@/components/ratgeber/BezirkStructureBlocks";
 import type { RatgeberArticleMeta } from "@/data/ratgeber/types";
 
 export const meta: RatgeberArticleMeta = {
   slug: "buwog-genossenschaft-entruempelung-wien",
-  title: "BUWOG Genossenschaft Entrümpelung Wien: Stressfreie Wohnungsräumung mit Fixpreisgarantie",
-  seoTitle: "BUWOG Genossenschaft entrümpeln Wien — Fixpreis & besenreine Übergabe 2026",
-  ogTitle: "BUWOG Genossenschaft Wien — stressfreie Wohnungsräumung mit Fixpreisgarantie",
-  focusKeyword: "BUWOG Genossenschaft Entrümpelung Wien",
+  title: "BUWOG Wohnung räumen Wien: Hochhaus-Logistik, Lift & Übergabe ohne Chaos",
+  seoTitle: "BUWOG entrümpeln Wien — Hochhaus-Logistik, Lift & Fixpreis 2026",
+  ogTitle: "BUWOG Wien — Wohnungsräumung mit Fokus auf Hochhaus-Logistik",
+  focusKeyword: "BUWOG Entrümpelung Wien",
   description:
-    "BUWOG Genossenschaftswohnung räumen? Fixpreis nach Besichtigung, besenreine Übergabe, Verlassenschaft diskret — Sofort Entrümpelung in Wien, NÖ und Burgenland.",
+    "BUWOG-Wohnung in Wien räumen: Liftfenster, Ladezone, Stockwerk-Logistik und besenreine Übergabe an die Hausverwaltung — Fixpreis nach Besichtigung, ohne Fantasiepreise.",
   excerpt:
-    "Professionelle BUWOG-Wohnungsräumung mit Fixpreisgarantie, Wertanrechnung und besenreiner Übergabe.",
+    "BUWOG-Räumung als Logistikprojekt: Hochhaus, Lift, Zufahrt und klare Übergabe an die Verwaltung.",
   freshnessExcerpt: {
-    kind: "guide",
-    guideName: "BUWOG-Genossenschaft-Leitfaden",
+    kind: "updated",
     suffix:
-      "Fixpreis, Ablauf und besenreine Übergabe für Genossenschaftswohnungen in Wien und Umgebung.",
+      "Praxis-Leitfaden für urbane BUWOG-Objekte — Liftfenster, Ladezonen und Stockwerk-Logistik in Wien.",
   },
   publishedAt: "2026-07-06",
   keywords: [
-    "BUWOG Genossenschaft Entrümpelung Wien",
+    "BUWOG Entrümpelung Wien",
     "BUWOG Wohnung räumen",
-    "Genossenschaftswohnung entrümpeln Wien",
+    "BUWOG Wohnungsauflösung Wien",
+    "Hochhaus Entrümpelung Wien",
     "BUWOG Übergabe besenrein",
-    "Verlassenschaft BUWOG Wien",
-    "Fixpreis Entrümpelung Genossenschaft",
-    "Wohnungsauflösung BUWOG",
-    "Kellerabteil BUWOG räumen",
+    "Liftfenster Wohnungsräumung",
+    "BUWOG Kellerabteil räumen",
+    "Fixpreis Entrümpelung BUWOG",
   ],
   faq: [
     {
-      question: "Welche Besonderheiten gelten bei der BUWOG-Wohnungsrückgabe?",
+      question: "Warum scheitern BUWOG-Räumungen oft an der Logistik statt am Möbelvolumen?",
       answer:
-        "Wie bei anderen Genossenschaften müssen Einbauten, Bodenbeläge und Nebenräume oft in den vertragsgemäßen Zustand zurückversetzt werden. Eine Vorabbesichtigung klärt den genauen Rückbau- und Räumungsumfang vor der offiziellen Abnahme.",
+        "In vielen BUWOG-Hochhäusern entscheiden Liftfenster, Türbreiten und legale Ladezonen über Tempo und Kosten. Wer nur den Wohnungsinhalt plant und Zufahrt sowie Aufzug ignoriert, braucht Extrafahrten und riskiert Terminverzug vor der Abnahme.",
     },
     {
-      question: "Was bedeutet die Fixpreisgarantie bei Sofort Entrümpelung?",
+      question: "Muss der Aufzug für die Entrümpelung freigehalten werden?",
       answer:
-        "Nach kostenloser Besichtigung erhalten Sie ein verbindliches Festpreis-Angebot inklusive Deponie, Transport und Arbeitszeit — ohne nachträgliche Nachkalkulation.",
+        "Ja — idealerweise mit Hausverwaltung oder Hausbetreuung abgestimmt. Ohne klaren Lift-Slot verlängern sich Tragewege dramatisch, besonders ab dem 4. Stock ohne ausreichend großen Lastenaufzug.",
     },
     {
-      question: "Räumen Sie auch Verlassenschaften in BUWOG-Objekten?",
+      question: "Was gehört bei BUWOG außer der Wohnung noch in den Auftrag?",
       answer:
-        "Ja — diskret, mit Trennung von Dokumenten und Erinnerungsstücken sowie optionaler Wertanrechnung verwertbarer Gegenstände.",
+        "Kellerabteil, ggf. Dachbodenanteil und zugeordnete Abstellräume. Eine leere Wohnung ohne leeren Keller gilt bei vielen Abnahmen nicht als übergabefähig.",
     },
     {
-      question: "Sind kurzfristige Termine für die Wohnungsräumung möglich?",
+      question: "Wie entsteht der Fixpreis für eine BUWOG-Räumung?",
       answer:
-        "In vielen Fällen ja — je nach Auslastung sind Einsätze oft innerhalb von 24 bis 48 Stunden nach Besichtigung und Auftragsbestätigung realisierbar.",
+        "Nach Fotos und Vor-Ort-Besichtigung: Volumen, Stockwerk/Lift, Zufahrt, Demontagen und Endzustand. Der genannte Betrag ist dann Fixpreis — ohne Fantasie-Euro aus dem Internet.",
+    },
+    {
+      question: "Wo finde ich Infos zu Kaution und Abnahmeprotokoll anderer Träger?",
+      answer:
+        "Für ARWAG-Abnahme und Kautionsschutz: ARWAG-Ratgeber. Für Siedlungs-Nebenräume: Siedlungsunion. Für Verlassenschaft in kleineren Beständen: Bauhilfe. Hier bleibt der Fokus auf urbaner Hochhaus-Logistik.",
+    },
+    {
+      question: "Gibt es offizielle Informationen zur BUWOG?",
+      answer:
+        "Ja — auf buwog.at. Vertrags- und Übergabedetails stehen in Ihrem Miet- bzw. Nutzungsvertrag und in den Schreiben der Hausverwaltung.",
     },
   ],
-  readingTimeMinutes: 9,
+  howTo: {
+    name: "BUWOG-Wohnung in Wien logistisch sauber räumen",
+    steps: [
+      {
+        name: "Objekt und Zufahrt klären",
+        text: "Stockwerk, Liftmaß, Hofzufahrt und mögliche Halteverbotszone vor der Besichtigung notieren.",
+      },
+      {
+        name: "Nebenräume in den Umfang nehmen",
+        text: "Keller und Abstellräume von Anfang an mitbesichtigen — nicht als Restarbeit am Abnahmetag.",
+      },
+      {
+        name: "Liftfenster mit der Hausverwaltung abstimmen",
+        text: "Räumungstermin und Aufzugsbelegung schriftlich fixieren.",
+      },
+      {
+        name: "Räumung inkl. Demontage durchführen",
+        text: "Wohnung und Nebenräume leeren; Einbauten nur laut Vertrag zurückbauen.",
+      },
+      {
+        name: "Übergabe vorbereiten",
+        text: "Besenreiner Endzustand, Schlüsselmenge und kurze Eigenkontrolle vor dem Abnahmetermin.",
+      },
+    ],
+  },
+  relatedSlugs: [
+    "arwag-genossenschaft-entruempelung-wien",
+    "siedlungsunion-genossenschaft-entruempelung-wien",
+    "was-kostet-entruempelung-wien",
+    "entruempelung-gemeindebau-wiener-wohnen",
+  ],
+  readingTimeMinutes: 11,
 };
 
 export default function BuwogGenossenschaftEntruempelungWien() {
   return (
     <RatgeberArticleBody>
       <RatgeberFreshnessBadge
-        variant={{ kind: "guide", guideName: "BUWOG-Genossenschaft-Leitfaden" }}
-        note="Für Genossenschaftswohnungen der BUWOG in Wien, Niederösterreich und dem Burgenland."
+        variant={{ kind: "updated-month" }}
+        note="Fokus: Hochhaus-Logistik, Liftfenster und Ladezonen in BUWOG-Objekten — nicht Kautionstexte anderer Träger."
         article={meta}
       />
 
       <RatgeberLead>
-        Ein bevorstehender Wohnungswechsel, der Auszug aus einer Genossenschaftswohnung oder anspruchsvolle
-        Aufgaben wie eine Verlassenschaftsräumung bringen oft organisatorische Herausforderungen mit sich.
-        Besonders bei Objekten der BUWOG Genossenschaft müssen bei der Rückgabe spezifische Richtlinien und
-        Übergabestandards eingehalten werden.
+        Eine BUWOG Entrümpelung Wien scheitert selten am Sofa — sie scheitert am Lift, der zu klein ist, an
+        der Ladezone, die fehlt, und am Keller, der „morgen“ geplant wurde. BUWOG-Bestände sind oft große,
+        urbane Wohnanlagen: viele Stockwerke, enge Stiegenhäuser, gemeinsame Höfe. Dieser Ratgeber behandelt
+        genau diese Logistik — nicht das Abnahmeprotokoll der ARWAG und nicht die Verlassenschafts-Organisation
+        bei kleineren Genossenschaften.
       </RatgeberLead>
 
-      <RatgeberP>
-        Als Sofort Entrümpelung unterstützen wir Sie mit einem spezialisierten Fachservice für die
-        professionelle Räumung von BUWOG-Wohnungen in Wien,{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-korneuburg-tulln-schwechat">
-          Niederösterreich
-        </RatgeberInternalLink>{" "}
-        und dem{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-burgenland-mattersburg-rust-oberpullendorf">Burgenland</RatgeberInternalLink>.
-        Dank transparenter Kalkulation und einer unverbindlichen Erstbesichtigung behalten Sie von Anfang an
-        die volle Kostenkontrolle — Orientierung:{" "}
-        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
-          Kosten-Richtwerte Entrümpelung Wien
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
+      <BezirkEarlyCta
+        title="BUWOG-Räumung mit Lift- &amp; Zufahrtsplan"
+        text="Fotos senden oder Besichtigung: Stockwerk, Aufzug und Nebenräume — Fixpreis ohne Fantasiepreise."
+      />
 
       <RatgeberP>
-        Offizielle Informationen zur BUWOG finden Sie auf{" "}
-        <RatgeberInternalLink href="https://buwog.at/">buwog.at</RatgeberInternalLink>.
-      </RatgeberP>
-
-      <RatgeberH2>Was BUWOG-Objekte in Wien praktisch unterscheidet</RatgeberH2>
-      <RatgeberP>
-        Die BUWOG verwaltet sowohl große Nachkriegs-Siedlungen mit weiten Innenhöfen als auch modernere
-        Neubauten — etwa in Donaustadt, Favoriten oder Floridsdorf. In der Praxis bedeutet das: oft lange
-        Wege vom Kellerabteil über mehrere Stiegenhäuser bis zur Zufahrt, und Parkplätze direkt vor dem
-        richtigen Eingang sind selten. Wir planen deshalb Halteverbotszonen und Teamgröße nach
-        Hofstruktur — nicht nur nach Quadratmetern.
-      </RatgeberP>
-      <RatgeberP>
-        Ein wiederkehrendes Detail bei BUWOG-Übergaben sind massige Einbauküchen und Schrankwände aus den
-        1970er- und 80er-Jahren, die in engen Aufzugskabinen nicht im Ganzen transportiert werden können.
-        Unser Team demontiert solche Einbauten vor Ort und entsorgt Kleinteile getrennt — das spart oft einen
-        zweiten Anfahrtsweg und verhindert Beanstandungen bei der Abnahme.
-      </RatgeberP>
-
-      <RatgeberH2>1. Warum sich eine professionelle Räumung Ihrer BUWOG-Wohnung auszahlt</RatgeberH2>
-      <RatgeberP>
-        Die Kriterien für die Rückgabe einer Genossenschaftswohnung sind streng. Oft müssen Einbauten
-        demontiert, alte Bodenbeläge entfernt oder Räume in den Ursprungszustand zurückversetzt werden. Ein
-        professioneller Entrümpelungsdienst nimmt Ihnen diese Last komplett ab — vergleichbar mit unserer{" "}
-        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">
-          Wohnungsauflösung
-        </RatgeberInternalLink>{" "}
-        und{" "}
-        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">
-          Haushaltsauflösung
+        Offizielle Trägerinfos:{" "}
+        <RatgeberInternalLink href="https://buwog.at/">buwog.at</RatgeberInternalLink>. Abnahme und
+        Kautionsschutz bei gemeinnützigen Wiener Beständen:{" "}
+        <RatgeberInternalLink href="/ratgeber/arwag-genossenschaft-entruempelung-wien">
+          ARWAG Entrümpelung
         </RatgeberInternalLink>
-        .
-      </RatgeberP>
-      <RatgeberP>
-        Unser erfahrenes Team übernimmt die gesamte Organisation — von der ersten Sortierung über den
-        fachgerechten Abtransport bis hin zur besenreinen Übergabe. Analoge Genossenschafts-Erfahrung:{" "}
-        <RatgeberInternalLink href="/ratgeber/stadt-wien-gemeindewohnung-rueckgabevorgaben">
-          Stadt-Wien-Gemeindewohnung Rückgabe
+        . Siedlungs-Nebenräume und Gartenabteile:{" "}
+        <RatgeberInternalLink href="/ratgeber/siedlungsunion-genossenschaft-entruempelung-wien">
+          Siedlungsunion
         </RatgeberInternalLink>
-        ,{" "}
+        . Gemeindebau-Logistik separat:{" "}
         <RatgeberInternalLink href="/ratgeber/entruempelung-gemeindebau-wiener-wohnen">
           Entrümpelung Gemeindebau
         </RatgeberInternalLink>
         .
       </RatgeberP>
 
-      <RatgeberH2>2. Kompetenz und Detailkenntnis bei Genossenschaftswohnungen</RatgeberH2>
+      <RatgeberH2>Warum BUWOG-Objekte ein eigenes Logistik-Thema sind</RatgeberH2>
       <RatgeberP>
-        Jede Genossenschaft hat eigene Protokolle und Erwartungen bei der Wohnungsabnahme. Durch unsere
-        langjährige Praxis im Bereich der Wohnungsauflösungen und Verlassenschaften in Wien und Umgebung
-        kennen wir die baulichen und formalen Anforderungen bei der Übergabe von BUWOG-Objekten im Detail.
+        In großen Wohnanlagen teilen sich Dutzende Haushalte denselben Aufzug und dieselbe Hofzufahrt. Eine
+        Räumung ohne Vorankündigung blockiert Nachbarn, Hausbetreuung und oft die legale Entladung. Wir sehen
+        regelmäßig, dass Teams ohne Liftfenster doppelt so lange brauchen — nicht weil mehr Möbel da stehen,
+        sondern weil jedes Teil die Treppe runter muss. Genau dieser Unterschied macht aus einer normalen{" "}
+        <RatgeberInternalLink href="/leistungen/wohnungsaufloesung">Wohnungsauflösung</RatgeberInternalLink>{" "}
+        ein Hochhaus-Projekt.
       </RatgeberP>
       <RatgeberP>
-        Wir wissen, worauf Prüfer bei der Abnahme achten, und bereiten das Objekt gezielt vor, damit
-        Beanstandungen oder teure Nachforderungen vermieden werden. Checkliste:{" "}
-        <RatgeberInternalLink href="/ratgeber/checkliste-wohnungsraeumung-wien">
-          Wohnungsräumung Wien
-        </RatgeberInternalLink>
-        , typische Fehler:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelung-wien-5-fehler-vermeiden">
-          5 Fehler vermeiden
-        </RatgeberInternalLink>
-        .
+        BUWOG-Wohnungen liegen häufig in dicht bebauten Bezirken: Favoriten, Meidling, Donaustadt, Liesing und
+        vergleichbare Lagen. Dort zählen Halteverbotszonen und Hofdurchfahrten mehr als die Frage, ob der
+        Schrank noch „irgendwie“ durch die Tür passt. Wer Zufahrt und Lift erst am Räumungstag klärt, zahlt
+        den Preis in Extrafahrten und verschobenen Abnahmeterminen — nicht in erfundenen Internet-Pauschalen,
+        sondern in realer Stundenarbeit.
       </RatgeberP>
 
-      <RatgeberH2>3. Unser strukturierter Ablauf — Schritt für Schritt zu leeren Räumen</RatgeberH2>
+      <RatgeberH2>Liftfenster, Türbreiten und Tragewege</RatgeberH2>
       <RatgeberP>
-        Damit die Wohnungsräumung für Sie unkompliziert verläuft, setzen wir auf einen klar definierten
-        Prozess:
-      </RatgeberP>
-      <RatgeberOl>
-        <RatgeberLi>
-          <strong>Kostenlose Vor-Ort-Besichtigung:</strong> Wir analysieren das Objekt unverbindlich —{" "}
-          <RatgeberInternalLink href="/ratgeber/raeumungsexperte-wien-besichtigung">
-            Besichtigung &amp; Fixpreis
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Verbindliches Angebot:</strong> Transparente Kostenaufstellung ohne versteckte Gebühren —{" "}
-          <RatgeberInternalLink href="/preise">Preise &amp; Festpreis</RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Flexible Terminvereinbarung:</strong> Einsätze oft innerhalb von 24 bis 48 Stunden —{" "}
-          <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
-            Express-Entrümpelung Wien
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Fachgerechte Durchführung:</strong> Demontage, Sortierung und Räumung aller Wohn- und
-          Nebenräume —{" "}
-          <RatgeberInternalLink href="/leistungen/wohnungsentruempelung">
-            Wohnungsentrümpelung
-          </RatgeberInternalLink>
-          .
-        </RatgeberLi>
-        <RatgeberLi>
-          <strong>Besenreine Übergabe:</strong> Finale Qualitätskontrolle und saubere Objektübergabe.
-        </RatgeberLi>
-      </RatgeberOl>
-
-      <RatgeberH2>4. Volle Planungssicherheit durch unsere Fixpreisgarantie</RatgeberH2>
-      <RatgeberP>
-        Bei Sofort Entrümpelung gibt es keine bösen Überraschungen durch nachträgliche Preiserhöhungen.
-        Bereits im Rahmen der kostenlosen Besichtigung ermitteln wir den präzisen Leistungsumfang — inklusive
-        aller Deponiekosten, Transportwege und Arbeitsstunden.
-      </RatgeberP>
-      <RatgeberP>
-        Der angebotene Festpreis ist verbindlich. Ob kompakte Wohnung oder weitläufige
-        Verlassenschaftsräumung — Sie kennen das Budget im Vorfeld. Mehr zur Kalkulation:{" "}
-        <RatgeberInternalLink href="/ratgeber/entruempelungsdienst-vs-entruempelungsfirma-wien">
-          Entrümpelungsdienst vs. Firma
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>5. Höchste Diskretion bei Verlassenschaften und sensiblen Räumungen</RatgeberH2>
-      <RatgeberP>
-        Der Umgang mit dem Nachlass eines Angehörigen erfordert neben fachlicher Kompetenz vor allem
-        Empathie, Fingerspitzengefühl und absolute Diskretion. Unser Team agiert in emotional sensiblen
-        Situationen respektvoll und rücksichtsvoll.
-      </RatgeberP>
-      <RatgeberP>
-        Persönliche Dokumente, Erinnerungsstücke oder private Unterlagen werden sorgfältig separiert und an
-        Sie übergeben. Leistungen:{" "}
-        <RatgeberInternalLink href="/leistungen/verlassenschaft">
-          Verlassenschaftsräumung
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/leistungen/nachlass">Nachlassentrümpelung</RatgeberInternalLink>
-        . Ratgeber:{" "}
-        <RatgeberInternalLink href="/ratgeber/verlassenschaft-entruempelung-wien-sensibel">
-          Verlassenschaft sensibel räumen
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/ratgeber/wohnungsaufloesung-nach-todesfall-wien">
-          Wohnungsauflösung nach Todesfall
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>6. Kosten senken durch faire Wertanrechnung</RatgeberH2>
-      <RatgeberP>
-        Nicht alles, was bei einer Wohnungsauflösung weichen muss, gehört auf die Deponie. Gut erhaltene
-        Möbel, Antiquitäten, Sammlerstücke oder Altwaren besitzen oft noch einen signifikanten Gegenwert.
-      </RatgeberP>
-      <RatgeberP>
-        Im Zuge der Besichtigung bewerten wir verwertbare Gegenstände transparent. Der ermittelte Wert wird
-        direkt mit den Räumungskosten verrechnet — Leistung{" "}
-        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink>
-        , Details:{" "}
-        <RatgeberInternalLink href="/ratgeber/gratis-raeumung-wien-wertanrechnung">
-          Wertanrechnung Wien
-        </RatgeberInternalLink>
-        ,{" "}
-        <RatgeberInternalLink href="/ratgeber/gebrauchte-moebel-bewerten-wien">
-          gebrauchte Möbel bewerten
-        </RatgeberInternalLink>
-        .
-      </RatgeberP>
-
-      <RatgeberH2>7. Maßgeschneiderte Zusatzleistungen für Ihr Projekt</RatgeberH2>
-      <RatgeberP>
-        Jedes Räumungsprojekt ist individuell. Neben der klassischen Sperrmüllentsorgung bieten wir
-        Zusatzleistungen, die auf Ihre Bedürfnisse und die Vorgaben der BUWOG zugeschnitten sind:
+        Notieren Sie vor der Anfrage: Stockwerk, Lift ja/nein, Kabinenmaß grob, Treppenbreite, Hof- oder
+        Straßenzufahrt. Diese fünf Angaben entscheiden über Personalstärke und Demontagetiefe. Ein großes Sofa
+        im 7. Stock ohne Lastenaufzug ist kein Möbelproblem — es ist ein Zeitproblem. Deshalb gehört die
+        Besichtigung in BUWOG-Hochhäusern immer auch in den Keller und an die Hauszufahrt, nicht nur in die
+        Wohnräume.
       </RatgeberP>
       <RatgeberUl>
         <RatgeberLi>
-          Demontage von maßgefertigten Einbaumöbeln, Wandverkleidungen und Küchen —{" "}
-          <RatgeberInternalLink href="/ratgeber/entruempelung-vor-sanierung-wien">
-            Entrümpelung vor Sanierung
-          </RatgeberInternalLink>
-          .
+          <strong>Liftfenster:</strong> Mit Hausverwaltung oder Hausbetreuung Termin und Schutzmaßnahmen
+          abstimmen.
         </RatgeberLi>
         <RatgeberLi>
-          Fachgerechtes Entfernen unzulässiger Bodenbeläge (Teppiche, Laminat, PVC).
+          <strong>Demontage vor Ort:</strong> Was nicht in den Lift passt, wird in der Wohnung zerlegt — nicht
+          im Stiegenhaus improvisiert.
         </RatgeberLi>
         <RatgeberLi>
-          Vollständige Räumung von Kellerabteil und Dachboden —{" "}
-          <RatgeberInternalLink href="/leistungen/kellerentruempelung">
-            Kellerentrümpelung
-          </RatgeberInternalLink>
-          ,{" "}
-          <RatgeberInternalLink href="/ratgeber/keller-aufraeumen-entruempeln-wien">
-            Keller aufräumen Wien
-          </RatgeberInternalLink>
-          ,{" "}
-          <RatgeberInternalLink href="/ratgeber/dachbodenraeumung-wien-ma-48">
-            Dachbodenräumung
-          </RatgeberInternalLink>
-          .
+          <strong>Nachbarn:</strong> Kurze Info im Hausflur reduziert Konflikte und hält den Aufzug frei.
+        </RatgeberLi>
+      </RatgeberUl>
+      <RatgeberP>
+        Ein realistisches Liftfenster ist oft kürzer als der gesamte Räumungstag. Planen Sie deshalb Staging:
+        große Teile zuerst, dann Kartons und Kleinteile, zuletzt die Nebenräume. Wer den Aufzug den ganzen
+        Tag „besetzt“ hält, ohne Absprache, provoziert Beschwerden — und verliert den Slot. Schriftliche
+        Freigabe schützt Team und Hausgemeinschaft gleichermaßen.
+      </RatgeberP>
+
+      <RatgeberH2>Stockwerk-Logistik: Personal, Staging und Tagesziel</RatgeberH2>
+      <RatgeberP>
+        Ab dem vierten oder fünften Stock ohne geeigneten Lastenaufzug ändert sich die Einsatzstruktur.
+        Mehr Personal heißt nicht automatisch mehr Tempo, wenn der Engpass der enge Flur oder die
+        einzige Kabine ist. In der Praxis arbeiten wir mit klaren Rollen: Demontage in der Wohnung,
+        Transport zum Lift, Entladung an der Ladezone. Ohne diese Kette stapeln sich Teile im Stiegenhaus —
+        und der nächste Nachbar kommt nicht mehr durch.
+      </RatgeberP>
+      <RatgeberP>
+        Staging-Flächen sind in Hochhäusern rar. Nutzen Sie die Wohnung selbst als Zwischenlager: zerlegte
+        Schränke an der Wand, Kartons gestapelt, Laufwege frei. Der Flur vor der Wohnungstür ist kein Depot.
+        Ebenso gilt: ein Tagesziel schriftlich fixieren — etwa „Wohnung leer, Keller am Folgetag“ —, statt
+        alles in einen überfüllten Vormittag zu pressen. Die{" "}
+        <RatgeberInternalLink href="/leistungen/haushaltsaufloesung">Haushaltsauflösung</RatgeberInternalLink>{" "}
+        im Hochhaus ist ein Schichtplan, kein Sprint.
+      </RatgeberP>
+      <RatgeberUl>
+        <RatgeberLi>
+          <strong>Personalstärke:</strong> abhängig von Stockwerk, Liftmaß und Demontagetiefe — nach
+          Besichtigung, nicht nach Zimmerzahl.
         </RatgeberLi>
         <RatgeberLi>
-          Zügige Abwicklung bei Express-Bedarf, um Mietfristen exakt einzuhalten.
+          <strong>Zwischenlager:</strong> nur in der Wohnung oder am legalen Standplatz, nie im Gemeinschaftsflur.
+        </RatgeberLi>
+        <RatgeberLi>
+          <strong>Tagesziel:</strong> realistisch schneiden; Keller und Wohnung oft getrennte Fenster.
         </RatgeberLi>
       </RatgeberUl>
 
-      <RatgeberH2>Fazit: Ihr Erfolg bei der BUWOG-Wohnungsübergabe</RatgeberH2>
+      <RatgeberH2>Ladezone und urbane Zufahrt</RatgeberH2>
       <RatgeberP>
-        Die fachgerechte Vorbereitung einer BUWOG-Genossenschaftswohnung für die Übergabe muss nicht im
-        Stress enden. Mit Sofort Entrümpelung profitieren Sie von einem verlässlichen Rundum-sorglos-Paket,
-        absoluter Termintreue und einer transparenten Fixpreisgarantie. Übergabe-Tipps Genossenschaft:{" "}
-        <RatgeberInternalLink href="/ratgeber/gemeindebau-wiener-wohnen-wohnungsuebergabe">
-          Wohnungsübergabe ohne Stress
+        Ohne legale Standfläche stockt jeder Einsatz. In engen Gassen und Innenhöfen planen wir Halteverbote
+        oder kurze Entladefenster mit ein — sonst entsteht Chaos genau dann, wenn der Abnahmetermin schon
+        feststeht. LKW-Slot und Schlüsselübergabe gehören auf denselben Kalender. Orientierung zu Faktoren
+        ohne Fantasiepreise:{" "}
+        <RatgeberInternalLink href="/ratgeber/was-kostet-entruempelung-wien">
+          Was kostet Entrümpelung in Wien?
         </RatgeberInternalLink>
         .
       </RatgeberP>
       <RatgeberP>
-        Wir nehmen Ihnen die harte Arbeit ab, damit Sie sich entspannt auf Ihre neuen Pläne fokussieren
-        können.
+        Praxis: Wer erst am Morgen der Räumung „irgendwo parkt“, riskiert Abschleppen, Verzögerung und ein
+        unvollständiges Tagesziel. BUWOG-Anlagen mit Tiefgarage oder Schranken brauchen zusätzlich eine klare
+        Freigabe — sonst steht der Transporter draußen und das Team trägt 80 Meter. Messen Sie den Weg von
+        Hausportal zur nächsten legalen Standfläche schon bei der Besichtigung; diese Meter sind oft teurer
+        als das letzte Sofa im Wohnzimmer.
+      </RatgeberP>
+
+      <RatgeberH2>Halteverbot, Feuerwehrzufahrt und Tiefgarage</RatgeberH2>
+      <RatgeberP>
+        Viele BUWOG-Höfe sind formal Feuerwehrzufahrt oder haben Schranken. Ein improvisierter Standplatz
+        dort kann die Räumung stoppen — und die Hausbetreuung verärgern. Klären Sie früh: Darf der Transporter
+        in den Hof? Braucht es eine Chipkarte, einen Schlüssel oder eine Begleitung? Gibt es eine
+        ausgewiesene Entladebucht? Fehlen diese Antworten, kalkulieren wir den längeren Trageweg von der
+        Straße ein — nicht als Überraschung am Einsatzmorgen.
+      </RatgeberP>
+      <RatgeberP>
+        Halteverbotszonen brauchen Vorlauf. Wer sie erst drei Tage vor dem Abnahmetermin beantragt, riskiert,
+        dass der Slot fehlt und die Räumung in Express-Druck gerät. Express hilft nur bei klarem Umfang:{" "}
+        <RatgeberInternalLink href="/ratgeber/express-entruempelung-wien-24h-krisenmanagement">
+          Express-Entrümpelung Wien
+        </RatgeberInternalLink>
+        . Tiefgaragenplätze der Wohnung sind selten LKW-fähig; nutzen Sie sie höchstens für Kleinteile und
+        Werkzeug — nicht als Hauptentladung.
+      </RatgeberP>
+      <RatgeberOl>
+        <RatgeberLi>Hofzufahrt und Schrankenregeln bei Hausbetreuung erfragen</RatgeberLi>
+        <RatgeberLi>Legale Standfläche oder Halteverbot zeitlich vorziehen</RatgeberLi>
+        <RatgeberLi>Trageweg Portal–Fahrzeug in die Kalkulation aufnehmen</RatgeberLi>
+        <RatgeberLi>Feuerwehrzufahrt frei halten — kein Dauerparken im Hof</RatgeberLi>
+      </RatgeberOl>
+
+      <RatgeberH2>Schutzmaßnahmen und Nachbarschaft im Hochhaus</RatgeberH2>
+      <RatgeberP>
+        Liftpolster, Kantenschutz und saubere Laufwege sind keine Optik — sie verhindern Schäden und
+        Beschwerden. In dicht bewohnten BUWOG-Anlagen entscheidet oft die Hausgemeinschaft mit, ob der
+        Aufzug den ganzen Vormittag nutzbar bleibt. Ein kurzer Aushang am Stiegenhaus („Räumung Stock X,
+        Liftfenster …“) kostet fünf Minuten und spart Diskussionen. Wer den Lift ohne Schutz und ohne Info
+        „übernimmt“, riskiert, dass die Hausbetreuung den Slot kürzt.
+      </RatgeberP>
+      <RatgeberP>
+        Gleiches gilt für den Kellertrakt: Türen nicht verkeilen, Gänge nicht verstellen, Sperrmüll nicht
+        vor der Müllinsel zwischenlagern. Die urbane Räumung endet nicht an der Wohnungstür — sie endet erst,
+        wenn Gemeinschaftsflächen wieder nutzbar sind. Das ist Teil des logistischen Endzustands vor der
+        Abnahme, unabhängig von Kautionstexten anderer Träger.
+      </RatgeberP>
+
+      <RatgeberH2>Nebenräume: Keller als klassischer Blindspot</RatgeberH2>
+      <RatgeberP>
+        Viele Mieter räumen die Wohnung makellos und lassen das Kellerabteil voll. Bei der Übergabe an die
+        Hausverwaltung reicht das oft, um den Abschluss zu stoppen. Planen Sie{" "}
+        <RatgeberInternalLink href="/leistungen/kellerentruempelung">Kellerentrümpelung</RatgeberInternalLink>{" "}
+        als eigenen Block — nicht als Rest vom Wohnungsnachmittag. In Hochhäusern kommt hinzu: Der Weg vom
+        Kellerabteil zum Lift kann länger und enger sein als der Wohnungsweg. Details zu Keller und
+        Schimmelrisiken:{" "}
+        <RatgeberInternalLink href="/ratgeber/kellerraeumung-wien-kosten-schimmel">
+          Kelleräumung Wien
+        </RatgeberInternalLink>
+        .
+      </RatgeberP>
+      <RatgeberP>
+        Für reine Siedlungs-Nebenräume und Gartenabteile ist der Spezialtext zuständig:{" "}
+        <RatgeberInternalLink href="/ratgeber/siedlungsunion-genossenschaft-entruempelung-wien">
+          Siedlungsunion
+        </RatgeberInternalLink>
+        . Hier bleibt der Keller ein Hochhaus-Logistik-Thema — Trageweg, Lift und Zeitfenster.
+      </RatgeberP>
+
+      <RatgeberH2>Was die Hausverwaltung typischerweise erwartet</RatgeberH2>
+      <RatgeberP>
+        Ohne Ihren konkreten Vertrag zu zitieren: leer, zugänglich, ohne zurückgelassenen Sperrmüll in
+        Gemeinschaftsflächen. Einbauten nur zurückbauen, wenn der Vertrag oder die Verwaltung das verlangt —
+        Blind-Demontage kostet Geld und Zeit. Besenreiner Endzustand heißt: begehbar, ohne lose Reste, bereit
+        für die Abnahme. Feinheiten zu Kaution und Protokoll bei anderen Trägern liegen bewusst in den
+        verlinkten Ratgebern; hier zählt der logistische Endzustand.
+      </RatgeberP>
+      <RatgeberOl>
+        <RatgeberLi>Besichtigung inkl. Keller und Zufahrt</RatgeberLi>
+        <RatgeberLi>Schriftlicher Fixpreis und Räumungsfenster</RatgeberLi>
+        <RatgeberLi>Lift-/Zufahrtsfreigabe einholen</RatgeberLi>
+        <RatgeberLi>Räumung Wohnung + Nebenräume</RatgeberLi>
+        <RatgeberLi>Kurzkontrolle vor dem Abnahmetermin</RatgeberLi>
+      </RatgeberOl>
+
+      <RatgeberH3>Praxis-Beispiel: 6. Stock, kleiner Lift, voller Keller</RatgeberH3>
+      <RatgeberP>
+        Eine BUWOG-Wohnung im 6. Stock war optisch „fast leer“ — der Keller voll, der Lift zu schmal für den
+        Kleiderschrank. Lösung: Demontage in der Wohnung, separates Kellerfenster am Vortag, Halteverbot vor
+        dem Hof, Liftpolster und kurzer Aushang. Die Abnahme fand am geplanten Tag statt, weil Logistik vor
+        Tempo stand. Ohne Liftplan wären zwei Extrafahrten und ein verschobener Termin wahrscheinlich gewesen.
+      </RatgeberP>
+      <RatgeberP>
+        Der Engpass war nicht das Wohnzimmer — es waren Kabinenmaß, Hofschranke und das Kellerabteil zwei
+        Stockwerke unter dem Wohnungsflur. Genau diese drei Punkte gehören in jede BUWOG-Anfrage, bevor jemand
+        „nur mal kurz fotos“ schickt.
+      </RatgeberP>
+
+      <RatgeberH2>Kostenhebel bei BUWOG (ohne Fantasiepreise)</RatgeberH2>
+      <RatgeberP>
+        Die Tabelle ordnet logistische Hebel — keine erfundenen Euro-Beträge. Verwertbares kann den Fixpreis
+        mindern:{" "}
+        <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink> bei der
+        Besichtigung prüfen.
+      </RatgeberP>
+      <RatgeberTableWrap caption="Kosten- und Zeithebel BUWOG-Räumung Wien (ohne Fantasiepreise)">
+        <RatgeberThead>
+          <RatgeberTr>
+            <RatgeberTh>Hebel</RatgeberTh>
+            <RatgeberTh>Wirkung</RatgeberTh>
+            <RatgeberTh>Früh klären</RatgeberTh>
+          </RatgeberTr>
+        </RatgeberThead>
+        <RatgeberTbody>
+          <RatgeberTr>
+            <RatgeberTd>Stockwerk ohne geeigneten Lift</RatgeberTd>
+            <RatgeberTd>Längere Tragewege, mehr Personalstunden</RatgeberTd>
+            <RatgeberTd>Liftmaß, Demontagebedarf</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Fehlende Ladezone</RatgeberTd>
+            <RatgeberTd>Stillstand, Extrafahrten</RatgeberTd>
+            <RatgeberTd>Halteverbot / Hofzufahrt</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Schranke / Feuerwehrzufahrt</RatgeberTd>
+            <RatgeberTd>Transporter bleibt draußen, langer Trageweg</RatgeberTd>
+            <RatgeberTd>Freigabe und Standplatz vorab</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Keller nicht im Auftrag</RatgeberTd>
+            <RatgeberTd>Übergabe kann scheitern</RatgeberTd>
+            <RatgeberTd>Nebenräume mitbesichtigen</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Unklarer Endzustand</RatgeberTd>
+            <RatgeberTd>Nacharbeit statt Fixpreis-Sicherheit</RatgeberTd>
+            <RatgeberTd>leer / besenrein schriftlich</RatgeberTd>
+          </RatgeberTr>
+          <RatgeberTr>
+            <RatgeberTd>Wertanrechnung</RatgeberTd>
+            <RatgeberTd>Kann den Fixpreis mindern</RatgeberTd>
+            <RatgeberTd>
+              <RatgeberInternalLink href="/leistungen/wertausgleich">Wertausgleich</RatgeberInternalLink> bei
+              Besichtigung
+            </RatgeberTd>
+          </RatgeberTr>
+        </RatgeberTbody>
+      </RatgeberTableWrap>
+
+      <RatgeberWarning title="Logistik-Hinweis">
+        <RatgeberP>
+          Ein leeres Wohnzimmer rettet keinen Abnahmetermin, wenn Lift, Zufahrt oder Keller unklar bleiben.
+          In BUWOG-Hochhäusern ist der Kalender ein Logistikkalender — nicht nur ein Möbelkalender. Halteverbot,
+          Liftfenster und Staging-Plan gehören vor das erste Kartonpacken.
+        </RatgeberP>
+      </RatgeberWarning>
+
+      <RatgeberH2>Checkliste BUWOG-Hochhaus-Räumung</RatgeberH2>
+      <RatgeberChecklist
+        items={[
+          "Stockwerk, Liftmaß und Türbreiten notiert",
+          "Hofzufahrt, Schranke oder Halteverbotsbedarf geklärt",
+          "Kellerabteil und Abstellräume im Auftragsumfang",
+          "Liftfenster mit Hausverwaltung abgestimmt",
+          "Schutzmaßnahmen und Nachbar-Info eingeplant",
+          "Endzustand (leer/besenrein) schriftlich fixiert",
+          "Kurzkontrolle vor dem offiziellen Abnahmetermin",
+        ]}
+      />
+
+      <RatgeberP>
+        Mit klarem Lift- und Zufahrtsplan wird aus einer stressigen BUWOG-Rückgabe ein steuerbarer Einsatz.
+        Für Kautionstexte anderer Träger und für regionale NÖ-Logistik die verlinkten Spezialratgeber nutzen —
+        so bleibt jeder Genossenschafts-/Träger-Text einzigartig. Wer Stockwerk, Ladezone und Nebenräume früh
+        bindet, übergibt ruhiger — ohne Fantasiepreise und ohne Improvisation am Stiegenhaus.
       </RatgeberP>
 
       <RatgeberCtaBox>
-        <p className="font-bold text-brand-dark">
-          BUWOG Genossenschaft — kostenlose Besichtigung &amp; Fixpreis
-        </p>
+        <p className="font-bold text-brand-dark">BUWOG Wien — Räumung mit Logistikplan</p>
         <RatgeberP>
-          Unverbindliche Beratung vor Ort in Wien, Niederösterreich und Burgenland. Besenreine Übergabe
-          inklusive Keller und Wertanrechnung auf Wunsch.
+          Wir kalkulieren Stockwerk, Lift und Nebenräume mit: Fixpreis nach Besichtigung, übergabefähiges
+          Ergebnis.
         </RatgeberP>
         <p className="mt-3">
           <RatgeberInternalLink href="/#kontakt-formular">
