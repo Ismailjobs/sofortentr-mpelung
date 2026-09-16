@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import LazyContactFormSection from "@/components/lazy/LazyContactFormSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { partnerHost, SITE_PARTNERS } from "@/data/site-content";
+import { SITE_PARTNERS } from "@/data/site-content";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Partner & Kooperationen",
@@ -55,7 +55,7 @@ export default function PartnerPage() {
                     rel="noopener noreferrer"
                     className="font-semibold text-brand-orange underline decoration-brand-orange/50 underline-offset-4 transition hover:decoration-brand-orange"
                   >
-                    {partnerHost(partner.url)}
+                    {partner.linkText}
                   </a>
                 </p>
               </section>

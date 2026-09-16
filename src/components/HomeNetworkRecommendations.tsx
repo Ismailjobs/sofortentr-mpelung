@@ -31,7 +31,7 @@ export default function HomeNetworkRecommendations() {
             rel="noopener noreferrer"
             className={externalLinkClass}
           >
-            Objekträumung Wien
+            {objektraeumung.linkText}
           </a>
           . Mehr Details finden Sie auf unserer{" "}
           <Link href={PARTNER_PATH} className={internalLinkClass}>

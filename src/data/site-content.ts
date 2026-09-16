@@ -60,6 +60,8 @@ export const PARTNER_PATH = "/partner";
 export type SitePartner = {
   name: string;
   url: string;
+  /** Sichtbarer Anchor-Text für den Outbound-Backlink */
+  linkText: string;
   /** z. B. Bundesland oder Schwerpunkt — für Partner-Karte */
   region: string;
   /** Kurztext auf /partner (Backlink-Kontext) */
@@ -69,8 +71,9 @@ export type SitePartner = {
 /** Kooperations- & Backlink-Partner — zentral für /partner und interne Verweise. */
 export const SITE_PARTNERS: readonly SitePartner[] = [
   {
-    name: "Objekträumung",
+    name: "Räumung Wien",
     url: "https://objektraeumung.at",
+    linkText: "Räumung Wien",
     region: "Österreich",
     description:
       "Professionelle Räumung und Haushaltsauflösung — Wohnungen, Häuser, Keller und Nachlässe zum Fixpreis nach Besichtigung.",
