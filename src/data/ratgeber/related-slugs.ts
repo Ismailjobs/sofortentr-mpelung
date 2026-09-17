@@ -311,6 +311,30 @@ const EXPLICIT_RELATED: Record<string, string[]> = {
     "buwog-genossenschaft-entruempelung-wien",
     "bauhilfe-genossenschaft-entruempelung-wien",
   ],
+  "oevw-genossenschaft-entruempelung-wien": [
+    "buwog-genossenschaft-entruempelung-wien",
+    "arwag-genossenschaft-entruempelung-wien",
+    "dachbodenraeumung-wien-ma-48",
+    "was-kostet-entruempelung-wien",
+  ],
+  "ebg-genossenschaft-entruempelung-wien": [
+    "oevw-genossenschaft-entruempelung-wien",
+    "siedlungsunion-genossenschaft-entruempelung-wien",
+    "kellerraeumung-wien-kosten-schimmel",
+    "entruempelung-penzing-wien-1140",
+  ],
+  "ebsg-genossenschaft-entruempelung-noe-burgenland": [
+    "egw-genossenschaft-entruempelung-niederoesterreich",
+    "entruempelung-burgenland-mattersburg-rust-oberpullendorf",
+    "entruempelung-korneuburg-tulln-schwechat",
+    "was-kostet-entruempelung-wien",
+  ],
+  "familienwohnbau-genossenschaft-entruempelung-wien": [
+    "wohnungsraeumung-senioren-wien",
+    "checkliste-wohnungsraeumung-wien",
+    "ebg-genossenschaft-entruempelung-wien",
+    "was-kostet-entruempelung-wien",
+  ],
   "zimmer-raeumung-wien": [
     "checkliste-wohnungsraeumung-wien",
     "entruempelung-gemeindebau-wiener-wohnen",
