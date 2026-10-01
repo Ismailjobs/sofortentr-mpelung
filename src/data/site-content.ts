@@ -78,6 +78,14 @@ export const SITE_PARTNERS: readonly SitePartner[] = [
     description:
       "Professionelle Räumung und Haushaltsauflösung — Wohnungen, Häuser, Keller und Nachlässe zum Fixpreis nach Besichtigung.",
   },
+  {
+    name: "Artheum",
+    url: "https://artheum.at",
+    linkText: "Artheum.at",
+    region: "Wien",
+    description:
+      "Bei Räumungen und Haushaltsauflösungen stoßen wir häufig auf antike Möbel, Silber oder Schmuck. Für eine faire und kostenlose Bewertung empfehlen wir unseren Partner Artheum, einen erfahrenen Antiquitätenhändler in Wien.",
+  },
 ] as const;
 
 export function partnerHost(url: string): string {
